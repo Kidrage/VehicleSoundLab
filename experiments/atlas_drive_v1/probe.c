@@ -15,8 +15,11 @@
 #endif
 
 #define BLOCK 240
-#define AUDIO_FILES 9
-#define FILES (AUDIO_FILES+VSL_OBJECTS)
+#define AUDIO_FILES 10
+#define RAW_AUX_FILES 6
+#define FILES (AUDIO_FILES+VSL_OBJECTS+RAW_AUX_FILES)
+static const int aux_source[RAW_AUX_FILES]={VSL_INTAKE,VSL_MECHANICAL,VSL_AIR_L,VSL_AIR_R,VSL_ROAD,VSL_WIND};
+static const char *aux_name[RAW_AUX_FILES]={"aux_raw_intake","aux_raw_mechanical","aux_raw_air_left","aux_raw_air_right","aux_raw_road","aux_raw_wind"};
 static SdProfile profiles[SA_MAX_ANCHORS];
 static SaBank bank;
 static RaBank residual_bank;static SrProfile residual_profiles[SA_MAX_ANCHORS];
@@ -25,6 +28,7 @@ static VslEngine engine;
 static float output[BLOCK*12],raw[BLOCK*2],dna[BLOCK*2],dry[BLOCK*2],events[BLOCK],objects[BLOCK*VSL_OBJECTS],mono[BLOCK];
 static float residual_raw[BLOCK*2],residual[BLOCK*2];
 static float body_raw[BLOCK*2],body[BLOCK*2];
+static float aux[BLOCK*2],aux_raw[BLOCK*VSL_OBJECTS],aux_objects[BLOCK*VSL_OBJECTS];
 static AdTelemetry trace[BLOCK];
 static double timer(void) {
 #ifdef _WIN32
@@ -54,15 +58,15 @@ static int run(int argc,char **argv) {
     AdCapture capture={raw,dna,events,dry,objects,trace};
     VslParams params=vsl_default_params(VSL_V10);
     VslWavWriter writers[FILES]={{0}};
-    float *buffers[AUDIO_FILES]={output,raw,dna,dry,events,residual_raw,residual,body_raw,body};
-    const char *suffix[AUDIO_FILES]={"render","dna_raw","dna","dry","event_layer","residual_raw","residual","harmonic_body_raw","harmonic_body"};
+    float *buffers[AUDIO_FILES]={output,raw,dna,dry,events,residual_raw,residual,body_raw,body,aux};
+    const char *suffix[AUDIO_FILES]={"render","dna_raw","dna","dry","event_layer","residual_raw","residual","harmonic_body_raw","harmonic_body","auxiliary"};
     char paths[FILES][4096],csv_path[4096],json_path[4096];
     FILE *csv=NULL,*report=NULL;
     double seconds=30,peak=0,total_time=0,max_block=0;
     unsigned align=32,frames,at=0,below=0,within=0,above=0,budget_exceeded=0,count=2,a;
     int i,ok=0,scenario=VSL_SCENARIO_AUTO;
     if (argc<4) {
-        fputs("usage: VslAtlasDrive_probe FIRST.model SECOND.model OUTPUT_PREFIX [--anchor NEXT.model (up to8 total, sorted root Hz) --residual-anchor FILE.residual (one per DNA anchor) --residual-gain 0..1 --body-mix 0..1 --scenario auto|neutral|shifts|downshift|lift|fixed --seconds 30 --channels 2|12 --events 0..1 --detail 1 --gain .5 --spatial 0|1 --room 0..1 --alignment 0..32 --rpm 7600 --load .8 --root-per-rpm .008333333333333333]\n",stderr);
+        fputs("usage: VslAtlasDrive_probe FIRST.model SECOND.model OUTPUT_PREFIX [--anchor NEXT.model (up to8 total, sorted root Hz) --residual-anchor FILE.residual (one per DNA anchor) --residual-gain 0..1 --body-mix 0..1 --intake 0..1 --mechanical 0..1 --air 0..1 --road 0..1 --wind 0..1 --scenario auto|neutral|shifts|downshift|lift|fixed --seconds 30 --channels 2|12 --events 0..1 --detail 1 --gain .5 --spatial 0|1 --room 0..1 --alignment 0..32 --rpm 7600 --load .8 --root-per-rpm .008333333333333333]\n",stderr);
         return 1;
     }
     model_paths[0]=argv[1];model_paths[1]=argv[2];
@@ -86,6 +90,11 @@ static int run(int argc,char **argv) {
         else if (!strcmp(name,"--root-per-rpm")) config.root_per_rpm=x;
         else if (!strcmp(name,"--residual-gain")) control.mix.residual_gain=x;
         else if (!strcmp(name,"--body-mix")) control.mix.body_mix=x;
+        else if (!strcmp(name,"--intake")) control.mix.intake_gain=x;
+        else if (!strcmp(name,"--mechanical")) control.mix.mechanical_gain=x;
+        else if (!strcmp(name,"--air")) control.mix.air_gain=x;
+        else if (!strcmp(name,"--road")) control.mix.road_gain=x;
+        else if (!strcmp(name,"--wind")) control.mix.wind_gain=x;
         else return 1;
     }
     if (config.channels==12) control.mix.spatial=1;
@@ -105,11 +114,12 @@ static int run(int argc,char **argv) {
     }
     capture.residual_raw=residual_raw;capture.residual=residual;
     capture.body_raw=body_raw;capture.body=body;
+    capture.aux=aux;capture.aux_raw=aux_raw;capture.aux_objects=aux_objects;
     vsl_scenario_apply(scenario,0,&params);inputs(&control,&params);
     if (!ad_render_init(&render,&engine,&config,&control)) return 2;
     /* Check every output before opening any, to preserve previous experiments. */
     for (i=0;i<FILES;++i) {
-        const char *name=i<AUDIO_FILES?suffix[i]:vsl_object_info(i-AUDIO_FILES)->name;
+        const char *name=i<AUDIO_FILES?suffix[i]:i<AUDIO_FILES+VSL_OBJECTS?vsl_object_info(i-AUDIO_FILES)->name:aux_name[i-AUDIO_FILES-VSL_OBJECTS];
         int length=snprintf(paths[i],sizeof paths[i],"%s_%s.wav",argv[3],name);
         if (length<0||length>=(int)sizeof paths[i]||!available(paths[i])) return 3;
         { int previous;for(previous=0;previous<i;++previous) if(!strcmp(paths[i],paths[previous]))return 3; }
@@ -120,7 +130,7 @@ static int run(int argc,char **argv) {
     for (i=0;i<FILES;++i) if (!vsl_wav_begin_float(&writers[i],paths[i],48000,
         i==0?(unsigned)config.channels:i==4?1u:i<AUDIO_FILES?2u:1u)) goto done;
     csv=vsl_fopen(csv_path,"wb");if (!csv) goto done;
-    fputs("frame,seconds,rpm,speed_kph,load,root_hz,lower,upper,blend,coverage,envelope,gear,lifecycle,operating,shifts,overruns,hits,body_mix,body_envelope\n",csv);
+    fputs("frame,seconds,rpm,speed_kph,load,root_hz,lower,upper,blend,coverage,envelope,gear,lifecycle,operating,shifts,overruns,hits,body_mix,body_envelope,auxiliary_rpm,firing,fuel_mode,rotating_strikes,fired_strikes\n",csv);
     frames=(unsigned)(seconds*48000+.5);
     while (at<frames) {
         unsigned n=frames-at,j,c;double start,elapsed;
@@ -139,12 +149,17 @@ static int run(int argc,char **argv) {
             for (j=0;j<n;++j) mono[j]=objects[j*VSL_OBJECTS+c];
             if (!vsl_wav_write(&writers[c+AUDIO_FILES],mono,n)) goto done;
         }
+        for(c=0;c<RAW_AUX_FILES;++c) {
+            for(j=0;j<n;++j)mono[j]=aux_raw[j*VSL_OBJECTS+aux_source[c]];
+            if(!vsl_wav_write(&writers[AUDIO_FILES+VSL_OBJECTS+c],mono,n))goto done;
+        }
         for (j=0;j<n;++j) {
             const AdTelemetry *t=&trace[j];
             if (t->coverage<0) ++below;else if(t->coverage>0)++above;else++within;
-            if (t->frame%240==0) fprintf(csv,"%llu,%.6f,%.12g,%.12g,%.12g,%.12g,%u,%u,%.12g,%d,%.12g,%d,%d,%d,%u,%u,%u,%.12g,%.12g\n",
+            if (t->frame%240==0) fprintf(csv,"%llu,%.6f,%.12g,%.12g,%.12g,%.12g,%u,%u,%.12g,%d,%.12g,%d,%d,%d,%u,%u,%u,%.12g,%.12g,%.12g,%.12g,%d,%u,%u\n",
                 (unsigned long long)t->frame,t->frame/48000.,t->rpm,t->speed,t->load,t->root_hz,t->lower,t->upper,t->blend,t->coverage,
-                t->envelope,t->gear,t->lifecycle,t->operating,t->shifts,t->overruns,t->hits,t->body_mix,t->body_envelope);
+                t->envelope,t->gear,t->lifecycle,t->operating,t->shifts,t->overruns,t->hits,t->body_mix,t->body_envelope,
+                t->auxiliary_rpm,t->firing,t->fuel_mode,t->rotating_strikes,t->fired_strikes);
         }
         at+=n;
     }
@@ -163,10 +178,12 @@ static int run(int argc,char **argv) {
         "  \"process_seconds\":%.9g,\"max_block_seconds\":%.9g,\"block_budget_seconds\":0.005,\n"
         "  \"block_budget_exceedances\":%u,\n"
         "  \"residual_attached\":%s,\"residual_gain\":%.17g,\"body_mix\":%.17g,\n"
-        "  \"accepted\":false,\"limits\":\"Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback\"\n}\n",
+        "  \"auxiliary_amounts\":[%.17g,%.17g,%.17g,%.17g,%.17g],\n"
+        "  \"accepted\":false,\"limits\":\"Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition, legacy events and engineering auxiliary layers; no physical source separation or source playback\"\n}\n",
         below,within,above,engine.drive.shift_events,
         engine.drive.overrun_events,engine.events.hits,control.mix.event_gain,total_time,max_block,budget_exceeded,
-        config.residual_bank?"true":"false",control.mix.residual_gain,control.mix.body_mix);
+        config.residual_bank?"true":"false",control.mix.residual_gain,control.mix.body_mix,
+        control.mix.intake_gain,control.mix.mechanical_gain,control.mix.air_gain,control.mix.road_gain,control.mix.wind_gain);
     if (ferror(report)) goto done;
     printf("frames%u peak%.8g shifts%u coverage%.2f%% process%.3fs max%.3fms\n",frames,peak,engine.drive.shift_events,
         100.*within/frames,total_time,1000*max_block);ok=1;

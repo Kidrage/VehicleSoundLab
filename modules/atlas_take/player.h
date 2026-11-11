@@ -10,6 +10,7 @@ typedef struct {
     unsigned next;
     uint64_t audio_hash,source_hash;
     float raw[1024],dna[1024],residual[1024],body[1024],events[512];
+    float auxiliary[512*VSL_OBJECTS];
 } AtPlayer;
 /* Override layout2/12 for export; source controls are identical,12forces only
    spatial routing. Recorded presentation hash applies to its original layout. */

@@ -5,9 +5,13 @@
 #include "spatial/scene.h"
 #include <math.h>
 #include <string.h>
+static void amounts(const AdControl *p,double a[DA_LAYERS]) {
+    a[DA_INTAKE]=p->mix.intake_gain;a[DA_MECHANICAL]=p->mix.mechanical_gain;
+    a[DA_AIR]=p->mix.air_gain;a[DA_ROAD]=p->mix.road_gain;a[DA_WIND]=p->mix.wind_gain;
+}
 
 int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p) {
-    unsigned a;
+    unsigned a;double aux[DA_LAYERS];
     if (!s||!e||!c||!c->bank||!c->bank->count||c->bank->count>SA_MAX_ANCHORS||!ad_control_valid(p,c->channels)||
         c->profile<0||c->profile>=VSL_PROFILE_COUNT||!isfinite(c->root_per_rpm)||
         c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||
@@ -25,6 +29,7 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     vsl_init(e,48000,(uint32_t)c->seed);
     e->target=e->smooth=vsl_default_params(c->profile);
     vsl_drive_reset(&e->drive,c->profile);
+    amounts(p,aux);if(!da_voice_init(&s->auxiliary,e,aux))return 0;
     ad_control_apply(e,p);
     e->smooth.width=p->mix.width;e->smooth.space=p->mix.room;e->smooth.perspective=p->mix.perspective;
     e->spatial.propagation.mix=p->mix.propagation;
@@ -34,7 +39,9 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     return 1;
 }
 int ad_render_set(AdRender *s,const AdControl *p) {
+    double aux[DA_LAYERS];
     if (!s||!s->owner||!ad_control_valid(p,s->config.channels)||(!s->config.residual_bank&&p->mix.residual_gain>0)) return 0;
+    amounts(p,aux);da_voice_set(&s->auxiliary,aux);
     s->target=*p;hb_mix_set(&s->body,p->mix.body_mix);ad_control_apply(s->owner,p);return 1;
 }
 int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
@@ -45,9 +52,9 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
     if (!cap) cap=&none;
     e=s->owner;
     for (n=0;n<frames;++n) {
-        double raw[2],body_raw[2],residual_raw[2]={0},residual[2]={0},event,spatial[VSL_MAX_CHANNELS],dry[2];
+        double raw[2],body_raw[2],residual_raw[2]={0},residual[2]={0},event,spatial[VSL_MAX_CHANNELS],dry[2],aux[2];
         DsSourceFrame source={0};
-        VslObjectFrame objects,residual_objects,body_objects={0};
+        VslObjectFrame objects,residual_objects,body_objects={0},aux_raw,aux_objects;
         int c;
         if (s->frame%240==0) {
             vsl_drive_step(&e->drive,&e->target,.005);
@@ -67,6 +74,7 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
         e->smooth.space+=s->follow*(s->target.mix.room-e->smooth.space);
         e->smooth.perspective+=s->follow*(s->target.mix.perspective-e->smooth.perspective);
         event=vsl_events_tick(e)*s->event_gain;
+        da_voice_tick(&s->auxiliary,e,&aux_raw,&aux_objects);da_stereo(&aux_objects,aux);
         hb_mix_tick(&s->body,raw,body_raw,s->envelope,e->voice.body_gain,source.dna,source.low);
         for (c=0;c<2;++c) {
             residual[c]*=s->envelope;
@@ -74,6 +82,7 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
             dry[c]=(source.dna[c]+event)*s->gain;
             if(residual[c]!=0)dry[c]=(source.dna[c]+residual[c]+event)*s->gain;
             if(source.low[c]!=0)dry[c]=(source.dna[c]+source.low[c]+residual[c]+event)*s->gain;
+            if(aux[c]!=0)dry[c]+=aux[c]*s->gain;
         }
         {
             DsSourceFrame upper=source;upper.low[0]=upper.low[1]=0;
@@ -88,6 +97,7 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
             for(c=0;c<VSL_OBJECTS;++c)if(residual_objects.sample[c]!=0)objects.sample[c]+=residual_objects.sample[c];
         }
         objects.sample[VSL_EVENT]=event;
+        for(c=0;c<VSL_OBJECTS;++c)if(aux_objects.sample[c]!=0)objects.sample[c]+=aux_objects.sample[c];
         /* Render spatial once from the same ongoing voice, also in dry mode,
            so switches cannot restart source, delay lines or reflection tails. */
         vsl_scene_tick(e,&objects,spatial,s->config.channels);
@@ -104,11 +114,14 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
             if (cap->residual) cap->residual[2*n+c]=(float)residual[c];
             if (cap->body_raw) cap->body_raw[2*n+c]=(float)body_raw[c];
             if (cap->body) cap->body[2*n+c]=(float)source.low[c];
+            if (cap->aux) cap->aux[2*n+c]=(float)aux[c];
         }
         if (cap->events) cap->events[n]=(float)event;
         if (cap->objects) for (c=0;c<VSL_OBJECTS;++c) cap->objects[n*VSL_OBJECTS+c]=(float)objects.sample[c];
         if (cap->residual_objects) for(c=0;c<VSL_OBJECTS;++c)cap->residual_objects[n*VSL_OBJECTS+c]=(float)residual_objects.sample[c];
         if (cap->body_objects) for(c=0;c<VSL_OBJECTS;++c)cap->body_objects[n*VSL_OBJECTS+c]=(float)body_objects.sample[c];
+        if (cap->aux_raw) for(c=0;c<VSL_OBJECTS;++c)cap->aux_raw[n*VSL_OBJECTS+c]=(float)aux_raw.sample[c];
+        if (cap->aux_objects) for(c=0;c<VSL_OBJECTS;++c)cap->aux_objects[n*VSL_OBJECTS+c]=(float)aux_objects.sample[c];
         if (cap->telemetry) {
             AdTelemetry *t=&cap->telemetry[n];
             t->frame=s->frame;t->rpm=e->drive.rpm;t->speed=e->drive.speed_kph;t->load=e->drive.load;
@@ -118,6 +131,8 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
             t->shifts=e->drive.shift_events;t->overruns=e->drive.overrun_events;t->hits=e->events.hits;
             t->residual_gain=s->config.residual_bank?s->residual.gain:0;
             t->body_mix=s->body.amount;t->body_envelope=s->body.envelope;
+            t->auxiliary_rpm=e->control.rpm;t->firing=e->excitation.firing;t->fuel_mode=e->drive.fuel.mode;
+            t->rotating_strikes=e->mechanical.rotating_strikes;t->fired_strikes=e->mechanical.fired_strikes;
         }
         ++s->frame;++e->frame;
     }

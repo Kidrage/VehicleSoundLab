@@ -74,21 +74,23 @@ static uint64_t digest(const unsigned char *p,size_t n) {
     uint64_t h=AT_HASH_INITIAL;size_t i;for(i=0;i<n;++i){h^=p[i];h*=UINT64_C(1099511628211);}return h;
 }
 int at_take_encode(const AtTake *t,unsigned char **out,size_t *length) {
-    Codec c={0};char magic[]="VSLRUN\r\n",identity[64];unsigned version=1;uint64_t hash;
+    Codec c={0};char magic[]="VSLRUN\r\n",identity[64];unsigned version=2,fields;uint64_t hash;
     if(!out||!length||!at_take_valid(t)||sizeof(double)!=8||sizeof(float)!=4)return 0;
     c.write=malloc(AT_FILE_LIMIT);if(!c.write)return 0;c.size=AT_FILE_LIMIT;c.ok=1;
     memcpy(identity,at_render_id(),64);bytes(&c,magic,8);natural(&c,&version);bytes(&c,identity,64);
+    at_fields(&fields);natural(&c,&fields);
     /* Writer never mutates the source; codec field helpers share a traversal. */
     payload(&c,(AtTake*)t);hash=digest(c.write,c.at);u64(&c,&hash,8);
     if(!c.ok){free(c.write);return 0;}*out=c.write;*length=c.at;return 1;
 }
 int at_take_decode(AtTake *destination,const unsigned char *data,size_t length) {
-    AtTake t={0};Codec c={0},tail={0};char magic[8],identity[64];unsigned version=0;uint64_t hash=0;int ok=0;
-    if(!destination||!data||length<84||length>AT_FILE_LIMIT||sizeof(double)!=8||sizeof(float)!=4)return 0;
+    AtTake t={0};Codec c={0},tail={0};char magic[8],identity[64];unsigned version=0,fields=0,expected;uint64_t hash=0;int ok=0;
+    if(!destination||!data||length<88||length>AT_FILE_LIMIT||sizeof(double)!=8||sizeof(float)!=4)return 0;
     tail.read=data+length-8;tail.size=8;tail.ok=1;u64(&tail,&hash,8);
     if(hash!=digest(data,length-8))return 0;
     c.read=data;c.size=length-8;c.ok=1;bytes(&c,magic,8);natural(&c,&version);bytes(&c,identity,64);
-    if(memcmp(magic,"VSLRUN\r\n",8)||version!=1||memcmp(identity,at_render_id(),64)||!at_take_allocate(&t,AT_MAX_EVENTS))return 0;
+    natural(&c,&fields);at_fields(&expected);
+    if(memcmp(magic,"VSLRUN\r\n",8)||version!=2||fields!=expected||memcmp(identity,at_render_id(),64)||!at_take_allocate(&t,AT_MAX_EVENTS))return 0;
     payload(&c,&t);
     if(!c.ok||c.at!=c.size||!at_take_valid(&t))goto done;
     at_take_free(destination);*destination=t;memset(&t,0,sizeof t);ok=1;

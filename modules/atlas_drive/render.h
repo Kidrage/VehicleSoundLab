@@ -5,6 +5,7 @@
 #include "dna_scene/routing.h"
 #include "residual_atlas/voice.h"
 #include "harmonic_body/mix.h"
+#include "drive_aux/voice.h"
 
 typedef struct {
     const SaBank *bank;
@@ -23,6 +24,9 @@ typedef struct {
     int gear, lifecycle, operating, coverage;
     double residual_gain;
     double body_mix, body_envelope;
+    double auxiliary_rpm, firing;
+    int fuel_mode;
+    unsigned rotating_strikes, fired_strikes;
 } AdTelemetry;
 typedef struct {
     float *dna_raw; /* Observation stereo, before driving envelope. */
@@ -37,12 +41,16 @@ typedef struct {
     float *body_raw; /* Stereo LF tap from the same DNA oscillator bank. */
     float *body; /* Stereo LF after amount and separate envelope; not new energy. */
     float *body_objects; /* 10 objects: selected observation projected to BODY. */
+    float *aux_raw; /* 10 independently generated objects, before layer amounts. */
+    float *aux_objects; /* Same10 objects, after individual amounts. */
+    float *aux; /* Direct stereo auxiliary monitor, before master gain. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
     RaVoice residual;
     HbBand body_band;
     HbMix body;
+    DaVoice auxiliary;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;
@@ -54,7 +62,8 @@ typedef struct {
    all profiles must outlive this object. Never share owner with other renders.
    Optional residual atlas is separate from DNA and old procedural events.
    LF is a complementary harmonic partition, not a separated physical source;
-   independent cabin sub-bass/intake/mechanics/air models remain absent. */
+   independent cabin sub-bass remains absent. Auxiliary intake/mechanical/air/
+   road/wind are optional engineering templates, not fitted physical sources. */
 int ad_render_init(AdRender *render,VslEngine *owner,const AdConfig *config,const AdControl *control);
 int ad_render_set(AdRender *render,const AdControl *control);
 int ad_render_process(AdRender *render,float *output,unsigned frames,const AdCapture *capture);

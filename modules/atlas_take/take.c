@@ -61,6 +61,7 @@ uint64_t at_hash_sources(uint64_t hash,const AdCapture *c,unsigned frames) {
         hash=at_hash_samples(hash,c->dna_raw+2*n,2);hash=at_hash_samples(hash,c->dna+2*n,2);
         hash=at_hash_samples(hash,c->residual+2*n,2);hash=at_hash_samples(hash,c->body+2*n,2);
         hash=at_hash_samples(hash,c->events+n,1);
+        hash=at_hash_samples(hash,c->aux_objects+n*VSL_OBJECTS,VSL_OBJECTS);
     }
     return hash;
 }

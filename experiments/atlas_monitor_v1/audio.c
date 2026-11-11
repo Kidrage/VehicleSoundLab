@@ -36,6 +36,7 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
     if(a->transport==1) {
         a->take.stop_frame=a->stop_frame;
         capture.dna_raw=a->raw;capture.dna=a->dna;capture.residual=a->residual;capture.body=a->body;capture.events=a->events;
+        capture.aux_objects=a->auxiliary;
     }
     capture.telemetry=telemetry;
     if(!am_render_process(&a->render,pcm,frames,stopping,&capture))return -1;

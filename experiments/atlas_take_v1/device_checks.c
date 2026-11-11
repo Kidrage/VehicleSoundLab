@@ -41,12 +41,13 @@ static int run(const char *path) {
     CHECK(rejected_block());
     CHECK(am_models_load(&models,0)&&am_models_bank(&models,&bank));am_audio_init(&audio,&config);initialized=1;
     c.drive.mode=VSL_BENCH;c.drive.ignition=1;c.drive.start_id=1;c.drive.rpm=4000;c.mix.body_mix=.6;c.mix.residual_gain=.5;
+    c.mix.intake_gain=.5;c.mix.mechanical_gain=.5;c.mix.air_gain=.5;c.mix.road_gain=.5;c.mix.wind_gain=.5;
     CHECK(am_audio_control(&audio,&c)&&am_audio_record(&audio,1,144123));
     deadline=GetTickCount64()+10000;
     while(InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline) {
         WoStats s=wo_stats(&audio.device);
-        if(!stage&&s.frames>=24000){c.drive.rpm=5800;c.mix.body_mix=1;c.mix.residual_gain=.8;CHECK(am_audio_control(&audio,&c));stage=1;}
-        if(stage==1&&s.frames>=72000){c.mix.spatial=1;c.mix.room=.2;c.mix.body_mix=0;CHECK(am_audio_control(&audio,&c));stage=2;}
+        if(!stage&&s.frames>=24000){c.drive.rpm=5800;c.mix.body_mix=1;c.mix.residual_gain=.8;c.mix.intake_gain=.8;c.mix.mechanical_gain=.2;CHECK(am_audio_control(&audio,&c));stage=1;}
+        if(stage==1&&s.frames>=72000){c.mix.spatial=1;c.mix.room=.2;c.mix.body_mix=0;c.mix.air_gain=.1;c.mix.road_gain=1;c.mix.wind_gain=0;CHECK(am_audio_control(&audio,&c));stage=2;}
         Sleep(5);
     }
     CHECK(wait_end(1000));am_audio_stop(&audio);recorded=wo_stats(&audio.device);

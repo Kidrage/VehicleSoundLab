@@ -9,9 +9,15 @@
 #include "models.h"
 #include "takes.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
-static HWND slider[8],label[8],status,telemetry,voice,mode,gear;
-static HFONT font,heading;static int muted,bank_index;
-static const int minimum[]={0,0,700,-24,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0};
+static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
+static HFONT font,heading;static int muted,bank_index,auxiliary_index;
+static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
+static double *aux_amount(AdControl *c,int index) {
+    switch(index) {
+    case 0:return &c->mix.intake_gain;case 1:return &c->mix.mechanical_gain;
+    case 2:return &c->mix.air_gain;case 3:return &c->mix.road_gain;default:return &c->mix.wind_gain;
+    }
+}
 
 static HWND item(HWND owner,const wchar_t *kind,const wchar_t *text,DWORD style,int id,int x,int y,int w,int h) {
     HWND child=CreateWindowW(kind,text,WS_CHILD|WS_VISIBLE|style,x,y,w,h,owner,(HMENU)(INT_PTR)id,NULL,NULL);
@@ -27,7 +33,10 @@ static void labels(HWND owner) {
     swprintf(text,128,L"房间量    %.0f%%",c.mix.room*100);SetWindowTextW(label[5],text);
     swprintf(text,128,L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
     swprintf(text,128,L"低频分层    %.0f%%",c.mix.body_mix*100);SetWindowTextW(label[7],text);
-    for(i=0;i<8;++i)EnableWindow(slider[i],!playing);
+    swprintf(text,128,L"声层量    %.0f%%",*aux_amount(&c,auxiliary_index)*100);SetWindowTextW(label[8],text);
+    SendMessageW(slider[8],TBM_SETPOS,TRUE,(int)(*aux_amount(&c,auxiliary_index)*100));
+    EnableWindow(auxiliary,!playing);
+    for(i=0;i<9;++i)EnableWindow(slider[i],!playing);
     for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[2],!playing&&c.drive.mode==VSL_BENCH);
     EnableWindow(gear,!playing&&c.drive.mode!=VSL_BENCH);
@@ -59,6 +68,7 @@ static void changed(HWND owner,int index) {
     else if(index==5)c.mix.room=value/100.;
     else if(index==6)c.mix.residual_gain=value/100.;
     else if(index==7)c.mix.body_mix=value/100.;
+    else if(index==8)*aux_amount(&c,auxiliary_index)=value/100.;
     am_audio_control(&audio,&c);labels(owner);
 }
 static int load_bank(int index) {
@@ -88,13 +98,17 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         for(i=1;i<=7;++i){wchar_t text[32];swprintf(text,32,L"手动 %d 挡",i);SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)text);}
         SendMessageW(gear,CB_SETCURSEL,0,0);
         telemetry=item(owner,L"STATIC",L"0 RPM    0.0 km/h    N",0,60,24,153,510,32);
-        for(i=0;i<8;++i) {
-            int y=194+58*i;
-            label[i]=item(owner,L"STATIC",L"",0,70+i,24,y,510,25);
+        for(i=0;i<9;++i) {
+            int y=194+52*i;
+            label[i]=item(owner,L"STATIC",L"",0,70+i,24,y,i==8?240:510,25);
             slider[i]=item(owner,TRACKBAR_CLASSW,L"",TBS_HORZ|TBS_NOTICKS|WS_TABSTOP,20+i,24,y+24,510,28);
             SendMessageW(slider[i],TBM_SETRANGEMIN,FALSE,minimum[i]);SendMessageW(slider[i],TBM_SETRANGEMAX,TRUE,maximum[i]);
             SendMessageW(slider[i],TBM_SETPOS,TRUE,initial[i]);
         }
+        auxiliary=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,43,276,610,258,180);
+        SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"进气");SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"机械");
+        SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"排气空气");SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"道路");
+        SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"风");SendMessageW(auxiliary,CB_SETCURSEL,0,0);
         item(owner,L"BUTTON",L"空间监听",BS_AUTOCHECKBOX|WS_TABSTOP,30,24,670,210,28);
         item(owner,L"BUTTON",L"瞬态层（实验）",BS_AUTOCHECKBOX|WS_TABSTOP,31,276,670,240,28);
         item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,712,204,40);
@@ -104,11 +118,11 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         item(owner,L"BUTTON",L"保存行程",BS_PUSHBUTTON|WS_TABSTOP,14,194,764,158,36);
         item(owner,L"BUTTON",L"载入回放",BS_PUSHBUTTON|WS_TABSTOP,15,364,764,170,36);
         status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,813,510,30);
-        item(owner,L"STATIC",L"实验音色 · 独立进气／机械层待完善",0,0,24,854,510,27);
+        item(owner,L"STATIC",L"声层独立调节 · 音色仍在完善",0,0,24,854,510,27);
         labels(owner);SetTimer(owner,1,40,NULL);return 0;
     }
     case WM_HSCROLL: {
-        int id=GetDlgCtrlID((HWND)l);if(id>=20&&id<28)changed(owner,id-20);return 0;
+        int id=GetDlgCtrlID((HWND)l);if(id>=20&&id<29)changed(owner,id-20);return 0;
     }
     case WM_COMMAND: {
         AdControl c=am_audio_get(&audio);int id=LOWORD(w),notify=HIWORD(w);
@@ -142,6 +156,11 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
             int selected=(int)SendMessageW(gear,CB_GETCURSEL,0,0);
             c.drive.automatic=selected==0;c.drive.gear=selected==0?1:selected-1;
             am_audio_control(&audio,&c);return 0;
+        }
+        if(id==43&&notify==CBN_SELCHANGE) {
+            int selected=(int)SendMessageW(auxiliary,CB_GETCURSEL,0,0);
+            if(selected>=0&&selected<5)auxiliary_index=selected;
+            labels(owner);return 0;
         }
         break;
     }

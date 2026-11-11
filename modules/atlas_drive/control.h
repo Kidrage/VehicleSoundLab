@@ -11,6 +11,7 @@ typedef struct {
     int spatial, propagation;
     double residual_gain; /* Independent 0..1 detail layer; default zero. */
     double body_mix; /* 0..1 moves measured LF to the body envelope; default0. */
+    double intake_gain, mechanical_gain, air_gain, road_gain, wind_gain; /* Engineering auxiliary layers; default0. */
 } AdMix;
 typedef struct { AdInput drive; AdMix mix; } AdControl;
 

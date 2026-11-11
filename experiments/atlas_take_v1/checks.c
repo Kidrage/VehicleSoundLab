@@ -10,6 +10,7 @@ static SdProfile models[2];static SaBank bank;static RaBank residual;
 static AmRender render;static VslEngine engine,other;static AtPlayer player;
 static float original[12000*2],replay[12000*2],surround[512*12];
 static float raw[1024],dna[1024],noise[1024],body[1024],event[512];
+static float auxiliary[512*VSL_OBJECTS];
 static uint64_t bytes_hash(const unsigned char *p,size_t n) {
     uint64_t h=AT_HASH_INITIAL;size_t i;for(i=0;i<n;++i){h^=p[i];h*=UINT64_C(1099511628211);}return h;
 }
@@ -29,18 +30,20 @@ int main(void) {
     }
     residual.count=2;CHECK(sa_bank_init(&bank,p,2,16)&&ra_bank_valid(&residual));
     CHECK(at_take_allocate(&take,32)&&!at_take_allocate(&take,32));
+    c.mix.intake_gain=.5;c.mix.mechanical_gain=.4;c.mix.air_gain=.3;c.mix.road_gain=.2;c.mix.wind_gain=.1;
     CHECK(at_take_begin(&take,&config,&c));
     saved=take.assets;config.root_per_rpm=NAN;CHECK(!at_take_begin(&take,&config,&c)&&take.assets==saved);config.root_per_rpm=1./120;
     CHECK(am_render_init(&render,&engine,&take.assets->config,&c));
     c.mix.gain=.3;CHECK(at_take_event(&take,0,&c)&&am_render_set(&render,&c));
     capture.dna_raw=raw;capture.dna=dna;capture.residual=noise;capture.body=body;capture.events=event;
+    capture.aux_objects=auxiliary;
     while(at<12000) {
         unsigned n=257;if(n>12000-at)n=(unsigned)(12000-at);
         if(at<3001&&at+n>3001)n=(unsigned)(3001-at);
         if(at<7777&&at+n>7777)n=(unsigned)(7777-at);
         if(at<11493&&at+n>11493)n=(unsigned)(11493-at);
-        if(at==3001){c.drive.rpm=6500;c.mix.body_mix=1;c.mix.residual_gain=.8;CHECK(at_take_event(&take,at,&c)&&am_render_set(&render,&c));}
-        if(at==7777){c.mix.spatial=0;c.mix.body_mix=0;c.mix.detail=.4;CHECK(at_take_event(&take,at,&c)&&am_render_set(&render,&c));}
+        if(at==3001){c.drive.rpm=6500;c.mix.body_mix=1;c.mix.residual_gain=.8;c.mix.intake_gain=.8;c.mix.mechanical_gain=1;CHECK(at_take_event(&take,at,&c)&&am_render_set(&render,&c));}
+        if(at==7777){c.mix.spatial=0;c.mix.body_mix=0;c.mix.detail=.4;c.mix.air_gain=0;c.mix.road_gain=1;c.mix.wind_gain=.7;CHECK(at_take_event(&take,at,&c)&&am_render_set(&render,&c));}
         if(at==11493)take.stop_frame=at;
         CHECK(am_render_process(&render,original+2*at,n,at>=take.stop_frame,&capture));
         source=at_hash_sources(source,&capture,n);hash=at_hash_samples(hash,original+2*at,n*2);
@@ -59,7 +62,8 @@ int main(void) {
     saved=loaded.assets;data[100]^=1;CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[100]^=1;
     CHECK(!at_take_decode(&loaded,data,size-1)&&loaded.assets==saved);
     data[12]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[12]^=1;rehash(data,size);
-    data[8]=2;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=1;rehash(data,size);
+    data[8]=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=2;rehash(data,size);
+    data[76]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[76]^=1;rehash(data,size);
     data2=malloc(size+1);CHECK(data2);memcpy(data2,data,size-8);data2[size-8]=0;rehash(data2,size+1);
     CHECK(!at_take_decode(&loaded,data2,size+1)&&loaded.assets==saved);free(data2);
     CHECK(at_take_save(&take,"atlas take test.vslrun")&&at_take_load(&loaded,"atlas take test.vslrun"));
