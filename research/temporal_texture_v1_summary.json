@@ -1,0 +1,1062 @@
+{
+  "schema": "vsl.temporal-texture-summary/1",
+  "date": "2026-11-12",
+  "result": "pass",
+  "base_commit": "0c37a78db1709eacb66a6457044477ca3966282f",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\temporal_texture_v1",
+  "observations": 29,
+  "known_envelope_controls": 6,
+  "raw_cases": [
+    {
+      "name": "A_fit_interval_raw",
+      "provenance": {
+        "case": {
+          "name": "A_fit_interval_raw",
+          "segment": "A_exterior_moving",
+          "seconds": [
+            316.1,
+            317.1
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "moving exterior tailpipe",
+        "source_frame_bounds": [
+          15172800,
+          15220800
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 1,
+        "median_cv_LR": [
+          [
+            0.17640876558084054,
+            0.1764087648748285
+          ],
+          [
+            0.17252813900021813,
+            0.17252814330367888
+          ],
+          [
+            0.13911493229354585,
+            0.13911493315688137
+          ],
+          [
+            0.1602977607159028,
+            0.16029775919766295
+          ],
+          [
+            0.11359785936369714,
+            0.11359786177050359
+          ],
+          [
+            0.11162847839978486,
+            0.11162846613574902
+          ],
+          [
+            0.1875247229311049,
+            0.18752471306138344
+          ],
+          [
+            0.17373773205639556,
+            0.17373773361448142
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.4434189438665448,
+          0.4434190418161271
+        ],
+        "mean_power_LR": [
+          [
+            0.003605779093017925,
+            0.0036057791085277696
+          ],
+          [
+            0.001290045155246354,
+            0.0012900451622749468
+          ],
+          [
+            0.0007919107536431424,
+            0.0007919107544011395
+          ],
+          [
+            0.00048474005622214624,
+            0.0004847400496232167
+          ],
+          [
+            0.00020896244660587436,
+            0.00020896244749675966
+          ],
+          [
+            3.7833279208185884e-05,
+            3.783327885182238e-05
+          ],
+          [
+            1.5564347262444337e-05,
+            1.556434839843636e-05
+          ],
+          [
+            8.627390548740551e-06,
+            8.627390460050024e-06
+          ]
+        ]
+      }
+    },
+    {
+      "name": "A_later_moving_raw",
+      "provenance": {
+        "case": {
+          "name": "A_later_moving_raw",
+          "segment": "A_exterior_moving",
+          "seconds": [
+            317.5,
+            319.5
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "moving exterior tailpipe",
+        "source_frame_bounds": [
+          15240000,
+          15336000
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 2,
+        "median_cv_LR": [
+          [
+            0.522940672338846,
+            0.5216871466659339
+          ],
+          [
+            0.6073721929678426,
+            0.5970344453401746
+          ],
+          [
+            0.6903738355444174,
+            0.6883095160554948
+          ],
+          [
+            0.7480274212645768,
+            0.7484361462746676
+          ],
+          [
+            0.6740584733739843,
+            0.6725943343601307
+          ],
+          [
+            0.7331944572667128,
+            0.7282263198559842
+          ],
+          [
+            0.6296801516517365,
+            0.6324498526042258
+          ],
+          [
+            0.5664058977085006,
+            0.5504180058318281
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.8773937930798553,
+          0.8797899633652901
+        ],
+        "mean_power_LR": [
+          [
+            0.00039398696282533533,
+            0.00039385449719671166
+          ],
+          [
+            0.00048993470945802,
+            0.0004883899631119568
+          ],
+          [
+            0.0002560073236992621,
+            0.0002557947189130493
+          ],
+          [
+            0.00023892408469621614,
+            0.00023909316162840118
+          ],
+          [
+            5.4855503683216286e-05,
+            5.482657772364001e-05
+          ],
+          [
+            2.1472710592075602e-05,
+            2.143439956000554e-05
+          ],
+          [
+            4.549686479789896e-06,
+            4.560688774009745e-06
+          ],
+          [
+            2.1428911161212945e-06,
+            2.1299171076663753e-06
+          ]
+        ]
+      }
+    },
+    {
+      "name": "A_stationary_other_raw",
+      "provenance": {
+        "case": {
+          "name": "A_stationary_other_raw",
+          "segment": "A_exterior_blips",
+          "seconds": [
+            238,
+            241
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "stationary rear exterior, open driver door",
+        "source_frame_bounds": [
+          11424000,
+          11568000
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 3,
+        "median_cv_LR": [
+          [
+            0.46932201383153016,
+            0.4524483090453186
+          ],
+          [
+            0.4892204536384303,
+            0.47971717290085514
+          ],
+          [
+            0.44630453259568326,
+            0.4468170965392734
+          ],
+          [
+            0.46988960916185396,
+            0.4530956381720579
+          ],
+          [
+            0.44490835747332574,
+            0.4624664400997238
+          ],
+          [
+            0.431747069437273,
+            0.44736522293262504
+          ],
+          [
+            0.4686565349282633,
+            0.460198158209635
+          ],
+          [
+            0.541959758829818,
+            0.5627402497841152
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.7998033536085223,
+          0.815173383812896
+        ],
+        "mean_power_LR": [
+          [
+            0.0008595265712794174,
+            0.0011156427209832699
+          ],
+          [
+            0.0013370364493943414,
+            0.0021059492348068313
+          ],
+          [
+            0.00031101077457211653,
+            0.00041499350067517466
+          ],
+          [
+            0.0004333535462312879,
+            0.00045537970070193414
+          ],
+          [
+            0.00021250640447434863,
+            0.00022213525494386535
+          ],
+          [
+            0.00010725490531228641,
+            0.00010950188062496681
+          ],
+          [
+            4.822601205901176e-05,
+            4.4295805486705434e-05
+          ],
+          [
+            5.577056681618735e-05,
+            4.942572848948623e-05
+          ]
+        ]
+      }
+    },
+    {
+      "name": "B_pull_raw",
+      "provenance": {
+        "case": {
+          "name": "B_pull_raw",
+          "segment": "B_cabin_pull",
+          "seconds": [
+            218,
+            230
+          ],
+          "use": "interior_channel_observation"
+        },
+        "source": "B",
+        "perspective": "cabin binaural, audio only",
+        "source_frame_bounds": [
+          10464000,
+          11040000
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 12,
+        "median_cv_LR": [
+          [
+            0.2011926458600321,
+            0.21252990581013675
+          ],
+          [
+            0.19822007660906643,
+            0.19131441037880076
+          ],
+          [
+            0.17540215445038462,
+            0.17669848401434482
+          ],
+          [
+            0.16128276786974372,
+            0.17295153390822432
+          ],
+          [
+            0.15175690940989908,
+            0.1637374828357291
+          ],
+          [
+            0.149010117779464,
+            0.1456552289810793
+          ],
+          [
+            0.12520927816090197,
+            0.12453637447102595
+          ],
+          [
+            0.10043618532420145,
+            0.11769489073649864
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.2080351347350222,
+          0.20163295983621482
+        ],
+        "mean_power_LR": [
+          [
+            0.00022173807647088095,
+            0.00018926135714280966
+          ],
+          [
+            8.72072358338209e-05,
+            7.49398192762333e-05
+          ],
+          [
+            3.871948884419234e-05,
+            4.0401286688969e-05
+          ],
+          [
+            2.7744823013560078e-05,
+            3.126501923705155e-05
+          ],
+          [
+            1.670775374172274e-05,
+            1.5303159667079497e-05
+          ],
+          [
+            5.452003995764088e-06,
+            4.109827996891516e-06
+          ],
+          [
+            1.505525076155274e-06,
+            1.0929614014967463e-06
+          ],
+          [
+            2.2548442641412458e-06,
+            1.9775318454397845e-06
+          ]
+        ]
+      }
+    },
+    {
+      "name": "D_dyno_raw",
+      "provenance": {
+        "case": {
+          "name": "D_dyno_raw",
+          "segment": "D_dyno_gears_context",
+          "seconds": [
+            20,
+            32
+          ],
+          "use": "audio_transition_observation"
+        },
+        "source": "D",
+        "perspective": "Fixed rear-left exterior camera in enclosed dyno cell",
+        "source_frame_bounds": [
+          960000,
+          1536000
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 12,
+        "median_cv_LR": [
+          [
+            0.22424830816015462,
+            0.21436057306292125
+          ],
+          [
+            0.20757672654245,
+            0.2006183464452444
+          ],
+          [
+            0.1745169579653269,
+            0.17367242676268185
+          ],
+          [
+            0.16883753302852011,
+            0.16541301576871126
+          ],
+          [
+            0.15745139576347214,
+            0.15245001623707533
+          ],
+          [
+            0.1642871224113951,
+            0.1545723617955292
+          ],
+          [
+            0.15734150710309364,
+            0.14714914695932096
+          ],
+          [
+            0.11942055310463745,
+            0.12815055495808889
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.1968082456103863,
+          0.213130563551578
+        ],
+        "mean_power_LR": [
+          [
+            0.0009341323036255299,
+            0.0006194587702360924
+          ],
+          [
+            0.0011251255305193093,
+            0.0009597566107059073
+          ],
+          [
+            0.0005050126655350026,
+            0.00032764295701876855
+          ],
+          [
+            0.0006056873315894535,
+            0.0004910066847895818
+          ],
+          [
+            0.0007937134048708197,
+            0.0006195022245073047
+          ],
+          [
+            0.0007515596148858944,
+            0.0007265671391602271
+          ],
+          [
+            0.0005154972215332677,
+            0.0005762397555548781
+          ],
+          [
+            0.0005012878347796386,
+            0.0003671599016470314
+          ]
+        ]
+      }
+    },
+    {
+      "name": "E_high_cabin_raw",
+      "provenance": {
+        "case": {
+          "name": "E_high_cabin_raw",
+          "segment": "E_corsa_second_context",
+          "seconds": [
+            88,
+            94
+          ],
+          "use": "cabin_dynamic_observation"
+        },
+        "source": "E",
+        "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+        "source_frame_bounds": [
+          4224000,
+          4512000
+        ],
+        "processing": "Unchanged raw decoded stereo; no gain, filtering, phase warp or resampling"
+      },
+      "summary": {
+        "blocks": 6,
+        "median_cv_LR": [
+          [
+            0.14727640663992742,
+            0.1646304377552707
+          ],
+          [
+            0.17780398331252567,
+            0.23148053673214514
+          ],
+          [
+            0.24979713882687743,
+            0.1913247446964918
+          ],
+          [
+            0.16625923116994393,
+            0.1709320119234936
+          ],
+          [
+            0.1497639417266082,
+            0.1461079123713927
+          ],
+          [
+            0.1862760779961407,
+            0.16722341084183545
+          ],
+          [
+            0.17769082788308532,
+            0.1984078193629732
+          ],
+          [
+            0.1687982899197964,
+            0.1611564679656633
+          ]
+        ],
+        "median_abs_crossband_correlation_LR": [
+          0.19483384939397216,
+          0.2027435075681296
+        ],
+        "mean_power_LR": [
+          [
+            0.0008281699592974822,
+            0.0005001258888651242
+          ],
+          [
+            0.0002663361432064181,
+            0.00010593390653464667
+          ],
+          [
+            5.888540879513867e-05,
+            1.7805046272831686e-05
+          ],
+          [
+            4.7283273612490474e-05,
+            1.7572823159940903e-05
+          ],
+          [
+            3.5243303247458585e-05,
+            1.3461837966389944e-05
+          ],
+          [
+            8.031204878409903e-06,
+            3.9662639388239385e-06
+          ],
+          [
+            1.8924274350726496e-06,
+            1.8509262476115779e-06
+          ],
+          [
+            5.754339711535387e-07,
+            4.63505206219458e-07
+          ]
+        ]
+      }
+    }
+  ],
+  "paired_reference": {
+    "frames": 58424,
+    "complete_blocks": 1,
+    "high_cv_LR": [
+      [
+        0.18404203859419352,
+        0.18404203652327042
+      ],
+      [
+        0.15486567104019902,
+        0.1548656753030561
+      ]
+    ],
+    "high_0p1_4Hz_variance_fraction_LR": [
+      [
+        0.6355812812451397,
+        0.6355812921759567
+      ],
+      [
+        0.4212238191977734,
+        0.4212238925681516
+      ]
+    ],
+    "median_abs_crossband_correlation_LR": [
+      0.4635186047213514,
+      0.46351851999044713
+    ]
+  },
+  "accepted_generator": {
+    "high_cv_LR": [
+      [
+        0.11097237999259148,
+        0.11097227944632858
+      ],
+      [
+        0.07887746828492197,
+        0.07887768298943383
+      ]
+    ],
+    "covariance_relative_distance_LR": [
+      0.989272318507513,
+      0.9892722547138556
+    ],
+    "high_0p1_4Hz_variance_fraction_LR": [
+      [
+        0.25987044585408686,
+        0.2598700503255948
+      ],
+      [
+        0.18007572063996008,
+        0.18007656396628094
+      ]
+    ]
+  },
+  "surrogate_maximum_spectral_matrix_relative_error": 8.21925245648866e-16,
+  "surrogate_crossband_abs_correlation_range_L": [
+    0.07363184945276201,
+    0.1448407799293332
+  ],
+  "candidate": {
+    "training": {
+      "observation_frames": 225,
+      "components": 12,
+      "harmonics": 300,
+      "log_magnitude_variance_fraction": 0.46573015199212003,
+      "floor_relative_rms": 1e-06,
+      "phase_fitted": false,
+      "trajectory_stored": false
+    },
+    "legacy_C_error": 5.5213731364744945e-08,
+    "static_control_error": 1.2628786905111156e-15,
+    "trials": [
+      {
+        "name": "magnitude_78283_0.5",
+        "seed": 78283,
+        "amount": 0.5,
+        "covariance_relative_distance_LR": [
+          0.69688462191563,
+          0.6968845926297457
+        ],
+        "relative_covariance_distance_reduction_percent_L": 29.55583524595128,
+        "high_cv_LR": [
+          [
+            0.12034149802570017,
+            0.12034127114033669
+          ],
+          [
+            0.10887157204261398,
+            0.10887121594772854
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.8325308551559941,
+            -0.8325275260993038
+          ],
+          [
+            -0.705169073927713,
+            -0.7051742448318312
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.20118779673672643,
+            0.20118725923263528
+          ],
+          [
+            0.16875084252268427,
+            0.16875008465008537
+          ]
+        ],
+        "peak": 1.0533701181411743
+      },
+      {
+        "name": "magnitude_78283_1",
+        "seed": 78283,
+        "amount": 1.0,
+        "covariance_relative_distance_LR": [
+          0.8130909768760494,
+          0.8130897959968011
+        ],
+        "relative_covariance_distance_reduction_percent_L": 17.80918543210259,
+        "high_cv_LR": [
+          [
+            0.20177376711758827,
+            0.2017735978082562
+          ],
+          [
+            0.19702155867969404,
+            0.19702104859031724
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.16109242495866072,
+            -0.16108839458730223
+          ],
+          [
+            -0.07407994762890638,
+            -0.07408517867350498
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.20554160643912545,
+            0.2055409102393395
+          ],
+          [
+            0.16031171578137382,
+            0.16031073505575885
+          ]
+        ],
+        "peak": 1.040090799331665
+      },
+      {
+        "name": "magnitude_41719_0.5",
+        "seed": 41719,
+        "amount": 0.5,
+        "covariance_relative_distance_LR": [
+          0.7207349461146046,
+          0.7207353484428823
+        ],
+        "relative_covariance_distance_reduction_percent_L": 27.144939504427157,
+        "high_cv_LR": [
+          [
+            0.11674225724290324,
+            0.11674234248090529
+          ],
+          [
+            0.09884397223410156,
+            0.09884419184388046
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.8013954947089936,
+            -0.8013926281005866
+          ],
+          [
+            -0.6179425570112934,
+            -0.617948670744483
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.18697495977844764,
+            0.18697538587351695
+          ],
+          [
+            0.18555181920750946,
+            0.1855537595427727
+          ]
+        ],
+        "peak": 1.0521801710128784
+      },
+      {
+        "name": "magnitude_41719_1",
+        "seed": 41719,
+        "amount": 1.0,
+        "covariance_relative_distance_LR": [
+          0.8155505985336602,
+          0.8155507005870413
+        ],
+        "relative_covariance_distance_reduction_percent_L": 17.56055604951544,
+        "high_cv_LR": [
+          [
+            0.206007075706108,
+            0.20600619493237993
+          ],
+          [
+            0.17323328553358056,
+            0.17323341315616075
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.12027108441258733,
+            -0.12026780425993075
+          ],
+          [
+            0.12013972438480243,
+            0.12013383046299271
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.16374842764911068,
+            0.16374880898477728
+          ],
+          [
+            0.16501941294537867,
+            0.16501933249850068
+          ]
+        ],
+        "peak": 1.030449390411377
+      },
+      {
+        "name": "magnitude_61927_0.5",
+        "seed": 61927,
+        "amount": 0.5,
+        "covariance_relative_distance_LR": [
+          0.7524381673550855,
+          0.7524371055324728
+        ],
+        "relative_covariance_distance_reduction_percent_L": 23.94023836730137,
+        "high_cv_LR": [
+          [
+            0.11102289660853017,
+            0.11102339306927961
+          ],
+          [
+            0.0938960218824366,
+            0.0938964180283052
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.8457823913162474,
+            -0.8457800072697936
+          ],
+          [
+            -0.7385036920827455,
+            -0.7385103117116336
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.26363702836654135,
+            0.2636357897297996
+          ],
+          [
+            0.11840837242782283,
+            0.11840918422192633
+          ]
+        ],
+        "peak": 1.0575363636016846
+      },
+      {
+        "name": "magnitude_61927_1",
+        "seed": 61927,
+        "amount": 1.0,
+        "covariance_relative_distance_LR": [
+          0.7875724045968231,
+          0.7875728299987775
+        ],
+        "relative_covariance_distance_reduction_percent_L": 20.38871503197308,
+        "high_cv_LR": [
+          [
+            0.2017789883626845,
+            0.20177869365888015
+          ],
+          [
+            0.1716904864327274,
+            0.17169076429709074
+          ]
+        ],
+        "high_band_power_error_db_LR": [
+          [
+            -0.19391333970492786,
+            -0.19391171304386665
+          ],
+          [
+            -0.16286401145682833,
+            -0.16287094553364465
+          ]
+        ],
+        "high_0p1_4Hz_variance_fraction_LR": [
+          [
+            0.24509343049479043,
+            0.24509270827985816
+          ],
+          [
+            0.13354577755042732,
+            0.1335461443058025
+          ]
+        ],
+        "peak": 1.0450925827026367
+      }
+    ],
+    "known_power_error_db": 0.12926787882502222,
+    "known_complex_coherence_error": 6.408129855378084e-07,
+    "exact_mono": true,
+    "maximum_float32_cv_drift": 1.9226408881634072e-08,
+    "slow_envelope_alignment": "not_established;0.1–4Hz variance fraction remains below reference",
+    "qualification": "offline_candidate_only; same short target, not perceived realism or unseen recording validation"
+  },
+  "review": {
+    "page": "E:\\VehicleSoundLab\\research\\谐波幅度统计V1.html",
+    "page_sha256": "83523c388370b917714d1b5988007540c52e5795d74d1c457c709e512a066cbc",
+    "http": [
+      {
+        "relative": "research/谐波幅度统计V1.html",
+        "status": 200
+      },
+      {
+        "relative": "references/analysis/temporal_texture_v1/review1/reference.wav",
+        "status": 200
+      },
+      {
+        "relative": "references/analysis/temporal_texture_v1/review1/accepted.wav",
+        "status": 200
+      },
+      {
+        "relative": "references/analysis/temporal_texture_v1/review1/half.wav",
+        "status": 200
+      },
+      {
+        "relative": "references/analysis/temporal_texture_v1/review1/full.wav",
+        "status": 200
+      }
+    ],
+    "gain": 0.5,
+    "seed_selection": "First predefined procedural seed78283; not selected by listening or best metric",
+    "browser_interaction_verified": false,
+    "human_accepted": false
+  },
+  "c_h_count": 436,
+  "c_index_sha256": "51bcb0f363671e452553316e9f73e1d2432cf14b6cdd7944958b3ffb2351b0c4",
+  "accepted_models_unchanged": true,
+  "runtime_changes": false,
+  "model_bank_changed": false,
+  "new_state_mapping": false,
+  "human_accepted": false,
+  "source_sha256": {
+    "tools/summarize_temporal_texture_v1.py": "2773c6c60072be08b3a1e80c29f24e9ff61739b1a4f48f38a3770f52c1753314",
+    "tools/freeze_temporal_texture_v1.py": "2e3fec03529f53202669b2d43480ff2860fadd4029bd5621bf7b84b3ded23a8d",
+    "research/temporal_texture_v1_plan.json": "246cc92e807458c92122facf35d42458d2c9e42412270f13c4c525da8891fdf6",
+    "tools/analyze_temporal_texture_v1.py": "e1bfddd8c076d3a79d16c32ca54b551e75c0390843aa198750598f34b38c7289",
+    "tools/explore_harmonic_magnitude_v1.py": "e7275ea9cbe24a19acb93f43e81d05d37da15f0d799bc57c722e5c889bf0214b",
+    "tools/verify_harmonic_magnitude_v1.py": "330a18bd94e778041e2496e3c083f0d66838233e9f0e52dfbc2a6a1a42c71976",
+    "tools/make_magnitude_review_v1.py": "06a07a77de8c97694251648c0a704efd76f374ae31deba2f99f40862a6fadf90",
+    "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "tools/temporal_texture_v1/controls.py": "05edfe0cb6a13c3354023be9c1724b63f9246db9b5ffd3ef3fc1ec39ad59f38b",
+    "tools/temporal_texture_v1/features.py": "f7d5d96a81bd5a5df02a89850723d2cf70a10c6f45f12a59d8f309d4149d4190",
+    "tools/harmonic_magnitude_v1/legacy.py": "1f63eaba7c9664395a513f09d2da03fb2fc789d2b17845f81cfc7d0c4e2647ba",
+    "tools/harmonic_magnitude_v1/model.py": "7315fbc71ff4208f78f5aaae392f464f3fe48f3ee4ecc57c78e892d4d40926eb"
+  },
+  "evidence_sha256": {
+    "analysis1/A_fit_interval_raw.npz": "18058fc2f1a842d64bc35978d4f65bbb462b6fe35059b671d7fb91efd2ac7378",
+    "analysis1/A_later_moving_raw.npz": "50c1b2c2b1f29481f92a5b3683b9f8311ad7fd0cbac97442c7a2da7a99bf504d",
+    "analysis1/A_stationary_other_raw.npz": "beb1c10782974a79ef3d840f7654cbb315d017e38aac457ea5bf3c25db8c74e2",
+    "analysis1/B_pull_raw.npz": "8d9e26d029e395c6e9885cd6d258c87d0d68c9d039f8009d4565d5b7753bf8a6",
+    "analysis1/C_41719_AM_mix.npz": "d633ac0ef70d0c505d56c37305e9e9484b5d96c308bab709ef249a97d035a4eb",
+    "analysis1/C_41719_AM_solo.npz": "7dd39304107bde19f5d6aad4a7df4db2424fc0495678650a03c866d24b0d2c9a",
+    "analysis1/C_41719_static_mix.npz": "ef3bdea6954564817e902f07c729c030a9253f73f03d3ac2f9ead379f8c5a9bd",
+    "analysis1/C_41719_static_solo.npz": "249091e47af2cf4d635220fd3b2a0c7181a6a7cdd3224d63cc15ad25ce78fd38",
+    "analysis1/C_61927_AM_mix.npz": "3ab056a9dc86538d969ac5a390af1aea2816c1a2be451e730b07c4bad1bdd4e4",
+    "analysis1/C_61927_AM_solo.npz": "79aeac48aaa4c38b48703e43b42d4f6eb91d5eef04c700c6ba2070a73ef8978b",
+    "analysis1/C_61927_static_mix.npz": "881d2d6bcc2ea28449b241679d3b9bee2b5e46e0b76aedbd71f99ebb623a247f",
+    "analysis1/C_61927_static_solo.npz": "42fa36eeffd84b158b1794dfb0f94ea616fd072f5a225cc1552c2ebc7a7fbf8d",
+    "analysis1/C_78283_AM_mix.npz": "4966c394e9f28a4957a611654003b22ac86c1d24b9a0761d29634cba0d4757b2",
+    "analysis1/C_78283_AM_solo.npz": "9f6c91bf958c17ef40de474d564ab940b371f0e76c62b8f5ca41400a4f4a861b",
+    "analysis1/C_78283_static_mix.npz": "4ec62fd9c7ca2aa43662861d7c6cf29b9745c0e8da8f6d144764f5d14b6818fc",
+    "analysis1/C_78283_static_solo.npz": "42605273bda6a0e8d554c3099395184d0a508d136cf94322a457494c569c6426",
+    "analysis1/D_dyno_raw.npz": "a01d37165155fe7f2645c2c8f315034f330d5775b2f6070f31969ef989bf7f46",
+    "analysis1/E_high_cabin_raw.npz": "28bc9e761c7d6bd388dfd46696ed3ce2d8577d13b63604298125c9cb2be483f0",
+    "analysis1/exact_sources/research/temporal_texture_v1_plan.json": "246cc92e807458c92122facf35d42458d2c9e42412270f13c4c525da8891fdf6",
+    "analysis1/exact_sources/tools/analyze_temporal_texture_v1.py": "e1bfddd8c076d3a79d16c32ca54b551e75c0390843aa198750598f34b38c7289",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/exact_sources/tools/temporal_texture_v1/controls.py": "05edfe0cb6a13c3354023be9c1724b63f9246db9b5ffd3ef3fc1ec39ad59f38b",
+    "analysis1/exact_sources/tools/temporal_texture_v1/features.py": "f7d5d96a81bd5a5df02a89850723d2cf70a10c6f45f12a59d8f309d4149d4190",
+    "analysis1/fixed_A_reference.npz": "f2c7e8a73db296601a9f196796c462d6201d7705a03a5fc0c357ecbfea6fe9f6",
+    "analysis1/fixed_DNA_LF.npz": "5f3e1a39723ab2f3ae32898a7f8cfd846ac4e2f1d06376a327e3d43e89c05bce",
+    "analysis1/metadata.json": "9b8f7fe202a34df66e13e3455b08e3cb366a25bb26bad678240d618cc1b26237",
+    "analysis1/phase_surrogate_11031.npz": "4f68a1766dea1518e813910c5694aad175105299a908fa1a2ba4e2448fae403c",
+    "analysis1/phase_surrogate_13007.npz": "9ce1426772ea14b37ad33591a2ea8adf73e693cfd8af64996cd51a46045f38f7",
+    "analysis1/phase_surrogate_16001.npz": "31791af5a7045c81a6a70010a39ef9439499532faeaa5538b16bd73208db6b27",
+    "analysis1/phase_surrogate_19001.npz": "c6477aea367a4e0c9c6cc107d4ed29362b611cc213712862ecc2f8b5112841d4",
+    "analysis1/phase_surrogate_230917.npz": "15d77f449f04fa1f0fcc2e27fcbe43770d6b781b27d72468f5a68e3473158f8e",
+    "analysis1/phase_surrogate_23117.npz": "560b6f9f3c513996e7de33d40d3181b2cfdc8c872108d2f32649f6d364b4cf89",
+    "analysis1/phase_surrogate_41719.npz": "4c752d2a88d2c744a326ca1877dd4eb23bb63e8bbad82a0ed77505dc4fa8486b",
+    "analysis1/phase_surrogate_61927.npz": "e386567bc7ad35fa5c1a893d263f7c2f272a3f74d911d651034fe1e7fa820941",
+    "analysis1/phase_surrogate_95179.npz": "da3fe564fcbb52c2c2d2193547d35e87014baee8f8e5d2ba460450b0211e045a",
+    "analysis1/report.json": "51beac4115709c4f1a8bb5ee9df4c3ca6b3ee24a782f81f5a8e4d48b91bf38fc",
+    "magnitude1/candidate_moments.npz": "b2a94315fd2c222cb4289b6241e79988dc50a65ed716b6c98aefd65fc1d28579",
+    "magnitude1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "magnitude1/exact_sources/tools/explore_harmonic_magnitude_v1.py": "e7275ea9cbe24a19acb93f43e81d05d37da15f0d799bc57c722e5c889bf0214b",
+    "magnitude1/exact_sources/tools/harmonic_magnitude_v1/legacy.py": "1f63eaba7c9664395a513f09d2da03fb2fc789d2b17845f81cfc7d0c4e2647ba",
+    "magnitude1/exact_sources/tools/harmonic_magnitude_v1/model.py": "7315fbc71ff4208f78f5aaae392f464f3fe48f3ee4ecc57c78e892d4d40926eb",
+    "magnitude1/exact_sources/tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+    "magnitude1/exact_sources/tools/temporal_texture_v1/features.py": "f7d5d96a81bd5a5df02a89850723d2cf70a10c6f45f12a59d8f309d4149d4190",
+    "magnitude1/magnitude_41719_0.5.wav": "7c9e5d87846a8a86c6c923fe197bae49052edad7d853d7a71b9e50eb71101c92",
+    "magnitude1/magnitude_41719_1.wav": "7bab4aed768fe0db55848655dd3bff11ba82deeb78bff47275c1bb01769fae6c",
+    "magnitude1/magnitude_61927_0.5.wav": "bd62614c52c8cf055ab7ed329fbaffc81f3c890c87bd36f131b2f860f29da94b",
+    "magnitude1/magnitude_61927_1.wav": "ba701e2ffb279bcce649106b9a1601087e0e6c6739351ecd8eee51f944c9bb2a",
+    "magnitude1/magnitude_78283_0.5.wav": "7a0155c28a61fca30e911b6a832af8f23442c0148ef7568b8043d51a6b330c51",
+    "magnitude1/magnitude_78283_1.wav": "4b0e5a62a8d9c68fb1bca3e196ddaacb23d90ee55b382ac82a545eae8bda9e2c",
+    "magnitude1/report.json": "175d20a0415c9631ff45d1434bcc172ed7c1e45a6374e68962a98b06126c6f99",
+    "review1/accepted.wav": "4ba7616bb77ed258337d42358422f12795b86d661cae5fa7198acebf8cb342a5",
+    "review1/executed_review.py": "06a07a77de8c97694251648c0a704efd76f374ae31deba2f99f40862a6fadf90",
+    "review1/full.wav": "2d7002208726be230193e2ba75250ab78360cd8bc6a462508656b7e6caf2fa4d",
+    "review1/half.wav": "9843c455d1ee0775a8de1c32ab3978a2c8d1aa92a2f4fc0126eb9ad91e291ca8",
+    "review1/reference.wav": "f776a3870d9868466faf3247e97171e4351d470628ce5b405c9ddbbee4dc9245",
+    "review1/report.json": "beac95b918441e109f1e6069be3cde3b59a1befafc1ac7d6380d3d06a18438cb",
+    "review1/review.html": "83523c388370b917714d1b5988007540c52e5795d74d1c457c709e512a066cbc",
+    "verification1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "verification1/exact_sources/tools/harmonic_magnitude_v1/model.py": "7315fbc71ff4208f78f5aaae392f464f3fe48f3ee4ecc57c78e892d4d40926eb",
+    "verification1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "verification1/exact_sources/tools/temporal_texture_v1/features.py": "f7d5d96a81bd5a5df02a89850723d2cf70a10c6f45f12a59d8f309d4149d4190",
+    "verification1/exact_sources/tools/verify_harmonic_magnitude_v1.py": "330a18bd94e778041e2496e3c083f0d66838233e9f0e52dfbc2a6a1a42c71976",
+    "verification1/magnitude_41719_0.5.npz": "17f23a305fadc9ce4ee16e7bcd185752697a365227bdea911d4993a595ff8981",
+    "verification1/magnitude_41719_1.npz": "3e035931258ea05ec376cae9426d6320c222875cf31286160ed0d8e62556870d",
+    "verification1/magnitude_61927_0.5.npz": "d1581064b9e183f731142865a13bfc7aefbd093ebf1ccfcc634e5cdd0466f4fe",
+    "verification1/magnitude_61927_1.npz": "a78fcc2150e6072db909542cfd457c7a88eb4e920102d026374d3295e515a0da",
+    "verification1/magnitude_78283_0.5.npz": "dbc8deeb4d7f453af129ae95c63d5964e4ce682939ec70f7aa912a79a64dc10f",
+    "verification1/magnitude_78283_1.npz": "f255e84e3c0c2412c2e7ef20a839751d8984cd17c85acc1cb17d28da7ebbf370",
+    "verification1/report.json": "483d8ddf37f5b8dfc0d2d8c125e96a6362b3c8f9cd44ea16c178d8936d70b7ae"
+  },
+  "prior_manifest_sha256": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+  "input_metadata_sha256": {
+    "references/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "references/approval_manifest.json": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454"
+  },
+  "limits": [
+    "Diagnostic temporal comparison, no fit or promotion. Fixed-coordinate accepted A reference is the only paired target. Disjoint raw intervals are supplementary observations from previously explored recordings; stationary/cabin/dyno are separate contexts. CV is not isolated engine modulation. No known constant RPM/load or statistical independence of overlapping frame windows.",
+    "Fixed reference has one complete block; no confidence interval or engine/load identification",
+    "Surrogate preserves whole-length spectral matrix, not local block power; it also randomizes coherent DNA phases",
+    "Frozen C stems represent actual tested C output; no new C render, device or listening validation",
+    "Normalized reference versus raw intervals are different coordinates; no exact matched-RPM comparison",
+    "Recording L/R covariance is not a set of independently located physical objects",
+    "Same1.217s normalized fixed A context; no unseen-recording, RPM/load/state generalization or listening acceptance",
+    "All high harmonic magnitude statistics are replaced above the engineering crossover; this is not added residual AM",
+    "Legacy fixed-phase oracle is checked against frozen C before subtraction; archived base has float rounding",
+    "Gaussian log magnitude is unbounded and needs finite-run/peak/power/stereo qualification before a C implementation",
+    "PCA/AR1 magnitude moments are approximate; phase and inter-harmonic residual remain separate limitations",
+    "No C/model-bank/UI/driver/take changes; no native device or7.1.4 validation",
+    "Known-model finite-run power/stereo and decoded WAV arithmetic only; not C runtime or perceptual validation",
+    "Candidate statistics still use the same short normalized recording; no independent real-engine validation",
+    "Unbounded lognormal amplitudes and amplitude-only sidebands need further qualification before C/UI adoption",
+    "CV of near-silent residual solo bands can be leakage dominated and is not interpreted as missing engine detail",
+    "Raw later-A and stationary passages are dynamic contexts; large shared envelopes do not identify constant-load texture",
+    "50percent crossfade changes mean spectral power; covariance scores are not a level-controlled perceptual result"
+  ]
+}

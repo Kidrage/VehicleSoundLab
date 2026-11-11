@@ -1,0 +1,28 @@
+{
+  "sample_rate": 48000,
+  "block_frames": 48000,
+  "size": 2048,
+  "hop": 480,
+  "bands": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "lags_frames": [1,2,5,10,20],
+  "modulation_bands_hz": [[0.1,4],[4,10],[10,25],[25,50.0001]],
+  "procedural_seeds": [78283,41719,61927],
+  "surrogate_seeds": [11031,23117,41719,61927,95179,13007,16001,19001,230917],
+  "control_seeds": [23117,61927,8121907],
+  "scalar_dft_relative_tolerance": 1e-10,
+  "parseval_absolute_tolerance": 1e-12,
+  "two_tone_rms_relative_tolerance": 0.005,
+  "beat_peak_error_hz": 1.1,
+  "common_am_minimum_crossband_correlation": 0.99,
+  "surrogate_relative_spectral_tolerance": 1e-10,
+  "generator_warmup_frames": 24000,
+  "recording_cases": [
+    {"name":"A_fit_interval_raw","segment":"A_exterior_moving","seconds":[316.1,317.1],"use":"exterior_dynamic_observation"},
+    {"name":"A_later_moving_raw","segment":"A_exterior_moving","seconds":[317.5,319.5],"use":"exterior_dynamic_observation"},
+    {"name":"A_stationary_other_raw","segment":"A_exterior_blips","seconds":[238,241],"use":"exterior_dynamic_observation"},
+    {"name":"B_pull_raw","segment":"B_cabin_pull","seconds":[218,230],"use":"interior_channel_observation"},
+    {"name":"D_dyno_raw","segment":"D_dyno_gears_context","seconds":[20,32],"use":"audio_transition_observation"},
+    {"name":"E_high_cabin_raw","segment":"E_corsa_second_context","seconds":[88,94],"use":"cabin_dynamic_observation"}
+  ],
+  "scope": "Diagnostic temporal comparison, no fit or promotion. Fixed-coordinate accepted A reference is the only paired target. Disjoint raw intervals are supplementary observations from previously explored recordings; stationary/cabin/dyno are separate contexts. CV is not isolated engine modulation. No known constant RPM/load or statistical independence of overlapping frame windows."
+}
