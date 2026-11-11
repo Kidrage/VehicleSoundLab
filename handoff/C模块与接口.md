@@ -1,5 +1,7 @@
 # C 模块与接口
 
+最新低频接口：`modules/harmonic_body/{band,mix}.*` 配合 `dna_atlas::sa_voice_tick_body`，从同一谐波样本取出LF，再互补分配到DNA／机体包络；没有第二个时钟或随机源。`AdMix.body_mix`默认0，`AdCapture.body_raw/body/body_objects`分别保留原始L/R、混音后LF及机体代理；与独立高频残差一起只做一次空间渲染。`--body-mix`与原生“低频分层”旋钮已接入；34项回归、17条旧音轨一致及短时实际静音设备／UI检查通过。完整物理LF／NVH／工况模型及新音色听评仍缺，见[模块图与边界](../research/驾驶低频分层V1.md)。
+
 从 `src/core/engine.h` 和 `src/core/engine.c::vsl_process_layout` 开始读驾驶主线；从 `modules/sound_dna/voice.h` 和 `experiments/sustain_monitor_v3/render.c` 开始读声纹实验。两条链路各有入口、模型和运行状态，交接总入口只负责启动。
 
 后续连接层：`modules/dna_scene/{source,routing,scene}.*` 将新DNA／相干低频的独立voice接入现有空间API。入口为 `ds_scene_init/set/process`，离线宿主为 `experiments/dna_scene_v1/probe.c`；初始化借用独占的 `VslEngine` 存储，但不运行旧驾驶或旧DNA。`DsCapture` 分别提供两层raw／增益后观察、直送监听和十源分轨。详见[接口边界](../modules/dna_scene/README.md)。本次还没有完成驾驶工况接入。

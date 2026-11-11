@@ -11,7 +11,7 @@ int ad_control_valid(const AdControl *c,int channels) {
         p->gear>=0&&p->gear<=7&&flag(p->automatic)&&flag(p->backfire)&&
         isfinite(p->rpm)&&p->rpm>=0&&p->rpm<=10000&&isfinite(p->load)&&p->load>=-1&&p->load<=1&&
         unit(p->throttle)&&unit(p->brake)&&unit(m->gain)&&unit(m->detail)&&unit(m->event_gain)&&
-        unit(m->width)&&unit(m->room)&&unit(m->perspective)&&unit(m->residual_gain)&&flag(m->spatial)&&flag(m->propagation)&&
+        unit(m->width)&&unit(m->room)&&unit(m->perspective)&&unit(m->residual_gain)&&unit(m->body_mix)&&flag(m->spatial)&&flag(m->propagation)&&
         (channels!=12||m->spatial);
 }
 void ad_control_apply(VslEngine *e,const AdControl *c) {

@@ -8,9 +8,9 @@
 #include "audio.h"
 #include "models.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
-static HWND slider[7],label[7],status,telemetry,voice,mode,gear;
+static HWND slider[8],label[8],status,telemetry,voice,mode,gear;
 static HFONT font,heading;static int muted,bank_index;
-static const int minimum[]={0,0,700,-24,0,0,0},maximum[]={100,100,8500,0,100,100,100},initial[]={0,0,1200,-6,70,0,0};
+static const int minimum[]={0,0,700,-24,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0};
 
 static HWND item(HWND owner,const wchar_t *kind,const wchar_t *text,DWORD style,int id,int x,int y,int w,int h) {
     HWND child=CreateWindowW(kind,text,WS_CHILD|WS_VISIBLE|style,x,y,w,h,owner,(HMENU)(INT_PTR)id,NULL,NULL);
@@ -25,6 +25,7 @@ static void labels(HWND owner) {
     swprintf(text,128,L"空间宽度    %.0f%%",c.mix.width*100);SetWindowTextW(label[4],text);
     swprintf(text,128,L"房间量    %.0f%%",c.mix.room*100);SetWindowTextW(label[5],text);
     swprintf(text,128,L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
+    swprintf(text,128,L"低频分层    %.0f%%",c.mix.body_mix*100);SetWindowTextW(label[7],text);
     for(i=0;i<2;++i)EnableWindow(slider[i],c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[2],c.drive.mode==VSL_BENCH);
     EnableWindow(gear,c.drive.mode!=VSL_BENCH);
@@ -41,6 +42,7 @@ static void changed(HWND owner,int index) {
     else if(index==4)c.mix.width=value/100.;
     else if(index==5)c.mix.room=value/100.;
     else if(index==6)c.mix.residual_gain=value/100.;
+    else if(index==7)c.mix.body_mix=value/100.;
     am_audio_control(&audio,&c);labels(owner);
 }
 static int load_bank(int index) {
@@ -69,24 +71,24 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         for(i=1;i<=7;++i){wchar_t text[32];swprintf(text,32,L"手动 %d 挡",i);SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)text);}
         SendMessageW(gear,CB_SETCURSEL,0,0);
         telemetry=item(owner,L"STATIC",L"0 RPM    0.0 km/h    N",0,60,24,153,510,32);
-        for(i=0;i<7;++i) {
+        for(i=0;i<8;++i) {
             int y=194+58*i;
             label[i]=item(owner,L"STATIC",L"",0,70+i,24,y,510,25);
             slider[i]=item(owner,TRACKBAR_CLASSW,L"",TBS_HORZ|TBS_NOTICKS|WS_TABSTOP,20+i,24,y+24,510,28);
             SendMessageW(slider[i],TBM_SETRANGEMIN,FALSE,minimum[i]);SendMessageW(slider[i],TBM_SETRANGEMAX,TRUE,maximum[i]);
             SendMessageW(slider[i],TBM_SETPOS,TRUE,initial[i]);
         }
-        item(owner,L"BUTTON",L"空间监听",BS_AUTOCHECKBOX|WS_TABSTOP,30,24,612,210,28);
-        item(owner,L"BUTTON",L"瞬态层（实验）",BS_AUTOCHECKBOX|WS_TABSTOP,31,276,612,240,28);
-        item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,654,204,40);
-        item(owner,L"BUTTON",L"点火",BS_PUSHBUTTON|WS_TABSTOP,12,244,654,134,40);
-        item(owner,L"BUTTON",L"停止",BS_PUSHBUTTON|WS_TABSTOP,11,394,654,140,40);
-        status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,710,510,30);
-        item(owner,L"STATIC",L"实验音色 · 独立低频与物理噪音层待接入",0,0,24,751,510,27);
+        item(owner,L"BUTTON",L"空间监听",BS_AUTOCHECKBOX|WS_TABSTOP,30,24,670,210,28);
+        item(owner,L"BUTTON",L"瞬态层（实验）",BS_AUTOCHECKBOX|WS_TABSTOP,31,276,670,240,28);
+        item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,712,204,40);
+        item(owner,L"BUTTON",L"点火",BS_PUSHBUTTON|WS_TABSTOP,12,244,712,134,40);
+        item(owner,L"BUTTON",L"停止",BS_PUSHBUTTON|WS_TABSTOP,11,394,712,140,40);
+        status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,768,510,30);
+        item(owner,L"STATIC",L"实验音色 · 独立进气／机械层待完善",0,0,24,809,510,27);
         labels(owner);SetTimer(owner,1,40,NULL);return 0;
     }
     case WM_HSCROLL: {
-        int id=GetDlgCtrlID((HWND)l);if(id>=20&&id<27)changed(owner,id-20);return 0;
+        int id=GetDlgCtrlID((HWND)l);if(id>=20&&id<28)changed(owner,id-20);return 0;
     }
     case WM_COMMAND: {
         AdControl c=am_audio_get(&audio);int id=LOWORD(w),notify=HIWORD(w);
@@ -162,7 +164,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
     window=CreateWindowW(klass.lpszClassName,L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
-        CW_USEDEFAULT,CW_USEDEFAULT,580,834,NULL,NULL,instance,NULL);
+        CW_USEDEFAULT,CW_USEDEFAULT,580,892,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}ShowWindow(window,show);UpdateWindow(window);
     while(GetMessageW(&message,NULL,0,0)>0)if(!IsDialogMessageW(window,&message)){TranslateMessage(&message);DispatchMessageW(&message);}
     am_audio_destroy(&audio);return (int)message.wParam;

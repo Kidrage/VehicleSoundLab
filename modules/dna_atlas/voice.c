@@ -26,7 +26,7 @@ static double magnitude(const SaVoice *v,unsigned a,unsigned h,unsigned c) {
     double im=m[2*c+1]+v->detail*(t->left[h][2*c+1]+t->fraction*(t->right[h][2*c+1]-t->left[h][2*c+1]));
     return hypot(re,im);
 }
-void sa_voice_tick(SaVoice *v,double out[2]) {
+static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band) {
     const SaBank *b=v->bank;
     unsigned a,h,c,lo=0,hi=0;
     double blend=0,cl=cos(v->phase),sl=sin(v->phase),base_c=cl,base_s=sl;
@@ -43,8 +43,9 @@ void sa_voice_tick(SaVoice *v,double out[2]) {
         blend=(v->root_hz-b->profile[lo]->base_hz)/(b->profile[hi]->base_hz-b->profile[lo]->base_hz);
     }
     v->lower=lo;v->upper=hi;v->blend=blend;out[0]=out[1]=0;
+    if(body)body[0]=body[1]=0;
     for (h=0;h<b->harmonics;++h) {
-        double hz=(h+1)*v->root_hz, aa=1,next;
+        double hz=(h+1)*v->root_hz, aa=1,next,weight=body?hb_band_weight(band,hz):0;
         /* Smoothly remove orders before Nyquist; pitch itself is never clamped
            to the training interval. Taper starts19.2k, reaches zero21.6kHz. */
         if (hz>=21600) break;
@@ -57,14 +58,22 @@ void sa_voice_tick(SaVoice *v,double out[2]) {
                 if (blend==1) { re=b->unit[hi][h][2*c];im=b->unit[hi][h][2*c+1]; }
                 else if (blend!=0) { re=sa_bank_sine(b,phase+PI/2);im=sa_bank_sine(b,phase); }
             }
-            out[c]+=aa*mag*(re*cl-im*sl);
+            double contribution=aa*mag*(re*cl-im*sl);
+            out[c]+=contribution;
+            if(body&&weight!=0)body[c]+=weight*contribution;
         }
         next=sl*base_c+cl*base_s;cl=cl*base_c-sl*base_s;sl=next;
     }
     out[0]*=v->gain;out[1]*=v->gain;
+    if(body){body[0]*=v->gain;body[1]*=v->gain;}
     v->phase+=2*PI*v->root_hz/48000;if (v->phase>=2*PI) v->phase-=2*PI;
     for (a=0;a<b->count;++a) v->texture[a].fraction+=v->root_hz/12000;
     ++v->frame;
+}
+void sa_voice_tick(SaVoice *v,double out[2]) { sample(v,out,NULL,NULL); }
+int sa_voice_tick_body(SaVoice *v,const HbBand *band,double out[2],double body[2]) {
+    if(!v||!v->bank||!out||!body||out==body||!hb_band_valid(band))return 0;
+    sample(v,out,body,band);return 1;
 }
 void sa_voice_process(SaVoice *v,double *out,unsigned frames) {
     unsigned n;for (n=0;n<frames;++n) sa_voice_tick(v,out+2*n);

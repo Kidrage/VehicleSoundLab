@@ -1,0 +1,1409 @@
+{
+  "schema": "vsl.harmonic-body-published/1",
+  "date": "2026-11-12",
+  "result": "pass",
+  "tests": 34,
+  "base_commit": "d075f82d231ca7497f142204dd30cbf66fd28455",
+  "human_accepted": false,
+  "accepted_moving_context_pair_unchanged": true,
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\harmonic_body_v1",
+  "budget": [
+    {
+      "name": "A Stationary Low",
+      "context": "exterior_anchors_v1",
+      "base_hz": 10.005673871228469,
+      "observed_cycles": 34.74609375,
+      "source_manifest_sha256": "6e03300d297a264deae54fe718edb2438f7d2d95cbd5fdfb995d7c44c927f5dc",
+      "normalized_sha256": "b5c9bd0715c140ebcb0608a682e965f19b2bc09fe8ca22602d48506b55e3896a",
+      "model_sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+      "raw_sha256": "4a8e4b51a0ffff00b32f9f6f2264629932fe7b3cb7a42b2845181e93f4d86e14",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.054550839060709275,
+              0.14290655735765315,
+              0.0055427947526285595
+            ],
+            [
+              0.05404602936168241,
+              0.14182027724311078,
+              0.005853594278877597
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.053986424009914165,
+              0.13581807962722925,
+              0.004416708081502671
+            ],
+            [
+              0.05352134890422209,
+              0.13451429737898968,
+              0.004550675812879465
+            ]
+          ],
+          "mean_power_change_db": [
+            -0.043774365140285695,
+            -0.22530336817664046,
+            -1.0410150372694997
+          ]
+        },
+        {
+          "window_samples": 16384,
+          "reference_power_LR": [
+            [
+              0.054514596167409966,
+              0.14395792827690645,
+              0.005555101155006392
+            ],
+            [
+              0.054082141274171366,
+              0.14278772388366467,
+              0.005853947927412068
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0538611953978792,
+              0.13602530026127743,
+              0.004374435348932409
+            ],
+            [
+              0.05336532786668965,
+              0.13470072735578761,
+              0.004505158953318128
+            ]
+          ],
+          "mean_power_change_db": [
+            -0.0551455343225014,
+            -0.2496683066847803,
+            -1.0885632464556196
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A Stationary Lower Mid",
+      "context": "exterior_anchors_v1",
+      "base_hz": 31.52219356431996,
+      "observed_cycles": 12.744140625,
+      "source_manifest_sha256": "6e03300d297a264deae54fe718edb2438f7d2d95cbd5fdfb995d7c44c927f5dc",
+      "normalized_sha256": "089c03e0e88fc612e66f5f3ac48e63b87e12aa14dea723ffcc53c71b07b937c1",
+      "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+      "raw_sha256": "1a79957e7e365a2e10cf19d2eac20b45d6814640bffd870b6b23d9911ca09ff8",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.00047231113998324266,
+              0.30641945147431143,
+              0.0023684866908392655
+            ],
+            [
+              0.0004297543656796259,
+              0.2925460602855226,
+              0.002722267732398561
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.00031746072142886455,
+              0.2711666039205327,
+              0.0015921006249130015
+            ],
+            [
+              0.00029906631887008194,
+              0.2644668618221883,
+              0.0017532323260414035
+            ]
+          ],
+          "mean_power_change_db": [
+            -1.6528594692962066,
+            -0.48534113182572103,
+            -1.8234279899977022
+          ]
+        },
+        {
+          "window_samples": 16384,
+          "reference_power_LR": [
+            [
+              0.0002845558117030991,
+              0.3125815946839223,
+              0.001912823136099064
+            ],
+            [
+              0.00026858440193656963,
+              0.30658386993976355,
+              0.0021232418877090626
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.00029768822278118787,
+              0.26865441593825257,
+              0.001562972222535566
+            ],
+            [
+              0.0002794958111330243,
+              0.26207054199092583,
+              0.0017216452459109094
+            ]
+          ],
+          "mean_power_change_db": [
+            0.18479076020292276,
+            -0.6693721328905288,
+            -0.8947335616277329
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A Stationary Upper Mid",
+      "context": "exterior_anchors_v1",
+      "base_hz": 47.39127187830898,
+      "observed_cycles": 14.5,
+      "source_manifest_sha256": "6e03300d297a264deae54fe718edb2438f7d2d95cbd5fdfb995d7c44c927f5dc",
+      "normalized_sha256": "e11b879e32ba102120c1f34f0d7b8d4dc3196d84a0baa6d2256bae3809abc1e6",
+      "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+      "raw_sha256": "4272d8d609fd1220c5ac0a4069c43bbc664904e7237b816a501d1bf60b7c4001",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.000352601004117381,
+              0.1769638235850979,
+              0.01852693340345277
+            ],
+            [
+              0.00033623246281231544,
+              0.1750094188633,
+              0.02424958564749452
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0003777008540151943,
+              0.17531209224552063,
+              0.013772642046234816
+            ],
+            [
+              0.0003680361699722945,
+              0.17513580957639846,
+              0.017939829503814293
+            ]
+          ],
+          "mean_power_change_db": [
+            0.3447146613853653,
+            -0.018861848444947572,
+            -1.2997535024535583
+          ]
+        },
+        {
+          "window_samples": 14687,
+          "reference_power_LR": [
+            [
+              0.0003051397216785964,
+              0.18025881579150688,
+              0.019112139547592916
+            ],
+            [
+              0.0002724639846459861,
+              0.1797819070175283,
+              0.025163554099638302
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0003741812751375661,
+              0.17506821085691338,
+              0.013819438983088598
+            ],
+            [
+              0.00036505992502131203,
+              0.17498052705482697,
+              0.018007587447219774
+            ]
+          ],
+          "mean_power_change_db": [
+            1.0715619211889607,
+            -0.12223108751550457,
+            -1.4336930902635345
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A Stationary High",
+      "context": "exterior_anchors_v1",
+      "base_hz": 60.83004535315176,
+      "observed_cycles": 12.0029296875,
+      "source_manifest_sha256": "6e03300d297a264deae54fe718edb2438f7d2d95cbd5fdfb995d7c44c927f5dc",
+      "normalized_sha256": "96fc9475495d2ed87a8aaf541c9ae9015c8d4bf1e8d5e5edc136fc67acc22aa6",
+      "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+      "raw_sha256": "8bc803d9220f35dfb017b514e6be910728debe3cc4cb09ebd8a2161b4a76635e",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.0011040148873843784,
+              0.20627413393434652,
+              0.008489649786580284
+            ],
+            [
+              0.0011559310631244538,
+              0.21165593906286387,
+              0.009153495270405348
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0006966117442371219,
+              0.20416523564170178,
+              0.007690627366692423
+            ],
+            [
+              0.0007318597396638202,
+              0.21123428345031497,
+              0.00844660953794879
+            ]
+          ],
+          "mean_power_change_db": [
+            -1.9922647743526896,
+            -0.026376333824332097,
+            -0.387468300231667
+          ]
+        },
+        {
+          "window_samples": 9472,
+          "reference_power_LR": [
+            [
+              0.0006977754150403277,
+              0.20279962257848097,
+              0.009077605321252095
+            ],
+            [
+              0.0007254359604670785,
+              0.2095613935447871,
+              0.009834729237430529
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0003966719444775587,
+              0.20456930313282345,
+              0.007679667635726894
+            ],
+            [
+              0.000418017478572249,
+              0.2117282709850082,
+              0.008431992776103311
+            ]
+          ],
+          "mean_power_change_db": [
+            -2.422773283494039,
+            0.04126279014432389,
+            -0.6960484231831197
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E Cabin Lower",
+      "context": "cabin_anchors_v1",
+      "base_hz": 60.634271286273396,
+      "observed_cycles": 60.5830078125,
+      "source_manifest_sha256": "03aa32a8a7aafb04d3eea5fad90299efe1731def7745bf039140d045e6e21c47",
+      "normalized_sha256": "cf0b069f59f263184a40f13bf22b4fb6dffa95e7a98b2edc4bf1ec9203b1ef94",
+      "model_sha256": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+      "raw_sha256": "516b3d92895dd57ca0833ba206e5158115bfb191b25ba6e82f7c9cafd8b1464c",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.014695372344192683,
+              0.0421406850475402,
+              0.0073816694435157384
+            ],
+            [
+              0.014548443779107433,
+              0.041952417232582036,
+              0.004778003159823095
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.0036264499739050273,
+              0.03854652131064753,
+              0.007793737039515976
+            ],
+            [
+              0.0038319815647621528,
+              0.03896963004260785,
+              0.005191056962275115
+            ]
+          ],
+          "mean_power_change_db": [
+            -5.933865368511842,
+            -0.35368172314905466,
+            0.28513182318232994
+          ]
+        },
+        {
+          "window_samples": 16384,
+          "reference_power_LR": [
+            [
+              0.013993364403126884,
+              0.04246268961683729,
+              0.006879986008498093
+            ],
+            [
+              0.013975866984640312,
+              0.04280417053139254,
+              0.0044011519893371945
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.003147220217419749,
+              0.039070160506136445,
+              0.007743792039191345
+            ],
+            [
+              0.003391799289749384,
+              0.03934953961176276,
+              0.005173700041788668
+            ]
+          ],
+          "mean_power_change_db": [
+            -6.31167898897721,
+            -0.36355093697943597,
+            0.5882529216015973
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E Cabin Upper",
+      "context": "cabin_anchors_v1",
+      "base_hz": 64.84675603879224,
+      "observed_cycles": 64.8173828125,
+      "source_manifest_sha256": "03aa32a8a7aafb04d3eea5fad90299efe1731def7745bf039140d045e6e21c47",
+      "normalized_sha256": "c745c391547e1e344fd9463685e67796c978d235fed688b84141e3e50219517e",
+      "model_sha256": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3",
+      "raw_sha256": "b460d0ddb64e28af0ade7745b99674ed690a18d5d625a44ea9c89cd5f1a8f851",
+      "measurements": [
+        {
+          "window_samples": 8192,
+          "reference_power_LR": [
+            [
+              0.020188523902078682,
+              0.02485066593186533,
+              0.009024524722948521
+            ],
+            [
+              0.01942561553218789,
+              0.02700897381092697,
+              0.005605328175550197
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.004795425764861071,
+              0.018231701410243457,
+              0.008114524934263357
+            ],
+            [
+              0.004600263433815333,
+              0.02037040181583696,
+              0.004910934928560725
+            ]
+          ],
+          "mean_power_change_db": [
+            -6.24921583626503,
+            -1.282185277538973,
+            -0.5044689439145446
+          ]
+        },
+        {
+          "window_samples": 16384,
+          "reference_power_LR": [
+            [
+              0.018607620934164126,
+              0.024172278896721605,
+              0.008963291845695219
+            ],
+            [
+              0.017975956360658775,
+              0.0265544100312609,
+              0.005389498856041983
+            ]
+          ],
+          "dna_power_LR": [
+            [
+              0.004826637273832639,
+              0.0183504841852698,
+              0.008123778723983257
+            ],
+            [
+              0.004638615678927295,
+              0.02051363217063187,
+              0.004915925418951905
+            ]
+          ],
+          "mean_power_change_db": [
+            -5.87153945649368,
+            -1.1568771793004018,
+            -0.41668614012440075
+          ]
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "schema": "vsl.harmonic-body-driving-verification/1",
+    "result": "pass",
+    "human_accepted": false,
+    "old_binary_manifest_sha256": "40582f2d0e426ac51448833d9ec6162664c6bab4cad92d5e1cf4da3dc36353b6",
+    "old_equal_stems": [
+      "air_left",
+      "air_right",
+      "body",
+      "dna",
+      "dna_raw",
+      "dry",
+      "event_layer",
+      "events",
+      "exhaust_left",
+      "exhaust_right",
+      "intake",
+      "mechanical",
+      "render",
+      "residual",
+      "residual_raw",
+      "road",
+      "wind"
+    ],
+    "old_common_trace_equal": true,
+    "raw_source_and_events_unchanged": true,
+    "layout_buses_equal": true,
+    "body_projection_max_float_error": 5.960464477539063e-08,
+    "mix_max_float_error": 2.1979212783129753e-08,
+    "stationary_body_power_above800hz_fraction": 6.4526901119004246e-09,
+    "limits": [
+      "LF is a complementary partition of existing oscillators, not a newly isolated engine source",
+      "Engineering20/35/180/350Hz mask,1.6 body voicing scale and existing state envelopes",
+      "A4/E2 sparse/context-separated anchors; physical sub-bass/state/engine calibration incomplete",
+      "Offline timing does not establish real device or listening acceptance"
+    ]
+  },
+  "offline_runs": [
+    {
+      "name": "legacy",
+      "bank": "exterior_anchors_v1",
+      "binary_sha256": "386ea4c37a3761633677c3b433125b1e6aeb403bf88af99bd7153fe12fa2d801",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 768000,
+      "channels": 2,
+      "seed": 48271,
+      "scenario": 1,
+      "source_frame": 768000,
+      "owner_frame": 768000,
+      "peak": 0.2850869596,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 4,
+      "base_hz": [
+        10.005673871228469,
+        31.52219356431996,
+        47.39127187830898,
+        60.83004535315176
+      ],
+      "cycle_offsets": [
+        0,
+        3.005567581336685,
+        2.3848836010946837,
+        1.3658293792245262
+      ],
+      "below_frames": 135847,
+      "covered_frames": 464638,
+      "above_frames": 167515,
+      "shifts": 4,
+      "overruns": 1,
+      "procedural_hits": 5,
+      "event_gain": 0.15,
+      "process_seconds": 7.64927139,
+      "max_block_seconds": 0.00881069992,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 164,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas and legacy events; no independent LF/intake/mechanics physical sources or source playback"
+    },
+    {
+      "name": "zero",
+      "bank": "exterior_anchors_v1",
+      "binary_sha256": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 768000,
+      "channels": 2,
+      "seed": 48271,
+      "scenario": 1,
+      "source_frame": 768000,
+      "owner_frame": 768000,
+      "peak": 0.2850869596,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 4,
+      "base_hz": [
+        10.005673871228469,
+        31.52219356431996,
+        47.39127187830898,
+        60.83004535315176
+      ],
+      "cycle_offsets": [
+        0,
+        3.005567581336685,
+        2.3848836010946837,
+        1.3658293792245262
+      ],
+      "below_frames": 135847,
+      "covered_frames": 464638,
+      "above_frames": 167515,
+      "shifts": 4,
+      "overruns": 1,
+      "procedural_hits": 5,
+      "event_gain": 0.15,
+      "process_seconds": 7.809317,
+      "max_block_seconds": 0.00897519989,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 160,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "body_mix": 0,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback"
+    },
+    {
+      "name": "layered",
+      "bank": "exterior_anchors_v1",
+      "binary_sha256": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 768000,
+      "channels": 2,
+      "seed": 48271,
+      "scenario": 1,
+      "source_frame": 768000,
+      "owner_frame": 768000,
+      "peak": 0.272669374943,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 4,
+      "base_hz": [
+        10.005673871228469,
+        31.52219356431996,
+        47.39127187830898,
+        60.83004535315176
+      ],
+      "cycle_offsets": [
+        0,
+        3.005567581336685,
+        2.3848836010946837,
+        1.3658293792245262
+      ],
+      "below_frames": 135847,
+      "covered_frames": 464638,
+      "above_frames": 167515,
+      "shifts": 4,
+      "overruns": 1,
+      "procedural_hits": 5,
+      "event_gain": 0.15,
+      "process_seconds": 7.77793779,
+      "max_block_seconds": 0.00952579989,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 175,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "body_mix": 1,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback"
+    },
+    {
+      "name": "surround",
+      "bank": "exterior_anchors_v1",
+      "binary_sha256": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 768000,
+      "channels": 12,
+      "seed": 48271,
+      "scenario": 1,
+      "source_frame": 768000,
+      "owner_frame": 768000,
+      "peak": 0.175692796707,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 4,
+      "base_hz": [
+        10.005673871228469,
+        31.52219356431996,
+        47.39127187830898,
+        60.83004535315176
+      ],
+      "cycle_offsets": [
+        0,
+        3.005567581336685,
+        2.3848836010946837,
+        1.3658293792245262
+      ],
+      "below_frames": 135847,
+      "covered_frames": 464638,
+      "above_frames": 167515,
+      "shifts": 4,
+      "overruns": 1,
+      "procedural_hits": 5,
+      "event_gain": 0.15,
+      "process_seconds": 8.22492702,
+      "max_block_seconds": 0.0102285999,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 243,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "body_mix": 1,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback"
+    },
+    {
+      "name": "fixed",
+      "bank": "exterior_anchors_v1",
+      "binary_sha256": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 288000,
+      "channels": 2,
+      "seed": 48271,
+      "scenario": 0,
+      "source_frame": 288000,
+      "owner_frame": 288000,
+      "peak": 0.191406905651,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 4,
+      "base_hz": [
+        10.005673871228469,
+        31.52219356431996,
+        47.39127187830898,
+        60.83004535315176
+      ],
+      "cycle_offsets": [
+        0,
+        3.005567581336685,
+        2.3848836010946837,
+        1.3658293792245262
+      ],
+      "below_frames": 45764,
+      "covered_frames": 242236,
+      "above_frames": 0,
+      "shifts": 0,
+      "overruns": 0,
+      "procedural_hits": 0,
+      "event_gain": 0.15,
+      "process_seconds": 2.4416375,
+      "max_block_seconds": 0.00341800018,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 0,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "body_mix": 1,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback"
+    },
+    {
+      "name": "cabin",
+      "bank": "cabin_anchors_v1",
+      "binary_sha256": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+      "schema": "vsl.atlas-drive-probe/1",
+      "frames": 288000,
+      "channels": 2,
+      "seed": 48271,
+      "scenario": 0,
+      "source_frame": 288000,
+      "owner_frame": 288000,
+      "peak": 0.0969342589378,
+      "root_per_rpm": 0.008333333333333333,
+      "anchor_count": 2,
+      "base_hz": [
+        60.634271286273396,
+        64.84675603879224
+      ],
+      "cycle_offsets": [
+        0,
+        -0.12359705651922544
+      ],
+      "below_frames": 60050,
+      "covered_frames": 227950,
+      "above_frames": 0,
+      "shifts": 0,
+      "overruns": 0,
+      "procedural_hits": 0,
+      "event_gain": 0.15,
+      "process_seconds": 2.40051079,
+      "max_block_seconds": 0.00387650006,
+      "block_budget_seconds": 0.005,
+      "block_budget_exceedances": 0,
+      "residual_attached": true,
+      "residual_gain": 0.4,
+      "body_mix": 1,
+      "accepted": false,
+      "limits": "Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas, complementary LF partition and legacy events; no independently separated LF/intake/mechanics physical sources or source playback"
+    }
+  ],
+  "devices": {
+    "bench": {
+      "schema": "vsl.atlas-device-evidence/1",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 288000,
+      "blocks": 563,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 4.37839076,
+      "render_max_ms": 6.3947,
+      "device_seconds": 6,
+      "playback_wall_seconds": 6.0149705,
+      "startup_seconds": 0.0699156,
+      "peak": 0.217474699,
+      "stop_frame": 18446744073709551615,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "controls": [
+        {
+          "frame": 0,
+          "mode": 0,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 3600,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0.5,
+          "body_mix": 0.6
+        },
+        {
+          "frame": 48128,
+          "mode": 0,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5700,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0.5,
+          "body_mix": 0.6
+        },
+        {
+          "frame": 144384,
+          "mode": 0,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5700,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.8,
+          "body_mix": 1
+        },
+        {
+          "frame": 192000,
+          "mode": 0,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        }
+      ]
+    },
+    "pedals": {
+      "schema": "vsl.atlas-device-evidence/1",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 576000,
+      "blocks": 1125,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 3.87972204,
+      "render_max_ms": 8.5204,
+      "device_seconds": 12,
+      "playback_wall_seconds": 12.0189823,
+      "startup_seconds": 0.0131171,
+      "peak": 0.216875166,
+      "stop_frame": 18446744073709551615,
+      "shifts": 2,
+      "overruns": 1,
+      "trace_overflow": 0,
+      "controls": [
+        {
+          "frame": 0,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 1200,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0.5,
+          "body_mix": 0.6
+        },
+        {
+          "frame": 48128,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 5700,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0.5,
+          "body_mix": 0.6
+        },
+        {
+          "frame": 144384,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 5700,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.8,
+          "body_mix": 1
+        },
+        {
+          "frame": 192000,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0.85,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        },
+        {
+          "frame": 240128,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        },
+        {
+          "frame": 288768,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0.45,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        },
+        {
+          "frame": 336384,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0.7,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        },
+        {
+          "frame": 432128,
+          "mode": 1,
+          "ignition": 0,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7200,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.25,
+          "room": 0.25,
+          "perspective": 0,
+          "spatial": 1,
+          "propagation": 0,
+          "residual_gain": 0.35,
+          "body_mix": 0
+        }
+      ]
+    },
+    "stopped": {
+      "schema": "vsl.atlas-device-evidence/1",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 25088,
+      "blocks": 49,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 3.00659388,
+      "render_max_ms": 4.325,
+      "device_seconds": 0.522666667,
+      "playback_wall_seconds": 0.5393809,
+      "startup_seconds": 0.0144255,
+      "peak": 0.0799553394,
+      "stop_frame": 24576,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "controls": [
+        {
+          "frame": 0,
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 1200,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0,
+          "body_mix": 0
+        }
+      ]
+    },
+    "cabin_restart": {
+      "schema": "vsl.atlas-device-evidence/1",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 48000,
+      "blocks": 94,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 2.93666702,
+      "render_max_ms": 4.7524,
+      "device_seconds": 1,
+      "playback_wall_seconds": 1.0152473,
+      "startup_seconds": 0.0114356,
+      "peak": 0.121458083,
+      "stop_frame": 18446744073709551615,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "controls": [
+        {
+          "frame": 0,
+          "mode": 0,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 1,
+          "automatic": 1,
+          "backfire": 1,
+          "rpm": 7600,
+          "load": 0.8,
+          "throttle": 0,
+          "brake": 0,
+          "gain": 0.25,
+          "detail": 1,
+          "event_gain": 0,
+          "width": 0.7,
+          "room": 0,
+          "perspective": 0,
+          "spatial": 0,
+          "propagation": 0,
+          "residual_gain": 0.5,
+          "body_mix": 1
+        }
+      ]
+    }
+  },
+  "ui": {
+    "result": "pass",
+    "muted": true,
+    "no_autoplay": true,
+    "bench_rpm_live": true,
+    "transport": true,
+    "context_switch_stops_playback": true,
+    "unrelated_controls_preserved": true,
+    "mode_enablement": true,
+    "residual_control": true,
+    "body_control": true,
+    "window_geometry": [
+      580,
+      892
+    ],
+    "binary_sha256": "2c30ac5df4de8a2141f12060db8c421788620ca05f2c5b17fbb814ba19c44427",
+    "verifier_sha256": "6534799f0e8da5c4bdc55807c14bbcec2f0950344154d5942990ce8b8a2365c5"
+  },
+  "browser": {
+    "result": "pass",
+    "muted": true,
+    "durations": [
+      16,
+      16,
+      16
+    ],
+    "one_player_at_a_time": true,
+    "seek": true,
+    "narrow_viewport": true,
+    "errors": []
+  },
+  "source_sha256": {
+    "tools/verify_harmonic_body_v1.py": "df381fd6ffec4ba035d9d44cf72b12322a0a3c0d1710c6a79f82147568167377",
+    "handoff/CMakeLists.txt": "ac2432802c0e7904afac4b7f53186349715e2c38d53167494b5844282edcead3",
+    "modules/harmonic_body/band.c": "3b3feb8c0b8204b61de1424d4946608f3a21be990faa03c68f11a7073758a73d",
+    "modules/harmonic_body/band.h": "b0f8fe93ae00729ea7f22bd3a1bbf3a90bd7787b0b556169e0fe44c692ff055f",
+    "modules/harmonic_body/CMakeLists.txt": "5df634d6aee8df4ef5fb8696d484d76e5da785f2b59c099cde05709044879364",
+    "modules/harmonic_body/mix.c": "db1cfda60de545a42095b70d4141fc34cd38affa99c5d06823bf820c13456b34",
+    "modules/harmonic_body/mix.h": "310d1523732a773f3b36a21f8a7e58661afa90e63ff7a756ca1d7cf1425837fe",
+    "modules/dna_atlas/bank.c": "95e7dfa8c069eaa57b152fe19feb27cd1948f5bdb46096f85b4fcc6f8c87fc7b",
+    "modules/dna_atlas/bank.h": "ef50b4c7e25e3062a23082947f9b3e8839b05b58fa8c3aa4743e765d7177d5b1",
+    "modules/dna_atlas/voice.c": "e5ec39ac1560576725dc7f55040ff73cdc9c1833e4a2d1f57ca6c1b7bec8a5b9",
+    "modules/dna_atlas/voice.h": "1a578873d0eb0437e136296e5d6fc03e588dedbfbe9a4612454bf82f136c2796",
+    "modules/atlas_drive/control.c": "55f30db6603a5e69cbf0119f2e37afc603d7644b3cf3962adb9151a031f2ea57",
+    "modules/atlas_drive/control.h": "59f9966c3f324206350c3970eded02d815acaf79e899615e821d17b1a967d7b4",
+    "modules/atlas_drive/render.c": "f2a9a803212057681031fe82575193d437de3f45af4372adfacb3b85ef725352",
+    "modules/atlas_drive/render.h": "22a991389d1491b6876ca87fc22e2ebdd05d91d4ea4514cd98384fd42ac615cd",
+    "experiments/atlas_drive_v1/probe.c": "e2b867aa11a1bf71ae1349a40b8cc02fa5ecf8a7592e9c23e08d26ef3928b18d",
+    "experiments/harmonic_body_v1/checks.c": "7e06834247ca5297710e7b34a41815b7ca45c343339a8a8a47c9ce1312270032",
+    "tools/analyze_body_budget_v1.py": "0879dbb5bccd402353bda0bd671d5403fc19aa37d02d43a627ccf5adc81de499",
+    "tools/make_harmonic_body_v1_review.py": "54c01d116b6fc993eea0af0f773a45300532980ba20b954a10132de880d428fc",
+    "tools/summarize_harmonic_body_v1.py": "f81883d955b6bdf977b113738f0bf297264378635cfb9958b08da26a2bd4cac6",
+    "tools/freeze_harmonic_body_v1.py": "b58addfa1c1d312810803172bc0fe38128db5b670aeff8dd4820b89ace7b0886",
+    "tools/verify_atlas_ui_v1.py": "6534799f0e8da5c4bdc55807c14bbcec2f0950344154d5942990ce8b8a2365c5",
+    "tools/harmonic_body_v1/check_page.cjs": "77ac6181959d4638aebdc026e1d81c638645e8d136857d751937921a158e3ec4",
+    "modules/dna_atlas/CMakeLists.txt": "6b26c6f347c540a6d17852a101ad89ea37887954d342920868dde4fdef00d01a",
+    "experiments/atlas_monitor_v1/audio.c": "eb385fad1ba87a2e2e6ac279e4bae5ae66f0a64b17cd30516a35f9a4cddc3968",
+    "experiments/atlas_monitor_v1/audio.h": "ccbda5820350e886dbaa6b4e0423e606f37d292fa3ce0b43cfe3721b4edfe100",
+    "experiments/atlas_monitor_v1/checks.c": "e40786987e4b5e99f84bc9f61d9af37bf4ba2efd5422e82fde6e70d077d6b2c7",
+    "experiments/atlas_monitor_v1/models.c": "aeddc646bab474de19b0b1c7dae2b880aebdafe2a8bfda3e74cbdebfc4e8705b",
+    "experiments/atlas_monitor_v1/models.h": "8a751123244adf28560479b55b8f433a90df46f8ca9b63cc6be3d1bfbefc3f19",
+    "experiments/atlas_monitor_v1/ui.c": "f8171986ac64602925eb00c8916cb1aef8e3704c4f02ee5bcee4d57a40f6c8d6",
+    "experiments/atlas_monitor_v1/verify.c": "7e6409300d86a03151c2453425b62c9fc71f5333c3ec2e48ec85b358df99e329",
+    "modules/harmonic_body/README.md": "4f853fceea308c693a77217b0ac860ff7cc481370d26a6086f3a9a728ee0849a"
+  },
+  "c_index_sha256": "5a298e0c3eadd9a720df5dcc135eb1cf4ef379b2aa44f2608414621452669981",
+  "binaries_sha256": {
+    "VslAtlasDrive_probe.exe": "c5428fcd8fde3984416f0797e9bf702eb0f30478a081ac20216a3a9fbfff3a1d",
+    "VslAtlasMonitor.exe": "2c30ac5df4de8a2141f12060db8c421788620ca05f2c5b17fbb814ba19c44427",
+    "VslAtlasMonitor_device_verify.exe": "0cd882de8fafe67e1fd0cec41d27d47a9ae6b821553c80390bb922ecc6e1fb46"
+  },
+  "evidence_sha256": {
+    "budget/report.json": "58e6217767eeac9e9291f2f92599efc45ae041601dcbed4d52de7ef90008a35d",
+    "build/ctest_34.log": "66c99133b9adc1a41fc00ae10b15cbe26d515c7672886e077fe04faa11d29861",
+    "controls/cabin_air_left.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/cabin_air_right.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/cabin_body.wav": "c615d54c5102999ea4853d13aebbae628e8f62618c00ac60339b761b8ec4a30b",
+    "controls/cabin_command.json": "87220a0809c618c4a2984f1505d764e397140551d16095f5e3180936685fe92b",
+    "controls/cabin_dna.wav": "5029bda213eb359999c70bc53f882da49328b7e1024af58dc908f1ab6f94e5cc",
+    "controls/cabin_dna_raw.wav": "5960c0b455f82c20f2c6bd60db4bc212f1be5fcb387b4421c02144dfca62f53c",
+    "controls/cabin_dry.wav": "79fe1b9632954ce327133563b10d07f9ea68cea27cedd79fbc0ca68ee3427062",
+    "controls/cabin_event_layer.wav": "a8f40e6d5a09240a90e0c73b265325493e75073b878f892e7fb82bb86247a216",
+    "controls/cabin_events.wav": "a8f40e6d5a09240a90e0c73b265325493e75073b878f892e7fb82bb86247a216",
+    "controls/cabin_exhaust_left.wav": "57f0afd03f8799924395ed975c2a6b3d89a925a4da133e0f91babe69dc7727f0",
+    "controls/cabin_exhaust_right.wav": "57f0afd03f8799924395ed975c2a6b3d89a925a4da133e0f91babe69dc7727f0",
+    "controls/cabin_harmonic_body.wav": "5b81363347ea403f21755a23921faf5b191e7299fdae44aa7cc55b77ec6d9227",
+    "controls/cabin_harmonic_body_raw.wav": "a7193de800011103346d2bad69cc0ea9bdc944e0ca57f457db7e620bac062126",
+    "controls/cabin_intake.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/cabin_mechanical.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/cabin_render.wav": "79fe1b9632954ce327133563b10d07f9ea68cea27cedd79fbc0ca68ee3427062",
+    "controls/cabin_report.json": "6da7f48813d77b0456bcda3e472e96e649d1b2a088d803777f16e72b864741f7",
+    "controls/cabin_residual.wav": "bc8cc5399a356d98f1fcf1b5ef51c3c09e9ce6bd2d6abe9d06cd2e3d82b106de",
+    "controls/cabin_residual_raw.wav": "e18f97b864e075c34036ecf05110be5d99c80a630293ccc20d758a7fdac39e5d",
+    "controls/cabin_road.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/cabin_trace.csv": "e1b4532f5e4ba50bd13e9b2ab779df711c5701400c1d99ded17cf20e18004ccb",
+    "controls/cabin_wind.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_air_left.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_air_right.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_body.wav": "99f07542ad7e2ef68568e218770ead5d1f446d93bb8c7dca8b324a148fd0ce36",
+    "controls/fixed_command.json": "38eb81d3e411aa2bbcc22fb2eb30c3a30eff08870b2f0b7429e0de6c9e5d4489",
+    "controls/fixed_dna.wav": "be07181d941720478bb99e5ee3839103035821d5acc2f7031f3a4053d9e12425",
+    "controls/fixed_dna_raw.wav": "a14d996a0575e7569956c5d5d5410399374931a80d61c0cd1081e1cf38d65c73",
+    "controls/fixed_dry.wav": "abf79cba3316c0d1a5b2289d39188b7b6ca1c3b352f881ce3023cf177e3fdc8e",
+    "controls/fixed_event_layer.wav": "a8f40e6d5a09240a90e0c73b265325493e75073b878f892e7fb82bb86247a216",
+    "controls/fixed_events.wav": "a8f40e6d5a09240a90e0c73b265325493e75073b878f892e7fb82bb86247a216",
+    "controls/fixed_exhaust_left.wav": "410aba0cedcabd21de1ec713cf46b74e3282837aba3d1aecb35e56c5832a8bf1",
+    "controls/fixed_exhaust_right.wav": "410aba0cedcabd21de1ec713cf46b74e3282837aba3d1aecb35e56c5832a8bf1",
+    "controls/fixed_harmonic_body.wav": "191ef8ad11c14ebd47df9a46c83d13162bdaa2cd57d1e5c52671e50c6ce59ab4",
+    "controls/fixed_harmonic_body_raw.wav": "a34373325d9226c5b98ac201b9c1282c30a16d2788ccc9339238e100aa0d9b56",
+    "controls/fixed_intake.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_mechanical.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_render.wav": "abf79cba3316c0d1a5b2289d39188b7b6ca1c3b352f881ce3023cf177e3fdc8e",
+    "controls/fixed_report.json": "4caddd39f540ef382178216641f2930fe762a74e9e3dc43c2a4b4f0d2e6730bd",
+    "controls/fixed_residual.wav": "7c5014dc25c7cdec0773427caa09b64fe178c70d67098d1d3989f851cd6b6181",
+    "controls/fixed_residual_raw.wav": "575ba497c08a8c9ed6007e936ff75667a1f96c8e6559e51412635be70b7e17d9",
+    "controls/fixed_road.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/fixed_trace.csv": "9f5967a2ebeb3ac94dbbcbdc9ae8a9ff615ee2d70df5926b65432bdac9aa28f2",
+    "controls/fixed_wind.wav": "7d2f844e16c8746163407abad16915183b1b5870ef248f5cafe4021727f3f1c3",
+    "controls/layered_air_left.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/layered_air_right.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/layered_body.wav": "1ed500cc7892fe8983a13ac533829f223ca02a1145476497cd3dc76d94126a42",
+    "controls/layered_command.json": "a4b1c3b81416a95810836640eae1ccd6969a25af1844e7a78cdf5910f72c2840",
+    "controls/layered_dna.wav": "4f16da5ac6a4fefa4b79e5a10acdb58e1496937550e4a76d4bcb5d63222f5c20",
+    "controls/layered_dna_raw.wav": "0c993615d742361b751b77672451e4e74376774c4a349442942858114b0157e3",
+    "controls/layered_dry.wav": "87dede4d31d46f4440d12d5d491179227468b8ac202b0711cf84c6ebd6031598",
+    "controls/layered_event_layer.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/layered_events.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/layered_exhaust_left.wav": "8e740ed53df754ddd859854d920e54ee5cd358e72fa3c8b254200ce1627f93bb",
+    "controls/layered_exhaust_right.wav": "8e740ed53df754ddd859854d920e54ee5cd358e72fa3c8b254200ce1627f93bb",
+    "controls/layered_harmonic_body.wav": "4926e5c4cf6ae54e61890bb7d1ac69c6db32745b53be2bfad44df1a9bbe6efae",
+    "controls/layered_harmonic_body_raw.wav": "93c9825e027acaf5517f743972384bb60915823f56fc3d488073170689052ef5",
+    "controls/layered_intake.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/layered_mechanical.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/layered_render.wav": "87dede4d31d46f4440d12d5d491179227468b8ac202b0711cf84c6ebd6031598",
+    "controls/layered_report.json": "7c2e840e0e613981c530f66df41e1955747782e2d872f0a49ec8c192aa0640fe",
+    "controls/layered_residual.wav": "4c37ecd5da2338b54b479cafcd56d66673d6a7ccfeda41bd271b04be4e1e0e09",
+    "controls/layered_residual_raw.wav": "d650303fd097f4cc1ce8f73023b499a970d7958fed6699946fba2a22c85dfd8a",
+    "controls/layered_road.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/layered_trace.csv": "d0bdb3b3761fa7a1ded236e4857fd18d0276d1570e9cef91bea846646381a2de",
+    "controls/layered_wind.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_air_left.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_air_right.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_body.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_command.json": "f70b75d99c80a23d1901a770a481d60d42b4a0c21cc8cabba481520ec8564a99",
+    "controls/legacy_dna.wav": "ed768e3e7a2940d7649c1276e0c5f7096cbc5c817d0fe0b5200837766fab3eba",
+    "controls/legacy_dna_raw.wav": "0c993615d742361b751b77672451e4e74376774c4a349442942858114b0157e3",
+    "controls/legacy_dry.wav": "77a75b60f3800f5dbf13f30c44ee4955a510b796c1670d65aebf0b397a54a0cc",
+    "controls/legacy_event_layer.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/legacy_events.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/legacy_exhaust_left.wav": "528a9bdf9efe06e4cd44eb668e434befadb14d45398e8f820030ccfb9d769b88",
+    "controls/legacy_exhaust_right.wav": "528a9bdf9efe06e4cd44eb668e434befadb14d45398e8f820030ccfb9d769b88",
+    "controls/legacy_intake.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_mechanical.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_render.wav": "77a75b60f3800f5dbf13f30c44ee4955a510b796c1670d65aebf0b397a54a0cc",
+    "controls/legacy_report.json": "dbcb0d00624743a6f17d9448596c63243080db185f8a8d6e8ed4e42c46c3f3ec",
+    "controls/legacy_residual.wav": "4c37ecd5da2338b54b479cafcd56d66673d6a7ccfeda41bd271b04be4e1e0e09",
+    "controls/legacy_residual_raw.wav": "d650303fd097f4cc1ce8f73023b499a970d7958fed6699946fba2a22c85dfd8a",
+    "controls/legacy_road.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/legacy_trace.csv": "6ade48107b891cf1279f65b2081c15c0a6c920cb1780c785f8dcd158ed2f81af",
+    "controls/legacy_wind.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_air_left.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_air_right.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_body.wav": "1ed500cc7892fe8983a13ac533829f223ca02a1145476497cd3dc76d94126a42",
+    "controls/surround_command.json": "84d5e8027091e7142bd7f75b7cbd8ed233efebcfb56e77c70053fda26a383d24",
+    "controls/surround_dna.wav": "4f16da5ac6a4fefa4b79e5a10acdb58e1496937550e4a76d4bcb5d63222f5c20",
+    "controls/surround_dna_raw.wav": "0c993615d742361b751b77672451e4e74376774c4a349442942858114b0157e3",
+    "controls/surround_dry.wav": "87dede4d31d46f4440d12d5d491179227468b8ac202b0711cf84c6ebd6031598",
+    "controls/surround_event_layer.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/surround_events.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/surround_exhaust_left.wav": "8e740ed53df754ddd859854d920e54ee5cd358e72fa3c8b254200ce1627f93bb",
+    "controls/surround_exhaust_right.wav": "8e740ed53df754ddd859854d920e54ee5cd358e72fa3c8b254200ce1627f93bb",
+    "controls/surround_harmonic_body.wav": "4926e5c4cf6ae54e61890bb7d1ac69c6db32745b53be2bfad44df1a9bbe6efae",
+    "controls/surround_harmonic_body_raw.wav": "93c9825e027acaf5517f743972384bb60915823f56fc3d488073170689052ef5",
+    "controls/surround_intake.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_mechanical.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_render.wav": "dbdb8a7a9931c6e542e3c0ff05f85ed849ee92d3ee4c214a6364f5b6e6b5b2cb",
+    "controls/surround_report.json": "880237307a83889491c2fa51d7c9633099ae1d6742de8c4781726d21fb046c29",
+    "controls/surround_residual.wav": "4c37ecd5da2338b54b479cafcd56d66673d6a7ccfeda41bd271b04be4e1e0e09",
+    "controls/surround_residual_raw.wav": "d650303fd097f4cc1ce8f73023b499a970d7958fed6699946fba2a22c85dfd8a",
+    "controls/surround_road.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/surround_trace.csv": "d0bdb3b3761fa7a1ded236e4857fd18d0276d1570e9cef91bea846646381a2de",
+    "controls/surround_wind.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/verification.json": "44cfc38f904a4450a88f7249ea342e94b214dfd3d8cb6f3932361c0bb8641c19",
+    "controls/zero_air_left.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_air_right.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_body.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_command.json": "7e56ca554b908d56fe31529c51233d90639446413deb3f41e5ec5ca8a883c162",
+    "controls/zero_dna.wav": "ed768e3e7a2940d7649c1276e0c5f7096cbc5c817d0fe0b5200837766fab3eba",
+    "controls/zero_dna_raw.wav": "0c993615d742361b751b77672451e4e74376774c4a349442942858114b0157e3",
+    "controls/zero_dry.wav": "77a75b60f3800f5dbf13f30c44ee4955a510b796c1670d65aebf0b397a54a0cc",
+    "controls/zero_event_layer.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/zero_events.wav": "a71bb126c3996ca2b84f3352f86369e04c2fd3e841b5c2b2f7b74a8e59863d9e",
+    "controls/zero_exhaust_left.wav": "528a9bdf9efe06e4cd44eb668e434befadb14d45398e8f820030ccfb9d769b88",
+    "controls/zero_exhaust_right.wav": "528a9bdf9efe06e4cd44eb668e434befadb14d45398e8f820030ccfb9d769b88",
+    "controls/zero_harmonic_body.wav": "2c46e48ab137763d456cc37ea7ad2a24afce7e451a87c64e89cdcb427777c106",
+    "controls/zero_harmonic_body_raw.wav": "93c9825e027acaf5517f743972384bb60915823f56fc3d488073170689052ef5",
+    "controls/zero_intake.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_mechanical.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_render.wav": "77a75b60f3800f5dbf13f30c44ee4955a510b796c1670d65aebf0b397a54a0cc",
+    "controls/zero_report.json": "c411b818cda4bdb708a7e4e7ec9978a7b65864ba9465e0ade338e01ffa0395fb",
+    "controls/zero_residual.wav": "4c37ecd5da2338b54b479cafcd56d66673d6a7ccfeda41bd271b04be4e1e0e09",
+    "controls/zero_residual_raw.wav": "d650303fd097f4cc1ce8f73023b499a970d7958fed6699946fba2a22c85dfd8a",
+    "controls/zero_road.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "controls/zero_trace.csv": "3ed7fbd28127b75d68314bbabfbf1d5beaf147c6239d779fb636f7d8f4ed1fb9",
+    "controls/zero_wind.wav": "b319c96521ddf7b1cf955c88c63d1c5659cd65ee9afa9c6cc18ab75dadd8373a",
+    "development_notes.json": "74b20fec3060e60c29af169c5ada1bd4829e2a4f5722c2988f51c738974a54ed",
+    "device/bench.json": "1c6051d575875ed49ada97f345c99941293697028fc899c5f5a7a3fc25a3336e",
+    "device/bench.wav": "e5711428fbf62dd7e6667014bb83d6727815533ab8057112a4cf2d46c590919a",
+    "device/cabin_restart.json": "ea1bb859c7bf3522728b8a24663501c3479fdb8dbd08f96a0761a9ca446262be",
+    "device/cabin_restart.wav": "0339e030ac87feada1cd2e6941eccca9eb884184d633c5aba904bdff74af8267",
+    "device/pedals.json": "c0c63345dc2d164ff6ed03effbdf06e30b3080b82f7b244b2cf0d5c2fe7a24a1",
+    "device/pedals.wav": "0d9d2e3586d6effa34acddf35a036cf63c2ca04964e539c12c4a53f213ee65b3",
+    "device/stopped.json": "65cb770b45873018b446bb7affb55858486ba4a5a9d17f779b964ec28227469f",
+    "device/stopped.wav": "170ea010b0750a17cd1aae23414163b7670e6d446b102a15646ecd9714cfb2d3",
+    "review/assets/layered.wav": "87dede4d31d46f4440d12d5d491179227468b8ac202b0711cf84c6ebd6031598",
+    "review/assets/solo.wav": "c32b08b8b5a1ab820dab3ad940a995ca0428f9e91f2e7f6c5f9a7e18059b3fba",
+    "review/assets/zero.wav": "77a75b60f3800f5dbf13f30c44ee4955a510b796c1670d65aebf0b397a54a0cc",
+    "review/browser_qa.json": "deaa46205ff9e218fcad954a66dbc2b6ea9c7efe3c4272486b1e26416ccc1d38",
+    "review/desktop.png": "25632541cbcdb46da7fee7b02ca8b61530432e89e2c13c57e87c45efd32744ba",
+    "review/index.html": "981032aeab6eeabad6b7f8b3b49ff78ed3330c10b621f749e23d67997d135850",
+    "review/mobile.png": "16d62b8625070d1b1a61ae407330d863b2669144b1b9dcdcbf53cd71ad7f96ef",
+    "review/report.json": "2cc930699912b847a467dc028b49a125c6f52933890ef5ae47c55910e6a598c7",
+    "summary_attempt1_error.txt": "b8137c21da73ff3cdd10508bf2717e8abbcb717206f0fc6bc0a0868b6e63498a",
+    "summary_attempt1_source.py": "fd2d53325d18055121425b766723b245bb165ebb6d5ecbb106c0867ea723722f",
+    "summary_draft_lf_index.json": "a41098e9f47eac9e99fd490c3d1d57e60d89dee281adf41a835eaabcd03e0019",
+    "ui/cabin_live.png": "c3286af02c4210a02a6e7e8ef9a600767c4c68482678ef586aacac69f8bb98bf",
+    "ui/initial.png": "0f3f9635818c75253269a550b0626dee1dada43ec130365e44b800913acbf31a",
+    "ui/verification.json": "dcc41b1729ad93eb216ec0e1da567f2ac82adbd45e0f66875fa4ccbb9fb3040d"
+  },
+  "limits": [
+    "LF is a complementary partition of existing oscillators, not a newly isolated engine source",
+    "Engineering20/35/180/350Hz mask,1.6 body voicing scale and existing state envelopes",
+    "A4/E2 sparse/context-separated anchors; physical sub-bass/state/engine calibration incomplete",
+    "Offline timing does not establish real device or listening acceptance",
+    "Short muted device/UI checks, no new timbre or actual7.1.4 acceptance",
+    "Old driving DSP/take protocol unchanged; new monitor control trace remains debug-only"
+  ]
+}

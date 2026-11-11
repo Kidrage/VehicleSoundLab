@@ -93,6 +93,7 @@ try:
     wait(lambda:bool(u.GetDlgItem(window,61)))
     assert '已停止' in text(control(61))
     assert '0%' in text(control(76))
+    assert '0%' in text(control(77))
     geometry=screenshot('initial.png')
     select(41,1)
     assert not u.IsWindowEnabled(control(20)) and not u.IsWindowEnabled(control(21)) and u.IsWindowEnabled(control(22))
@@ -102,6 +103,9 @@ try:
     before=[text(control(70+i)) for i in (0,1,2,3)]
     slider(26,50)
     assert '50%' in text(control(76)) and before==[text(control(70+i)) for i in (0,1,2,3)]
+    slider(27,80)
+    assert '80%' in text(control(77)) and '50%' in text(control(76))
+    assert before==[text(control(70+i)) for i in (0,1,2,3)]
     click(30);assert u.SendMessageW(control(30),0xf0,0,0)==1
     assert u.IsWindowEnabled(control(24)) and u.IsWindowEnabled(control(25))
     slider(24,60);slider(25,35)
@@ -117,6 +121,7 @@ try:
     assert '7600' in text(control(72)) and '-12' in text(control(73))
     assert '60%' in text(control(74)) and '35%' in text(control(75))
     assert '50%' in text(control(76))
+    assert '80%' in text(control(77))
     click(10);wait(lambda:'监听中' in text(control(61)))
     wait(lambda:'7600 RPM' in text(control(60)))
     time.sleep(.4)
@@ -127,12 +132,12 @@ try:
     assert u.IsWindowEnabled(control(42))
     # Visible controls must fit the actual native window.
     outer=W.RECT();u.GetWindowRect(window,C.byref(outer))
-    for id in [10,11,12,20,21,22,23,24,25,26,30,31,40,41,42,60,61,76]:
+    for id in [10,11,12,20,21,22,23,24,25,26,27,30,31,40,41,42,60,61,76,77]:
         r=W.RECT();u.GetWindowRect(control(id),C.byref(r))
         assert r.left>=outer.left and r.right<=outer.right and r.bottom<=outer.bottom,id
     report=dict(result='pass',muted=True,no_autoplay=True,bench_rpm_live=True,transport=True,
         context_switch_stops_playback=True,unrelated_controls_preserved=True,mode_enablement=True,
-        residual_control=True,window_geometry=geometry,binary_sha256=sha(exe),verifier_sha256=sha(__file__))
+        residual_control=True,body_control=True,window_geometry=geometry,binary_sha256=sha(exe),verifier_sha256=sha(__file__))
     (args.out/'verification.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report))
 finally:

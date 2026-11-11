@@ -1,0 +1,8 @@
+add_library(harmonic_body STATIC band.c mix.c)
+target_include_directories(harmonic_body PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_compile_features(harmonic_body PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(harmonic_body PRIVATE /W4 /we4013 /utf-8)
+else()
+  target_compile_options(harmonic_body PRIVATE -Wall -Wextra -Wpedantic)
+endif()
