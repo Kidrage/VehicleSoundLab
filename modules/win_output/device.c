@@ -36,7 +36,8 @@ static DWORD WINAPI worker(LPVOID context) {
             if(empty)++s.queue_empty;
         }
         for(i=0;i<QUEUE&&!finished;++i)if(!(headers[i].dwFlags&WHDR_INQUEUE)) {
-            unsigned n=BLOCK,j;LARGE_INTEGER before,after;double elapsed;int result;
+            unsigned n=BLOCK,j;LARGE_INTEGER before,after;double elapsed,peak=s.peak;int result;
+            uint64_t candidate_hash=s.output_hash;
             if(d->frame_limit&&d->frame_limit-s.frames<n)n=(unsigned)(d->frame_limit-s.frames);
             if(!n){finished=1;break;}
             QueryPerformanceCounter(&before);
@@ -49,12 +50,14 @@ static DWORD WINAPI worker(LPVOID context) {
                 if(!isfinite(pcm[i][j])||fabs(pcm[i][j])>=1) {
                     lstrcpyW(s.error,L"输出超出余量，请降低电平");goto done;
                 }
-                s.peak=fmax(s.peak,fabs(pcm[i][j]));memcpy(&bits,&pcm[i][j],4);
-                for(b=0;b<4;++b){s.output_hash^=(bits>>(8*b))&255u;s.output_hash*=UINT64_C(1099511628211);}
+                peak=fmax(peak,fabs(pcm[i][j]));memcpy(&bits,&pcm[i][j],4);
+                for(b=0;b<4;++b){candidate_hash^=(bits>>(8*b))&255u;candidate_hash*=UINT64_C(1099511628211);}
             }
             if(d->muted)memset(pcm[i],0,n*2*sizeof(float));
             headers[i].dwBufferLength=n*8;
             error=waveOutWrite(device,&headers[i],sizeof headers[i]);if(error)goto failed;
+            s.output_hash=candidate_hash;s.peak=peak;
+            if(d->submitted)d->submitted(d->context,n,candidate_hash);
             if(!submitted) {
                 QueryPerformanceCounter(&first);submitted=1;
                 s.startup_seconds=(first.QuadPart-start.QuadPart)/(double)hz.QuadPart;

@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "audio.h"
 #include "models.h"
+#include "takes.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
 static HWND slider[8],label[8],status,telemetry,voice,mode,gear;
 static HFONT font,heading;static int muted,bank_index;
@@ -17,7 +18,7 @@ static HWND item(HWND owner,const wchar_t *kind,const wchar_t *text,DWORD style,
     SendMessageW(child,WM_SETFONT,(WPARAM)font,TRUE);return child;
 }
 static void labels(HWND owner) {
-    AdControl c=am_audio_get(&audio);wchar_t text[128];int i;
+    AdControl c=am_audio_get(&audio);wchar_t text[128];int i,playing=am_audio_replaying(&audio);
     swprintf(text,128,L"油门    %.0f%%",c.drive.throttle*100);SetWindowTextW(label[0],text);
     swprintf(text,128,L"制动    %.0f%%",c.drive.brake*100);SetWindowTextW(label[1],text);
     swprintf(text,128,L"台架转速    %.0f RPM",c.drive.rpm);SetWindowTextW(label[2],text);
@@ -26,10 +27,25 @@ static void labels(HWND owner) {
     swprintf(text,128,L"房间量    %.0f%%",c.mix.room*100);SetWindowTextW(label[5],text);
     swprintf(text,128,L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
     swprintf(text,128,L"低频分层    %.0f%%",c.mix.body_mix*100);SetWindowTextW(label[7],text);
-    for(i=0;i<2;++i)EnableWindow(slider[i],c.drive.mode!=VSL_BENCH);
-    EnableWindow(slider[2],c.drive.mode==VSL_BENCH);
-    EnableWindow(gear,c.drive.mode!=VSL_BENCH);
-    EnableWindow(slider[4],c.mix.spatial);EnableWindow(slider[5],c.mix.spatial);
+    for(i=0;i<8;++i)EnableWindow(slider[i],!playing);
+    for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
+    EnableWindow(slider[2],!playing&&c.drive.mode==VSL_BENCH);
+    EnableWindow(gear,!playing&&c.drive.mode!=VSL_BENCH);
+    EnableWindow(slider[4],!playing&&c.mix.spatial);EnableWindow(slider[5],!playing&&c.mix.spatial);
+    EnableWindow(voice,!playing);EnableWindow(mode,!playing);
+    EnableWindow(GetDlgItem(owner,12),!playing);EnableWindow(GetDlgItem(owner,30),!playing);EnableWindow(GetDlgItem(owner,31),!playing);
+    EnableWindow(GetDlgItem(owner,14),audio.ready||audio.transport==1);
+    if(audio.transport==2) {
+        int values[8]={(int)(c.drive.throttle*100),(int)(c.drive.brake*100),(int)c.drive.rpm,
+            (int)(20*log10(fmax(1e-12,c.mix.gain/.5))),(int)(c.mix.width*100),(int)(c.mix.room*100),
+            (int)(c.mix.residual_gain*100),(int)(c.mix.body_mix*100)};
+        for(i=0;i<8;++i)SendMessageW(slider[i],TBM_SETPOS,TRUE,values[i]);
+        SendMessageW(mode,CB_SETCURSEL,c.drive.mode==VSL_BENCH?1:0,0);
+        SendMessageW(gear,CB_SETCURSEL,c.drive.automatic?0:c.drive.gear+1,0);
+    }
+    SendMessageW(voice,CB_SETCURSEL,playing?2:bank_index,0);
+    SendMessageW(GetDlgItem(owner,30),BM_SETCHECK,c.mix.spatial?BST_CHECKED:BST_UNCHECKED,0);
+    SendMessageW(GetDlgItem(owner,31),BM_SETCHECK,c.mix.event_gain>0?BST_CHECKED:BST_UNCHECKED,0);
     SetWindowTextW(GetDlgItem(owner,12),c.drive.ignition?L"熄火":L"点火");
 }
 static void changed(HWND owner,int index) {
@@ -64,6 +80,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         voice=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,40,24,65,510,160);
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 驻车车外四档（实验）");
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 高转车内两档（实验）");SendMessageW(voice,CB_SETCURSEL,0,0);
+        SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"行程内嵌音色（回放）");
         mode=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,41,24,108,245,150);
         SendMessageW(mode,CB_ADDSTRING,0,(LPARAM)L"模拟驾驶");SendMessageW(mode,CB_ADDSTRING,0,(LPARAM)L"转速台架");SendMessageW(mode,CB_SETCURSEL,0,0);
         gear=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,42,289,108,245,270);
@@ -83,8 +100,11 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,712,204,40);
         item(owner,L"BUTTON",L"点火",BS_PUSHBUTTON|WS_TABSTOP,12,244,712,134,40);
         item(owner,L"BUTTON",L"停止",BS_PUSHBUTTON|WS_TABSTOP,11,394,712,140,40);
-        status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,768,510,30);
-        item(owner,L"STATIC",L"实验音色 · 独立进气／机械层待完善",0,0,24,809,510,27);
+        item(owner,L"BUTTON",L"录制新行程",BS_PUSHBUTTON|WS_TABSTOP,13,24,764,158,36);
+        item(owner,L"BUTTON",L"保存行程",BS_PUSHBUTTON|WS_TABSTOP,14,194,764,158,36);
+        item(owner,L"BUTTON",L"载入回放",BS_PUSHBUTTON|WS_TABSTOP,15,364,764,170,36);
+        status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,813,510,30);
+        item(owner,L"STATIC",L"实验音色 · 独立进气／机械层待完善",0,0,24,854,510,27);
         labels(owner);SetTimer(owner,1,40,NULL);return 0;
     }
     case WM_HSCROLL: {
@@ -93,9 +113,12 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
     case WM_COMMAND: {
         AdControl c=am_audio_get(&audio);int id=LOWORD(w),notify=HIWORD(w);
         if(id==10) {
-            if(!am_audio_start(&audio,muted,0))SetWindowTextW(status,L"无法开始监听");return 0;
+            if(am_take_preserve(owner,&audio)&&!am_audio_start(&audio,muted,0))SetWindowTextW(status,L"无法开始监听");return 0;
         }
-        if(id==11){am_audio_stop(&audio);return 0;}
+        if(id==11){am_take_preserve(owner,&audio);labels(owner);return 0;}
+        if(id==13){am_take_record(owner,&audio,muted);labels(owner);return 0;}
+        if(id==14){am_take_save_dialog(owner,&audio);labels(owner);return 0;}
+        if(id==15){am_take_load_dialog(owner,&audio,muted);labels(owner);return 0;}
         if(id==12) {
             c.drive.ignition=!c.drive.ignition;
             if(c.drive.ignition)++c.drive.start_id;
@@ -108,7 +131,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         }
         if(id==40&&notify==CBN_SELCHANGE) {
             int index=(int)SendMessageW(voice,CB_GETCURSEL,0,0);
-            if(!load_bank(index))SendMessageW(voice,CB_SETCURSEL,bank_index,0);
+            if(index>1||!am_take_preserve(owner,&audio)||!load_bank(index))SendMessageW(voice,CB_SETCURSEL,bank_index,0);
             return 0;
         }
         if(id==41&&notify==CBN_SELCHANGE) {
@@ -128,14 +151,21 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         if(am_audio_get(&audio).drive.mode==VSL_BENCH)swprintf(text,180,L"%.0f RPM    转速台架",t.rpm);
         else swprintf(text,180,L"%.0f RPM    %.1f km/h    %ls",t.rpm,t.speed,g);
         SetWindowTextW(telemetry,text);
+        labels(owner);
         if(s.error[0])SetWindowTextW(status,s.error);
         else if(InterlockedCompareExchange(&audio.device.running,0,0)) {
-            swprintf(text,180,L"监听中 · %ls",t.coverage?L"当前音高超出录音锚点区间":L"锚点间过渡");SetWindowTextW(status,text);
-        } else SetWindowTextW(status,L"已停止 · 先开始监听，再点火");
+            swprintf(text,180,L"%ls · %.1f 秒%ls",audio.transport==2?L"回放中":audio.transport==1?L"录制中":L"监听中",s.frames/48000.,
+                t.coverage?L" · 超出录音音高范围":L"");SetWindowTextW(status,text);
+        } else {
+            if(audio.transport==1){am_take_preserve(owner,&audio);audio.transport=0;}
+            LONG result=InterlockedCompareExchange(&audio.replay_result,0,0);
+            SetWindowTextW(status,audio.transport==2?(result==1?L"回放完成 · 一致性校验通过":result==2?L"回放已停止":L"回放校验失败"):
+                audio.ready?L"已停止 · 行程可保存／回放":L"已停止 · 先开始监听，再点火");
+        }
         return 0;
     }
     case WM_CTLCOLORSTATIC:SetBkMode((HDC)w,TRANSPARENT);return (LRESULT)GetSysColorBrush(COLOR_WINDOW);
-    case WM_CLOSE:DestroyWindow(owner);return 0;
+    case WM_CLOSE:if(am_take_preserve(owner,&audio))DestroyWindow(owner);return 0;
     case WM_DESTROY:
         KillTimer(owner,1);am_audio_stop(&audio);DeleteObject(font);DeleteObject(heading);PostQuitMessage(0);return 0;
     }
@@ -164,7 +194,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
     window=CreateWindowW(klass.lpszClassName,L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
-        CW_USEDEFAULT,CW_USEDEFAULT,580,892,NULL,NULL,instance,NULL);
+        CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}ShowWindow(window,show);UpdateWindow(window);
     while(GetMessageW(&message,NULL,0,0)>0)if(!IsDialogMessageW(window,&message)){TranslateMessage(&message);DispatchMessageW(&message);}
     am_audio_destroy(&audio);return (int)message.wParam;
