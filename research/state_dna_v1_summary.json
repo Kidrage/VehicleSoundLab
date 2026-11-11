@@ -1,0 +1,665 @@
+{
+  "schema": "vsl.state-dna-summary/1",
+  "result": "pass",
+  "runtime_changed": false,
+  "human_accepted": false,
+  "c_h_source_preservation": {
+    "reference_commit": "a2e60c804f79654617853a6c677383599f6a6590",
+    "tracked_c_h_files": 375,
+    "all_bytes_equal": true,
+    "archive_sha256": "4d3db68f7a8c9734968a4f4bc5cd2d4c35c761d4311a6b76f761f59c1a434cad"
+  },
+  "browser_qa_sha256": "deb8ea721e8e0ff7fb0d684bfa4219abda62ae1766a5794761ffed0c7b8c6752",
+  "production_state_atlas_ready": false,
+  "source_recordings": 4,
+  "sources": {
+    "A": {
+      "url": "https://www.youtube.com/watch?v=7aZm1Wkp6QM",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "video_available": true,
+      "observations": [
+        "A_exterior_low_rev",
+        "A_exterior_blips",
+        "A_exterior_moving"
+      ],
+      "role": "Stationary rear rising/falling colour; accepted moving-tailpipe context remains separate"
+    },
+    "B": {
+      "url": "https://www.youtube.com/watch?v=qmp1SVhmXgU",
+      "raw_sha256": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+      "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+      "video_available": false,
+      "observations": [
+        "B_cabin_pull"
+      ],
+      "role": "Cabin stereo and dynamic audio; no inspected video or verified pedal/gear states"
+    },
+    "D": {
+      "url": "https://www.youtube.com/watch?v=21q_wpc-pVA",
+      "raw_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+      "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+      "video_available": true,
+      "observations": [
+        "D_dyno_gears_context"
+      ],
+      "role": "Enclosed dyno transitions; display labels/RPM not resolved"
+    },
+    "E": {
+      "url": "https://www.youtube.com/watch?v=GIceP3oLuDQ",
+      "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+      "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+      "video_available": true,
+      "observations": [
+        "E_corsa_second_context"
+      ],
+      "role": "Cabin displayed upshifts and broad tach intervals; independent A/V latency unmeasured"
+    }
+  },
+  "controls": {
+    "null_max_band_error_db": 0.0009098966158206929,
+    "known_colour_max_band_error_db": 0.0009442233905208274,
+    "drifting_clock_max_band_error_db": 0.08986393932410283
+  },
+  "window_energy_budget": {
+    "theoretical_white_noise_fraction": 0.375,
+    "measured_white_noise_fraction_LR": [
+      0.3773931329267307,
+      0.375084745182048
+    ],
+    "measured_coherent_tone_fraction_LR": [
+      1.0,
+      1.0
+    ],
+    "real_3_8k_projected_minus_cell_db_LR": {
+      "fall1": [
+        -4.166701825189767,
+        -4.131005183075565
+      ],
+      "rise2": [
+        -4.371594537857965,
+        -4.3671715778082865
+      ],
+      "fall2": [
+        -4.205385957003374,
+        -4.187273817318733
+      ]
+    },
+    "next_action": "Extract omitted inter-harmonic energy as a separate source; do not apply8/3 power gain to full DNA."
+  },
+  "matched_root_observations": [
+    {
+      "before": "fall1",
+      "after": "rise2",
+      "root_bin_hz": [
+        45,
+        50
+      ],
+      "correlated_window_counts": [
+        24,
+        7
+      ],
+      "mean_root_hz": [
+        47.47230012687053,
+        47.428440572809635
+      ],
+      "bands_hz": [
+        [
+          28,
+          120
+        ],
+        [
+          120,
+          400
+        ],
+        [
+          400,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          8000
+        ],
+        [
+          8000,
+          14000
+        ]
+      ],
+      "after_minus_before_db_LR": [
+        [
+          -3.907837303549011,
+          -3.545402472192685
+        ],
+        [
+          -5.757204329589392,
+          -6.0411170726176024
+        ],
+        [
+          6.876825130798556,
+          6.491456663633547
+        ],
+        [
+          -0.05511937769419324,
+          -0.34237047407108423
+        ],
+        [
+          0.2820846243472808,
+          0.5164146142345283
+        ],
+        [
+          5.059544686705941,
+          4.140566302626885
+        ]
+      ],
+      "total_delta_db_LR": [
+        -2.060473408191888,
+        -1.7247151355173096
+      ],
+      "shape_after_scalar_removal_db_LR": [
+        [
+          -1.8473638953571232,
+          -1.8206873366753755
+        ],
+        [
+          -3.696730921397504,
+          -4.316401937100293
+        ],
+        [
+          8.937298538990444,
+          8.216171799150857
+        ],
+        [
+          2.0053540304976947,
+          1.3823446614462254
+        ],
+        [
+          2.3425580325391686,
+          2.241129749751838
+        ],
+        [
+          7.120018094897828,
+          5.865281438144194
+        ]
+      ],
+      "reference_root_hz": 46.875,
+      "scope": "Equal acoustic-coordinate harmonic powers, not separated physical layers or load."
+    },
+    {
+      "before": "fall2",
+      "after": "rise2",
+      "root_bin_hz": [
+        45,
+        50
+      ],
+      "correlated_window_counts": [
+        37,
+        7
+      ],
+      "mean_root_hz": [
+        47.45748762764155,
+        47.428440572809635
+      ],
+      "bands_hz": [
+        [
+          28,
+          120
+        ],
+        [
+          120,
+          400
+        ],
+        [
+          400,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          8000
+        ],
+        [
+          8000,
+          14000
+        ]
+      ],
+      "after_minus_before_db_LR": [
+        [
+          -11.21744155848688,
+          -11.666372012126613
+        ],
+        [
+          -5.880016464802021,
+          -6.005673274132888
+        ],
+        [
+          7.278492850496678,
+          6.8241885796413015
+        ],
+        [
+          5.759961492274373,
+          5.2470612770950495
+        ],
+        [
+          9.785644765459825,
+          10.31747922934919
+        ],
+        [
+          10.462799822352398,
+          9.39809210247396
+        ]
+      ],
+      "total_delta_db_LR": [
+        -2.111548572886579,
+        -1.6144828578361121
+      ],
+      "shape_after_scalar_removal_db_LR": [
+        [
+          -9.105892985600303,
+          -10.051889154290501
+        ],
+        [
+          -3.768467891915442,
+          -4.391190416296776
+        ],
+        [
+          9.390041423383257,
+          8.438671437477414
+        ],
+        [
+          7.871510065160952,
+          6.861544134931162
+        ],
+        [
+          11.897193338346405,
+          11.931962087185303
+        ],
+        [
+          12.574348395238978,
+          11.012574960310072
+        ]
+      ],
+      "reference_root_hz": 46.875,
+      "scope": "Equal acoustic-coordinate harmonic powers, not separated physical layers or load."
+    },
+    {
+      "before": "fall1",
+      "after": "fall2",
+      "root_bin_hz": [
+        45,
+        50
+      ],
+      "correlated_window_counts": [
+        24,
+        37
+      ],
+      "mean_root_hz": [
+        47.47230012687053,
+        47.45748762764155
+      ],
+      "bands_hz": [
+        [
+          28,
+          120
+        ],
+        [
+          120,
+          400
+        ],
+        [
+          400,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          8000
+        ],
+        [
+          8000,
+          14000
+        ]
+      ],
+      "after_minus_before_db_LR": [
+        [
+          7.309604254937869,
+          8.120969539933927
+        ],
+        [
+          0.12281213521262888,
+          -0.03544379848471379
+        ],
+        [
+          -0.40166771969812226,
+          -0.3327319160077546
+        ],
+        [
+          -5.8150808699685665,
+          -5.589431751166134
+        ],
+        [
+          -9.503560141112544,
+          -9.801064615114663
+        ],
+        [
+          -5.4032551356464555,
+          -5.257525799847076
+        ]
+      ],
+      "total_delta_db_LR": [
+        0.05107516469469135,
+        -0.11023227768119762
+      ],
+      "shape_after_scalar_removal_db_LR": [
+        [
+          7.258529090243178,
+          8.231201817615124
+        ],
+        [
+          0.07173697051793752,
+          0.07478847919648382
+        ],
+        [
+          -0.4527428843928136,
+          -0.22249963832655698
+        ],
+        [
+          -5.866156034663258,
+          -5.479199473484936
+        ],
+        [
+          -9.554635305807235,
+          -9.690832337433466
+        ],
+        [
+          -5.454330300341147,
+          -5.147293522165878
+        ]
+      ],
+      "reference_root_hz": 46.875,
+      "scope": "Equal acoustic-coordinate harmonic powers, not separated physical layers or load."
+    }
+  ],
+  "c_audio_checks": {
+    "fall1": {
+      "peak": 1.710282325744629,
+      "finite": true,
+      "frames": 384000,
+      "nonidentical_halves": true,
+      "strongest_reference_hz": 234.0,
+      "generated_minus_normalized_recording_db_LR": [
+        [
+          1.1420546428107965,
+          1.479120164810686
+        ],
+        [
+          -0.007980370977223112,
+          -0.03966246319686699
+        ],
+        [
+          -1.9120794776127035,
+          -1.8745969256751835
+        ],
+        [
+          -3.6845017868241174,
+          -3.6778448354420075
+        ],
+        [
+          -4.396878918755517,
+          -4.358245759145777
+        ],
+        [
+          -4.466819516180214,
+          -4.47180441754027
+        ]
+      ],
+      "warning": "Short same-passage diagnostic; not held-out timbre acceptance"
+    },
+    "rise2": {
+      "peak": 1.2512578964233398,
+      "finite": true,
+      "frames": 384000,
+      "nonidentical_halves": true,
+      "strongest_reference_hz": 234.0,
+      "generated_minus_normalized_recording_db_LR": [
+        [
+          -1.6428638001893532,
+          -1.6984335660420187
+        ],
+        [
+          -0.3715585325470319,
+          -0.3042788348869078
+        ],
+        [
+          -1.3651355848781925,
+          -1.4233554172132306
+        ],
+        [
+          -2.6108854091347737,
+          -2.8158686204299235
+        ],
+        [
+          -4.244553147043751,
+          -4.18803146775823
+        ],
+        [
+          -4.554385042041517,
+          -4.634202296438639
+        ]
+      ],
+      "warning": "Short same-passage diagnostic; not held-out timbre acceptance"
+    },
+    "fall2": {
+      "peak": 1.2864439487457275,
+      "finite": true,
+      "frames": 384000,
+      "nonidentical_halves": true,
+      "strongest_reference_hz": 234.0,
+      "generated_minus_normalized_recording_db_LR": [
+        [
+          0.22067619970631588,
+          0.1987561605055676
+        ],
+        [
+          -0.021142223161823046,
+          -0.015982494936819764
+        ],
+        [
+          -0.21989031532290756,
+          -0.1245563502199109
+        ],
+        [
+          -2.3265851794193173,
+          -2.26307066519634
+        ],
+        [
+          -4.584562880187256,
+          -4.55502505484172
+        ],
+        [
+          -4.450001678825652,
+          -4.458981205186829
+        ]
+      ],
+      "warning": "Short same-passage diagnostic; not held-out timbre acceptance"
+    }
+  },
+  "independent_four_cycle_upper_bounds": {
+    "fall1": 5,
+    "rise2": 1,
+    "fall2": 6
+  },
+  "supported_hz_at_reference_root": {
+    "fall1": 10884.825107582605,
+    "rise2": 9549.218347185888,
+    "fall2": 11264.139776477468
+  },
+  "upstream": {
+    "revision": "ac2b37d8639027d79934a2023cf8d1d37d3b2f96",
+    "current_head_check": "git ls-remote https://github.com/Kidrage/VehicleSoundSynth.git HEAD; same revision on2026-11-11",
+    "files": {
+      "module_mixer.maxpat": "bc75a3fe68fd833860de3428bb6e935a9567b0cc2353e76fb42ea1ba3b56bad7",
+      "v10_pad_voice.maxpat": "66eaff7a64df5f6e8148bed32b4f252f427a979b35a342ae292923a2447bcb5d",
+      "v10_sound_dna~.maxpat": "3ab45646ec041f66995f38f7c9edc53478709f8461a49d7da6705892aa7f7d18",
+      "v10_state_renderer~.maxpat": "96b23e4e1fc5d57884cd1dcfbd2d8fa38a3e47481b8e2bd41d71fdf62de34f8d"
+    },
+    "findings": [
+      "State/RPM owned by drivetrain",
+      "Separate post-module gains",
+      "steady/accel/decel times six pitch anchors; reference branch uses buffer/groove sample loops"
+    ]
+  },
+  "runtime_sha256": {
+    "modules/dna_atlas/voice.c": "896797245d6cdfe11ec4dd575d3586a396fce56504605e7bbefe6b32fdd56db1",
+    "modules/atlas_drive/render.c": "ddfb88055528c37bc6af2507c44bab60b8d5519b1285c03e65b814675ebdeecf",
+    "src/drive/drive.c": "bd63c13658b76e356071f934306947bd13bd7b986f2de4f8cfc657fb65cdfa2e",
+    "src/drive/shift.c": "dd41ac65e58610eb5ae8ff8181afc34080f03cabf566f41d8c1c0a57f168faf9",
+    "src/drive/fueling.c": "f0d8cd107072c3f3119ab2e230c77494e5122cb55b41a335b4e5800cb2f200bb",
+    "src/core/orchestrator.c": "d454fa9a188110b9045dacc1490a6132a833a00d1bb256be8cd957115b1a4ed8",
+    "src/profiles/voicing.c": "dbfa71f584f5219fd64c5ebd62558228f1a608c0bb6c119fecae885b1a332e7c"
+  },
+  "retained_runtime": {
+    "dna": "RPM atlas and state gain envelope; no calibrated load/state spectral axis",
+    "events": "Optional legacy procedural scheduler; not new measured backfire/intake/exhaust models",
+    "separate_lf_noise": "Not yet attached to new driving chain; accepted LF is a different A moving-tailpipe context"
+  },
+  "next_model_boundary": "Preserve one OSC phase clock; separate RPM coordinate, state spectral shape, independent low/noise voices, and object spatial rendering",
+  "not_established": [
+    "Observed rising/falling sound, not measured throttle/load/fuel state",
+    "One short rising passage; Hann windows overlap and are not independent repeats",
+    "Four-cycle windows and source FIR smooth short transients;8..14k comparisons may be filter-limited",
+    "No claim that stationary rev spectra transfer to loaded driving or another microphone context"
+  ],
+  "review": {
+    "page": "E:\\VehicleSoundLab\\research\\工况声纹分离V1.html",
+    "records": [
+      {
+        "file": "references/analysis/state_dna_v1/review/fall1_normalized.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/fall1/normalized_float.wav",
+        "source_sha256": "32a08782c6fa307cc3fd7aefb6d1e3e39472ae0e69e24246b90752db4a29df35",
+        "sha256": "5691a35013cdcac5337d2a45eade605723be1dace24c8023608c94b8d7e5bcdd",
+        "frames": 21762,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      },
+      {
+        "file": "references/analysis/state_dna_v1/review/fall1_c_sustained.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/fall1/c_sustained_float.wav",
+        "source_sha256": "708a3a79f101f474690a9f5f04cf3db7f97ecaabe213e67c7ff9d5e1f20ad713",
+        "sha256": "a8e4523b78e582d64befc4eec7dab8d9a86407386a09e9ddb62b45588d678245",
+        "frames": 384000,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      },
+      {
+        "file": "references/analysis/state_dna_v1/review/rise2_normalized.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/rise2/normalized_float.wav",
+        "source_sha256": "e97077ff1d86c3c31cf6008c61096df761d722b30abe032d047d867959fc9772",
+        "sha256": "40618e8d6a3272132c43be059195cd60599b225b05aef3502a8615ef70cd1317",
+        "frames": 7181,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      },
+      {
+        "file": "references/analysis/state_dna_v1/review/rise2_c_sustained.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/rise2/c_sustained_float.wav",
+        "source_sha256": "25d39b2edcfc9e8d92289ac01da7b82dc202d6b4d9cdc598a6d3a446940e9381",
+        "sha256": "a678e573fb0e9125a7c5aef206d1e6f55232ec1d550e9b2ae7de5434f5b3865b",
+        "frames": 384000,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      },
+      {
+        "file": "references/analysis/state_dna_v1/review/fall2_normalized.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/fall2/normalized_float.wav",
+        "source_sha256": "0636cfd01e463c6e2eb99e8bc2ae9326dd6b4c6a162516165c897a75130915ac",
+        "sha256": "2d67f8b4e10a29fe4ca9eea8d1c296e0eceaecb3b5e7119ae167d582a576f0a9",
+        "frames": 28671,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      },
+      {
+        "file": "references/analysis/state_dna_v1/review/fall2_c_sustained.wav",
+        "source": "references/analysis/state_dna_v1/observed_v2/fall2/c_sustained_float.wav",
+        "source_sha256": "953212783a908b67736b94205b43aa011d72c0908f60176bd62e236a47aa0902",
+        "sha256": "3b9933c54eda030b0249c71e28f83c7463cb6b10865800fb19dfed83e2ee0010",
+        "frames": 384000,
+        "gain": 0.25,
+        "processing": "Shared gain0.25;5ms endpoint fades;PCM24; no per-variant matching/EQ/loop"
+      }
+    ],
+    "page_sha256": "726ea53b9d4164459edf1c8c4b1f423bce2279f33c3330fcb6e01181e4c0bcae",
+    "human_accepted": false
+  },
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\state_dna_v1",
+  "evidence_sha256": {
+    "controls/verification.json": "0113c8012aac046614abc1907b68fb29e3da3798f963ce9b186739c94d76f89d",
+    "controls_v2/verification.json": "24f48d4ff9a8749d1a11dbbb1510fea3632d77160813f0e40cdef822444519d4",
+    "energy_budget/verification.json": "71dfd146e89fd5638ee380efc1ca6d71ddaeb90d3d174df218576a294826db0b",
+    "exploration/clocks.png": "18b621054f37c29c12b99b92867a3d87163b86bb7922cb0bbbcddf08b15c90ce",
+    "exploration/report.json": "a9bafbbdcc6fdc279b482d4b9e4002b734227f59956141b7ef63cdff5a4ce057",
+    "exploration_v2/clocks.png": "4ec11b3958e9bbb2519d7dd88926b68220c1dba28c9b0002914d46c96b3a9f2f",
+    "exploration_v2/report.json": "2b139c388c844e5fab81f324dd32587cf249c81c63dca5769e63195fc6f7d7ba",
+    "observed/fall1/c_sustained_float.wav": "708a3a79f101f474690a9f5f04cf3db7f97ecaabe213e67c7ff9d5e1f20ad713",
+    "observed/fall1/coordinates.npz": "8c36a0a12ea20c4c86c3cfdd029fdfa661414e9e221e5b0f9b90a811b8cd709c",
+    "observed/fall1/normalized_float.wav": "c6b15af0432ece73d715bb52daee322e1b93e613a26b8f107d4a9945b7e7cff6",
+    "observed/fall1/voice.model": "18d6ee7b2e13a645ee6fcf9cc2ebe5196b66fcb42703b48cf48614c4bcce2c6a",
+    "observed/fall2/c_sustained_float.wav": "953212783a908b67736b94205b43aa011d72c0908f60176bd62e236a47aa0902",
+    "observed/fall2/coordinates.npz": "a21d68a2ed2374e402162b61df3173b8639d2a2d64da487a1f2b718b01cf01a9",
+    "observed/fall2/normalized_float.wav": "c5ff36cf3b2908b3e5606aa8643f1d2fe9f4b3c330ab5e339b8d78a58442bb7f",
+    "observed/fall2/voice.model": "e6f2888f4c583e635f32745f61b9686442eca8c1310c00528e05e9a87dbf2dc3",
+    "observed/report.json": "f6c9f45e571250d578b5e2680fdb09c8f89ec2d581f6885e34bdd05806e91082",
+    "observed/rise2/c_sustained_float.wav": "25d39b2edcfc9e8d92289ac01da7b82dc202d6b4d9cdc598a6d3a446940e9381",
+    "observed/rise2/coordinates.npz": "0fd7f8c93dc4f553744b0fc30865182e4334bb9196023a70a7710ebca0947f7b",
+    "observed/rise2/normalized_float.wav": "4115d5766ddc7bf771c7f602a58fb11efa2effcbc4ba557573f99df677c646ca",
+    "observed/rise2/voice.model": "b1f0d75db3a8100016a28f15e630fecc7a1d9b9953656596f5efd6462594b052",
+    "observed/spectra.png": "e39b77ed2cba6c76eae0dbb08d3d4e0f85702c28aab1250c0b699223bfb0e0d5",
+    "observed_v2/fall1/c_sustained_float.wav": "708a3a79f101f474690a9f5f04cf3db7f97ecaabe213e67c7ff9d5e1f20ad713",
+    "observed_v2/fall1/coordinates.npz": "8c36a0a12ea20c4c86c3cfdd029fdfa661414e9e221e5b0f9b90a811b8cd709c",
+    "observed_v2/fall1/normalized_float.wav": "32a08782c6fa307cc3fd7aefb6d1e3e39472ae0e69e24246b90752db4a29df35",
+    "observed_v2/fall1/voice.model": "18d6ee7b2e13a645ee6fcf9cc2ebe5196b66fcb42703b48cf48614c4bcce2c6a",
+    "observed_v2/fall2/c_sustained_float.wav": "953212783a908b67736b94205b43aa011d72c0908f60176bd62e236a47aa0902",
+    "observed_v2/fall2/coordinates.npz": "a21d68a2ed2374e402162b61df3173b8639d2a2d64da487a1f2b718b01cf01a9",
+    "observed_v2/fall2/normalized_float.wav": "0636cfd01e463c6e2eb99e8bc2ae9326dd6b4c6a162516165c897a75130915ac",
+    "observed_v2/fall2/voice.model": "e6f2888f4c583e635f32745f61b9686442eca8c1310c00528e05e9a87dbf2dc3",
+    "observed_v2/report.json": "381d9416eef92f8a394ef7b8301d8c4d67abf2aae64eb5161fb61abfd9830bf0",
+    "observed_v2/rise2/c_sustained_float.wav": "25d39b2edcfc9e8d92289ac01da7b82dc202d6b4d9cdc598a6d3a446940e9381",
+    "observed_v2/rise2/coordinates.npz": "0fd7f8c93dc4f553744b0fc30865182e4334bb9196023a70a7710ebca0947f7b",
+    "observed_v2/rise2/normalized_float.wav": "e97077ff1d86c3c31cf6008c61096df761d722b30abe032d047d867959fc9772",
+    "observed_v2/rise2/voice.model": "b1f0d75db3a8100016a28f15e630fecc7a1d9b9953656596f5efd6462594b052",
+    "observed_v2/spectra.png": "e39b77ed2cba6c76eae0dbb08d3d4e0f85702c28aab1250c0b699223bfb0e0d5",
+    "review/browser_qa.json": "deb8ea721e8e0ff7fb0d684bfa4219abda62ae1766a5794761ffed0c7b8c6752",
+    "review/desktop.png": "cef331f47ea584066bd1215ca051fe500ffed34a350d762ad528091a462bcfa0",
+    "review/fall1_c_sustained.wav": "a8e4523b78e582d64befc4eec7dab8d9a86407386a09e9ddb62b45588d678245",
+    "review/fall1_normalized.wav": "5691a35013cdcac5337d2a45eade605723be1dace24c8023608c94b8d7e5bcdd",
+    "review/fall2_c_sustained.wav": "3b9933c54eda030b0249c71e28f83c7463cb6b10865800fb19dfed83e2ee0010",
+    "review/fall2_normalized.wav": "2d67f8b4e10a29fe4ca9eea8d1c296e0eceaecb3b5e7119ae167d582a576f0a9",
+    "review/mobile.png": "c1f185bf6bb40c86f33f57db91d3a95685e80be0cbdfaa95a4602b397fb2558e",
+    "review/review.json": "e66f5310a89d5f7ce091e3053691dafc8755a0b4da282784145ddfb7673c8894",
+    "review/rise2_c_sustained.wav": "a678e573fb0e9125a7c5aef206d1e6f55232ec1d550e9b2ae7de5434f5b3865b",
+    "review/rise2_normalized.wav": "40618e8d6a3272132c43be059195cd60599b225b05aef3502a8615ef70cd1317"
+  },
+  "source_sha256": {
+    "tools/summarize_state_dna_v1.py": "b6b3b6c309e7dbaa5a64214d8f17367e75b8d73300a7e991d10da3f1301b9a69",
+    "tools/run_state_dna_v1.py": "bca93299352bdda1650f92dad04aaecc7447cc6ab61a88d87ad03fe07cd7b36f",
+    "tools/verify_state_dna_v1.py": "3586a37c23ecd4af815b8710a7324ea81822146c5a32cdf498ae9dfd93eaf871",
+    "tools/verify_dna_energy_budget_v1.py": "77a5b9e43d1b35bad0ac65a5ea36b309f1d34ef9f21368b5570faebe411a37da",
+    "tools/verify_state_dna_review_v1.cjs": "30f932a592a0526a362b64ba30d6ec8dcfab79096d78556eea6cb37ec2eeacb7",
+    "tools/freeze_state_dna_v1.py": "114eb17ace98bff0c23fa04be05c3dd4b122bf11a98714e6830701cc605250ef",
+    "research/工况声纹分离V1.md": "525f216b587d440967dc387dd1427c8dde9b12d681244c582c3f46aaf03f1c52",
+    "tools/explore_state_dna_v1.py": "361544660b53a6b9c75b1feeaea42895e7d97ce1a2f2b7f59a96baf966a4ce78",
+    "tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+    "tools/state_dna_v1/review.py": "8ee2e6bdb99d530de559a7d4d3e3282d3e29833744768cda620c47197d71abdf",
+    "tools/state_dna_v1/window_budget.py": "ceb57248fd32db7bab11a9be3c4cc820a4591194733c12e6a775b39d38e221fa",
+    "tools/state_dna_v1/__init__.py": "dbfeaf2aa6246023980ed99b81728a346b8809784866fdf675d352648ec8b978"
+  }
+}
