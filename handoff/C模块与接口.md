@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增独立诊断：`modules/osc_colour/{profile,envelope}.*`分别负责非实时谐波增益编译和0–1平滑，`dna_atlas::sa_voice_tick_shaped_body`在同一谐波贡献上施加L/R共同幅度形状，再取完整声／LF。默认接口精确旁路，只有 `experiments/state_colour_v2`离线宿主调用；未映射驾驶／UI。35项已有测试及新增契约通过，19条冻结驾驶分轨与控制CSV一致；扫频跟踪仍未达0.5dB精度，候选仅限诊断。见[模块图及边界](../research/工况声线诊断V2.md)。
+
 新增行程：`modules/atlas_take/{assets,parameters,take,player}.*`分别拥有模型、20字段、成功提交事件／帧数和重合成；`modules/atlas_take_io/{codec,file}.*`独立维护 `.vslrun` schema1、UTF8与原子保存。宿主 `experiments/atlas_monitor_v1/takes.*`管理对话框／自动保护，`audio.*`管理live／record／replay。35项回归、实际静音设备自包含回放和2／12通道源一致通过；新UI交互／目视待检查。模块总图见[驾驶行程录制V1](../research/驾驶行程录制V1.md)，旧take协议不变。
 
 最新低频接口：`modules/harmonic_body/{band,mix}.*` 配合 `dna_atlas::sa_voice_tick_body`，从同一谐波样本取出LF，再互补分配到DNA／机体包络；没有第二个时钟或随机源。`AdMix.body_mix`默认0，`AdCapture.body_raw/body/body_objects`分别保留原始L/R、混音后LF及机体代理；与独立高频残差一起只做一次空间渲染。`--body-mix`与原生“低频分层”旋钮已接入；34项回归、17条旧音轨一致及短时实际静音设备／UI检查通过。完整物理LF／NVH／工况模型及新音色听评仍缺，见[模块图与边界](../research/驾驶低频分层V1.md)。

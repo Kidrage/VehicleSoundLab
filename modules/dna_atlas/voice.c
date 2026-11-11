@@ -26,7 +26,7 @@ static double magnitude(const SaVoice *v,unsigned a,unsigned h,unsigned c) {
     double im=m[2*c+1]+v->detail*(t->left[h][2*c+1]+t->fraction*(t->right[h][2*c+1]-t->left[h][2*c+1]));
     return hypot(re,im);
 }
-static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band) {
+static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band,const double *shape,double amount) {
     const SaBank *b=v->bank;
     unsigned a,h,c,lo=0,hi=0;
     double blend=0,cl=cos(v->phase),sl=sin(v->phase),base_c=cl,base_s=sl;
@@ -59,6 +59,7 @@ static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band) {
                 else if (blend!=0) { re=sa_bank_sine(b,phase+PI/2);im=sa_bank_sine(b,phase); }
             }
             double contribution=aa*mag*(re*cl-im*sl);
+            if(shape&&amount>0)contribution*=1+amount*(shape[h]-1);
             out[c]+=contribution;
             if(body&&weight!=0)body[c]+=weight*contribution;
         }
@@ -70,10 +71,14 @@ static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band) {
     for (a=0;a<b->count;++a) v->texture[a].fraction+=v->root_hz/12000;
     ++v->frame;
 }
-void sa_voice_tick(SaVoice *v,double out[2]) { sample(v,out,NULL,NULL); }
+void sa_voice_tick(SaVoice *v,double out[2]) { sample(v,out,NULL,NULL,NULL,0); }
 int sa_voice_tick_body(SaVoice *v,const HbBand *band,double out[2],double body[2]) {
     if(!v||!v->bank||!out||!body||out==body||!hb_band_valid(band))return 0;
-    sample(v,out,body,band);return 1;
+    sample(v,out,body,band,NULL,0);return 1;
+}
+int sa_voice_tick_shaped_body(SaVoice *v,const HbBand *band,const double *gain,double amount,double out[2],double body[2]) {
+    if(!v||!v->bank||!out||!body||out==body||!hb_band_valid(band)||!isfinite(amount)||amount<0||amount>1)return 0;
+    sample(v,out,body,band,gain,amount);return 1;
 }
 void sa_voice_process(SaVoice *v,double *out,unsigned frames) {
     unsigned n;for (n=0;n<frames;++n) sa_voice_tick(v,out+2*n);

@@ -23,5 +23,10 @@ void sa_voice_tick(SaVoice *voice, double stereo[2]);
 /* Optional LF sum from the same per-harmonic samples/phase. Full output and
    voice state equal sa_voice_tick; invalid band rejects without advancing. */
 int sa_voice_tick_body(SaVoice *voice,const HbBand *band,double stereo[2],double body[2]);
+/* Optional common L/R harmonic magnitude shape, applied before full/LF sums.
+   Borrowed gain array has bank->harmonics finite positive entries <=16,
+   compiled/validated outside audio. Amount0 and NULL gain are exact bypass.
+   Caller owns amount smoothing; no new oscillator, random draw or phase. */
+int sa_voice_tick_shaped_body(SaVoice *voice,const HbBand *band,const double *gain,double amount,double stereo[2],double body[2]);
 void sa_voice_process(SaVoice *voice, double *stereo, unsigned frames);
 #endif

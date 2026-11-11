@@ -275,6 +275,29 @@
         "external exhaust spectrum"
       ],
       "evidence": "references/analysis/DE_details_v1/frames.json"
+    },
+    "A_exterior_revs_extended": {
+      "source": "A",
+      "seconds": [
+        231,
+        247.5
+      ],
+      "perspective": "stationary rear exterior, open driver door; expanded inspection",
+      "visual": "Rear composition checked at230.230/232.232/234.234/236.236s; prior237.5..248.5 evidence covers later section. Coarse frames do not establish uncut audio or fixed microphone.",
+      "audio_interpretation": "candidate repeated stationary revs; direction labels require acoustic tracking",
+      "allowed_uses": [
+        "exterior_dynamic_observation",
+        "rev_sequence_context"
+      ],
+      "not_established": [
+        "neutral gear",
+        "pedal trajectory",
+        "torque load",
+        "RPM",
+        "fixed microphone transfer",
+        "continuous unedited audio"
+      ],
+      "evidence": "references/analysis/state_colour_v2/context_exploration/frames.json"
     }
   },
   "superseded_for_calibration": [

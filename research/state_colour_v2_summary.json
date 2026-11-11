@@ -1,0 +1,662 @@
+{
+  "schema": "vsl.state-colour-summary/1",
+  "scope": "Independent diagnostic acoustic colour axis, not driver-state calibration",
+  "engineering_checks": "pass",
+  "automatic_sweep_control": "fail",
+  "human_accepted": false,
+  "driver_mapping": false,
+  "c_tests": {
+    "existing_passed": 35,
+    "new_contract_passed": 1,
+    "total": 36,
+    "first_test_expectation_failure_preserved": true
+  },
+  "c_index_sha256": "97ebfacb2066c3fbe53b6f76779123b1e091ee21adbba6b9fd74b0f99d7c6332",
+  "fit": {
+    "schema": "vsl.osc-colour-fit/1",
+    "analysis_sha256": "59d81da4748cd57492beddf42af2733c97fcd761c1679faebb1747c8348ab685",
+    "bands_at_reference_root_hz": [
+      [
+        28,
+        120
+      ],
+      [
+        120,
+        400
+      ],
+      [
+        400,
+        1200
+      ],
+      [
+        1200,
+        3000
+      ],
+      [
+        3000,
+        6000
+      ]
+    ],
+    "acoustic_root_support_hz": [
+      45,
+      50
+    ],
+    "knots_order": [
+      1.2365974823414987,
+      4.673899157377417,
+      14.780166891254419,
+      40.47715405015526,
+      90.50966799187808,
+      128.0,
+      320.0
+    ],
+    "knots_db": [
+      -11.512954796455045,
+      -4.369950293234581,
+      8.203778001556847,
+      5.321846192662591,
+      12.344975362245664,
+      0.0,
+      0.0
+    ],
+    "high_order_policy": "Return to unity at order128; preserve all higher orders",
+    "profile_sha256": "f4432be43d9f0d8b5769f89d496d7d4d2140d6d5d0e6a43d6e61daa58c9d3883",
+    "equal_expected_power_band_hz": [
+      28,
+      6000
+    ],
+    "equal_power_scalar_db": 2.037097866372689,
+    "folds": [
+      {
+        "held_out": 1,
+        "training": [
+          2,
+          4
+        ],
+        "normalization_db": 2.1122503191042084,
+        "target_db": [
+          -10.650848647333806,
+          -3.522231429291983,
+          7.01252155577887,
+          6.723818446141108,
+          11.778859161043787
+        ],
+        "prediction_db": [
+          -8.25216591176558,
+          -4.0398732662112415,
+          7.387944326812998,
+          6.080698979104016,
+          9.426609449385404
+        ],
+        "error_db": [
+          2.398682735568226,
+          -0.5176418369192586,
+          0.37542277103412847,
+          -0.6431194670370921,
+          -2.3522497116583825
+        ],
+        "rms_error_db": 1.5562297741099913,
+        "flat_rms_error_db": 8.473174226375148
+      },
+      {
+        "held_out": 2,
+        "training": [
+          1,
+          4
+        ],
+        "normalization_db": 2.245851070203709,
+        "target_db": [
+          -6.508610959542875,
+          -3.5556407355513406,
+          6.346963861563794,
+          5.226611813839174,
+          7.371404827772524
+        ],
+        "prediction_db": [
+          -11.13622020054154,
+          -4.538087875903031,
+          6.7903386548232,
+          6.28786657643319,
+          10.776793983542296
+        ],
+        "error_db": [
+          -4.627609240998665,
+          -0.9824471403516903,
+          0.4433747932594061,
+          1.0612547625940163,
+          3.4053891557697717
+        ],
+        "rms_error_db": 2.6570467760889014,
+        "flat_rms_error_db": 5.948842376638699
+      },
+      {
+        "held_out": 4,
+        "training": [
+          1,
+          2
+        ],
+        "normalization_db": 1.7402811385089763,
+        "target_db": [
+          -9.559148813959897,
+          -4.052365735160279,
+          8.882621875122975,
+          7.407698705069234,
+          11.970797687676587
+        ],
+        "prediction_db": [
+          -7.48608729386995,
+          -2.672087528046215,
+          7.823110092782488,
+          6.877996281633544,
+          10.438506635760763
+        ],
+        "error_db": [
+          2.073061520089947,
+          1.3802782071140642,
+          -1.0595117823404872,
+          -0.5297024234356904,
+          -1.5322910519158235
+        ],
+        "rms_error_db": 1.4109442042267242,
+        "flat_rms_error_db": 8.773527943304366
+      }
+    ],
+    "source_sha256": {
+      "tools/fit_state_colour_v2.py": "04fa309173cfc22e3feb53146fc98ba64aa3e685ecb653dfc75ac4b07933f62b",
+      "tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e"
+    },
+    "scope": "Diagnostic rise/fall colour only; no driver mapping or new physical source",
+    "human_accepted": false
+  },
+  "controls": {
+    "schema": "vsl.state-colour-controls/1",
+    "pairs": [
+      {
+        "pair": 1,
+        "zero_shape_error_db": [
+          2.7467481379664686e-05,
+          2.8776423794001484e-06,
+          9.37081778617645e-06,
+          -0.0001077309321979694,
+          -0.00014064531898289116
+        ],
+        "known_shape_error_db": [
+          0.00010945690937669283,
+          5.858965865246368e-05,
+          6.236088087518965e-05,
+          -7.4963123706695e-05,
+          -0.00015692607248585233
+        ],
+        "tracked_zero_shape_error_db": [
+          -0.004307437046784329,
+          0.002071234778913905,
+          -4.623973416499616e-05,
+          -0.017507681258748728,
+          -0.10364420546641714
+        ]
+      },
+      {
+        "pair": 2,
+        "zero_shape_error_db": [
+          6.859087795761245e-06,
+          9.360005703309129e-06,
+          -3.959447239672708e-05,
+          -9.041549057847397e-05,
+          -0.00021414657326342712
+        ],
+        "known_shape_error_db": [
+          4.669366572418454e-05,
+          5.715096207925541e-05,
+          4.315596237258745e-06,
+          -5.275173643237707e-05,
+          -0.00020584274589285911
+        ],
+        "tracked_zero_shape_error_db": [
+          -0.0006809189169985082,
+          -0.0008189916442628565,
+          0.0013559355092891585,
+          0.007592522718481032,
+          0.04087083556569311
+        ]
+      },
+      {
+        "pair": 4,
+        "zero_shape_error_db": [
+          1.0930820188531643e-05,
+          4.2476111755349235e-06,
+          2.293745699362199e-05,
+          -0.0001398261527319833,
+          -0.00017408225158924387
+        ],
+        "known_shape_error_db": [
+          6.682976666994023e-05,
+          4.831054453324768e-05,
+          5.1724631418892386e-05,
+          -0.00011915933936634815,
+          -0.00015099425889353313
+        ],
+        "tracked_zero_shape_error_db": [
+          0.01123935642518615,
+          0.020120080091379413,
+          -0.013376490263617096,
+          -0.22107384018872794,
+          -1.1987922492214613
+        ]
+      }
+    ],
+    "tracked_clock": [
+      {
+        "case": "rise1",
+        "status": "measured_connected",
+        "selected": 8,
+        "root_rms_error_hz": 0.25926154171276716
+      },
+      {
+        "case": "fall1",
+        "status": "measured_connected",
+        "selected": 21,
+        "root_rms_error_hz": 0.06953724713109506
+      },
+      {
+        "case": "rise2",
+        "status": "measured_connected",
+        "selected": 8,
+        "root_rms_error_hz": 0.13992798290093297
+      },
+      {
+        "case": "fall2",
+        "status": "measured_connected",
+        "selected": 37,
+        "root_rms_error_hz": 0.053019775392104555
+      },
+      {
+        "case": "rise4",
+        "status": "measured_connected",
+        "selected": 7,
+        "root_rms_error_hz": 0.20912168405000336
+      },
+      {
+        "case": "fall4",
+        "status": "measured_connected",
+        "selected": 36,
+        "root_rms_error_hz": 0.06303111651234358
+      }
+    ],
+    "scope": "Resolved reference-carrier stereo OSC sweeps; dense-carrier tracking failure retained in controls_attempt1; not recording validation",
+    "missing_reference": "disconnected",
+    "maximum_zero_shape_error_db": 0.00021414657326342712,
+    "maximum_known_shape_error_db": 0.00020584274589285911,
+    "maximum_tracked_zero_shape_error_db": 1.1987922492214613,
+    "result": "fail",
+    "source_sha256": {
+      "tools/verify_state_colour_v2.py": "9e8e2da4378b349944f289d1a76deace13500f70775e70cd9ef37bcadb931475",
+      "tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+      "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+      "tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+      "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+      "tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+      "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff"
+    },
+    "clocks_sha256": "247fdaddc9b617ad54e09c2e483e7dc2e3da4483671cb8218f1c3a0673f7e6db"
+  },
+  "review": {
+    "schema": "vsl.state-colour-review/1",
+    "runs": [
+      {
+        "name": "base",
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslOscColour_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\fit_attempt3\\A_rear_rise.colour",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\review\\base.wav",
+          "10",
+          "47.39127187830898",
+          "0",
+          ".25",
+          "48271"
+        ],
+        "frames": 480000,
+        "root_hz": 47.39127187830898,
+        "gain": 0.25,
+        "peak": 0.3666647358399369,
+        "rms": 0.11039462019854487,
+        "transition": false,
+        "sha256": "c50bc4886894c6567adc46dca68d03d7e458c4be355c03d859c38cd4259c6aa5"
+      },
+      {
+        "name": "half",
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslOscColour_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\fit_attempt3\\A_rear_rise.colour",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\review\\half.wav",
+          "10",
+          "47.39127187830898",
+          "0.5",
+          ".25",
+          "48271"
+        ],
+        "frames": 480000,
+        "root_hz": 47.39127187830898,
+        "gain": 0.25,
+        "peak": 0.44569576132502947,
+        "rms": 0.10224881156685568,
+        "transition": false,
+        "sha256": "69237f43831cc5955459b0c867eabc3b30b033c3e090154664095e3b0b5160ec"
+      },
+      {
+        "name": "rise",
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslOscColour_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\fit_attempt3\\A_rear_rise.colour",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\review\\rise.wav",
+          "10",
+          "47.39127187830898",
+          "1",
+          ".25",
+          "48271"
+        ],
+        "frames": 480000,
+        "root_hz": 47.39127187830898,
+        "gain": 0.25,
+        "peak": 0.6542980294302074,
+        "rms": 0.10240761490133593,
+        "transition": false,
+        "sha256": "1c90e551cf09b170cdc6f0b31845b67786859048639bf2577361eac156fa54eb"
+      },
+      {
+        "name": "transition",
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslOscColour_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\fit_attempt3\\A_rear_rise.colour",
+          "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2\\review\\transition.wav",
+          "10",
+          "47.39127187830898",
+          "rise-fall",
+          ".25",
+          "48271"
+        ],
+        "frames": 480000,
+        "root_hz": 47.39127187830898,
+        "gain": 0.25,
+        "peak": 0.6542395588353981,
+        "rms": 0.10727368643681698,
+        "transition": true,
+        "sha256": "f3218d7e794ab0943914dfc5cbc40834b847ba8f5c037782373a9127e4304034"
+      }
+    ],
+    "root_hz": 47.39127187830898,
+    "gain": 0.25,
+    "seed": 48271,
+    "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+    "colour_sha256": "f4432be43d9f0d8b5769f89d496d7d4d2140d6d5d0e6a43d6e61daa58c9d3883",
+    "binary_sha256": "c451522e8446821767d533bb03b9c9618b02f04ac7c339d7a739d01aaba4f083",
+    "fit_sha256": "0c78094db9e71f5ca7a067bd2e790591c8f3031ef0a969bdd25022997a58f0fb",
+    "regression_sha256": "9980a81d690165c6dcaf51742f29dc8216022e82b94bb5f1446ecc63fd788eb8",
+    "reference_source": {
+      "segment_id": "A_exterior_revs_extended",
+      "source": "A",
+      "catalog_sha256": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "seconds": [
+        231,
+        247.5
+      ],
+      "perspective": "stationary rear exterior, open driver door; expanded inspection",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "neutral gear",
+        "pedal trajectory",
+        "torque load",
+        "RPM",
+        "fixed microphone transfer",
+        "continuous unedited audio"
+      ]
+    },
+    "human_accepted": false,
+    "driver_mapping": false,
+    "limitation": "Automatic swept-clock control failed0.5dB target; up to1.2dB spurious high-band colour. Diagnostic only."
+  },
+  "regression": {
+    "identical_wav_stems": 19,
+    "trace_equal": true
+  },
+  "page": "http://127.0.0.1:8789/research/%E5%B7%A5%E5%86%B5%E5%A3%B0%E7%BA%BF%E8%AF%8A%E6%96%ADV2.html",
+  "page_http": [
+    {
+      "name": "base",
+      "status": 200
+    },
+    {
+      "name": "half",
+      "status": 200
+    },
+    {
+      "name": "rise",
+      "status": 200
+    },
+    {
+      "name": "transition",
+      "status": 200
+    },
+    {
+      "name": "reference1",
+      "status": 200
+    },
+    {
+      "name": "reference4",
+      "status": 200
+    }
+  ],
+  "browser_interaction_verified": false,
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\state_colour_v2",
+  "source_sha256": {
+    "modules/osc_colour/CMakeLists.txt": "268a30c036cc496004c64bbc018ce7ce2aa1186ac20c947fa09cc56b9d9df01a",
+    "modules/osc_colour/envelope.c": "c4195183ca2c21cc46564f9a51758365cd062c653b3b79492b5b54a2ae50cccb",
+    "modules/osc_colour/envelope.h": "83772911b8c583baef46a3701501ded3788f7141c48910f047d50aa40a4bca88",
+    "modules/osc_colour/profile.c": "9af9d00b1965bcfa5653151afdd378fb9b25bb40d49e62b91a272a3d83be409b",
+    "modules/osc_colour/profile.h": "a57f22ccf8a0305fa187987b9c16de10c735dd55b31ac9fbce835fdeaddae45a",
+    "modules/osc_colour/README.md": "7fb39074b2f39488987f10913b8b7e9911da98d36e4c45a6840e34b937514171",
+    "experiments/state_colour_v2/checks.c": "35b1d1b0e2d43c157f1e08b34569733529eff103576de574059d1251248412c7",
+    "experiments/state_colour_v2/probe.c": "166b074d3bd8a5fc216ceaac1fde8f2c6013a95bac5cfc506a1633be199170e9",
+    "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "tools/state_colour_v2/__init__.py": "d06a517536c2dbf9de12bbe7eae725ea1636bd23cecea6a01e9d2001521c96f8",
+    "modules/dna_atlas/voice.c": "fee6c92d3624f138ceed17d0932d49e14763fbb8fc059eacbeb4a1c827b1d99a",
+    "modules/dna_atlas/voice.h": "0db24eb0593262bda7c6ed1a5c388ce20ad77d1f6249487a35a7443b02accd45",
+    "handoff/CMakeLists.txt": "87b477a235a7ab15aba7a83fdc04755f3f5cf2947cc95fad88434431336495a9",
+    "references/segments_v1.json": "934dfd72f8acfdf6dcc6ad6a668b9e46b14b81feed868ee39f8a76da8141ac09",
+    "tools/analyze_state_colour_v2.py": "c32f03e039ed134e03f70c4f72f42f746408ac5b3acf7e8a51e2e41b0638ce58",
+    "tools/explore_state_colour_v2.py": "d87cb44a6939f0712f732e4c476e1b5a50f4bd3abbffb5fa258aed76d150764e",
+    "tools/fit_state_colour_v2.py": "04fa309173cfc22e3feb53146fc98ba64aa3e685ecb653dfc75ac4b07933f62b",
+    "tools/verify_state_colour_v2.py": "9e8e2da4378b349944f289d1a76deace13500f70775e70cd9ef37bcadb931475",
+    "tools/review_state_colour_v2.py": "f936533b297b0e281795fb7e4a23d652d9beb5752105f74e3e366e52f5c72efd",
+    "tools/summarize_state_colour_v2.py": "132a69b637eb66a7b295bccaa327295b858e53a0d60503f2ab7a8848a37c176d"
+  },
+  "evidence_sha256": {
+    "build_attempt1.log": "37bd8c1869eb091fe6dd3e5243315e5c5a203f2be3f722039e5c185cb0bba293",
+    "build_focused.log": "bdaea91057d7fb31d2bf69d70cb0f7420f4e2e0c67100295dafc1b35937a7160",
+    "checks_attempt1.c": "173b84138b6d8693cddd5efd4cd52ceed4b0905be7d91eeaf7ee90d95d280902",
+    "clocks_attempt1/clocks.png": "69d5383b921c945f76114ccddb1d082e1fde17dad5e4c64fe81a891717f65088",
+    "clocks_attempt1/observation.npz": "d2cebccc1fcd110108f904fd3990980c7058f8ff5db2a88af57493549d74d606",
+    "clocks_attempt1/report.json": "1b6fd8c07e71ebd0a8260b20be511baa151883aa52e2f2a72d78120b23e3d667",
+    "clocks_attempt1/source/tools/explore_state_colour_v2.py": "ba1d92085446e5c15822c2fb46c529bfddfa7a43517dc541fa4048c3e1b9e432",
+    "clocks_attempt1/source/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "clocks_attempt2/clocks.png": "69d5383b921c945f76114ccddb1d082e1fde17dad5e4c64fe81a891717f65088",
+    "clocks_attempt2/observation.npz": "d2cebccc1fcd110108f904fd3990980c7058f8ff5db2a88af57493549d74d606",
+    "clocks_attempt2/report.json": "247fdaddc9b617ad54e09c2e483e7dc2e3da4483671cb8218f1c3a0673f7e6db",
+    "clocks_attempt2/source/tools/explore_state_colour_v2.py": "d87cb44a6939f0712f732e4c476e1b5a50f4bd3abbffb5fa258aed76d150764e",
+    "clocks_attempt2/source/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "colour_attempt1/fall1/coordinates.npz": "d2fdd587adb8cb31853d609c563a902a5fac752df86c7b0f0f5f3b4170e0af75",
+    "colour_attempt1/fall1/normalized.wav": "21336f6b7181252dd070fd2a784c30a020212b8fc289b73d6f7746a9fae695fe",
+    "colour_attempt1/fall2/coordinates.npz": "7c5f4d6fb848c01afe45e05b2bb9da8606320da1d919a80ec2ce21e7fb636bf2",
+    "colour_attempt1/fall2/normalized.wav": "8c0fbd4e421ee7040e8668744b3f6f5ac33c8b52f0ac83f07865413582043352",
+    "colour_attempt1/fall3/coordinates.npz": "6a291f03c037a2c5dc07ccb81c4bfa9b328d0e43430f9eec21294d5ee34df9f3",
+    "colour_attempt1/fall3/normalized.wav": "35fd7ff0cce2fb88ccd694589fe67f2830d227ebd23a090e05330f9bcdf8505f",
+    "colour_attempt1/fall4/coordinates.npz": "2da61ae2f14dd77a4e59f9d24cbccf2755d69f2156441d3173ec414a7d0f4e23",
+    "colour_attempt1/fall4/normalized.wav": "9bfd8a70cb0ac9f4bd6b9490a957b775ce21ed4589bad5def9d67a877c46eef2",
+    "colour_attempt1/repeat_shape.png": "9b264fd465898f578831ec7f3013e3ac340465a078c5280d84ebe18102514267",
+    "colour_attempt1/report.json": "bcd3da0bd20605464faea2ad0dc5fa69e9737066c69b1ff57cf6b708a0e0ba00",
+    "colour_attempt1/rise1/coordinates.npz": "6b1748f29e138494f6d1fa54d9948c6229305493e4e7ee2132a9a44dec41e10f",
+    "colour_attempt1/rise1/normalized.wav": "7759c8ed2adde20a214118f6eff7c144a8c627f631df6127ead02a3a67232474",
+    "colour_attempt1/rise2/coordinates.npz": "79144e990617cc491af81b6326469f5baa983b9335d22f1ea4d21ec8322fa950",
+    "colour_attempt1/rise2/normalized.wav": "d1681f8333f777c9c3f992b382c14ec5f75db89099d6b0bfb268e8efa806cb31",
+    "colour_attempt1/rise4/coordinates.npz": "3eed955f5bf1c047183389953aac9d13d1692a1e8707d0f521d160ede7fe0e3d",
+    "colour_attempt1/rise4/normalized.wav": "1507456fa035bfc8b337b50229cd3f7a0967ca82d537bc35c6f7b2eb66de8213",
+    "colour_attempt1/source/tools/analyze_state_colour_v2.py": "14253daa42c23e21209cbe7ef5622d50eb9b5f76e800cf742d2c6d298dba0b41",
+    "colour_attempt1/source/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "colour_attempt1/source/tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+    "colour_attempt2/fall1/coordinates.npz": "d2fdd587adb8cb31853d609c563a902a5fac752df86c7b0f0f5f3b4170e0af75",
+    "colour_attempt2/fall1/normalized.wav": "8e1cfe0b98dc24a425eaf2e8f1c13f5f91f1bec53ecae3c3a780f7e7fa77ce07",
+    "colour_attempt2/fall2/coordinates.npz": "7c5f4d6fb848c01afe45e05b2bb9da8606320da1d919a80ec2ce21e7fb636bf2",
+    "colour_attempt2/fall2/normalized.wav": "cf5209595565b8f55fdc34951b8e1a184ccd36d3be487d139573381f8656f332",
+    "colour_attempt2/fall3/coordinates.npz": "6a291f03c037a2c5dc07ccb81c4bfa9b328d0e43430f9eec21294d5ee34df9f3",
+    "colour_attempt2/fall3/normalized.wav": "7c6402c05945c318bfcd520e671819ab3123556852ab5c5b6bd49a9839b60649",
+    "colour_attempt2/fall4/coordinates.npz": "2da61ae2f14dd77a4e59f9d24cbccf2755d69f2156441d3173ec414a7d0f4e23",
+    "colour_attempt2/fall4/normalized.wav": "f6cd873a0716d0878510ef33bcb4beffb8d1c5ea7fca7fc18371afaf7adce96b",
+    "colour_attempt2/repeat_shape.png": "9b264fd465898f578831ec7f3013e3ac340465a078c5280d84ebe18102514267",
+    "colour_attempt2/report.json": "59d81da4748cd57492beddf42af2733c97fcd761c1679faebb1747c8348ab685",
+    "colour_attempt2/rise1/coordinates.npz": "6b1748f29e138494f6d1fa54d9948c6229305493e4e7ee2132a9a44dec41e10f",
+    "colour_attempt2/rise1/normalized.wav": "bbb80fa4adf36bdab0da009bcae52cf8053e302aaa5939a154e68a7b162fffe2",
+    "colour_attempt2/rise2/coordinates.npz": "79144e990617cc491af81b6326469f5baa983b9335d22f1ea4d21ec8322fa950",
+    "colour_attempt2/rise2/normalized.wav": "54f4fc5422221d4bf3d215193d96b2b328aa5ec1dd022da080b48cf07bb68cfc",
+    "colour_attempt2/rise4/coordinates.npz": "3eed955f5bf1c047183389953aac9d13d1692a1e8707d0f521d160ede7fe0e3d",
+    "colour_attempt2/rise4/normalized.wav": "6049f3e41dadc85306159ec0215f841497d66dd0a545662c54d05baa20f99630",
+    "colour_attempt2/source/tools/analyze_state_colour_v2.py": "c32f03e039ed134e03f70c4f72f42f746408ac5b3acf7e8a51e2e41b0638ce58",
+    "colour_attempt2/source/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "colour_attempt2/source/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "colour_attempt2/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "colour_attempt2/source/tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+    "context_exploration/contact.png": "0c872aaeb25c22c117b0b27a53d534ce2b91d8ced65b161d62b894ddd617ff69",
+    "context_exploration/decode.log": "e83ea11a12f4fe749c95c18e60fabd818f69cfbfb746c5c76d0c5581812ac5ef",
+    "context_exploration/frame_001.png": "2b07a26001394f4a335568c0c47dd54acde49301d92e018c699c3dce9a8e3b08",
+    "context_exploration/frame_002.png": "552cc079ee2141fa956477b88f45c87461e35e75ea11f435db6a82b5bbfca7d2",
+    "context_exploration/frame_003.png": "4c6caea68a7cde079f0eeeaf3839f198d9c276f1c2c156d9e3ef98edea6194a5",
+    "context_exploration/frame_004.png": "319ea3a5208e47ccc6c7f64b734817bf212f8f010784d9d2cc747106d3fbc53b",
+    "context_exploration/frame_005.png": "168eeb4d3d80da854e2d1bd62deccbd0129627019fcdea962c8f15de47fafd55",
+    "context_exploration/frame_006.png": "34574c221bf35d3eb4b98168f861deb4a22fa860fc24dd202227781c67654227",
+    "context_exploration/frame_007.png": "c44d11ce9ec5b80bd6701d70ee1ba8aa80edd2fa1207400160f0c85da6dc3dfd",
+    "context_exploration/frame_008.png": "4fbe533c20929a3aaebffd17141aadb8684f34e88f1d96e7a64591a9b25e6247",
+    "context_exploration/frame_009.png": "684636e76ef7a9272b32cc007653fd9d802f8f218a7a0376d2c1971f2edee50a",
+    "context_exploration/frame_010.png": "f69a64fc8a47b14946314fddd64c0fe9696d34494ca7ff5a021551bb91bd7276",
+    "context_exploration/frame_011.png": "96556c2adab97aaeb061345c9989ed09278a9462c5815305dc345c4d3aaee343",
+    "context_exploration/frame_012.png": "fa7c749328b96a19505d177d4e50e0729c2765a7f013272829f0b4931007e053",
+    "context_exploration/frame_013.png": "69d548628383350f7f8a73684f11cc26a645156a0fcff23aef3fed6975534d41",
+    "context_exploration/frames.json": "d4290937fbb9c1684c51764c34c01f941cf53afe2d76190654375b447393d3e1",
+    "controls_attempt1/report.json": "d790a067d9e11ea078bc4dd61383b329826fc96cd2b5ddbc2b6d1915a380d45b",
+    "controls_attempt1/source/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "controls_attempt1/source/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "controls_attempt1/source/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "controls_attempt1/source/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "controls_attempt1/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "controls_attempt1/source/tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+    "controls_attempt1/source/tools/verify_state_colour_v2.py": "d504637fd0716c2a50f85a0dea79261d18216d9e84e5ad9d767f01b7f011b12e",
+    "controls_attempt2/report.json": "fa78b558b76d5878c52dd6a7f92b86e095b464af88f492f3e76a29bc6a348cfe",
+    "controls_attempt2/source/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "controls_attempt2/source/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "controls_attempt2/source/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "controls_attempt2/source/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "controls_attempt2/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "controls_attempt2/source/tools/state_dna_v1/compare.py": "76fd7c2baca9ea38fcfcf5952f0f91afbabfa2a55eae57560c262fef867808e3",
+    "controls_attempt2/source/tools/verify_state_colour_v2.py": "9e8e2da4378b349944f289d1a76deace13500f70775e70cd9ef37bcadb931475",
+    "ctest_attempt1.log": "ecd634b0b5dff37e5082c68cd393176eee140ac6c1bcd8287c98f46d6da76ea4",
+    "ctest_focused.log": "54bf03230c5ee284451b6316f72131c5e3a752741efff28651a03df99fda1a7a",
+    "fit_attempt1/A_rear_rise.colour": "3ac6d98908e8d73627e757750b152e78b55dcebe2a139d070ffc23b835910354",
+    "fit_attempt1/report.json": "4eaf195e29c31bd113b68ccc14cc225cee824dc7eb926ea763c62e7ca42d36e6",
+    "fit_attempt1/source/tools/fit_state_colour_v2.py": "01c8e41648be866a484addb100592e2a107ae3ca6cc13816fd1e96199c242494",
+    "fit_attempt1/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "fit_attempt2/A_rear_rise.colour": "f4432be43d9f0d8b5769f89d496d7d4d2140d6d5d0e6a43d6e61daa58c9d3883",
+    "fit_attempt2/report.json": "de183bd427499cfd6623456b0cb74857520254fa5d672abf78bc0af75bed5b5a",
+    "fit_attempt2/source/tools/fit_state_colour_v2.py": "2ba9228d22ab22ae3610311e0799e38018e9e26bb6bdad359060c7f19e206cd2",
+    "fit_attempt2/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "fit_attempt3/A_rear_rise.colour": "f4432be43d9f0d8b5769f89d496d7d4d2140d6d5d0e6a43d6e61daa58c9d3883",
+    "fit_attempt3/report.json": "0c78094db9e71f5ca7a067bd2e790591c8f3031ef0a969bdd25022997a58f0fb",
+    "fit_attempt3/source/tools/fit_state_colour_v2.py": "04fa309173cfc22e3feb53146fc98ba64aa3e685ecb653dfc75ac4b07933f62b",
+    "fit_attempt3/source/tools/state_colour_v2/features.py": "6acd5b6beb2321a33617504da196f86d40390555e81a3cca27b2970e77c68c8e",
+    "iterations.json": "bc61bcadbc7433d62da27c88d96b79c8237630a5f777b50c36e21921b0a83441",
+    "regression/current_air_left.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/current_air_right.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/current_body.wav": "418fdf99535dae375769b330e6b3b102c78d9652a5ddca0bf8edbde90071edfc",
+    "regression/current_dna.wav": "e7ae67d64f53652faa27e6536722dc93e016c054d0ad2f9ad122bad04323a2b6",
+    "regression/current_dna_raw.wav": "b0bd46e79074260634190a599adbe99027bebd39284c2709049da215dd59afa5",
+    "regression/current_dry.wav": "e919ecb41ded7fece3ebc776e62afd111b7d6f3bd047347b7f00aabe4c1e2da5",
+    "regression/current_event_layer.wav": "b825c896837a8538f2921e7a826f78b061ddbc8ff8d75799c2bb44e4441efb78",
+    "regression/current_events.wav": "b825c896837a8538f2921e7a826f78b061ddbc8ff8d75799c2bb44e4441efb78",
+    "regression/current_exhaust_left.wav": "8654809a767bab7272f00448f37a6e437ebd1f0d27a3363feb9794301b271cd1",
+    "regression/current_exhaust_right.wav": "8654809a767bab7272f00448f37a6e437ebd1f0d27a3363feb9794301b271cd1",
+    "regression/current_harmonic_body.wav": "42eba15ed44894c27bc7db1506bc81ffb09cb235644b9088aa8a66ecc911f6a7",
+    "regression/current_harmonic_body_raw.wav": "a2dc2ef012ae76307c77974d6ceeac55a94a03098d57b7d42ae5732c4c5c05c6",
+    "regression/current_intake.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/current_mechanical.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/current_render.wav": "e919ecb41ded7fece3ebc776e62afd111b7d6f3bd047347b7f00aabe4c1e2da5",
+    "regression/current_report.json": "f0f0af1ce351249a5cbe260b01cc866bb4fba04d735177240115aeb186550aee",
+    "regression/current_residual.wav": "aedba80366b04512f68c350eb75cb412437d2b9b5df8f5dded77a83191ddb755",
+    "regression/current_residual_raw.wav": "aedba80366b04512f68c350eb75cb412437d2b9b5df8f5dded77a83191ddb755",
+    "regression/current_road.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/current_trace.csv": "6c8e3e3dd2e8ef9a5daa52803e588abec5598cac9f83c7e33bcd7f8f8fb75713",
+    "regression/current_wind.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_air_left.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_air_right.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_body.wav": "418fdf99535dae375769b330e6b3b102c78d9652a5ddca0bf8edbde90071edfc",
+    "regression/frozen_dna.wav": "e7ae67d64f53652faa27e6536722dc93e016c054d0ad2f9ad122bad04323a2b6",
+    "regression/frozen_dna_raw.wav": "b0bd46e79074260634190a599adbe99027bebd39284c2709049da215dd59afa5",
+    "regression/frozen_dry.wav": "e919ecb41ded7fece3ebc776e62afd111b7d6f3bd047347b7f00aabe4c1e2da5",
+    "regression/frozen_event_layer.wav": "b825c896837a8538f2921e7a826f78b061ddbc8ff8d75799c2bb44e4441efb78",
+    "regression/frozen_events.wav": "b825c896837a8538f2921e7a826f78b061ddbc8ff8d75799c2bb44e4441efb78",
+    "regression/frozen_exhaust_left.wav": "8654809a767bab7272f00448f37a6e437ebd1f0d27a3363feb9794301b271cd1",
+    "regression/frozen_exhaust_right.wav": "8654809a767bab7272f00448f37a6e437ebd1f0d27a3363feb9794301b271cd1",
+    "regression/frozen_harmonic_body.wav": "42eba15ed44894c27bc7db1506bc81ffb09cb235644b9088aa8a66ecc911f6a7",
+    "regression/frozen_harmonic_body_raw.wav": "a2dc2ef012ae76307c77974d6ceeac55a94a03098d57b7d42ae5732c4c5c05c6",
+    "regression/frozen_intake.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_mechanical.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_render.wav": "e919ecb41ded7fece3ebc776e62afd111b7d6f3bd047347b7f00aabe4c1e2da5",
+    "regression/frozen_report.json": "872580d128aff4b1b6d8492d87b275f96e7f0a6f6d78cc43a1d32bba9afc1bc2",
+    "regression/frozen_residual.wav": "aedba80366b04512f68c350eb75cb412437d2b9b5df8f5dded77a83191ddb755",
+    "regression/frozen_residual_raw.wav": "aedba80366b04512f68c350eb75cb412437d2b9b5df8f5dded77a83191ddb755",
+    "regression/frozen_road.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/frozen_trace.csv": "6c8e3e3dd2e8ef9a5daa52803e588abec5598cac9f83c7e33bcd7f8f8fb75713",
+    "regression/frozen_wind.wav": "bff960424877b2911ef9a2f60952253bb138bd947a0d6b4fc9bdd9b70e1b2c8a",
+    "regression/verification.json": "9980a81d690165c6dcaf51742f29dc8216022e82b94bb5f1446ecc63fd788eb8",
+    "review/base.wav": "c50bc4886894c6567adc46dca68d03d7e458c4be355c03d859c38cd4259c6aa5",
+    "review/half.wav": "69237f43831cc5955459b0c867eabc3b30b033c3e090154664095e3b0b5160ec",
+    "review/reference1.wav": "23ff3ff7154bb81f741cdbb4060dd04734938e4dfd7af2aaf71645e9344eb9c4",
+    "review/reference4.wav": "cb79e2cefa3cbefe038b52f9111994d99266ced0839fd1065926f8a735449ebc",
+    "review/report.json": "4a3c8bc16c30400546017ce9fefa4c4a7111d5bf1762b700ddc2d686a4adc2de",
+    "review/rise.wav": "1c90e551cf09b170cdc6f0b31845b67786859048639bf2577361eac156fa54eb",
+    "review/transition.wav": "f3218d7e794ab0943914dfc5cbc40834b847ba8f5c037782373a9127e4304034",
+    "review_attempt1/base.wav": "c50bc4886894c6567adc46dca68d03d7e458c4be355c03d859c38cd4259c6aa5",
+    "review_attempt1/half.wav": "69237f43831cc5955459b0c867eabc3b30b033c3e090154664095e3b0b5160ec",
+    "review_attempt1/rise.wav": "1c90e551cf09b170cdc6f0b31845b67786859048639bf2577361eac156fa54eb",
+    "review_attempt1/source_attempt1.py": "1b4221ac39711f7b9d9781988684620075f7950a91e6f444ddb457184cb3c63e",
+    "review_attempt1/transition.wav": "f3218d7e794ab0943914dfc5cbc40834b847ba8f5c037782373a9127e4304034",
+    "spectral_exploration/observation.npz": "7dd56e357283726f545fd71b469270cc1382e2a5bd2de06527f55aa8e32c2d38",
+    "spectral_exploration/observations.png": "25c65dcd2999eeb530cadba343cd4d26565211acdfc6f360a4fa53e9344ae06e",
+    "spectral_exploration/source.json": "df9b559ffea6ff21f975f64d6fbae2724ed1d824b3759b1aefbd2a1b8b34e0a3"
+  },
+  "binary_sha256": {
+    "VslOscColour_probe.exe": "c451522e8446821767d533bb03b9c9618b02f04ac7c339d7a739d01aaba4f083",
+    "VslOscColour_checks.exe": "ae87b0ccf1f223f9c92eb813493c53670324628b9223761b4c83f7404a645574"
+  },
+  "unchanged_model_sha256": {
+    "voices/dna_bank_v1/Hollow Spectrum.model": "bb97530b529f2b0b9f451c5bf79b870e6279b837298a34607e2a89504873b3bc",
+    "voices/dna_bank_v1/V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "voices/dna_bank_v1/Warm Additive.model": "b1135665d190328f38eded9db1879bbd23ad5624af37fbf2bc5d01628111e2ce",
+    "voices/coherent_low_v1/measured_phase.model": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895",
+    "voices/coherent_low_v1/scrambled_phase.model": "b105ca085e6d42d5f2f6de7b7570b96a3357deddb3d28868b1070947f6d93349",
+    "voices/exterior_anchors_v1/A Stationary High.model": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+    "voices/exterior_anchors_v1/A Stationary Low.model": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+    "voices/cabin_anchors_v1/E Cabin Lower.model": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+    "voices/cabin_anchors_v1/E Cabin Upper.model": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3"
+  },
+  "limits": [
+    "Three short repeats, acoustic-root45..50Hz only; overlapping windows are not replications",
+    "Automatic tracking bias, mixed recording and unknown transfer; no physical source separation",
+    "No new driver/UI/device/spatial/timbre acceptance; strict renderer identity changes on rebuild"
+  ]
+}
