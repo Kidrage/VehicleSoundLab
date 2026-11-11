@@ -80,6 +80,7 @@ LIB_ROLES = {
 }
 MODULE_LAYERS = {
     "sound_dna": "独立 Sound DNA", "low_rumble": "独立低频 V2",
+    "sound_residual": "独立谐波间残差 OSC",
     "dna_scene": "声源／空间适配", "scene_monitor": "联合监听混音",
     "dna_atlas": "多锚点声源", "atlas_drive": "新 DNA 驾驶适配",
     "atlas_monitor": "驾驶监听传输包络", "win_output": "Windows 音频输出"
@@ -122,10 +123,13 @@ def code_rows():
                     role = "驾驶监听启停淡化；驾驶、OSC与空间由下层负责"
                 elif group == "atlas_drive" and p.stem == "render":
                     role = "唯一驾驶控制器、新DNA、工况包络与空间调度"
-            elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1"):
+                elif group == "sound_residual" and p.stem == "oscillator":
+                    role = "共享／独立声道的密集正弦OSC与复相关"
+            elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1","residual_osc_v1"):
                 layer = "新声源宿主与验证"
                 owner = {"atlas_drive_v1":"VslAtlasDrive", "dna_scene_v1":"VslDnaScene",
-                         "scene_monitor_v1":"VslSceneMonitor", "atlas_monitor_v1":"VslAtlasMonitor"}[group]
+                         "scene_monitor_v1":"VslSceneMonitor", "atlas_monitor_v1":"VslAtlasMonitor",
+                         "residual_osc_v1":"VslResidual"}[group]
                 role = HOST_ROLES.get(p.stem, "宿主接口或契约验证")
             elif group in ("sustain_monitor_v3","sustain_monitor_v4"):
                 layer, role = "独立监听宿主", HOST_ROLES.get(p.stem, "监听接口")

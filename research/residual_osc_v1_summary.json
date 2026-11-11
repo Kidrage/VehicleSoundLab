@@ -1,0 +1,359 @@
+{
+  "schema": "vsl.residual-osc-summary/1",
+  "date": "2026-11-11",
+  "result": "pass",
+  "human_accepted": false,
+  "driving_attached": false,
+  "deployed_host_changed": false,
+  "existing_c_h_preservation": {
+    "reference_commit": "d3db93852afb55ab66d5e987e3b6a826d89b2096",
+    "files": 375,
+    "all_bytes_equal": true
+  },
+  "ctest": {
+    "passed": 31,
+    "failed": 0,
+    "log_sha256": "d295f11893fd6e5626530ace82435e2babca7974c05a679f137c776be289e991"
+  },
+  "model": {
+    "rate": 48000,
+    "bands": 8,
+    "oscillators": 512,
+    "bounded_pitch": [
+      0.9,
+      1.1
+    ]
+  },
+  "real": {
+    "A_exterior": {
+      "max_residual_target_db_error": 0.2911537884063593,
+      "max_mix_training_band_error_db": 0.1453264857327004,
+      "max_mix_training_coherence_error": 0.004722314871847014,
+      "base_float_equal": true,
+      "mixture_float_equal": true,
+      "warning": "Same recording/seed used in fit; no held-out naturalness claim"
+    },
+    "E_cabin": {
+      "max_residual_target_db_error": 0.3657549889430501,
+      "max_mix_training_band_error_db": 0.171622742664707,
+      "max_mix_training_coherence_error": 0.1356049785653914,
+      "base_float_equal": true,
+      "mixture_float_equal": true,
+      "warning": "Same recording/seed used in fit; no held-out naturalness claim"
+    }
+  },
+  "cases": {
+    "A_exterior": {
+      "source": {
+        "identity": "A_exterior",
+        "baseline": "exterior_anchors_v1",
+        "manifest_sha256": "6e03300d297a264deae54fe718edb2438f7d2d95cbd5fdfb995d7c44c927f5dc",
+        "normalized_source": "E:\\VehicleSoundLab\\baselines\\exterior_anchors_v1\\evidence\\anchors_v2\\A Stationary Upper Mid\\normalized_float.wav",
+        "normalized_sha256": "e11b879e32ba102120c1f34f0d7b8d4dc3196d84a0baa6d2256bae3809abc1e6",
+        "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+        "base_hz": 47.39127187830898,
+        "perspective": "stationary rear exterior mixed recording",
+        "processing": "Frozen normalized L/R observation restored to its anchor root; no gain/EQ/compression/channel folding",
+        "scope": "One acoustic anchor; not measured RPM/load/state or an isolated physical noise recording"
+      },
+      "profile_sha256": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+      "clipped_coherence_bands": 4,
+      "training_before_db": [
+        [
+          -3.020711664258968,
+          -3.011995812240407
+        ],
+        [
+          -2.4966420376370233,
+          -2.4733247029964494
+        ],
+        [
+          -4.344333515771771,
+          -4.254902621811833
+        ],
+        [
+          -3.198714983606861,
+          -3.2003608133574675
+        ],
+        [
+          -4.1512503100283045,
+          -4.086101037480428
+        ],
+        [
+          -5.08314487191787,
+          -5.01211808563645
+        ],
+        [
+          -4.317776205605451,
+          -4.280136673828581
+        ],
+        [
+          -4.478271595603736,
+          -4.521490238384879
+        ]
+      ],
+      "training_after_db": [
+        [
+          -0.1453264857327004,
+          -0.1336348810988375
+        ],
+        [
+          0.05320197173750518,
+          0.050066411979955004
+        ],
+        [
+          -0.036130958611220246,
+          -0.03885930952574747
+        ],
+        [
+          -0.09804069375206889,
+          -0.09732784027021169
+        ],
+        [
+          0.06924612431383481,
+          0.07162547787950795
+        ],
+        [
+          -0.0401385043586843,
+          -0.04489296613653198
+        ],
+        [
+          0.007360154388460013,
+          0.014093099269979283
+        ],
+        [
+          -0.0006307473855222326,
+          -0.0006588008161552991
+        ]
+      ]
+    },
+    "E_cabin": {
+      "source": {
+        "identity": "E_cabin",
+        "baseline": "drive_evidence_v1",
+        "manifest_sha256": "03aa32a8a7aafb04d3eea5fad90299efe1731def7745bf039140d045e6e21c47",
+        "normalized_source": "E:\\VehicleSoundLab\\baselines\\drive_evidence_v1\\evidence\\cabin_anchors_tapered\\E Cabin Lower\\normalized_reference_float.wav",
+        "normalized_sha256": "cf0b069f59f263184a40f13bf22b4fb6dffa95e7a98b2edc4bf1ec9203b1ef94",
+        "model_sha256": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+        "base_hz": 60.634271286273396,
+        "perspective": "cabin mixed recording",
+        "processing": "Frozen normalized L/R observation restored to its anchor root; no gain/EQ/compression/channel folding",
+        "scope": "One acoustic anchor; not measured RPM/load/state or an isolated physical noise recording"
+      },
+      "profile_sha256": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f",
+      "clipped_coherence_bands": 3,
+      "training_before_db": [
+        [
+          -0.6546226884031161,
+          -0.24859636180220313
+        ],
+        [
+          -0.9055644949179951,
+          -0.9663634033745606
+        ],
+        [
+          -1.11213694359385,
+          -1.3138801405719993
+        ],
+        [
+          -1.3198521431753072,
+          -1.5110962156967023
+        ],
+        [
+          -1.3061523503107035,
+          -1.5880712978035458
+        ],
+        [
+          -2.3316093124784603,
+          -2.8132272284715683
+        ],
+        [
+          -3.3237091451162075,
+          -2.6852570364605755
+        ],
+        [
+          -3.451933439466839,
+          -3.363156276861496
+        ]
+      ],
+      "training_after_db": [
+        [
+          -0.07209109043264954,
+          -0.060968615152705026
+        ],
+        [
+          0.07309439441248593,
+          0.057393149412378594
+        ],
+        [
+          -0.030407581544431104,
+          -0.04722360545989449
+        ],
+        [
+          -0.060776432440278125,
+          -0.05393655093699049
+        ],
+        [
+          0.02816787632561401,
+          0.05448565675970152
+        ],
+        [
+          -0.04957699281899684,
+          -0.07074155321729525
+        ],
+        [
+          -0.03459799083149354,
+          -0.053182303348802334
+        ],
+        [
+          0.006474630314689858,
+          0.171622742664707
+        ]
+      ]
+    }
+  },
+  "limits": [
+    "Mean spectra/coherence only; temporal envelope statistics not fitted",
+    "Finite detuned OSC cloud is a procedural residual, not physical source separation",
+    "1.2–8kHz fixed-anchor experiment; low rumble remains separate",
+    "A/E camera contexts are fitted independently with the same algorithm; not different engines",
+    "Only bounded0.9..1.1 pitch; no wide-RPM/state interpolation or real device guarantee",
+    "No matched-loudness listening, fitted temporal envelope or physical object mapping",
+    "Independent additive residual cannot repair all existing DNA stereo covariance"
+  ],
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\residual_osc_v1",
+  "probe_sha256": "ede4248c4b65122819c22826324121e303be9103f14fc02037d0a334b745c6a8",
+  "review": {
+    "page": "E:\\VehicleSoundLab\\research\\谐波间残差OSC_V1.html",
+    "page_sha256": "be84a3755a313c9e7cc0e8797dcc05c7effcbd0fec0efc194e0433de9144fa91",
+    "records": [
+      {
+        "file": "A_exterior_reference.wav",
+        "case": "A_exterior",
+        "variant": "reference",
+        "frames": 14687,
+        "sha256": "f3f240519e380811849d08666b63ece3d6fc26a986cf8a62d13e5eac384d1995",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "A_exterior_base.wav",
+        "case": "A_exterior",
+        "variant": "base",
+        "frames": 384000,
+        "sha256": "c516dd4b09d424fb6a2d92dc20036faff81848a9af083855145fef1e19fddff5",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "A_exterior_half.wav",
+        "case": "A_exterior",
+        "variant": "half",
+        "frames": 384000,
+        "sha256": "f991537f02b7a02aa5d39b72f154d87c27063ce7828ca3d899a42130fc342d39",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "A_exterior_full.wav",
+        "case": "A_exterior",
+        "variant": "full",
+        "frames": 384000,
+        "sha256": "04be1f972dd8898713fae36664755551de84395d695526dea299c25d9734da6f",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "A_exterior_residual.wav",
+        "case": "A_exterior",
+        "variant": "residual",
+        "frames": 384000,
+        "sha256": "793100f57faec9557e2579f99825521a67be316ca16e33cad84effd578b47115",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "E_cabin_reference.wav",
+        "case": "E_cabin",
+        "variant": "reference",
+        "frames": 47960,
+        "sha256": "6673462c96c280c4174e117297c4bba3da71295599ae88fb4591a7f441571d1f",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "E_cabin_base.wav",
+        "case": "E_cabin",
+        "variant": "base",
+        "frames": 384000,
+        "sha256": "80eb5af68992007c4ff13aa97e1641bf9351211dada5185eb002000684283e64",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "E_cabin_half.wav",
+        "case": "E_cabin",
+        "variant": "half",
+        "frames": 384000,
+        "sha256": "d1b8282832c62fa007d90d154e7dbe12dd6bbfda4d14dc0ead17aba41514da0f",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "E_cabin_full.wav",
+        "case": "E_cabin",
+        "variant": "full",
+        "frames": 384000,
+        "sha256": "28897f411bbb0e6c8464173eb17dcd1027736557a5bc3af9437f358aa1029074",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      },
+      {
+        "file": "E_cabin_residual.wav",
+        "case": "E_cabin",
+        "variant": "residual",
+        "frames": 384000,
+        "sha256": "0926ff0f38a060aebbd636416f1f8fabc1c620ad65903534f72433413e797b14",
+        "gain": 0.25,
+        "processing": "Same total gain0.25;5ms end fades;PCM24. No EQ/limiter/per-variant gain matching."
+      }
+    ],
+    "build_sha256": "e3d5886a554d856177dd58a67eb8bf94b2ea3c213616aee41919771eef9c4652",
+    "human_accepted": false
+  },
+  "source_sha256": {
+    "experiments/residual_osc_v1/checks.c": "5ce2a0f23e8ca23bb299bf06e67dbbb679fbf86aae07a5bf3ccb23a4db83daa2",
+    "experiments/residual_osc_v1/probe.c": "9af587fc2e34325538a0086a8ca86b5b3f1d07d0b98384f5ae0a0472275fbabf",
+    "modules/sound_residual/CMakeLists.txt": "e91293b752154b897a8bf33331fa04cb4ae4097a7f569edb8440f611181cd6ef",
+    "modules/sound_residual/oscillator.c": "f719fd20b8861fc8d5064f5cf3feee6d81c945642c9f0ee8ef7b8e3e083ac238",
+    "modules/sound_residual/oscillator.h": "57756c3afd5574873b0dfcf550233b08e9312f7bc5ff31f7426879ed602adcde",
+    "modules/sound_residual/profile.c": "5f65961250764ab7f921031b13c721d350e08fd20242cbde4eaa63931f4b976b",
+    "modules/sound_residual/profile.h": "d017388c47452c9a8ce07f550605f8f5521b4c8912e75ff6e30ab9e1bfa97ccb",
+    "modules/sound_residual/README.md": "8794f5064159ddb44fdd85c26c4ad27087d58ca7b9361371bb1f9446c699e368",
+    "modules/sound_residual/voice.c": "29a072018d63100c9d87c6dc5657199f54de7baf0643964be6e50076eae91c39",
+    "modules/sound_residual/voice.h": "305b657f824f689c686264b31fd7a1ac78e00cc707b5df8bcc8221003b0faf4f",
+    "tools/freeze_residual_osc_v1.py": "f865ae7524f5994b2acf72e083782652f03350d927464886ad5dd6e7f38f283c",
+    "tools/make_residual_review_v1.py": "a4b751f7f7688eaebd8376b6ef341325bd2040736abe89f8981d09619f37d7f2",
+    "tools/residual_osc_v1/__init__.py": "67b1913be626a40b31605fc388b9c949fa87fd0611681541daf5ffaae3f23bc0",
+    "tools/residual_osc_v1/fit.py": "03cdb309d0c50c9cb652deada89916b1456ff698d50d6dae0667b01d8f80fb05",
+    "tools/residual_osc_v1/review.py": "0806d7afed0cf90dd16d5e2682e6cb527febc4c065dd07d3027c8250d5ab1549",
+    "tools/residual_osc_v1/sources.py": "d12474131f65dbeb87378f84f121dd030614199f73d2eaf70338f40578a6649d",
+    "tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "tools/run_residual_osc_v1.py": "05537e1c50086d611ac011233b86402dc64401c60c345704266e0f8fe0a100ef",
+    "tools/summarize_residual_osc_v1.py": "998520b3ce85a32976faa24107801e51cf4cfca15d9e5a0e88a673f6b795cd99",
+    "tools/verify_residual_osc_v1.py": "243b4a8486f82aae08ce26b2c066dc88ecc9d25c12b4b3c28de7ea06a06832c4",
+    "tools/verify_residual_review_v1.cjs": "2375541870d40bb1e6488e5de3114b323314915987a524c05e2edca49cfeedd3",
+    "voices/residual_osc_v1/A_exterior.residual": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+    "voices/residual_osc_v1/E_cabin.residual": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f",
+    "voices/residual_osc_v1/README.md": "631bd877603fc0a23d0c81d13221c716109d4526913efc28d3ee99f9eaca3574"
+  },
+  "evidence_sha256": {
+    "fitted/report.json": "e3d5886a554d856177dd58a67eb8bf94b2ea3c213616aee41919771eef9c4652",
+    "controls/verification.json": "3a11ddf94f012ebed6b0b904f7cbb7ac921a3998a99af1d7d0486a79e8d3d8ba",
+    "review/review.json": "d7ef4c656fa98d8c9abffee15877c87b31efa18c737c45dd8b82dc4eea3eec4d",
+    "review/browser_qa.json": "f7f669a5a6f7b9327da3b9560f8ee7cfbb76ad713eb7dc23043f869132579c6b",
+    "review/desktop.png": "c96afc82e1bde3e3c311a489f287286d0f04c3d31dbe717c8d61b53ad1f70b23",
+    "review/mobile.png": "d082c5b9d4b73ea7180ac25553ac05cc5b0c30733d98e5ae5d7999bb0fb8cac1",
+    "ctest.log": "d295f11893fd6e5626530ace82435e2babca7974c05a679f137c776be289e991"
+  }
+}
