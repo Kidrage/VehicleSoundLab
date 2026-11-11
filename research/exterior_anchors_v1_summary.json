@@ -1,0 +1,638 @@
+{
+  "schema": "vsl.exterior-atlas-validation/1",
+  "accepted": false,
+  "build_sha256": "193aec62baa5f7ca661c4d8cda51c2350aadcf9df3deba8c45e51731adfe52d8",
+  "warp_control_sha256": "f696f571f5cb82c2bd11416d3bcdd4be88f723c3dfd6c684a63c7b0643bd4f20",
+  "anchors": [
+    {
+      "name": "A Stationary Low",
+      "model_sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+      "base_hz": 10.005673871228469,
+      "modeled_top_hz": 2881.634074913799,
+      "heldout_orders": [
+        "15",
+        "20"
+      ],
+      "normalized_cycles": 34.74609375,
+      "heldout_coherence": {
+        "15": [
+          0.9904448798614699,
+          0.9906528954680863
+        ],
+        "20": [
+          0.9961955130885638,
+          0.9961386653788844
+        ]
+      }
+    },
+    {
+      "name": "A Stationary Lower Mid",
+      "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+      "base_hz": 31.52219356431996,
+      "modeled_top_hz": 9078.391746524148,
+      "heldout_orders": [
+        "3",
+        "7"
+      ],
+      "normalized_cycles": 12.744140625,
+      "heldout_coherence": {
+        "3": [
+          0.9492266917501602,
+          0.9498182740927116
+        ],
+        "7": [
+          0.9292175996130255,
+          0.9385986570933018
+        ]
+      }
+    },
+    {
+      "name": "A Stationary Upper Mid",
+      "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+      "base_hz": 47.39127187830898,
+      "modeled_top_hz": 13648.686300952986,
+      "heldout_orders": [
+        "3",
+        "7"
+      ],
+      "normalized_cycles": 14.5,
+      "heldout_coherence": {
+        "3": [
+          0.950842512296466,
+          0.9538216202029797
+        ],
+        "7": [
+          0.942027977042848,
+          0.9417091812210456
+        ]
+      }
+    },
+    {
+      "name": "A Stationary High",
+      "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+      "base_hz": 60.83004535315176,
+      "modeled_top_hz": 17519.053061707706,
+      "heldout_orders": [
+        "3",
+        "7"
+      ],
+      "normalized_cycles": 12.0029296875,
+      "heldout_coherence": {
+        "3": [
+          0.9562036197245738,
+          0.9566277863581505
+        ],
+        "7": [
+          0.9053328117411057,
+          0.9348093106777058
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "name": "auto",
+      "frames": 1440000,
+      "channels": 2,
+      "peak": 0.7150920033454895,
+      "shifts": 8,
+      "overruns": 2,
+      "covered_bracket_fraction": 0.7251076388888889,
+      "process_seconds": 16.0347791,
+      "max_block_seconds": 0.00938149984,
+      "block_budget_exceedances": 530,
+      "files_sha256": {
+        "auto_render.wav": "45062a4266d3811dd2420b6ee6d2e5daa1728d9bf12d6f1a7afe4b9d9ea1a915",
+        "auto_dna_raw.wav": "9de995d8a2333ae11cdfd2e991e75b9066af68621823c860f25d9a0a46885f9b",
+        "auto_dna.wav": "dd57173301e6e00d407b83783c83caae99dc45a124a2cee2fbdf57ae522d0c66",
+        "auto_dry.wav": "2db9ff2eaba0c7f94d4d272e993524965f46a3fdb5152159139449ed9eb6ceba",
+        "auto_event_layer.wav": "9a66cf8e29f37f0c8102607ddd2614c9c1c85c98cce87b5901a5535aeffdeeec",
+        "auto_exhaust_left.wav": "50d95125950dacfaed4fea19a429a0bfbfff397434fb6036713ecdd41698b937",
+        "auto_exhaust_right.wav": "50d95125950dacfaed4fea19a429a0bfbfff397434fb6036713ecdd41698b937",
+        "auto_intake.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_body.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_mechanical.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_air_left.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_air_right.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_events.wav": "9a66cf8e29f37f0c8102607ddd2614c9c1c85c98cce87b5901a5535aeffdeeec",
+        "auto_road.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto_wind.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd"
+      }
+    },
+    {
+      "name": "auto12",
+      "frames": 1440000,
+      "channels": 12,
+      "peak": 0.31894034147262573,
+      "shifts": 8,
+      "overruns": 2,
+      "covered_bracket_fraction": 0.7251076388888889,
+      "process_seconds": 16.1805612,
+      "max_block_seconds": 0.00958399987,
+      "block_budget_exceedances": 538,
+      "files_sha256": {
+        "auto12_render.wav": "cd71f2520e49f940a6ddb877f88130254c1393f5338b58d27017fa67fcf4b46b",
+        "auto12_dna_raw.wav": "9de995d8a2333ae11cdfd2e991e75b9066af68621823c860f25d9a0a46885f9b",
+        "auto12_dna.wav": "dd57173301e6e00d407b83783c83caae99dc45a124a2cee2fbdf57ae522d0c66",
+        "auto12_dry.wav": "2db9ff2eaba0c7f94d4d272e993524965f46a3fdb5152159139449ed9eb6ceba",
+        "auto12_event_layer.wav": "9a66cf8e29f37f0c8102607ddd2614c9c1c85c98cce87b5901a5535aeffdeeec",
+        "auto12_exhaust_left.wav": "50d95125950dacfaed4fea19a429a0bfbfff397434fb6036713ecdd41698b937",
+        "auto12_exhaust_right.wav": "50d95125950dacfaed4fea19a429a0bfbfff397434fb6036713ecdd41698b937",
+        "auto12_intake.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_body.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_mechanical.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_air_left.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_air_right.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_events.wav": "9a66cf8e29f37f0c8102607ddd2614c9c1c85c98cce87b5901a5535aeffdeeec",
+        "auto12_road.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd",
+        "auto12_wind.wav": "1af3c9ac866b6c41debaec8cf3fd30eaa28800bf12c5a8badf868b3e2ee40cfd"
+      }
+    },
+    {
+      "name": "neutral",
+      "frames": 384000,
+      "channels": 2,
+      "peak": 0.36577108502388,
+      "shifts": 1,
+      "overruns": 1,
+      "covered_bracket_fraction": 0.33401041666666664,
+      "process_seconds": 2.2143445,
+      "max_block_seconds": 0.00377049996,
+      "block_budget_exceedances": 0,
+      "files_sha256": {
+        "neutral_render.wav": "e2a54c93c67323bcd5fd0809a97d98fbc705930c2532d69d261c85a30dffe1d5",
+        "neutral_dna_raw.wav": "10b6c2d61efbf070ebec687f09dedc4fb40f94f3bb11eb8c6c52846a34144a00",
+        "neutral_dna.wav": "bfcc040611fe39617a6d70821838c8718d3a677b297cd8fed2a237db11d86480",
+        "neutral_dry.wav": "10a9cb4736699124f91945742aeabdbc3e735360e229c51791eba6aea986ac5f",
+        "neutral_event_layer.wav": "9b6222af8b5451f40e91d487e27725068951bceeae8ce64f0ccff7fc4b00b755",
+        "neutral_exhaust_left.wav": "d4893d2d16110d067b9d2fdc2505e12aa44e0d7f67f610f60cf542d1247458db",
+        "neutral_exhaust_right.wav": "d4893d2d16110d067b9d2fdc2505e12aa44e0d7f67f610f60cf542d1247458db",
+        "neutral_intake.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_body.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_mechanical.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_air_left.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_air_right.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_events.wav": "9b6222af8b5451f40e91d487e27725068951bceeae8ce64f0ccff7fc4b00b755",
+        "neutral_road.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae",
+        "neutral_wind.wav": "8ce9edec04af9b72f00dc210e69a5b5a435d2afeff590b4eb3173399de19f6ae"
+      }
+    },
+    {
+      "name": "downshift",
+      "frames": 864000,
+      "channels": 2,
+      "peak": 0.6529049277305603,
+      "shifts": 6,
+      "overruns": 1,
+      "covered_bracket_fraction": 0.7418275462962963,
+      "process_seconds": 8.7303996,
+      "max_block_seconds": 0.00910409982,
+      "block_budget_exceedances": 167,
+      "files_sha256": {
+        "downshift_render.wav": "a7afdf18cdfb686c2c453b4af274825bdc6345f69d7e07b1d17eda81082c5668",
+        "downshift_dna_raw.wav": "33c9bda17a1ea1b14978123ffca77d699157dc69b81ac1261a52c2015876f921",
+        "downshift_dna.wav": "9306e670b77106f81d3c8b74c37b5c7d80b8a1cd93ede7468c3f2cf41ce45ae0",
+        "downshift_dry.wav": "5544100a728bfcad34ea1bd7414e1e2995a69734901359995019374e87fdc797",
+        "downshift_event_layer.wav": "431ebe0fb5f7a7fe156ffd0c5b4d8746173081cadd5f26c69bb95378305fa75a",
+        "downshift_exhaust_left.wav": "fce2d0f9f84acb9b43c228f281ef63742abb07397a35954254d9c74f49745446",
+        "downshift_exhaust_right.wav": "fce2d0f9f84acb9b43c228f281ef63742abb07397a35954254d9c74f49745446",
+        "downshift_intake.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_body.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_mechanical.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_air_left.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_air_right.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_events.wav": "431ebe0fb5f7a7fe156ffd0c5b4d8746173081cadd5f26c69bb95378305fa75a",
+        "downshift_road.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab",
+        "downshift_wind.wav": "5f298e89fe18d726e67f705e9da9243c2f8f0318fa8ed18159b73b081ba650ab"
+      }
+    }
+  ],
+  "probe_sha256": "2502d3f3369a9ea219b2fca8e0216fa16aff55d23d51bc729a420511de024d44",
+  "old_family_default_bit_equal": true,
+  "root_per_rpm_status": "Explicit1/120 engineering hypothesis; not A tach telemetry",
+  "largest_anchor_interval_ratio": 3.1504318419734534,
+  "limits": [
+    "Only4stationary rear anchors; large10..31.5Hz gap, mixed falling-rev windows and sparse state evidence",
+    "Interval telemetry is a bracket test, not proof of measured timbre/load/state coverage",
+    "Independent LF/intake/noise layers and native4anchor driving UI are not connected",
+    "No human listening acceptance or actual device/speaker validation"
+  ],
+  "two_anchor_frozen_E_first8s_all_stems_bit_equal": true,
+  "result": "pass",
+  "source_sha256": {
+    "tools/verify_exterior_anchors_v1.py": "b567a7d7966d9c710eae6bf8b0e7f9eb56884dc6523a5bb906539f668137412f",
+    "experiments/atlas_drive_v1/probe.c": "ed4eb94dac72abc33a2652d5cc6fb474e149988b0c38a54143a275f4c5280be0"
+  },
+  "anchor_build_details": [
+    {
+      "name": "A Stationary Low",
+      "base_hz": 10.005673871228469,
+      "model_sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+      "modeled_top_hz": 2881.634074913799,
+      "bands": {
+        "28_120": {
+          "reference_db": [
+            -12.639601029585235,
+            -12.67963145899282
+          ],
+          "generated_minus_reference_db": [
+            -0.04676275059231792,
+            -0.051558337210089955
+          ]
+        },
+        "120_400": {
+          "reference_db": [
+            -8.431639025037159,
+            -8.463773212741213
+          ],
+          "generated_minus_reference_db": [
+            -0.20740468668971337,
+            -0.2194885529162448
+          ]
+        },
+        "400_1200": {
+          "reference_db": [
+            -23.088982682276914,
+            -22.82491686565387
+          ],
+          "generated_minus_reference_db": [
+            -1.1515000375148465,
+            -1.2322711277529204
+          ]
+        },
+        "1200_3000": {
+          "reference_db": [
+            -33.180564297235044,
+            -32.45796948262172
+          ],
+          "generated_minus_reference_db": [
+            -4.5507765400646605,
+            -4.5264553041327
+          ]
+        },
+        "3000_8000": {
+          "reference_db": [
+            -43.045823852838566,
+            -43.392271094132234
+          ],
+          "generated_minus_reference_db": [
+            -71.89623164622523,
+            -71.58110982561405
+          ]
+        },
+        "8000_14000": {
+          "reference_db": [
+            -104.66098111706329,
+            -104.68525976721678
+          ],
+          "generated_minus_reference_db": [
+            -31.559886185496424,
+            -32.03787012186069
+          ]
+        }
+      },
+      "phase_polish": {
+        "reference_order": 10,
+        "reference_channel": "L observation; same coordinate applied to both original channels",
+        "fitted_phase_range_radians": [
+          0.1675087466476323,
+          0.3726375658246939
+        ],
+        "maximum_observed_phase_step_radians": 0.00677540276234706,
+        "source_cutoff_hz": 3771.8351193788167,
+        "source_seconds": [
+          243.80401840176046,
+          247.28209457393677
+        ],
+        "inferred_root_hz_range": [
+          9.70565538399986,
+          10.201169444724654
+        ],
+        "root_hz_median": 10.005673871228469,
+        "normalized_frames": 35580,
+        "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+        "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+      }
+    },
+    {
+      "name": "A Stationary Lower Mid",
+      "base_hz": 31.52219356431996,
+      "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+      "modeled_top_hz": 9078.391746524148,
+      "bands": {
+        "28_120": {
+          "reference_db": [
+            -33.63536999878276,
+            -34.05274429777369
+          ],
+          "generated_minus_reference_db": [
+            -1.3055557021203457,
+            -1.1442418542008213
+          ]
+        },
+        "120_400": {
+          "reference_db": [
+            -5.166104923046411,
+            -5.363100143206508
+          ],
+          "generated_minus_reference_db": [
+            -0.4791600609202815,
+            -0.3905569403744056
+          ]
+        },
+        "400_1200": {
+          "reference_db": [
+            -26.50143773638794,
+            -25.868636444420442
+          ],
+          "generated_minus_reference_db": [
+            -2.45572481452434,
+            -2.5906736222103532
+          ]
+        },
+        "1200_3000": {
+          "reference_db": [
+            -32.27072831785783,
+            -31.793178034028152
+          ],
+          "generated_minus_reference_db": [
+            -4.172572511196437,
+            -4.08653664336531
+          ]
+        },
+        "3000_8000": {
+          "reference_db": [
+            -40.00402623559231,
+            -40.26980931349998
+          ],
+          "generated_minus_reference_db": [
+            -3.1130685027607647,
+            -3.1115737659803133
+          ]
+        },
+        "8000_14000": {
+          "reference_db": [
+            -58.19543716751299,
+            -57.738906230295655
+          ],
+          "generated_minus_reference_db": [
+            -2.9511768188724883,
+            -3.16397641209136
+          ]
+        }
+      },
+      "phase_polish": {
+        "reference_order": 5,
+        "reference_channel": "L observation; same coordinate applied to both original channels",
+        "fitted_phase_range_radians": [
+          2.2296522609846368,
+          2.4290000089778463
+        ],
+        "maximum_observed_phase_step_radians": 0.01808313183865007,
+        "source_cutoff_hz": 9050.605264121861,
+        "source_seconds": [
+          238.80333970548446,
+          239.21662919512096
+        ],
+        "inferred_root_hz_range": [
+          24.847719449361986,
+          36.6390239845889
+        ],
+        "root_hz_median": 31.52219356431996,
+        "normalized_frames": 13050,
+        "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+        "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+      }
+    },
+    {
+      "name": "A Stationary Upper Mid",
+      "base_hz": 47.39127187830898,
+      "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+      "modeled_top_hz": 13648.686300952986,
+      "bands": {
+        "28_120": {
+          "reference_db": [
+            -34.66703262127392,
+            -34.90244336914161
+          ],
+          "generated_minus_reference_db": [
+            0.3647499478874847,
+            0.4926477240379953
+          ]
+        },
+        "120_400": {
+          "reference_db": [
+            -7.496591002107174,
+            -7.564721567258487
+          ],
+          "generated_minus_reference_db": [
+            -0.05884064186433059,
+            0.005956445621434688
+          ]
+        },
+        "400_1200": {
+          "reference_db": [
+            -17.407530391150893,
+            -16.203440332080394
+          ],
+          "generated_minus_reference_db": [
+            -1.308966324508051,
+            -1.3267976104440602
+          ]
+        },
+        "1200_3000": {
+          "reference_db": [
+            -22.23704519442116,
+            -20.862943479769317
+          ],
+          "generated_minus_reference_db": [
+            -3.403747529082337,
+            -3.4859958051829674
+          ]
+        },
+        "3000_8000": {
+          "reference_db": [
+            -31.409614080017498,
+            -31.564543853950976
+          ],
+          "generated_minus_reference_db": [
+            -4.8232683587294085,
+            -4.79796724352501
+          ]
+        },
+        "8000_14000": {
+          "reference_db": [
+            -48.05923988633328,
+            -48.05031558316087
+          ],
+          "generated_minus_reference_db": [
+            -4.561399979010446,
+            -4.551354152601441
+          ]
+        }
+      },
+      "phase_polish": {
+        "reference_order": 5,
+        "reference_channel": "L observation; same coordinate applied to both original channels",
+        "fitted_phase_range_radians": [
+          -0.7706168219313603,
+          -0.6924007798662165
+        ],
+        "maximum_observed_phase_step_radians": 0.01240281084925865,
+        "source_cutoff_hz": 14000.0,
+        "source_seconds": [
+          238.3667405984437,
+          238.6743710116805
+        ],
+        "inferred_root_hz_range": [
+          40.85036955783408,
+          53.578212570189315
+        ],
+        "root_hz_median": 47.39127187830898,
+        "normalized_frames": 14848,
+        "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+        "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+      }
+    },
+    {
+      "name": "A Stationary High",
+      "base_hz": 60.83004535315176,
+      "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+      "modeled_top_hz": 17519.053061707706,
+      "bands": {
+        "28_120": {
+          "reference_db": [
+            -29.74526438138813,
+            -29.568842122688494
+          ],
+          "generated_minus_reference_db": [
+            -1.8751815100586546,
+            -1.8379620727763597
+          ]
+        },
+        "120_400": {
+          "reference_db": [
+            -6.863190932474503,
+            -6.751201710846293
+          ],
+          "generated_minus_reference_db": [
+            -0.022662404474061003,
+            0.015129689031948524
+          ]
+        },
+        "400_1200": {
+          "reference_db": [
+            -21.245927584932307,
+            -20.938062656889688
+          ],
+          "generated_minus_reference_db": [
+            -0.6254729187583961,
+            -0.5115104528720642
+          ]
+        },
+        "1200_3000": {
+          "reference_db": [
+            -27.547375563175272,
+            -26.47744466910759
+          ],
+          "generated_minus_reference_db": [
+            -2.803931809234021,
+            -2.527304913608408
+          ]
+        },
+        "3000_8000": {
+          "reference_db": [
+            -36.431884494424736,
+            -36.50486994889388
+          ],
+          "generated_minus_reference_db": [
+            -3.435955611700399,
+            -3.33939219503736
+          ]
+        },
+        "8000_14000": {
+          "reference_db": [
+            -50.21074474950177,
+            -50.17347721919795
+          ],
+          "generated_minus_reference_db": [
+            -3.6847069071392147,
+            -3.7667206595853275
+          ]
+        }
+      },
+      "phase_polish": {
+        "reference_order": 5,
+        "reference_channel": "L observation; same coordinate applied to both original channels",
+        "fitted_phase_range_radians": [
+          -1.9548760673651266,
+          -1.7390293413630147
+        ],
+        "maximum_observed_phase_step_radians": 0.04530273982161037,
+        "source_cutoff_hz": 14000.0,
+        "source_seconds": [
+          238.13104290803287,
+          238.32934697875095
+        ],
+        "inferred_root_hz_range": [
+          55.28629994798028,
+          65.3400095078805
+        ],
+        "root_hz_median": 60.83004535315176,
+        "normalized_frames": 12291,
+        "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+        "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+      }
+    }
+  ],
+  "source_provenance": {
+    "segment_id": "A_exterior_blips",
+    "source": "A",
+    "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+    "master": "references/clean/A_decoded_float.wav",
+    "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+    "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+    "seconds": [
+      238,
+      248
+    ],
+    "perspective": "stationary rear exterior, open driver door",
+    "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+    "not_established": [
+      "neutral gear",
+      "pedal trajectory",
+      "torque load",
+      "RPM"
+    ]
+  },
+  "bank_index_sha256": "63318b6d5c6ca4eddd01005fd4fb1207ac216a951221a6d0ea5693b95c37d646",
+  "browser_qa": {
+    "result": "pass",
+    "audio_files": 11,
+    "durations": [
+      3.472646,
+      6,
+      0.404292,
+      6,
+      0.305979,
+      6,
+      0.197333,
+      6,
+      8,
+      30,
+      18
+    ],
+    "muted": true,
+    "http_and_file": true,
+    "one_player_at_a_time": true,
+    "narrow_viewport": true,
+    "errors": []
+  },
+  "test_count": 29,
+  "test_log_sha256": "dff9ef35546ff9b069045efa81b6e36267ca77e5f21681ef24ae3195492727ba",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\exterior_clock_v1",
+  "source_documents": [
+    "research/驻车车外四锚点V1.md",
+    "handoff/C模块与接口.md"
+  ]
+}

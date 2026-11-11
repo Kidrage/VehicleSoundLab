@@ -8,6 +8,8 @@
 
 新增实验驾驶链：`modules/dna_atlas/{bank,voice}.*` 在共同周期坐标内插值多个录音模型，`modules/atlas_drive/{control,render}.*` 调用唯一的原驾驶控制器、既有工况增益包络、可选旧程序事件和空间API。入口为 `sa_bank_init`、`ad_render_init/set/process`，离线宿主为 `experiments/atlas_drive_v1/probe.c`。不调用旧DNA渲染，不接管原take和UI。目前仅覆盖两档E高转车内模型，完整工况声纹及设备／听评未完成，详见[模块图与证据](../research/多锚点驾驶接入V1.md)。
 
+后续同一 C 库已加入 A 驻车车外四档实验模型；宿主 `probe.c` 支持 `--anchor` 追加模型和 `--root-per-rpm` 显式映射。模型按录音位置分库，不混入已认可 A 移动尾排低频。新增离线坐标校正／抗混叠在 `tools/exterior_clock_v1/warp.py`，不进入实时核。转速标定、完整负载／工况、实时性能与听评仍待完成，见[四锚点记录](../research/驻车车外四锚点V1.md)。
+
 ## 驾驶主线：DSP / App 0.20.0
 
 | 责任 | 主要 C 文件 | 读写边界 |

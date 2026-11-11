@@ -16,7 +16,7 @@
 
 #define BLOCK 240
 #define FILES (5+VSL_OBJECTS)
-static SdProfile low,high;
+static SdProfile profiles[SA_MAX_ANCHORS];
 static SaBank bank;
 static AdRender render;
 static VslEngine engine;
@@ -42,7 +42,8 @@ static int available(const char *path) {
     return 1;
 }
 static int run(int argc,char **argv) {
-    const SdProfile *models[2]={&low,&high};
+    const SdProfile *models[SA_MAX_ANCHORS]={0};
+    const char *model_paths[SA_MAX_ANCHORS]={0};
     AdConfig config={&bank,48271,VSL_V10,2,1.0/120,DS_OBSERVE_MID,DS_ROUTE_PAIR};
     AdControl control={{0},{.5,1,0,1,0,0,0,0}};
     AdCapture capture={raw,dna,events,dry,objects,trace};
@@ -53,16 +54,18 @@ static int run(int argc,char **argv) {
     char paths[FILES][4096],csv_path[4096],json_path[4096];
     FILE *csv=NULL,*report=NULL;
     double seconds=30,peak=0,total_time=0,max_block=0;
-    unsigned align=32,frames,at=0,below=0,within=0,above=0,budget_exceeded=0;
+    unsigned align=32,frames,at=0,below=0,within=0,above=0,budget_exceeded=0,count=2,a;
     int i,ok=0,scenario=VSL_SCENARIO_AUTO;
     if (argc<4) {
-        fputs("usage: VslAtlasDrive_probe LOWER.model UPPER.model OUTPUT_PREFIX [--scenario auto|neutral|shifts|downshift|lift|fixed --seconds30 --channels2|12 --events0..1 --detail1 --gain.5 --spatial0|1 --room0..1 --alignment0..32 --rpm7600 --load.8]\n",stderr);
+        fputs("usage: VslAtlasDrive_probe FIRST.model SECOND.model OUTPUT_PREFIX [--anchor NEXT.model (up to8 total, sorted root Hz) --scenario auto|neutral|shifts|downshift|lift|fixed --seconds 30 --channels 2|12 --events 0..1 --detail 1 --gain .5 --spatial 0|1 --room 0..1 --alignment 0..32 --rpm 7600 --load .8 --root-per-rpm .008333333333333333]\n",stderr);
         return 1;
     }
+    model_paths[0]=argv[1];model_paths[1]=argv[2];
     for (i=4;i<argc;i+=2) {
         double x;const char *name=argv[i],*arg;
         if (i+1==argc) return 1;arg=argv[i+1];
         if (!strcmp(name,"--scenario")) { scenario=vsl_scenario_id(arg);if(scenario<0)return 1;continue; }
+        if (!strcmp(name,"--anchor")) { if(count==SA_MAX_ANCHORS)return 1;model_paths[count++]=arg;continue; }
         if (!number(arg,&x)) return 1;
         if (!strcmp(name,"--seconds")) seconds=x;
         else if (!strcmp(name,"--channels")) { if(x!=2&&x!=12)return 1;config.channels=(int)x; }
@@ -74,12 +77,14 @@ static int run(int argc,char **argv) {
         else if (!strcmp(name,"--alignment")) { if(x<0||x>32||x!=floor(x))return 1;align=(unsigned)x; }
         else if (!strcmp(name,"--rpm")) params.rpm=x;
         else if (!strcmp(name,"--load")) params.load=x;
+        else if (!strcmp(name,"--root-per-rpm")) config.root_per_rpm=x;
         else return 1;
     }
     if (config.channels==12) control.mix.spatial=1;
     params.ignition=1;params.start_id=1;
-    if (seconds<=0||seconds>60||!sd_profile_load(argv[1],&low)||!sd_profile_load(argv[2],&high)||
-        !sa_bank_init(&bank,models,2,align)) return 2;
+    if (seconds<=0||seconds>60) return 2;
+    for(a=0;a<count;++a) { if(!sd_profile_load(model_paths[a],&profiles[a]))return 2;models[a]=&profiles[a]; }
+    if (!sa_bank_init(&bank,models,count,align)) return 2;
     vsl_scenario_apply(scenario,0,&params);inputs(&control,&params);
     if (!ad_render_init(&render,&engine,&config,&control)) return 2;
     /* Check every output before opening any, to preserve previous experiments. */
@@ -127,14 +132,18 @@ static int run(int argc,char **argv) {
     report=vsl_fopen(json_path,"wb");if(!report)goto done;
     fprintf(report,"{\n  \"schema\":\"vsl.atlas-drive-probe/1\",\n  \"frames\":%u,\"channels\":%d,\"seed\":48271,\"scenario\":%d,\n"
         "  \"source_frame\":%llu,\"owner_frame\":%llu,\"peak\":%.12g,\n"
-        "  \"root_per_rpm\":%.17g,\"base_hz\":[%.17g,%.17g],\"cycle_offsets\":[%.17g,%.17g],\n"
+        "  \"root_per_rpm\":%.17g,\"anchor_count\":%u,\"base_hz\":[",
+        frames,config.channels,scenario,(unsigned long long)render.dna.frame,(unsigned long long)engine.frame,peak,config.root_per_rpm,count);
+    for(a=0;a<count;++a)fprintf(report,"%s%.17g",a?",":"",profiles[a].base_hz);
+    fputs("],\"cycle_offsets\":[",report);
+    for(a=0;a<count;++a)fprintf(report,"%s%.17g",a?",":"",bank.offset[a]);
+    fprintf(report,"],\n"
         "  \"below_frames\":%u,\"covered_frames\":%u,\"above_frames\":%u,\n"
         "  \"shifts\":%u,\"overruns\":%u,\"procedural_hits\":%u,\"event_gain\":%.12g,\n"
         "  \"process_seconds\":%.9g,\"max_block_seconds\":%.9g,\"block_budget_seconds\":0.005,\n"
         "  \"block_budget_exceedances\":%u,\n"
-        "  \"accepted\":false,\"limits\":\"Two nearby high-RPM cabin anchors; boundary timbre outside; no independent cabin LF/intake/noise; optional events reuse legacy procedural synth; no source playback or old DNA\"\n}\n",
-        frames,config.channels,scenario,(unsigned long long)render.dna.frame,(unsigned long long)engine.frame,peak,config.root_per_rpm,
-        low.base_hz,high.base_hz,bank.offset[0],bank.offset[1],below,within,above,engine.drive.shift_events,
+        "  \"accepted\":false,\"limits\":\"Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; no independent low/intake/noise voices; optional legacy procedural events; no source playback or old DNA\"\n}\n",
+        below,within,above,engine.drive.shift_events,
         engine.drive.overrun_events,engine.events.hits,control.mix.event_gain,total_time,max_block,budget_exceeded);
     if (ferror(report)) goto done;
     printf("frames%u peak%.8g shifts%u coverage%.2f%% process%.3fs max%.3fms\n",frames,peak,engine.drive.shift_events,

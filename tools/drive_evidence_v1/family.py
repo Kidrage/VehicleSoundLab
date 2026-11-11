@@ -16,7 +16,7 @@ def peaks(hz, power):
 
 
 def follow(hz, times, power, start, stop, anchor_root, reference_multiple=5,
-           check_multiples=(2, 3, 7), max_octaves_per_second=8):
+           check_multiples=(2, 3, 7), max_octaves_per_second=8, root_bounds=(20, 90)):
     """DP among observed reference-line peaks; missing frames reject the path.
 
     Other line positions contribute their measured prominence. They do not
@@ -26,7 +26,7 @@ def follow(hz, times, power, start, stop, anchor_root, reference_multiple=5,
     nodes = []
     for i in indices:
         frequencies, prominence = peaks(hz, power[:, i])
-        select = (frequencies/reference_multiple >= 20) & (frequencies/reference_multiple <= 90)
+        select = (frequencies/reference_multiple >= root_bounds[0]) & (frequencies/reference_multiple <= root_bounds[1])
         roots = frequencies[select]/reference_multiple
         scores = np.clip(prominence[select], 0, 40)/40
         matched = []
