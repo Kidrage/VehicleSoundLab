@@ -1883,7 +1883,7 @@
   "new_state_mapping": false,
   "human_accepted": false,
   "current_source_sha256": {
-    "tools/summarize_magnitude_timescale_v1.py": "198694a72661adb58509035202c0c81f5171ba5635faae65acffda05e8d12530",
+    "tools/summarize_magnitude_timescale_v1.py": "077c8f13e55c646105a97f14a2122b23af73363710c01c88ab038435cd53af08",
     "tools/freeze_magnitude_timescale_v1.py": "82c2e869f502b04025a70f92fbab22389b255f2a1d91523dc0fd4b9c0086999c",
     "tools/analyze_magnitude_timescale_v1.py": "41b015742dc3274f2778b27a9f6dbe4e1a495804687999f093269cd3a10a5d66",
     "tools/verify_magnitude_timescale_v1.py": "9cd1b59761aa16f9412c3fc22e2b6a94451f900bcbe91bcf8f0aca770e5d9df6",

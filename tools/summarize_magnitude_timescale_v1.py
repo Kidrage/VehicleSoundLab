@@ -81,6 +81,6 @@ summary=dict(schema='vsl.magnitude-timescale-summary/1',date='2026-11-12',
         'Historical phase minimum_power_relative_to_loudest_window_LR field is an amplitude ratio; no power inference uses it',
         'The first AR8 verifier stopped on its second seed; verification2 preserves thresholds and completes all checks while retaining not_passed',
         'Existing harmonic magnitude V1 listening remains pending; no duplicate feedback question, C test rerun, device or 7.1.4 acceptance'])
-(repo/'research/magnitude_timescale_v1_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(repo/'research/magnitude_timescale_v1_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(dict(result=summary['result'],cap_decoded_exact=True,
     AR8_gate_failures=checked['gate_failures'],c_h_count=len(index))))
