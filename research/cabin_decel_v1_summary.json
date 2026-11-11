@@ -1,0 +1,967 @@
+{
+  "schema": "vsl.cabin-deceleration-summary/1",
+  "date": "2026-11-12",
+  "base_commit": "6029125e6463976ddb57732da5f7fdc8dd9f41ec",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\cabin_decel_v1",
+  "provenance": {
+    "segment_id": "E_corsa_first_context",
+    "source": "E",
+    "catalog_sha256": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "master": "references/clean/E_decoded_float.wav",
+    "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+    "seconds": [
+      47,
+      55
+    ],
+    "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+    "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+    "not_established": [
+      "continuous unedited run",
+      "exact RPM curve",
+      "pedal/load",
+      "ECU or phone synchronization",
+      "external exhaust spectrum"
+    ]
+  },
+  "phase_candidate_qualification": "not_passed",
+  "raw_band_validation": "pass",
+  "raw_band_validation_scope": "Known spectral change and independent raw FFT arithmetic only; not complete state identification",
+  "phase_comparisons": {
+    "exploration1": [
+      {
+        "case": "decel_upper",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "missing_coarse_path"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.02451077682525743,
+            "maximum_shape_db": 2.2249344202053924
+          }
+        ]
+      },
+      {
+        "case": "decel_middle",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "measured"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.030165422192363147,
+            "maximum_shape_db": 1.0990951899154657
+          },
+          {
+            "reference": 7,
+            "relative_root_p95": 0.022696917526927415,
+            "maximum_shape_db": 0.8136847140329311
+          }
+        ]
+      },
+      {
+        "case": "decel_lower",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "missing_coarse_path"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.023034465854669353,
+            "maximum_shape_db": 1.6514762660288649
+          }
+        ]
+      }
+    ],
+    "exploration2_four": [
+      {
+        "case": "decel_upper",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "missing_coarse_path"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.012312316680343318,
+            "maximum_shape_db": 2.4192997615146075
+          }
+        ]
+      },
+      {
+        "case": "decel_middle",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "measured"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.01704895825862007,
+            "maximum_shape_db": 2.034346823227637
+          },
+          {
+            "reference": 7,
+            "relative_root_p95": 0.015988213543609405,
+            "maximum_shape_db": 0.5371932481577196
+          }
+        ]
+      },
+      {
+        "case": "decel_lower",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "3": "measured",
+          "7": "missing_coarse_path"
+        },
+        "comparisons": [
+          {
+            "reference": 3,
+            "relative_root_p95": 0.0103848484271404,
+            "maximum_shape_db": 1.1692076356011363
+          }
+        ]
+      }
+    ],
+    "exploration4_higher": [
+      {
+        "case": "decel_upper",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "10": "missing_coarse_path",
+          "15": "missing_coarse_path",
+          "20": "missing_coarse_path"
+        },
+        "comparisons": []
+      },
+      {
+        "case": "decel_middle",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "10": "phase_rejected",
+          "15": "missing_coarse_path",
+          "20": "missing_coarse_path"
+        },
+        "comparisons": []
+      },
+      {
+        "case": "decel_lower",
+        "gate": false,
+        "statuses": {
+          "5": "measured",
+          "10": "missing_coarse_path",
+          "15": "missing_coarse_path",
+          "20": "missing_coarse_path"
+        },
+        "comparisons": []
+      }
+    ]
+  },
+  "slow_controls": [
+    {
+      "case": "decel_upper",
+      "method": "two",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.0001786446488587501,
+          -0.0002354873066252594
+        ],
+        [
+          -0.0014974253041226682,
+          -0.001610060321228346
+        ]
+      ],
+      "max_shape_error_db": 0.001610060321228346,
+      "root_relative_p95": 0.00034482765124540555,
+      "source_span": [
+        0.21757519685572294,
+        0.9755918759359482
+      ]
+    },
+    {
+      "case": "decel_upper",
+      "method": "four",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.0019017183427143536,
+          -0.0019465959947386757
+        ],
+        [
+          -0.012133006000902835,
+          -0.012205105916015757
+        ]
+      ],
+      "max_shape_error_db": 0.012205105916015757,
+      "root_relative_p95": 0.0004091237631356278,
+      "source_span": [
+        0.23514990950471587,
+        0.9570636893711543
+      ]
+    },
+    {
+      "case": "decel_upper",
+      "method": "two",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.00014870898654217868,
+          -0.00023735566267424346
+        ],
+        [
+          -0.001474761403781777,
+          -0.0016233592012402376
+        ]
+      ],
+      "max_shape_error_db": 0.0016233592012402376,
+      "root_relative_p95": 0.00033705491666238157,
+      "source_span": [
+        0.21757490260408585,
+        0.9756034560151219
+      ]
+    },
+    {
+      "case": "decel_upper",
+      "method": "four",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.001818585354417035,
+          -0.0018749091768528459
+        ],
+        [
+          -0.011733242261108945,
+          -0.011763706321923362
+        ]
+      ],
+      "max_shape_error_db": 0.011763706321923362,
+      "root_relative_p95": 0.00040512521460502613,
+      "source_span": [
+        0.23514985509577385,
+        0.9570745867358266
+      ]
+    },
+    {
+      "case": "decel_middle",
+      "method": "two",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          0.00018832778759536595,
+          0.00016813138539628625
+        ],
+        [
+          -0.0007309581997332337,
+          -0.000898361117761759
+        ]
+      ],
+      "max_shape_error_db": 0.000898361117761759,
+      "root_relative_p95": 0.0013544750794429034,
+      "source_span": [
+        0.218559600402352,
+        0.970420071333517
+      ]
+    },
+    {
+      "case": "decel_middle",
+      "method": "four",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.03865960657765832,
+          -0.03857485710024511
+        ],
+        [
+          -0.22461252803775977,
+          -0.22430101494758015
+        ]
+      ],
+      "max_shape_error_db": 0.22461252803775977,
+      "root_relative_p95": 0.0029886478343190896,
+      "source_span": [
+        0.2371819817010739,
+        0.950806633468046
+      ]
+    },
+    {
+      "case": "decel_middle",
+      "method": "two",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          8.25860078408347e-05,
+          0.00012229656109274956
+        ],
+        [
+          -0.0013769967029215735,
+          -0.0016028408750528023
+        ]
+      ],
+      "max_shape_error_db": 0.0016028408750528023,
+      "root_relative_p95": 0.0014308690077777955,
+      "source_span": [
+        0.21856022892261404,
+        0.9704358295964557
+      ]
+    },
+    {
+      "case": "decel_middle",
+      "method": "four",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.03897634675821182,
+          -0.03881207628672145
+        ],
+        [
+          -0.2257171993996625,
+          -0.22522098142592784
+        ]
+      ],
+      "max_shape_error_db": 0.2257171993996625,
+      "root_relative_p95": 0.0029492191051282094,
+      "source_span": [
+        0.23718318160729734,
+        0.9508208972593013
+      ]
+    },
+    {
+      "case": "decel_lower",
+      "method": "two",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          0.0003876786544823041,
+          0.00033617579172418033
+        ],
+        [
+          0.00028632002248407673,
+          0.00016099939923197581
+        ]
+      ],
+      "max_shape_error_db": 0.0003876786544823041,
+      "root_relative_p95": 0.0007354841798744063,
+      "source_span": [
+        0.21965251147977768,
+        0.9698816162403526
+      ]
+    },
+    {
+      "case": "decel_lower",
+      "method": "four",
+      "phase_only_transfer": false,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.012690977978355722,
+          -0.01267396657673725
+        ],
+        [
+          -0.08000456340874429,
+          -0.07983276928658345
+        ]
+      ],
+      "max_shape_error_db": 0.08000456340874429,
+      "root_relative_p95": 0.0009378396696387803,
+      "source_span": [
+        0.23934386896550205,
+        0.9490701490665828
+      ]
+    },
+    {
+      "case": "decel_lower",
+      "method": "two",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.0002245947059806852,
+          -6.783713449554085e-05
+        ],
+        [
+          -0.002378118923251904,
+          -0.002127936969758437
+        ]
+      ],
+      "max_shape_error_db": 0.002378118923251904,
+      "root_relative_p95": 0.0007692321427021846,
+      "source_span": [
+        0.21965265584065918,
+        0.9698825943939698
+      ]
+    },
+    {
+      "case": "decel_lower",
+      "method": "four",
+      "phase_only_transfer": true,
+      "tracking_status": "measured_connected",
+      "status": "measured",
+      "shape_error_db_LR": [
+        [
+          -0.012968487722763822,
+          -0.012806675943160872
+        ],
+        [
+          -0.08085844677154341,
+          -0.08062516681765697
+        ]
+      ],
+      "max_shape_error_db": 0.08085844677154341,
+      "root_relative_p95": 0.0009548546003580069,
+      "source_span": [
+        0.23934397841836558,
+        0.9490889149959582
+      ]
+    }
+  ],
+  "missing_reference": [
+    {
+      "case": "decel_upper",
+      "rejected": true,
+      "status": "disconnected"
+    },
+    {
+      "case": "decel_middle",
+      "rejected": true,
+      "status": "disconnected"
+    },
+    {
+      "case": "decel_lower",
+      "rejected": true,
+      "status": "disconnected"
+    }
+  ],
+  "common_source_center_checks": [
+    {
+      "case": "decel_upper",
+      "method": "exploration1",
+      "reference": 3,
+      "common_seconds": [
+        52.05273865749026,
+        52.742850274627976
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -1.3294811283905903,
+          -1.4306542726660179
+        ],
+        [
+          -1.311278431563059,
+          -0.9976491341751396
+        ]
+      ],
+      "maximum_shape_db": 1.4306542726660179
+    },
+    {
+      "case": "decel_upper",
+      "method": "exploration2_four",
+      "reference": 3,
+      "common_seconds": [
+        52.070376350323336,
+        52.72471072922201
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -1.0443422202397326,
+          -0.9846092377286348
+        ],
+        [
+          -2.0026935856689754,
+          -1.847635619119279
+        ]
+      ],
+      "maximum_shape_db": 2.0026935856689754
+    },
+    {
+      "case": "decel_middle",
+      "method": "exploration1",
+      "reference": 3,
+      "common_seconds": [
+        52.85606541199193,
+        53.53548430154228
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -0.6807585284767528,
+          -0.7289642106335512
+        ],
+        [
+          -0.710478570863557,
+          -0.5675578388829061
+        ]
+      ],
+      "maximum_shape_db": 0.7289642106335512
+    },
+    {
+      "case": "decel_middle",
+      "method": "exploration1",
+      "reference": 7,
+      "common_seconds": [
+        52.855919664882215,
+        53.536334925629504
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -0.04442869101993599,
+          -0.12360300974683229
+        ],
+        [
+          -0.8571334540681121,
+          -0.6201252768302904
+        ]
+      ],
+      "maximum_shape_db": 0.8571334540681121
+    },
+    {
+      "case": "decel_middle",
+      "method": "exploration2_four",
+      "reference": 3,
+      "common_seconds": [
+        52.87460801423872,
+        53.51663207124322
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -0.3314864962733104,
+          -0.4072545544880912
+        ],
+        [
+          -1.7657042961621192,
+          -1.5222579423762799
+        ]
+      ],
+      "maximum_shape_db": 1.7657042961621192
+    },
+    {
+      "case": "decel_middle",
+      "method": "exploration2_four",
+      "reference": 7,
+      "common_seconds": [
+        52.87460801423872,
+        53.51504770480651
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -0.009736438496161515,
+          -0.06428799978202229
+        ],
+        [
+          -0.4842101396345006,
+          -0.5440007511387991
+        ]
+      ],
+      "maximum_shape_db": 0.5440007511387991
+    },
+    {
+      "case": "decel_lower",
+      "method": "exploration1",
+      "reference": 3,
+      "common_seconds": [
+        53.65926480412571,
+        54.328381674764614
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -1.3010014330002446,
+          -1.2561435073492024
+        ],
+        [
+          -0.4204126845451799,
+          -0.4717576329948814
+        ]
+      ],
+      "maximum_shape_db": 1.3010014330002446
+    },
+    {
+      "case": "decel_lower",
+      "method": "exploration2_four",
+      "reference": 3,
+      "common_seconds": [
+        53.67925937763219,
+        54.31286103593426
+      ],
+      "shape_relative_400_1200_db_LR": [
+        [
+          -0.5799680520189934,
+          -0.5357386555344463
+        ],
+        [
+          -1.0445984266629575,
+          -1.0363243796721213
+        ]
+      ],
+      "maximum_shape_db": 1.0445984266629575
+    }
+  ],
+  "raw_band_shape_bands_relative_root": [
+    [
+      18.5,
+      45.5
+    ],
+    [
+      45.5,
+      110.5
+    ]
+  ],
+  "raw_band_shape_reference_relative_root": [
+    6.5,
+    18.5
+  ],
+  "raw_band_cases": [
+    {
+      "case": {
+        "id": "decel_upper",
+        "seconds": [
+          52.0,
+          52.8
+        ],
+        "initial_root_hz": 57.0
+      },
+      "primary_shape_db_LR": [
+        [
+          -1.9931905973895097,
+          -3.8664592539274945
+        ],
+        [
+          -11.484100574737596,
+          -14.8769472733973
+        ]
+      ],
+      "maximum_sensitivity_db": 0.29926386488800816,
+      "sensitivity_min_db_LR": [
+        [
+          -0.08695182134247403,
+          -0.030159404674649615
+        ],
+        [
+          -0.2905438346357183,
+          -0.29290105577192627
+        ]
+      ],
+      "sensitivity_max_db_LR": [
+        [
+          0.054936277875241135,
+          0.02796459189143352
+        ],
+        [
+          0.29926386488800816,
+          0.17066966260963135
+        ]
+      ]
+    },
+    {
+      "case": {
+        "id": "decel_middle",
+        "seconds": [
+          52.8,
+          53.6
+        ],
+        "initial_root_hz": 54.0
+      },
+      "primary_shape_db_LR": [
+        [
+          -5.9428565860295475,
+          -8.794823175533361
+        ],
+        [
+          -14.752448358796695,
+          -18.943371356287045
+        ]
+      ],
+      "maximum_sensitivity_db": 0.3791142627111217,
+      "sensitivity_min_db_LR": [
+        [
+          -0.0038701400975407196,
+          -0.00010054283642624284
+        ],
+        [
+          -0.3791142627111217,
+          -0.3530390148407818
+        ]
+      ],
+      "sensitivity_max_db_LR": [
+        [
+          0.054700238844385574,
+          0.023431765903797697
+        ],
+        [
+          0.14717888934474566,
+          0.21434957216667883
+        ]
+      ]
+    },
+    {
+      "case": {
+        "id": "decel_lower",
+        "seconds": [
+          53.6,
+          54.4
+        ],
+        "initial_root_hz": 50.0
+      },
+      "primary_shape_db_LR": [
+        [
+          -2.836143554713339,
+          -5.498462444686344
+        ],
+        [
+          -11.18962158132563,
+          -14.84326021951725
+        ]
+      ],
+      "maximum_sensitivity_db": 0.16586941213518536,
+      "sensitivity_min_db_LR": [
+        [
+          -0.1329668094888916,
+          -0.11230793023090868
+        ],
+        [
+          -0.16586941213518536,
+          -0.12542841049176978
+        ]
+      ],
+      "sensitivity_max_db_LR": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.04022699152764986,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "known_raw_controls": [
+    {
+      "case": "decel_upper",
+      "expected_change_db": [
+        -3.010299956639812,
+        -6.020599913279624
+      ],
+      "measured_change_db_LR": [
+        [
+          -3.0102338233206227,
+          -3.0102349509508697
+        ],
+        [
+          -6.020467745557887,
+          -6.020467770759327
+        ]
+      ],
+      "max_error_db": 0.0001321677217367423
+    },
+    {
+      "case": "decel_middle",
+      "expected_change_db": [
+        -3.010299956639812,
+        -6.020599913279624
+      ],
+      "measured_change_db_LR": [
+        [
+          -3.0097005429798167,
+          -3.0096967182238443
+        ],
+        [
+          -6.019053022697177,
+          -6.019050591511451
+        ]
+      ],
+      "max_error_db": 0.0015493217681727955
+    },
+    {
+      "case": "decel_lower",
+      "expected_change_db": [
+        -3.010299956639812,
+        -6.020599913279624
+      ],
+      "measured_change_db_LR": [
+        [
+          -3.010060785515168,
+          -3.010060740255157
+        ],
+        [
+          -6.019757113284031,
+          -6.019756480865304
+        ]
+      ],
+      "max_error_db": 0.0008434324143200556
+    }
+  ],
+  "independent_fft": [
+    {
+      "case": "decel_upper",
+      "windows": 145,
+      "maximum_absolute_error": 6.938893903907228e-18
+    },
+    {
+      "case": "decel_middle",
+      "windows": 145,
+      "maximum_absolute_error": 4.336808689942018e-19
+    },
+    {
+      "case": "decel_lower",
+      "windows": 145,
+      "maximum_absolute_error": 1.3877787807814457e-17
+    }
+  ],
+  "input_metadata_sha256": {
+    "references/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "references/approval_manifest.json": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454"
+  },
+  "source_sha256": {
+    "tools/explore_cabin_decel_v1.py": "78aeb4f1abcb62a5aa1739503377ee9a00b015a5af6d1bc869e808f868b9be18",
+    "tools/verify_cabin_decel_v1.py": "358cf6ec8b9ff539c44485fd55f20db9bb942fb167afd0e4a102b0851b40ea96",
+    "tools/analyze_decel_band_power_v1.py": "11b2300d611963ceb7b1cab97f245032f5a35138ff616684ab7499ac9d01d382",
+    "tools/summarize_cabin_decel_v1.py": "6a23993cb09bd3d7e5a3c7ef0c7b499222cda89c4df2aa684ad690fb89320e72",
+    "tools/freeze_cabin_decel_v1.py": "54a15ff995fa90de644d6465227446e1b04bfb4e8fb7d0d697ea443a98e256ca",
+    "research/cabin_decel_v1_plan.json": "9729de8fccfd5f142ef35eb4adf04ec26242aad1d9c5c5dd25908aff0807a2d8",
+    "research/cabin_decel_v1_higher_carriers.json": "a3af1e39cc802bcc1ca3fc37a51dedc23dc8ffb56b00ad19b0feea1fcbe9814d",
+    "tools/cabin_decel_v1/__init__.py": "ca7104416848f580e8ef6096ea3c71d3b557da4f540ff613cfcf017ff252b137",
+    "tools/cabin_decel_v1/fixtures.py": "085e7cbc28e9c8dd56c755014010c23391da458b8ec97bd02d81bf914fec68ff",
+    "tools/cabin_decel_v1/power.py": "224a4eccd12ec12de569b14f4ccaebc11a1a620e739ac2d73cae0dd637e4e8d9"
+  },
+  "evidence_sha256": {
+    "band_power1/exact_sources/tools/analyze_decel_band_power_v1.py": "11b2300d611963ceb7b1cab97f245032f5a35138ff616684ab7499ac9d01d382",
+    "band_power1/exact_sources/tools/cabin_decel_v1/fixtures.py": "085e7cbc28e9c8dd56c755014010c23391da458b8ec97bd02d81bf914fec68ff",
+    "band_power1/exact_sources/tools/cabin_decel_v1/power.py": "224a4eccd12ec12de569b14f4ccaebc11a1a620e739ac2d73cae0dd637e4e8d9",
+    "band_power1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "band_power1/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "band_power1/exact_sources/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "band_power1/report.json": "ba97e25ba62316a4f247f131f646c6379ee033a617bf5f6efd2c00277aa7307a",
+    "exploration1/decel_lower/reference3_coordinates.npz": "5eb7dc924073213de173c35861aa3dab6e1303b3c3ae5ddd1bc9b8e38e0a9a5a",
+    "exploration1/decel_lower/reference3_normalized.wav": "04a353580ca568f56d73f58ab2e6d95195dec034c800b752da68da22910b4348",
+    "exploration1/decel_lower/reference5_coordinates.npz": "8cd7db9df33b3ec6ffa1de845fe17867604834f9477358c4ecf907dfc462a2a6",
+    "exploration1/decel_lower/reference5_normalized.wav": "fad051e1c69ef71eeb30c97b7b999aad0cb970de18d5bbd2212db5a048d35113",
+    "exploration1/decel_middle/reference3_coordinates.npz": "976224b3503777d1e76727107d965b10df6b3c9747a22ac50c16ce290a8b8562",
+    "exploration1/decel_middle/reference3_normalized.wav": "abd9fca3616b1d6e077d397594840adc7b2332f338e0306eca53737647dd94b7",
+    "exploration1/decel_middle/reference5_coordinates.npz": "93e27dd8d5013a7e1ec377702bbd98c002b2724546547b58ed7e4e7d2afd79be",
+    "exploration1/decel_middle/reference5_normalized.wav": "618fafa3176c775613899b38ca268e4ee893d0731c813cce14131b42cafea5fc",
+    "exploration1/decel_middle/reference7_coordinates.npz": "406e5d13fca075fbf96b3dc12022bb8494cdc94c6b5104fc05405b59a3c4f1b6",
+    "exploration1/decel_middle/reference7_normalized.wav": "e81e1cda3934cd94ae011cdedac1c587bc6dc2f3da8edaeee14214c0668daf33",
+    "exploration1/decel_upper/reference3_coordinates.npz": "7479a3772c6209cc593277b7f75e4811b8cef7ebf1e8e6bb92daa2be08455853",
+    "exploration1/decel_upper/reference3_normalized.wav": "282a9b6180613ce1c936d020d2879cacb44d77d47ee7d1ba75a22d7311ce8f90",
+    "exploration1/decel_upper/reference5_coordinates.npz": "6a0ac7eff9c384b1d8677f68f2317c11da7b6a9f2502f253c2b862c936b72ad6",
+    "exploration1/decel_upper/reference5_normalized.wav": "9e6ce804f4dc17b275a4ee12cf6397ca550228066d8fa9b35ebb418ea43469c4",
+    "exploration1/exact_sources/research/cabin_decel_v1_plan.json": "9729de8fccfd5f142ef35eb4adf04ec26242aad1d9c5c5dd25908aff0807a2d8",
+    "exploration1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "exploration1/exact_sources/tools/explore_cabin_decel_v1.py": "ec70a0b25502411545bf31cd261cb8a5874f7643c3df041837dc59132313e4d5",
+    "exploration1/exact_sources/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "exploration1/exact_sources/tools/phase_clock_v1/projection.py": "76f45cafef062377213429b535f6db2bbea31388f1d56137be532cc34ac9eeb5",
+    "exploration1/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "exploration1/exact_sources/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "exploration1/exact_sources/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "exploration1/exact_sources/tools/state_dna_v1/compare.py": "32792923691e98113c65b2e176ff98b884249f9036bc5a9ff48efa54bb00038d",
+    "exploration1/report.json": "450530854d27da0f704d4030df0328c9a28024ecf51f36469a99576816e6ba5f",
+    "exploration2_four/decel_lower/reference3_coordinates.npz": "b31d581b3fc482ea9aaf0786bdb3b3548e369e8779015752e5c31647a5aa18bf",
+    "exploration2_four/decel_lower/reference3_normalized.wav": "adf6ab4b232a437cb5f936645e12f83758bb648484abed68cf42bb91f2439ab1",
+    "exploration2_four/decel_lower/reference5_coordinates.npz": "b0fcd8c88fceff3912aa3e68c32ca158086ba190e5bb2413c68e40c306059c91",
+    "exploration2_four/decel_lower/reference5_normalized.wav": "ac3ea199bf7c6c71236eb84ef30b9ee8c7e70ed8673ea1a5f3965ba7bd3a56ea",
+    "exploration2_four/decel_middle/reference3_coordinates.npz": "9ab91d42e7c0826a4462959458fc492906b00cf865269509c510eaca4b41801f",
+    "exploration2_four/decel_middle/reference3_normalized.wav": "708878735fa7ead4f83e7c238575ee866794040f9393538dfffb5dab08c4dccf",
+    "exploration2_four/decel_middle/reference5_coordinates.npz": "bb801b255efed34e0834cf444d8c18c74ee33fa72dca8dccf41a07f36cdda986",
+    "exploration2_four/decel_middle/reference5_normalized.wav": "4688b0d1bb67279f9e61416eaa13cb142e3fe836d8c31dc45cf0c64ca22dc694",
+    "exploration2_four/decel_middle/reference7_coordinates.npz": "ac2be6ad9e90438778364fd88c866eaee70b5ad8db8e4255359f763cb80e7122",
+    "exploration2_four/decel_middle/reference7_normalized.wav": "7e53fdd5ed16857c8552ecd8ffa80fabf035df6cf4dca0ce79c3aad1b723cb9a",
+    "exploration2_four/decel_upper/reference3_coordinates.npz": "fd8058269336c23b4a7eeadecd6d8e34c28653f4ced20bdae2ed33b96ebe6c6e",
+    "exploration2_four/decel_upper/reference3_normalized.wav": "f6835b2a04c4d2f56ebf8d9dc13ed5f6d046e2c890bde654ffc4c0b9a8eb83fd",
+    "exploration2_four/decel_upper/reference5_coordinates.npz": "691dd07e5caa5a7f586642ef7e8750a775e44b7aca4269f74997ef8c5308a417",
+    "exploration2_four/decel_upper/reference5_normalized.wav": "6c0a6699d107ff36b130fda4eee403571306d5cf4899ecfa7913bd608de1d57b",
+    "exploration2_four/exact_sources/research/cabin_decel_v1_plan.json": "9729de8fccfd5f142ef35eb4adf04ec26242aad1d9c5c5dd25908aff0807a2d8",
+    "exploration2_four/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "exploration2_four/exact_sources/tools/explore_cabin_decel_v1.py": "979dc26d484e96787d4740d495e113f5e3527781953dbe8bd8d774ed1f438d9f",
+    "exploration2_four/exact_sources/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "exploration2_four/exact_sources/tools/phase_clock_v1/projection.py": "76f45cafef062377213429b535f6db2bbea31388f1d56137be532cc34ac9eeb5",
+    "exploration2_four/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "exploration2_four/exact_sources/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "exploration2_four/exact_sources/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "exploration2_four/exact_sources/tools/state_dna_v1/compare.py": "32792923691e98113c65b2e176ff98b884249f9036bc5a9ff48efa54bb00038d",
+    "exploration2_four/report.json": "d4002d5ea445f3f5e46b21d6c4dcc6619be503158036132056e880e518cdb4f7",
+    "exploration3_higher/failed_source.py": "ed96c8e39783da66de95e9aac5c8b097ec7b2e937d66dc7dedd07f0d182aa6ca",
+    "exploration3_higher/failure.json": "9e210714d670279942d043017d39351b0698f376aac33cf676cdbdcae80d5eb6",
+    "exploration4_higher/decel_lower/reference5_coordinates.npz": "8cd7db9df33b3ec6ffa1de845fe17867604834f9477358c4ecf907dfc462a2a6",
+    "exploration4_higher/decel_lower/reference5_normalized.wav": "95ca51d5f66db43389c96ae71fcd4211615fbf3c92d39fdb1d5dbe711536790b",
+    "exploration4_higher/decel_middle/reference5_coordinates.npz": "93e27dd8d5013a7e1ec377702bbd98c002b2724546547b58ed7e4e7d2afd79be",
+    "exploration4_higher/decel_middle/reference5_normalized.wav": "7264f03245611ecae6b2fb1dd7d147880193f97f0053cb17f1f4a3fae54ef7ff",
+    "exploration4_higher/decel_upper/reference5_coordinates.npz": "6a0ac7eff9c384b1d8677f68f2317c11da7b6a9f2502f253c2b862c936b72ad6",
+    "exploration4_higher/decel_upper/reference5_normalized.wav": "8e20ca996b1f14142cc3b359338bc381ba163927d0100d473606d0e3a6238674",
+    "exploration4_higher/exact_sources/research/cabin_decel_v1_higher_carriers.json": "a3af1e39cc802bcc1ca3fc37a51dedc23dc8ffb56b00ad19b0feea1fcbe9814d",
+    "exploration4_higher/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "exploration4_higher/exact_sources/tools/explore_cabin_decel_v1.py": "78aeb4f1abcb62a5aa1739503377ee9a00b015a5af6d1bc869e808f868b9be18",
+    "exploration4_higher/exact_sources/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "exploration4_higher/exact_sources/tools/phase_clock_v1/projection.py": "76f45cafef062377213429b535f6db2bbea31388f1d56137be532cc34ac9eeb5",
+    "exploration4_higher/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "exploration4_higher/exact_sources/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "exploration4_higher/exact_sources/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "exploration4_higher/exact_sources/tools/state_dna_v1/compare.py": "32792923691e98113c65b2e176ff98b884249f9036bc5a9ff48efa54bb00038d",
+    "exploration4_higher/report.json": "116733945230b972cf43fa493d08b50460fa481e067bb47220e0c1510ebb0064",
+    "verification1/clock_and_colour.png": "c71d063dfbe40904a908454eb27a0ca530b53ea3e3781e181ef3aacb16e1db2f",
+    "verification1/exact_sources/tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "verification1/exact_sources/tools/phase_clock_v1/projection.py": "76f45cafef062377213429b535f6db2bbea31388f1d56137be532cc34ac9eeb5",
+    "verification1/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "verification1/exact_sources/tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "verification1/exact_sources/tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "verification1/exact_sources/tools/state_dna_v1/compare.py": "32792923691e98113c65b2e176ff98b884249f9036bc5a9ff48efa54bb00038d",
+    "verification1/exact_sources/tools/verify_cabin_decel_v1.py": "358cf6ec8b9ff539c44485fd55f20db9bb942fb167afd0e4a102b0851b40ea96",
+    "verification1/verification.json": "3d43edebe324b814624e4c0e8d155d0e029c3dc6bcc7e64b881611d86298d45e"
+  },
+  "prior_visual_evidence_manifest_sha256": "a5f63f2176907ad66bd3592081b82a5a9003bc51b18a48b3aef21452ce7bc751",
+  "annotation_sha256": "3b37eae84bad5012ff0a1803158441b62cbae4e9f499f9faed0efbae0769453c",
+  "c_index_sha256": "bcf0118631536bce360144f682dd9dc47094502fc5155f3697ed5a1b94cf392e",
+  "c_index_rows": 421,
+  "plot_sha256": "c71d063dfbe40904a908454eb27a0ca530b53ea3e3781e181ef3aacb16e1db2f",
+  "runtime_changes": false,
+  "new_models": false,
+  "new_state_mapping": false,
+  "human_accepted": false,
+  "limits": [
+    "Wide-band power only; no narrow harmonic amplitude/phase inference",
+    "Reference variants and+/-2% scales are sensitivity probes, not uncertainty intervals",
+    "One deceleration with changing speed/root; no independent load or pedal evidence",
+    "Band robustness does not establish complete state-colour or naturalness",
+    "Known phase-only transfer does not measure the real microphone transfer",
+    "Observed carrier inconsistency alone does not identify a software bug or an engine state",
+    "Common centers do not make slightly different physical window lengths identical",
+    "No model exported, no state profile promoted, no runtime source modified",
+    "Narrow harmonic shape and wide raw bands measure different quantities; their errors are not comparable reproduction percentages",
+    "Do not force total recorded power into DNA; preserve room/road/air/noise uncertainty and stereo observations"
+  ]
+}

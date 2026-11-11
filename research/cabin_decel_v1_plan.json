@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.cabin-deceleration-plan/1",
+  "source_segment": "E_corsa_first_context",
+  "source_use": "cabin_dynamic_observation",
+  "observed_state": "Display holds third gear; displayed speed and tach decrease. Pedal/load/fueling unknown.",
+  "cases": [
+    {"id": "decel_upper", "seconds": [52.0, 52.8], "initial_root_hz": 57.0},
+    {"id": "decel_middle", "seconds": [52.8, 53.6], "initial_root_hz": 54.0},
+    {"id": "decel_lower", "seconds": [53.6, 54.4], "initial_root_hz": 50.0}
+  ],
+  "primary_reference": 5,
+  "comparison_references": [3, 7],
+  "coarse_method": "Existing observed FFT peaks; 80ms Hann, 5ms hop, -30dB gate, no missing-peak fill",
+  "refiner": "Existing two-cycle common-L/R phase projection; no change to the unqualified generic candidate",
+  "diagnostic_gates": {
+    "require_primary_separate_carrier_gate": true,
+    "minimum_comparison_references": 1,
+    "maximum_root_relative_p95": 0.01,
+    "maximum_shape_difference_db": 0.5,
+    "minimum_nonoverlapping_four_cycle_windows": 6
+  },
+  "claim_boundary": "Local acoustic-coordinate consistency only; known controls and listening still required. No driver state mapping from these gates alone."
+}

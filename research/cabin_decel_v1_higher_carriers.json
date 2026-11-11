@@ -1,0 +1,22 @@
+{
+  "schema": "vsl.cabin-deceleration-plan/1",
+  "source_segment": "E_corsa_first_context",
+  "source_use": "cabin_dynamic_observation",
+  "observed_state": "Display holds third gear while displayed speed/tach decrease; pedal/load/fueling unknown.",
+  "followup_reason": "Original3/7 comparisons fail. Test all10/15/20 carriers within the same low-frequency observation range to determine whether larger phase divisors reduce carrier-specific jitter. Keep original failures and gates.",
+  "cases": [
+    {"id": "decel_upper", "seconds": [52.0, 52.8], "initial_root_hz": 57.0},
+    {"id": "decel_middle", "seconds": [52.8, 53.6], "initial_root_hz": 54.0},
+    {"id": "decel_lower", "seconds": [53.6, 54.4], "initial_root_hz": 50.0}
+  ],
+  "primary_reference": 5,
+  "comparison_references": [10, 15, 20],
+  "diagnostic_gates": {
+    "require_primary_separate_carrier_gate": true,
+    "minimum_comparison_references": 1,
+    "maximum_root_relative_p95": 0.01,
+    "maximum_shape_difference_db": 0.5,
+    "minimum_nonoverlapping_four_cycle_windows": 6
+  },
+  "claim_boundary": "Secondary carrier-sensitivity study; not independent driving trials or permission to promote a state profile."
+}
