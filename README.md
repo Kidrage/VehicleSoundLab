@@ -15,6 +15,10 @@ Windows C11 声浪工程。仓库包含驾驶 DSP / App 0.20.0、独立 Sound DN
 
 构建脚本会执行 25 项 CTest。运行入口可打开驾驶、DNA 监听和低频对照，无需 Python 或 Max。驾驶支持录制回放、实时立体声和离线 7.1.4 导出。旧 0.15.0 回退版本随本地交接包提供。
 
+## 完整素材与开发证据
+
+原始录音、清洗音轨、48 个冻结版本和全部渲染见 [完整交接 Release](https://github.com/Kidrage/VehicleSoundLab/releases/tag/handoff-2026-11-11)。[下载、校验和恢复说明](handoff/素材下载与恢复.md)。
+
 ## 接手代码
 
 - [C 模块和接口](handoff/C模块与接口.md)：驾驶状态、实时 DSP、宿主和离线工具之间的边界。
