@@ -1,0 +1,7 @@
+add_library(residual_atlas STATIC bank.c voice.c)
+target_include_directories(residual_atlas PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(residual_atlas PUBLIC sound_residual)
+target_compile_features(residual_atlas PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(residual_atlas PRIVATE /W4 /we4013 /utf-8)
+endif()

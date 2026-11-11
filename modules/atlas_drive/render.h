@@ -3,6 +3,7 @@
 #include "control.h"
 #include "dna_atlas/voice.h"
 #include "dna_scene/routing.h"
+#include "residual_atlas/voice.h"
 
 typedef struct {
     const SaBank *bank;
@@ -11,6 +12,7 @@ typedef struct {
     double root_per_rpm; /* Explicit hypothesis, e.g1/120 for the E cabin bank. */
     DsProjection projection;
     DsRoute route;
+    const RaBank *residual_bank; /* Optional, same acoustic anchors/context. */
 } AdConfig;
 
 typedef struct {
@@ -18,6 +20,7 @@ typedef struct {
     double rpm, speed, load, root_hz, blend, envelope;
     unsigned lower, upper, shifts, overruns, hits;
     int gear, lifecycle, operating, coverage;
+    double residual_gain;
 } AdTelemetry;
 typedef struct {
     float *dna_raw; /* Observation stereo, before driving envelope. */
@@ -26,9 +29,13 @@ typedef struct {
     float *dry;     /* Observation stereo + mono events, after master gain. */
     float *objects; /* 10 mono objects, before spatial/master; no measured banks. */
     AdTelemetry *telemetry; /* One per sample; caller may subsample200Hz. */
+    float *residual_raw; /* Stereo, before amount and driving envelope. */
+    float *residual; /* Stereo, after amount and driving envelope. */
+    float *residual_objects; /* 10 source objects, before spatial/master. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
+    RaVoice residual;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;
@@ -38,8 +45,8 @@ typedef struct {
 
 /* Init/load outside audio callback. No audio-time allocation or I/O. Atlas and
    all profiles must outlive this object. Never share owner with other renders.
-   Only DNA and optional old procedural events are connected in this revision;
-   cabin LF/intake/mechanics/air models remain absent rather than fabricated. */
+   Optional residual atlas is separate from DNA and old procedural events.
+   Cabin LF/intake/mechanics/air physical models remain absent. */
 int ad_render_init(AdRender *render,VslEngine *owner,const AdConfig *config,const AdControl *control);
 int ad_render_set(AdRender *render,const AdControl *control);
 int ad_render_process(AdRender *render,float *output,unsigned frames,const AdCapture *capture);

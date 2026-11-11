@@ -9,6 +9,7 @@ typedef struct {
 typedef struct {
     double gain, detail, event_gain, width, room, perspective;
     int spatial, propagation;
+    double residual_gain; /* Independent 0..1 detail layer; default zero. */
 } AdMix;
 typedef struct { AdInput drive; AdMix mix; } AdControl;
 

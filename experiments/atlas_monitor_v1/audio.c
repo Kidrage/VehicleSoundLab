@@ -32,7 +32,7 @@ void am_audio_init(AmAudio *a,const AdConfig *config) {
     a->control=am_default_control();wo_init(&a->device,process,a);
 }
 int am_audio_control(AmAudio *a,const AdControl *c) {
-    if(!ad_control_valid(c,2))return 0;
+    if(!ad_control_valid(c,2)||(!a->config.residual_bank&&c->mix.residual_gain>0))return 0;
     EnterCriticalSection(&a->lock);a->control=*c;++a->generation;LeaveCriticalSection(&a->lock);return 1;
 }
 AdControl am_audio_get(AmAudio *a) {

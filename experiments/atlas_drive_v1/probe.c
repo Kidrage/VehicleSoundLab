@@ -15,12 +15,14 @@
 #endif
 
 #define BLOCK 240
-#define FILES (5+VSL_OBJECTS)
+#define FILES (7+VSL_OBJECTS)
 static SdProfile profiles[SA_MAX_ANCHORS];
 static SaBank bank;
+static RaBank residual_bank;static SrProfile residual_profiles[SA_MAX_ANCHORS];
 static AdRender render;
 static VslEngine engine;
 static float output[BLOCK*12],raw[BLOCK*2],dna[BLOCK*2],dry[BLOCK*2],events[BLOCK],objects[BLOCK*VSL_OBJECTS],mono[BLOCK];
+static float residual_raw[BLOCK*2],residual[BLOCK*2];
 static AdTelemetry trace[BLOCK];
 static double timer(void) {
 #ifdef _WIN32
@@ -44,20 +46,21 @@ static int available(const char *path) {
 static int run(int argc,char **argv) {
     const SdProfile *models[SA_MAX_ANCHORS]={0};
     const char *model_paths[SA_MAX_ANCHORS]={0};
+    const char *residual_paths[SA_MAX_ANCHORS]={0};unsigned residual_count=0;
     AdConfig config={&bank,48271,VSL_V10,2,1.0/120,DS_OBSERVE_MID,DS_ROUTE_PAIR};
     AdControl control={{0},{.5,1,0,1,0,0,0,0}};
     AdCapture capture={raw,dna,events,dry,objects,trace};
     VslParams params=vsl_default_params(VSL_V10);
     VslWavWriter writers[FILES]={{0}};
-    float *buffers[5]={output,raw,dna,dry,events};
-    const char *suffix[5]={"render","dna_raw","dna","dry","event_layer"};
+    float *buffers[7]={output,raw,dna,dry,events,residual_raw,residual};
+    const char *suffix[7]={"render","dna_raw","dna","dry","event_layer","residual_raw","residual"};
     char paths[FILES][4096],csv_path[4096],json_path[4096];
     FILE *csv=NULL,*report=NULL;
     double seconds=30,peak=0,total_time=0,max_block=0;
     unsigned align=32,frames,at=0,below=0,within=0,above=0,budget_exceeded=0,count=2,a;
     int i,ok=0,scenario=VSL_SCENARIO_AUTO;
     if (argc<4) {
-        fputs("usage: VslAtlasDrive_probe FIRST.model SECOND.model OUTPUT_PREFIX [--anchor NEXT.model (up to8 total, sorted root Hz) --scenario auto|neutral|shifts|downshift|lift|fixed --seconds 30 --channels 2|12 --events 0..1 --detail 1 --gain .5 --spatial 0|1 --room 0..1 --alignment 0..32 --rpm 7600 --load .8 --root-per-rpm .008333333333333333]\n",stderr);
+        fputs("usage: VslAtlasDrive_probe FIRST.model SECOND.model OUTPUT_PREFIX [--anchor NEXT.model (up to8 total, sorted root Hz) --residual-anchor FILE.residual (one per DNA anchor) --residual-gain 0..1 --scenario auto|neutral|shifts|downshift|lift|fixed --seconds 30 --channels 2|12 --events 0..1 --detail 1 --gain .5 --spatial 0|1 --room 0..1 --alignment 0..32 --rpm 7600 --load .8 --root-per-rpm .008333333333333333]\n",stderr);
         return 1;
     }
     model_paths[0]=argv[1];model_paths[1]=argv[2];
@@ -66,6 +69,7 @@ static int run(int argc,char **argv) {
         if (i+1==argc) return 1;arg=argv[i+1];
         if (!strcmp(name,"--scenario")) { scenario=vsl_scenario_id(arg);if(scenario<0)return 1;continue; }
         if (!strcmp(name,"--anchor")) { if(count==SA_MAX_ANCHORS)return 1;model_paths[count++]=arg;continue; }
+        if (!strcmp(name,"--residual-anchor")) {if(residual_count==SA_MAX_ANCHORS)return 1;residual_paths[residual_count++]=arg;continue;}
         if (!number(arg,&x)) return 1;
         if (!strcmp(name,"--seconds")) seconds=x;
         else if (!strcmp(name,"--channels")) { if(x!=2&&x!=12)return 1;config.channels=(int)x; }
@@ -78,6 +82,7 @@ static int run(int argc,char **argv) {
         else if (!strcmp(name,"--rpm")) params.rpm=x;
         else if (!strcmp(name,"--load")) params.load=x;
         else if (!strcmp(name,"--root-per-rpm")) config.root_per_rpm=x;
+        else if (!strcmp(name,"--residual-gain")) control.mix.residual_gain=x;
         else return 1;
     }
     if (config.channels==12) control.mix.spatial=1;
@@ -85,11 +90,22 @@ static int run(int argc,char **argv) {
     if (seconds<=0||seconds>60) return 2;
     for(a=0;a<count;++a) { if(!sd_profile_load(model_paths[a],&profiles[a]))return 2;models[a]=&profiles[a]; }
     if (!sa_bank_init(&bank,models,count,align)) return 2;
+    if(residual_count) {
+        const SrProfile *rp[SA_MAX_ANCHORS];double roots[SA_MAX_ANCHORS];
+        if(residual_count!=count)return 2;
+        for(a=0;a<count;++a) {
+            FILE *f=vsl_fopen(residual_paths[a],"rb");int read_ok;if(!f)return 2;
+            read_ok=sr_profile_read(f,&residual_profiles[a]);if(fclose(f))read_ok=0;if(!read_ok)return 2;
+            rp[a]=&residual_profiles[a];roots[a]=profiles[a].base_hz;
+        }
+        if(!ra_bank_init(&residual_bank,rp,roots,count))return 2;config.residual_bank=&residual_bank;
+    }
+    capture.residual_raw=residual_raw;capture.residual=residual;
     vsl_scenario_apply(scenario,0,&params);inputs(&control,&params);
     if (!ad_render_init(&render,&engine,&config,&control)) return 2;
     /* Check every output before opening any, to preserve previous experiments. */
     for (i=0;i<FILES;++i) {
-        const char *name=i<5?suffix[i]:vsl_object_info(i-5)->name;
+        const char *name=i<7?suffix[i]:vsl_object_info(i-7)->name;
         int length=snprintf(paths[i],sizeof paths[i],"%s_%s.wav",argv[3],name);
         if (length<0||length>=(int)sizeof paths[i]||!available(paths[i])) return 3;
         { int previous;for(previous=0;previous<i;++previous) if(!strcmp(paths[i],paths[previous]))return 3; }
@@ -98,7 +114,7 @@ static int run(int argc,char **argv) {
         snprintf(json_path,sizeof json_path,"%s_report.json",argv[3])>=(int)sizeof json_path||
         !available(csv_path)||!available(json_path)) return 3;
     for (i=0;i<FILES;++i) if (!vsl_wav_begin_float(&writers[i],paths[i],48000,
-        i==0?(unsigned)config.channels:i<4?2u:1u)) goto done;
+        i==0?(unsigned)config.channels:i==4?1u:i<7?2u:1u)) goto done;
     csv=vsl_fopen(csv_path,"wb");if (!csv) goto done;
     fputs("frame,seconds,rpm,speed_kph,load,root_hz,lower,upper,blend,coverage,envelope,gear,lifecycle,operating,shifts,overruns,hits\n",csv);
     frames=(unsigned)(seconds*48000+.5);
@@ -114,10 +130,10 @@ static int run(int argc,char **argv) {
             if (!isfinite(output[j])) goto done;
             peak=fmax(peak,fabs(output[j]));
         }
-        for (i=0;i<5;++i) if (!vsl_wav_write(&writers[i],buffers[i],n)) goto done;
+        for (i=0;i<7;++i) if (!vsl_wav_write(&writers[i],buffers[i],n)) goto done;
         for (c=0;c<VSL_OBJECTS;++c) {
             for (j=0;j<n;++j) mono[j]=objects[j*VSL_OBJECTS+c];
-            if (!vsl_wav_write(&writers[c+5],mono,n)) goto done;
+            if (!vsl_wav_write(&writers[c+7],mono,n)) goto done;
         }
         for (j=0;j<n;++j) {
             const AdTelemetry *t=&trace[j];
@@ -142,9 +158,11 @@ static int run(int argc,char **argv) {
         "  \"shifts\":%u,\"overruns\":%u,\"procedural_hits\":%u,\"event_gain\":%.12g,\n"
         "  \"process_seconds\":%.9g,\"max_block_seconds\":%.9g,\"block_budget_seconds\":0.005,\n"
         "  \"block_budget_exceedances\":%u,\n"
-        "  \"accepted\":false,\"limits\":\"Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; no independent low/intake/noise voices; optional legacy procedural events; no source playback or old DNA\"\n}\n",
+        "  \"residual_attached\":%s,\"residual_gain\":%.17g,\n"
+        "  \"accepted\":false,\"limits\":\"Caller-selected acoustic anchors and explicit root/RPM hypothesis; interval coverage does not prove measured load/state or gaps between anchors; optional residual atlas and legacy events; no independent LF/intake/mechanics physical sources or source playback\"\n}\n",
         below,within,above,engine.drive.shift_events,
-        engine.drive.overrun_events,engine.events.hits,control.mix.event_gain,total_time,max_block,budget_exceeded);
+        engine.drive.overrun_events,engine.events.hits,control.mix.event_gain,total_time,max_block,budget_exceeded,
+        config.residual_bank?"true":"false",control.mix.residual_gain);
     if (ferror(report)) goto done;
     printf("frames%u peak%.8g shifts%u coverage%.2f%% process%.3fs max%.3fms\n",frames,peak,engine.drive.shift_events,
         100.*within/frames,total_time,1000*max_block);ok=1;

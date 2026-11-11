@@ -41,6 +41,7 @@
 |---|---|---|
 | Sound DNA V1 | `modules/sound_dna/profile.*` 事务模型载入；`texture.*` 生成相关变化；`oscillator.*` 固定均值相位、变化幅度；`voice.*` 管理 `sd_voice_init/set/process` | `experiments/sustain_monitor_v3`；V10对照逐样本一致，Warm/Hollow是合成验证。 |
 | 残差 OSC V1 | `modules/sound_residual/profile.*` 模型事务读取；`oscillator.*` 共享／独立正弦云；`voice.*` 管 `sr_voice_init/set/process`、18ms跟随与独立时钟 | `experiments/residual_osc_v1/probe.c` 离线导出；31项总回归通过。未接入设备／驾驶，待听评；不是物理噪声分离。 |
+| 驾驶残差 atlas | `modules/residual_atlas/bank.*` 事务复制六档模型；`voice.*` 以同一OSC云插值正半定谱矩阵，`ra_voice_init/set/tick` | `atlas_drive`接入；新UI细节量默认0。DNA／残差／对象分轨独立，33项回归通过；不是完整负载／状态模型。 |
 | 低频 V2 | `modules/low_rumble/profile.*`、`cloud.*`、`voice.*`；`lr_voice_init/set/process`；密集随机正交OSC、独立时钟和滤波 | `experiments/sustain_monitor_v4`；V2听评未通过，保留对照。 |
 | 监听混音 | 两个实验目录各自的 `render.*`／`audio.*`／`ui.c`／`bank.*`／`smoke.*` | 控件、音色事务切换、独奏与设备。V4低频0与DNA监听逐样本一致。 |
 | 历史实验 | `experiments/reference_osc_v1`、`reference_osc_v2`、`osc_density_v1`、`detail_osc_v1`、`sustain_osc_v1` 等 | 时间轨迹重建、固定音高统计声源、分离假设和试验对照；以对应冻结版本的说明为准。 |

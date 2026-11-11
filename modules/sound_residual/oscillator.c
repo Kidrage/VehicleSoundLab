@@ -42,3 +42,18 @@ void sr_cloud_tick(SrCloud *s,double out[2],int normalize) {
         o->re=o->re*o->cos_step-o->im*o->sin_step;o->im=next;
     }
 }
+void sr_cloud_observe(SrCloud *s,unsigned bands,unsigned partials,double out[SR_MAX_BANDS][3],int normalize) {
+    unsigned b,j;double scale=sqrt(2./partials);
+    for(b=0;b<bands;++b) {
+        out[b][0]=out[b][1]=out[b][2]=0;
+        for(j=0;j<2*partials;++j) {
+            SrOscillator *o=&s->oscillator[2*b*partials+j];double next;
+            if(normalize) { double unit=1/hypot(o->re,o->im);o->re*=unit;o->im*=unit; }
+            if(j%2)out[b][2]+=o->re;
+            else {out[b][0]+=o->re;out[b][1]+=o->im;}
+            next=o->re*o->sin_step+o->im*o->cos_step;
+            o->re=o->re*o->cos_step-o->im*o->sin_step;o->im=next;
+        }
+        out[b][0]*=scale;out[b][1]*=scale;out[b][2]*=scale;
+    }
+}

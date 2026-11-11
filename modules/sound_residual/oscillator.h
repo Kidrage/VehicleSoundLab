@@ -8,4 +8,7 @@ typedef struct { unsigned count;SrOscillator oscillator[SR_MAX_OSCILLATORS]; } S
 void sr_cloud_init(SrCloud *cloud,const SrProfile *profile,uint64_t seed);
 void sr_cloud_tune(SrCloud *cloud,double pitch);
 void sr_cloud_tick(SrCloud *cloud,double out[2],int normalize);
+/* Shared cos/sin and independent cos, normalized to unit expected power per
+   band. Requires the matching bands/partials used at initialization. */
+void sr_cloud_observe(SrCloud *cloud,unsigned bands,unsigned partials,double out[SR_MAX_BANDS][3],int normalize);
 #endif
