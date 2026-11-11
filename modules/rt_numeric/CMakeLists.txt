@@ -1,0 +1,8 @@
+add_library(rt_numeric STATIC scope.c)
+target_include_directories(rt_numeric PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_compile_features(rt_numeric PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(rt_numeric PRIVATE /W4 /we4013 /utf-8)
+else()
+  target_compile_options(rt_numeric PRIVATE -Wall -Wextra -Wpedantic)
+endif()

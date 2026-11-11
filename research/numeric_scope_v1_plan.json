@@ -1,0 +1,12 @@
+{
+  "max_abs_sample_error_fs": 1e-12,
+  "trace_requirement": "Complete control CSV bytes equal for each old/new case",
+  "cases": [
+    {"name":"A_shifts","bank":"exterior_anchors_v1","scenario":"shifts","seconds":16,"channels":2},
+    {"name":"E_shifts","bank":"cabin_anchors_v1","scenario":"shifts","seconds":16,"channels":2},
+    {"name":"A_neutral","bank":"exterior_anchors_v1","scenario":"neutral","seconds":8,"channels":2},
+    {"name":"E_lift","bank":"cabin_anchors_v1","scenario":"lift","seconds":6,"channels":2},
+    {"name":"A_downshift12","bank":"exterior_anchors_v1","scenario":"downshift","seconds":16,"channels":12},
+    {"name":"E_shifts12","bank":"cabin_anchors_v1","scenario":"shifts","seconds":16,"channels":12}
+  ]
+}

@@ -12,6 +12,7 @@ file(GLOB_RECURSE at_render_files CONFIGURE_DEPENDS
   "${VSL_ROOT}/modules/dna_scene/*.c" "${VSL_ROOT}/modules/dna_scene/*.h"
   "${VSL_ROOT}/modules/harmonic_body/*.c" "${VSL_ROOT}/modules/harmonic_body/*.h"
   "${VSL_ROOT}/modules/drive_aux/*.c" "${VSL_ROOT}/modules/drive_aux/*.h"
+  "${VSL_ROOT}/modules/rt_numeric/*.c" "${VSL_ROOT}/modules/rt_numeric/*.h"
   "${VSL_ROOT}/modules/atlas_drive/*.c" "${VSL_ROOT}/modules/atlas_drive/*.h"
   "${VSL_ROOT}/modules/atlas_monitor/*.c" "${VSL_ROOT}/modules/atlas_monitor/*.h"
   "${VSL_ROOT}/modules/atlas_take/*.c" "${VSL_ROOT}/modules/atlas_take/*.h")

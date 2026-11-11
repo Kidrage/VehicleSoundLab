@@ -3,6 +3,7 @@
 #include "core/modules.h"
 #include "drive/drive.h"
 #include "spatial/scene.h"
+#include "rt_numeric/scope.h"
 #include <math.h>
 #include <string.h>
 static void amounts(const AdControl *p,double a[DA_LAYERS]) {
@@ -44,7 +45,7 @@ int ad_render_set(AdRender *s,const AdControl *p) {
     amounts(p,aux);da_voice_set(&s->auxiliary,aux);
     s->target=*p;hb_mix_set(&s->body,p->mix.body_mix);ad_control_apply(s->owner,p);return 1;
 }
-int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
+static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
     unsigned n;
     AdCapture none={0};
     VslEngine *e;
@@ -137,4 +138,9 @@ int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *ca
         ++s->frame;++e->frame;
     }
     return 1;
+}
+int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
+    RnScope scope=rn_scope_enter();
+    int result=process(s,out,frames,cap);
+    rn_scope_leave(scope);return result;
 }

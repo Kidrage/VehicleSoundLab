@@ -1,6 +1,6 @@
 add_library(atlas_drive STATIC control.c render.c)
 target_include_directories(atlas_drive PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
-target_link_libraries(atlas_drive PUBLIC dna_atlas dna_scene residual_atlas drive_aux vsl_core)
+target_link_libraries(atlas_drive PUBLIC dna_atlas dna_scene residual_atlas drive_aux rt_numeric vsl_core)
 target_compile_features(atlas_drive PUBLIC c_std_11)
 if(MSVC)
   target_compile_options(atlas_drive PRIVATE /W4 /we4013 /utf-8)

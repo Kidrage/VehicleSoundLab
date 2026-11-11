@@ -1,5 +1,7 @@
 # C 模块与接口
 
+数值边界：独立 `modules/rt_numeric/scope.*` 管理当前线程的局部FTZ／DAZ和完整MXCSR恢复；`atlas_drive`／`atlas_monitor`的process薄包装覆盖声源、空间与传输淡化，支持嵌套／失败退出。40项CTest、156条音轨（最大误差1.18e-38满幅）、控制轨迹、固定DNA字节及实际静音设备／行程通过。`.vslrun`身份已绑定该模块；其他架构为空操作。A仍有5ms超时，见[模块图与验证](../research/数值作用域V1.md)。
+
 性能更新：`sound_dna/texture.c/.h`新增 `sd_texture_prepare_batch`，`dna_atlas/voice.c`调用。只有维度、时钟和完整随机状态已经相同的锚点才共享随机创新；各自AR／RNG状态保留，不兼容时串行推进。39项CTest、15场景哈希、4组轨迹、固定DNA整WAV字节和短时静音行程回放通过；A／E交替离线中位数耗时降低5.39%／3.08%，仍有5ms超时。性能探针与25组完整状态契约位于 `experiments/atlas_perf_v1`；当前没有幅度缓存，也没有生产FTZ／DAZ。见[模块图与证据](../research/C性能核查V1.md)。以下保留各阶段接口记录。
 
 新增独立 `modules/residual_motion/{profile,envelope,carrier,voice}.*`：分别负责模型校验、幅度统计变化、同一OSC推进和声部控制。只改变可选残差层幅度，raw与0量保持旧声源逐样本一致；没有接入驾驶／UI／take，不改已有C文件。38项CTest及已知stereo约束通过，但同一短实录的统计误差下降最多0.67%，自然度提升尚未建立。见[模块图与边界](../research/残差幅度细节V1.md)。

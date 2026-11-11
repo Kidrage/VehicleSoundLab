@@ -82,6 +82,7 @@ MODULE_LAYERS = {
     "sound_dna": "独立 Sound DNA", "low_rumble": "独立低频 V2",
     "sound_residual": "独立谐波间残差 OSC",
     "residual_motion": "残差幅度统计变化",
+    "rt_numeric": "实时浮点环境作用域",
     "residual_atlas": "驾驶残差谱形与持续声源",
     "dna_scene": "声源／空间适配", "scene_monitor": "联合监听混音",
     "dna_atlas": "多锚点声源", "atlas_drive": "新 DNA 驾驶适配",
@@ -179,6 +180,10 @@ def code_rows():
                 layer = "性能与输出一致性验证"
                 owner = "VslAtlasPerf_probe" if p.stem == "probe" else "VslTextureBatch_checks"
                 role = "Windows离线分块计时／CPU周期／状态轨迹" if p.stem == "probe" else "25组批处理／串行完整状态比较"
+            elif group == "rt_numeric":
+                layer, owner, role = "实时数值边界", "rt_numeric", "x64局部FTZ／DAZ、完整MXCSR保存恢复；其他架构空操作"
+            elif group == "numeric_scope_v1":
+                layer, owner, role = "实时数值契约", "VslNumericScope_checks", "嵌套／舍入／状态／失败恢复、分块与变动调用环境录制回放"
             yield rel, layer, owner, role, digest(p)
 
 

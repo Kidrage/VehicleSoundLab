@@ -1,11 +1,12 @@
 #include "render.h"
+#include "rt_numeric/scope.h"
 #include <string.h>
 int am_render_init(AmRender *r,VslEngine *e,const AdConfig *c,const AdControl *p) {
     if(!r)return 0;
     memset(r,0,sizeof *r);return ad_render_init(&r->drive,e,c,p);
 }
 int am_render_set(AmRender *r,const AdControl *p) { return r&&ad_render_set(&r->drive,p); }
-int am_render_process(AmRender *r,float *out,unsigned frames,int stop,const AdCapture *capture) {
+static int process(AmRender *r,float *out,unsigned frames,int stop,const AdCapture *capture) {
     unsigned n;int c;
     if(!r||(stop!=0&&stop!=1)||!ad_render_process(&r->drive,out,frames,capture))return 0;
     for(n=0;n<frames;++n) {
@@ -20,4 +21,9 @@ int am_render_process(AmRender *r,float *out,unsigned frames,int stop,const AdCa
         ++r->frame;
     }
     return 1;
+}
+int am_render_process(AmRender *r,float *out,unsigned frames,int stop,const AdCapture *capture) {
+    RnScope scope=rn_scope_enter();
+    int result=process(r,out,frames,stop,capture);
+    rn_scope_leave(scope);return result;
 }
