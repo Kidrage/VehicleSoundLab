@@ -6,6 +6,8 @@
 
 实时联合监听：`modules/scene_monitor/render.*` 提供 `smo_render_init/set/process`，保持两层声源并平滑切换直送／空间。`experiments/scene_monitor_v1/{ui,audio,models,recipe}.*` 分别负责UI、设备控制快照、事务模型载入和配方；统一构建入口为 `VslSceneMonitor`。它是新声源监听宿主，没有接管旧驾驶状态机或take协议，详见[原生监听记录](../research/联合声源原生监听V1.md)。
 
+新增实验驾驶链：`modules/dna_atlas/{bank,voice}.*` 在共同周期坐标内插值多个录音模型，`modules/atlas_drive/{control,render}.*` 调用唯一的原驾驶控制器、既有工况增益包络、可选旧程序事件和空间API。入口为 `sa_bank_init`、`ad_render_init/set/process`，离线宿主为 `experiments/atlas_drive_v1/probe.c`。不调用旧DNA渲染，不接管原take和UI。目前仅覆盖两档E高转车内模型，完整工况声纹及设备／听评未完成，详见[模块图与证据](../research/多锚点驾驶接入V1.md)。
+
 ## 驾驶主线：DSP / App 0.20.0
 
 | 责任 | 主要 C 文件 | 读写边界 |
