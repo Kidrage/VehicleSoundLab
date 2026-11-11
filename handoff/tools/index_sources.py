@@ -81,6 +81,7 @@ LIB_ROLES = {
 MODULE_LAYERS = {
     "sound_dna": "独立 Sound DNA", "low_rumble": "独立低频 V2",
     "sound_residual": "独立谐波间残差 OSC",
+    "residual_motion": "残差幅度统计变化",
     "residual_atlas": "驾驶残差谱形与持续声源",
     "dna_scene": "声源／空间适配", "scene_monitor": "联合监听混音",
     "dna_atlas": "多锚点声源", "atlas_drive": "新 DNA 驾驶适配",
@@ -128,11 +129,15 @@ def code_rows():
                     role = "共享／独立声道的密集正弦OSC与复相关"
                 elif group == "residual_atlas":
                     role = "事务复制配对谱模型" if p.stem == "bank" else "正半定谱矩阵插值、独立时钟与持续OSC"
-            elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1","residual_osc_v1","residual_atlas_v1"):
+                elif group == "residual_motion":
+                    role = {"profile":"事务模型读取、配对与正幅度边界", "envelope":"独立AR幅度因子、插值与预期功率补偿",
+                            "carrier":"同一OSC推进、原始与幅度变化双输出", "voice":"模型拥有、控制与持续生成"}.get(p.stem, role)
+            elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1","residual_osc_v1","residual_atlas_v1","residual_motion_v1"):
                 layer = "新声源宿主与验证"
                 owner = {"atlas_drive_v1":"VslAtlasDrive", "dna_scene_v1":"VslDnaScene",
                          "scene_monitor_v1":"VslSceneMonitor", "atlas_monitor_v1":"VslAtlasMonitor",
-                         "residual_osc_v1":"VslResidual","residual_atlas_v1":"VslResidualAtlas"}[group]
+                         "residual_osc_v1":"VslResidual","residual_atlas_v1":"VslResidualAtlas",
+                         "residual_motion_v1":"VslResidualMotion"}[group]
                 role = HOST_ROLES.get(p.stem, "宿主接口或契约验证")
             elif group in ("sustain_monitor_v3","sustain_monitor_v4"):
                 layer, role = "独立监听宿主", HOST_ROLES.get(p.stem, "监听接口")
@@ -145,6 +150,27 @@ def code_rows():
                 layer, owner, role = "分析与诊断", owner or group, "离线测量与验证，不在实时链"
             else:
                 layer, owner, role = "交接总入口", "VslSystem", "选择子系统、设置工作目录、检查路径"
+            # Preserve ownership added in later handoff stages when rebuilding
+            # the sorted index; do not reduce these rows to generic labels.
+            if group == "harmonic_body":
+                layer, owner = "相干低频分层", "harmonic_body / atlas_drive"
+                role = "频率掩码" if p.stem == "band" else "互补分层与独立工况包络"
+            elif group == "harmonic_body_v1":
+                layer, owner, role = "相干低频验证", "VslHarmonicBody_checks", "解析OSC、互补重合、驾驶／布局不变性"
+            elif group == "atlas_take":
+                layer, owner, role = "新DNA行程", "atlas_take", "资产／语义字段／成功提交事件／播放器"
+            elif group == "atlas_take_io":
+                layer, owner, role = "新DNA行程I/O", "atlas_take_io", "独立vslrun协议／UTF8原子保存"
+            elif group == "atlas_take_v1":
+                layer, owner, role = "新DNA行程验证", "VslAtlasTake_checks / render / device_checks", "重建／双布局导出／实际设备验证"
+            elif group == "atlas_monitor_v1" and p.stem == "takes":
+                layer, owner, role = "新DNA驾驶宿主", "VslAtlasMonitor", "模型／设备／UI／行程交互"
+            elif group == "state_colour_v2":
+                layer, owner, role = "声线轴诊断宿主", "VslOscColour_"+p.stem, "解析声源验证／C独立导出"
+            elif group == "osc_colour":
+                layer, owner, role = "诊断谐波声线轴", "osc_colour", "事务配方编译／幅度单调跟随"
+            elif group in ("drive_aux", "drive_aux_v1"):
+                layer, owner, role = "驾驶辅助声层", "drive_aux / VslDriveAux_checks", "曲轴／喷油适配、五路机械NVH声层与集成契约"
             yield rel, layer, owner, role, digest(p)
 
 
