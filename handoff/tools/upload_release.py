@@ -65,9 +65,9 @@ def main():
                                      "sha256":digest(root/"asset-manifest.json")}
     for name,row in expected.items():
         path=root/name
-        if Path(name).name!=name or path.stat().st_size!=row["bytes"] or digest(path)!=row["sha256"]:
+        if Path(name).name!=name or path.stat().st_size!=row["bytes"]:
             raise ValueError("Local asset identity changed: "+name)
-    log(local_assets_verified=len(expected))
+    log(preverified_asset_sizes_checked=len(expected))
     try:
         release=api(f"repos/{REPO}/releases/tags/{TAG}")
     except urllib.error.HTTPError as error:
@@ -111,9 +111,11 @@ def main():
             connection.putheader("Content-Length",str(row["bytes"]))
             connection.endheaders()
             sent=0
+            transmitted=hashlib.sha256()
             started=last=time.monotonic()
             with (root/row["name"]).open("rb") as stream:
                 while block:=stream.read(BLOCK):
+                    transmitted.update(block)
                     connection.send(block)
                     sent+=len(block)
                     now=time.monotonic()
@@ -121,6 +123,8 @@ def main():
                         log(progress=row["name"],sent=sent,total=row["bytes"],
                             mib_per_second=round(sent/2**20/max(1,now-started),2))
                         last=now
+            if sent!=row["bytes"] or transmitted.hexdigest()!=row["sha256"]:
+                raise ValueError("Local upload stream changed: "+row["name"])
             response=connection.getresponse()
             payload=response.read()
             if response.status!=201:

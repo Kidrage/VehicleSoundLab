@@ -1,0 +1,130 @@
+{
+  "schema": "vsl.release/1",
+  "date": "2026-11-11",
+  "tag": "handoff-2026-11-11",
+  "repository": "Kidrage/VehicleSoundLab",
+  "original_package_index": "package-index.json",
+  "archives": [
+    {
+      "name": "01-system.zip",
+      "bytes": 164366851,
+      "sha256": "5fe2627819c308c6db7b9d1ec8b8599d5fd4152cbfbadbd500631b3bb10480f8",
+      "parts": [
+        {
+          "name": "01-system.zip",
+          "bytes": 164366851,
+          "sha256": "5fe2627819c308c6db7b9d1ec8b8599d5fd4152cbfbadbd500631b3bb10480f8"
+        }
+      ]
+    },
+    {
+      "name": "02-history.zip",
+      "bytes": 3648487080,
+      "sha256": "5f4ae7617b60d63f9b88d24462e616d56d0078e0e5b37f6180bc7812504860fe",
+      "parts": [
+        {
+          "name": "02-history.zip.part01",
+          "bytes": 2139095040,
+          "sha256": "e8d44ff723d93102334cee2a74ccc539947a055946fa0f113fc8ccf1742c3ddc"
+        },
+        {
+          "name": "02-history.zip.part02",
+          "bytes": 1509392040,
+          "sha256": "fbb66a2a82013570106286b86bc30f7a2136bd6283ebeaaa82da421046845717"
+        }
+      ]
+    },
+    {
+      "name": "03-references.zip",
+      "bytes": 2193198681,
+      "sha256": "a1cbb07980878b04fc4838a171502d0ff604c86dcfe7cc9efb77ce77e1d0119b",
+      "parts": [
+        {
+          "name": "03-references.zip.part01",
+          "bytes": 2139095040,
+          "sha256": "bd03e04d61fcddfb622493c0c67997ce3ec6643e8ffe4b8466f51e7c0a719819"
+        },
+        {
+          "name": "03-references.zip.part02",
+          "bytes": 54103641,
+          "sha256": "214e1ebb12cea35adf177c75e6b2235126746edbd966e79d59ec33c36697a5a4"
+        }
+      ]
+    },
+    {
+      "name": "04-renders-01.zip",
+      "bytes": 4094563935,
+      "sha256": "a41c0eb65bf87a1797da5460dcb87ab47073029180504ce0cf0ad5d204424298",
+      "parts": [
+        {
+          "name": "04-renders-01.zip.part01",
+          "bytes": 2139095040,
+          "sha256": "abcb45945965d61cab4b5f851e2dff000674f11c5cd60ad61c0da9f7092e8b0c"
+        },
+        {
+          "name": "04-renders-01.zip.part02",
+          "bytes": 1955468895,
+          "sha256": "25a65ad68f8befaeda12827db5aaa0bcdfd887da15a2802403da5fe73dd609ed"
+        }
+      ]
+    },
+    {
+      "name": "04-renders-02.zip",
+      "bytes": 4184561636,
+      "sha256": "33d53e138fcbc98b5c571b234b88f9177946612db6c83a97ff4f7f50136aed59",
+      "parts": [
+        {
+          "name": "04-renders-02.zip.part01",
+          "bytes": 2139095040,
+          "sha256": "4527d46152d2f04ac77a24e25e5b96b10d646f2ab394f0b63ae4524998c1c190"
+        },
+        {
+          "name": "04-renders-02.zip.part02",
+          "bytes": 2045466596,
+          "sha256": "1f541f61debea8add5eef0e6969994f530de30b3143c96f20c90b5ffeed8ddd7"
+        }
+      ]
+    },
+    {
+      "name": "04-renders-03.zip",
+      "bytes": 4147431000,
+      "sha256": "713502e86f91f29b36be014e3f43dc412c048f88d96c4d3d2216c4a1cc9d3fc6",
+      "parts": [
+        {
+          "name": "04-renders-03.zip.part01",
+          "bytes": 2139095040,
+          "sha256": "c7e843a66a1e4a93d027d7491cab4e9d466982779b0e5f5df85e2d69281c1eff"
+        },
+        {
+          "name": "04-renders-03.zip.part02",
+          "bytes": 2008335960,
+          "sha256": "95fdea9a907c4e69a6fb50e7684c1c03a5273887d89df9e5b0427f93fe757273"
+        }
+      ]
+    },
+    {
+      "name": "04-renders-04.zip",
+      "bytes": 786145247,
+      "sha256": "89d011d95fabbbfa0786b9dbcb97fe65bda7dfea8f7ac6aaf559cb25b01f7aaa",
+      "parts": [
+        {
+          "name": "04-renders-04.zip",
+          "bytes": 786145247,
+          "sha256": "89d011d95fabbbfa0786b9dbcb97fe65bda7dfea8f7ac6aaf559cb25b01f7aaa"
+        }
+      ]
+    },
+    {
+      "name": "05-analysis-dependencies.zip",
+      "bytes": 169722649,
+      "sha256": "0255a2276893d2d803c132abbe19eed3d8bb6c8eb99782efb8441c842eb5d0b0",
+      "parts": [
+        {
+          "name": "05-analysis-dependencies.zip",
+          "bytes": 169722649,
+          "sha256": "0255a2276893d2d803c132abbe19eed3d8bb6c8eb99782efb8441c842eb5d0b0"
+        }
+      ]
+    }
+  ]
+}
