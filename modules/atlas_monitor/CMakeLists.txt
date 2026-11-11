@@ -1,0 +1,6 @@
+add_library(atlas_monitor STATIC render.c)
+target_include_directories(atlas_monitor PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(atlas_monitor PUBLIC atlas_drive)
+if(MSVC)
+  target_compile_options(atlas_monitor PRIVATE /W4 /we4013 /utf-8)
+endif()

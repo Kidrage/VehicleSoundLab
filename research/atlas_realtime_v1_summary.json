@@ -1,0 +1,364 @@
+{
+  "schema": "vsl.atlas-realtime/1",
+  "result": "pass",
+  "human_accepted": false,
+  "cache": {
+    "schema": "vsl.texture-cache/1",
+    "result": "pass",
+    "parity": [
+      {
+        "name": "A Stationary Low",
+        "pitch": 0.9,
+        "whole_wav_equal": true,
+        "sha256": "d05e8f143db53c227370d6dd3e199f54afb6345bf3a266c7345c252a96d645cf"
+      },
+      {
+        "name": "A Stationary Low",
+        "pitch": 1.0,
+        "whole_wav_equal": true,
+        "sha256": "4a8e4b51a0ffff00b32f9f6f2264629932fe7b3cb7a42b2845181e93f4d86e14"
+      },
+      {
+        "name": "A Stationary Low",
+        "pitch": 1.1,
+        "whole_wav_equal": true,
+        "sha256": "331aa40573599cc04b9f40ba1767de853b96b53d6c190cf01648cd78a58411e0"
+      },
+      {
+        "name": "A Stationary Lower Mid",
+        "pitch": 0.9,
+        "whole_wav_equal": true,
+        "sha256": "b329d90e8e41fe996345f4eed45f5c1a9a76b54a73632fe212497aa8c1c76b15"
+      },
+      {
+        "name": "A Stationary Lower Mid",
+        "pitch": 1.0,
+        "whole_wav_equal": true,
+        "sha256": "1a79957e7e365a2e10cf19d2eac20b45d6814640bffd870b6b23d9911ca09ff8"
+      },
+      {
+        "name": "A Stationary Lower Mid",
+        "pitch": 1.1,
+        "whole_wav_equal": true,
+        "sha256": "e025ed1bee6eaef5cd3b70600fd559a6a8fcacef104c5cb45d5c8d639b87d9a5"
+      },
+      {
+        "name": "A Stationary Upper Mid",
+        "pitch": 0.9,
+        "whole_wav_equal": true,
+        "sha256": "5f6ca2410d4a9d1aae7ed8f18d739055c2a1896ac2a2e46b95886b65e66e68a6"
+      },
+      {
+        "name": "A Stationary Upper Mid",
+        "pitch": 1.0,
+        "whole_wav_equal": true,
+        "sha256": "4272d8d609fd1220c5ac0a4069c43bbc664904e7237b816a501d1bf60b7c4001"
+      },
+      {
+        "name": "A Stationary Upper Mid",
+        "pitch": 1.1,
+        "whole_wav_equal": true,
+        "sha256": "33ec8901e9872ababdc3f012e526a63f1890bcad9f0410595c1f5b86283b4cef"
+      },
+      {
+        "name": "A Stationary High",
+        "pitch": 0.9,
+        "whole_wav_equal": true,
+        "sha256": "74449ef46fe8246737dee0dfe1cc0c77d108e17891aad2e899fc4275672e15fa"
+      },
+      {
+        "name": "A Stationary High",
+        "pitch": 1.0,
+        "whole_wav_equal": true,
+        "sha256": "8bc803d9220f35dfb017b514e6be910728debe3cc4cb09ebd8a2161b4a76635e"
+      },
+      {
+        "name": "A Stationary High",
+        "pitch": 1.1,
+        "whole_wav_equal": true,
+        "sha256": "8f18042c6bbcffa3ff77d30c02e41114e69e40c4c5e53745ad6f11943933c228"
+      },
+      {
+        "name": "accepted_dna",
+        "whole_wav_equal": true,
+        "sha256": "f9b3f512c8038edcbbb035aadcf636dfb34b3d6c0ded083b80c340a36605f3e2"
+      },
+      {
+        "name": "accepted_lf",
+        "whole_wav_equal": true,
+        "sha256": "3b16dccb614d51aeba3a9f86f62b4a2deefdfa2bd39ccb0dfddbe59095b93372"
+      }
+    ],
+    "timing": [
+      {
+        "name": "before0",
+        "process_seconds": 4.6336651,
+        "max_block_seconds": 0.00845590001,
+        "overruns": 69,
+        "command": [
+          "E:\\VehicleSoundLab\\baselines\\exterior_anchors_v1\\bin\\VslAtlasDrive_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Low.model",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Lower Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\atlas_realtime_v1\\cache\\before0",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary High.model",
+          "--seconds",
+          "12",
+          "--scenario",
+          "auto",
+          "--root-per-rpm",
+          "0.008333333333333333"
+        ],
+        "binary_sha256": "2502d3f3369a9ea219b2fca8e0216fa16aff55d23d51bc729a420511de024d44",
+        "output_sha256": "1cf39928686ee91531fc1e95948524d210b47244e1ca220185c4c08473079ec7"
+      },
+      {
+        "name": "after0",
+        "process_seconds": 4.25576461,
+        "max_block_seconds": 0.00794579997,
+        "overruns": 28,
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslAtlasDrive_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Low.model",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Lower Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\atlas_realtime_v1\\cache\\after0",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary High.model",
+          "--seconds",
+          "12",
+          "--scenario",
+          "auto",
+          "--root-per-rpm",
+          "0.008333333333333333"
+        ],
+        "binary_sha256": "5d010e845c72791ac9146bd7a3b3396fb5c8a45e1e943fe040cb754507047f36",
+        "output_sha256": "1cf39928686ee91531fc1e95948524d210b47244e1ca220185c4c08473079ec7"
+      },
+      {
+        "name": "after1",
+        "process_seconds": 4.2697725,
+        "max_block_seconds": 0.00869179983,
+        "overruns": 42,
+        "command": [
+          "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslAtlasDrive_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Low.model",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Lower Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\atlas_realtime_v1\\cache\\after1",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary High.model",
+          "--seconds",
+          "12",
+          "--scenario",
+          "auto",
+          "--root-per-rpm",
+          "0.008333333333333333"
+        ],
+        "binary_sha256": "5d010e845c72791ac9146bd7a3b3396fb5c8a45e1e943fe040cb754507047f36",
+        "output_sha256": "1cf39928686ee91531fc1e95948524d210b47244e1ca220185c4c08473079ec7"
+      },
+      {
+        "name": "before1",
+        "process_seconds": 4.6255288,
+        "max_block_seconds": 0.00897419988,
+        "overruns": 67,
+        "command": [
+          "E:\\VehicleSoundLab\\baselines\\exterior_anchors_v1\\bin\\VslAtlasDrive_probe.exe",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Low.model",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Lower Mid.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\atlas_realtime_v1\\cache\\before1",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model",
+          "--anchor",
+          "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary High.model",
+          "--seconds",
+          "12",
+          "--scenario",
+          "auto",
+          "--root-per-rpm",
+          "0.008333333333333333"
+        ],
+        "binary_sha256": "2502d3f3369a9ea219b2fca8e0216fa16aff55d23d51bc729a420511de024d44",
+        "output_sha256": "1cf39928686ee91531fc1e95948524d210b47244e1ca220185c4c08473079ec7"
+      }
+    ],
+    "source_sha256": "298885214528467d709258af158b6eb1bd7ef8f9a919cc05d322cc43b26bbd4d",
+    "binary_sha256": "9d72769188fcf6ce9fb921564d07ce28d089361dacdb910cafca60f282e02324",
+    "frozen_commit": "0d0308e8866bd14af49a655420c357ddda78089a",
+    "limits": "Same MSVC build/runtime; paired offline timing, not device validation",
+    "paired_mean_before_seconds": 4.62959695,
+    "paired_mean_after_seconds": 4.262768555,
+    "processing_speedup": 1.086054025750408,
+    "verifier_sha256": "23c0401dba78de302be9111df60c504356f6d7920709cc0a52a046690da5cce5"
+  },
+  "device": [
+    {
+      "name": "bench",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 288000,
+      "blocks": 563,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 4.05646536,
+      "render_max_ms": 6.9587,
+      "device_seconds": 6,
+      "playback_wall_seconds": 6.0121963,
+      "startup_seconds": 0.0679964,
+      "peak": 0.222836047,
+      "stop_frame": 18446744073709551615,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "adopted_controls": 4,
+      "wav_sha256": "88edc6efe7cca485ed84fb581b0abdb024aafe32d3c54997ae88891f02159ba8"
+    },
+    {
+      "name": "pedals",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 576000,
+      "blocks": 1125,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 3.53554187,
+      "render_max_ms": 6.9556,
+      "device_seconds": 12,
+      "playback_wall_seconds": 12.0149464,
+      "startup_seconds": 0.0125687,
+      "peak": 0.217700914,
+      "stop_frame": 18446744073709551615,
+      "shifts": 2,
+      "overruns": 1,
+      "trace_overflow": 0,
+      "adopted_controls": 8,
+      "wav_sha256": "9dcc8b75877afe2799fc7e5d4e168825483f702e5db658263d044f9d5ce4e179"
+    },
+    {
+      "name": "stopped",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 25088,
+      "blocks": 49,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 2.66458776,
+      "render_max_ms": 5.2176,
+      "device_seconds": 0.522666667,
+      "playback_wall_seconds": 0.536172,
+      "startup_seconds": 0.0127723,
+      "peak": 0.0799553394,
+      "stop_frame": 24576,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "adopted_controls": 1,
+      "wav_sha256": "170ea010b0750a17cd1aae23414163b7670e6d446b102a15646ecd9714cfb2d3"
+    },
+    {
+      "name": "cabin_restart",
+      "muted": true,
+      "healthy": true,
+      "offline_float_equal": true,
+      "frames": 48000,
+      "blocks": 94,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_mean_ms": 2.71192979,
+      "render_max_ms": 4.4968,
+      "device_seconds": 1,
+      "playback_wall_seconds": 1.0125388,
+      "startup_seconds": 0.010682,
+      "peak": 0.0941339582,
+      "stop_frame": 18446744073709551615,
+      "shifts": 0,
+      "overruns": 0,
+      "trace_overflow": 0,
+      "adopted_controls": 1,
+      "wav_sha256": "d36bd26246dd5fa9fe41c012e6b9be20f59eb8542926f7d77225dce40b97445c"
+    }
+  ],
+  "ui": {
+    "result": "pass",
+    "muted": true,
+    "no_autoplay": true,
+    "bench_rpm_live": true,
+    "transport": true,
+    "context_switch_stops_playback": true,
+    "unrelated_controls_preserved": true,
+    "mode_enablement": true,
+    "window_geometry": [
+      580,
+      776
+    ],
+    "binary_sha256": "d3cf23d8b784b0c74280b7fef01d2121c09a7315518a51199853fc372b0c0bf4",
+    "verifier_sha256": "f07dbb5f20fd1691de768af0988fdc26e2622f3496760efe4ea465f1907af637"
+  },
+  "test_count": 30,
+  "test_log_sha256": "b80137e26ec75e7b7056422253c0b2e61967dbcee46ce1212725cfac11a9e4fd",
+  "c_index_rows": 375,
+  "c_index_sha256": "b81d5c32c9eb09f27f469aa1804cbe529ed961ab96ecc31e4e1763a9fd997a33",
+  "launcher_paths_pass": true,
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\atlas_realtime_v1",
+  "evidence_sha256": {
+    "cache/verification.json": "49f43a4277fac035e52b5ea259b2127fac637019008c8d1c5c11f38ea42e45a1",
+    "device_final/command.json": "45df7bc63d1ce6cc6d5248e9bcaa7246a29758383d0d3919eb020907afb362b3",
+    "ui_final/verification.json": "a0caad0b9640e26e143e29f0fff92307514efc37bb4591c0c6e08ca08d733042",
+    "build_final.log": "a0806a66dd2defb8bc8d7eeac73d54bb2a7e79d705653b719f5213395938e522",
+    "device_final/bench.json": "71634eda018848ef9db33e10a9a7993c105f5b0f0af5e465fab60b83c9334df5",
+    "device_final/bench.wav": "88edc6efe7cca485ed84fb581b0abdb024aafe32d3c54997ae88891f02159ba8",
+    "device_final/cabin_restart.json": "b839e4f378eaee827a472f657b0a8017e8e0e3e2e4aa84f67bdbb53b0c29824d",
+    "device_final/cabin_restart.wav": "d36bd26246dd5fa9fe41c012e6b9be20f59eb8542926f7d77225dce40b97445c",
+    "device_final/pedals.json": "7bb4d89eadb8ca395babd57de460e7e781ca7e08bac5a43743af55452073b0b6",
+    "device_final/pedals.wav": "9dcc8b75877afe2799fc7e5d4e168825483f702e5db658263d044f9d5ce4e179",
+    "device_final/stopped.json": "f4ece28fbf06c8b2d3f2599f275223afc5d98321b3ffa3ce8adf40e077f2ec31",
+    "device_final/stopped.wav": "170ea010b0750a17cd1aae23414163b7670e6d446b102a15646ecd9714cfb2d3",
+    "ui_final/cabin_live.png": "81c7f5a70f3dee44a7a679ef5cc5d5b0e4b2469a1e4bf28d42ab2a3aa1a3078c",
+    "ui_final/initial.png": "ded894035ad948e0f061eeadc262aada739a542f09b154aa0a536daa8ddacc0c"
+  },
+  "source_sha256": {
+    "modules/atlas_monitor/CMakeLists.txt": "004a403a3b046420b91a26e34d65bbb18a5f81be9271b3bfdd8989d62f518a09",
+    "modules/atlas_monitor/render.c": "31fbd0bd24a782af5132dd7c0c0f2b58092d87506321bc4f371f102195d6b344",
+    "modules/atlas_monitor/render.h": "9c403bdd804283da97bf93d6be7d69dc7dfeaae5570bd99380307d56127c052c",
+    "modules/win_output/CMakeLists.txt": "b1c7326593c7b91bd51fc029fba91637e1fbb518b9aa82522a84d575ae96f924",
+    "modules/win_output/device.c": "028a7a77f8c2609a9a08ec51b288b14f0f103b739ad5da87ca2028075b847da4",
+    "modules/win_output/device.h": "52e916a9156e8a1965d07227739baa10a1cd8e61c2e400fd3afc1f440a8ab1b7",
+    "modules/sound_dna/CMakeLists.txt": "fac886357de3e4ec2af1f56da2403a325add2545063ade2167da97c669189fc0",
+    "modules/sound_dna/oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+    "modules/sound_dna/oscillator.h": "46897bb43696cbb27ef052f4f50d0a8498492e73942341e11a23c3ff409b6c92",
+    "modules/sound_dna/profile.c": "a4fb7e89cdbc88fb3ba94414c53694e4ee267d6d49dd1088e4fe486a4a2a97f7",
+    "modules/sound_dna/profile.h": "cc748aac70e297eea04ef4075631f37c93204921fcd3085dcb42fa8bfd1f397c",
+    "modules/sound_dna/texture.c": "298885214528467d709258af158b6eb1bd7ef8f9a919cc05d322cc43b26bbd4d",
+    "modules/sound_dna/texture.h": "d394d967d9ad9e22dd8e9c8163db323c3b0e6d6e3cccb6c33d0214add806a7ea",
+    "modules/sound_dna/voice.c": "360ed4efd0bf1c0eb3f6e7d28d24c3e6a852ac22e09c7b6b3909105ad882302c",
+    "modules/sound_dna/voice.h": "23dbb55a701471ac6522d9c28c5903eeff755168acad53094eeb0b2f05d492b8",
+    "experiments/atlas_monitor_v1/audio.c": "7c56cfc207fa2867c6b20a4139d303757803a260386593d8e61b662ed452f9f3",
+    "experiments/atlas_monitor_v1/audio.h": "ccbda5820350e886dbaa6b4e0423e606f37d292fa3ce0b43cfe3721b4edfe100",
+    "experiments/atlas_monitor_v1/checks.c": "e40786987e4b5e99f84bc9f61d9af37bf4ba2efd5422e82fde6e70d077d6b2c7",
+    "experiments/atlas_monitor_v1/models.c": "7b4d38804586e26cfafbd64397cd7c7a2b52728e28f457f075e2ca751b257c07",
+    "experiments/atlas_monitor_v1/models.h": "8da850f85d1f6df2882e3cefa686c7a49fcde3068bc2168fa6fe0ce48aae6239",
+    "experiments/atlas_monitor_v1/ui.c": "7b4c24f5bab18e50bc3a2ef130f5d7d2538a9752bdbb32abbf746c135d539494",
+    "experiments/atlas_monitor_v1/verify.c": "05d28f1e351c909ba3226df82062e5e7a063446c8f0916678c98736fc9cd7a64"
+  },
+  "binaries_sha256": {
+    "VslAtlasMonitor.exe": "d3cf23d8b784b0c74280b7fef01d2121c09a7315518a51199853fc372b0c0bf4",
+    "VslAtlasMonitor_device_verify.exe": "2502d03174541e2d2f2bff60801fd51d0adec6b0ed0d16decf0d45cf032d9f95",
+    "VslAtlasDrive_probe.exe": "5d010e845c72791ac9146bd7a3b3396fb5c8a45e1e943fe040cb754507047f36",
+    "VslSoundDna_probe.exe": "9d72769188fcf6ce9fb921564d07ce28d089361dacdb910cafca60f282e02324",
+    "VslSystem.exe": "7959368d8b69533d233a6fe9b48ddf17125491cd8a36eae2c8ef2dbde052b91d"
+  },
+  "limits": [
+    "Short muted stereo device test; no long-run or physical loudspeaker acceptance",
+    "A4/E2 timbres unaccepted; sparse state/load coverage; A root/RPM hypothesis",
+    "Only DNA and optional legacy events; independent LF/intake/noise absent",
+    "Bounded debug controls are not a production take/replay format"
+  ]
+}

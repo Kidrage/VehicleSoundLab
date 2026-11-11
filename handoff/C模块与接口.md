@@ -12,6 +12,8 @@
 
 ## 驾驶主线：DSP / App 0.20.0
 
+最新原生接入：`modules/atlas_monitor/render.*` 在新驾驶链外增加传输淡化，`modules/win_output/device.*` 负责stereo设备队列，`experiments/atlas_monitor_v1/{models,audio,ui}.*` 分开管理模型／音频线程／控件。入口 `am_render_init/set/process`；快捷启动 `Launch-DNA-Drive.cmd`。30项回归及短时实际静音设备／控件检查通过，源和控制采用记录可离线逐样本复现；长期稳定性、新工况音色和产品录制格式仍待完成。见[模块图与设备记录](../research/DNA驾驶原生监听V1.md)。
+
 | 责任 | 主要 C 文件 | 读写边界 |
 |---|---|---|
 | 桌面 UI、预设、输入 | `src/app/main.c`、`drive_panel.c`、`driver_keys.c`、`tuning.c`、`preset.c` | 将控件和键盘映射为 `VslParams`。UI 不积分驾驶时间。 |

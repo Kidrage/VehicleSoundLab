@@ -1,0 +1,6 @@
+add_library(win_output STATIC device.c)
+target_include_directories(win_output PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(win_output PUBLIC winmm avrt)
+if(MSVC)
+  target_compile_options(win_output PRIVATE /W4 /we4013 /utf-8)
+endif()

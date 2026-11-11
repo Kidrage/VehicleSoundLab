@@ -69,7 +69,20 @@ LIB_ROLES = {
     "voice": "初始化、更新控制与块／逐样本生成",
     "texture": "相关统计幅度变化",
     "oscillator": "固定相位振荡器",
-    "cloud": "低频随机正交 OSC"
+    "cloud": "低频随机正交 OSC",
+    "bank": "多锚点校验、共同周期原点与相位分支",
+    "source": "独立 DNA／低频声源实例",
+    "routing": "观察声道投影与独立对象路由",
+    "scene": "新声源与空间渲染适配",
+    "control": "宿主驾驶输入校验与唯一控制器参数映射",
+    "render": "独立声源的混音与渲染接口",
+    "device": "Windows事件音频队列、调度与设备统计"
+}
+MODULE_LAYERS = {
+    "sound_dna": "独立 Sound DNA", "low_rumble": "独立低频 V2",
+    "dna_scene": "声源／空间适配", "scene_monitor": "联合监听混音",
+    "dna_atlas": "多锚点声源", "atlas_drive": "新 DNA 驾驶适配",
+    "atlas_monitor": "驾驶监听传输包络", "win_output": "Windows 音频输出"
 }
 HOST_ROLES = {
     "ui": "原生监听控件与生命周期",
@@ -78,7 +91,11 @@ HOST_ROLES = {
     "bank": "模型目录与切换",
     "smoke": "设备与 UI 运行验证",
     "probe": "离线探针",
-    "checks": "源级契约检查"
+    "checks": "源级契约检查",
+    "models": "非实时模型载入、验证与切换",
+    "verify": "静音设备验证与控制采用重合成",
+    "recipe": "监听初始参数与配方",
+    "ui_checks": "项目原生控件自检"
 }
 
 
@@ -99,8 +116,17 @@ def code_rows():
             elif directory == "tests":
                 layer, role = "驾驶回归", "根 CMake 的 CTest 源码"
             elif directory == "modules":
-                layer = "独立 Sound DNA" if group == "sound_dna" else "独立低频 V2"
-                owner, role = group, LIB_ROLES[p.stem]
+                layer = MODULE_LAYERS.get(group, "独立 C 模块")
+                owner, role = group, LIB_ROLES.get(p.stem, "模块接口与状态")
+                if group == "atlas_monitor":
+                    role = "驾驶监听启停淡化；驾驶、OSC与空间由下层负责"
+                elif group == "atlas_drive" and p.stem == "render":
+                    role = "唯一驾驶控制器、新DNA、工况包络与空间调度"
+            elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1"):
+                layer = "新声源宿主与验证"
+                owner = {"atlas_drive_v1":"VslAtlasDrive", "dna_scene_v1":"VslDnaScene",
+                         "scene_monitor_v1":"VslSceneMonitor", "atlas_monitor_v1":"VslAtlasMonitor"}[group]
+                role = HOST_ROLES.get(p.stem, "宿主接口或契约验证")
             elif group in ("sustain_monitor_v3","sustain_monitor_v4"):
                 layer, role = "独立监听宿主", HOST_ROLES.get(p.stem, "监听接口")
                 owner = "VslSoundDna" if group.endswith("3") else "VslLowRumble"

@@ -15,6 +15,8 @@ static const HubEntry entries[] = {
      L"\"voices\\dna_bank_v1\\V10 Exterior.model\""},
     {L"新声源联合监听", L"DNA + 相干低频 · 默认直送，空间处理可选",
      L"handoff-build\\bin\\Release\\VslSceneMonitor.exe", L"handoff-build\\bin\\Release\\VslSceneMonitor.exe", NULL},
+    {L"新 DNA 驾驶监听", L"多锚点声纹 + 驾驶控制 · 实验音色与空间监听",
+     L"handoff-build\\bin\\Release\\VslAtlasMonitor.exe", L"handoff-build\\bin\\Release\\VslAtlasMonitor.exe", NULL},
     {L"低频轰鸣 V2", L"实验对照 · 听评偏风声，保留作为研究证据",
      L"build-sustain-monitor-v4\\Release\\sustain_osc_monitor.exe", L"handoff-build\\bin\\Release\\VslLowRumble.exe",
      L"\"voices\\dna_bank_v1\\V10 Exterior.model\" \"voices\\low_rumble_v2\\A Exterior.model\""},

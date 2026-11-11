@@ -34,3 +34,5 @@ DNA使用 `voice.dna_gain`，保留现有工况、负载、启动、换挡切断
 该接口不读取旧take，不更改DSP0.20.0或take schema5。尚未加入原生驾驶UI或设备验证；当前是可重现的C驾驶导出接口。两档模型只覆盖约7276–7782RPM同一车内语境，边界变调、空间及完整驾驶音色尚无用户认可。
 
 后续宿主已扩展为 `FIRST.model SECOND.model PREFIX --anchor NEXT.model`，最多8档、按根频率递增；`--root-per-rpm` 显式选择映射。已有 E 双档命令保留并通过冻结音频回归。新增 `voices/exterior_anchors_v1` 的 A 驻车车外四档使用同一库，但其1/120仅是工程假设，不能转用 E 仪表证据；与已认可 A 移动尾排配方分开。四档运行的5ms超时增多，尚未进入原生驾驶UI，详见[四锚点研究](../../research/驻车车外四锚点V1.md)。
+
+随后新增原生宿主 `experiments/atlas_monitor_v1`，通过 `atlas_monitor` 淡化与 `win_output` stereo队列监听本接口。短设备测试与采用帧重合成通过，模型和工况覆盖限制保留；见[原生接入](../../research/DNA驾驶原生监听V1.md)。
