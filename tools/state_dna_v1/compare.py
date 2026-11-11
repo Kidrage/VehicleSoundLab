@@ -4,10 +4,10 @@ from exterior_clock_v1.warp import warp, polish, carrier_rows, CYCLE
 from sound_dna.windowed import coefficients
 
 
-def describe(audio, source_start, times, roots, start, stop, reference=5):
+def describe(audio, source_start, times, roots, start, stop, reference=5, phase_refiner=polish):
     original, positions, initial = warp(audio, source_start, times, roots, start, stop)
-    normalized, where, correction = polish(audio, source_start, original, positions,
-                                           reference, initial['source_cutoff_hz'])
+    normalized, where, correction = phase_refiner(audio, source_start, original, positions,
+                                                 reference, initial['source_cutoff_hz'])
     rows = coefficients(normalized, 288).reshape(-1, 288, 4)
     complex_rows = rows[:, :, ::2] + 1j*rows[:, :, 1::2]
     power = np.mean(abs(complex_rows)**2, axis=0)
