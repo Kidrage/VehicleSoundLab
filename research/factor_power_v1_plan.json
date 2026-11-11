@@ -1,0 +1,24 @@
+{
+  "sample_rate": 48000,
+  "update_frames": 256,
+  "duration_seconds": 16,
+  "profile_indices": [0,2],
+  "active_harmonic_indices": [25,40,63,99],
+  "log_weights": [[0.15,0.1],[-0.12,0.18],[0.20,-0.05],[-0.10,-0.15]],
+  "carrier_amplitudes_LR": [0.1,0.07],
+  "right_phase": 0.4,
+  "bands": [[1100,1350],[1800,2050],[2800,3200],[4500,4900]],
+  "original_seeds": [11031,62017,95179],
+  "ensemble_seed": 230917,
+  "ensemble_replicates": 512,
+  "quadrature_orders": [8,16],
+  "hermite_order": 16,
+  "tolerances": {
+    "expected_power_absolute": 1e-12,
+    "quadrature_variance_relative": 1e-8,
+    "reconstructed_Welch_error_db": 1e-9,
+    "ensemble_mean_standard_errors": 4,
+    "ensemble_variance_relative": 0.25
+  },
+  "scope": "Diagnose the frozen16s per-run0.5dB failure, without changing its result or threshold. Exact Gaussian moments predict finite mean-envelope-power variance; independent batched simulation and scipy lfilter reconstruction test it. Ensemble envelope moments are not loudness, a full mixed-source or physical engine model, and do not by themselves qualify timbre/C/driver adoption."
+}

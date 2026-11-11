@@ -1,0 +1,17 @@
+{
+  "sample_rate": 48000,
+  "cycle_frames": 1024,
+  "hop": 256,
+  "harmonics": 300,
+  "origins_frames": [0,64,128,192],
+  "windows": [{"name":"rect1","cycles":1,"kind":"rect"},{"name":"hann2","cycles":2,"kind":"hann"},{"name":"hann4","cycles":4,"kind":"hann"}],
+  "known_duration_frames": 384000,
+  "known_noise_seeds": [23117,61927,8121907],
+  "known_noise_relative_rms_db": -25,
+  "known_constant_detune": 0.001,
+  "known_AM_hz": 1.5,
+  "known_AM_log_depth": 0.25,
+  "lags": [1,4,16],
+  "tolerances": {"constant_harmonic_log_motion_db":0.0001,"known_AM_log_error_db":0.04,"direct_DFT_relative":1e-9},
+  "scope": "Frozen amplitude directions projected from one/multi-cycle windows on a common supported center range. Origins are sampling/window sensitivity checks, not independent recordings. Known stationary OSC plus stationary Gaussian noise and detuned OSC impose no source AM; true single-carrier AM is a separate control. Central-bin noise gain differs across windows; results are not interchangeable power budgets or physical modulation measurements. No new fit/runtime model or promotion."
+}
