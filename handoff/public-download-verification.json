@@ -1,0 +1,25 @@
+{
+  "schema": "vsl.public-release-verification/1",
+  "verified_at_utc": "2026-11-11T04:15:55.735615+00:00",
+  "release_id": 441185185,
+  "release_url": "https://github.com/Kidrage/VehicleSoundLab/releases/tag/handoff-2026-11-11",
+  "tag": "handoff-2026-11-11",
+  "published_at": "2026-11-11T04:15:37Z",
+  "assets": 24,
+  "bytes": 19389160812,
+  "all_server_sha256_verified": true,
+  "public_downloads_without_authentication": [
+    {
+      "name": "release-manifest.json",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/release-manifest.json",
+      "bytes": 4175,
+      "sha256": "c122981915ec2febf0557000dd1f59d2fbb999bb8296c86fdf237a93cb3199e0"
+    },
+    {
+      "name": "Restore-Release.py",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/Restore-Release.py",
+      "bytes": 2790,
+      "sha256": "449fbad10a681baecc7b361bbd7a4b68a2a7edf51a7ab3fb829d36b0c86a7706"
+    }
+  ]
+}

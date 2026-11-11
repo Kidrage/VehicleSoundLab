@@ -1,0 +1,176 @@
+{
+  "schema": "vsl.release-upload/1",
+  "url": "https://github.com/Kidrage/VehicleSoundLab/releases/tag/handoff-2026-11-11",
+  "tag": "handoff-2026-11-11",
+  "all_server_sha256_verified": true,
+  "assets": [
+    {
+      "name": "01-system.zip",
+      "bytes": 164366851,
+      "sha256": "5fe2627819c308c6db7b9d1ec8b8599d5fd4152cbfbadbd500631b3bb10480f8",
+      "server_digest": "sha256:5fe2627819c308c6db7b9d1ec8b8599d5fd4152cbfbadbd500631b3bb10480f8",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/01-system.zip"
+    },
+    {
+      "name": "02-history.zip.part01",
+      "bytes": 2139095040,
+      "sha256": "e8d44ff723d93102334cee2a74ccc539947a055946fa0f113fc8ccf1742c3ddc",
+      "server_digest": "sha256:e8d44ff723d93102334cee2a74ccc539947a055946fa0f113fc8ccf1742c3ddc",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/02-history.zip.part01"
+    },
+    {
+      "name": "02-history.zip.part02",
+      "bytes": 1509392040,
+      "sha256": "fbb66a2a82013570106286b86bc30f7a2136bd6283ebeaaa82da421046845717",
+      "server_digest": "sha256:fbb66a2a82013570106286b86bc30f7a2136bd6283ebeaaa82da421046845717",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/02-history.zip.part02"
+    },
+    {
+      "name": "03-references.zip.part01",
+      "bytes": 2139095040,
+      "sha256": "bd03e04d61fcddfb622493c0c67997ce3ec6643e8ffe4b8466f51e7c0a719819",
+      "server_digest": "sha256:bd03e04d61fcddfb622493c0c67997ce3ec6643e8ffe4b8466f51e7c0a719819",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/03-references.zip.part01"
+    },
+    {
+      "name": "03-references.zip.part02",
+      "bytes": 54103641,
+      "sha256": "214e1ebb12cea35adf177c75e6b2235126746edbd966e79d59ec33c36697a5a4",
+      "server_digest": "sha256:214e1ebb12cea35adf177c75e6b2235126746edbd966e79d59ec33c36697a5a4",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/03-references.zip.part02"
+    },
+    {
+      "name": "04-renders-01.zip.part01",
+      "bytes": 2139095040,
+      "sha256": "abcb45945965d61cab4b5f851e2dff000674f11c5cd60ad61c0da9f7092e8b0c",
+      "server_digest": "sha256:abcb45945965d61cab4b5f851e2dff000674f11c5cd60ad61c0da9f7092e8b0c",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-01.zip.part01"
+    },
+    {
+      "name": "04-renders-01.zip.part02",
+      "bytes": 1955468895,
+      "sha256": "25a65ad68f8befaeda12827db5aaa0bcdfd887da15a2802403da5fe73dd609ed",
+      "server_digest": "sha256:25a65ad68f8befaeda12827db5aaa0bcdfd887da15a2802403da5fe73dd609ed",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-01.zip.part02"
+    },
+    {
+      "name": "04-renders-02.zip.part01",
+      "bytes": 2139095040,
+      "sha256": "4527d46152d2f04ac77a24e25e5b96b10d646f2ab394f0b63ae4524998c1c190",
+      "server_digest": "sha256:4527d46152d2f04ac77a24e25e5b96b10d646f2ab394f0b63ae4524998c1c190",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-02.zip.part01"
+    },
+    {
+      "name": "04-renders-02.zip.part02",
+      "bytes": 2045466596,
+      "sha256": "1f541f61debea8add5eef0e6969994f530de30b3143c96f20c90b5ffeed8ddd7",
+      "server_digest": "sha256:1f541f61debea8add5eef0e6969994f530de30b3143c96f20c90b5ffeed8ddd7",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-02.zip.part02"
+    },
+    {
+      "name": "04-renders-03.zip.part01",
+      "bytes": 2139095040,
+      "sha256": "c7e843a66a1e4a93d027d7491cab4e9d466982779b0e5f5df85e2d69281c1eff",
+      "server_digest": "sha256:c7e843a66a1e4a93d027d7491cab4e9d466982779b0e5f5df85e2d69281c1eff",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-03.zip.part01"
+    },
+    {
+      "name": "04-renders-03.zip.part02",
+      "bytes": 2008335960,
+      "sha256": "95fdea9a907c4e69a6fb50e7684c1c03a5273887d89df9e5b0427f93fe757273",
+      "server_digest": "sha256:95fdea9a907c4e69a6fb50e7684c1c03a5273887d89df9e5b0427f93fe757273",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-03.zip.part02"
+    },
+    {
+      "name": "04-renders-04.zip",
+      "bytes": 786145247,
+      "sha256": "89d011d95fabbbfa0786b9dbcb97fe65bda7dfea8f7ac6aaf559cb25b01f7aaa",
+      "server_digest": "sha256:89d011d95fabbbfa0786b9dbcb97fe65bda7dfea8f7ac6aaf559cb25b01f7aaa",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/04-renders-04.zip"
+    },
+    {
+      "name": "05-analysis-dependencies.zip",
+      "bytes": 169722649,
+      "sha256": "0255a2276893d2d803c132abbe19eed3d8bb6c8eb99782efb8441c842eb5d0b0",
+      "server_digest": "sha256:0255a2276893d2d803c132abbe19eed3d8bb6c8eb99782efb8441c842eb5d0b0",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/05-analysis-dependencies.zip"
+    },
+    {
+      "name": "evidence-index.json",
+      "bytes": 1752,
+      "sha256": "7084412e6a2a0e5ef6aead776dc7dfe6af08105b2d1011579d518a421813b73d",
+      "server_digest": "sha256:7084412e6a2a0e5ef6aead776dc7dfe6af08105b2d1011579d518a421813b73d",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/evidence-index.json"
+    },
+    {
+      "name": "package-index.json",
+      "bytes": 2545,
+      "sha256": "866fea8fd611a19bc6da6325aff62fbf6c3aedb2617f200f861b3e5abb2da2f7",
+      "server_digest": "sha256:866fea8fd611a19bc6da6325aff62fbf6c3aedb2617f200f861b3e5abb2da2f7",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/package-index.json"
+    },
+    {
+      "name": "README-RESTORE.md",
+      "bytes": 1644,
+      "sha256": "7e99a5c4b47a0d3b536249f832ae764f087b8e65fcba3755f708047875f280ab",
+      "server_digest": "sha256:7e99a5c4b47a0d3b536249f832ae764f087b8e65fcba3755f708047875f280ab",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/README-RESTORE.md"
+    },
+    {
+      "name": "release-manifest.json",
+      "bytes": 4175,
+      "sha256": "c122981915ec2febf0557000dd1f59d2fbb999bb8296c86fdf237a93cb3199e0",
+      "server_digest": "sha256:c122981915ec2febf0557000dd1f59d2fbb999bb8296c86fdf237a93cb3199e0",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/release-manifest.json"
+    },
+    {
+      "name": "RELEASE-NOTES.md",
+      "bytes": 1053,
+      "sha256": "16ef88fa76dbb9b53005d59ddd2f2887674bf36162f7640c5237d3b0e91ca0c9",
+      "server_digest": "sha256:16ef88fa76dbb9b53005d59ddd2f2887674bf36162f7640c5237d3b0e91ca0c9",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/RELEASE-NOTES.md"
+    },
+    {
+      "name": "Restore-Handoff.py",
+      "bytes": 3376,
+      "sha256": "3db72461a52c4ff021f6c0cd0113c05bd67b62c58330579e7851c3f1ac0ef574",
+      "server_digest": "sha256:3db72461a52c4ff021f6c0cd0113c05bd67b62c58330579e7851c3f1ac0ef574",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/Restore-Handoff.py"
+    },
+    {
+      "name": "Restore-Release.py",
+      "bytes": 2790,
+      "sha256": "449fbad10a681baecc7b361bbd7a4b68a2a7edf51a7ab3fb829d36b0c86a7706",
+      "server_digest": "sha256:449fbad10a681baecc7b361bbd7a4b68a2a7edf51a7ab3fb829d36b0c86a7706",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/Restore-Release.py"
+    },
+    {
+      "name": "SHA256SUMS-release.txt",
+      "bytes": 1176,
+      "sha256": "4cdb6cf9fbe9c350fd03752b506f89d8a77f2a7549f0c5fe0c3503e22d393d2f",
+      "server_digest": "sha256:4cdb6cf9fbe9c350fd03752b506f89d8a77f2a7549f0c5fe0c3503e22d393d2f",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/SHA256SUMS-release.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 684,
+      "sha256": "7637a901b2b5e0d53f6c8a937a5dda39a8050b82f8537626ef2f1663f20ad0b5",
+      "server_digest": "sha256:7637a901b2b5e0d53f6c8a937a5dda39a8050b82f8537626ef2f1663f20ad0b5",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/SHA256SUMS.txt"
+    },
+    {
+      "name": "verification.zip",
+      "bytes": 660711,
+      "sha256": "1bc6cce5dc904ca1439806f38dfa7541308810bb404840bd09c27f35a01af4ab",
+      "server_digest": "sha256:1bc6cce5dc904ca1439806f38dfa7541308810bb404840bd09c27f35a01af4ab",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/verification.zip"
+    },
+    {
+      "name": "asset-manifest.json",
+      "bytes": 3827,
+      "sha256": "2c0078c3d480a42fbfe6af5b907980ad073fe76fd0518ea89007ff1d2db76097",
+      "server_digest": "sha256:2c0078c3d480a42fbfe6af5b907980ad073fe76fd0518ea89007ff1d2db76097",
+      "url": "https://github.com/Kidrage/VehicleSoundLab/releases/download/handoff-2026-11-11/asset-manifest.json"
+    }
+  ]
+}
