@@ -35,7 +35,8 @@ def main():
     qa = json.loads((experiment / 'browser_qa.json').read_text())
     assert qa['status'] == 'pass' and qa['loaded_players'] == 8 and qa['muted']
     tests = repository / 'handoff-build/Testing/Temporary/LastTest.log'
-    assert tests.read_text(encoding='utf-8').count('Test Passed.') == 26
+    # CTest logs can contain Windows-localized output; status markers are ASCII.
+    assert tests.read_bytes().count(b'Test Passed.') == 26
     destination = workspace / 'baselines/dna_scene_v1'
     destination.mkdir(exist_ok=False)
     shutil.copytree(experiment, destination / 'evidence')
