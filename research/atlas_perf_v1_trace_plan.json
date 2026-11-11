@@ -1,0 +1,9 @@
+{
+  "repeats": 1,
+  "cases": [
+    {"name":"A_full240_capture","bank":0,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16},
+    {"name":"E_full240_capture","bank":1,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16},
+    {"name":"A_dna","bank":0,"mode":"dna","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"E_dna","bank":1,"mode":"dna","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4}
+  ]
+}

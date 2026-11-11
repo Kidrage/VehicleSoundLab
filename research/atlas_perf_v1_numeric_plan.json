@@ -1,0 +1,9 @@
+{
+  "repeats": 1,
+  "cases": [
+    {"name":"A_normal","bank":0,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16,"flush":0},
+    {"name":"A_flush","bank":0,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16,"flush":1},
+    {"name":"E_normal","bank":1,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16,"flush":0},
+    {"name":"E_flush","bank":1,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16,"flush":1}
+  ]
+}

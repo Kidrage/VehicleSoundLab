@@ -1,0 +1,20 @@
+{
+  "repeats": 1,
+  "cases": [
+    {"name":"A_full240","bank":0,"mode":"full","block":240,"channels":2,"capture":0,"propagation":0,"seconds":16},
+    {"name":"A_full240_capture","bank":0,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16},
+    {"name":"A_full512","bank":0,"mode":"full","block":512,"channels":2,"capture":0,"propagation":0,"seconds":16},
+    {"name":"A_full12_propagation","bank":0,"mode":"full","block":240,"channels":12,"capture":0,"propagation":1,"seconds":16},
+    {"name":"E_full240","bank":1,"mode":"full","block":240,"channels":2,"capture":0,"propagation":0,"seconds":16},
+    {"name":"E_full240_capture","bank":1,"mode":"full","block":240,"channels":2,"capture":1,"propagation":0,"seconds":16},
+    {"name":"E_full512","bank":1,"mode":"full","block":512,"channels":2,"capture":0,"propagation":0,"seconds":16},
+    {"name":"E_full12_propagation","bank":1,"mode":"full","block":240,"channels":12,"capture":0,"propagation":1,"seconds":16},
+    {"name":"A_dna","bank":0,"mode":"dna","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"E_dna","bank":1,"mode":"dna","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"A_residual","bank":0,"mode":"residual","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"E_residual","bank":1,"mode":"residual","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"spatial_off","bank":0,"mode":"spatial","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4},
+    {"name":"spatial_on","bank":0,"mode":"spatial","block":240,"channels":2,"capture":0,"propagation":1,"seconds":4},
+    {"name":"auxiliary","bank":0,"mode":"auxiliary","block":240,"channels":2,"capture":0,"propagation":0,"seconds":4}
+  ]
+}

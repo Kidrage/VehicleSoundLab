@@ -32,7 +32,7 @@ static void sample(SaVoice *v,double out[2],double body[2],const HbBand *band,co
     double blend=0,cl=cos(v->phase),sl=sin(v->phase),base_c=cl,base_s=sl;
     v->root_hz+=v->follow*(v->root_target-v->root_hz);
     v->detail+=v->follow*(v->detail_target-v->detail);v->gain+=v->follow*(v->gain_target-v->gain);
-    for (a=0;a<b->count;++a) sd_texture_prepare(&v->texture[a],b->profile[a]);
+    sd_texture_prepare_batch(v->texture,b->profile,b->count);
     /* Followers approach a boundary asymptotically; sub-nanohertz rounding
        must not label a stationary endpoint as uncovered forever. */
     v->coverage=v->root_hz<b->profile[0]->base_hz-1e-8?-1:v->root_hz>b->profile[b->count-1]->base_hz+1e-8?1:0;

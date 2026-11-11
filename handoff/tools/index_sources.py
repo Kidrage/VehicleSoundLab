@@ -132,6 +132,10 @@ def code_rows():
                 elif group == "residual_motion":
                     role = {"profile":"事务模型读取、配对与正幅度边界", "envelope":"独立AR幅度因子、插值与预期功率补偿",
                             "carrier":"同一OSC推进、原始与幅度变化双输出", "voice":"模型拥有、控制与持续生成"}.get(p.stem, role)
+                elif group == "sound_dna" and p.stem == "texture":
+                    role = "相关幅度统计；已相同创新批处理及完整状态保留"
+                elif group == "dna_atlas" and p.stem == "voice":
+                    role = "单组OSC插值；调用兼容texture批处理"
             elif directory == "experiments" and group in ("atlas_drive_v1","dna_scene_v1","scene_monitor_v1","atlas_monitor_v1","residual_osc_v1","residual_atlas_v1","residual_motion_v1"):
                 layer = "新声源宿主与验证"
                 owner = {"atlas_drive_v1":"VslAtlasDrive", "dna_scene_v1":"VslDnaScene",
@@ -171,6 +175,10 @@ def code_rows():
                 layer, owner, role = "诊断谐波声线轴", "osc_colour", "事务配方编译／幅度单调跟随"
             elif group in ("drive_aux", "drive_aux_v1"):
                 layer, owner, role = "驾驶辅助声层", "drive_aux / VslDriveAux_checks", "曲轴／喷油适配、五路机械NVH声层与集成契约"
+            elif group == "atlas_perf_v1":
+                layer = "性能与输出一致性验证"
+                owner = "VslAtlasPerf_probe" if p.stem == "probe" else "VslTextureBatch_checks"
+                role = "Windows离线分块计时／CPU周期／状态轨迹" if p.stem == "probe" else "25组批处理／串行完整状态比较"
             yield rel, layer, owner, role, digest(p)
 
 
