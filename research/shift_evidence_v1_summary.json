@@ -1,0 +1,438 @@
+{
+  "schema": "vsl.shift-evidence-published/1",
+  "date": "2026-11-11",
+  "result": "pass",
+  "base_commit": "78b62df4014606ad6c79a965f5deaf55151286f9",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\shift_evidence_v1",
+  "provenance": {
+    "segment_id": "E_corsa_second_context",
+    "source": "E",
+    "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+    "master": "references/clean/E_decoded_float.wav",
+    "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+    "seconds": [
+      82,
+      100
+    ],
+    "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+    "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+    "not_established": [
+      "exact shift/cut timestamps",
+      "continuous unedited run",
+      "exact RPM curve",
+      "pedal/load",
+      "ECU or phone synchronization",
+      "external exhaust spectrum"
+    ]
+  },
+  "band_hz": [
+    [
+      28,
+      120
+    ],
+    [
+      120,
+      400
+    ],
+    [
+      400,
+      1200
+    ],
+    [
+      1200,
+      3000
+    ],
+    [
+      3000,
+      8000
+    ],
+    [
+      8000,
+      16000
+    ]
+  ],
+  "relative_bands": [
+    [
+      0.5,
+      2.5
+    ],
+    [
+      2.5,
+      6.5
+    ],
+    [
+      6.5,
+      18.5
+    ],
+    [
+      18.5,
+      45.5
+    ],
+    [
+      45.5,
+      110.5
+    ],
+    [
+      110.5,
+      180.5
+    ]
+  ],
+  "events": [
+    {
+      "gears": [
+        1,
+        2
+      ],
+      "marker_seconds": 83.405,
+      "reference_ratio": 0.7813283184400925,
+      "acoustic_25_75_seconds": 0.10000000000000853,
+      "fixed_band_power_change_db": [
+        8.6679717261605,
+        -1.6838299872706133,
+        -2.9749553051212407,
+        -5.500945254677326,
+        -1.7173163155585136,
+        -7.633525573883468
+      ],
+      "relative_band_power_change_db": [
+        3.205786034340697,
+        -0.4086258835446229,
+        -2.5032845598913545,
+        -2.986644048493245,
+        -2.371556498618377,
+        26.242787198677636
+      ],
+      "pitch_matched_ascent_found": false
+    },
+    {
+      "gears": [
+        2,
+        3
+      ],
+      "marker_seconds": 84.58,
+      "reference_ratio": 0.8036647235022807,
+      "acoustic_25_75_seconds": 0.07000000000000739,
+      "fixed_band_power_change_db": [
+        -0.17821779363587695,
+        2.088300869611592,
+        -0.12238885256114224,
+        -4.569893987845931,
+        -7.963678861871278,
+        -6.699661721046742
+      ],
+      "relative_band_power_change_db": [
+        -4.151953401137202,
+        4.348795898293076,
+        0.08977239789354372,
+        -2.729560689356715,
+        -5.3034652409673555,
+        3.4330677318454033
+      ],
+      "pitch_matched_ascent_found": false
+    },
+    {
+      "gears": [
+        3,
+        4
+      ],
+      "marker_seconds": 86.24,
+      "reference_ratio": 0.8179828702127112,
+      "acoustic_25_75_seconds": 0.05500000000000682,
+      "fixed_band_power_change_db": [
+        -0.2573379688993875,
+        2.7368513674866746,
+        0.40700156125718157,
+        -2.9625023109947297,
+        -6.993073267337859,
+        -5.2902438662728
+      ],
+      "relative_band_power_change_db": [
+        -1.404364596896948,
+        3.4039321628050527,
+        1.1384252458330304,
+        -0.7342240575171781,
+        -4.406576580591845,
+        2.6133569899940534
+      ],
+      "pitch_matched_ascent_found": false
+    },
+    {
+      "gears": [
+        4,
+        5
+      ],
+      "marker_seconds": 88.45,
+      "reference_ratio": 0.804149994043914,
+      "acoustic_25_75_seconds": 0.060000000000002274,
+      "fixed_band_power_change_db": [
+        2.1681921580381665,
+        1.4275755963428038,
+        -1.3113185973286277,
+        -4.831450106175787,
+        -6.059813068196269,
+        -5.660319670641835
+      ],
+      "relative_band_power_change_db": [
+        -0.606245755833114,
+        2.672681721036483,
+        -0.9464574833772332,
+        -2.1600212814758195,
+        -3.232914260938175,
+        2.417857388325359
+      ],
+      "pitch_matched_ascent_found": false
+    },
+    {
+      "gears": [
+        5,
+        6
+      ],
+      "marker_seconds": 92.845,
+      "reference_ratio": 0.8122506730527842,
+      "acoustic_25_75_seconds": 0.05499999999999261,
+      "fixed_band_power_change_db": [
+        -1.8598630108769407,
+        1.7958476280921638,
+        -2.0897006560287372,
+        -4.482000669128318,
+        -5.084291391477437,
+        -3.186150528952843
+      ],
+      "relative_band_power_change_db": [
+        -2.646316731398111,
+        3.0466375763667735,
+        -1.746879625553822,
+        -2.0773264998477043,
+        -2.5920491037046163,
+        5.177405992794054
+      ],
+      "pitch_matched_ascent_found": true
+    }
+  ],
+  "delay": {
+    "sign": "display boundary minus acoustic-descent marker; positive = display later",
+    "per_event_seconds": [
+      [
+        -0.15500000000000114,
+        0.34499999999999886
+      ],
+      [
+        0.1700000000000017,
+        0.6700000000000017
+      ],
+      [
+        0.2600000000000051,
+        0.5100000000000051
+      ],
+      [
+        0.29999999999999716,
+        0.5499999999999972
+      ],
+      [
+        -0.09499999999999886,
+        0.40500000000000114
+      ]
+    ],
+    "common_intersection_seconds": [
+      0.29999999999999716,
+      0.34499999999999886
+    ],
+    "common_delay_feasible": true,
+    "leave_one_out": [
+      {
+        "held_out_gear": 2,
+        "training_intersection_seconds": [
+          0.29999999999999716,
+          0.40500000000000114
+        ],
+        "midpoint_prediction_seconds": 0.35249999999999915,
+        "held_out_interval_seconds": [
+          -0.15500000000000114,
+          0.34499999999999886
+        ],
+        "midpoint_inside_held_out": false,
+        "any_training_delay_inside_held_out": true
+      },
+      {
+        "held_out_gear": 3,
+        "training_intersection_seconds": [
+          0.29999999999999716,
+          0.34499999999999886
+        ],
+        "midpoint_prediction_seconds": 0.322499999999998,
+        "held_out_interval_seconds": [
+          0.1700000000000017,
+          0.6700000000000017
+        ],
+        "midpoint_inside_held_out": true,
+        "any_training_delay_inside_held_out": true
+      },
+      {
+        "held_out_gear": 4,
+        "training_intersection_seconds": [
+          0.29999999999999716,
+          0.34499999999999886
+        ],
+        "midpoint_prediction_seconds": 0.322499999999998,
+        "held_out_interval_seconds": [
+          0.2600000000000051,
+          0.5100000000000051
+        ],
+        "midpoint_inside_held_out": true,
+        "any_training_delay_inside_held_out": true
+      },
+      {
+        "held_out_gear": 5,
+        "training_intersection_seconds": [
+          0.2600000000000051,
+          0.34499999999999886
+        ],
+        "midpoint_prediction_seconds": 0.302500000000002,
+        "held_out_interval_seconds": [
+          0.29999999999999716,
+          0.5499999999999972
+        ],
+        "midpoint_inside_held_out": true,
+        "any_training_delay_inside_held_out": true
+      },
+      {
+        "held_out_gear": 6,
+        "training_intersection_seconds": [
+          0.29999999999999716,
+          0.34499999999999886
+        ],
+        "midpoint_prediction_seconds": 0.322499999999998,
+        "held_out_interval_seconds": [
+          -0.09499999999999886,
+          0.40500000000000114
+        ],
+        "midpoint_inside_held_out": true,
+        "any_training_delay_inside_held_out": true
+      }
+    ],
+    "interpretation": "Combined A/V and display latency only; not separately identifiable, not actuator timing"
+  },
+  "short_window_note": "40/60ms observed peaks are conditioned on80ms path, not independent continuous tracks",
+  "windows": [
+    {
+      "window_ms": 80,
+      "measured_peak_fraction": 1.0,
+      "two_other_line_support_fraction": 0.8247843849296413,
+      "full_continuity_status": "connected_observed_family"
+    },
+    {
+      "window_ms": 60,
+      "measured_peak_fraction": 0.9981842941443486,
+      "two_other_line_support_fraction": 0.7076713572401271,
+      "full_continuity_status": "no_connected_family"
+    },
+    {
+      "window_ms": 40,
+      "measured_peak_fraction": 0.9931911030413073,
+      "two_other_line_support_fraction": 0.4625510667271902,
+      "full_continuity_status": "no_connected_family"
+    }
+  ],
+  "maximum_marker_spread_seconds": 0.0049999999999954525,
+  "controls": {
+    "known_steady_clock_max_error_hz": 0.003162955507498566,
+    "known_drop_marker": {
+      "marker_seconds": 1.54,
+      "before_hz": 320.8107603388926,
+      "after_hz": 260.7059387485713,
+      "ratio": 0.8126471146827221,
+      "acoustic_25_75_crossing_seconds": [
+        1.48,
+        1.525
+      ],
+      "acoustic_25_75_duration_seconds": 0.04499999999999993
+    },
+    "pitch_only_fixed_3k_8k_change_db_LR": [
+      -85.16660938424849,
+      -85.16641410494132
+    ],
+    "pitch_only_relative_45p5_110p5_change_db_LR": [
+      -6.502508323828939e-10,
+      -6.506177589839723e-10
+    ],
+    "missing_reference_peak_stays_missing": true,
+    "feasible_and_infeasible_interval_controls": true
+  },
+  "source_sha256": {
+    "tools/analyze_shift_evidence_v1.py": "e04cf459af99b3273c1a0fda9ae57b7184ebb3aca81fd35a245aa2bbbf657bbc",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "tools/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "tools/shift_evidence_v1/timing.py": "77e84ef1729ec1a73d89c030090fc60fcde8a76e6ab7dffd710c49bfa2c14b11",
+    "tools/verify_shift_evidence_v1.py": "54b69e546ad8ee95ae6d1bb8a2bc731952a93b2acb18ea7dbdbe26d490ed3a69",
+    "tools/summarize_shift_evidence_v1.py": "38a8f2a45e46b871924ada56ac5d765489a994674440612963ef254b0033f2e1",
+    "tools/freeze_shift_evidence_v1.py": "0d8b367bcac5c0aa7d3d61addcb4f696bbadbd4f24dac7d3e6adff640c9ae9db"
+  },
+  "evidence_sha256": {
+    "attempt1/report.json": "2d974fa268936fd86efa42cf161e35f1a1c8214d8643a7ebfb26f349236aaf2d",
+    "attempt1/shifts.png": "9b0bfa47279dad0acde2584681104c63a11893d049005e92d737f09c886aa104",
+    "attempt1/window_80.npz": "75ff09c8d267231221b10a65e8fa9389eeecf54a3c0e58b0dd14907844ce8de7",
+    "attempt2/report.json": "31f0140350f63684a619341ab0141791b8c8772d7296170b65d53e5867a20e4f",
+    "attempt2/shifts.png": "e5c32adab1cdd034b35af6e74a3483749d1341d68f957215d3361f988efab758",
+    "attempt2/window_40.npz": "cb3268bdb5048b462b7c34f815d0bfa0b623408bf522c5f1135f1d48d5227b04",
+    "attempt2/window_60.npz": "2b1447a08ce6d04141d9c6550d6f2d45a28a7ad361d893f7c203fec128aac7c6",
+    "attempt2/window_80.npz": "75ff09c8d267231221b10a65e8fa9389eeecf54a3c0e58b0dd14907844ce8de7",
+    "attempt3/report.json": "493a97ab806f565d3cbf954e313f679ba6015a0a05f0467fceba1dea8ee5d3e3",
+    "attempt3/shifts.png": "e5c32adab1cdd034b35af6e74a3483749d1341d68f957215d3361f988efab758",
+    "attempt3/source/analyze_shift_evidence_v1.py": "3785c9bce30f2f93fa84270629fb1b8a44616faca29bfb593fa1f376027a0cfb",
+    "attempt3/source/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "attempt3/source/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "attempt3/source/shift_evidence_v1/timing.py": "ac3f5097977d640b5801550256a9106c89d61361ec9c340b2a719bb7acc777c5",
+    "attempt3/source/verify_shift_evidence_v1.py": "54b69e546ad8ee95ae6d1bb8a2bc731952a93b2acb18ea7dbdbe26d490ed3a69",
+    "attempt3/verification_failure.json": "bff1ad9078f6ff8d5d39c9b1970229e6b2821555373cc9a051285b64f6271be1",
+    "attempt3/window_40.npz": "cb3268bdb5048b462b7c34f815d0bfa0b623408bf522c5f1135f1d48d5227b04",
+    "attempt3/window_60.npz": "2b1447a08ce6d04141d9c6550d6f2d45a28a7ad361d893f7c203fec128aac7c6",
+    "attempt3/window_80.npz": "75ff09c8d267231221b10a65e8fa9389eeecf54a3c0e58b0dd14907844ce8de7",
+    "attempt4/report.json": "42b85109e705c4804c79e69a4ef11dc2d12c372a5e44ebce965765c94f1b3e11",
+    "attempt4/shifts.png": "e5c32adab1cdd034b35af6e74a3483749d1341d68f957215d3361f988efab758",
+    "attempt4/verification.json": "50c0ed222bad0cf47101ae9e06490d54db25ff4d432f7ee339653fd3d5a80453",
+    "attempt4/window_40.npz": "cb3268bdb5048b462b7c34f815d0bfa0b623408bf522c5f1135f1d48d5227b04",
+    "attempt4/window_60.npz": "2b1447a08ce6d04141d9c6550d6f2d45a28a7ad361d893f7c203fec128aac7c6",
+    "attempt4/window_80.npz": "75ff09c8d267231221b10a65e8fa9389eeecf54a3c0e58b0dd14907844ce8de7",
+    "iterations.json": "ba8bdfa0d1a26f42f70e4b29c9161e27c54291ddfa6e792995ddc9917c573ab6",
+    "publication_crlf.json": "046aff93a11e25d9587f5f7c28eada6f99dd3e958e53924c5a724e5b27e8ff04",
+    "publication_crlf_source.py": "bdccf6861ca0e36ad6d1fdbf4539d0a9347af852ba81a5134acf683f74839872",
+    "versioned_sources/attempt1/tools/analyze_shift_evidence_v1.py": "b9651b779bf4c1239eea612029c6b8b3d78a97f99458be5e8f1302f74714c8f4",
+    "versioned_sources/attempt1/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "versioned_sources/attempt1/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "versioned_sources/attempt1/tools/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "versioned_sources/attempt1/tools/shift_evidence_v1/spectrum.py": "3791b02e3fe4508b3dcf2d4cb4a26d8f587a88b533c52674b19fad46afe5a37b",
+    "versioned_sources/attempt1/tools/shift_evidence_v1/timing.py": "61742ce82470e2b65e3475f500297dd28e5f2423b69dbd453d5bdef1fbe49d93",
+    "versioned_sources/attempt2/tools/analyze_shift_evidence_v1.py": "8eab4bce416246297eb1e6b760933e92a6d6e43e1fb55a8542ef4ee5c3175989",
+    "versioned_sources/attempt2/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "versioned_sources/attempt2/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "versioned_sources/attempt2/tools/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "versioned_sources/attempt2/tools/shift_evidence_v1/spectrum.py": "3791b02e3fe4508b3dcf2d4cb4a26d8f587a88b533c52674b19fad46afe5a37b",
+    "versioned_sources/attempt2/tools/shift_evidence_v1/timing.py": "ac3f5097977d640b5801550256a9106c89d61361ec9c340b2a719bb7acc777c5",
+    "versioned_sources/attempt3/tools/analyze_shift_evidence_v1.py": "3785c9bce30f2f93fa84270629fb1b8a44616faca29bfb593fa1f376027a0cfb",
+    "versioned_sources/attempt3/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "versioned_sources/attempt3/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "versioned_sources/attempt3/tools/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "versioned_sources/attempt3/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "versioned_sources/attempt3/tools/shift_evidence_v1/timing.py": "ac3f5097977d640b5801550256a9106c89d61361ec9c340b2a719bb7acc777c5",
+    "versioned_sources/attempt4/tools/analyze_shift_evidence_v1.py": "e04cf459af99b3273c1a0fda9ae57b7184ebb3aca81fd35a245aa2bbbf657bbc",
+    "versioned_sources/attempt4/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "versioned_sources/attempt4/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "versioned_sources/attempt4/tools/shift_evidence_v1/__init__.py": "4ec13f3461d01ddb81f401d6631dbf12b9ad24f86d35bc9a1d6c18176afe170c",
+    "versioned_sources/attempt4/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "versioned_sources/attempt4/tools/shift_evidence_v1/timing.py": "77e84ef1729ec1a73d89c030090fc60fcde8a76e6ab7dffd710c49bfa2c14b11"
+  },
+  "runtime_changes": false,
+  "human_accepted": false,
+  "limits": [
+    "E cabin, five upshifts only; gear display intervals are coarse",
+    "No independent A/V offset or cluster latency",
+    "No pedal, torque, injector or clutch telemetry",
+    "Band correlation is not physical source separation",
+    "Short Hann windows smear events; FFT padding does not improve time resolution",
+    "Same pitch does not imply same load, speed, gear, position or acoustic path",
+    "No C, runtime model, or accepted baseline changes"
+  ]
+}
