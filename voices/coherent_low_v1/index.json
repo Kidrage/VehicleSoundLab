@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.coherent-low-candidates/1",
+  "status": "Pending listening; independent research profiles, not installed in the default DNA bank",
+  "generator": "modules/sound_dna",
+  "source": "Approved A exterior316.10..317.25s; relative acoustic cycle, not measured RPM",
+  "models": [
+    {
+      "name": "measured_phase.model",
+      "sha256": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895"
+    },
+    {
+      "name": "scrambled_phase.model",
+      "sha256": "b105ca085e6d42d5f2f6de7b7570b96a3357deddb3d28868b1070947f6d93349"
+    }
+  ],
+  "phase_policy": "Fixed short-context complex-mean phases versus per-harmonic rotations; magnitude statistics preserved",
+  "relative_harmonic_weights": [
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0.25
+  ]
+}
