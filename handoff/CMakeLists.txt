@@ -7,11 +7,27 @@ enable_testing()
 add_subdirectory("${VSL_ROOT}" drive)
 add_subdirectory("${VSL_ROOT}/modules/sound_dna" sound-dna)
 add_subdirectory("${VSL_ROOT}/modules/low_rumble" low-rumble)
+add_subdirectory("${VSL_ROOT}/modules/dna_scene" dna-scene)
+
+add_executable(VslDnaScene_probe "${VSL_ROOT}/experiments/dna_scene_v1/probe.c")
+target_link_libraries(VslDnaScene_probe PRIVATE dna_scene)
+add_executable(VslDnaScene_checks
+  "${VSL_ROOT}/experiments/dna_scene_v1/checks.c"
+  "${VSL_ROOT}/experiments/dna_scene_v1/source_checks.c"
+  "${VSL_ROOT}/experiments/dna_scene_v1/spatial_checks.c")
+target_link_libraries(VslDnaScene_checks PRIVATE dna_scene)
+if(MSVC)
+  target_compile_options(VslDnaScene_probe PRIVATE /W4 /we4013 /utf-8)
+  target_compile_options(VslDnaScene_checks PRIVATE /W4 /we4013 /utf-8)
+endif()
+add_test(NAME handoff_dna_scene_contract COMMAND VslDnaScene_checks
+  "${VSL_ROOT}/voices/dna_bank_v1/V10 Exterior.model"
+  "${VSL_ROOT}/voices/coherent_low_v1/measured_phase.model")
 
 function(handoff_output target)
   set_target_properties(${target} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 endfunction()
-foreach(target vsl_render vsl_take_render vsl_spatial_probe)
+foreach(target vsl_render vsl_take_render vsl_spatial_probe VslDnaScene_probe)
   handoff_output(${target})
 endforeach()
 

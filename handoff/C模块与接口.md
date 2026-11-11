@@ -2,6 +2,8 @@
 
 从 `src/core/engine.h` 和 `src/core/engine.c::vsl_process_layout` 开始读驾驶主线；从 `modules/sound_dna/voice.h` 和 `experiments/sustain_monitor_v3/render.c` 开始读声纹实验。两条链路各有入口、模型和运行状态，交接总入口只负责启动。
 
+后续连接层：`modules/dna_scene/{source,routing,scene}.*` 将新DNA／相干低频的独立voice接入现有空间API。入口为 `ds_scene_init/set/process`，离线宿主为 `experiments/dna_scene_v1/probe.c`；初始化借用独占的 `VslEngine` 存储，但不运行旧驾驶或旧DNA。`DsCapture` 分别提供两层raw／增益后观察、直送监听和十源分轨。详见[接口边界](../modules/dna_scene/README.md)。本次还没有完成驾驶工况接入。
+
 ## 驾驶主线：DSP / App 0.20.0
 
 | 责任 | 主要 C 文件 | 读写边界 |

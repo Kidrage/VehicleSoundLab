@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.listening-acceptance/1",
+  "date": "2026-11-11",
+  "experiment": "coherent_low_v1",
+  "user_feedback": "实测相位更像发动机，厚度也改善",
+  "accepted_scope": "A exterior316.10..317.25s-derived fixed-context coherent LF supplement, relative to the magnitude-matched scrambled-phase control",
+  "not_established": ["wide RPM/load/state coverage", "other real engines", "physical source separation", "stereo/7.1.4 spatial integration"],
+  "model": "voices/coherent_low_v1/measured_phase.model",
+  "model_sha256": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895",
+  "dna_model_sha256": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+  "low_scale": 1.6658265329883064,
+  "output_gain": 0.5,
+  "dna_seed": 48271,
+  "low_seed": 48271,
+  "evidence": "E:/VehicleSoundLab/baselines/coherent_low_v1/review.html",
+  "frozen_payload_policy": "Original experiment manifests remain unchanged; this record adds subsequent human feedback"
+}

@@ -1,6 +1,7 @@
 {
   "schema": "vsl.coherent-low-candidates/1",
-  "status": "Pending listening; independent research profiles, not installed in the default DNA bank",
+  "status": "Measured-phase candidate accepted in one fixed-context comparison on2026-11-11; independent profiles, not installed in the default driving engine",
+  "listening_record": "research/coherent_low_v1_acceptance.json",
   "generator": "modules/sound_dna",
   "source": "Approved A exterior316.10..317.25s; relative acoustic cycle, not measured RPM",
   "models": [
