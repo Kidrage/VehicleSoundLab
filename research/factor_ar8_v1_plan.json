@@ -1,0 +1,15 @@
+{
+  "factor_order": 8,
+  "procedural_seeds": [78283,41719,61927],
+  "known_control_seed": 23117,
+  "known_control_observations": 200000,
+  "known_control_lags": [0,1,2,4,8,16,32],
+  "tolerances": {
+    "stationary_covariance_equation_absolute": 1e-10,
+    "known_covariance_absolute": 0.06,
+    "AR1_render_parity_absolute": 1e-12,
+    "legacy_C_absolute": 2e-7,
+    "direct_DFT_relative": 1e-10
+  },
+  "scope": "Offline 8-lag Gaussian factor contrast after cap exclusion. Fit biased finite-target autocovariance by Yule-Walker, reject nonstationary poles, initialize stationary history. Only the twelve common factors change; residual AR1/RNG, RMS amplitudes, fixed harmonic phases, mask and low contribution remain. No physical interpretation of fitted modulation poles or one-cycle analysis artifacts. Same short A target, no held-out recording, C/model-bank/driver integration, or listening acceptance."
+}

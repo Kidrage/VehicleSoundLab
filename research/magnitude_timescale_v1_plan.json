@@ -1,0 +1,26 @@
+{
+  "sample_rate": 48000,
+  "cycle_frames": 1024,
+  "update_frames": 256,
+  "harmonics": 300,
+  "existing_rho_cap": 0.95,
+  "diagnostic_rho_cap": 0.99,
+  "procedural_seeds": [78283,41719,61927],
+  "known_clock_relative_errors": [0,0.001,0.003],
+  "known_clock_error_hz": 1.5,
+  "known_clock_harmonics": 180,
+  "known_clock_source_frames": 168000,
+  "phase_observation_orders": [3,5,7,10],
+  "known_AR_rhos": [0.8,0.99],
+  "known_AR_seed": 8121907,
+  "known_AR_observations": 200000,
+  "tolerances": {
+    "known_AR_rho_absolute": 0.003,
+    "known_exact_clock_magnitude_error_db": 0.02,
+    "known_exact_clock_waveform_error_relative": 0.001,
+    "legacy_C_absolute": 2e-7,
+    "recovered_existing_rho_absolute": 1e-12,
+    "direct_dft_relative": 1e-10
+  },
+  "scope": "Offline sensitivity of the existing amplitude model to its explicit AR cap and to known clock errors. A 0.99 cap is an engineering contrast, not a measured physical time constant. Same short reference and new procedural seeds, no listening acceptance, unseen recording validation, C/model-bank/driver integration or causal source/state identification. Known 0.1/0.3percent clock errors are predeclared synthetic controls, not measured real clock errors."
+}
