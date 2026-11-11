@@ -54,7 +54,7 @@ def main():
             except (OSError,http.client.HTTPException):
                 pass
             log(api_retry=endpoint,attempt=attempt)
-            if attempt==5:
+            if attempt==5 or method=="POST":
                 raise RuntimeError("GitHub API transport failed: "+endpoint)
             time.sleep(2*attempt)
     user=api("user")
@@ -68,11 +68,13 @@ def main():
         if Path(name).name!=name or path.stat().st_size!=row["bytes"]:
             raise ValueError("Local asset identity changed: "+name)
     log(preverified_asset_sizes_checked=len(expected))
-    try:
-        release=api(f"repos/{REPO}/releases/tags/{TAG}")
-    except urllib.error.HTTPError as error:
-        if error.code!=404:
-            raise
+    candidates=[r for r in api(f"repos/{REPO}/releases?per_page=100") if r["tag_name"]==TAG]
+    if candidates:
+        def existing_bytes(release):
+            return sum(a["size"] for a in release.get("assets",[]) if a["name"] in expected
+                       and a.get("digest")=="sha256:"+expected[a["name"]]["sha256"])
+        release=max(candidates,key=existing_bytes)
+    else:
         payload={"tag_name":TAG,"target_commitish":"main","name":"Vehicle Sound Lab · 完整工程交接 2026-11-11",
                  "body":(root/"RELEASE-NOTES.md").read_text(encoding="utf-8"),"draft":True,"prerelease":False}
         release=api(f"repos/{REPO}/releases",method="POST",body=payload)
@@ -137,7 +139,7 @@ def main():
             connection.close()
 
     def upload(row):
-        for attempt in range(1,4):
+        for attempt in range(1,7):
             log(uploading=row["name"],bytes=row["bytes"],attempt=attempt)
             try:
                 result=send_file(row)
@@ -151,12 +153,12 @@ def main():
                     return
                 if asset:
                     api(f"repos/{REPO}/releases/assets/{asset['id']}",method="DELETE")
-                if attempt==3:
+                if attempt==6:
                     raise
                 time.sleep(5*attempt)
     pending.sort(key=lambda row:row["bytes"])
     failures=[]
-    with ThreadPoolExecutor(max_workers=2) as pool:
+    with ThreadPoolExecutor(max_workers=4) as pool:
         for future in as_completed([pool.submit(upload,row) for row in pending]):
             try:
                 future.result()
@@ -174,6 +176,9 @@ def main():
     final=api(f"repos/{REPO}/releases/{release_id}",method="PATCH",body={"draft":False})
     if final["draft"]:
         raise ValueError("Release remains a draft")
+    published_assets={a["name"]:a for a in list_assets()}
+    for row in verified:
+        row["url"]=published_assets[row["name"]]["browser_download_url"]
     report={"schema":"vsl.release-upload/1","url":final["html_url"],"tag":TAG,
             "all_server_sha256_verified":True,"assets":verified}
     args.report.parent.mkdir(parents=True,exist_ok=True)
