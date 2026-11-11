@@ -4,6 +4,8 @@
 
 后续连接层：`modules/dna_scene/{source,routing,scene}.*` 将新DNA／相干低频的独立voice接入现有空间API。入口为 `ds_scene_init/set/process`，离线宿主为 `experiments/dna_scene_v1/probe.c`；初始化借用独占的 `VslEngine` 存储，但不运行旧驾驶或旧DNA。`DsCapture` 分别提供两层raw／增益后观察、直送监听和十源分轨。详见[接口边界](../modules/dna_scene/README.md)。本次还没有完成驾驶工况接入。
 
+实时联合监听：`modules/scene_monitor/render.*` 提供 `smo_render_init/set/process`，保持两层声源并平滑切换直送／空间。`experiments/scene_monitor_v1/{ui,audio,models,recipe}.*` 分别负责UI、设备控制快照、事务模型载入和配方；统一构建入口为 `VslSceneMonitor`。它是新声源监听宿主，没有接管旧驾驶状态机或take协议，详见[原生监听记录](../research/联合声源原生监听V1.md)。
+
 ## 驾驶主线：DSP / App 0.20.0
 
 | 责任 | 主要 C 文件 | 读写边界 |

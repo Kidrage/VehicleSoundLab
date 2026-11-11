@@ -13,6 +13,8 @@ static const HubEntry entries[] = {
     {L"Sound DNA V1", L"已认可的固定相位方案 · 独立持续声与音色模型",
      L"build-sustain-monitor-v3\\Release\\sustain_osc_monitor.exe", L"handoff-build\\bin\\Release\\VslSoundDna.exe",
      L"\"voices\\dna_bank_v1\\V10 Exterior.model\""},
+    {L"新声源联合监听", L"DNA + 相干低频 · 默认直送，空间处理可选",
+     L"handoff-build\\bin\\Release\\VslSceneMonitor.exe", L"handoff-build\\bin\\Release\\VslSceneMonitor.exe", NULL},
     {L"低频轰鸣 V2", L"实验对照 · 听评偏风声，保留作为研究证据",
      L"build-sustain-monitor-v4\\Release\\sustain_osc_monitor.exe", L"handoff-build\\bin\\Release\\VslLowRumble.exe",
      L"\"voices\\dna_bank_v1\\V10 Exterior.model\" \"voices\\low_rumble_v2\\A Exterior.model\""},
@@ -51,7 +53,7 @@ static LRESULT CALLBACK window_proc(HWND owner,UINT message,WPARAM w,LPARAM l){
             HWND button=control(owner,L"BUTTON",entries[i].label,WS_TABSTOP|BS_PUSHBUTTON,FIRST_BUTTON+(int)i,26,y,175,39,font);
             if(unavailable)EnableWindow(button,FALSE);
             control(owner,L"STATIC",unavailable?L"此版本需从本地交接包运行":entries[i].note,SS_CENTERIMAGE,0,217,y,445,39,font);}
-        status=control(owner,L"STATIC",L"选择一个入口。声音由各窗口手动开始。",0,0,26,423,640,35,font);return 0;}
+        status=control(owner,L"STATIC",L"选择一个入口。声音由各窗口手动开始。",0,0,26,128+(int)ENTRY_COUNT*59,640,35,font);return 0;}
     case WM_CTLCOLORSTATIC:SetBkMode((HDC)w,TRANSPARENT);return (LRESULT)GetSysColorBrush(COLOR_WINDOW);
     case WM_COMMAND:{unsigned id=LOWORD(w);if(id>=FIRST_BUTTON&&id<FIRST_BUTTON+ENTRY_COUNT){launch(owner,&entries[id-FIRST_BUTTON]);return 0;}break;}
     case WM_DESTROY:if(font)DeleteObject(font);if(heading)DeleteObject(heading);PostQuitMessage(0);return 0;
@@ -71,7 +73,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass))return 2;
     window=CreateWindowW(klass.lpszClassName,L"Vehicle Sound Lab · 交接总入口",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
-        CW_USEDEFAULT,CW_USEDEFAULT,704,520,NULL,NULL,instance,NULL);if(!window)return 2;
+        CW_USEDEFAULT,CW_USEDEFAULT,704,225+(int)ENTRY_COUNT*59,NULL,NULL,instance,NULL);if(!window)return 2;
     ShowWindow(window,show);UpdateWindow(window);
     while(GetMessageW(&msg,NULL,0,0)>0){if(!IsDialogMessageW(window,&msg)){TranslateMessage(&msg);DispatchMessageW(&msg);}}
     return (int)msg.wParam;
