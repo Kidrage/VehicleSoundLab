@@ -1,0 +1,20 @@
+{
+  "size": 2048,
+  "hop": 1024,
+  "bands": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "delay_bound_seconds": 0.0015,
+  "delay_grid_points": 1501,
+  "minimum_fitted_coherence": 0.25,
+  "minimum_test_rmse_reduction_fraction": 0.10,
+  "known_delay_error_seconds": 0.00005,
+  "known_delay_minimum_rmse_reduction_fraction": 0.25,
+  "split": "First half of whole nonoverlapping one-second blocks for fit; remaining blocks for checks. Prior research has observed these recordings, so this is not an unseen-recording claim.",
+  "cases": [
+    {"name":"A_moving","segment":"A_exterior_moving","seconds":[316,319],"use":"exterior_dynamic_observation"},
+    {"name":"A_stationary_tail","segment":"A_exterior_blips","seconds":[244,247],"use":"exterior_dynamic_observation"},
+    {"name":"B_pull","segment":"B_cabin_pull","seconds":[218,230],"use":"interior_channel_observation"},
+    {"name":"B_release","segment":"B_cabin_release_context","seconds":[475,485],"use":"interior_dynamic_observation"},
+    {"name":"D_dyno","segment":"D_dyno_gears_context","seconds":[20,32],"use":"audio_transition_observation"},
+    {"name":"E_high_cabin","segment":"E_corsa_second_context","seconds":[88,94],"use":"cabin_dynamic_observation"}
+  ]
+}

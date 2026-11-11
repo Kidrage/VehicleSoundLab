@@ -1,0 +1,1240 @@
+{
+  "schema": "vsl.reference-audit-summary/1",
+  "date": "2026-11-12",
+  "base_commit": "863d0ac32beded08adef7f35308c4e3c097a7f63",
+  "result": "pass",
+  "evidence_roots": {
+    "upstream_route_v1": "E:\\VehicleSoundLab\\references\\analysis\\upstream_route_v1",
+    "stereo_delay_v1": "E:\\VehicleSoundLab\\references\\analysis\\stereo_delay_v1"
+  },
+  "upstream": {
+    "revision": "ac2b37d8639027d79934a2023cf8d1d37d3b2f96",
+    "text_files": 129,
+    "text_bytes": 32658127,
+    "public_entries": [
+      "VehicleSoundSynth-EV.maxpat",
+      "VehicleSoundSynth-V10.maxpat",
+      "VehicleSoundSynth-V12.maxpat",
+      "VehicleSoundSynth-IONIQ6N.maxpat"
+    ],
+    "historical_loops_publicly_reachable": false,
+    "startup": [
+      {
+        "profile": "v10",
+        "default_sample_start_on_starter1": false,
+        "realistic_style_starts_samples": true,
+        "startup_level_default_db": -5,
+        "disconnected_starter_signal_node": "obj-15 rampsmooth~ 64 256",
+        "sample_audio_has_style_or_starter_stop_gate": false
+      },
+      {
+        "profile": "v12",
+        "default_sample_start_on_starter1": false,
+        "realistic_style_starts_samples": true,
+        "startup_level_default_db": -5,
+        "disconnected_starter_signal_node": "obj-15 rampsmooth~ 64 256",
+        "sample_audio_has_style_or_starter_stop_gate": false
+      }
+    ],
+    "limits": [
+      "No Max runtime/audio execution; explicit fresh literal defaults only",
+      "V10 info~ outlet 6 threshold is traced as coded; no media validity/metadata execution",
+      "Reachable sample startup is distinct from public procedural DNA",
+      "No claim that every external BEAP implementation or arbitrary runtime state is sample-free",
+      "No timbre acceptance or C/model/UI/state-map changes",
+      "Static file-instance and literal-reference reachability; not execution in Max",
+      "Literal references are conservative, and dependency_cache entries are deliberately excluded",
+      "External BEAP/Max objects and arbitrary saved user-state/dynamic runtime commands are not emulated",
+      "Buffer presence alone is not evidence of a source loop; IR buffers are processing assets",
+      "Public launcher has four entries; legacy generic wrapper remains in the repository",
+      "No media fetched, no C/model/UI/drive change, no timbre acceptance"
+    ]
+  },
+  "stereo": {
+    "known_controls": 12,
+    "arithmetic_validation": "pass",
+    "maximum_scalar_metric_error": 4.604744397295126e-15,
+    "observations": [
+      {
+        "name": "A_moving",
+        "seconds": [
+          316,
+          319
+        ],
+        "blocks": 3,
+        "passing_bands": 0,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999999982,
+            "test_rmse_reduction_fraction": -2.300345871172731e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.18940833440657467,
+              0.1894085515436981
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999999939,
+            "test_rmse_reduction_fraction": 0.0,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.14700855818839148,
+              0.14700843329784008
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999999909,
+            "test_rmse_reduction_fraction": 0.0,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.14330316808543359,
+              0.14330316989150907
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999999876,
+            "test_rmse_reduction_fraction": -1.9229593221088513e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.18999884133771594,
+              0.19000882735575336
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999999716,
+            "test_rmse_reduction_fraction": -2.346692996466098e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.23931517462825222,
+              0.2392798530009889
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999998657,
+            "test_rmse_reduction_fraction": -5.008529771073063e-16,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.20485017621071594,
+              0.20484960440600436
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999997037,
+            "test_rmse_reduction_fraction": 1.683663905905217e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.24497893078978852,
+              0.24497893101483295
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9999999999993165,
+            "test_rmse_reduction_fraction": 0.0,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.17756516399820305,
+              0.17756516703261416
+            ]
+          }
+        ]
+      },
+      {
+        "name": "A_stationary_tail",
+        "seconds": [
+          244,
+          247
+        ],
+        "blocks": 3,
+        "passing_bands": 0,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": -1.0000000000000026e-05,
+            "fitted_coherence": 0.9936312114999595,
+            "test_rmse_reduction_fraction": -0.2875869041639871,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.256697907678652,
+              0.25443367919424925
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9946296943448257,
+            "test_rmse_reduction_fraction": -3.100364366158189e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.22245913514946777,
+              0.22756277409168463
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9963775806597709,
+            "test_rmse_reduction_fraction": -4.604744397295126e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.24939343441142228,
+              0.2580245991429344
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9976302177026115,
+            "test_rmse_reduction_fraction": -5.26007797413967e-16,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.2361499501499994,
+              0.24493453346666816
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9979831045846641,
+            "test_rmse_reduction_fraction": 6.97780156835636e-16,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1799664100358903,
+              0.19087664681933594
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9989389817816845,
+            "test_rmse_reduction_fraction": 0.0,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.17628656436724285,
+              0.1730386007792228
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9977015829043132,
+            "test_rmse_reduction_fraction": 3.3553077975136456e-16,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.16653252733164572,
+              0.17017418840063755
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.9986366174125796,
+            "test_rmse_reduction_fraction": -2.9624065308186694e-15,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.13419693657523662,
+              0.12740821588694615
+            ]
+          }
+        ]
+      },
+      {
+        "name": "B_pull",
+        "seconds": [
+          218,
+          230
+        ],
+        "blocks": 12,
+        "passing_bands": 0,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": -0.0015,
+            "fitted_coherence": 0.16764989802701288,
+            "test_rmse_reduction_fraction": -0.02073000185600468,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.20623949601033015,
+              0.2086228827746972
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": 0.00015799999999999994,
+            "fitted_coherence": 0.1479870061347609,
+            "test_rmse_reduction_fraction": -0.008092458187897542,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.18590307368417852,
+              0.18396900422791207
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": 0.0007559999999999997,
+            "fitted_coherence": 0.05644299561544153,
+            "test_rmse_reduction_fraction": -0.0012407883534848417,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1813351258249707,
+              0.17490945958771076
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": 0.0005659999999999997,
+            "fitted_coherence": 0.11788155204770842,
+            "test_rmse_reduction_fraction": -0.008301850609414855,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.16457604395400305,
+              0.17548711285712867
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": 0.001022,
+            "fitted_coherence": 0.08026718560679169,
+            "test_rmse_reduction_fraction": -0.05452605244085192,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1521074087044129,
+              0.1654496727547135
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": 0.0007639999999999999,
+            "fitted_coherence": 0.0492571445425426,
+            "test_rmse_reduction_fraction": -0.011024219037093436,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.15002061712172063,
+              0.1572501321743942
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": 0.00012199999999999993,
+            "fitted_coherence": 0.06174441234304158,
+            "test_rmse_reduction_fraction": 0.0014142400216967056,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.12397618525381265,
+              0.12664314351088396
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": 0.0002419999999999998,
+            "fitted_coherence": 0.04010325644987877,
+            "test_rmse_reduction_fraction": -0.013785684388466028,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.10098474403839763,
+              0.11564122401066154
+            ]
+          }
+        ]
+      },
+      {
+        "name": "B_release",
+        "seconds": [
+          475,
+          485
+        ],
+        "blocks": 10,
+        "passing_bands": 0,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": -0.000582,
+            "fitted_coherence": 0.2991753047183415,
+            "test_rmse_reduction_fraction": -0.021883544845391893,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.26952755435650055,
+              0.254476839540247
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": -0.0015,
+            "fitted_coherence": 0.18159505824004285,
+            "test_rmse_reduction_fraction": 0.013697832444186394,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1994291808165249,
+              0.25012699241229525
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": -0.0015,
+            "fitted_coherence": 0.040000268704089986,
+            "test_rmse_reduction_fraction": -0.004936339447490131,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.20827689691056822,
+              0.22963553207250526
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": -0.0012540000000000001,
+            "fitted_coherence": 0.13219437440835313,
+            "test_rmse_reduction_fraction": -0.03901649138285452,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.20871660304809614,
+              0.21298574415923122
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": -0.0012460000000000001,
+            "fitted_coherence": 0.0468846488827171,
+            "test_rmse_reduction_fraction": 0.034874407887352916,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.22604120489189733,
+              0.24214334786389574
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": -0.0009440000000000001,
+            "fitted_coherence": 0.10693502108156612,
+            "test_rmse_reduction_fraction": -0.07825583109786956,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.2056403843332883,
+              0.23756672866085005
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": 0.00014999999999999996,
+            "fitted_coherence": 0.047863734867725535,
+            "test_rmse_reduction_fraction": -0.00627787888697047,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.22121672800527437,
+              0.23077649212991158
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": -0.0005160000000000002,
+            "fitted_coherence": 0.03336093033612891,
+            "test_rmse_reduction_fraction": 0.01367918859569182,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.24882525667581262,
+              0.2404784293240994
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D_dyno",
+        "seconds": [
+          20,
+          32
+        ],
+        "blocks": 12,
+        "passing_bands": 0,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": -0.0010840000000000001,
+            "fitted_coherence": 0.24250311010772885,
+            "test_rmse_reduction_fraction": 0.0674234681875832,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.22602189551676694,
+              0.2212862126930259
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": 0.00013999999999999993,
+            "fitted_coherence": 0.5396001446451671,
+            "test_rmse_reduction_fraction": 0.019246121537078536,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.20010671024056675,
+              0.20297108381368129
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": -0.00016200000000000003,
+            "fitted_coherence": 0.509416204913709,
+            "test_rmse_reduction_fraction": 0.014023619824073994,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.18597737831497912,
+              0.17420996803140176
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": 0.00013999999999999993,
+            "fitted_coherence": 0.6971443249382941,
+            "test_rmse_reduction_fraction": -0.027670825234229438,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.16860860971772917,
+              0.17222927902136512
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": -1.2000000000000075e-05,
+            "fitted_coherence": 0.704947874115647,
+            "test_rmse_reduction_fraction": 0.005469078506758576,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.16214714622126342,
+              0.15126588647645162
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": 0.0,
+            "fitted_coherence": 0.7032104541837323,
+            "test_rmse_reduction_fraction": -1.7051665524393082e-16,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1648216486674336,
+              0.15584638185833163
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": -3.200000000000013e-05,
+            "fitted_coherence": 0.21485574845659014,
+            "test_rmse_reduction_fraction": -0.0005847758911180033,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.152144653280901,
+              0.14675251632198316
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": -1.0000000000000026e-05,
+            "fitted_coherence": 0.13863553261490724,
+            "test_rmse_reduction_fraction": 0.0009997417231096145,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.11499629192668315,
+              0.12812711518579256
+            ]
+          }
+        ]
+      },
+      {
+        "name": "E_high_cabin",
+        "seconds": [
+          88,
+          94
+        ],
+        "blocks": 6,
+        "passing_bands": 1,
+        "bands": [
+          {
+            "hz": [
+              1200,
+              1500
+            ],
+            "delay_seconds": 0.00015399999999999984,
+            "fitted_coherence": 0.8555546603618354,
+            "test_rmse_reduction_fraction": 0.0023049409246349768,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.14669556677564652,
+              0.16376431868585895
+            ]
+          },
+          {
+            "hz": [
+              1500,
+              1900
+            ],
+            "delay_seconds": -0.00039800000000000013,
+            "fitted_coherence": 0.6982403339263469,
+            "test_rmse_reduction_fraction": 0.12559256540333147,
+            "predictive_gate_passed": true,
+            "median_detrended_envelope_cv_LR": [
+              0.17639050827042413,
+              0.2314077955801616
+            ]
+          },
+          {
+            "hz": [
+              1900,
+              2400
+            ],
+            "delay_seconds": -1.4000000000000123e-05,
+            "fitted_coherence": 0.5278404725695677,
+            "test_rmse_reduction_fraction": 0.0013767692954121924,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.25949534308843725,
+              0.19226805430288707
+            ]
+          },
+          {
+            "hz": [
+              2400,
+              3000
+            ],
+            "delay_seconds": -0.00020200000000000014,
+            "fitted_coherence": 0.6898921967899696,
+            "test_rmse_reduction_fraction": -0.02016829842736008,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.16490991692867285,
+              0.1645415769968876
+            ]
+          },
+          {
+            "hz": [
+              3000,
+              3800
+            ],
+            "delay_seconds": 1.5999999999999955e-05,
+            "fitted_coherence": 0.6372734479376149,
+            "test_rmse_reduction_fraction": 0.010069760598317842,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1441143851231279,
+              0.14090189087680832
+            ]
+          },
+          {
+            "hz": [
+              3800,
+              4800
+            ],
+            "delay_seconds": 0.00021599999999999983,
+            "fitted_coherence": 0.41371633848817935,
+            "test_rmse_reduction_fraction": -0.052973622091016984,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.19200506595803662,
+              0.17775524545372168
+            ]
+          },
+          {
+            "hz": [
+              4800,
+              6000
+            ],
+            "delay_seconds": 0.0003339999999999999,
+            "fitted_coherence": 0.17763716512090985,
+            "test_rmse_reduction_fraction": 0.015856195914482556,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.1785463430626577,
+              0.19938903477929795
+            ]
+          },
+          {
+            "hz": [
+              6000,
+              8000
+            ],
+            "delay_seconds": 0.0011159999999999998,
+            "fitted_coherence": 0.12140214999882758,
+            "test_rmse_reduction_fraction": -0.02736925678325153,
+            "predictive_gate_passed": false,
+            "median_detrended_envelope_cv_LR": [
+              0.17814554812031586,
+              0.17102633283972912
+            ]
+          }
+        ]
+      }
+    ],
+    "white_noise_envelope_controls": [
+      {
+        "seed": 23117,
+        "cv_LR": [
+          [
+            0.1845074208859437,
+            0.18450742088594368
+          ],
+          [
+            0.16537959185761603,
+            0.165379591857616
+          ],
+          [
+            0.13924684613878643,
+            0.13924684613878643
+          ],
+          [
+            0.13527206788316265,
+            0.13527206788316265
+          ],
+          [
+            0.1145164048736039,
+            0.11451640487360387
+          ],
+          [
+            0.10215543487241271,
+            0.10215543487241266
+          ],
+          [
+            0.10001431829058206,
+            0.10001431829058202
+          ],
+          [
+            0.0715595427361072,
+            0.07155954273610723
+          ]
+        ]
+      },
+      {
+        "seed": 61927,
+        "cv_LR": [
+          [
+            0.19385159551409442,
+            0.1938515955140944
+          ],
+          [
+            0.1586232983732495,
+            0.15862329837324946
+          ],
+          [
+            0.14760678762460466,
+            0.1476067876246046
+          ],
+          [
+            0.13816649545514803,
+            0.13816649545514806
+          ],
+          [
+            0.11326509670216221,
+            0.1132650967021622
+          ],
+          [
+            0.101361461301227,
+            0.10136146130122697
+          ],
+          [
+            0.09356224836275612,
+            0.09356224836275617
+          ],
+          [
+            0.0736457261939645,
+            0.0736457261939645
+          ]
+        ]
+      },
+      {
+        "seed": 8121907,
+        "cv_LR": [
+          [
+            0.1956665432976578,
+            0.1956665432976577
+          ],
+          [
+            0.1598505910496807,
+            0.15985059104968075
+          ],
+          [
+            0.13553574856164385,
+            0.13553574856164397
+          ],
+          [
+            0.14018489876833962,
+            0.14018489876833953
+          ],
+          [
+            0.11353349640743754,
+            0.11353349640743757
+          ],
+          [
+            0.1026332386667583,
+            0.1026332386667583
+          ],
+          [
+            0.09574767991907265,
+            0.09574767991907268
+          ],
+          [
+            0.0676885475496632,
+            0.06768854754966322
+          ]
+        ]
+      }
+    ],
+    "promotion_decision": "not_promoted",
+    "limits": [
+      "Mixed raw L/R recording transfer observations, not physical source separation or crank/ECU timing",
+      "Nonoverlapping time blocks are disjoint samples, not independent recordings or stationary-load proof",
+      "Frame windows overlap inside each block; no independent-frame significance claim",
+      "Delay plus complex scalar is an approximation; a passing band is not a whole-cabin/source model",
+      "A exterior, B/E cabins and D dyno remain separate; no exterior width inferred from cabin binaural",
+      "No synthesized timbre/7.1.4 listening or new state-map acceptance",
+      "Recorded CV includes ordinary band-limited beating, pitch/motion and recording transfer; not isolated engine modulation",
+      "White noise already has nonzero envelope CV; no direct conversion of observed CV into extra AM depth"
+    ]
+  },
+  "c_h_count": 436,
+  "c_index_sha256": "51bcb0f363671e452553316e9f73e1d2432cf14b6cdd7944958b3ffb2351b0c4",
+  "accepted_models_unchanged": true,
+  "prior_manifest_sha256": "9bdc1b1c2109caedfbcf2ebb86d65898b7b9614344b5c7d70c779eda00e5e9a4",
+  "runtime_changes": false,
+  "new_models": false,
+  "new_state_mapping": false,
+  "human_accepted": false,
+  "source_sha256": {
+    "tools/summarize_reference_audit_v1.py": "fdcce3ba5fb38cc7f7dd2d6b4fd77848f53df97fec6d4607e11071cadba9bd98",
+    "tools/freeze_reference_audit_v1.py": "b5632bb182d9e39971a19a25a43bf8df993ac4e4ae06de38cee2a5e19eebeaaf",
+    "tools/fetch_v6_route_v1.py": "04b607e1210f1e7734d4d26e0b193d3f78c31b3c108a85ef70975606ae669f2b",
+    "tools/inspect_v6_routes_v1.py": "a5ea25d29d7976e528f489ef89b8d71b26ce9230df40c16ade9b9305918790ef",
+    "tools/inspect_v6_startup_v1.py": "3aeb0dea86bd72b38a1ca91ab73bcd4dca728eaa53fb0358bf6b58f2488ec425",
+    "tools/analyze_stereo_delay_v1.py": "fdd9300d5fbf24ac38fc03221e2f6994d023d5ab4e5f678468b30be7f5970720",
+    "research/stereo_delay_v1_plan.json": "36396fd68c494186a3e30dd8eb7f91d03e3154b2a654cbc4e1fa2f4a4c9c030e",
+    "tools/v6_route_v1/graph.py": "e33d90230098487d759cd748f9adc875773aa64b119bec5ca02c1613bf766684",
+    "tools/stereo_delay_v1/fit.py": "25cf708e9dfd7358d9242e163fadd9576f4b487bc125a86e90056dc6b4418f97",
+    "tools/stereo_delay_v1/spectrum.py": "adc6f28d65e7a989f75b017c44a66dbc855bdb1a4efb8f3143d64eb487e17f06"
+  },
+  "evidence_sha256": {
+    "upstream_route_v1": {
+      "analysis1/exact_sources/tools/inspect_v6_routes_v1.py": "a5ea25d29d7976e528f489ef89b8d71b26ce9230df40c16ade9b9305918790ef",
+      "analysis1/exact_sources/tools/v6_route_v1/graph.py": "e33d90230098487d759cd748f9adc875773aa64b119bec5ca02c1613bf766684",
+      "analysis1/report.json": "66a2e194aceae302fde7fab5bfcd4f52fdd6d0e8187d2123d190795a36e72bc8",
+      "exploration1/tree.json": "6efa74e67202ec76a56ed5cefb50ed1bb512d5c08a2655d390510c34796f2885",
+      "fetch1/executed_fetch.py": "648182c691e108704eb365aa4543f926356b84190640b52f8324aa25b62ba217",
+      "fetch1/metadata.json": "7ba1d7b04f579cbd207412001eea4ce334e26cbec4b46944505894c18075d6d8",
+      "fetch1/report.json": "193ac6ed0d3f83f6ff3f66b10ca3207365757168e866afa8a21849e11c8f993f",
+      "fetch1/text/code/backfire_burst.js": "1622903369eb1971d8a0edaa488773d213f5e85b7e2e74828d960a8e0b8b716c",
+      "fetch1/text/code/dna_state_path.js": "2353a3ed82e8b111f15e3e5d46f896fdf9809df76babd17ef96be233d57a2bf8",
+      "fetch1/text/code/drive_model.js": "28d6339bb6c308ed7f4d728d2c7f8e5c65f8fb869822b33c4c88c1f66b9ab759",
+      "fetch1/text/code/eq_state_path.js": "96c68ae53404ad3fda15966ef2497eff89140d1eb65ea2f4b293622ffd7d6e59",
+      "fetch1/text/code/ioniq6n_event_state_path.js": "fd0e3b9eb92431bc43d912219c0d7fe38b69e17f4951048daa0f48a0e98e7710",
+      "fetch1/text/code/ioniq6n_soundscape_state_path.js": "603f0f7cb71b484b3d8122a755759de95fa48d5c72068b80c143bba3948b9690",
+      "fetch1/text/code/manual_input.js": "dd990929d530c9abf639ad9bd54086ab82bc815ba63933dbaa9e13acbdec04c2",
+      "fetch1/text/code/module_mixer_state_path.js": "61d458a6215190fb715c5c769824a0b58f3169529df0e595812bb00afafda5c0",
+      "fetch1/text/code/pop_state_path.js": "896d71f7b521072a0358ab8e27fb882eea8f10464a7d52669782d83f4293590f",
+      "fetch1/text/code/pop_v2_state_path.js": "9c7ca8c7c7b8cd5f20f74071fc465d5be9d280b4ee97e46dc6f6b12bf02d633b",
+      "fetch1/text/code/soundscape_state_path.js": "1fe6c3e9f490c1953d7db0b74c6e2131d3070e7f77c1c31432875877e5fba755",
+      "fetch1/text/code/soundscape_v4_state_path.js": "11d7e961d28eaeb3b39f145d4b9e5a41c9dbc9b49dcff408915ace6428777beb",
+      "fetch1/text/code/start_state_path.js": "3d08159f5310261492504807dd629a1ff78c3c2371b017e61d3753656e2b5986",
+      "fetch1/text/code/start_v3_state_path.js": "33983bed824b20c0686742602262595ca2f25e9b49ba1b32101d199b9ce34524",
+      "fetch1/text/gen/ev_powertrain.gendsp": "28505f7dd9844bcfbf8e4927e5d12f413e65fc4b046d4080b9e854ac0e9b366d",
+      "fetch1/text/gen/ioniq6n_powertrain.gendsp": "a55f25666c5aeb723fcdbacd3c862f8b452aa74389d2223a7453af9b28109ec7",
+      "fetch1/text/gen/v10_powertrain.gendsp": "28be732d5d4c9497140562c89cd53cb3af5a82685ecd2945808d263767dd0584",
+      "fetch1/text/gen/v12_powertrain.gendsp": "843fcc14e55f159bfc0684eaff70f728a5556217101f4478beb25665e1f7844d",
+      "fetch1/text/main.maxpat": "b0c368b2039ecad733b32829d3edc26a9aa6bddbfb88cef6be114c03f65c1a6b",
+      "fetch1/text/patchers/backfire_burst_scheduler.maxpat": "07d8774f5824ea52d64929ade1700a103769e77846c7e5352b4015291cd22a06",
+      "fetch1/text/patchers/cabin_master~.maxpat": "2ece062d521fda8ba7d2b224a295e7ad5502d0900677f29640fb09588b93e7fd",
+      "fetch1/text/patchers/cabin_rumble~.maxpat": "4c5f257e82e9caa6c117bfbf51263282c63c57f1587b5f3803060c6369a89149",
+      "fetch1/text/patchers/cinematic_soundscape_beap~.maxpat": "3ede88ab96808cd2d89dd7ce7b38241257152875fc181b39d7ff42cbd431949e",
+      "fetch1/text/patchers/cinematic_soundscape_v3_beap~.maxpat": "26a010a2623f425c72235e6b8f6a96bf5bc843e5693e0e8908b67bb0857d7f29",
+      "fetch1/text/patchers/drive_simulator.maxpat": "a047d7a4552e191fb4c9f9a8231cb4f9b1cb3bc3d155d8170bdf42746a3cd16d",
+      "fetch1/text/patchers/drive_simulator_ev.maxpat": "3c13a87e3162bace23addf08edeedc463b6fa3046d7e01d663c46c6e9c45b96d",
+      "fetch1/text/patchers/drive_simulator_ioniq6n.maxpat": "c97790287ca5eb5a9b0381380fce063d2da5d3adf1b32df507ad270ce05e68b5",
+      "fetch1/text/patchers/drive_simulator_v10.maxpat": "ffb6f71903ed193a61c4ae2e27d1f13c5f8e5386ef918329d89a1bad0c0e0752",
+      "fetch1/text/patchers/drive_simulator_v12.maxpat": "dd6b8a32ad80680d2845ea2d96fc4a7080a5dd2b7a3b242c99aabe937b7ada5a",
+      "fetch1/text/patchers/engine_controller.maxpat": "4a0b71a51f51c580daf5576bab58d4c779b0b8c54284d9cbbb2d6cbda37d07e2",
+      "fetch1/text/patchers/engine_controller_ev.maxpat": "1020916aec9ee01c03e1cbfbd9012ce14fc180d5ec94cb15b2f93e4eb73e6b6a",
+      "fetch1/text/patchers/engine_controller_ioniq6n.maxpat": "e48f0c2b0245e9945b6c6b50679e1fe5f332377f6ae336ddaa48e14e810e0173",
+      "fetch1/text/patchers/engine_controller_v10.maxpat": "9721847e14579e7d4d2a8484a8432ccf2816da5fb9ec273aa7c4e06fdd65e8c5",
+      "fetch1/text/patchers/engine_controller_v12.maxpat": "178ba2bf7fdbb79d98e73ce468fcb94e050a789be83ff7fb2a640dce45c4817b",
+      "fetch1/text/patchers/engine_start_beap~.maxpat": "5482939f2c8bf3bca77f87d0a9c8a3a077bf917ecfb6a2556bebf2febe19d696",
+      "fetch1/text/patchers/engine_start_core~.maxpat": "a315ffbdea2cd6ce4d4820794547a3ff723535fcf2f7763bc1ff6c1e0197a2bc",
+      "fetch1/text/patchers/engine_start_voice.maxpat": "8ac9cc469657563a8c50201427cac792593acb3b1a53c647cfc24f2dec94c818",
+      "fetch1/text/patchers/ev_cinematic_soundscape_host~.maxpat": "2b29b091446942cff8865535341318f448dd6f83c81d7241c695b8d8f6f3c109",
+      "fetch1/text/patchers/ev_engine_start_beap~.maxpat": "10aeee69556dece96e506ddf2169fdcb429e7dee6b26e71918ac9eb3f21d2540",
+      "fetch1/text/patchers/ev_engine_start_v3_beap~.maxpat": "ff7635f59864a3114222da23d24570fbea1def2e17ad47a8b64b26a9b69837ae",
+      "fetch1/text/patchers/ev_expressive_beap~.maxpat": "b8e26b910082c4c10459d94d591b34b2ff678168803c72ac7afc23a275a1373d",
+      "fetch1/text/patchers/ev_expressive_voice.maxpat": "a0f9b41df0e607a10fda53f0390895da15e73b3eee40633f13fbb48abb6a3541",
+      "fetch1/text/patchers/ev_pad_beap~.maxpat": "fd49608ada91cce3568d4b308db567b7d53047e6b10cc35157e942c1d74771db",
+      "fetch1/text/patchers/ev_pad_driver~.maxpat": "a35ab213784f0e3faa118bff895097111d45403cde808a7c68346983e68d5e9d",
+      "fetch1/text/patchers/ev_powertrain~.maxpat": "4f9ed0331f5d87cbdb70115d066906d0948040801d6809de82b9a2179a153e1c",
+      "fetch1/text/patchers/ev_relax_voice.maxpat": "f44921dad0d9ffd3503dc1ad280fddca103906d8005a65eb6df0f8114b3f7295",
+      "fetch1/text/patchers/ev_sound_dna~.maxpat": "606a62c257c3611b3d49a9cb3a07b032dc83df93ee212822cc840894895871d8",
+      "fetch1/text/patchers/ev_soundscape_host~.maxpat": "126237110f245a007f12e3bb0864f96f858dad642d27b7527c7aeed249479876",
+      "fetch1/text/patchers/ev_soundscape_v4_beap~.maxpat": "e9f95d6d5cbbb72ed2bb036184944b74f71388e1cc6206a9c98bf06dc56cc199",
+      "fetch1/text/patchers/ev_sport_beap~.maxpat": "8f412be1868c1e03ba83e35b65c5c8687d9dbc2b5c9fe58fae9de995c43fa890",
+      "fetch1/text/patchers/ev_sport_voice.maxpat": "5d815b221a77fb7bfee853438d4528861e13788a3d8c8bc3761c20b24ebe2374",
+      "fetch1/text/patchers/ioniq6n_activation_beap~.maxpat": "f9cd353af4cb9701e844bf0e54c253c02e63b51094430492022911e09d4286c5",
+      "fetch1/text/patchers/ioniq6n_cinematic_soundscape_host~.maxpat": "2a86650723fa99451443102d29c117bda81f817fe49b4f1045b4bafe95dc8dc7",
+      "fetch1/text/patchers/ioniq6n_n_event_beap~.maxpat": "60cdbfe0565f8633fc1e2665f57d6b2bc9648d6253dbc7961a7ab37e053db624",
+      "fetch1/text/patchers/ioniq6n_n_event_host~.maxpat": "47d4032305422d841423ad19673b5f97efcd2093a7fcfd2bf83ac72097c9477d",
+      "fetch1/text/patchers/ioniq6n_powertrain~.maxpat": "8926f8e88a8eb9c7de38f82925bd246388d0c9fe7f81638f40036e4eeb1a600d",
+      "fetch1/text/patchers/ioniq6n_sound_dna~.maxpat": "a210897a8f7afb422457a7725146a9beb79ae6023d0ce1e536a5c376c4e1c582",
+      "fetch1/text/patchers/ioniq6n_soundscape_evolution_beap~.maxpat": "525b97684220b581aa14dac079779a37418f26222c8d1094fcf7f37afa531ad2",
+      "fetch1/text/patchers/ioniq6n_soundscape_ignition_beap~.maxpat": "5f4dfae5e3e1870478df4e3c6684adc9961df84c41b79c2a3da44e3ad12ac97d",
+      "fetch1/text/patchers/ioniq6n_soundscape_lightspeed_beap~.maxpat": "f141d1da60c57f52baa70de79e54ea39b802fcb25d05e14a94a55c6f2fb66293",
+      "fetch1/text/patchers/keyboard_drive_ws.maxpat": "bfeac740f2d977e3a85e27b804d7332fa7c76d421e57d0086a63271076428e1c",
+      "fetch1/text/patchers/manual_input.maxpat": "487c9e1ec6b7c43cdec31f65f0c1f83c7b2219979050eb279c1d6a3a13efdddb",
+      "fetch1/text/patchers/mix_master~.maxpat": "ccff2a20b1dce09de22fffcc54c14ee9a54082320deca91a708727f748fc5a8d",
+      "fetch1/text/patchers/module_mixer.maxpat": "bc75a3fe68fd833860de3428bb6e935a9567b0cc2353e76fb42ea1ba3b56bad7",
+      "fetch1/text/patchers/powertrain~.maxpat": "4fe27f85a00191fe614a28cd00e83b98f7f0805649776066fb68731afeec2d59",
+      "fetch1/text/patchers/reference_texture~.maxpat": "5c847b675cf007d162791cb4087f8adc6273892fdc202f38b19913ca71496e58",
+      "fetch1/text/patchers/road_air~.maxpat": "7ffbd4e2b4e270578224afd66112ffc2ae227a06c66df6d192961c4a1f0c86f7",
+      "fetch1/text/patchers/soundscape_control.maxpat": "f8d2115badd55dd4ebbb8fb5eb023481c999429ecd7e25db4bccd42d3039ebf2",
+      "fetch1/text/patchers/transient_ev~.maxpat": "4d0e633b6259f27632c642caf68b8d2fe32e5300fb85547ad0867cd405bf515d",
+      "fetch1/text/patchers/transient_ioniq6n~.maxpat": "2a933bbb4781d4a53005bf44249ec1bbbed9e04bef74bf31cd556a70d2e60125",
+      "fetch1/text/patchers/transient_v10~.maxpat": "b199b59162abdd3f36d1cc82d4d79c4f1052982cdf286a5c1e6de8b0bc85e3bf",
+      "fetch1/text/patchers/transient_v12~.maxpat": "ab7965551d1c91c068bbfa7b9e1594e4bb568e3767d944af0dd70705623846a8",
+      "fetch1/text/patchers/transient~.maxpat": "544f3610d6551f543c33f05d798ee3f3688e3c062d6e6ed50253993a7db9e4f7",
+      "fetch1/text/patchers/v10_backfire_beap~.maxpat": "09f0e148855580acd2927e4a9b9accd676232178a8b66de9708853576171e7fa",
+      "fetch1/text/patchers/v10_backfire_host~.maxpat": "9eab642740526aa1d1aaa8e99a4100aa679ad8f1b238ba92c649d3abb625dec5",
+      "fetch1/text/patchers/v10_backfire_v2_beap~.maxpat": "a0355d0b50520c8c67634a2301551595cbaf235d350c1dba4eaef34cabd4dc22",
+      "fetch1/text/patchers/v10_cinematic_soundscape_host~.maxpat": "6637d18b818769df53417044d87fa8e64b8a343d40116b29d502d5c414b2a955",
+      "fetch1/text/patchers/v10_engine_start_beap~.maxpat": "469f27566312b743d7d3b4aa8554f5ea3fa50fe2ffac74f9817ded0a035e9638",
+      "fetch1/text/patchers/v10_engine_start_v3_beap~.maxpat": "3b2bf0a252fd9a1e0cc13b0a44e961a355aa7b1e4371b0e8319aeefec05ccb3c",
+      "fetch1/text/patchers/v10_fallback_renderer~.maxpat": "c4097b8fb6bb9af2d25a4b478c1e04f7c34ec9e95d7030e0eaad4a51a4e66648",
+      "fetch1/text/patchers/v10_pad_beap~.maxpat": "902ccfb00a5d2533acb3287512b9569fa01a88d21d07db5e454b641e3a0174d8",
+      "fetch1/text/patchers/v10_pad_host~.maxpat": "88af356c1696e183aa855949ecaf7caae0b374725db5e4070d1e771506c38941",
+      "fetch1/text/patchers/v10_pad_voice.maxpat": "66eaff7a64df5f6e8148bed32b4f252f427a979b35a342ae292923a2447bcb5d",
+      "fetch1/text/patchers/v10_powertrain~.maxpat": "514793be73f3f05cceaa1885c2e735677d5a1e712b488390901d99e9df3c1a02",
+      "fetch1/text/patchers/v10_sound_dna~.maxpat": "3ab45646ec041f66995f38f7c9edc53478709f8461a49d7da6705892aa7f7d18",
+      "fetch1/text/patchers/v10_soundscape_v4_beap~.maxpat": "9d9b467029707ef17d6e78c4d1e29ddcca9258bef05e90723479fe4ce7bc897e",
+      "fetch1/text/patchers/v10_state_renderer~.maxpat": "96b23e4e1fc5d57884cd1dcfbd2d8fa38a3e47481b8e2bd41d71fdf62de34f8d",
+      "fetch1/text/patchers/v12_backfire_beap~.maxpat": "00e41e2539416d3212c6d67839fad2c7edd77169838b314b974acfd64e42a5ac",
+      "fetch1/text/patchers/v12_backfire_host~.maxpat": "879f1b46cd84c1fa1d20dfaf382ef9be1928f049f8f67de9ddbd15acc3d09181",
+      "fetch1/text/patchers/v12_backfire_v2_beap~.maxpat": "efa923682931471808acf8d9ed1d27f1c13ceae88264722d9126ffb7c59eeb81",
+      "fetch1/text/patchers/v12_cinematic_soundscape_host~.maxpat": "38651aa9973609f2c27e09dbdfa2be2f42555b5f344d2f8845b2965a4508dc93",
+      "fetch1/text/patchers/v12_engine_start_beap~.maxpat": "1a36c0fa837795cce9c871d82f50a2bb4ba62642d5761cd6a8feeb1fe5af57ed",
+      "fetch1/text/patchers/v12_pad_beap~.maxpat": "0d421b95509f7e6695a2f94ec47ee2d92ecdef5eaa0aa8fbd58b73ce8c6d22b5",
+      "fetch1/text/patchers/v12_pad_host~.maxpat": "7e8284bf8e29980e531331b8066e792e61f36760ea97a8c863323743bc3c34d9",
+      "fetch1/text/patchers/v12_pad_voice.maxpat": "55bd1e8e41792d97b0c4a9f3ebbdc7825e3e05e203f1dc5cbf361a5f23eacff4",
+      "fetch1/text/patchers/v12_powertrain~.maxpat": "410bf49b321b90b6ba197aa87be5c8ba790209a5dcf742489c01074d45d8d4ac",
+      "fetch1/text/patchers/v12_sound_dna~.maxpat": "0349223e626751f1d89cc0a8e572ac81f5c8669b9cd3ddb8cb57449496b4c2b9",
+      "fetch1/text/patchers/v12_soundscape_v4_beap~.maxpat": "c14e233c2c2144ed0ffd1adf50813b62c3eca9ccfe6c7baf8fa928ce598ee448",
+      "fetch1/text/patchers/v12_texture_renderer~.maxpat": "e8744cdc89b72247748bfd7bce04dbae963f64b593045c3cd75c3d97cf9b1136",
+      "fetch1/text/patchers/vehicle_bus_eq~.maxpat": "3eb6f8b7aef5c56c6c58235676b4a6bebe12fe1a4e82fc63bb8eb9d402ecbcbf",
+      "fetch1/text/patchers/vehicle_engine_ev~.maxpat": "7ec80d2a5c2c089161a4b224d4df81a428e00eda3004f736344b2a7f07677e84",
+      "fetch1/text/patchers/vehicle_engine_ioniq6n~.maxpat": "3e0e5ef9568bd94d1a5fccf1432542f49c58816c4709f2dbe0dbd583b414c94d",
+      "fetch1/text/patchers/vehicle_engine_v10~.maxpat": "fd790dd3e26ba5353f1fdc0b910390d3f335d8fb2ab2da64553a89a672c0480d",
+      "fetch1/text/patchers/vehicle_engine_v12~.maxpat": "e3107d894fcfb3d75de19d6bd1533ee051f885ab1e54c87a65c1db013eb52651",
+      "fetch1/text/patchers/vehicle_engine~.maxpat": "acc17b755fb5baeadbcb48e83ef92387d7c528f6668cd0c0f3a8f3672af4307c",
+      "fetch1/text/presets/ev_soundscape_factory.json": "021a35f8f563d0ba1127e9496fb6207f74119ed7f2d8646de538a77816e71a19",
+      "fetch1/text/presets/ev_soundscape_v2_factory.json": "6d023cd10063616e0001d0a85255500d2389b61b76864841d2d40f2e9b39395e",
+      "fetch1/text/presets/ev_soundscape_v3_factory.json": "d15f5eb0626bde8bbd16fdcedb00f18beeaa261e0e3d5b563c6697bbe61d566c",
+      "fetch1/text/presets/ev_soundscape_v4_factory.json": "3b2bd783b041ef54833f9576ab95985d184bd01f679d67921287122d160789e2",
+      "fetch1/text/presets/ioniq6n_n_event_factory.json": "a92d9a49191cd4e3766eadf7830cc63330d57a68149f398b631a5c713750f31d",
+      "fetch1/text/presets/ioniq6n_soundscape_modes_factory.json": "fcae7b5e6f551fd37378da42bc08070e593e666e8093e16e57c20b62aab6b198",
+      "fetch1/text/presets/sound_dna.json": "89c7679f6ca9ba8b67dde41cce036a50f09ff12d8ba8a6cbae1375d13bb5dbaa",
+      "fetch1/text/presets/v10_soundscape_factory.json": "4986bd98a3dcef2b9a808eef4eec9eec0ff377b4ac652ec30bcf6c2d526798f0",
+      "fetch1/text/presets/v10_soundscape_v2_factory.json": "35fece586e4ff015c6d4975a97fa9146e1dcf97a277e75e58553ffd656944ecf",
+      "fetch1/text/presets/v10_soundscape_v3_factory.json": "864c22045c1c23a649e079a27552d8f810b005525017e5338cf001da0a43b2d5",
+      "fetch1/text/presets/v10_soundscape_v4_factory.json": "476bb97888683d075eed93a527e39f0f39b0de63838c2552c746ab1497a19afa",
+      "fetch1/text/presets/v12_soundscape_factory.json": "b6517fa9222f4fa4e347ecc8c9a039951d1a1ce77679e961d5bef2ff4e794b20",
+      "fetch1/text/presets/v12_soundscape_v2_factory.json": "52cf8eba118f80ef5dff0214c44921e7762ade79b0c5bc33127d0cfee289204a",
+      "fetch1/text/presets/v12_soundscape_v3_factory.json": "27e90de8ae347075efb76642fd5d589295e8afa6fe0f27733ea295928100cc86",
+      "fetch1/text/presets/v12_soundscape_v4_factory.json": "2f609ac72d7c79ff0d1f4ef6958a02db159bbf3e4697ac65f4628e916f41c507",
+      "fetch1/text/presets/vehicle_bus_eq_default.json": "5535206a3b63f69beabb0e171d68d50e372f8651c6ea327ac95fcb89751ed066",
+      "fetch1/text/README.md": "42f00b6e5daa7cb1adc623034de96cd8283137306058199eb4d8c06087d8d89b",
+      "fetch1/text/SOUND_DESIGN_GUIDE.md": "d61849bb9cabe75887c0e6a58532df5b5dd9e684589006d6d6eec2165e226ed3",
+      "fetch1/text/VehicleSoundSynth-EV.maxpat": "40d849ad3b6b4275214dccb47b76d0256149b40745ef6389e8b3fd716ceee212",
+      "fetch1/text/VehicleSoundSynth-IONIQ6N.maxpat": "4cca95ce4c370ed6c0b0fd1913aba73132f1753afe68215ac4cd84d01e7ff63b",
+      "fetch1/text/VehicleSoundSynth-V10.maxpat": "a0cb9aae72ca23b214c83fe48aa006a6925834cc00a0b5a80508a267a5a74821",
+      "fetch1/text/VehicleSoundSynth-V12.maxpat": "fc3cb0dc14de6d84cdd6cc850c0fe831bc00e810aba06be6c511d6c1bc8f7177",
+      "fetch1/text/VehicleSoundSynth-V6.maxproj": "fe0dc2f1339336d51353643036bd4bd379c49d6d55bca7545a36a194214c243e",
+      "fetch1/tree.json": "6efa74e67202ec76a56ed5cefb50ed1bb512d5c08a2655d390510c34796f2885",
+      "fetch2/executed_fetch.py": "04b607e1210f1e7734d4d26e0b193d3f78c31b3c108a85ef70975606ae669f2b",
+      "fetch2/metadata.json": "daf964dff7c9ee39d60ba0315961acc21ebac8b9712a58a6d171bf5fb06ec2a8",
+      "fetch2/report.json": "e1a9a36fc139ccc4980e630df6264206f16fbb75a21213fad853ad79b8cf7afd",
+      "fetch2/text/code/backfire_burst.js": "1622903369eb1971d8a0edaa488773d213f5e85b7e2e74828d960a8e0b8b716c",
+      "fetch2/text/code/dna_state_path.js": "2353a3ed82e8b111f15e3e5d46f896fdf9809df76babd17ef96be233d57a2bf8",
+      "fetch2/text/code/drive_model.js": "28d6339bb6c308ed7f4d728d2c7f8e5c65f8fb869822b33c4c88c1f66b9ab759",
+      "fetch2/text/code/eq_state_path.js": "96c68ae53404ad3fda15966ef2497eff89140d1eb65ea2f4b293622ffd7d6e59",
+      "fetch2/text/code/ioniq6n_event_state_path.js": "fd0e3b9eb92431bc43d912219c0d7fe38b69e17f4951048daa0f48a0e98e7710",
+      "fetch2/text/code/ioniq6n_soundscape_state_path.js": "603f0f7cb71b484b3d8122a755759de95fa48d5c72068b80c143bba3948b9690",
+      "fetch2/text/code/manual_input.js": "dd990929d530c9abf639ad9bd54086ab82bc815ba63933dbaa9e13acbdec04c2",
+      "fetch2/text/code/module_mixer_state_path.js": "61d458a6215190fb715c5c769824a0b58f3169529df0e595812bb00afafda5c0",
+      "fetch2/text/code/pop_state_path.js": "896d71f7b521072a0358ab8e27fb882eea8f10464a7d52669782d83f4293590f",
+      "fetch2/text/code/pop_v2_state_path.js": "9c7ca8c7c7b8cd5f20f74071fc465d5be9d280b4ee97e46dc6f6b12bf02d633b",
+      "fetch2/text/code/soundscape_state_path.js": "1fe6c3e9f490c1953d7db0b74c6e2131d3070e7f77c1c31432875877e5fba755",
+      "fetch2/text/code/soundscape_v4_state_path.js": "11d7e961d28eaeb3b39f145d4b9e5a41c9dbc9b49dcff408915ace6428777beb",
+      "fetch2/text/code/start_state_path.js": "3d08159f5310261492504807dd629a1ff78c3c2371b017e61d3753656e2b5986",
+      "fetch2/text/code/start_v3_state_path.js": "33983bed824b20c0686742602262595ca2f25e9b49ba1b32101d199b9ce34524",
+      "fetch2/text/gen/ev_powertrain.gendsp": "28505f7dd9844bcfbf8e4927e5d12f413e65fc4b046d4080b9e854ac0e9b366d",
+      "fetch2/text/gen/ioniq6n_powertrain.gendsp": "a55f25666c5aeb723fcdbacd3c862f8b452aa74389d2223a7453af9b28109ec7",
+      "fetch2/text/gen/v10_powertrain.gendsp": "28be732d5d4c9497140562c89cd53cb3af5a82685ecd2945808d263767dd0584",
+      "fetch2/text/gen/v12_powertrain.gendsp": "843fcc14e55f159bfc0684eaff70f728a5556217101f4478beb25665e1f7844d",
+      "fetch2/text/main.maxpat": "b0c368b2039ecad733b32829d3edc26a9aa6bddbfb88cef6be114c03f65c1a6b",
+      "fetch2/text/patchers/backfire_burst_scheduler.maxpat": "07d8774f5824ea52d64929ade1700a103769e77846c7e5352b4015291cd22a06",
+      "fetch2/text/patchers/cabin_master~.maxpat": "2ece062d521fda8ba7d2b224a295e7ad5502d0900677f29640fb09588b93e7fd",
+      "fetch2/text/patchers/cabin_rumble~.maxpat": "4c5f257e82e9caa6c117bfbf51263282c63c57f1587b5f3803060c6369a89149",
+      "fetch2/text/patchers/cinematic_soundscape_beap~.maxpat": "3ede88ab96808cd2d89dd7ce7b38241257152875fc181b39d7ff42cbd431949e",
+      "fetch2/text/patchers/cinematic_soundscape_v3_beap~.maxpat": "26a010a2623f425c72235e6b8f6a96bf5bc843e5693e0e8908b67bb0857d7f29",
+      "fetch2/text/patchers/drive_simulator.maxpat": "a047d7a4552e191fb4c9f9a8231cb4f9b1cb3bc3d155d8170bdf42746a3cd16d",
+      "fetch2/text/patchers/drive_simulator_ev.maxpat": "3c13a87e3162bace23addf08edeedc463b6fa3046d7e01d663c46c6e9c45b96d",
+      "fetch2/text/patchers/drive_simulator_ioniq6n.maxpat": "c97790287ca5eb5a9b0381380fce063d2da5d3adf1b32df507ad270ce05e68b5",
+      "fetch2/text/patchers/drive_simulator_v10.maxpat": "ffb6f71903ed193a61c4ae2e27d1f13c5f8e5386ef918329d89a1bad0c0e0752",
+      "fetch2/text/patchers/drive_simulator_v12.maxpat": "dd6b8a32ad80680d2845ea2d96fc4a7080a5dd2b7a3b242c99aabe937b7ada5a",
+      "fetch2/text/patchers/engine_controller.maxpat": "4a0b71a51f51c580daf5576bab58d4c779b0b8c54284d9cbbb2d6cbda37d07e2",
+      "fetch2/text/patchers/engine_controller_ev.maxpat": "1020916aec9ee01c03e1cbfbd9012ce14fc180d5ec94cb15b2f93e4eb73e6b6a",
+      "fetch2/text/patchers/engine_controller_ioniq6n.maxpat": "e48f0c2b0245e9945b6c6b50679e1fe5f332377f6ae336ddaa48e14e810e0173",
+      "fetch2/text/patchers/engine_controller_v10.maxpat": "9721847e14579e7d4d2a8484a8432ccf2816da5fb9ec273aa7c4e06fdd65e8c5",
+      "fetch2/text/patchers/engine_controller_v12.maxpat": "178ba2bf7fdbb79d98e73ce468fcb94e050a789be83ff7fb2a640dce45c4817b",
+      "fetch2/text/patchers/engine_start_beap~.maxpat": "5482939f2c8bf3bca77f87d0a9c8a3a077bf917ecfb6a2556bebf2febe19d696",
+      "fetch2/text/patchers/engine_start_core~.maxpat": "a315ffbdea2cd6ce4d4820794547a3ff723535fcf2f7763bc1ff6c1e0197a2bc",
+      "fetch2/text/patchers/engine_start_voice.maxpat": "8ac9cc469657563a8c50201427cac792593acb3b1a53c647cfc24f2dec94c818",
+      "fetch2/text/patchers/ev_cinematic_soundscape_host~.maxpat": "2b29b091446942cff8865535341318f448dd6f83c81d7241c695b8d8f6f3c109",
+      "fetch2/text/patchers/ev_engine_start_beap~.maxpat": "10aeee69556dece96e506ddf2169fdcb429e7dee6b26e71918ac9eb3f21d2540",
+      "fetch2/text/patchers/ev_engine_start_v3_beap~.maxpat": "ff7635f59864a3114222da23d24570fbea1def2e17ad47a8b64b26a9b69837ae",
+      "fetch2/text/patchers/ev_expressive_beap~.maxpat": "b8e26b910082c4c10459d94d591b34b2ff678168803c72ac7afc23a275a1373d",
+      "fetch2/text/patchers/ev_expressive_voice.maxpat": "a0f9b41df0e607a10fda53f0390895da15e73b3eee40633f13fbb48abb6a3541",
+      "fetch2/text/patchers/ev_pad_beap~.maxpat": "fd49608ada91cce3568d4b308db567b7d53047e6b10cc35157e942c1d74771db",
+      "fetch2/text/patchers/ev_pad_driver~.maxpat": "a35ab213784f0e3faa118bff895097111d45403cde808a7c68346983e68d5e9d",
+      "fetch2/text/patchers/ev_powertrain~.maxpat": "4f9ed0331f5d87cbdb70115d066906d0948040801d6809de82b9a2179a153e1c",
+      "fetch2/text/patchers/ev_relax_voice.maxpat": "f44921dad0d9ffd3503dc1ad280fddca103906d8005a65eb6df0f8114b3f7295",
+      "fetch2/text/patchers/ev_sound_dna~.maxpat": "606a62c257c3611b3d49a9cb3a07b032dc83df93ee212822cc840894895871d8",
+      "fetch2/text/patchers/ev_soundscape_host~.maxpat": "126237110f245a007f12e3bb0864f96f858dad642d27b7527c7aeed249479876",
+      "fetch2/text/patchers/ev_soundscape_v4_beap~.maxpat": "e9f95d6d5cbbb72ed2bb036184944b74f71388e1cc6206a9c98bf06dc56cc199",
+      "fetch2/text/patchers/ev_sport_beap~.maxpat": "8f412be1868c1e03ba83e35b65c5c8687d9dbc2b5c9fe58fae9de995c43fa890",
+      "fetch2/text/patchers/ev_sport_voice.maxpat": "5d815b221a77fb7bfee853438d4528861e13788a3d8c8bc3761c20b24ebe2374",
+      "fetch2/text/patchers/ioniq6n_activation_beap~.maxpat": "f9cd353af4cb9701e844bf0e54c253c02e63b51094430492022911e09d4286c5",
+      "fetch2/text/patchers/ioniq6n_cinematic_soundscape_host~.maxpat": "2a86650723fa99451443102d29c117bda81f817fe49b4f1045b4bafe95dc8dc7",
+      "fetch2/text/patchers/ioniq6n_n_event_beap~.maxpat": "60cdbfe0565f8633fc1e2665f57d6b2bc9648d6253dbc7961a7ab37e053db624",
+      "fetch2/text/patchers/ioniq6n_n_event_host~.maxpat": "47d4032305422d841423ad19673b5f97efcd2093a7fcfd2bf83ac72097c9477d",
+      "fetch2/text/patchers/ioniq6n_powertrain~.maxpat": "8926f8e88a8eb9c7de38f82925bd246388d0c9fe7f81638f40036e4eeb1a600d",
+      "fetch2/text/patchers/ioniq6n_sound_dna~.maxpat": "a210897a8f7afb422457a7725146a9beb79ae6023d0ce1e536a5c376c4e1c582",
+      "fetch2/text/patchers/ioniq6n_soundscape_evolution_beap~.maxpat": "525b97684220b581aa14dac079779a37418f26222c8d1094fcf7f37afa531ad2",
+      "fetch2/text/patchers/ioniq6n_soundscape_ignition_beap~.maxpat": "5f4dfae5e3e1870478df4e3c6684adc9961df84c41b79c2a3da44e3ad12ac97d",
+      "fetch2/text/patchers/ioniq6n_soundscape_lightspeed_beap~.maxpat": "f141d1da60c57f52baa70de79e54ea39b802fcb25d05e14a94a55c6f2fb66293",
+      "fetch2/text/patchers/keyboard_drive_ws.maxpat": "bfeac740f2d977e3a85e27b804d7332fa7c76d421e57d0086a63271076428e1c",
+      "fetch2/text/patchers/manual_input.maxpat": "487c9e1ec6b7c43cdec31f65f0c1f83c7b2219979050eb279c1d6a3a13efdddb",
+      "fetch2/text/patchers/mix_master~.maxpat": "ccff2a20b1dce09de22fffcc54c14ee9a54082320deca91a708727f748fc5a8d",
+      "fetch2/text/patchers/module_mixer.maxpat": "bc75a3fe68fd833860de3428bb6e935a9567b0cc2353e76fb42ea1ba3b56bad7",
+      "fetch2/text/patchers/powertrain~.maxpat": "4fe27f85a00191fe614a28cd00e83b98f7f0805649776066fb68731afeec2d59",
+      "fetch2/text/patchers/reference_texture~.maxpat": "5c847b675cf007d162791cb4087f8adc6273892fdc202f38b19913ca71496e58",
+      "fetch2/text/patchers/road_air~.maxpat": "7ffbd4e2b4e270578224afd66112ffc2ae227a06c66df6d192961c4a1f0c86f7",
+      "fetch2/text/patchers/soundscape_control.maxpat": "f8d2115badd55dd4ebbb8fb5eb023481c999429ecd7e25db4bccd42d3039ebf2",
+      "fetch2/text/patchers/transient_ev~.maxpat": "4d0e633b6259f27632c642caf68b8d2fe32e5300fb85547ad0867cd405bf515d",
+      "fetch2/text/patchers/transient_ioniq6n~.maxpat": "2a933bbb4781d4a53005bf44249ec1bbbed9e04bef74bf31cd556a70d2e60125",
+      "fetch2/text/patchers/transient_v10~.maxpat": "b199b59162abdd3f36d1cc82d4d79c4f1052982cdf286a5c1e6de8b0bc85e3bf",
+      "fetch2/text/patchers/transient_v12~.maxpat": "ab7965551d1c91c068bbfa7b9e1594e4bb568e3767d944af0dd70705623846a8",
+      "fetch2/text/patchers/transient~.maxpat": "544f3610d6551f543c33f05d798ee3f3688e3c062d6e6ed50253993a7db9e4f7",
+      "fetch2/text/patchers/v10_backfire_beap~.maxpat": "09f0e148855580acd2927e4a9b9accd676232178a8b66de9708853576171e7fa",
+      "fetch2/text/patchers/v10_backfire_host~.maxpat": "9eab642740526aa1d1aaa8e99a4100aa679ad8f1b238ba92c649d3abb625dec5",
+      "fetch2/text/patchers/v10_backfire_v2_beap~.maxpat": "a0355d0b50520c8c67634a2301551595cbaf235d350c1dba4eaef34cabd4dc22",
+      "fetch2/text/patchers/v10_cinematic_soundscape_host~.maxpat": "6637d18b818769df53417044d87fa8e64b8a343d40116b29d502d5c414b2a955",
+      "fetch2/text/patchers/v10_engine_start_beap~.maxpat": "469f27566312b743d7d3b4aa8554f5ea3fa50fe2ffac74f9817ded0a035e9638",
+      "fetch2/text/patchers/v10_engine_start_v3_beap~.maxpat": "3b2bf0a252fd9a1e0cc13b0a44e961a355aa7b1e4371b0e8319aeefec05ccb3c",
+      "fetch2/text/patchers/v10_fallback_renderer~.maxpat": "c4097b8fb6bb9af2d25a4b478c1e04f7c34ec9e95d7030e0eaad4a51a4e66648",
+      "fetch2/text/patchers/v10_pad_beap~.maxpat": "902ccfb00a5d2533acb3287512b9569fa01a88d21d07db5e454b641e3a0174d8",
+      "fetch2/text/patchers/v10_pad_host~.maxpat": "88af356c1696e183aa855949ecaf7caae0b374725db5e4070d1e771506c38941",
+      "fetch2/text/patchers/v10_pad_voice.maxpat": "66eaff7a64df5f6e8148bed32b4f252f427a979b35a342ae292923a2447bcb5d",
+      "fetch2/text/patchers/v10_powertrain~.maxpat": "514793be73f3f05cceaa1885c2e735677d5a1e712b488390901d99e9df3c1a02",
+      "fetch2/text/patchers/v10_sound_dna~.maxpat": "3ab45646ec041f66995f38f7c9edc53478709f8461a49d7da6705892aa7f7d18",
+      "fetch2/text/patchers/v10_soundscape_v4_beap~.maxpat": "9d9b467029707ef17d6e78c4d1e29ddcca9258bef05e90723479fe4ce7bc897e",
+      "fetch2/text/patchers/v10_state_renderer~.maxpat": "96b23e4e1fc5d57884cd1dcfbd2d8fa38a3e47481b8e2bd41d71fdf62de34f8d",
+      "fetch2/text/patchers/v12_backfire_beap~.maxpat": "00e41e2539416d3212c6d67839fad2c7edd77169838b314b974acfd64e42a5ac",
+      "fetch2/text/patchers/v12_backfire_host~.maxpat": "879f1b46cd84c1fa1d20dfaf382ef9be1928f049f8f67de9ddbd15acc3d09181",
+      "fetch2/text/patchers/v12_backfire_v2_beap~.maxpat": "efa923682931471808acf8d9ed1d27f1c13ceae88264722d9126ffb7c59eeb81",
+      "fetch2/text/patchers/v12_cinematic_soundscape_host~.maxpat": "38651aa9973609f2c27e09dbdfa2be2f42555b5f344d2f8845b2965a4508dc93",
+      "fetch2/text/patchers/v12_engine_start_beap~.maxpat": "1a36c0fa837795cce9c871d82f50a2bb4ba62642d5761cd6a8feeb1fe5af57ed",
+      "fetch2/text/patchers/v12_engine_start_v3_beap~.maxpat": "de3f0486d26025cca65e68a0b5550f8292688cb0f8203f846e088baf1dc41754",
+      "fetch2/text/patchers/v12_pad_beap~.maxpat": "0d421b95509f7e6695a2f94ec47ee2d92ecdef5eaa0aa8fbd58b73ce8c6d22b5",
+      "fetch2/text/patchers/v12_pad_host~.maxpat": "7e8284bf8e29980e531331b8066e792e61f36760ea97a8c863323743bc3c34d9",
+      "fetch2/text/patchers/v12_pad_voice.maxpat": "55bd1e8e41792d97b0c4a9f3ebbdc7825e3e05e203f1dc5cbf361a5f23eacff4",
+      "fetch2/text/patchers/v12_powertrain~.maxpat": "410bf49b321b90b6ba197aa87be5c8ba790209a5dcf742489c01074d45d8d4ac",
+      "fetch2/text/patchers/v12_sound_dna~.maxpat": "0349223e626751f1d89cc0a8e572ac81f5c8669b9cd3ddb8cb57449496b4c2b9",
+      "fetch2/text/patchers/v12_soundscape_v4_beap~.maxpat": "c14e233c2c2144ed0ffd1adf50813b62c3eca9ccfe6c7baf8fa928ce598ee448",
+      "fetch2/text/patchers/v12_texture_renderer~.maxpat": "e8744cdc89b72247748bfd7bce04dbae963f64b593045c3cd75c3d97cf9b1136",
+      "fetch2/text/patchers/vehicle_bus_eq~.maxpat": "3eb6f8b7aef5c56c6c58235676b4a6bebe12fe1a4e82fc63bb8eb9d402ecbcbf",
+      "fetch2/text/patchers/vehicle_engine_ev~.maxpat": "7ec80d2a5c2c089161a4b224d4df81a428e00eda3004f736344b2a7f07677e84",
+      "fetch2/text/patchers/vehicle_engine_ioniq6n~.maxpat": "3e0e5ef9568bd94d1a5fccf1432542f49c58816c4709f2dbe0dbd583b414c94d",
+      "fetch2/text/patchers/vehicle_engine_v10~.maxpat": "fd790dd3e26ba5353f1fdc0b910390d3f335d8fb2ab2da64553a89a672c0480d",
+      "fetch2/text/patchers/vehicle_engine_v12~.maxpat": "e3107d894fcfb3d75de19d6bd1533ee051f885ab1e54c87a65c1db013eb52651",
+      "fetch2/text/patchers/vehicle_engine~.maxpat": "acc17b755fb5baeadbcb48e83ef92387d7c528f6668cd0c0f3a8f3672af4307c",
+      "fetch2/text/presets/ev_soundscape_factory.json": "021a35f8f563d0ba1127e9496fb6207f74119ed7f2d8646de538a77816e71a19",
+      "fetch2/text/presets/ev_soundscape_v2_factory.json": "6d023cd10063616e0001d0a85255500d2389b61b76864841d2d40f2e9b39395e",
+      "fetch2/text/presets/ev_soundscape_v3_factory.json": "d15f5eb0626bde8bbd16fdcedb00f18beeaa261e0e3d5b563c6697bbe61d566c",
+      "fetch2/text/presets/ev_soundscape_v4_factory.json": "3b2bd783b041ef54833f9576ab95985d184bd01f679d67921287122d160789e2",
+      "fetch2/text/presets/ioniq6n_n_event_factory.json": "a92d9a49191cd4e3766eadf7830cc63330d57a68149f398b631a5c713750f31d",
+      "fetch2/text/presets/ioniq6n_soundscape_modes_factory.json": "fcae7b5e6f551fd37378da42bc08070e593e666e8093e16e57c20b62aab6b198",
+      "fetch2/text/presets/sound_dna.json": "89c7679f6ca9ba8b67dde41cce036a50f09ff12d8ba8a6cbae1375d13bb5dbaa",
+      "fetch2/text/presets/v10_soundscape_factory.json": "4986bd98a3dcef2b9a808eef4eec9eec0ff377b4ac652ec30bcf6c2d526798f0",
+      "fetch2/text/presets/v10_soundscape_v2_factory.json": "35fece586e4ff015c6d4975a97fa9146e1dcf97a277e75e58553ffd656944ecf",
+      "fetch2/text/presets/v10_soundscape_v3_factory.json": "864c22045c1c23a649e079a27552d8f810b005525017e5338cf001da0a43b2d5",
+      "fetch2/text/presets/v10_soundscape_v4_factory.json": "476bb97888683d075eed93a527e39f0f39b0de63838c2552c746ab1497a19afa",
+      "fetch2/text/presets/v12_soundscape_factory.json": "b6517fa9222f4fa4e347ecc8c9a039951d1a1ce77679e961d5bef2ff4e794b20",
+      "fetch2/text/presets/v12_soundscape_v2_factory.json": "52cf8eba118f80ef5dff0214c44921e7762ade79b0c5bc33127d0cfee289204a",
+      "fetch2/text/presets/v12_soundscape_v3_factory.json": "27e90de8ae347075efb76642fd5d589295e8afa6fe0f27733ea295928100cc86",
+      "fetch2/text/presets/v12_soundscape_v4_factory.json": "2f609ac72d7c79ff0d1f4ef6958a02db159bbf3e4697ac65f4628e916f41c507",
+      "fetch2/text/presets/vehicle_bus_eq_default.json": "5535206a3b63f69beabb0e171d68d50e372f8651c6ea327ac95fcb89751ed066",
+      "fetch2/text/README.md": "42f00b6e5daa7cb1adc623034de96cd8283137306058199eb4d8c06087d8d89b",
+      "fetch2/text/SOUND_DESIGN_GUIDE.md": "d61849bb9cabe75887c0e6a58532df5b5dd9e684589006d6d6eec2165e226ed3",
+      "fetch2/text/VehicleSoundSynth-EV.maxpat": "40d849ad3b6b4275214dccb47b76d0256149b40745ef6389e8b3fd716ceee212",
+      "fetch2/text/VehicleSoundSynth-IONIQ6N.maxpat": "4cca95ce4c370ed6c0b0fd1913aba73132f1753afe68215ac4cd84d01e7ff63b",
+      "fetch2/text/VehicleSoundSynth-V10.maxpat": "a0cb9aae72ca23b214c83fe48aa006a6925834cc00a0b5a80508a267a5a74821",
+      "fetch2/text/VehicleSoundSynth-V12.maxpat": "fc3cb0dc14de6d84cdd6cc850c0fe831bc00e810aba06be6c511d6c1bc8f7177",
+      "fetch2/text/VehicleSoundSynth-V6.maxproj": "fe0dc2f1339336d51353643036bd4bd379c49d6d55bca7545a36a194214c243e",
+      "fetch2/tree.json": "6efa74e67202ec76a56ed5cefb50ed1bb512d5c08a2655d390510c34796f2885",
+      "startup1/executed_inspector.py": "3aeb0dea86bd72b38a1ca91ab73bcd4dca728eaa53fb0358bf6b58f2488ec425",
+      "startup1/report.json": "27b15ed97ea20307dab0b54a1d8ff903c63fb76b9283b5d005dcd6d5536b6b05",
+      "verification1/executed_summary.py": "ac551d5b1983fa70e2f5d1425f31a998ba254f195822c432ee72562cb9cdcf95",
+      "verification1/report.json": "159337b888b70ce6376aad0027017305d96369864bf24eb6a5a40177b6a781be",
+      "verification1/summary_crlf.json": "f643a48caf2330a86889e5580c2947f284ab9dccbb51af00fa3aa45bb9f7b6b6",
+      "verification2/executed_summary.py": "fdcce3ba5fb38cc7f7dd2d6b4fd77848f53df97fec6d4607e11071cadba9bd98",
+      "verification2/report.json": "c0bf058f60db343e24c4119978a7c34b367e3d094b8b2273af2d27ecb37159fb"
+    },
+    "stereo_delay_v1": {
+      "analysis1/A_moving_observations.npz": "9c02771594ee19c052b591636a66210b3103baea477599a57520e251a81ea7f5",
+      "analysis1/A_stationary_tail_observations.npz": "788747eddabb10d6b2ee9104af7e6c6384cb9f342f07c1858fc120649c6a2cb8",
+      "analysis1/B_pull_observations.npz": "afff3edebd721cbad7128c4220be09472fe08d8497ab8d6ee557448bbcdf02e4",
+      "analysis1/B_release_observations.npz": "4a501bf51aedb3a2c359b44c9b5bf43912b35ce630f4067152542078ae07bf8c",
+      "analysis1/D_dyno_observations.npz": "5a72d6fe484ccae481e6c0d3f0328d6fe7de6bbca34eb87c908e72bf4cc8b41f",
+      "analysis1/E_high_cabin_observations.npz": "dcec21e4921840bd0ae0727a70c91a60c3128902f31150e738850b879669e5ff",
+      "analysis1/exact_sources/research/stereo_delay_v1_plan.json": "36396fd68c494186a3e30dd8eb7f91d03e3154b2a654cbc4e1fa2f4a4c9c030e",
+      "analysis1/exact_sources/tools/analyze_stereo_delay_v1.py": "fdd9300d5fbf24ac38fc03221e2f6994d023d5ab4e5f678468b30be7f5970720",
+      "analysis1/exact_sources/tools/stereo_delay_v1/fit.py": "25cf708e9dfd7358d9242e163fadd9576f4b487bc125a86e90056dc6b4418f97",
+      "analysis1/exact_sources/tools/stereo_delay_v1/spectrum.py": "adc6f28d65e7a989f75b017c44a66dbc855bdb1a4efb8f3143d64eb487e17f06",
+      "analysis1/metadata.json": "66a133d8dd3f2329df11a9e477400fe5ebb7e227f7dbd03f8f6effe3c802a196",
+      "analysis1/report.json": "64a62385bf44a94f32c268904978394c07d42f132ece0db31fbd21a8f2809481"
+    }
+  },
+  "input_metadata_sha256": {
+    "references/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "references/approval_manifest.json": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454"
+  }
+}
