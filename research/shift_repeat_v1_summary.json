@@ -1,0 +1,307 @@
+{
+  "schema": "vsl.shift-repeat-summary/1",
+  "date": "2026-11-12",
+  "base_commit": "3a3b09a0662be63031fb4014548e2ecf627a4f07",
+  "result": "pass",
+  "result_scope": "Input identity, direct FFT and known controls pass; not a universal shift profile or real-clock qualification",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\shift_repeat_v1",
+  "input_metadata_sha256": {
+    "references/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "references/analysis/DE_usability_v1/E/video_frames.json": "739c788124ab85ce792e96fd96ed9de473d1baace59404374d44a2b8db026e18",
+    "references/approval_manifest.json": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454"
+  },
+  "provenance": {
+    "segment_id": "E_corsa_first_context",
+    "source": "E",
+    "catalog_sha256": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "master": "references/clean/E_decoded_float.wav",
+    "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+    "seconds": [
+      47,
+      55
+    ],
+    "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+    "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+    "not_established": [
+      "continuous unedited run",
+      "exact RPM curve",
+      "pedal/load",
+      "ECU or phone synchronization",
+      "external exhaust spectrum"
+    ]
+  },
+  "frames": 33,
+  "gear_display_changes": [
+    {
+      "from": 1,
+      "to": 2,
+      "last_old_seconds": 49.75,
+      "animation_seconds": null,
+      "first_new_seconds": 50.0
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "last_old_seconds": 51.0,
+      "animation_seconds": 51.25,
+      "first_new_seconds": 51.5
+    }
+  ],
+  "acoustic_markers_seconds": [
+    49.805,
+    50.905
+  ],
+  "shape_reference_band_relative_root": [
+    6.5,
+    18.5
+  ],
+  "shape_bands_relative_root": [
+    [
+      18.5,
+      45.5
+    ],
+    [
+      45.5,
+      110.5
+    ]
+  ],
+  "old_shape_db": [
+    [
+      -0.4833594886018906,
+      0.13172806127297765
+    ],
+    [
+      -2.819333087250259,
+      -5.393237638860899
+    ],
+    [
+      -1.8726493033502085,
+      -5.545001826424875
+    ],
+    [
+      -1.2135637980985863,
+      -2.286456777560942
+    ],
+    [
+      -0.3304468742938824,
+      -0.8451694781507944
+    ]
+  ],
+  "new_shape_db": [
+    [
+      0.7006701403924418,
+      2.014847985793469
+    ],
+    [
+      2.0934864794672565,
+      1.0305148112972637
+    ]
+  ],
+  "previous_median_prediction_error_db": [
+    [
+      1.914233938491028,
+      4.301304763354411
+    ],
+    [
+      3.3070502775658426,
+      3.316971588858206
+    ]
+  ],
+  "known_control_max_error_db": 0.008023094930380559,
+  "direct_fft_max_absolute_error": 5.551115123125783e-17,
+  "clock_sensitivity": [
+    {
+      "marker": 49.805,
+      "minimum_db": [
+        0.6363202056685986,
+        1.4633046574586235
+      ],
+      "maximum_db": [
+        0.8336629215840348,
+        2.7974533155362855
+      ]
+    },
+    {
+      "marker": 50.905,
+      "minimum_db": [
+        2.058279600674166,
+        -0.11925155234165796
+      ],
+      "maximum_db": [
+        2.185610802930204,
+        1.8810670051368297
+      ]
+    }
+  ],
+  "window_sensitivity": [
+    {
+      "marker": 49.805,
+      "shape_db_by_80_60_40ms": [
+        [
+          0.7006701403924418,
+          2.014847985793469
+        ],
+        [
+          0.7181421091864948,
+          2.0298724858097468
+        ],
+        [
+          0.7496713578741341,
+          2.0622124565642057
+        ]
+      ],
+      "spread_db": [
+        0.04900121748169228,
+        0.04736447077073658
+      ]
+    },
+    {
+      "marker": 50.905,
+      "shape_db_by_80_60_40ms": [
+        [
+          2.0934864794672565,
+          1.0305148112972637
+        ],
+        [
+          2.12609206165218,
+          1.1332747026849763
+        ],
+        [
+          2.1694242933999766,
+          1.2581720657491888
+        ]
+      ],
+      "spread_db": [
+        0.07593781393272003,
+        0.22765725445192508
+      ]
+    }
+  ],
+  "sensitivity_interpretation": "Engineering +/-2% perturbations, not measured clock confidence. Second shift highest band spans zero.",
+  "waveform_duplicate_check": [
+    {
+      "channel": 0,
+      "maximum_absolute_correlation": 0.06492017744151639,
+      "second_passage_seconds": 84.724,
+      "rate": 4000
+    },
+    {
+      "channel": 1,
+      "maximum_absolute_correlation": 0.06395709035660738,
+      "second_passage_seconds": 84.72375,
+      "rate": 4000
+    }
+  ],
+  "upstream_revision": "ac2b37d8639027d79934a2023cf8d1d37d3b2f96",
+  "c_index_rows": 421,
+  "c_index_sha256": "bcf0118631536bce360144f682dd9dc47094502fc5155f3697ed5a1b94cf392e",
+  "executed_analysis_sources": {
+    "tools/analyze_shift_repeat_v1.py": "a5e543ba21a6a6c0e951b4f6889be9d605c162bfb115deb291fe4cd3ee1cf4fd",
+    "research/shift_repeat_v1_annotations.json": "3b37eae84bad5012ff0a1803158441b62cbae4e9f499f9faed0efbae0769453c",
+    "tools/explore_shift_repeat_v1.py": "010aceb90eded13e773e86ea5bc7913e96dd865af8868344fbea226de393c97f",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "tools/shift_evidence_v1/timing.py": "77e84ef1729ec1a73d89c030090fc60fcde8a76e6ab7dffd710c49bfa2c14b11"
+  },
+  "executed_verification_sources": {
+    "tools/verify_shift_repeat_v1.py": "af9051d7125129baf88a64de4770f2c7d667a3caa2e116b1a2b3bde44ab622cb",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+  },
+  "publication_change": "Exploration comment corrected only; AST matches archived executed source. No spectral duplication check was run.",
+  "source_sha256": {
+    "research/shift_repeat_v1_annotations.json": "3b37eae84bad5012ff0a1803158441b62cbae4e9f499f9faed0efbae0769453c",
+    "tools/analyze_shift_repeat_v1.py": "a5e543ba21a6a6c0e951b4f6889be9d605c162bfb115deb291fe4cd3ee1cf4fd",
+    "tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/explore_shift_repeat_v1.py": "f090658985a0b105f355727c223eced4eb1f37bf185ded8e030a1a07c410f873",
+    "tools/freeze_shift_repeat_v1.py": "2132251b4a4e1967869ff2e683f9e39ab8284243710003ae444cbb9c4f235571",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "tools/shift_evidence_v1/timing.py": "77e84ef1729ec1a73d89c030090fc60fcde8a76e6ab7dffd710c49bfa2c14b11",
+    "tools/summarize_shift_repeat_v1.py": "e00a23886e8d9ce4c5ac4ebf51202012dd7101a2b733f52c484023c4ee00bbfb",
+    "tools/verify_shift_repeat_v1.py": "af9051d7125129baf88a64de4770f2c7d667a3caa2e116b1a2b3bde44ab622cb"
+  },
+  "evidence_sha256": {
+    "analysis1/exact_sources/research/shift_repeat_v1_annotations.json": "3b37eae84bad5012ff0a1803158441b62cbae4e9f499f9faed0efbae0769453c",
+    "analysis1/exact_sources/tools/analyze_shift_repeat_v1.py": "a5e543ba21a6a6c0e951b4f6889be9d605c162bfb115deb291fe4cd3ee1cf4fd",
+    "analysis1/exact_sources/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/exact_sources/tools/explore_shift_repeat_v1.py": "010aceb90eded13e773e86ea5bc7913e96dd865af8868344fbea226de393c97f",
+    "analysis1/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "analysis1/exact_sources/tools/shift_evidence_v1/timing.py": "77e84ef1729ec1a73d89c030090fc60fcde8a76e6ab7dffd710c49bfa2c14b11",
+    "analysis1/passage_comparison.png": "9f59c951f7d41cbee81e2bad9451390088c45d1c0cffc7fa291e77d79b729bca",
+    "analysis1/report.json": "ae21801b02455e130c9efddcac3114bc5a3605b93926290a9cce32db34d48386",
+    "analysis1/upstream/patchers/v10_sound_dna~.maxpat": "3ab45646ec041f66995f38f7c9edc53478709f8461a49d7da6705892aa7f7d18",
+    "analysis1/upstream/patchers/v10_state_renderer~.maxpat": "96b23e4e1fc5d57884cd1dcfbd2d8fa38a3e47481b8e2bd41d71fdf62de34f8d",
+    "analysis1/upstream/VehicleSoundSynth-V6.maxproj": "fe0dc2f1339336d51353643036bd4bd379c49d6d55bca7545a36a194214c243e",
+    "analysis1/window_40.npz": "415b6ea5a8a7efd137b3820ae656ea380a9b1c8d02f70212436c57f25b961964",
+    "analysis1/window_60.npz": "aa941a35d9cb62c0d7250da7287792a5144d835ffd8c17867cacbaf619a4beaf",
+    "analysis1/window_80.npz": "2653dc452b71f008f48e61f87170a40dfe7a32883115d8c0b5b981e85684454e",
+    "exploration1/decode.log": "dce41ca51395e93ce563ec280f1ca7fb4c0c7749959a3228fce239c2c6d6cf1f",
+    "exploration1/frame_001.png": "e8502b748cacc0b304d0e3efabd1644cb707c6ad08d3bd2565a1dffb70b52d3b",
+    "exploration1/frame_002.png": "c1c9843e096fad2a15e675bab9ffdb8fe08f1d68ce67601ef1d705fc07b9ca67",
+    "exploration1/frame_003.png": "30417a63a78fa45095a7cbddc483246224d7ea209907f9b5a14442ae63d09471",
+    "exploration1/frame_004.png": "5193dea829ac272d62c498919bc49d0715e09973647fa94b0edbdd3ab10b571f",
+    "exploration1/frame_005.png": "ccdcf1a019f0f7f4828040690ca84a75a77d161c532b8f4e03a044eda8b9bc33",
+    "exploration1/frame_006.png": "465ce11cbb80b61292b097329cc2cd3b27a62b13fcb040912c67d43ac54bb678",
+    "exploration1/frame_007.png": "cbde7d69a83d57eb787fb67ca524f3597d4164bde8713ccbd9012cda488d0b12",
+    "exploration1/frame_008.png": "eb75855f44aacda4ee933565eee5aee93e3941f43f5552fc87a962630a635bf0",
+    "exploration1/frame_009.png": "1c1180723887b856212e140d8212de420ec32f453a3c3d4c79f49cc4c2dad9fc",
+    "exploration1/frame_010.png": "acd161a66ff4536331aebe2f85fbd19edb391a71569df500299d12a0bb11ca87",
+    "exploration1/frame_011.png": "5e979b944232414708ff6926a262ef9c2fcd731b1db8b11c6e306fdbdf514dd0",
+    "exploration1/frame_012.png": "593b66db2d0a9a687db9d9bd37d3d2022614fa7a89b7c0ec07be495bab66c016",
+    "exploration1/frame_013.png": "7cb70d2698e2ec3b3fa9406d661feba5abb261f9b4378ec1ed9abea7cf49ffab",
+    "exploration1/frame_014.png": "592a88695cf482183fb368da77f7b386bff25cb09f8c574acac746a14b3d2d52",
+    "exploration1/frame_015.png": "997fdf3af0ff55fd6a6936b31c4226afe0d2f0fdf960052e188fec37e53da2f2",
+    "exploration1/frame_016.png": "34c5cf242a251cad5e3c0b3dae91f76ff3e633fef097b6966d4d8f4cde73ab78",
+    "exploration1/frame_017.png": "937ae61e3f692b9d9c41f940993f86af6bf2044984bf47308926b78c03046cde",
+    "exploration1/frame_018.png": "8109d091885e75f4d9090bb72177e5ec47d7d82225345923930f4269e1a01a76",
+    "exploration1/frame_019.png": "0388c52e91af49799155830537ace38c5a5d7a6f3f74178fa421be84dd6802e9",
+    "exploration1/frame_020.png": "730427567c60f644523001893b1fe5d97f5ea721fd0b47c25921ef9425a62a94",
+    "exploration1/frame_021.png": "a374ad34543f28b1ab37d0bcac0eab08ec581e4ffa462d1b8ebc2f42f287879c",
+    "exploration1/frame_022.png": "9669869d69c361824a83e9f686186edc0b6b2f59055583e0678a88fc61d24cac",
+    "exploration1/frame_023.png": "6092f4522402e1b0ba4bc09e6968c18936d4a569b21d805cee3eea6de8241b9f",
+    "exploration1/frame_024.png": "307bce6827689ae9e66db03e326fe13578ed984e4031de3258e499f2b2b87cb9",
+    "exploration1/frame_025.png": "86b8aed3dfe59e0b6cefb65038f228a84c21a32f5a0763189eb2cad02e22fa4e",
+    "exploration1/frame_026.png": "d4d6d08be89ed06421a0f99b4026c31368f4f3689e7be8d06f684f04bfb38a57",
+    "exploration1/frame_027.png": "fcfc29f21022dfafbf0e6168d27d5a23d84689f25557d5fc614667f0380a430a",
+    "exploration1/frame_028.png": "73a07989e9ae324156b13c45d6fe7523e998d221d3c7a665507878c770dc4296",
+    "exploration1/frame_029.png": "5ad0f3ecc151392256dc83dd4b969b03a1391dc0d1d9edb73a3c6114ca1dee36",
+    "exploration1/frame_030.png": "a29ce079255aca7f3148c5e0cc7428afc8733989ac2a0e67be7e100f0214c43f",
+    "exploration1/frame_031.png": "83bd777ee31414368d5b7d7e87917ac2da48873bf347b2e78d9972b47523f22a",
+    "exploration1/frame_032.png": "73bb0577a8f9a8533a7218b341d0d16d2385856f4be8794fa9ff19c8e83a03d3",
+    "exploration1/frame_033.png": "6049e04f999b281600223f2d793601cfca8c83babc362c4f4c3129932f2e83f8",
+    "exploration1/report.json": "69c05b41324bdf841cd80846a711a576b3f73edf98ad660e2ead24d4d1345598",
+    "exploration1/sheet_01.jpg": "b8e7650dbb38d96be6dfe7776d6b497defcde427199a3cba9c151fcdd1e43f0b",
+    "exploration1/sheet_02.jpg": "aa32a1ca5ccc33666695098b552d0891a8c8aea0c3f89b5da4473c21406b79f7",
+    "exploration1/sheet_03.jpg": "75e5dca71702ccc3ab363bd269accec3f2fe60ef8be14e6452ace1c21adf1a8a",
+    "exploration1/sheet_04.jpg": "aad33f93433bd420fd6035d9c2be9e3e93b20660d0612eaf8122edc5974b0034",
+    "exploration1/sheet_05.jpg": "2a4d20c4e5dedb58bbde5b630059abe87a92952d483e96f4d56f5875db07c421",
+    "exploration1/spectrum.npz": "dfceca2ec9704562486bce7b30cebacfafe1f50df95d3d67585553e06da89042",
+    "publication1/check.json": "cb287ac36a3c4953ed5a11a16ab30aaa03b2e37d21e9a009dd1a686aad9b7c94",
+    "publication1/success.json": "040df6c12d399ed3f83a67c8ff61eb3fd4a17bf41f8c540101df635551a1096d",
+    "publication1/summarize_before_lf.py": "32212930f9d4b1fba2011936a8d4210480ec78319130cad01cfea2c1ffd2ecda",
+    "publication1/summary_before_lf.json": "716c8d1bac2d28b6c4395f70d6453e74cc4d1ad4f78361c49381c29f7ea31a18",
+    "verification1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "verification1/exact_sources/tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "verification1/exact_sources/tools/verify_shift_repeat_v1.py": "af9051d7125129baf88a64de4770f2c7d667a3caa2e116b1a2b3bde44ab622cb",
+    "verification1/verification.json": "0eb2b18ac669381c48db20ec27a3cb25e9f04ac59549fba75c4b6de06c9495df"
+  },
+  "plot_sha256": "9f59c951f7d41cbee81e2bad9451390088c45d1c0cffc7fa291e77d79b729bca",
+  "runtime_changes": false,
+  "human_accepted": false,
+  "common_shift_profile_promoted": false,
+  "limits": [
+    "Acoustic shape observations, no independently measured torque/pedal/load/fueling",
+    "Only two passages of one recording; launch traction/gear/speed/path can differ",
+    "First and second passages share presentation but waveform correlation is low; no claim of ECU-independent trials",
+    "Short-window variants share one80ms clock; not independent clock estimates",
+    "No target promoted from a median or one successful known fixture",
+    "Sensitivity grid is engineering perturbation, not measured clock uncertainty",
+    "Windows share one clock; low waveform correlation is not proof of independent ECU trials",
+    "Observed passage differences are confounded with launch/gear/speed/acoustic path",
+    "No fitted physical state/torque transfer or new timbre acceptance"
+  ]
+}

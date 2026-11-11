@@ -1,0 +1,17 @@
+{
+  "schema":"vsl.shift-repeat-annotations/1",
+  "source":"E",
+  "segment":"E_corsa_first_context",
+  "observation":"references/analysis/shift_repeat_v1/exploration1",
+  "method":"Visual inspection of all five original-PTS instrument contact sheets, 47..55s at 0.25s spacing; no image enhancement or OCR.",
+  "gear_display_changes":[
+    {"from":1,"to":2,"last_old_seconds":49.75,"animation_seconds":null,"first_new_seconds":50.00},
+    {"from":2,"to":3,"last_old_seconds":51.00,"animation_seconds":51.25,"first_new_seconds":51.50}
+  ],
+  "coasting_observation":{
+    "seconds":[51.5,55.0],"gear":3,
+    "display_speed_kph_endpoints":[126,98],
+    "interpretation":"Displayed gear remains3 while speed and tach decrease; this does not reveal actual pedal/load or injector state."
+  },
+  "limits":["Sampled display brackets, not actuator timestamps","Unknown AV and display latency","Wheelspin/traction intervention may occur during launch","Mode/gear and acoustic-path differences may confound comparisons","No measured pedal/load or fuel supply"]
+}
