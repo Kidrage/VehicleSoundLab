@@ -1,0 +1,44 @@
+{
+  "schema": "vsl.cabin-anchor-bank/1",
+  "voices": [
+    {
+      "name": "E Cabin Lower",
+      "file": "E Cabin Lower.model",
+      "model_sha256": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+      "base_hz": 60.634271286273396,
+      "source": "E",
+      "seconds": [
+        89.3,
+        90.3
+      ],
+      "perspective": "cabin mixed recording",
+      "analysis_cycles": 4,
+      "status": "experimental; not human accepted",
+      "range": "0.90..1.10 relative pitch",
+      "lf_model": null
+    },
+    {
+      "name": "E Cabin Upper",
+      "file": "E Cabin Upper.model",
+      "model_sha256": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3",
+      "base_hz": 64.84675603879224,
+      "source": "E",
+      "seconds": [
+        90.6,
+        91.6
+      ],
+      "perspective": "cabin mixed recording",
+      "analysis_cycles": 4,
+      "status": "experimental; not human accepted",
+      "range": "0.90..1.10 relative pitch",
+      "lf_model": null
+    }
+  ],
+  "renderer": "modules/sound_dna",
+  "notes": [
+    "Same existing C codec/voice; no PCM playback",
+    "Distinct acoustic anchors within one V10 cabin context; not two vehicle models",
+    "No phase-aligned morph/automatic driving selection yet",
+    "Custom DNA loading in VslSceneMonitor disables exterior LF"
+  ]
+}

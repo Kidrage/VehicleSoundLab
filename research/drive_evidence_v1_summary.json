@@ -1,0 +1,653 @@
+{
+  "schema": "vsl.drive-evidence-published/1",
+  "date": "2026-11-11",
+  "source_revision_base": "cba48e28f66bf3f72530b5d98d3cdd7a47ce8b5c",
+  "audio_sources": {
+    "A_exterior_low_rev": {
+      "segment_id": "A_exterior_low_rev",
+      "source": "A",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "seconds": [
+        208,
+        211
+      ],
+      "perspective": "stationary exterior near exhaust",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "RPM",
+        "warm/cold condition",
+        "load",
+        "microphone transfer"
+      ]
+    },
+    "A_exterior_blips": {
+      "segment_id": "A_exterior_blips",
+      "source": "A",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "seconds": [
+        238,
+        248
+      ],
+      "perspective": "stationary rear exterior, open driver door",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "neutral gear",
+        "pedal trajectory",
+        "torque load",
+        "RPM"
+      ]
+    },
+    "A_exterior_moving": {
+      "segment_id": "A_exterior_moving",
+      "source": "A",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "seconds": [
+        316,
+        319.5
+      ],
+      "perspective": "moving exterior tailpipe",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "gear events",
+        "pedal",
+        "RPM/load cells"
+      ]
+    },
+    "B_cabin_pull": {
+      "segment_id": "B_cabin_pull",
+      "source": "B",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/B_decoded_float.wav",
+      "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+      "raw_sha256": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+      "seconds": [
+        218,
+        230
+      ],
+      "perspective": "cabin binaural, audio only",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "visible state",
+        "engine banks from L/R",
+        "isolated engine field"
+      ]
+    },
+    "D_dyno_gears_context": {
+      "segment_id": "D_dyno_gears_context",
+      "source": "D",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/D_decoded_float.wav",
+      "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+      "raw_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+      "seconds": [
+        20,
+        32
+      ],
+      "perspective": "Fixed rear-left exterior camera in enclosed dyno cell",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "verified RPM units/readout",
+        "ECU RPM or pedal/load telemetry",
+        "stock exhaust status",
+        "microphone/room transfer",
+        "exact gear event times",
+        "subjective clarity or absence of music/speech"
+      ]
+    },
+    "E_corsa_second_context": {
+      "segment_id": "E_corsa_second_context",
+      "source": "E",
+      "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+      "master": "references/clean/E_decoded_float.wav",
+      "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+      "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+      "seconds": [
+        82,
+        100
+      ],
+      "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+      "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+      "not_established": [
+        "exact shift/cut timestamps",
+        "continuous unedited run",
+        "exact RPM curve",
+        "pedal/load",
+        "ECU or phone synchronization",
+        "external exhaust spectrum"
+      ]
+    }
+  },
+  "video_frames": 49,
+  "visual_audio_readings": [
+    {
+      "seconds": 84.0,
+      "gear": 2,
+      "rpm_interval": [
+        7300,
+        7900
+      ],
+      "acoustic_reference_hz": 319.9170820004242,
+      "implied_order_interval": [
+        2.42974998987664,
+        2.6294554684966376
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 19195.024920025455,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7678.009968010182,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3839.004984005091,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1919.5024920025455,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 85.5,
+      "gear": 3,
+      "rpm_interval": [
+        7500,
+        8100
+      ],
+      "acoustic_reference_hz": 328.9519952350737,
+      "implied_order_interval": [
+        2.436681446185731,
+        2.6316159618805894
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 19737.11971410442,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7894.847885641769,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3947.4239428208843,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1973.7119714104422,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 86.0,
+      "gear": 3,
+      "rpm_interval": [
+        8300,
+        8900
+      ],
+      "acoustic_reference_hz": 353.91436001064443,
+      "implied_order_interval": [
+        2.3859395056897377,
+        2.5584170603179115
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 21234.861600638666,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 8493.944640255466,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 4246.972320127733,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 2123.4861600638665,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 87.0,
+      "gear": 4,
+      "rpm_interval": [
+        7000,
+        7600
+      ],
+      "acoustic_reference_hz": 312.2871220390775,
+      "implied_order_interval": [
+        2.4654246476769277,
+        2.67674676033495
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 18737.22732234465,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7494.89092893786,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3747.44546446893,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1873.722732234465,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 88.0,
+      "gear": 4,
+      "rpm_interval": [
+        7900,
+        8500
+      ],
+      "acoustic_reference_hz": 341.975681429283,
+      "implied_order_interval": [
+        2.4139459865596447,
+        2.597283656424934
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 20518.54088575698,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 8207.416354302792,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 4103.708177151396,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 2051.854088575698,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 89.5,
+      "gear": 5,
+      "rpm_interval": [
+        6700,
+        7300
+      ],
+      "acoustic_reference_hz": 297.30675106049966,
+      "implied_order_interval": [
+        2.443617132004107,
+        2.6624485169596985
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 17838.40506362998,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7135.362025451992,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3567.681012725996,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1783.840506362998,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 90.0,
+      "gear": 5,
+      "rpm_interval": [
+        7100,
+        7700
+      ],
+      "acoustic_reference_hz": 306.95803164700584,
+      "implied_order_interval": [
+        2.391880766080565,
+        2.59401153504512
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 18417.48189882035,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7366.992759528141,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3683.4963797640703,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1841.7481898820351,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 91.0,
+      "gear": 5,
+      "rpm_interval": [
+        7700,
+        8300
+      ],
+      "acoustic_reference_hz": 322.10836337811946,
+      "implied_order_interval": [
+        2.3284941930948397,
+        2.509935299050282
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 19326.50180268717,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 7730.600721074868,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3865.300360537434,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1932.650180268717,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 92.0,
+      "gear": 5,
+      "rpm_interval": [
+        8100,
+        8700
+      ],
+      "acoustic_reference_hz": 337.7889151907993,
+      "implied_order_interval": [
+        2.3295787254537883,
+        2.5021401125244394
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 20267.334911447957,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 8106.933964579182,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 4053.466982289591,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 2026.7334911447956,
+          "inside_visual_interval": false
+        }
+      ]
+    },
+    {
+      "seconds": 94.0,
+      "gear": 6,
+      "rpm_interval": [
+        6700,
+        7300
+      ],
+      "acoustic_reference_hz": 291.0236262877879,
+      "implied_order_interval": [
+        2.391975010584558,
+        2.6061817279503394
+      ],
+      "hypotheses": [
+        {
+          "order": 1.0,
+          "implied_rpm": 17461.417577267275,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 2.5,
+          "implied_rpm": 6984.56703090691,
+          "inside_visual_interval": true
+        },
+        {
+          "order": 5.0,
+          "implied_rpm": 3492.283515453455,
+          "inside_visual_interval": false
+        },
+        {
+          "order": 10.0,
+          "implied_rpm": 1746.1417577267275,
+          "inside_visual_interval": false
+        }
+      ]
+    }
+  ],
+  "shifts": [
+    {
+      "display": {
+        "from": 1,
+        "to": 2,
+        "last_old_seconds": 83.25,
+        "animation_seconds": 83.5,
+        "first_new_seconds": 83.75
+      },
+      "acoustic_persistent_descent_centre_seconds": 83.41,
+      "audio_pre_window": [
+        83.21,
+        83.31
+      ],
+      "audio_post_window": [
+        83.50999999999999,
+        83.61
+      ],
+      "reference_hz_before": 358.4419876827486,
+      "reference_hz_after": 280.8010505170125,
+      "reference_ratio": 0.7833932970083436,
+      "band_post_minus_pre_db": [
+        8.533654818376235,
+        -1.6214766258214288,
+        -3.0395287916090847,
+        -5.491946138334374,
+        -1.6255189700644839,
+        -7.776202829089124
+      ],
+      "warning": "80ms windows; audio/video clocks and cluster lag unmeasured. Not exact cut/recovery or torque timing."
+    },
+    {
+      "display": {
+        "from": 2,
+        "to": 3,
+        "last_old_seconds": 84.75,
+        "animation_seconds": 85.0,
+        "first_new_seconds": 85.25
+      },
+      "acoustic_persistent_descent_centre_seconds": 84.58,
+      "audio_pre_window": [
+        84.38,
+        84.48
+      ],
+      "audio_post_window": [
+        84.67999999999999,
+        84.78
+      ],
+      "reference_hz_before": 355.02044768413174,
+      "reference_hz_after": 286.657921646875,
+      "reference_ratio": 0.8074405953707767,
+      "band_post_minus_pre_db": [
+        -0.04222250665703648,
+        2.012109777754047,
+        -0.13945663661145818,
+        -4.583187445635987,
+        -7.937981574093495,
+        -6.713931884229863
+      ],
+      "warning": "80ms windows; audio/video clocks and cluster lag unmeasured. Not exact cut/recovery or torque timing."
+    },
+    {
+      "display": {
+        "from": 3,
+        "to": 4,
+        "last_old_seconds": 86.5,
+        "animation_seconds": null,
+        "first_new_seconds": 86.75
+      },
+      "acoustic_persistent_descent_centre_seconds": 86.24,
+      "audio_pre_window": [
+        86.03999999999999,
+        86.14
+      ],
+      "audio_post_window": [
+        86.33999999999999,
+        86.44
+      ],
+      "reference_hz_before": 354.79185198526653,
+      "reference_hz_after": 290.8744698736705,
+      "reference_ratio": 0.8198454058233267,
+      "band_post_minus_pre_db": [
+        -0.2695455628926474,
+        2.752478362260436,
+        0.3955101879558482,
+        -2.991497705687725,
+        -6.9741662348143185,
+        -5.331197825366317
+      ],
+      "warning": "80ms windows; audio/video clocks and cluster lag unmeasured. Not exact cut/recovery or torque timing."
+    },
+    {
+      "display": {
+        "from": 4,
+        "to": 5,
+        "last_old_seconds": 88.75,
+        "animation_seconds": null,
+        "first_new_seconds": 89.0
+      },
+      "acoustic_persistent_descent_centre_seconds": 88.45,
+      "audio_pre_window": [
+        88.25,
+        88.35000000000001
+      ],
+      "audio_post_window": [
+        88.55,
+        88.65
+      ],
+      "reference_hz_before": 349.05848851102934,
+      "reference_hz_after": 281.0621087331227,
+      "reference_ratio": 0.8052006124590834,
+      "band_post_minus_pre_db": [
+        2.102477194647726,
+        1.3794632123947304,
+        -1.331244079138908,
+        -4.8759470828733855,
+        -6.09029838321502,
+        -5.597907778200105
+      ],
+      "warning": "80ms windows; audio/video clocks and cluster lag unmeasured. Not exact cut/recovery or torque timing."
+    },
+    {
+      "display": {
+        "from": 5,
+        "to": 6,
+        "last_old_seconds": 92.75,
+        "animation_seconds": 93.0,
+        "first_new_seconds": 93.25
+      },
+      "acoustic_persistent_descent_centre_seconds": 92.85,
+      "audio_pre_window": [
+        92.64999999999999,
+        92.75
+      ],
+      "audio_post_window": [
+        92.94999999999999,
+        93.05
+      ],
+      "reference_hz_before": 346.41420952410607,
+      "reference_hz_after": 281.5695936385961,
+      "reference_ratio": 0.8128119052200784,
+      "band_post_minus_pre_db": [
+        -1.842855362019396,
+        1.7776961676932899,
+        -2.112827231362092,
+        -4.459524928276938,
+        -5.096986649138895,
+        -3.1999833305801033
+      ],
+      "warning": "80ms windows; audio/video clocks and cluster lag unmeasured. Not exact cut/recovery or torque timing."
+    }
+  ],
+  "family_support_fraction": 0.8303085299455535,
+  "controls": {
+    "drifting_clock_max_error_hz": 0.14991336294723112,
+    "strongest_line_divided_by5_median_error_hz": 22.59560582884365,
+    "gain_and_channel_swap_max_clock_difference_hz": 2.842170943040401e-14,
+    "no_peak_input_rejected": true
+  },
+  "summary_sha256": "1e66a5bc7aa0695f97a26252a1b262b9d048e9c69919508987e5d1b262414b09",
+  "verification_sha256": "9469a94361f3b823881ae36f560d7ca05d5c79430353cccdffcb204735580cf3",
+  "limits": [
+    "independent audio/video offset",
+    "cluster update/display latency",
+    "exact clutch or torque-cut timing",
+    "pedal position or actual load",
+    "injector state",
+    "isolated intake/exhaust/mechanical sources",
+    "transfer of these readings to A/B/D"
+  ],
+  "runtime_changes": "No C or accepted default model changes; two provisional cabin profiles added"
+}

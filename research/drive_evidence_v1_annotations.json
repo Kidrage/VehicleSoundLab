@@ -1,0 +1,29 @@
+{
+  "schema": "vsl.drive-evidence-annotations/1",
+  "date": "2026-11-11",
+  "source": "E",
+  "segment": "E_corsa_second_context",
+  "observation_directory": "references/analysis/drive_evidence_v1/observed/E_video",
+  "method": "Visual inspection of six instrument contact sheets (82.000..93.750s) and original frame E_094.png. Intervals below are broad visual readings of the tach marker against the x1000 scale, not OCR, ECU telemetry or fitted audio labels.",
+  "gear_display_changes": [
+    {"from":1,"to":2,"last_old_seconds":83.25,"animation_seconds":83.50,"first_new_seconds":83.75},
+    {"from":2,"to":3,"last_old_seconds":84.75,"animation_seconds":85.00,"first_new_seconds":85.25},
+    {"from":3,"to":4,"last_old_seconds":86.50,"animation_seconds":null,"first_new_seconds":86.75},
+    {"from":4,"to":5,"last_old_seconds":88.75,"animation_seconds":null,"first_new_seconds":89.00},
+    {"from":5,"to":6,"last_old_seconds":92.75,"animation_seconds":93.00,"first_new_seconds":93.25}
+  ],
+  "tach_intervals": [
+    {"seconds":84.00,"gear":2,"rpm_interval":[7300,7900]},
+    {"seconds":85.50,"gear":3,"rpm_interval":[7500,8100]},
+    {"seconds":86.00,"gear":3,"rpm_interval":[8300,8900]},
+    {"seconds":87.00,"gear":4,"rpm_interval":[7000,7600]},
+    {"seconds":88.00,"gear":4,"rpm_interval":[7900,8500]},
+    {"seconds":89.50,"gear":5,"rpm_interval":[6700,7300]},
+    {"seconds":90.00,"gear":5,"rpm_interval":[7100,7700]},
+    {"seconds":91.00,"gear":5,"rpm_interval":[7700,8300]},
+    {"seconds":92.00,"gear":5,"rpm_interval":[8100,8700]},
+    {"seconds":94.00,"gear":6,"rpm_interval":[6700,7300]}
+  ],
+  "selection": "Readable later-gear tach positions, away from visible shift animations; launch interval excluded. Not a random sample or precision calibration.",
+  "not_established": ["independent audio/video offset", "cluster update/display latency", "exact clutch or torque-cut timing", "pedal position or actual load", "injector state", "isolated intake/exhaust/mechanical sources", "transfer of these readings to A/B/D"]
+}

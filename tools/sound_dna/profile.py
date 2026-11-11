@@ -6,6 +6,7 @@ from fractions import Fraction
 import numpy as np
 import soundfile as sf
 from scipy import signal
+from .statistics import factorize
 
 
 def estimate(x,harmonics,components):
@@ -14,20 +15,7 @@ def estimate(x,harmonics,components):
     for start in range(0,len(x)-1024+1,256):
         z=np.fft.rfft(x[start:start+1024],axis=0)[k]*2/1024*np.exp(-2j*np.pi*k*start/1024)[:,None]
         rows.append(np.column_stack([z[:,0].real,z[:,0].imag,z[:,1].real,z[:,1].imag]).ravel())
-    a=np.asarray(rows);mean=a.mean(axis=0);centered=a-mean
-    u,s,v=np.linalg.svd(centered,full_matrices=False)
-    rank=int(np.sum(s>max(float(s[0])*1e-7,1e-12))) if len(s) else 0
-    count=min(components,rank,len(a)-1)
-    basis=v[:count]*(s[:count,None]/np.sqrt(len(a)-1));scores=u[:,:count]*np.sqrt(len(a)-1)
-    den=np.sum(scores[:-1]**2,axis=0)
-    rho=np.clip(np.divide(np.sum(scores[1:]*scores[:-1],axis=0),den,out=np.zeros(count),where=den>1e-30),-.95,.95)
-    residual=(centered-scores@basis).reshape(-1,harmonics,4);roots=[];rhos=[]
-    for h in range(harmonics):
-        r=residual[:,h];cov=r.T@r/(len(r)-1);e,w=np.linalg.eigh(cov)
-        roots.append(w@np.diag(np.sqrt(np.maximum(e,0))))
-        rhos.append(float(np.clip(np.sum(r[1:]*r[:-1])/max(np.sum(r[:-1]**2),1e-30),-.95,.95)))
-    model=dict(mean=mean.reshape(harmonics,4),basis=basis.reshape(count,harmonics,4).transpose(1,0,2),rho=rho,root=np.array(roots),residual_rho=np.array(rhos))
-    return model,dict(observation_frames=len(a),rank=rank,components=count,harmonics=harmonics)
+    return factorize(rows,harmonics,components)
 
 
 def export(path,m,base_hz):
