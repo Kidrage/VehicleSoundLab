@@ -1,0 +1,4541 @@
+{
+  "schema": "vsl.common-envelope-summary/1",
+  "date": "2026-11-12",
+  "result": "pass",
+  "base_commit": "d889bfc39c9afb9eba9bb0894bf5e7c145f9aa7d",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\common_envelope_v1",
+  "observations": [
+    {
+      "name": "fixed_A_reference",
+      "provenance": {
+        "kind": "frozen",
+        "file": "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\reference.wav",
+        "warmup_frames": 0,
+        "coordinates": "normalized fixed acoustic reference"
+      },
+      "input_frames": 58424,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 1,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.23881992596489962,
+            0.23881995203102163
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.2642595522286656,
+            0.2642595556810357
+          ],
+          "all_rms_db_LR": [
+            1.5395718415579267,
+            1.5395718351575187
+          ],
+          "common_rms_db_LR": [
+            0.7523765291893646,
+            0.7523765671207939
+          ],
+          "shape_rms_db_LR": [
+            1.3432092218426095,
+            1.3432091932598658
+          ],
+          "slow_common_rms_db_LR": [
+            0.6397942757339286,
+            0.6397942928337381
+          ],
+          "slow_shape_rms_db_LR": [
+            1.0675477729321383,
+            1.0675477919864766
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              1.3333161897992098,
+              1.3333161925044696
+            ],
+            [
+              1.83144145085721,
+              1.8314414224469808
+            ],
+            [
+              1.505276056873257,
+              1.5052760737264836
+            ],
+            [
+              0.7223244407003353,
+              0.7223244070902332
+            ],
+            [
+              0.5284500471316166,
+              0.5284501025302185
+            ],
+            [
+              0.40240434641682177,
+              0.4024044737924548
+            ],
+            [
+              0.7830989517202226,
+              0.7830990169976373
+            ],
+            [
+              0.37856947380564465,
+              0.37856968093820825
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -4.245154894215327,
+            -4.245154630305814
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.23881992596489962,
+              0.23881995203102163
+            ],
+            [
+              0.23881992596489962,
+              0.23881995203102163
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.2642595522286656,
+              0.2642595556810357
+            ],
+            [
+              0.2642595522286656,
+              0.2642595556810357
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.5395718415579267,
+              1.5395718351575187
+            ],
+            [
+              1.5395718415579267,
+              1.5395718351575187
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.7523765291893646,
+              0.7523765671207939
+            ],
+            [
+              0.7523765291893646,
+              0.7523765671207939
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.3432092218426095,
+              1.3432091932598658
+            ],
+            [
+              1.3432092218426095,
+              1.3432091932598658
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.6397942757339286,
+              0.6397942928337381
+            ],
+            [
+              0.6397942757339286,
+              0.6397942928337381
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              1.0675477729321383,
+              1.0675477919864766
+            ],
+            [
+              1.0675477729321383,
+              1.0675477919864766
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                1.3333161897992098,
+                1.3333161925044696
+              ],
+              [
+                1.83144145085721,
+                1.8314414224469808
+              ],
+              [
+                1.505276056873257,
+                1.5052760737264836
+              ],
+              [
+                0.7223244407003353,
+                0.7223244070902332
+              ],
+              [
+                0.5284500471316166,
+                0.5284501025302185
+              ],
+              [
+                0.40240434641682177,
+                0.4024044737924548
+              ],
+              [
+                0.7830989517202226,
+                0.7830990169976373
+              ],
+              [
+                0.37856947380564465,
+                0.37856968093820825
+              ]
+            ],
+            [
+              [
+                1.3333161897992098,
+                1.3333161925044696
+              ],
+              [
+                1.83144145085721,
+                1.8314414224469808
+              ],
+              [
+                1.505276056873257,
+                1.5052760737264836
+              ],
+              [
+                0.7223244407003353,
+                0.7223244070902332
+              ],
+              [
+                0.5284500471316166,
+                0.5284501025302185
+              ],
+              [
+                0.40240434641682177,
+                0.4024044737924548
+              ],
+              [
+                0.7830989517202226,
+                0.7830990169976373
+              ],
+              [
+                0.37856947380564465,
+                0.37856968093820825
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -4.245154894215327,
+              -4.245154630305814
+            ],
+            [
+              -4.245154894215327,
+              -4.245154630305814
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.24563155407168386,
+          "slow_shape_rms_db_L": 0.9317752097933643
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.23594956908606607,
+          "slow_shape_rms_db_L": 0.6285565490581542
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.1917273017691522,
+          "slow_shape_rms_db_L": 0.1284402895480051
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.2084637100715594,
+          "slow_shape_rms_db_L": 0.7273355899915774
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.2093459965450085,
+          "slow_shape_rms_db_L": 0.3225789477344564
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.2122139484431264,
+          "slow_shape_rms_db_L": 0.20299336866818404
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.45554320688339967,
+          "slow_shape_rms_db_L": 0.8720775390564018
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.34976950145092883,
+          "slow_shape_rms_db_L": 0.8367853244340274
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.2930178504880214,
+          "slow_shape_rms_db_L": 0.2170027269673007
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.49890271131658825,
+          "slow_shape_rms_db_L": 1.1444728980534706
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.23881992596489962,
+          "slow_shape_rms_db_L": 1.0675477729321383
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.29245097303488754,
+          "slow_shape_rms_db_L": 0.8318791997756562
+        }
+      ]
+    },
+    {
+      "name": "accepted_DNA_LF",
+      "provenance": {
+        "kind": "frozen",
+        "file": "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\accepted_pair.wav",
+        "warmup_frames": 24000,
+        "coordinates": "accepted fixed-coordinate C generator"
+      },
+      "input_frames": 360000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 7,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.41841320142149474,
+            0.4184132871871865
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.4382325523144927,
+            0.43823241228399246
+          ],
+          "all_rms_db_LR": [
+            1.4170592339416315,
+            1.4170589138800083
+          ],
+          "common_rms_db_LR": [
+            0.9868144802269776,
+            0.9868139734397441
+          ],
+          "shape_rms_db_LR": [
+            1.0949813707801788,
+            1.0949813273844897
+          ],
+          "slow_common_rms_db_LR": [
+            0.5676474108855833,
+            0.5676470241741042
+          ],
+          "slow_shape_rms_db_LR": [
+            0.5839395270155663,
+            0.5839396401027697
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              1.0065945833169945,
+              1.0065942436652977
+            ],
+            [
+              0.6726864530917623,
+              0.6726867497437158
+            ],
+            [
+              0.571538886190072,
+              0.5715399963753034
+            ],
+            [
+              0.485100233591855,
+              0.48510036484267266
+            ],
+            [
+              0.4901558633098761,
+              0.49015612250383944
+            ],
+            [
+              0.3733299302728704,
+              0.3733312559045391
+            ],
+            [
+              0.47014370565966324,
+              0.47014430427774595
+            ],
+            [
+              0.39528387088092626,
+              0.3952810550978046
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -0.9153091829119231,
+            -0.9153104490099101
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.3713566668928566,
+              0.3713566730266841
+            ],
+            [
+              0.5027299954549669,
+              0.5027297959416747
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.2054224607852231,
+              0.20542353835669816
+            ],
+            [
+              0.5555980773476227,
+              0.5555977218575461
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.3659535637705542,
+              1.3659535539885461
+            ],
+            [
+              1.5861407115174684,
+              1.5861407312889761
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.8415892627098511,
+              0.8415892404126645
+            ],
+            [
+              1.1034053472314873,
+              1.1034054679399448
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.010202067741016,
+              1.0102022071662158
+            ],
+            [
+              1.2119330755677413,
+              1.2119331161275173
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.28438641578329416,
+              0.2843870605481987
+            ],
+            [
+              0.7737947937090454,
+              0.7737946863484693
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.5076755626649969,
+              0.5076755822754556
+            ],
+            [
+              0.8760961486670499,
+              0.8760962762754321
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.7360658968828746,
+                0.7360657865493136
+              ],
+              [
+                0.3167454992508715,
+                0.31674594021119523
+              ],
+              [
+                0.3429025061039113,
+                0.34290272835560237
+              ],
+              [
+                0.28277418491778794,
+                0.2827743272340276
+              ],
+              [
+                0.3603725402855765,
+                0.36037213783010025
+              ],
+              [
+                0.12599786930860798,
+                0.12599969950993808
+              ],
+              [
+                0.3678969473233869,
+                0.3678960570835933
+              ],
+              [
+                0.1795636003855732,
+                0.17956282460509718
+              ]
+            ],
+            [
+              [
+                1.4328060765314528,
+                1.4328064558962823
+              ],
+              [
+                1.2691843495392898,
+                1.2691841730308537
+              ],
+              [
+                0.7996121471700298,
+                0.7996121346432844
+              ],
+              [
+                1.0051061233012404,
+                1.0051062873100394
+              ],
+              [
+                0.6159466888299466,
+                0.6159466779935876
+              ],
+              [
+                0.5309023793670844,
+                0.5309009021209798
+              ],
+              [
+                0.7062742885638358,
+                0.7062728312732309
+              ],
+              [
+                0.6891064793691335,
+                0.6891072955105769
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -1.7704538810879762,
+              -1.7704554119328766
+            ],
+            [
+              -0.06974280907428455,
+              -0.06974382158527621
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.4364832298392475,
+          "slow_shape_rms_db_L": 0.5257497024594778
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.42242242734207913,
+          "slow_shape_rms_db_L": 0.37531658977704085
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.4166837411816733,
+          "slow_shape_rms_db_L": 0.22116558542849027
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.4312725026980968,
+          "slow_shape_rms_db_L": 0.5409980382712303
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.4162984082719443,
+          "slow_shape_rms_db_L": 0.4066288760868373
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.41249339766733684,
+          "slow_shape_rms_db_L": 0.21866248136610256
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.4478437439492012,
+          "slow_shape_rms_db_L": 0.5673119074514843
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.41461928325222686,
+          "slow_shape_rms_db_L": 0.3944207314028376
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.3913922463949949,
+          "slow_shape_rms_db_L": 0.21987916170102992
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.42453159183364836,
+          "slow_shape_rms_db_L": 0.6461951590000058
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.41841320142149474,
+          "slow_shape_rms_db_L": 0.5839395270155663
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.4233740943795331,
+          "slow_shape_rms_db_L": 0.5051153833718144
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.42911683026748026,
+          "slow_shape_rms_db_L": 0.6582375630916559
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.4378493979072833,
+          "slow_shape_rms_db_L": 0.5409731460681834
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.4399333505027734,
+          "slow_shape_rms_db_L": 0.5141482424816705
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.4522470354299579,
+          "slow_shape_rms_db_L": 0.7137873627566026
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.43685903879771365,
+          "slow_shape_rms_db_L": 0.5901422566540547
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.4485707666816806,
+          "slow_shape_rms_db_L": 0.5357733555753446
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.4246432519398322,
+          "slow_shape_rms_db_L": 0.8428294202330743
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.44389603032106656,
+          "slow_shape_rms_db_L": 0.7760177597304184
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.4486795367070861,
+          "slow_shape_rms_db_L": 0.7501804915732745
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.41473919699603734,
+          "slow_shape_rms_db_L": 0.8332664253300689
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.4178697614565102,
+          "slow_shape_rms_db_L": 0.7335649636587039
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.41577181583133155,
+          "slow_shape_rms_db_L": 0.7243969490739822
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.43837376854889,
+          "slow_shape_rms_db_L": 0.6795107566981989
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.4420573069626807,
+          "slow_shape_rms_db_L": 0.6573561464618273
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.44707228201004695,
+          "slow_shape_rms_db_L": 0.6184285828872905
+        }
+      ]
+    },
+    {
+      "name": "candidate_50",
+      "provenance": {
+        "kind": "offline_unaccepted_candidate",
+        "file": "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\magnitude_78283_0.5.wav",
+        "seed": 78283,
+        "amount": 0.5,
+        "warmup_frames": 24000
+      },
+      "input_frames": 360000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 7,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.32272583415114,
+            0.32272581934471223
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.3065117619620877,
+            0.3065122287962988
+          ],
+          "all_rms_db_LR": [
+            1.2920691842046372,
+            1.292069022934825
+          ],
+          "common_rms_db_LR": [
+            0.7527564840883292,
+            0.7527566663784657
+          ],
+          "shape_rms_db_LR": [
+            0.998836354549131,
+            0.9988364142785837
+          ],
+          "slow_common_rms_db_LR": [
+            0.34955486011575676,
+            0.34955485037774414
+          ],
+          "slow_shape_rms_db_LR": [
+            0.5257887896884961,
+            0.5257881976667694
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.9287013522401949,
+              0.9287013956098874
+            ],
+            [
+              0.6703354127781225,
+              0.6703356809028338
+            ],
+            [
+              0.4217263595724046,
+              0.42172519008822346
+            ],
+            [
+              0.4221448124222782,
+              0.4221452004462145
+            ],
+            [
+              0.2713702897445908,
+              0.27137034048600506
+            ],
+            [
+              0.3078695177996179,
+              0.30786921715652243
+            ],
+            [
+              0.35166734432645014,
+              0.3516650177231445
+            ],
+            [
+              0.34399113512124185,
+              0.34399196755917577
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -0.5451397791739541,
+            -0.5451364248902456
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.2385204315566596,
+              0.23852029011160308
+            ],
+            [
+              0.45700098001334527,
+              0.4570007984972506
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.179157671003514,
+              0.17915764324608396
+            ],
+            [
+              0.5559639755388943,
+              0.5559641220478758
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.1446302348190165,
+              1.1446301969591077
+            ],
+            [
+              1.339156541132302,
+              1.3391567280356629
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.5590208504991921,
+              0.559020666256399
+            ],
+            [
+              0.873462640907243,
+              0.8734623584206808
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              0.9521059771425567,
+              0.9521060174423526
+            ],
+            [
+              1.1075639563115125,
+              1.1075640584029256
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.25675085185175,
+              0.25675063719076446
+            ],
+            [
+              0.5773655811715505,
+              0.5773649898379597
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.41878712665190054,
+              0.4187871091730757
+            ],
+            [
+              0.714126062799996,
+              0.7141261647639398
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.584982016434139,
+                0.5849816613324688
+              ],
+              [
+                0.43531492612054856,
+                0.43531482353754253
+              ],
+              [
+                0.18405076518316626,
+                0.1840515809178868
+              ],
+              [
+                0.274796697052499,
+                0.27479673914055647
+              ],
+              [
+                0.14000273884343137,
+                0.1400023154313485
+              ],
+              [
+                0.18401535776423492,
+                0.18401496434467993
+              ],
+              [
+                0.21102440353439833,
+                0.21102387671631478
+              ],
+              [
+                0.20715509296404302,
+                0.20715984617873434
+              ]
+            ],
+            [
+              [
+                1.504123895435127,
+                1.5041245619921906
+              ],
+              [
+                0.9260138450678359,
+                0.9260131601597406
+              ],
+              [
+                0.7236615097240808,
+                0.7236614036928756
+              ],
+              [
+                0.6714964849157811,
+                0.6714961671981187
+              ],
+              [
+                0.5201382097179323,
+                0.5201378010305818
+              ],
+              [
+                0.4410945318914727,
+                0.4410945787616398
+              ],
+              [
+                0.561649497004101,
+                0.5616485888079058
+              ],
+              [
+                0.6228763190643516,
+                0.6228750641285336
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -0.8711535619600952,
+              -0.8711546903384563
+            ],
+            [
+              0.35527666063211455,
+              0.3552766293225029
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.33273792577731975,
+          "slow_shape_rms_db_L": 0.44364070740451506
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.3588483001766313,
+          "slow_shape_rms_db_L": 0.3722166079136485
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.3271288372320467,
+          "slow_shape_rms_db_L": 0.22754241560180172
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.3728697481637355,
+          "slow_shape_rms_db_L": 0.44450183541515803
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.37258328132019036,
+          "slow_shape_rms_db_L": 0.3301184608040116
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.36517288605613507,
+          "slow_shape_rms_db_L": 0.199279552415422
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.34500815771307475,
+          "slow_shape_rms_db_L": 0.4264276182622836
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.33977267420989155,
+          "slow_shape_rms_db_L": 0.32489733398516496
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.3311417384038185,
+          "slow_shape_rms_db_L": 0.17933115062039057
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.32720617526400075,
+          "slow_shape_rms_db_L": 0.5550493738803703
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.32272583415114,
+          "slow_shape_rms_db_L": 0.5257887896884961
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3295516125960767,
+          "slow_shape_rms_db_L": 0.4616477297904068
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.33284653997909136,
+          "slow_shape_rms_db_L": 0.6067783620056333
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3365119448424945,
+          "slow_shape_rms_db_L": 0.5406376129302672
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.34543668604843963,
+          "slow_shape_rms_db_L": 0.46518638248157673
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3403877702827696,
+          "slow_shape_rms_db_L": 0.5772819632303251
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3427565125346111,
+          "slow_shape_rms_db_L": 0.5228304357880116
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3444096225032493,
+          "slow_shape_rms_db_L": 0.4342747402186486
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.3251912171950514,
+          "slow_shape_rms_db_L": 0.6932837490089941
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.33201718846742556,
+          "slow_shape_rms_db_L": 0.632633022990683
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.3305270455269767,
+          "slow_shape_rms_db_L": 0.6189845996522158
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.34006554012159074,
+          "slow_shape_rms_db_L": 0.6758948489842813
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.3358132641051243,
+          "slow_shape_rms_db_L": 0.605285169609155
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.3440430513201632,
+          "slow_shape_rms_db_L": 0.5939297985013653
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.35126285239541793,
+          "slow_shape_rms_db_L": 0.6003783359405027
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.3552615533094374,
+          "slow_shape_rms_db_L": 0.5866596103422369
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.35833537636465523,
+          "slow_shape_rms_db_L": 0.5394969779252811
+        }
+      ]
+    },
+    {
+      "name": "candidate_100",
+      "provenance": {
+        "kind": "offline_unaccepted_candidate",
+        "file": "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\magnitude_78283_1.wav",
+        "seed": 78283,
+        "amount": 1.0,
+        "warmup_frames": 24000
+      },
+      "input_frames": 360000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 7,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.30899131103796423,
+            0.3089915868345343
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.26604418432116445,
+            0.2660441013647339
+          ],
+          "all_rms_db_LR": [
+            1.6871351728102748,
+            1.6871340984120973
+          ],
+          "common_rms_db_LR": [
+            0.9237055507284367,
+            0.9237070027424515
+          ],
+          "shape_rms_db_LR": [
+            1.4291460052919154,
+            1.4291453294199128
+          ],
+          "slow_common_rms_db_LR": [
+            0.4324255128389199,
+            0.4324263095851813
+          ],
+          "slow_shape_rms_db_LR": [
+            0.743684908586694,
+            0.7436831078879323
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.9258141522267145,
+              0.9258129033512953
+            ],
+            [
+              0.7983310053147757,
+              0.7983297526495097
+            ],
+            [
+              0.8022994750578784,
+              0.8022996774936539
+            ],
+            [
+              0.8071820829832697,
+              0.8071833089142347
+            ],
+            [
+              0.5247844867150345,
+              0.5247806197795511
+            ],
+            [
+              0.42961113506675785,
+              0.42961131375607203
+            ],
+            [
+              0.5798675932000846,
+              0.5798650078411401
+            ],
+            [
+              0.48991971921986177,
+              0.48991925380224965
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -0.153118987789469,
+            -0.1531147066251438
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.20282030514197213,
+              0.20282019886578498
+            ],
+            [
+              0.36405036951055575,
+              0.3640500833745818
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.13315789288057728,
+              0.13315874218588428
+            ],
+            [
+              0.35328164522156275,
+              0.3532821149982265
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.59549164221128,
+              1.5954914734754384
+            ],
+            [
+              1.8013537275875802,
+              1.8013543086055728
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.7208654343745213,
+              0.7208648565478333
+            ],
+            [
+              1.0213958170718913,
+              1.021395492150966
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.3396886782233108,
+              1.3396889886809837
+            ],
+            [
+              1.4974100953501015,
+              1.4974102795079691
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.34070893972166855,
+              0.340709969208267
+            ],
+            [
+              0.47683683188167997,
+              0.4768354837168093
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.5850707216930056,
+              0.5850711981911283
+            ],
+            [
+              0.8693007843528556,
+              0.8693002129016145
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.5208716157416644,
+                0.5208703069968231
+              ],
+              [
+                0.533264450910898,
+                0.5332644736903689
+              ],
+              [
+                0.41492675868820755,
+                0.41492663407446884
+              ],
+              [
+                0.5169819200549003,
+                0.5169817005262445
+              ],
+              [
+                0.2684660457349834,
+                0.26846666338385594
+              ],
+              [
+                0.3555798866060252,
+                0.35557880021015287
+              ],
+              [
+                0.35476845281052827,
+                0.35477053040065365
+              ],
+              [
+                0.3004537948586287,
+                0.30045450316705397
+              ]
+            ],
+            [
+              [
+                1.661861378741427,
+                1.6618629521861414
+              ],
+              [
+                1.0039667044389875,
+                1.003965303313967
+              ],
+              [
+                1.1044428569263691,
+                1.1044420431616517
+              ],
+              [
+                1.1748935224701416,
+                1.1748928666589462
+              ],
+              [
+                0.674573722649092,
+                0.6745742751898693
+              ],
+              [
+                0.584675630219823,
+                0.5846755820870444
+              ],
+              [
+                0.6631954821185648,
+                0.6631910816350656
+              ],
+              [
+                0.5986003615805406,
+                0.5985950494645407
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -0.5856600042593393,
+              -0.5856567940421462
+            ],
+            [
+              0.8244407932424723,
+              0.8244414802692513
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.28368923722575246,
+          "slow_shape_rms_db_L": 0.5937850702241108
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.30827755997259804,
+          "slow_shape_rms_db_L": 0.47497638571873474
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 15,
+          "common_variance_fraction_L": 0.2645014689068759,
+          "slow_shape_rms_db_L": 0.24887369334014015
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.272709828389288,
+          "slow_shape_rms_db_L": 0.5350540737199001
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.2915908685729997,
+          "slow_shape_rms_db_L": 0.4438175032850256
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.2862864269112018,
+          "slow_shape_rms_db_L": 0.2947328069463927
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.2625550183934595,
+          "slow_shape_rms_db_L": 0.5863431337418743
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.2683030190538072,
+          "slow_shape_rms_db_L": 0.42512385639904626
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 14,
+          "common_variance_fraction_L": 0.27220370792966997,
+          "slow_shape_rms_db_L": 0.25854935199591556
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3079242941895315,
+          "slow_shape_rms_db_L": 0.7986388034507407
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.30899131103796423,
+          "slow_shape_rms_db_L": 0.743684908586694
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.31503707942335224,
+          "slow_shape_rms_db_L": 0.6224128482683959
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.2964586224300429,
+          "slow_shape_rms_db_L": 0.7755901153255444
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.29276508413124885,
+          "slow_shape_rms_db_L": 0.6782523146968593
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.29642631393684754,
+          "slow_shape_rms_db_L": 0.6314149709339714
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.3038453510742076,
+          "slow_shape_rms_db_L": 0.7730588982886878
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.2969687113042655,
+          "slow_shape_rms_db_L": 0.6992178195192581
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 7,
+          "common_variance_fraction_L": 0.2852614679331792,
+          "slow_shape_rms_db_L": 0.5961382590690132
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.2774334394691651,
+          "slow_shape_rms_db_L": 0.8181454653338774
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.2801907763171238,
+          "slow_shape_rms_db_L": 0.7884475952633127
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.2830419078159316,
+          "slow_shape_rms_db_L": 0.760494486952206
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.29948818114188286,
+          "slow_shape_rms_db_L": 0.8102957926377066
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.304701400500143,
+          "slow_shape_rms_db_L": 0.7696110780293526
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.30073341744530113,
+          "slow_shape_rms_db_L": 0.7541584913855801
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.2803839159414129,
+          "slow_shape_rms_db_L": 0.7705766332448123
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.28095000811767135,
+          "slow_shape_rms_db_L": 0.7608812907002046
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.2828059215540573,
+          "slow_shape_rms_db_L": 0.7399702404179408
+        }
+      ]
+    },
+    {
+      "name": "A_fit_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "A_fit_raw",
+          "segment": "A_exterior_moving",
+          "seconds": [
+            316.1,
+            317.25
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "moving exterior tailpipe",
+        "source_frame_bounds": [
+          15172800,
+          15228000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 55200,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 1,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.24467957409681373,
+            0.2446796031471501
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.26521824374174935,
+            0.2652182643042622
+          ],
+          "all_rms_db_LR": [
+            1.380956730785136,
+            1.3809567088622217
+          ],
+          "common_rms_db_LR": [
+            0.6830915752087011,
+            0.6830916049155847
+          ],
+          "shape_rms_db_LR": [
+            1.2001780668632755,
+            1.2001780247302605
+          ],
+          "slow_common_rms_db_LR": [
+            0.5747258065133563,
+            0.5747258489779137
+          ],
+          "slow_shape_rms_db_LR": [
+            0.9566171958455103,
+            0.9566172160579794
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.9945093893190393,
+              0.9945093882694362
+            ],
+            [
+              1.3936181747137169,
+              1.3936182061903395
+            ],
+            [
+              1.489823306146478,
+              1.4898233122491615
+            ],
+            [
+              0.811636680921579,
+              0.8116366152414206
+            ],
+            [
+              0.4182144608133259,
+              0.41821454580838596
+            ],
+            [
+              0.2762787045175646,
+              0.27627870246504527
+            ],
+            [
+              0.8659059212995129,
+              0.8659058249987136
+            ],
+            [
+              0.7143929066438414,
+              0.7143931928826915
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -1.5533821036356774,
+            -1.5533819489342677
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.24467957409681373,
+              0.2446796031471501
+            ],
+            [
+              0.24467957409681373,
+              0.2446796031471501
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.26521824374174935,
+              0.2652182643042622
+            ],
+            [
+              0.26521824374174935,
+              0.2652182643042622
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.380956730785136,
+              1.3809567088622217
+            ],
+            [
+              1.380956730785136,
+              1.3809567088622217
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.6830915752087011,
+              0.6830916049155847
+            ],
+            [
+              0.6830915752087011,
+              0.6830916049155847
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.2001780668632755,
+              1.2001780247302605
+            ],
+            [
+              1.2001780668632755,
+              1.2001780247302605
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.5747258065133563,
+              0.5747258489779137
+            ],
+            [
+              0.5747258065133563,
+              0.5747258489779137
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.9566171958455103,
+              0.9566172160579794
+            ],
+            [
+              0.9566171958455103,
+              0.9566172160579794
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.9945093893190393,
+                0.9945093882694362
+              ],
+              [
+                1.3936181747137169,
+                1.3936182061903395
+              ],
+              [
+                1.489823306146478,
+                1.4898233122491615
+              ],
+              [
+                0.811636680921579,
+                0.8116366152414206
+              ],
+              [
+                0.4182144608133259,
+                0.41821454580838596
+              ],
+              [
+                0.2762787045175646,
+                0.27627870246504527
+              ],
+              [
+                0.8659059212995129,
+                0.8659058249987136
+              ],
+              [
+                0.7143929066438414,
+                0.7143931928826915
+              ]
+            ],
+            [
+              [
+                0.9945093893190393,
+                0.9945093882694362
+              ],
+              [
+                1.3936181747137169,
+                1.3936182061903395
+              ],
+              [
+                1.489823306146478,
+                1.4898233122491615
+              ],
+              [
+                0.811636680921579,
+                0.8116366152414206
+              ],
+              [
+                0.4182144608133259,
+                0.41821454580838596
+              ],
+              [
+                0.2762787045175646,
+                0.27627870246504527
+              ],
+              [
+                0.8659059212995129,
+                0.8659058249987136
+              ],
+              [
+                0.7143929066438414,
+                0.7143931928826915
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -1.5533821036356774,
+              -1.5533819489342677
+            ],
+            [
+              -1.5533821036356774,
+              -1.5533819489342677
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.18102360622180158,
+          "slow_shape_rms_db_L": 0.8317622269633579
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.26387910241323687,
+          "slow_shape_rms_db_L": 0.4312168199051628
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.19815064493820442,
+          "slow_shape_rms_db_L": 0.15325317017153714
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.36141363312202335,
+          "slow_shape_rms_db_L": 0.593399623677532
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.24485218494276356,
+          "slow_shape_rms_db_L": 0.4215733221349408
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.2696672548025597,
+          "slow_shape_rms_db_L": 0.1152829466699955
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.4151713214894918,
+          "slow_shape_rms_db_L": 0.7762885479786499
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.4091695586423961,
+          "slow_shape_rms_db_L": 0.6164465906980054
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.3384944531629038,
+          "slow_shape_rms_db_L": 0.18716413333087265
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.25256139245530645,
+          "slow_shape_rms_db_L": 1.1456667708829011
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.24467957409681373,
+          "slow_shape_rms_db_L": 0.9566171958455103
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.3298080872256168,
+          "slow_shape_rms_db_L": 0.6313733283615801
+        }
+      ]
+    },
+    {
+      "name": "A_later_moving_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "A_later_moving_raw",
+          "segment": "A_exterior_moving",
+          "seconds": [
+            317.5,
+            319.5
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "moving exterior tailpipe",
+        "source_frame_bounds": [
+          15240000,
+          15336000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 96000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 2,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.8612510801926492,
+            0.8614274434624276
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.8751095454958574,
+            0.874813632562763
+          ],
+          "all_rms_db_LR": [
+            4.905598632592265,
+            4.901961457405047
+          ],
+          "common_rms_db_LR": [
+            4.555899408931603,
+            4.552936570457131
+          ],
+          "shape_rms_db_LR": [
+            1.8027493977350146,
+            1.8001654178891062
+          ],
+          "slow_common_rms_db_LR": [
+            3.0430947704132394,
+            3.0388484106523874
+          ],
+          "slow_shape_rms_db_LR": [
+            1.173430478386384,
+            1.1737985152393704
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              1.6228636168496198,
+              1.616750506379983
+            ],
+            [
+              1.0023173339264773,
+              1.0081112150203317
+            ],
+            [
+              1.5536448280436266,
+              1.5604549437689985
+            ],
+            [
+              0.9573474714271912,
+              0.9482016093659854
+            ],
+            [
+              0.9765617548144137,
+              0.9784990929427073
+            ],
+            [
+              1.1901936514452975,
+              1.1866368237900131
+            ],
+            [
+              1.0405135092078095,
+              1.0509092657212193
+            ],
+            [
+              0.43745797004387055,
+              0.42213488302178004
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -16.26001758102154,
+            -16.25187738971254
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.8272727938144648,
+              0.8272658380748573
+            ],
+            [
+              0.8952293665708335,
+              0.8955890488499978
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.8244486429950375,
+              0.8244468581546696
+            ],
+            [
+              0.9257704479966773,
+              0.9251804069708565
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              4.6755203214143,
+              4.675513122501061
+            ],
+            [
+              5.13567694377023,
+              5.128409792309032
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              4.252597895962629,
+              4.252573470215765
+            ],
+            [
+              4.859200921900578,
+              4.853299670698498
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.662330915123014,
+              1.6571268220172628
+            ],
+            [
+              1.9431678803470154,
+              1.9432040137609499
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              2.5890583553400957,
+              2.5805735690411766
+            ],
+            [
+              3.497131185486383,
+              3.4971232522635978
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.7331259669561566,
+              0.7338557511971282
+            ],
+            [
+              1.6137349898166116,
+              1.6137412792816124
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.7968511839643799,
+                0.7845782155863479
+              ],
+              [
+                0.7295662642038246,
+                0.7411895439547377
+              ],
+              [
+                1.1453457016728852,
+                1.1589707373858036
+              ],
+              [
+                0.7055482276921987,
+                0.6872509911733722
+              ],
+              [
+                0.5042064447716427,
+                0.5080733540498746
+              ],
+              [
+                0.35390924041345284,
+                0.3467918250968991
+              ],
+              [
+                0.8374108847330618,
+                0.8582022017282377
+              ],
+              [
+                0.38277493697523357,
+                0.38276356349128426
+              ]
+            ],
+            [
+              [
+                2.4488760497348596,
+                2.4489227971736183
+              ],
+              [
+                1.2750684036491298,
+                1.275032886085926
+              ],
+              [
+                1.961943954414368,
+                1.9619391501521932
+              ],
+              [
+                1.2091467151621837,
+                1.2091522275585986
+              ],
+              [
+                1.4489170648571845,
+                1.44892483183554
+              ],
+              [
+                2.026478062477142,
+                2.026481822483127
+              ],
+              [
+                1.243616133682557,
+                1.2436163297142009
+              ],
+              [
+                0.4921410031125075,
+                0.46150620255227587
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -24.609536445330182,
+              -24.60957575434831
+            ],
+            [
+              -7.910498716712896,
+              -7.894179025076769
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 4,
+          "common_variance_fraction_L": 0.623332463310637,
+          "slow_shape_rms_db_L": 0.7035111282184117
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 4,
+          "common_variance_fraction_L": 0.5951493934733252,
+          "slow_shape_rms_db_L": 0.49593507449774443
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 4,
+          "common_variance_fraction_L": 0.51062867701471,
+          "slow_shape_rms_db_L": 0.29895770679964023
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.8796706725723723,
+          "slow_shape_rms_db_L": 0.8758795869334046
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.8551519763557659,
+          "slow_shape_rms_db_L": 0.778141719173359
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.8766078146916073,
+          "slow_shape_rms_db_L": 0.229179745159997
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.888238179940767,
+          "slow_shape_rms_db_L": 0.675629934989056
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.883170503092456,
+          "slow_shape_rms_db_L": 0.49917191919731213
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.8628342250439459,
+          "slow_shape_rms_db_L": 0.3024422451794847
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.9131429107934375,
+          "slow_shape_rms_db_L": 1.4681098713426457
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.8612510801926492,
+          "slow_shape_rms_db_L": 1.173430478386384
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.8701494737511875,
+          "slow_shape_rms_db_L": 1.0258702319029005
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9053558968381945,
+          "slow_shape_rms_db_L": 1.9794403167764028
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8907708992631377,
+          "slow_shape_rms_db_L": 1.6830698077629673
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8593271791076184,
+          "slow_shape_rms_db_L": 1.2834664332137184
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9003507334240778,
+          "slow_shape_rms_db_L": 1.447498588806609
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9110878807281787,
+          "slow_shape_rms_db_L": 1.1491863981129864
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9187299819304695,
+          "slow_shape_rms_db_L": 0.9650004118668474
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9388390930051203,
+          "slow_shape_rms_db_L": 1.817091061802849
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8798218582616838,
+          "slow_shape_rms_db_L": 1.4804033247562405
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8723809187447994,
+          "slow_shape_rms_db_L": 1.3033357438498419
+        }
+      ]
+    },
+    {
+      "name": "A_stationary_other_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "A_stationary_other_raw",
+          "segment": "A_exterior_blips",
+          "seconds": [
+            238,
+            241
+          ],
+          "use": "exterior_dynamic_observation"
+        },
+        "source": "A",
+        "perspective": "stationary rear exterior, open driver door",
+        "source_frame_bounds": [
+          11424000,
+          11568000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 144000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 3,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.8044586016949697,
+            0.8112804159054071
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.8854075910073267,
+            0.9082163792159544
+          ],
+          "all_rms_db_LR": [
+            3.417069926348733,
+            3.4834367666322636
+          ],
+          "common_rms_db_LR": [
+            3.07304417443681,
+            3.1375700269620905
+          ],
+          "shape_rms_db_LR": [
+            1.4942444189345025,
+            1.513269980219837
+          ],
+          "slow_common_rms_db_LR": [
+            2.3940544689927297,
+            2.39180776745555
+          ],
+          "slow_shape_rms_db_LR": [
+            0.9396646642709147,
+            0.8677674168558844
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.985815150159311,
+              0.7838677198189934
+            ],
+            [
+              0.7076951296609031,
+              0.7200573488116614
+            ],
+            [
+              0.7757179806453858,
+              0.8297986358054167
+            ],
+            [
+              0.8043495793029447,
+              0.9185966729924112
+            ],
+            [
+              0.5262515159116997,
+              0.7253728206464127
+            ],
+            [
+              0.8473230350791613,
+              0.8884275984016395
+            ],
+            [
+              0.8265810669295863,
+              0.6460334313703759
+            ],
+            [
+              1.0375229822133039,
+              1.0374921215647517
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -7.448223364461688,
+            -7.066089347084588
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.7863963096248927,
+              0.7986035825714052
+            ],
+            [
+              0.8087790143830084,
+              0.8151474271383203
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.8542788689110086,
+              0.8440325035291872
+            ],
+            [
+              0.885504300030744,
+              0.9082204088106092
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              3.2775434119152815,
+              3.364707844801592
+            ],
+            [
+              4.091279752592945,
+              4.148672106785419
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              2.9396816578731615,
+              3.0378438157198815
+            ],
+            [
+              3.628105523188293,
+              3.707445183506158
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.4493317657987648,
+              1.4466388050103745
+            ],
+            [
+              1.8908781892516477,
+              1.861808384586438
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              1.8299564550688294,
+              1.9517607499264948
+            ],
+            [
+              2.6119604194001522,
+              2.72970308732386
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.6580213828935638,
+              0.6204460315510186
+            ],
+            [
+              0.9887704116926113,
+              1.0281671800334886
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.73000832721944,
+                0.7454915753400471
+              ],
+              [
+                0.6610421811510672,
+                0.44352154206328726
+              ],
+              [
+                0.6906839557962046,
+                0.5947498842989271
+              ],
+              [
+                0.5613389602517896,
+                0.5732894891725725
+              ],
+              [
+                0.3729659278508419,
+                0.3215944312061556
+              ],
+              [
+                0.40893444984118105,
+                0.4465992626552097
+              ],
+              [
+                0.5649048932115824,
+                0.5051995042083552
+              ],
+              [
+                0.8666616789327659,
+                0.8745840543652194
+              ]
+            ],
+            [
+              [
+                1.002780675495097,
+                0.8919582061157156
+              ],
+              [
+                1.0424885551469236,
+                1.161246663693832
+              ],
+              [
+                1.1114476170485428,
+                1.048110551078949
+              ],
+              [
+                1.5010356686153896,
+                1.5399407156259663
+              ],
+              [
+                0.8247782682228959,
+                0.7536334428495686
+              ],
+              [
+                0.8777935729058214,
+                0.9022124013595725
+              ],
+              [
+                0.8709518191168643,
+                0.9878035813791494
+              ],
+              [
+                1.394404333231401,
+                1.164764964456069
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -10.58901937631031,
+              -11.435266274404768
+            ],
+            [
+              1.7543992236357577,
+              1.743758381037863
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.8193805754404175,
+          "slow_shape_rms_db_L": 0.7970262463491454
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.7738129600529093,
+          "slow_shape_rms_db_L": 0.5757037688816307
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.6758045733046534,
+          "slow_shape_rms_db_L": 0.32165033899521656
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.8231414359234304,
+          "slow_shape_rms_db_L": 0.861153103411773
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.6625937152945991,
+          "slow_shape_rms_db_L": 0.5675559587035592
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.687928454492105,
+          "slow_shape_rms_db_L": 0.2977496088863091
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.7909636823044799,
+          "slow_shape_rms_db_L": 0.8843839816434962
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.7424847193140164,
+          "slow_shape_rms_db_L": 0.6459578461999054
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.6125003379901196,
+          "slow_shape_rms_db_L": 0.27098011595869825
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.84362828324677,
+          "slow_shape_rms_db_L": 1.0542745615764522
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.8044586016949697,
+          "slow_shape_rms_db_L": 0.9396646642709147
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.806404592229821,
+          "slow_shape_rms_db_L": 0.7218249524566672
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.8419657418683644,
+          "slow_shape_rms_db_L": 1.015059963670237
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.8238059143336867,
+          "slow_shape_rms_db_L": 0.8283445520001951
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.7895489845543597,
+          "slow_shape_rms_db_L": 0.7495965638859696
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.8303535729794838,
+          "slow_shape_rms_db_L": 0.9898155101411814
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.7970545219156471,
+          "slow_shape_rms_db_L": 0.8764485200367875
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.7893475422133629,
+          "slow_shape_rms_db_L": 0.6531666668882025
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.9013520095900311,
+          "slow_shape_rms_db_L": 1.0851452253232652
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8129056056508777,
+          "slow_shape_rms_db_L": 0.9208162738140867
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8234873719181892,
+          "slow_shape_rms_db_L": 0.7887110819046935
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8247177924848755,
+          "slow_shape_rms_db_L": 1.1464866034159156
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8340305855713896,
+          "slow_shape_rms_db_L": 1.040161375763565
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8072611052334847,
+          "slow_shape_rms_db_L": 0.9082071134714399
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8382046659801667,
+          "slow_shape_rms_db_L": 1.1586001042331069
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8303034209081648,
+          "slow_shape_rms_db_L": 1.023500576039834
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 1,
+          "common_variance_fraction_L": 0.8218309401069451,
+          "slow_shape_rms_db_L": 0.9408573858462509
+        }
+      ]
+    },
+    {
+      "name": "B_pull_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "B_pull_raw",
+          "segment": "B_cabin_pull",
+          "seconds": [
+            218,
+            230
+          ],
+          "use": "interior_channel_observation"
+        },
+        "source": "B",
+        "perspective": "cabin binaural, audio only",
+        "source_frame_bounds": [
+          10464000,
+          11040000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 576000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 12,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.2250808631650808,
+            0.2512060212071523
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.2533306059143681,
+            0.2742367888852357
+          ],
+          "all_rms_db_LR": [
+            1.382348907917648,
+            1.4549519459879452
+          ],
+          "common_rms_db_LR": [
+            0.6654233545947201,
+            0.7033220377236773
+          ],
+          "shape_rms_db_LR": [
+            1.2531739212407895,
+            1.2300910145617838
+          ],
+          "slow_common_rms_db_LR": [
+            0.409183491199974,
+            0.4622321352017813
+          ],
+          "slow_shape_rms_db_LR": [
+            0.7325439764185258,
+            0.702968825052843
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.9367205855189731,
+              1.0296321888079332
+            ],
+            [
+              0.8927519999003832,
+              0.645724414397282
+            ],
+            [
+              0.8326263761692371,
+              0.7081012902867403
+            ],
+            [
+              0.6906948489840905,
+              0.6264565889189527
+            ],
+            [
+              0.610633730657518,
+              0.5327432644766832
+            ],
+            [
+              0.5554925072404542,
+              0.5421957673144986
+            ],
+            [
+              0.5434784882306736,
+              0.4316839048291567
+            ],
+            [
+              0.39652708766925626,
+              0.3789723281813241
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            0.530598068891318,
+            0.7057073420713387
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.09375402231793879,
+              0.12295466391095829
+            ],
+            [
+              0.6619442728945542,
+              0.602857996384278
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.039414039565691464,
+              0.16466096787190979
+            ],
+            [
+              0.8077412159383497,
+              0.7916013241489065
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.2550988642188536,
+              1.2459287044896028
+            ],
+            [
+              2.2136788177147597,
+              1.9787146136207936
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.4056230749832793,
+              0.45525696622227674
+            ],
+            [
+              1.8010481513390624,
+              1.536351801986621
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.1437974682889318,
+              1.1207734829247369
+            ],
+            [
+              1.3889559279638706,
+              1.427374081756306
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.15351536786776243,
+              0.28696830187706845
+            ],
+            [
+              1.5552971282089674,
+              1.2420412963144203
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.6010530896966232,
+              0.5175162412373058
+            ],
+            [
+              0.9246267576387209,
+              0.8623226393697037
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.4786753465243052,
+                0.5591063138065815
+              ],
+              [
+                0.5748620752627581,
+                0.3418072026691194
+              ],
+              [
+                0.39802292550571655,
+                0.351072447530899
+              ],
+              [
+                0.4399861282271315,
+                0.3586641907243553
+              ],
+              [
+                0.2993393164658105,
+                0.2761473128816038
+              ],
+              [
+                0.3166152868508368,
+                0.4130467826672258
+              ],
+              [
+                0.2905231953410946,
+                0.22625288748633715
+              ],
+              [
+                0.27271822306648996,
+                0.19449558520377305
+              ]
+            ],
+            [
+              [
+                1.3431066723225915,
+                1.6407394988435395
+              ],
+              [
+                1.2489387462197834,
+                1.178785514504076
+              ],
+              [
+                1.4317543139092104,
+                0.920395495937243
+              ],
+              [
+                1.2842340950667739,
+                0.9567749905798059
+              ],
+              [
+                1.0301455434437385,
+                0.9380474379105501
+              ],
+              [
+                0.7833608141146239,
+                0.8539710413711076
+              ],
+              [
+                0.687789195558999,
+                0.6678559199373053
+              ],
+              [
+                0.6373760431746445,
+                0.6543018343392275
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -1.6281316871724634,
+              -1.3178461562571757
+            ],
+            [
+              5.859019593497071,
+              4.127178601751344
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.22200069293421748,
+          "slow_shape_rms_db_L": 0.636687000784423
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.18828651513844646,
+          "slow_shape_rms_db_L": 0.443481146962981
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.16710236555512847,
+          "slow_shape_rms_db_L": 0.253513053672876
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.21407493090988727,
+          "slow_shape_rms_db_L": 0.6525203968610441
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.2009508403038192,
+          "slow_shape_rms_db_L": 0.5167818591453393
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.1749592397330715,
+          "slow_shape_rms_db_L": 0.212507058612729
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.22257689979178608,
+          "slow_shape_rms_db_L": 0.6359905931905785
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.19734686086191403,
+          "slow_shape_rms_db_L": 0.44627151200086124
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.17515984564312717,
+          "slow_shape_rms_db_L": 0.22901198764602354
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.2168769520597486,
+          "slow_shape_rms_db_L": 0.8529046944223361
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.2250808631650808,
+          "slow_shape_rms_db_L": 0.7325439764185258
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.21700143456184162,
+          "slow_shape_rms_db_L": 0.6320014628434919
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.34832097389876654,
+          "slow_shape_rms_db_L": 0.8177826901086805
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.23830524891001076,
+          "slow_shape_rms_db_L": 0.6903755375986084
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.22588810470074305,
+          "slow_shape_rms_db_L": 0.5731470856745882
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.32338907219292284,
+          "slow_shape_rms_db_L": 0.7877155122399514
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.22194008997283457,
+          "slow_shape_rms_db_L": 0.6398118537824398
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.20163409682530412,
+          "slow_shape_rms_db_L": 0.5891888577944094
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.31611136524825745,
+          "slow_shape_rms_db_L": 0.9988035740876666
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.24704566557221025,
+          "slow_shape_rms_db_L": 0.9130442163245802
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.2490927597292103,
+          "slow_shape_rms_db_L": 0.792289810721142
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.491306816975624,
+          "slow_shape_rms_db_L": 0.9614779882629393
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.39127326052531586,
+          "slow_shape_rms_db_L": 0.8514653698664644
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.25053881241156806,
+          "slow_shape_rms_db_L": 0.8144434653355151
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.2813308997255007,
+          "slow_shape_rms_db_L": 0.986403933702125
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.2560045481548946,
+          "slow_shape_rms_db_L": 0.8295282561607743
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.26340368678128667,
+          "slow_shape_rms_db_L": 0.782194454834593
+        }
+      ]
+    },
+    {
+      "name": "D_dyno_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "D_dyno_raw",
+          "segment": "D_dyno_gears_context",
+          "seconds": [
+            20,
+            32
+          ],
+          "use": "audio_transition_observation"
+        },
+        "source": "D",
+        "perspective": "Fixed rear-left exterior camera in enclosed dyno cell",
+        "source_frame_bounds": [
+          960000,
+          1536000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 576000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 12,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.2622839352161932,
+            0.2997967944843092
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.3415522341375986,
+            0.44050382269142896
+          ],
+          "all_rms_db_LR": [
+            1.595165201356898,
+            1.5146202293941031
+          ],
+          "common_rms_db_LR": [
+            0.8673299921287521,
+            0.8394792519771457
+          ],
+          "shape_rms_db_LR": [
+            1.2973606215443927,
+            1.2669200584005371
+          ],
+          "slow_common_rms_db_LR": [
+            0.5159230376329573,
+            0.5718600128985817
+          ],
+          "slow_shape_rms_db_LR": [
+            0.6301006195836643,
+            0.5442454863781774
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              1.0466835442897908,
+              0.8679341542606618
+            ],
+            [
+              0.7267544576850502,
+              0.6822479409936886
+            ],
+            [
+              0.532174867510198,
+              0.4522014774928212
+            ],
+            [
+              0.49320090404801925,
+              0.33215767158298437
+            ],
+            [
+              0.36751075360359386,
+              0.42435718959678426
+            ],
+            [
+              0.6222931287529168,
+              0.5514313601956413
+            ],
+            [
+              0.4814967161779007,
+              0.44486584345445146
+            ],
+            [
+              0.5541634289108004,
+              0.41142956567522426
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            -0.10776455807573426,
+            -0.07824997666621934
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.12377635299350517,
+              0.16664323622029575
+            ],
+            [
+              0.36148279181647835,
+              0.37186205887115276
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.08783708960361038,
+              0.16199299414206852
+            ],
+            [
+              0.540495086520372,
+              0.6842344833423004
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.229677159385169,
+              1.2697074861891735
+            ],
+            [
+              2.292955299326768,
+              2.31848632192049
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.43262334155844734,
+              0.5468904257309617
+            ],
+            [
+              1.1356854655589914,
+              1.1860726540259607
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.1157652207143456,
+              1.1132348782131047
+            ],
+            [
+              1.9919494290841744,
+              1.9921371650326216
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.17580035799631752,
+              0.20158579544051228
+            ],
+            [
+              0.8202245836294746,
+              1.0255741905155247
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.4439868367372504,
+              0.42837997465405514
+            ],
+            [
+              1.5781584816024299,
+              1.5682902457160834
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.3564763129366991,
+                0.3405626896575389
+              ],
+              [
+                0.3875217005350238,
+                0.29241619755783854
+              ],
+              [
+                0.21398350039644157,
+                0.18761753762786468
+              ],
+              [
+                0.1654607270151144,
+                0.1828980088546282
+              ],
+              [
+                0.2719153880490419,
+                0.23436967812645665
+              ],
+              [
+                0.26813499166587373,
+                0.38517978780088036
+              ],
+              [
+                0.30968449902573364,
+                0.2882875965580841
+              ],
+              [
+                0.19504122615198047,
+                0.1531514754993094
+              ]
+            ],
+            [
+              [
+                2.5334915819065245,
+                2.395976597030239
+              ],
+              [
+                1.8782961770502247,
+                1.6068415084395173
+              ],
+              [
+                1.2844537934876872,
+                1.5535719582147074
+              ],
+              [
+                0.8601605884903505,
+                0.7271587759903654
+              ],
+              [
+                0.844332790127453,
+                0.7890271744243055
+              ],
+              [
+                1.8490283640392449,
+                1.7497380730633012
+              ],
+              [
+                1.5913067430551728,
+                2.0088293811977325
+              ],
+              [
+                1.3683842466594722,
+                1.2569742033143296
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -4.298637319471257,
+              -4.378481158911685
+            ],
+            [
+              5.059721707386664,
+              5.5209349500572396
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.27627280229875467,
+          "slow_shape_rms_db_L": 0.526996468360327
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.2524350402373333,
+          "slow_shape_rms_db_L": 0.4252906018301957
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 24,
+          "common_variance_fraction_L": 0.2719152341568989,
+          "slow_shape_rms_db_L": 0.22206577213236794
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.2950635776589431,
+          "slow_shape_rms_db_L": 0.46592373899675377
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.2367603693804214,
+          "slow_shape_rms_db_L": 0.4000428646703869
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.25424804408485385,
+          "slow_shape_rms_db_L": 0.23686976914090102
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.2498486707639651,
+          "slow_shape_rms_db_L": 0.5307294199447758
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.2509521377788753,
+          "slow_shape_rms_db_L": 0.3382574288475433
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 23,
+          "common_variance_fraction_L": 0.23460659733684222,
+          "slow_shape_rms_db_L": 0.18829809529610766
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.3298616327817343,
+          "slow_shape_rms_db_L": 0.7711375995816889
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.2622839352161932,
+          "slow_shape_rms_db_L": 0.6301006195836643
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.2603809203666396,
+          "slow_shape_rms_db_L": 0.54144574922087
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.39543114364525883,
+          "slow_shape_rms_db_L": 0.720853743724182
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.24512292101772096,
+          "slow_shape_rms_db_L": 0.6753752378795502
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.22894611059090555,
+          "slow_shape_rms_db_L": 0.533469225403375
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.4052057270634871,
+          "slow_shape_rms_db_L": 0.649118338381953
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.25244062098135645,
+          "slow_shape_rms_db_L": 0.5928487109786421
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.25240242774771693,
+          "slow_shape_rms_db_L": 0.49557098755946877
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.48879667313879116,
+          "slow_shape_rms_db_L": 1.1481899508511186
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.3368627333035804,
+          "slow_shape_rms_db_L": 0.950059096874599
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.2847014323869589,
+          "slow_shape_rms_db_L": 0.8726542152089032
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.4327243444486152,
+          "slow_shape_rms_db_L": 1.2970482180120495
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.3645630342041931,
+          "slow_shape_rms_db_L": 1.095763920594516
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.26476339738873594,
+          "slow_shape_rms_db_L": 1.0740244866352973
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.5022941038067933,
+          "slow_shape_rms_db_L": 1.2648095819336467
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.31069776715143904,
+          "slow_shape_rms_db_L": 1.0449130821079264
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.3063587829947309,
+          "slow_shape_rms_db_L": 0.9582482955436683
+        }
+      ]
+    },
+    {
+      "name": "E_high_cabin_raw",
+      "provenance": {
+        "kind": "raw_recording",
+        "case": {
+          "name": "E_high_cabin_raw",
+          "segment": "E_corsa_second_context",
+          "seconds": [
+            88,
+            94
+          ],
+          "use": "cabin_dynamic_observation"
+        },
+        "source": "E",
+        "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+        "source_frame_bounds": [
+          4224000,
+          4512000
+        ],
+        "processing": "No gain, filtering, phase warp or resampling"
+      },
+      "input_frames": 288000,
+      "one_second_linear": {
+        "block_seconds": 1,
+        "offset_fraction": 0,
+        "detrend_order": 1,
+        "blocks": 6,
+        "modulation_resolution_hz": 1.0416666666666667,
+        "medians": {
+          "common_variance_fraction_LR": [
+            0.2578776440004034,
+            0.21914474691731678
+          ],
+          "slow_common_variance_fraction_LR": [
+            0.2812727834719038,
+            0.1997633616712066
+          ],
+          "all_rms_db_LR": [
+            1.7306794679035513,
+            1.6840785272756333
+          ],
+          "common_rms_db_LR": [
+            0.8462431592227745,
+            0.792259926659222
+          ],
+          "shape_rms_db_LR": [
+            1.2223500829982954,
+            1.3385452989241995
+          ],
+          "slow_common_rms_db_LR": [
+            0.4911656684129967,
+            0.42063460574254197
+          ],
+          "slow_shape_rms_db_LR": [
+            0.6867773551552534,
+            0.7893847447047361
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              0.8062966654279884,
+              0.945875025747997
+            ],
+            [
+              0.76791783845645,
+              1.021025189398919
+            ],
+            [
+              0.7819848516387673,
+              0.5796585333374572
+            ],
+            [
+              0.8133614574144383,
+              0.6746645522276855
+            ],
+            [
+              0.42350181850881646,
+              0.6015300270278081
+            ],
+            [
+              0.5582036773840044,
+              0.46614747146889607
+            ],
+            [
+              0.44075122017573565,
+              0.5105966380563062
+            ],
+            [
+              0.6437619195529961,
+              0.4701532169902173
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            0.5161102006966399,
+            0.9978700159945548
+          ]
+        },
+        "ranges": {
+          "common_variance_fraction_LR": [
+            [
+              0.16174616876881717,
+              0.12584256630487267
+            ],
+            [
+              0.640274985613345,
+              0.6692057111013886
+            ]
+          ],
+          "slow_common_variance_fraction_LR": [
+            [
+              0.12805832276064363,
+              0.05485353404133348
+            ],
+            [
+              0.8294742098654404,
+              0.8917365193155818
+            ]
+          ],
+          "all_rms_db_LR": [
+            [
+              1.255204838309974,
+              1.2576350544587478
+            ],
+            [
+              1.9504384175124223,
+              1.9910853013837098
+            ]
+          ],
+          "common_rms_db_LR": [
+            [
+              0.5301564848147319,
+              0.48549528115231905
+            ],
+            [
+              1.5460267188486128,
+              1.5306575244265817
+            ]
+          ],
+          "shape_rms_db_LR": [
+            [
+              1.1377492200505595,
+              1.0761609100417366
+            ],
+            [
+              1.5655171396330236,
+              1.583362969899565
+            ]
+          ],
+          "slow_common_rms_db_LR": [
+            [
+              0.28034100425055186,
+              0.13395866249387736
+            ],
+            [
+              1.419297408066347,
+              1.4066287372754849
+            ]
+          ],
+          "slow_shape_rms_db_LR": [
+            [
+              0.5964542453831247,
+              0.4901197487614923
+            ],
+            [
+              0.8889840645805497,
+              0.8968353164968456
+            ]
+          ],
+          "slow_shape_rms_per_band_db_LR": [
+            [
+              [
+                0.5374663498350566,
+                0.4419911644352615
+              ],
+              [
+                0.22962986753342468,
+                0.6461634069414502
+              ],
+              [
+                0.5010446151317532,
+                0.47375670634289213
+              ],
+              [
+                0.3721811734213394,
+                0.42564732368025243
+              ],
+              [
+                0.1498397854140081,
+                0.3475471826147784
+              ],
+              [
+                0.44741092559352535,
+                0.25963268337773027
+              ],
+              [
+                0.22341866454078982,
+                0.21327527890751352
+              ],
+              [
+                0.34093532363672985,
+                0.16859726290579372
+              ]
+            ],
+            [
+              [
+                1.0408768878197046,
+                1.2299175587497255
+              ],
+              [
+                1.0784427784903388,
+                1.657759784887978
+              ],
+              [
+                1.2120131096479996,
+                1.0730514676407317
+              ],
+              [
+                1.0593992189096009,
+                1.1787149862072608
+              ],
+              [
+                0.9354172351316309,
+                0.8203345380714695
+              ],
+              [
+                0.6981301860271537,
+                0.5249950375206768
+              ],
+              [
+                1.0598913651296378,
+                0.884478302815772
+              ],
+              [
+                0.9234541794668802,
+                0.7599846869923469
+              ]
+            ]
+          ],
+          "common_slope_db_per_second_LR": [
+            [
+              -10.795369873550351,
+              -10.518684873451567
+            ],
+            [
+              2.6115540441755436,
+              3.250087324304271
+            ]
+          ]
+        }
+      },
+      "sensitivity_L": [
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.1966654159169116,
+          "slow_shape_rms_db_L": 0.6611915825583694
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.20556368174038342,
+          "slow_shape_rms_db_L": 0.4463122875232034
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 12,
+          "common_variance_fraction_L": 0.22167042636830436,
+          "slow_shape_rms_db_L": 0.2282950977971318
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.18410458352799,
+          "slow_shape_rms_db_L": 0.5982548354385686
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.19566003343284225,
+          "slow_shape_rms_db_L": 0.43398458040461435
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.20209154731224171,
+          "slow_shape_rms_db_L": 0.20487890953906293
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.21273010462728742,
+          "slow_shape_rms_db_L": 0.6275915688510829
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.2001627880912306,
+          "slow_shape_rms_db_L": 0.4566821489802324
+        },
+        {
+          "block_seconds": 0.5,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 11,
+          "common_variance_fraction_L": 0.1883748915993462,
+          "slow_shape_rms_db_L": 0.23878458140149134
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.27539479190337257,
+          "slow_shape_rms_db_L": 0.8057768220648553
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.2578776440004034,
+          "slow_shape_rms_db_L": 0.6867773551552534
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 6,
+          "common_variance_fraction_L": 0.25951866859381734,
+          "slow_shape_rms_db_L": 0.586305424967981
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.3842941731402513,
+          "slow_shape_rms_db_L": 0.8660849451724946
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.29548165480679883,
+          "slow_shape_rms_db_L": 0.7157499913038452
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.30026424667985074,
+          "slow_shape_rms_db_L": 0.600583224955503
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.22529127069663182,
+          "slow_shape_rms_db_L": 0.7523175452055879
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.19978433543278384,
+          "slow_shape_rms_db_L": 0.658893684272482
+        },
+        {
+          "block_seconds": 1,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 5,
+          "common_variance_fraction_L": 0.20485363165858045,
+          "slow_shape_rms_db_L": 0.602559854831893
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 0,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.768483558156039,
+          "slow_shape_rms_db_L": 0.9207718240134507
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 1,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.5473799571827073,
+          "slow_shape_rms_db_L": 0.792262352435363
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0,
+          "detrend_order": 2,
+          "blocks": 3,
+          "common_variance_fraction_L": 0.5223273842974867,
+          "slow_shape_rms_db_L": 0.7286329482951454
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.36065964746655826,
+          "slow_shape_rms_db_L": 1.1309954671277214
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.21729938843687252,
+          "slow_shape_rms_db_L": 1.0551757888722502
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.25,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.2013816035777175,
+          "slow_shape_rms_db_L": 1.016736200885137
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 0,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.42443073092967176,
+          "slow_shape_rms_db_L": 1.074406468785774
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 1,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.37746765134587035,
+          "slow_shape_rms_db_L": 0.9989356111955698
+        },
+        {
+          "block_seconds": 2,
+          "offset_fraction": 0.5,
+          "detrend_order": 2,
+          "blocks": 2,
+          "common_variance_fraction_L": 0.35700250306127296,
+          "slow_shape_rms_db_L": 0.7777290055260263
+        }
+      ]
+    }
+  ],
+  "known_controls": [
+    {
+      "name": "stationary_tones",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.007637542882680437,
+        0.0076374446553898155
+      ],
+      "all_rms_db_LR": [
+        2.2511514492766235e-12,
+        2.2511623627134696e-12
+      ],
+      "direct_dft_relative_error": 1.8207657603828958e-14,
+      "constant_gain_invariance_error": null
+    },
+    {
+      "name": "known_common_gain",
+      "known_envelope_rms_error_db": 0.0025712842476578778,
+      "common_variance_fraction_LR": [
+        0.9999999999999931,
+        0.9999999999999927
+      ],
+      "all_rms_db_LR": [
+        2.1578683082399652,
+        2.1578683082399652
+      ],
+      "direct_dft_relative_error": 1.781115438773029e-14,
+      "constant_gain_invariance_error": null
+    },
+    {
+      "name": "known_spectral_colour",
+      "known_envelope_rms_error_db": 0.0025405014115406905,
+      "common_variance_fraction_LR": [
+        1.5104879793357562e-07,
+        1.5104879793358012e-07
+      ],
+      "all_rms_db_LR": [
+        2.1578675549918085,
+        2.1578675549918085
+      ],
+      "direct_dft_relative_error": 2.0384625096140673e-14,
+      "constant_gain_invariance_error": null
+    },
+    {
+      "name": "known_gain_plus_colour",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.5000000663068884,
+        0.5000000663068883
+      ],
+      "all_rms_db_LR": [
+        3.0516854922726164,
+        3.0516854922726173
+      ],
+      "direct_dft_relative_error": 1.9651245659443285e-14,
+      "constant_gain_invariance_error": null
+    },
+    {
+      "name": "stationary_gaussian_23117",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.131492198326481,
+        0.11847135112619366
+      ],
+      "all_rms_db_LR": [
+        1.1533406030356075,
+        1.2036099243091622
+      ],
+      "direct_dft_relative_error": 2.0182644451749268e-14,
+      "constant_gain_invariance_error": 2.6645352591003757e-15
+    },
+    {
+      "name": "stationary_gaussian_61927",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.11423976594503077,
+        0.1301507928812621
+      ],
+      "all_rms_db_LR": [
+        1.1647014440243897,
+        1.160104438235061
+      ],
+      "direct_dft_relative_error": 9.69736206736968e-15,
+      "constant_gain_invariance_error": 3.552713678800501e-15
+    },
+    {
+      "name": "stationary_gaussian_8121907",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.13747158708498194,
+        0.12257311285403166
+      ],
+      "all_rms_db_LR": [
+        1.1815563436649668,
+        1.1707471503580549
+      ],
+      "direct_dft_relative_error": 1.1946586784414162e-14,
+      "constant_gain_invariance_error": 2.6645352591003757e-15
+    },
+    {
+      "name": "constant_amplitude_harmonic_pitch_sweep",
+      "known_envelope_rms_error_db": null,
+      "common_variance_fraction_LR": [
+        0.29900751520180074,
+        0.2990075152018005
+      ],
+      "all_rms_db_LR": [
+        0.5009884643175193,
+        0.5009884643175193
+      ],
+      "direct_dft_relative_error": 1.6730145024125794e-14,
+      "constant_gain_invariance_error": null
+    }
+  ],
+  "independent_verification": {
+    "checked_rows": 1707,
+    "maximum_relative_error": 1.894014728957544e-12,
+    "method": "Scalar orthogonal polynomial detrend; pairwise band log-ratio variance; direct trigonometric modulation DFT"
+  },
+  "direct_dft_relative_error_max": 4.972555995850581e-13,
+  "maximum_decomposition_relative_error": 3.81235528760946e-15,
+  "maximum_parseval_relative_error": 2.6890557391434307e-15,
+  "c_h_count": 436,
+  "c_index_sha256": "51bcb0f363671e452553316e9f73e1d2432cf14b6cdd7944958b3ffb2351b0c4",
+  "accepted_models_unchanged": true,
+  "runtime_changes": false,
+  "model_bank_changes": false,
+  "new_state_mapping": false,
+  "new_human_acceptance": false,
+  "decision": "Do not transfer large moving/stationary-blip common envelopes into autonomous texture. Fixed-target shape motion remains; no causal attribution or new synthesis recipe is qualified.",
+  "pending_listening": "Existing harmonic magnitude V1 review; no new response or duplicate question in this stage",
+  "source_sha256": {
+    "tools/summarize_common_envelope_v1.py": "84d45354f765b974b2aae06ecb722d5351b4a4ee0d7c2a4a1b5ffbcb7cbadb7a",
+    "tools/freeze_common_envelope_v1.py": "a529f0d0f93b82568bc5d0d67e2480231148e3f74b92640105598e87834a7773",
+    "research/common_envelope_v1_plan.json": "2facfde78c6101ebf6a626fc7b1babced746ea43c88e805d8488510e919b897c",
+    "tools/analyze_common_envelope_v1.py": "3af7eab18663de5efae4838ef61bcec7ad7d1ea3f477b5ade4bbebac1f0f31ca",
+    "tools/verify_common_envelope_v1.py": "228b140531fcd4399d625bf130a9f649b0518b9641d34d523c015cf7bcf5a0e0",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/common_envelope_v1/controls.py": "8a94fc3c163c6b2c1569a2aa87766c2726151be28f71e458bfc37922aab7d21f",
+    "tools/common_envelope_v1/features.py": "880e9306e3f498ee780ec8b38989241f1836c7e4f2b18ffc82154a9e95ef38bb"
+  },
+  "evidence_sha256": {
+    "analysis1/A_fit_raw.npz": "5d6abd8f94b2284edbc14b438fde88b718b9448556d78b516511401ee5df94d7",
+    "analysis1/A_later_moving_raw.npz": "cc53160db9517ae4f2472866ca09891a4b17484f6f0c1e66f6e363ad48c5943e",
+    "analysis1/A_stationary_other_raw.npz": "3811f5eea8f76491496fca034dc8256a986184da41d2183d83ac4af496e7b1ad",
+    "analysis1/accepted_DNA_LF.npz": "c8d248123eef74d20b040ed0d6a30dfc2784e86a010e451e9e454e211551a93e",
+    "analysis1/B_pull_raw.npz": "f3dde1169c2e1b88c0a799b07038f1770191920b900ba9d2e31f747bdeb149f0",
+    "analysis1/candidate_100.npz": "d3e24dfba431185f6446e59bbecf38f76fbcac90931f8d47a463cfc8f3e21a2e",
+    "analysis1/candidate_50.npz": "8896323d81e803e0734e7c01ccb9779e61616839d4fa5a0ceb2846136f56e735",
+    "analysis1/control_constant_amplitude_harmonic_pitch_sweep.npz": "3141861344eb0529a37b39ee0d816ac3430ca561e9ebfba445484802f27868c3",
+    "analysis1/control_known_common_gain.npz": "5fdd7769e578ee4f5afd8ab7aefb6c7bd0004d75d83833a066c6cd322e8d707c",
+    "analysis1/control_known_gain_plus_colour.npz": "73d84ec33278d32ef52418e815e3adfa08ff40a001e124e1c5278b31c55e388c",
+    "analysis1/control_known_spectral_colour.npz": "9bfcfb88cc0c81e5c539d2841378fe732d1dfe3e904189e2405af6eefc167fa7",
+    "analysis1/control_stationary_gaussian_23117.npz": "f095dbbf0c16a5e72b334813f0b4e55f0f69f71d69b432b338af38fdd6d7d106",
+    "analysis1/control_stationary_gaussian_61927.npz": "3413ad5091122eab85ff72f28dacf3455f52c6d94497845b00860d6b06a3eec8",
+    "analysis1/control_stationary_gaussian_8121907.npz": "a55386cc7a83d07c9da101e9f4cb98844d4fc12665794143d4c49f49036fa62f",
+    "analysis1/control_stationary_tones.npz": "1ce4ebc2dd5ccf96f00d537f6f196c7da660402419f8305a3d3503ac063826c7",
+    "analysis1/D_dyno_raw.npz": "c06453c44f6efaf16c9ab2b1305cdf3cd6d2f0573829e08c253098d692cec514",
+    "analysis1/E_high_cabin_raw.npz": "0eead3f6a8a75a7dad88c3e9cc383b63cc78e232490b47c3e398fea96b5393d9",
+    "analysis1/exact_sources/research/common_envelope_v1_plan.json": "2facfde78c6101ebf6a626fc7b1babced746ea43c88e805d8488510e919b897c",
+    "analysis1/exact_sources/tools/analyze_common_envelope_v1.py": "3af7eab18663de5efae4838ef61bcec7ad7d1ea3f477b5ade4bbebac1f0f31ca",
+    "analysis1/exact_sources/tools/common_envelope_v1/controls.py": "8a94fc3c163c6b2c1569a2aa87766c2726151be28f71e458bfc37922aab7d21f",
+    "analysis1/exact_sources/tools/common_envelope_v1/features.py": "880e9306e3f498ee780ec8b38989241f1836c7e4f2b18ffc82154a9e95ef38bb",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/fixed_A_reference.npz": "92e7087e28caa92955ccf57f24d5830d41baf53f8cca3751208cfc5be8d66bfb",
+    "analysis1/metadata.json": "91615f12699ff8bb40bbd2d3d0a860e9e3cd91adeb4c8b30ff481bdca72e3139",
+    "analysis1/report.json": "650e918df73e5b122efef262689292e3aa86c66ac4ab7053785f7cb91a3bcee3",
+    "verification1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "verification1/exact_sources/tools/verify_common_envelope_v1.py": "228b140531fcd4399d625bf130a9f649b0518b9641d34d523c015cf7bcf5a0e0",
+    "verification1/metadata.json": "04dbb6472dbd012835d405a46c15a6aca19dbe0080fa46a8b88e16ac415a3211",
+    "verification1/report.json": "7d50008779967fb695c2bf78b4c7d5d1f2781eb0a2270c2756fccdb7a67a3373"
+  },
+  "input_metadata_sha256": {
+    "references/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "references/approval_manifest.json": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454",
+    "baselines/residual_motion_v1/manifest.json": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+    "baselines/temporal_texture_v1/manifest.json": "edad05adc1d2f38c633e27841ee2cd32493cf9f1cf15a88a17948ef0ba63d6f8"
+  },
+  "limits": [
+    "Offline log-band-amplitude projection. Across-band common component and spectral-shape component are mathematical observations, not physical sources, causal states or load measurements. Block sizes, offsets and detrending are sensitivity checks; overlapping windows/configurations are not independent repeats. Zero frequency is excluded from slow-band sums; finite block frequency resolution is recorded. Raw viewpoints and normalized fixed-coordinate target stay separate; no C/model/driver adoption.",
+    "The fixed normalized reference has only one full 1s block; it cannot establish sub-Hz statistics",
+    "Common band motion may arise from gain, pitch, motion, recording transfer or the source; no causal labels",
+    "Removing common log gain also removes legitimate common source motion; shape is not stationary engine texture",
+    "Detrending and overlapping segmentation are sensitivity variants, not independent evidence or significance tests",
+    "Existing image evidence shows moving-tailpipe context, but does not prove an unedited audio track or constant load",
+    "Recording L/R remain observations, not two located physical sources",
+    "Candidate observation uses only the first predeclared review seed; no multi-seed conclusion",
+    "Shape slow energy is not identified source AM: deterministic pitch/beat/transfer and analysis effects remain possible",
+    "No C changes, device tests, new timbre or physical 7.1.4 acceptance; prior 40 CTests were not rerun"
+  ]
+}

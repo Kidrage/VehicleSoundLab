@@ -1,0 +1,32 @@
+{
+  "sample_rate": 48000,
+  "size": 2048,
+  "hop": 480,
+  "bands": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "block_seconds": [0.5,1,2],
+  "offset_fractions": [0,0.25,0.5],
+  "detrend_orders": [0,1,2],
+  "slow_band_hz": [0,4],
+  "minimum_power": 1e-24,
+  "warmup_frames": 24000,
+  "control_seeds": [23117,61927,8121907],
+  "tolerances": {
+    "decomposition_relative": 1e-12,
+    "parseval_relative": 1e-12,
+    "direct_dft_relative": 1e-10,
+    "gain_invariance_absolute": 1e-9,
+    "common_AM_fraction_minimum": 0.999,
+    "spectral_colour_common_fraction_maximum": 0.001,
+    "known_envelope_rms_error_db": 0.02,
+    "stationary_carrier_rms_db_maximum": 0.001
+  },
+  "recording_cases": [
+    {"name":"A_fit_raw","segment":"A_exterior_moving","seconds":[316.1,317.25],"use":"exterior_dynamic_observation"},
+    {"name":"A_later_moving_raw","segment":"A_exterior_moving","seconds":[317.5,319.5],"use":"exterior_dynamic_observation"},
+    {"name":"A_stationary_other_raw","segment":"A_exterior_blips","seconds":[238,241],"use":"exterior_dynamic_observation"},
+    {"name":"B_pull_raw","segment":"B_cabin_pull","seconds":[218,230],"use":"interior_channel_observation"},
+    {"name":"D_dyno_raw","segment":"D_dyno_gears_context","seconds":[20,32],"use":"audio_transition_observation"},
+    {"name":"E_high_cabin_raw","segment":"E_corsa_second_context","seconds":[88,94],"use":"cabin_dynamic_observation"}
+  ],
+  "scope": "Offline log-band-amplitude projection. Across-band common component and spectral-shape component are mathematical observations, not physical sources, causal states or load measurements. Block sizes, offsets and detrending are sensitivity checks; overlapping windows/configurations are not independent repeats. Zero frequency is excluded from slow-band sums; finite block frequency resolution is recorded. Raw viewpoints and normalized fixed-coordinate target stay separate; no C/model/driver adoption."
+}
