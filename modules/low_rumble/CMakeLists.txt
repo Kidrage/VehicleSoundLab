@@ -1,0 +1,8 @@
+add_library(low_rumble STATIC profile.c cloud.c voice.c)
+target_include_directories(low_rumble PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_features(low_rumble PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(low_rumble PRIVATE /W4 /we4013 /utf-8)
+else()
+  target_link_libraries(low_rumble PUBLIC m)
+endif()

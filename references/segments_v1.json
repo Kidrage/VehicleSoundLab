@@ -1,0 +1,305 @@
+{
+  "schema": "vsl.reference-segments/1",
+  "interval_policy": "Half-open decoded-audio source seconds. D/E include discrete visible instrument context; no verified precise RPM, pedal/load or injector telemetry. Uses are restricted per segment.",
+  "sources": {
+    "A": {
+      "url": "https://www.youtube.com/watch?v=7aZm1Wkp6QM",
+      "approval": "Approved by user; Performante primary exterior reference",
+      "raw": "references/raw/A_7aZm1Wkp6QM.webm",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "video": "references/raw/A_context_360p.mp4",
+      "video_sha256": "dd70edb21517ce5867d1207c67a47b80ceb91a5c927be3ddead1178181c417f4",
+      "alignment": "Same source timeline; separately decoded Opus/video. No independently measured A/V offset; frame PTS is not a combustion timestamp."
+    },
+    "B": {
+      "url": "https://www.youtube.com/watch?v=qmp1SVhmXgU",
+      "approval": "Approved by user; Tecnica cabin binaural supplement",
+      "raw": "references/raw/B_local_Tecnica_binaural.mp3",
+      "raw_sha256": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+      "master": "references/clean/B_decoded_float.wav",
+      "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+      "video": null,
+      "alignment": "Audio only; no locally inspected video."
+    },
+    "D": {
+      "url": "https://www.youtube.com/watch?v=21q_wpc-pVA",
+      "approval": "Explicit user approval 2026-11-10: D + E audio/video usability inspection",
+      "raw": "references/raw/D_21q_wpc-pVA.mkv",
+      "raw_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+      "master": "references/clean/D_decoded_float.wav",
+      "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+      "video": "references/raw/D_21q_wpc-pVA.mkv",
+      "video_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+      "alignment": "Same muxed media timeline; no independently measured audiovisual offset. Display latency remains unknown."
+    },
+    "E": {
+      "url": "https://www.youtube.com/watch?v=GIceP3oLuDQ",
+      "approval": "Explicit user approval 2026-11-10: D + E audio/video usability inspection",
+      "raw": "references/raw/E_GIceP3oLuDQ.mkv",
+      "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+      "master": "references/clean/E_decoded_float.wav",
+      "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+      "video": "references/raw/E_GIceP3oLuDQ.mkv",
+      "video_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+      "alignment": "Same muxed media timeline; no independently measured audiovisual offset. Display latency remains unknown."
+    }
+  },
+  "segments": {
+    "A_start_context": {
+      "source": "A",
+      "seconds": [
+        33,
+        40
+      ],
+      "perspective": "cabin/start control",
+      "visual": "Hand at start cover, cluster graphics change",
+      "audio_interpretation": "candidate start/catch/settle",
+      "allowed_uses": [
+        "lifecycle_context",
+        "audio_onset_observation"
+      ],
+      "not_established": [
+        "exact crank/catch timestamps",
+        "RPM",
+        "starter torque"
+      ],
+      "existing_audition": "references/clean/A_start_context_v02.wav"
+    },
+    "A_exterior_low_rev": {
+      "source": "A",
+      "seconds": [
+        208,
+        211
+      ],
+      "perspective": "stationary exterior near exhaust",
+      "visual": "Exterior composition checked at 208, 210, 211 seconds",
+      "audio_interpretation": "low-rev harmonic family; not a confirmed 850 RPM warm idle",
+      "allowed_uses": [
+        "exterior_spectral_observation",
+        "order_candidates"
+      ],
+      "not_established": [
+        "RPM",
+        "warm/cold condition",
+        "load",
+        "microphone transfer"
+      ],
+      "existing_audition": "references/clean/A_idle_context_v02.wav"
+    },
+    "A_exterior_blips": {
+      "source": "A",
+      "seconds": [
+        238,
+        248
+      ],
+      "perspective": "stationary rear exterior, open driver door",
+      "visual": "Stationary camera and rear composition",
+      "audio_interpretation": "rev sequence",
+      "allowed_uses": [
+        "rev_sequence_context",
+        "exterior_dynamic_observation"
+      ],
+      "not_established": [
+        "neutral gear",
+        "pedal trajectory",
+        "torque load",
+        "RPM"
+      ],
+      "existing_audition": "references/clean/A_corsa_tailpipe_blips.wav"
+    },
+    "A_exterior_moving": {
+      "source": "A",
+      "seconds": [
+        316,
+        319.5
+      ],
+      "perspective": "moving exterior tailpipe",
+      "visual": "Road/background moves",
+      "audio_interpretation": "moving exhaust passage",
+      "allowed_uses": [
+        "moving_context",
+        "exterior_dynamic_observation"
+      ],
+      "not_established": [
+        "gear events",
+        "pedal",
+        "RPM/load cells"
+      ],
+      "existing_audition": "references/clean/A_road_context_v02.wav"
+    },
+    "A_engine_bay_context": {
+      "source": "A",
+      "seconds": [
+        270,
+        277
+      ],
+      "perspective": "engine-bay mixed recording",
+      "visual": "Engine-bay context in earlier scene board",
+      "audio_interpretation": "mixed engine/intake/exhaust/space",
+      "allowed_uses": [
+        "mixed_context"
+      ],
+      "not_established": [
+        "isolated block modes",
+        "separated mechanical source",
+        "RPM"
+      ],
+      "existing_audition": null
+    },
+    "B_cabin_pull": {
+      "source": "B",
+      "seconds": [
+        218,
+        230
+      ],
+      "perspective": "cabin binaural, audio only",
+      "visual": null,
+      "audio_interpretation": "candidate dynamic interior passage",
+      "allowed_uses": [
+        "interior_channel_observation"
+      ],
+      "not_established": [
+        "visible state",
+        "engine banks from L/R",
+        "isolated engine field"
+      ],
+      "existing_audition": "references/clean/B_cabin_pull.wav"
+    },
+    "B_cabin_release_context": {
+      "source": "B",
+      "seconds": [
+        475,
+        485
+      ],
+      "perspective": "cabin binaural, audio only",
+      "visual": null,
+      "audio_interpretation": "candidate load/release changes",
+      "allowed_uses": [
+        "interior_dynamic_observation"
+      ],
+      "not_established": [
+        "exact release/shift timestamps",
+        "pedal position"
+      ],
+      "existing_audition": "references/clean/B_cabin_load_release.wav"
+    },
+    "D_dyno_gears_context": {
+      "source": "D",
+      "seconds": [
+        20,
+        32
+      ],
+      "perspective": "Fixed rear-left exterior camera in enclosed dyno cell",
+      "visual": "MAHA dyno/rollers and changing right-hand monitor gauges; publisher caption: dyno run through the gears.",
+      "audio_interpretation": "Unlistened mixed dyno-room recording; inspect transitions before assigning states.",
+      "allowed_uses": [
+        "dyno_context",
+        "audio_transition_observation"
+      ],
+      "not_established": [
+        "verified RPM units/readout",
+        "ECU RPM or pedal/load telemetry",
+        "stock exhaust status",
+        "microphone/room transfer",
+        "exact gear event times",
+        "subjective clarity or absence of music/speech"
+      ],
+      "evidence": "references/analysis/DE_details_v1/frames.json"
+    },
+    "E_corsa_first_context": {
+      "source": "E",
+      "seconds": [
+        47,
+        55
+      ],
+      "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+      "visual": "Gear1 at47s, gear3 at54s and55s. Tach is a graphical scale; lower-left km field is fuel range.",
+      "audio_interpretation": "Unlistened cabin acceleration context; no continuous RPM fit.",
+      "allowed_uses": [
+        "gear_display_context",
+        "cabin_dynamic_observation"
+      ],
+      "not_established": [
+        "continuous unedited run",
+        "exact RPM curve",
+        "pedal/load",
+        "ECU or phone synchronization",
+        "external exhaust spectrum"
+      ],
+      "evidence": "references/analysis/DE_details_v1/frames.json"
+    },
+    "E_sport_context": {
+      "source": "E",
+      "seconds": [
+        58,
+        77
+      ],
+      "perspective": "Cabin instrument/composite phone footage; Sport round tach",
+      "visual": "Gear4 at58s/66s, gear6 at74s/77s. At66s dash189km/h versus phone172km/h.",
+      "audio_interpretation": "Unlistened cabin acceleration/deceleration context; instrument/overlay disagreement recorded.",
+      "allowed_uses": [
+        "gear_display_context",
+        "cabin_dynamic_observation"
+      ],
+      "not_established": [
+        "continuous unedited run",
+        "exact RPM curve",
+        "ECU or phone synchronization",
+        "injector state",
+        "pedal/load",
+        "external exhaust spectrum"
+      ],
+      "evidence": "references/analysis/DE_details_v1/frames.json"
+    },
+    "E_corsa_second_context": {
+      "source": "E",
+      "seconds": [
+        82,
+        100
+      ],
+      "perspective": "Cabin instrument/composite phone footage; Corsa layout",
+      "visual": "Observed gears1/2/3/4/5/6 at82/84/86/88/90/94s, gear6 at100s. These are discrete observations; intervening continuity has not been established.",
+      "audio_interpretation": "Unlistened mixed cabin recording suitable for subsequent audiovisual shift observation.",
+      "allowed_uses": [
+        "gear_display_context",
+        "cabin_dynamic_observation"
+      ],
+      "not_established": [
+        "exact shift/cut timestamps",
+        "continuous unedited run",
+        "exact RPM curve",
+        "pedal/load",
+        "ECU or phone synchronization",
+        "external exhaust spectrum"
+      ],
+      "evidence": "references/analysis/DE_details_v1/frames.json"
+    }
+  },
+  "superseded_for_calibration": [
+    {
+      "source": "A",
+      "seconds": [
+        208,
+        213
+      ],
+      "reason": "Contains later cabin cut; historical derivatives remain intact",
+      "replacement": "A_exterior_low_rev"
+    },
+    {
+      "source": "A",
+      "seconds": [
+        313.5,
+        319.5
+      ],
+      "reason": "Begins in cabin before exterior footage",
+      "replacement": "A_exterior_moving"
+    }
+  ],
+  "evidence": [
+    "research/state_evidence_v02.json",
+    "references/analysis/v02/A_state_context.jpg",
+    "references/analysis/lifecycle_v1/start_frames.json"
+  ]
+}

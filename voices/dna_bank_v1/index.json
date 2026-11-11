@@ -1,0 +1,32 @@
+{
+  "schema": "vsl.dna-bank/1",
+  "voices": [
+    {
+      "name": "V10 Exterior",
+      "file": "V10 Exterior.model",
+      "model_sha256": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+      "kind": "Approved recording-derived mixed exterior context; fixed-phase listening accepted",
+      "base_hz": 46.875,
+      "source": "A316.10..317.25; not measured RPM"
+    },
+    {
+      "name": "Warm Additive",
+      "file": "Warm Additive.model",
+      "model_sha256": "b1135665d190328f38eded9db1879bbd23ad5624af37fbf2bc5d01628111e2ce",
+      "base_hz": 110.0,
+      "kind": "Analytic additive engineering fixture, not a real engine or user Serum patch",
+      "build": "references\\analysis\\sound_dna_v1\\warm\\build.json"
+    },
+    {
+      "name": "Hollow Spectrum",
+      "file": "Hollow Spectrum.model",
+      "model_sha256": "bb97530b529f2b0b9f451c5bf79b870e6279b837298a34607e2a89504873b3bc",
+      "base_hz": 164.0625,
+      "kind": "Analytic additive engineering fixture, not a real engine or user Serum patch",
+      "build": "references\\analysis\\sound_dna_v1\\hollow\\build.json"
+    }
+  ],
+  "shared_renderer": "modules/sound_dna",
+  "low_body_and_noise": "Excluded",
+  "goal_complete": false
+}

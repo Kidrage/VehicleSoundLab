@@ -1,0 +1,8 @@
+add_library(sound_dna STATIC profile.c texture.c oscillator.c voice.c)
+target_include_directories(sound_dna PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_features(sound_dna PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(sound_dna PRIVATE /W4 /we4013 /utf-8)
+else()
+  target_link_libraries(sound_dna PUBLIC m)
+endif()

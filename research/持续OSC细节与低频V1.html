@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>持续 OSC · 颤动与低频</title><style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#141719;color:#e6eeed}*{box-sizing:border-box}body{max-width:880px;margin:auto;padding:36px 24px}h1{font-size:27px;margin:0 0 12px;font-weight:600}h2{font-size:18px;margin:0 0 10px;font-weight:600}p,small{color:#b0bfc0;line-height:1.8}main,section{margin:22px 0;padding:22px;background:#20282b;border:1px solid #3c4b50;border-radius:14px}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}button{font:inherit;padding:10px 14px;color:inherit;background:#2a373b;border:1px solid #53686d;border-radius:8px;cursor:pointer}button[aria-pressed=true]{background:#a5d8c7;color:#11271e;border-color:#a5d8c7}button:focus-visible{outline:2px solid #d0f4e3;outline-offset:3px}button:disabled{opacity:.5}audio{width:100%}a{color:#a5d8c7}small{display:block}#current{min-height:4em;font-size:14px}#error{color:#ffb3a2}label{font-size:14px;color:#b0bfc0}details{margin:20px 0}summary{cursor:pointer}@media(max-width:500px){body{padding:24px 16px}h1{font-size:23px}main,section{padding:18px}}
+</style></head><body><h1>先定位颤动，再听低频厚度</h1>
+<p>全部固定 1× 音高、8 秒、共用输出增益。切换保留试听位置与播放状态；请分两组比较。</p>
+<main><div class="buttons"><button id="transport" disabled>播放</button></div><div id="player-host" aria-busy="true"></div><p id="current"></p><label><input id="repeat" type="checkbox"> 重复当前试听</label><small id="error" role="alert"></small></main>
+<section><h2>① 70%以上的颤动</h2><small>先比较原版75%／100%，再听100%的固定相位对照。此组关闭新增低频层。</small>
+<div class="buttons"><button data-method="detail075">原版 · 细节75%</button><button data-method="detail100">原版 · 细节100%</button><button data-method="phasefixed">细节100% · 固定相位对照</button></div>
+<small>固定相位对照保留各谐波的幅度起伏，用来检查颤动是否主要来自相位变化。它也会改变空间相位变化，可能变平或变硬，尚未替换原配方。</small></section>
+<section><h2>② 独立低频轰鸣</h2><small>本组固定原版细节100%，只改变新增低频层。不要与①的固定相位版本交叉比较。</small>
+<div class="buttons"><button data-method="bass000">低频层0%</button><button data-method="bass050">低频层50%</button><button data-method="bass100">低频层100%</button></div>
+<small>新层在1×时集中于约47／94／141Hz，依据素材低阶声纹增加厚度。额外增强量属于音色设计；没有独立响度补偿或压缩。新本地窗口可连续调节，默认低频0%。</small></section>
+<details><summary>低频层单听与使用说明</summary><div class="buttons"><button data-method="solo">单听低频层 · 原混音电平</button></div><p>单听不额外放大。它是独立单声源，当前等量送入左右声道；没有指定给7.1.4的LFE。此次没有增加20Hz纯音或房间混响。</p><p>本地启动：<strong>Launch-sustained-low.cmd</strong>。低频0%返回原版，先试40%再逐渐增加。原窗口保留。</p><p><a href="持续OSC细节与低频V1.md">检查结果与模块说明</a> · <a href="持续OSC统计声源V1.html">此前已认可的持续声</a></p></details>
+<script src="../tools/seekable_review_player_v1.js"></script><script>
+const detail='../references/analysis/detail_modulation_v1/',bass='../references/analysis/low_body_v1/renders/';
+const sources={detail075:detail+'detail075_audition.wav',detail100:detail+'detail100_audition.wav',phasefixed:detail+'listening/detail100_radial_audition.wav',bass000:bass+'bass000_audition.wav',bass050:bass+'bass050_audition.wav',bass100:bass+'bass100_audition.wav',solo:bass+'body_solo_audition.wav'};
+const notes={detail075:'原版细节75%，无新增低频。当前滑条同时控制幅度与相位变化；固定数值后这些变化仍持续。',detail100:'原版细节100%，无新增低频。与此前认可的8秒持续声PCM24完全相同。',phasefixed:'诊断对照：细节100%的每条谐波／声道幅度保持原样，将其相位固定到平均声线。判断颤动是否减轻，以及是否损失自然度。',bass000:'原版细节100%，新增低频0%；用作本组厚度基准。',bass050:'原版细节100%，新增低频50%；现有声源与高频配方保留。',bass100:'原版细节100%，新增低频100%；关注厚度、闷胀，以及是否变成固定低音嗡鸣。',solo:'仅新增低频层100%，保持它在混音中的实际电平，没有独奏辅助放大。'};
+const current=document.getElementById('current'),error=document.getElementById('error'),repeat=document.getElementById('repeat');
+const player=new SeekableReviewPlayer(document.getElementById('player-host'),document.getElementById('transport'),text=>error.textContent=text);
+let method='detail100';function selectedSource(){return sources[method];}
+function selectMethod(key,preserve){if(preserve&&method===key&&player.current?.ready)return;method=key;error.textContent='';for(const b of document.querySelectorAll('[data-method]'))b.setAttribute('aria-pressed',String(b.dataset.method===key));current.textContent=notes[key];player.select(selectedSource(),preserve);player.current.audio.loop=repeat.checked;}
+for(const b of document.querySelectorAll('[data-method]'))b.addEventListener('click',()=>selectMethod(b.dataset.method,true));
+repeat.addEventListener('change',()=>player.current.audio.loop=repeat.checked);selectMethod('detail100',false);
+</script></body></html>

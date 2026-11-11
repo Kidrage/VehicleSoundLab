@@ -1,0 +1,197 @@
+{
+  "schema": "vsl.low-rumble-bank/2",
+  "profiles": [
+    {
+      "name": "A Exterior",
+      "file": "A Exterior.model",
+      "model_sha256": "6172075395c61791ea9abb89ec41efc71f7aaaa922c15b93cc2b1e40df7211d6",
+      "source": {
+        "segment_id": "A_exterior_blips",
+        "catalog": "references\\segments_v1.json",
+        "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+        "source": "A",
+        "master": "references/clean/A_decoded_float.wav",
+        "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "source_seconds": [
+          238,
+          248
+        ],
+        "frames": [
+          11424000,
+          11904000
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "processing": "None: unchanged L/R decoded float samples",
+        "not_established": [
+          "neutral gear",
+          "pedal trajectory",
+          "torque load",
+          "RPM"
+        ]
+      },
+      "oscillator_count": 192,
+      "carrier_hz": [
+        30.703125,
+        299.296875
+      ],
+      "design": {
+        "full_amount_unfiltered_expected_rms": 0.14,
+        "spectral_smoothing_sigma_hz": 6,
+        "quadrature_tau_seconds": 0.035,
+        "coefficient_update_hz": 250,
+        "output_filter": "Second-order24Hz highpass and340Hz lowpass"
+      },
+      "observed_envelope_efold_seconds": 0.035,
+      "temporal_limit": "Envelope correlation informs bounded quadrature bandwidth; not an identified physical damping or complete modulation fit.",
+      "physical_limit": "Filtered mixed recording spectrum, no engine/wind/road/room source separation.",
+      "projection": "Channel power average to ONE mono source; separate listener rendering required."
+    },
+    {
+      "name": "B Cabin",
+      "file": "B Cabin.model",
+      "model_sha256": "2e3e94f63bbc91748735f70c0352e23e7c9078bc418c4b36b07f083caa00d794",
+      "source": {
+        "segment_id": "B_cabin_pull",
+        "catalog": "references\\segments_v1.json",
+        "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+        "source": "B",
+        "master": "references/clean/B_decoded_float.wav",
+        "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+        "source_seconds": [
+          218,
+          230
+        ],
+        "frames": [
+          10464000,
+          11040000
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "processing": "None: unchanged L/R decoded float samples",
+        "not_established": [
+          "visible state",
+          "engine banks from L/R",
+          "isolated engine field"
+        ]
+      },
+      "oscillator_count": 192,
+      "carrier_hz": [
+        30.703125,
+        299.296875
+      ],
+      "design": {
+        "full_amount_unfiltered_expected_rms": 0.14,
+        "spectral_smoothing_sigma_hz": 6,
+        "quadrature_tau_seconds": 0.03,
+        "coefficient_update_hz": 250,
+        "output_filter": "Second-order24Hz highpass and340Hz lowpass"
+      },
+      "observed_envelope_efold_seconds": 0.03,
+      "temporal_limit": "Envelope correlation informs bounded quadrature bandwidth; not an identified physical damping or complete modulation fit.",
+      "physical_limit": "Filtered mixed recording spectrum, no engine/wind/road/room source separation.",
+      "projection": "Channel power average to ONE mono source; separate listener rendering required."
+    },
+    {
+      "name": "D Dyno",
+      "file": "D Dyno.model",
+      "model_sha256": "249c136b2b346a9af57ee7a15e397e1d31537d667892d12f5c01302cebb57143",
+      "source": {
+        "segment_id": "D_dyno_gears_context",
+        "catalog": "references\\segments_v1.json",
+        "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+        "source": "D",
+        "master": "references/clean/D_decoded_float.wav",
+        "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+        "source_seconds": [
+          20,
+          32
+        ],
+        "frames": [
+          960000,
+          1536000
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "processing": "None: unchanged L/R decoded float samples",
+        "not_established": [
+          "verified RPM units/readout",
+          "ECU RPM or pedal/load telemetry",
+          "stock exhaust status",
+          "microphone/room transfer",
+          "exact gear event times",
+          "subjective clarity or absence of music/speech"
+        ]
+      },
+      "oscillator_count": 192,
+      "carrier_hz": [
+        30.703125,
+        299.296875
+      ],
+      "design": {
+        "full_amount_unfiltered_expected_rms": 0.14,
+        "spectral_smoothing_sigma_hz": 6,
+        "quadrature_tau_seconds": 0.0395,
+        "coefficient_update_hz": 250,
+        "output_filter": "Second-order24Hz highpass and340Hz lowpass"
+      },
+      "observed_envelope_efold_seconds": 0.0395,
+      "temporal_limit": "Envelope correlation informs bounded quadrature bandwidth; not an identified physical damping or complete modulation fit.",
+      "physical_limit": "Filtered mixed recording spectrum, no engine/wind/road/room source separation.",
+      "projection": "Channel power average to ONE mono source; separate listener rendering required."
+    },
+    {
+      "name": "E Cabin",
+      "file": "E Cabin.model",
+      "model_sha256": "2aa40fcb7252dea764ef0a2e828dbad0079fd1e07fa3fab20406656a7bd46023",
+      "source": {
+        "segment_id": "E_sport_context",
+        "catalog": "references\\segments_v1.json",
+        "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+        "source": "E",
+        "master": "references/clean/E_decoded_float.wav",
+        "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+        "source_seconds": [
+          58,
+          77
+        ],
+        "frames": [
+          2784000,
+          3696000
+        ],
+        "sample_rate": 48000,
+        "channels": 2,
+        "processing": "None: unchanged L/R decoded float samples",
+        "not_established": [
+          "continuous unedited run",
+          "exact RPM curve",
+          "ECU or phone synchronization",
+          "injector state",
+          "pedal/load",
+          "external exhaust spectrum"
+        ]
+      },
+      "oscillator_count": 192,
+      "carrier_hz": [
+        30.703125,
+        299.296875
+      ],
+      "design": {
+        "full_amount_unfiltered_expected_rms": 0.14,
+        "spectral_smoothing_sigma_hz": 6,
+        "quadrature_tau_seconds": 0.025,
+        "coefficient_update_hz": 250,
+        "output_filter": "Second-order24Hz highpass and340Hz lowpass"
+      },
+      "observed_envelope_efold_seconds": 0.024,
+      "temporal_limit": "Envelope correlation informs bounded quadrature bandwidth; not an identified physical damping or complete modulation fit.",
+      "physical_limit": "Filtered mixed recording spectrum, no engine/wind/road/room source separation.",
+      "projection": "Channel power average to ONE mono source; separate listener rendering required."
+    }
+  ],
+  "default": "A Exterior",
+  "separation_policy": "Separate A exterior, B cabin, D dyno and E cabin profiles; never average their transfers together.",
+  "runtime": "Fresh stochastic quadrature OSC generation; no PCM playback or analysis timeline.",
+  "DNA": "Unchanged sound_dna_v1",
+  "status": "New low layer pending listening"
+}

@@ -1,0 +1,4 @@
+# Preserve source and model bytes for the handoff SHA-256 index.
+* -text
+*.png binary
+*.model -text

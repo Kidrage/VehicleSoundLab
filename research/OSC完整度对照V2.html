@@ -1,0 +1,28 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OSC 完整度对照</title><style>
+:root{color-scheme:dark;font-family:system-ui,"Microsoft YaHei",sans-serif;background:#141719;color:#e7eeed}*{box-sizing:border-box}body{max-width:840px;margin:auto;padding:40px 24px}h1{font-size:27px;font-weight:600;margin:0 0 12px}p,small{color:#b0bfc0;line-height:1.8}main{margin:26px 0;padding:24px;background:#20282b;border:1px solid #3c4b50;border-radius:16px}.buttons{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}button{font:inherit;padding:11px 15px;color:inherit;background:#2a373b;border:1px solid #53686d;border-radius:8px;cursor:pointer}button[aria-pressed=true]{background:#a5d8c7;border-color:#a5d8c7;color:#11271e}button:focus-visible{outline:2px solid #d0f4e3;outline-offset:3px}button:disabled{opacity:.5}audio{width:100%;display:block}small{display:block}details{padding:18px 0;border-top:1px solid #3c4b50}summary{cursor:pointer}a{color:#a5d8c7}#current{min-height:4em;font-size:14px}#error{color:#ffb3a2}@media(max-width:500px){body{padding:26px 16px}h1{font-size:24px}main{padding:18px}button{padding:10px 12px}}
+</style></head><body><h1>保住细节之后，质感是否改变</h1>
+<p>上轮短窗联合拟合没有解决你指出的低质感。本轮检查更完整地保留录音信息是否有帮助，暂停额外高频增强。</p>
+<main><small>请从 2.6 秒比较三个主选项。先确认“录音参考”里是否也有同样的低质感。</small>
+<div class="buttons" role="group" aria-label="完整度主对照"><button data-method="reference">录音参考 · 同带宽</button><button data-method="legacy">旧 64 OSC</button><button data-method="rank64">细节保留 · OSC</button></div>
+<div class="buttons"><button id="transport" disabled>播放</button><button id="exterior" disabled>从车外段播放 · 2.6 s</button></div>
+<div id="player-host" aria-busy="true"></div><p id="current"></p><small id="error" role="alert"></small></main>
+<small>各版沿用同一增益，无单独响度匹配、压缩、EQ 增亮或噪声添加。切换保留位置及播放状态。六秒历史片段显式采用单声道坐标，前部含机位变化。</small>
+<details><summary>完整信息与计算量对照</summary>
+<p>“完整 OSC”由 C 正弦／余弦振荡器重建，试听文件与带宽匹配录音逐样本一致。它保留了整段录音的全部系数，是诊断上限；不代表已经提炼出持续发动机音色。</p>
+<div class="buttons" role="group" aria-label="完整度补充"><button data-method="complete">完整 OSC · 诊断上限</button><button data-method="rank16">较少 OSC · 64 路上限</button></div>
+<p>主选项“细节保留”每个短帧取最强 64 个频率，四帧交叠，最多 256 路 OSC；“较少 OSC”每帧 16 个、最多 64 路。“完整 OSC”每帧 257 个，最多 1028 路。OSC 数量、相位连接和信息保留方式一起变化，不能只归因于数量。</p>
+<p>这些版本都是六秒系数轨迹，没有在运行时读取录音样本；密集系数仍携带录音细节，尚未成为任意 RPM／负载的声源模型。</p>
+<p><a href="OSC完整度对照V2.md">方法、验证与后续判断</a> · <a href="OSC质感诊断V1.html">保留上一轮</a></p></details>
+<script src="../tools/seekable_review_player_v1.js"></script><script>
+const before='../references/analysis/osc_quality_v1/',folder='../references/analysis/osc_quality_v2/';
+const sources={reference:before+'band_only_audition.wav',legacy:before+'legacy64_audition.wav',rank64:folder+'rank64_audition.wav',complete:folder+'complete_audition.wav',rank16:folder+'rank16_audition.wav'};
+const notes={reference:'录音参考：80–14 kHz 带宽控制，采用旧版单声道及同一增益。请判断这里是否已有你说的低质感。',legacy:'你选定的早期 64 OSC 声线。原参数与原文件保留。',rank64:'512 样本短帧，每帧最强 64 个频率，用重叠的复幅度 OSC 保留细节；最多 256 路。尚待听评。',complete:'完整信息对照：C 振荡器合成的 PCM24 文件与“录音参考”逐样本一致；这是诊断上限，系数保留了整段录音。',rank16:'每帧仅保留最强 16 个频率，最多 64 路 OSC，用于判断减少信息量后质感如何变化。'};
+const current=document.getElementById('current'),error=document.getElementById('error'),exterior=document.getElementById('exterior');
+const player=new SeekableReviewPlayer(document.getElementById('player-host'),document.getElementById('transport'),text=>error.textContent=text);
+let method='legacy';function selectedSource(){return sources[method];}
+function selectMethod(key,preserve){if(preserve&&method===key&&player.current?.ready)return;method=key;error.textContent='';exterior.disabled=true;for(const b of document.querySelectorAll('[data-method]'))b.setAttribute('aria-pressed',String(b.dataset.method===key));current.textContent=notes[key];player.select(selectedSource(),preserve);player.current.audio.addEventListener('loadedmetadata',()=>exterior.disabled=false,{once:true});}
+for(const b of document.querySelectorAll('[data-method]'))b.addEventListener('click',()=>selectMethod(b.dataset.method,true));
+exterior.addEventListener('click',()=>{const a=player.current.audio;if(!player.current.ready)return;a.currentTime=2.6;a.play().catch(()=>error.textContent='请按播放');});
+selectMethod('legacy',false);
+</script></body></html>

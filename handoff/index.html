@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vehicle Sound Lab · 交接索引</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7f8;color:#132e41;font:16px/1.65 system-ui,"Microsoft YaHei UI",sans-serif}
+main{max-width:1240px;margin:auto;padding:clamp(18px,4vw,48px)}header{border-bottom:1px solid #c8d8de;padding-bottom:22px}
+h1{font-size:clamp(30px,6vw,51px);letter-spacing:-.025em;line-height:1.16;margin:9px 0 16px}h2{font-size:24px;margin:30px 0 10px}
+h3{font-size:18px;margin:0 0 8px}p{margin:8px 0}a{color:#135a70;text-underline-offset:3px}a:hover{color:#0c343e}
+.kicker,.tag{font-size:13px;letter-spacing:.1em;font-weight:700;color:#326675}.tag{letter-spacing:.02em;margin-top:0}.experiment{color:#895315}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:12px}
+article{background:#fff;border:1px solid #c8d8de;border-radius:12px;padding:16px;min-width:0}
+figure{margin:10px 0 0;border:1px solid #c8d8de;border-radius:12px;overflow:hidden;background:white}
+figure img{display:block;width:100%;height:auto}figcaption{padding:8px 14px;color:#405a68}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:10px 20px;margin:8px 0 16px}
+code{font: .91em ui-monospace,Consolas,monospace;background:#e5eff2;padding:1px 4px;border-radius:4px;overflow-wrap:anywhere}
+li{margin:5px 0}footer{margin-top:32px;padding-top:12px;border-top:1px solid #c8d8de;color:#405a68}
+</style>
+<main>
+<header>
+<div class="kicker">ENGINEERING HANDOFF · 2026-11-11</div>
+<h1>Vehicle Sound Lab<br>工程交接</h1>
+<p>在工程根目录双击 <a href="../Launch-System.cmd"><code>Launch-System.cmd</code></a>，选择驾驶、DNA 监听、低频对照或交接资料。使用 Windows x64；此页也可离线浏览。</p>
+</header>
+
+<h2>运行入口与听评范围</h2>
+<div class="grid">
+<article><p class="tag">驾驶与录制可用</p><h3>驾驶系统 0.20.0</h3><p>启停、自动换挡、调参、分层与录制回放。实时立体声，离线可导出 7.1.4。默认 Original OSC，目标音色未获验收。</p><p>总入口另含驾驶回退 0.15.0。</p></article>
+<article><p class="tag">固定情境听评通过</p><h3>Sound DNA V1</h3><p>固定相位的独立持续 OSC 监听，可换模型、微调音高和细节。已听评的是 V10 固定情境，两种合成声验证复用。</p></article>
+<article><p class="tag experiment">保留的未通过实验</p><h3>低频轰鸣 V2</h3><p>含四种录音视角，可调整比例与单独监听。宽谱候选听成风声，缺少发动机感。下一步提取与发动机转动同步的低频。</p></article>
+</div>
+
+<h2>C 系统总图</h2>
+<figure>
+<a href="系统总图.svg" aria-label="打开可缩放的系统总图"><img src="系统总图.svg" width="1320" height="984" alt="车辆控制经状态机映射为三层声源、10 路对象和空间输出；录制回放与独立 DNA / 低频实验另行标注。"></a>
+<figcaption>点击打开原尺寸矢量图。独立监听与驾驶主线的连接状态标在图中。</figcaption>
+</figure>
+<div class="links">
+<a href="C模块与接口.md">C 模块与接口说明</a>
+<a href="工况与声层.md">八种工况与声层矩阵</a>
+<a href="C文件索引.csv">C / H 文件索引与哈希</a>
+<a href="开发留痕.md">开发记录与决策</a>
+<a href="阶段索引.csv">48 个冻结版本与证据索引</a>
+<a href="研究续接.md">下一轮研究路线</a>
+<a href="../research/听评记录.md">历次用户听评</a>
+</div>
+
+<h2>关键试听</h2>
+<p>页面保留原试听方式。音频位于本地交接包；请先恢复相应证据，再回听。</p>
+<ul>
+<li><a href="../research/OSC完整度对照V2.html">旧 64 OSC / 细节保留对照</a>：听出原版的压缩感及密集重建改善。</li>
+<li><a href="../research/持续OSC细节与低频V1.html">细节颤动 / 固定相位对照</a>：固定相位减轻了颤动并保住质感；当时的三音低频仍有嗡鸣。</li>
+<li><a href="../research/低频轰鸣V2.html">四种录音视角的低频 V2</a>：可听独奏和混合档，保留失败听评依据。</li>
+</ul>
+
+<h2>构建与证据</h2>
+<p>安装 Visual Studio 2022 的 C++ 桌面开发组件（含 MSVC x64 和 Windows SDK）与 CMake 3.21+。从 PowerShell 执行 <code>.\Build-System.ps1</code> 构建、运行测试，再执行 <code>.\Launch-System.cmd rebuilt</code> 启动重建版本。回退 0.15.0 仅在本地交接包中可用。</p>
+<p>按交付目录的「交接说明」恢复历史包、录音证据、全部渲染和分析依赖。历史报告中引用的分析文件、旧试听和快照清单所列文件需要相应的证据包；各包解压到同一工程根目录。源素材编号和使用限制见本地批准清单与<a href="../references/segments_v1.json">分段目录</a>。</p>
+<footer>Vehicle Sound Lab · 交接入口 · 本地文件，无网络依赖</footer>
+</main>
+</html>
