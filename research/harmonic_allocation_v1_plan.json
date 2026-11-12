@@ -1,0 +1,20 @@
+{
+  "sample_rate": 48000,
+  "cycle_frames": 1024,
+  "hop": 256,
+  "harmonics": 300,
+  "bands": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "windows": [{"name":"rect1","cycles":1,"kind":"rect"},{"name":"hann2","cycles":2,"kind":"hann"},{"name":"hann4","cycles":4,"kind":"hann"}],
+  "origins_frames": [0,64,128,192],
+  "slow_hz": [0.5,4.0],
+  "known_noise_seeds": [23117,61927,8121907],
+  "known_noise_relative_rms_db": -25,
+  "known_constant_detune": 0.001,
+  "known_AM_hz": 1.5,
+  "known_AM_log_depth": 0.2,
+  "coherence_tone_harmonic": 103,
+  "coherence_tone_detune": 0.001,
+  "candidate_block_starts_seconds": [0.5,2.5,4.5,6.5],
+  "tolerances": {"direct_DFT_relative":1e-9,"constant_shape_db":0.0001,"common_gain_shape_db":0.02,"shape_AM_error_db":0.06,"known_fraction_error":0.0001,"known_detune_corrected_fraction_min":0.999,"known_detune_raw_fraction_max":0.05,"projection_relative":1e-10},
+  "scope": "Measurement-only: common-center central-harmonic band log-shape and descriptive phase-coherent fraction across three windows. Slow DFT components are coordinates on a single short block, not identified physical source AM or independent trials. Window noise gains differ. Test whether coherent fractions are safe energy allocation rules before deriving any source profile. Frozen C intervals are length-matched observations, not new fits. No C/model/default/state changes or duplicate listening request."
+}

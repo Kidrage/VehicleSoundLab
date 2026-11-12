@@ -1,0 +1,605 @@
+{
+  "schema": "vsl.harmonic-allocation-summary/1",
+  "date": "2026-11-12",
+  "result": "diagnostics_only",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\harmonic_allocation_v1",
+  "base_commit": "9565017eb7ed8e7bb08bcf9ec9592a44c5a662a5",
+  "attempts": [
+    {
+      "folder": "analysis1",
+      "result": "failed",
+      "error": "AssertionError(0.02693303548543559)",
+      "report_sha256": "a6e44729db55823666fe594a33b1b358bc5e1abf43459341e8c153d297799db7"
+    },
+    {
+      "folder": "analysis2",
+      "result": "diagnostics_completed",
+      "error": null,
+      "report_sha256": "577ce3bf0fd9f81396d31b1eecc34d8c496700a0afc4118677bc18d78d8c3f17"
+    },
+    {
+      "folder": "analysis3",
+      "result": "diagnostics_completed",
+      "error": null,
+      "report_sha256": "e13892f94792edaa6ea9056ca8e3c732f02ccbd553d895b8da74e626c699fa12"
+    }
+  ],
+  "observations": 12,
+  "window_configurations": 144,
+  "fraction_controls": 12,
+  "known_fraction": {
+    "nominal_range": [
+      0.0033508821510725493,
+      0.003367757494955438
+    ],
+    "known_clock_corrected_minimum": 0.9999997141240691,
+    "analytic_fraction_maximum_error": 2.7456335816022914e-15
+  },
+  "slow_shape": {
+    "target_rms_db_range": [
+      1.02512204481552,
+      1.1418926809123369
+    ],
+    "target_cross_window_correlation_range": [
+      0.9886547318759913,
+      0.9979910726190259
+    ],
+    "frozen_C_rms_db_range": [
+      0.547974383038473,
+      0.8964695825574204
+    ],
+    "stationary_noise_rms_db_range": [
+      0.16109918067522927,
+      0.29432611330825464
+    ],
+    "stationary_noise_cross_window_correlation_range": [
+      0.7873771927504939,
+      0.9896500821715116
+    ],
+    "meaning": "Descriptive short-block readouts, not physical source AM or independent trials"
+  },
+  "controls": {
+    "maximum_direct_DFT_relative_error": 2.683763032968834e-11,
+    "maximum_projection_relative_error": 1.4378080261382232e-14,
+    "maximum_shape_AM_error_db": 0.012480113712637025,
+    "shape_extraction_qualified": false,
+    "failed_original_gates": [
+      {
+        "name": "known_common_gain",
+        "window": "rect1",
+        "origin_frame": 0,
+        "measured_rms_db": 0.02693303548543559,
+        "threshold_db": 0.02,
+        "passed": false
+      },
+      {
+        "name": "known_common_gain",
+        "window": "rect1",
+        "origin_frame": 64,
+        "measured_rms_db": 0.026092814539131204,
+        "threshold_db": 0.02,
+        "passed": false
+      },
+      {
+        "name": "known_common_gain",
+        "window": "rect1",
+        "origin_frame": 128,
+        "measured_rms_db": 0.02547024429945638,
+        "threshold_db": 0.02,
+        "passed": false
+      },
+      {
+        "name": "known_common_gain",
+        "window": "rect1",
+        "origin_frame": 192,
+        "measured_rms_db": 0.023546404424575142,
+        "threshold_db": 0.02,
+        "passed": false
+      }
+    ]
+  },
+  "actual_C_power_budget": {
+    "reference": [
+      {
+        "hz": [
+          1200,
+          1500
+        ],
+        "power": [
+          0.0015254373224792503,
+          0.0015254373325361073
+        ],
+        "cross": [
+          0.0015254373275076715,
+          4.0975809477689074e-12
+        ]
+      },
+      {
+        "hz": [
+          1500,
+          1900
+        ],
+        "power": [
+          0.0013818715081526135,
+          0.0013818715187548013
+        ],
+        "cross": [
+          0.0013818715134536984,
+          2.721863078477846e-12
+        ]
+      },
+      {
+        "hz": [
+          1900,
+          2400
+        ],
+        "power": [
+          0.0006087226184993677,
+          0.0006087226176855955
+        ],
+        "cross": [
+          0.0006087226180924733,
+          -1.5411074857328708e-12
+        ]
+      },
+      {
+        "hz": [
+          2400,
+          3000
+        ],
+        "power": [
+          0.00040878890518686485,
+          0.00040878890261747934
+        ],
+        "cross": [
+          0.0004087889039021649,
+          1.9997716007060845e-12
+        ]
+      },
+      {
+        "hz": [
+          3000,
+          3800
+        ],
+        "power": [
+          0.00015426074565736284,
+          0.00015426074571254714
+        ],
+        "cross": [
+          0.00015426074568494685,
+          3.26791703574562e-13
+        ]
+      },
+      {
+        "hz": [
+          3800,
+          4800
+        ],
+        "power": [
+          3.179951394821716e-05,
+          3.17995131204561e-05
+        ],
+        "cross": [
+          3.179951353432917e-05,
+          -4.3111889607691536e-13
+        ]
+      },
+      {
+        "hz": [
+          4800,
+          6000
+        ],
+        "power": [
+          1.2334060047203039e-05,
+          1.2334060116268824e-05
+        ],
+        "cross": [
+          1.2334060081728839e-05,
+          -2.7172244771554124e-13
+        ]
+      },
+      {
+        "hz": [
+          6000,
+          8000
+        ],
+        "power": [
+          6.98281299350528e-06,
+          6.982812791359954e-06
+        ],
+        "cross": [
+          6.9828128924225645e-06,
+          -1.6848634543996074e-13
+        ]
+      }
+    ],
+    "represented": [
+      {
+        "hz": [
+          1200,
+          1500
+        ],
+        "power": [
+          0.0012262737781490543,
+          0.001226273801743148
+        ],
+        "cross": [
+          0.0012262737899460647,
+          1.753003547871394e-11
+        ]
+      },
+      {
+        "hz": [
+          1500,
+          1900
+        ],
+        "power": [
+          0.0014281264348077764,
+          0.0014281264181586894
+        ],
+        "cross": [
+          0.001428126426483179,
+          6.3350151310072964e-12
+        ]
+      },
+      {
+        "hz": [
+          1900,
+          2400
+        ],
+        "power": [
+          0.0005636693831762861,
+          0.0005636693593687415
+        ],
+        "cross": [
+          0.0005636693712724431,
+          3.91446193945385e-12
+        ]
+      },
+      {
+        "hz": [
+          2400,
+          3000
+        ],
+        "power": [
+          0.0003411524823020357,
+          0.00034115247633119926
+        ],
+        "cross": [
+          0.00034115247931653633,
+          9.29077399560622e-12
+        ]
+      },
+      {
+        "hz": [
+          3000,
+          3800
+        ],
+        "power": [
+          0.0001366429505669749,
+          0.00013664295514876878
+        ],
+        "cross": [
+          0.00013664295285775111,
+          -5.799762559378452e-13
+        ]
+      },
+      {
+        "hz": [
+          3800,
+          4800
+        ],
+        "power": [
+          2.9992816020266475e-05,
+          2.999281086709739e-05
+        ],
+        "cross": [
+          2.9992813443519266e-05,
+          -2.755583216320091e-13
+        ]
+      },
+      {
+        "hz": [
+          4800,
+          6000
+        ],
+        "power": [
+          1.2448765832645116e-05,
+          1.244876805685204e-05
+        ],
+        "cross": [
+          1.2448766944517788e-05,
+          3.869204070664635e-12
+        ]
+      },
+      {
+        "hz": [
+          6000,
+          8000
+        ],
+        "power": [
+          7.410736267088007e-06,
+          7.410732745550293e-06
+        ],
+        "cross": [
+          7.4107345056340035e-06,
+          1.3574985336235083e-12
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "hz": [
+          1200,
+          1500
+        ],
+        "power_delta_db": [
+          -0.9480692626537082,
+          -0.9480692077254103
+        ],
+        "reference_coherence": [
+          0.9999999999999953,
+          2.686168008267964e-09
+        ],
+        "candidate_coherence": [
+          0.9999999999999702,
+          1.4295368312067116e-08
+        ],
+        "complex_coherence_error": 1.1609200303826267e-08
+      },
+      {
+        "hz": [
+          1500,
+          1900
+        ],
+        "power_delta_db": [
+          0.14298995569826234,
+          0.14298987174769645
+        ],
+        "reference_coherence": [
+          0.9999999999999934,
+          1.9696933122784344e-09
+        ],
+        "candidate_coherence": [
+          0.9999999999999621,
+          4.4358923786651695e-09
+        ],
+        "complex_coherence_error": 2.4661990665854636e-09
+      },
+      {
+        "hz": [
+          1900,
+          2400
+        ],
+        "power_delta_db": [
+          -0.33394993378403065,
+          -0.3339501114098931
+        ],
+        "reference_coherence": [
+          0.9999999999999862,
+          -2.531707283297849e-09
+        ],
+        "candidate_coherence": [
+          0.9999999999998748,
+          6.944606428794851e-09
+        ],
+        "complex_coherence_error": 9.476313712748268e-09
+      },
+      {
+        "hz": [
+          2400,
+          3000
+        ],
+        "power_delta_db": [
+          -0.7855056458295738,
+          -0.7855056945426399
+        ],
+        "reference_coherence": [
+          0.9999999999999825,
+          4.8919419818319065e-09
+        ],
+        "candidate_coherence": [
+          0.9999999999997621,
+          2.7233493991358684e-08
+        ],
+        "complex_coherence_error": 2.23415520106137e-08
+      },
+      {
+        "hz": [
+          3000,
+          3800
+        ],
+        "power_delta_db": [
+          -0.526681950205442,
+          -0.5266818061351728
+        ],
+        "reference_coherence": [
+          0.9999999999999473,
+          2.118437209178057e-09
+        ],
+        "candidate_coherence": [
+          0.9999999999991167,
+          -4.244465183221731e-09
+        ],
+        "complex_coherence_error": 6.36290244660668e-09
+      },
+      {
+        "hz": [
+          3800,
+          4800
+        ],
+        "power_delta_db": [
+          -0.25403238388694177,
+          -0.25403301701377584
+        ],
+        "reference_coherence": [
+          0.9999999999997654,
+          -1.3557405386450324e-08
+        ],
+        "candidate_coherence": [
+          0.9999999999945802,
+          -9.187478265399515e-09
+        ],
+        "complex_coherence_error": 4.369930197319548e-09
+      },
+      {
+        "hz": [
+          4800,
+          6000
+        ],
+        "power_delta_db": [
+          0.040202393087383465,
+          0.04020314471760876
+        ],
+        "reference_coherence": [
+          0.9999999999994249,
+          -2.2030251670161983e-08
+        ],
+        "candidate_coherence": [
+          0.9999999999814648,
+          3.1081022625271703e-07
+        ],
+        "complex_coherence_error": 3.3284047840744206e-07
+      },
+      {
+        "hz": [
+          6000,
+          8000
+        ],
+        "power_delta_db": [
+          0.25830946521532405,
+          0.2583075271971673
+        ],
+        "reference_coherence": [
+          0.9999999999985605,
+          -2.4128721195229508e-08
+        ],
+        "candidate_coherence": [
+          0.9999999999075749,
+          1.831800252007415e-07
+        ],
+        "complex_coherence_error": 2.0730876636225438e-07
+      }
+    ],
+    "negative_diagonal_bands": [
+      [
+        1500,
+        1900
+      ],
+      [
+        4800,
+        6000
+      ],
+      [
+        6000,
+        8000
+      ]
+    ],
+    "scope": "Actual frozen accepted C DNA+LF, not the sum of central-bin estimates. Welch mean, no refit/gain compensation."
+  },
+  "stereo_scope": {
+    "A_master_seconds": [
+      316.1,
+      317.25
+    ],
+    "raw_master_LminusR_relative_rms": 1.7150802372964277e-05,
+    "normalized_reference_LminusR_relative_rms": 1.5550372456045557e-05,
+    "accepted_pair_LminusR_relative_rms": 2.8769901333878067e-05,
+    "interpretation": "These measurements establish observed channel difference only; no physical source assignment or stereo-widening validation.",
+    "raw_master_LminusR_relative_rms_db": -95.31431114741025,
+    "normalized_reference_LminusR_relative_rms_db": -96.16518408943976,
+    "accepted_pair_LminusR_relative_rms_db": -90.82123255032401
+  },
+  "allocation_decision": "Do not use |mean complex coefficient|^2/E|coefficient|^2 as an automatic harmonic-to-cloud power split: a known pure detuned tone is a counterexample.",
+  "c_h_count": 436,
+  "c_index_sha256": "51bcb0f363671e452553316e9f73e1d2432cf14b6cdd7944958b3ffb2351b0c4",
+  "accepted_models_unchanged": true,
+  "runtime_changes": false,
+  "models_changed": false,
+  "state_mapping_changed": false,
+  "human_accepted": false,
+  "current_source_sha256": {
+    "tools/summarize_harmonic_allocation_v1.py": "fc73da29557a73762b2d3a92ad26d07f9e5d402ef6bf15999c7b9c4cce6e9b4a",
+    "tools/freeze_harmonic_allocation_v1.py": "171fae2601287ad382df2fed63777ffc596ff278b79d021a8d33943ed5fa7cd5",
+    "tools/analyze_harmonic_allocation_v1.py": "e050eef0026862f10cb585ebcb3e3224903979b1be452621ea0586deb3af029e",
+    "research/harmonic_allocation_v1_plan.json": "f54f1f69f0bab6abb75ea54c3d511d242ae04380d75d31268a945eeea378df0d",
+    "tools/harmonic_allocation_v1/controls.py": "ac70361abfd5484a64f65e64d3c90ddf3dabe810c198c758dac1c5116fefe4dd",
+    "tools/harmonic_allocation_v1/observe.py": "33781276ecb7e37a6661b816312547d5ae25367206e1455627785d666f14c540"
+  },
+  "evidence_sha256": {
+    "analysis1/exact_sources/research/harmonic_allocation_v1_plan.json": "f54f1f69f0bab6abb75ea54c3d511d242ae04380d75d31268a945eeea378df0d",
+    "analysis1/exact_sources/tools/analyze_harmonic_allocation_v1.py": "70cd0275ce4cbeff643b7d826683bc8564c30cba8943a10f9f0adbf5a50765de",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/exact_sources/tools/harmonic_allocation_v1/controls.py": "ac70361abfd5484a64f65e64d3c90ddf3dabe810c198c758dac1c5116fefe4dd",
+    "analysis1/exact_sources/tools/harmonic_allocation_v1/observe.py": "33781276ecb7e37a6661b816312547d5ae25367206e1455627785d666f14c540",
+    "analysis1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "analysis1/known_fixed_detune.npz": "3775b61e4bfbb57ae44dcae14daa3a529752f914b4062ce030764599f3cd4462",
+    "analysis1/known_stationary_OSC.npz": "670b66a530cd7ce60cd92e1ed522e7d035299b27e78edf865299851fe8c10e54",
+    "analysis1/metadata.json": "35199b7d1c261cc223c656367472e3926b8149fc20852abccd83e1c8df38de2f",
+    "analysis1/report.json": "a6e44729db55823666fe594a33b1b358bc5e1abf43459341e8c153d297799db7",
+    "analysis2/accepted_DNA_LF_0.5.npz": "6e1d7354700aa85bb0ac51208326692bcd3f5bdd7edf7e9054d1987ccb0ba20a",
+    "analysis2/accepted_DNA_LF_2.5.npz": "809245c9998d8bc6e8d0f6d775e640635b7c6d09ff0e1782de1e527f30af67a1",
+    "analysis2/accepted_DNA_LF_4.5.npz": "058684276877274b42ce5008e6cb22b4f375e9c734b8673741e1f47189e41f8b",
+    "analysis2/accepted_DNA_LF_6.5.npz": "ed73aa38cbbb8e83aa1c5d9cf308c9c09e929000cb2ff4ba741c48b7df0c66b5",
+    "analysis2/exact_sources/research/harmonic_allocation_v1_plan.json": "f54f1f69f0bab6abb75ea54c3d511d242ae04380d75d31268a945eeea378df0d",
+    "analysis2/exact_sources/tools/analyze_harmonic_allocation_v1.py": "b9ec46d83ec03ded5fd739b89e1eb8accb3a0bdaab7719612d15f48412680ac3",
+    "analysis2/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis2/exact_sources/tools/harmonic_allocation_v1/controls.py": "ac70361abfd5484a64f65e64d3c90ddf3dabe810c198c758dac1c5116fefe4dd",
+    "analysis2/exact_sources/tools/harmonic_allocation_v1/observe.py": "33781276ecb7e37a6661b816312547d5ae25367206e1455627785d666f14c540",
+    "analysis2/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "analysis2/fixed_A_reference.npz": "7fc1972f47f61b1c2f9cc3bd67280e8e8b854c6dae67eb74d7d14d801cd8f5aa",
+    "analysis2/known_common_gain.npz": "f0f562deb68304cde7b9cacded8859901714473c876f0806b1a5ac73f76b365e",
+    "analysis2/known_fixed_detune.npz": "3775b61e4bfbb57ae44dcae14daa3a529752f914b4062ce030764599f3cd4462",
+    "analysis2/known_shape_AM.npz": "d9c3271e7ac02f7a89d129bf665a3b4c32269748aae533c4bcd3c3a5e23b9c4d",
+    "analysis2/known_stationary_noise_23117.npz": "9471f41e1c8fdfc56b51bc5cc17d612bc6f0edf8ac21b3ada99b892b54402a79",
+    "analysis2/known_stationary_noise_61927.npz": "a10d1dafe1e0358c7c2481189970dd4a92f56093d731cf5a18bbe45f571905a5",
+    "analysis2/known_stationary_noise_8121907.npz": "e912a596532a95495b8dcfe0f707edd3bf3bc9855b89acf8e87323e81109f425",
+    "analysis2/known_stationary_OSC.npz": "670b66a530cd7ce60cd92e1ed522e7d035299b27e78edf865299851fe8c10e54",
+    "analysis2/metadata.json": "c0bef8c0e9ea6c74878908e752ab30853ec7a40475f34adf787a94097ce62775",
+    "analysis2/report.json": "577ce3bf0fd9f81396d31b1eecc34d8c496700a0afc4118677bc18d78d8c3f17",
+    "analysis3/accepted_DNA_LF_0.5.npz": "6e1d7354700aa85bb0ac51208326692bcd3f5bdd7edf7e9054d1987ccb0ba20a",
+    "analysis3/accepted_DNA_LF_2.5.npz": "809245c9998d8bc6e8d0f6d775e640635b7c6d09ff0e1782de1e527f30af67a1",
+    "analysis3/accepted_DNA_LF_4.5.npz": "058684276877274b42ce5008e6cb22b4f375e9c734b8673741e1f47189e41f8b",
+    "analysis3/accepted_DNA_LF_6.5.npz": "ed73aa38cbbb8e83aa1c5d9cf308c9c09e929000cb2ff4ba741c48b7df0c66b5",
+    "analysis3/exact_sources/research/harmonic_allocation_v1_plan.json": "f54f1f69f0bab6abb75ea54c3d511d242ae04380d75d31268a945eeea378df0d",
+    "analysis3/exact_sources/tools/analyze_harmonic_allocation_v1.py": "e050eef0026862f10cb585ebcb3e3224903979b1be452621ea0586deb3af029e",
+    "analysis3/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis3/exact_sources/tools/harmonic_allocation_v1/controls.py": "ac70361abfd5484a64f65e64d3c90ddf3dabe810c198c758dac1c5116fefe4dd",
+    "analysis3/exact_sources/tools/harmonic_allocation_v1/observe.py": "33781276ecb7e37a6661b816312547d5ae25367206e1455627785d666f14c540",
+    "analysis3/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "analysis3/fixed_A_reference.npz": "7fc1972f47f61b1c2f9cc3bd67280e8e8b854c6dae67eb74d7d14d801cd8f5aa",
+    "analysis3/known_common_gain.npz": "f0f562deb68304cde7b9cacded8859901714473c876f0806b1a5ac73f76b365e",
+    "analysis3/known_fixed_detune.npz": "3775b61e4bfbb57ae44dcae14daa3a529752f914b4062ce030764599f3cd4462",
+    "analysis3/known_shape_AM.npz": "d9c3271e7ac02f7a89d129bf665a3b4c32269748aae533c4bcd3c3a5e23b9c4d",
+    "analysis3/known_stationary_noise_23117.npz": "9471f41e1c8fdfc56b51bc5cc17d612bc6f0edf8ac21b3ada99b892b54402a79",
+    "analysis3/known_stationary_noise_61927.npz": "a10d1dafe1e0358c7c2481189970dd4a92f56093d731cf5a18bbe45f571905a5",
+    "analysis3/known_stationary_noise_8121907.npz": "e912a596532a95495b8dcfe0f707edd3bf3bc9855b89acf8e87323e81109f425",
+    "analysis3/known_stationary_OSC.npz": "670b66a530cd7ce60cd92e1ed522e7d035299b27e78edf865299851fe8c10e54",
+    "analysis3/metadata.json": "bbaf4f0b414fe17075d5962b07656269107ac4678a65986170f34cc8a82c38a4",
+    "analysis3/report.json": "e13892f94792edaa6ea9056ca8e3c732f02ccbd553d895b8da74e626c699fa12"
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\reference.wav": "31d8632b6f9305402e74cf29e682ecf55fc1b89be20b9b87e5dd529096f308c5",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\manifest.json": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\accepted_pair.wav": "62e44a9ba7998380cb13003d868f2882439f32b6e504862aac6c74ea1fe8e1b2",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\candidate_moments.npz": "b2a94315fd2c222cb4289b6241e79988dc50a65ed716b6c98aefd65fc1d28579",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\manifest.json": "edad05adc1d2f38c633e27841ee2cd32493cf9f1cf15a88a17948ef0ba63d6f8",
+    "E:\\VehicleSoundLab\\references\\segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "E:\\VehicleSoundLab\\references\\raw\\A_7aZm1Wkp6QM.webm": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+    "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964"
+  },
+  "limits": [
+    "Measurement-only: common-center central-harmonic band log-shape and descriptive phase-coherent fraction across three windows. Slow DFT components are coordinates on a single short block, not identified physical source AM or independent trials. Window noise gains differ. Test whether coherent fractions are safe energy allocation rules before deriving any source profile. Frozen C intervals are length-matched observations, not new fits. No C/model/default/state changes or duplicate listening request.",
+    "Central-bin coherent fractions are descriptive and finite-window biased, not physical noise fractions",
+    "Cross-window agreement alone cannot distinguish actual AM from stationary noise/window beating",
+    "One short normalized A block cannot identify stable sub-Hz statistics, RPM/load or propagation",
+    "Known exact clock correction validates the control only; no real clock was estimated or corrected",
+    "C observations share one continuous realization and are not independent engine recordings",
+    "Power budgets do not qualify naturalness or identify intake/exhaust/mechanical sources",
+    "Existing listening pending; no new candidate/default/UI/driver/spatial adoption",
+    "First early-stop failure and all completed attempts retain the same plan thresholds; four rect1 common-gain shape gates remain failed",
+    "Common-gain total shape leakage is 0.024..0.027dB while its slow readout is under0.010dB; this small counterexample does not erase the real-A1dB observation",
+    "The raw A master is already nearly dual-mono in this interval; the normalized target cannot validate stereo width",
+    "Next distinguish local line concentration from clock drift before any bounded DNA/cloud redistribution; use separate stereo recordings for width"
+  ]
+}
