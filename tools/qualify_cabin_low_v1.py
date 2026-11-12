@@ -9,6 +9,7 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--workspace', type=Path, required=True)
 p.add_argument('--observed', type=Path, required=True)
 p.add_argument('--out', type=Path, required=True)
+p.add_argument('--plan', type=Path)
 a = p.parse_args()
 repo = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(a.workspace/'tools/python_deps'))
@@ -20,7 +21,7 @@ from local_voice_v1.qualification import qualify
 a.out.mkdir(parents=True, exist_ok=False)
 r = dict(schema='vsl.cabin-low-qualification/1', result='running', cases={}, sources={})
 try:
-    plan_path = repo/'research/cabin_low_v1_qualification_plan.json'
+    plan_path = a.plan.resolve() if a.plan else repo/'research/cabin_low_v1_qualification_plan.json'
     plan = json.loads(plan_path.read_text(encoding='utf-8'))
     inputs = [Path(__file__), plan_path, repo/'tools/local_voice_v1/qualification.py',
         repo/'tools/drive_evidence_v1/sources.py', repo/'tools/state_colour_v2/clock.py',
@@ -50,7 +51,10 @@ try:
             stream.seek(round(lo*48000))
             audio = stream.read(round((hi-lo)*48000), dtype='float64', always_2d=True)
         out = a.out/case['id']; out.mkdir()
-        result = qualify(audio, lo, observed, case, plan, out)
+        local_plan=dict(plan)
+        for key in ('primary_reference','comparison_references'):
+            if key in case:local_plan[key]=case[key]
+        result = qualify(audio, lo, observed, case, local_plan, out)
         result['input_observation_sha256'] = item['observation_sha256']
         (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         r['cases'][case['id']] = result

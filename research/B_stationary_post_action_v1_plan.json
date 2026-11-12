@@ -1,0 +1,19 @@
+{
+  "schema":"vsl.B-stationary-post-action-plan/1",
+  "selection_basis":"Independent36frame action reinspection: head/hand at console132.5..135.0, head returns135.519 and both hands on wheel136.019 through137.521, P/0mph/STRADA. Earlier full case is not stationary. Select once from visual context, not spectral quality.",
+  "visual_evidence":"research/B_stationary_action_v1_annotations.json",
+  "cases":[
+    {"id":"post_controls","observation":"park_before_departure","seconds":[135.8,137.4],"initial_root_hz":33.8,"primary_reference":2,"comparison_references":[3,5]}
+  ],
+  "primary_reference":2,
+  "comparison_references":[3,5],
+  "diagnostic_gates":{
+    "maximum_root_relative_p95":0.01,
+    "maximum_shape_difference_db":0.5,
+    "minimum_comparison_references":1,
+    "minimum_nonoverlapping_four_cycle_windows":6,
+    "require_primary_separate_carrier_gate":true
+  },
+  "phase":"One existing two-cycle correction; no alternate interval/window/reference retries",
+  "limits":["No physical RPM, thermal, fueling or load claim","Original failed cases are not promoted","Independent stationary fixture and disjoint holdout checks still required","No accepted/default/runtime changes"]
+}

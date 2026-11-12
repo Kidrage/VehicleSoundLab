@@ -337,7 +337,7 @@
         140
       ],
       "perspective": "cabin stationary then departure",
-      "visual": "P/0mph at132/136s,gear1 by140s; control actions and acoustic rises/falls",
+      "visual": "ANIMA operation130.5..131.5,SPORT visible131.014; head/console actions132.5..135.0; forward P/0mph/STRADA136.019; gear1 by140s",
       "allowed_uses": [
         "stationary_context",
         "interior_dynamic_observation"
@@ -350,7 +350,8 @@
         "thermal state",
         "independent instrument/engine-event latency"
       ],
-      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_idle_context_v1_annotations.json",
+      "evidence": "references/analysis/B_stationary_dna_v1/final1/exact_sources/research/B_stationary_action_v1_annotations.json",
+      "stationary_fit_status": "132.4..135.4 and new visually selected135.8..137.4 disjoint holdouts rejected; no model; do not trim/reference-scan until passing",
       "existing_audition": null
     },
     "B_departure_gears_context": {
@@ -383,7 +384,7 @@
         808
       ],
       "perspective": "cabin arrival/parking",
-      "visual": "Gear1 at798s,hand at controls802s,P/0mph and Parking brake applied at806s",
+      "visual": "Gear1 at798..801s; head/console actions801.5..805; P/0mph/parking-brake caption; raised start-stop cover then logo/blank center screen806..807",
       "allowed_uses": [
         "parking_context",
         "interior_dynamic_observation"
@@ -396,7 +397,8 @@
         "thermal state",
         "independent instrument/engine-event latency"
       ],
-      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_idle_context_v1_annotations.json",
+      "evidence": "references/analysis/B_stationary_dna_v1/final1/exact_sources/research/B_stationary_action_v1_annotations.json",
+      "stationary_fit_status": "800.2..805.2 disjoint full-timbre holdout rejected, despite local low-carrier agreement; no model; not continuous stationary idle",
       "existing_audition": null
     }
   },

@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.B-stationary-action-observations/1",
+  "date": "2026-11-12",
+  "inspection": "references/analysis/B_stationary_dna_v1/inspect1",
+  "method": "Visually inspected all36decoded frames in5boards and native131.014/136.019/806.522/807.023s frames",
+  "observations": [
+    {"video_seconds":[130.013217,131.514717],"observation":"Right hand operates the steering ANIMA control; cluster layout changes, SPORT visible at131.014.","interpretation":"Mode operation, not one unchanging stationary timbre."},
+    {"video_seconds":[132.515717,135.018217],"observation":"Head turns down/right and hand operates center-console controls.","interpretation":"Changing binaural view plus handling. The132.4..135.4audio case spans these actions."},
+    {"video_seconds":[135.518717,137.520717],"observation":"Head returns forward; both hands back on wheel by136.019, cluster shows P,0mph and STRADA.","interpretation":"A new post-handling stationary context, not a retry selected by spectrum. Thermal state/exact RPM/pedal remain unknown."},
+    {"video_seconds":[800.015883,804.520383],"observation":"Gear1 visible initially; hand leaves wheel and operates console; viewpoint rotates down/right.","interpretation":"The800.2..805.2case mixes arrival/gear/handling and changing binaural observation, not a single stable idle."},
+    {"video_seconds":[805.521383,807.022883],"observation":"P/0mph and parking-brake caption; red start/stop cover raised and finger at button, followed by cluster Huracan Tecnica logo and blank center screen.","interpretation":"Visible shutdown operation/context. Do not equate this0.5s frame bracket with combustion stop, exact fuel timing or calibrated A/V latency."}
+  ],
+  "audio_time_relation": "Paired video audio = local userMP3 + approximately0.036291667s; not physical event latency",
+  "new_predeclared_audio_case": [135.8,137.4],
+  "selection_rule": "Inside forward-view post-handling P context, one fixed case/reference/refiner only; do not trim or scan if it fails",
+  "original_failures": "Both earlier local gates and the subsequent stationary holdouts remain failed and retained. No new model currently exported."
+}

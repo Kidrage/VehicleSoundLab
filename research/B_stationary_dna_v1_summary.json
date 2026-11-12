@@ -1,0 +1,195 @@
+{
+  "schema": "vsl.B-stationary-dna-publication/1",
+  "result": "qualified_controls_real_sources_rejected",
+  "reports": {
+    "explore1": {
+      "path": "references/analysis/B_stationary_dna_v1/explore1/report.json",
+      "sha256": "c967448eeab14fbc2106440d2be55ad65821ed8430a8ff8c113b9b5eace79e68"
+    },
+    "qualify1": {
+      "path": "references/analysis/B_stationary_dna_v1/qualify1/report.json",
+      "sha256": "3143da3378236f219bd69552fff2bb2c313976bb981393673140aefa3246cbcd"
+    },
+    "probes1": {
+      "path": "references/analysis/B_stationary_dna_v1/probes1/report.json",
+      "sha256": "fab10025317b14565e3f22ed12ccb9e7f749cf9c77fff085d5b88319b08580f2"
+    },
+    "validate1": {
+      "path": "references/analysis/B_stationary_dna_v1/validate1/report.json",
+      "sha256": "f8ae3c54cbc61edf7780ec735044770b416fa31a7f63c261c6c499bd09721987"
+    },
+    "fit1": {
+      "path": "references/analysis/B_stationary_dna_v1/fit1/report.json",
+      "sha256": "14f1b40f7a1b42ba685936c5348b5ba04582c3dc0fe997d83e6f7e87e488e0de"
+    },
+    "inspect1": {
+      "path": "references/analysis/B_stationary_dna_v1/inspect1/report.json",
+      "sha256": "6d136bc9820b57a956b8c38de6430f437744d4cb759796c4e8ecb22bb905583f"
+    },
+    "post_action_qualify1": {
+      "path": "references/analysis/B_stationary_dna_v1/post_action_qualify1/report.json",
+      "sha256": "77489a59cf1f7dcaa71b74b378f1f6abc3219019cb68283a82179dcd0029bbdc"
+    },
+    "post_action_fit1": {
+      "path": "references/analysis/B_stationary_dna_v1/post_action_fit1/report.json",
+      "sha256": "102ba4c8777922d584e6cab838e90c26401a9f439f68bc717b39fe17c55f6d92"
+    },
+    "C_controls1": {
+      "path": "references/analysis/B_stationary_dna_v1/C_controls1/report.json",
+      "sha256": "f3102fe24f0078dc44d992d5cc02f649aa931f71256f31f4101a3f4c025f98f2"
+    },
+    "register1": {
+      "path": "references/analysis/B_stationary_dna_v1/register1/report.json",
+      "sha256": "eff23fdcffbafd01671d8e98e6923d2ecd21f252658a5ccf07d0b2c368990278"
+    }
+  },
+  "sources": {
+    "tools/finalize_B_stationary_dna_v1.py": "16663d756482d374f6bb473c2b7fb1938b2a96b5b03843e56ce0774b4a61203c",
+    "research/B_stationary_action_v1_annotations.json": "00450bc9445f7781813094faa2b84b1fd5e9ca32544264dd3563a4cfda99b552",
+    "research/B_stationary_action_v1_inspection_plan.json": "5401b1b88b60968a7f5b616fd84db38c30a401a7a48735be75135fca29546357",
+    "research/B_stationary_dna_v1_plan.json": "736af495ab97f4431ee8e9fbea735351c91dd68a6c6de5301eeae609b385d789",
+    "research/B_stationary_dna_v1_validation_plan.json": "b3ed2bf709417c24fa9e3d585c30b8f2154084e1c5ed5f3989f65f50b8e43f4f",
+    "research/B_stationary_post_action_v1_plan.json": "0cfa73416f0784233b8379cc0907c2a03655d1c81ea623ae6dd4d0ea57fbebbc",
+    "research/怠速与加速补充素材V2.md": "0f609b9969ebd754084518c9a028f31050caebd8e63ea6845f52bc9f70d41120",
+    "research/B驻车声纹验证V1.md": "f15d1aca031b4e44129f468b72486be071483c3eaa12bf94b77b93a967fdd211",
+    "references/segments_v1.json": "2d120257653ad0f5d3589cb6bb96769e2e0d9432ad1c7d8759e0a56052224525",
+    "tools/stationary_dna_v1/fit.py": "7e5ad891c350ffc792ec14989ce64e356a85b287ebbeedd7fa74837984cc8cb3",
+    "tools/stationary_dna_v1/fixtures.py": "3be37288ed3f389ed442adc6c988c9d1a090a9d86bb325232a9e03a9cc22dcca",
+    "tools/stationary_dna_v1/measure.py": "ca429ae3e578c116b439da3a97f9447766fe01212ed91b41a733a19217b6b6c4",
+    "tools/stationary_dna_v1/source.py": "56b7572c2f8222f984db5e05ef299508a9352d8259f05f2482bfed1690772d40",
+    "tools/stationary_dna_v1/__init__.py": "bce9f532f49642a11828d8a468e7f615447a3bd58bb82677764132cb0ab63cfb",
+    "tools/explore_B_stationary_v1.py": "67ad7ac16d13583e4efb9ca5580160f9fd4d8a8fc4a2029f77547d97da958b4c",
+    "tools/fit_B_stationary_dna_v1.py": "f781a1ed2ca6dff268c8d0c901fcd8d97dd30e93966d5841e7aa2e71f5ee782b",
+    "tools/inspect_B_stationary_phase_v1.py": "c05e591c52942fd25ea9e1ebc8ad27209cd8f288240988e8be094930d6a61989",
+    "tools/register_B_stationary_context_v1.py": "908d1f523fd50f805ddafbb74368f00a519d0db423caf34e8eb989890ee18ecc",
+    "tools/validate_B_stationary_dna_v1.py": "737a29983ddef226e9d74eee861df8557a8815e8e448a2113ac364bab1677429",
+    "tools/search_idle_sources_v1.py": "853ec483f6c2e8bad5256d9af90af338769e57c90a625198c00d46c98ec25dbf",
+    "tools/inspect_idle_candidates_v2.py": "23ebcf2243ff09ed46ee00191af933101e012e704c1497752bc5419269d078bb",
+    "tools/verify_stationary_profile_v1.py": "502c86c9e88e5f3af290e285e904fd7f744aa611e62e938c8f7861b23f400376"
+  },
+  "real_cases": [
+    {
+      "id": "before_departure",
+      "root_hz": 33.53568666464406,
+      "maximum_heldout_db": 3.3951206832263225,
+      "maximum_heldout_correlation": 0.26395056971595415,
+      "independent_halves": [
+        {
+          "passed": false,
+          "orders": [],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        },
+        {
+          "passed": true,
+          "orders": [
+            1,
+            3
+          ],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        }
+      ],
+      "model_exported": false
+    },
+    {
+      "id": "after_arrival",
+      "root_hz": 41.534075476197415,
+      "maximum_heldout_db": 10.663416405783288,
+      "maximum_heldout_correlation": 0.6036674943815906,
+      "independent_halves": [
+        {
+          "passed": true,
+          "orders": [
+            1,
+            2,
+            4,
+            6,
+            10
+          ],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        },
+        {
+          "passed": true,
+          "orders": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        }
+      ],
+      "model_exported": false
+    },
+    {
+      "id": "post_controls",
+      "root_hz": 33.50331029998639,
+      "maximum_heldout_db": 8.176092148420535,
+      "maximum_heldout_correlation": 0.43029027244529466,
+      "independent_halves": [
+        {
+          "passed": false,
+          "orders": [
+            1
+          ],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        },
+        {
+          "passed": true,
+          "orders": [
+            1,
+            3,
+            6
+          ],
+          "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+        }
+      ],
+      "model_exported": false
+    }
+  ],
+  "analytic_positive_controls": 6,
+  "analytic_negative_controls": 6,
+  "maximum_analytic_oracle_power_error_db": 0.0018822896907330462,
+  "C_fixture_result": "passed",
+  "C_fixture_report_sha256": "f3102fe24f0078dc44d992d5cc02f649aa931f71256f31f4101a3f4c025f98f2",
+  "C_files": 530,
+  "C_files_hashes_sha256": "77ad332185930d2775f5a5fa13e489260351e7f758c96013d9136bbc046243df",
+  "source_plot_sha256": "daad506974b33aaec5037a21bb5c1c901244f4c373a38ee21c9676bbf554c17d",
+  "candidate_watch_report_sha256": "aba81954ba58507c758460538949408830a01661eaa325a8494a54b7d17669bf",
+  "candidate_search_report_sha256": "17ba63cb64ce3eb9c87d20f32e4359ffea8836e7400c6b6826b245bf94663d35",
+  "candidates": [
+    {
+      "id": "XZCOsnPYre0",
+      "url": "https://www.youtube.com/watch?v=XZCOsnPYre0",
+      "title": "The Incredible Idle Sound Of The Lamborghini Huracan",
+      "channel": "[Culture Snap]",
+      "seconds": 80,
+      "approved": false,
+      "media_downloaded": false
+    },
+    {
+      "id": "cMuqS9x-Z1Y",
+      "url": "https://www.youtube.com/watch?v=cMuqS9x-Z1Y",
+      "title": "Lamborghini Huracan LP-610 Idling.",
+      "channel": "MillenialDoc",
+      "seconds": 15,
+      "approved": false,
+      "media_downloaded": false
+    },
+    {
+      "id": "QUWTsk9crlo",
+      "url": "https://www.youtube.com/watch?v=QUWTsk9crlo",
+      "title": "Lamborghini Huracan Tecnica (640hp) | 0-280 km/h acceleration🏁 | Automann in 4K",
+      "channel": "Automann-TV",
+      "seconds": 279,
+      "approved": false,
+      "media_downloaded": false
+    }
+  ],
+  "no_new_vehicle_model": true,
+  "no_runtime_change": true,
+  "no_default_change": true,
+  "generic_phase_qualification": "not_passed_unchanged",
+  "idle_acceleration_complete": false,
+  "moving35": "held_unchanged",
+  "original_idle_question": "pending_not_duplicated"
+}

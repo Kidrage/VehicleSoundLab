@@ -1,0 +1,24 @@
+{
+  "schema":"vsl.B-stationary-dna-plan/1",
+  "selection_basis":"New visually selected stationary B intervals; inspected 1s raw Welch before fitting. No reuse of rejected85..88 or219.5..222.5cases.",
+  "cases":[
+    {"id":"before_departure","observation":"park_before_departure","seconds":[132.4,135.4],"initial_root_hz":33.8,"primary_reference":2,"comparison_references":[3,5]},
+    {"id":"after_arrival","observation":"arrival_park","seconds":[800.2,805.2],"initial_root_hz":41.9,"primary_reference":3,"comparison_references":[2,5]}
+  ],
+  "primary_reference":2,
+  "comparison_references":[3,5],
+  "diagnostic_gates":{
+    "maximum_root_relative_p95":0.01,
+    "maximum_shape_difference_db":0.5,
+    "minimum_comparison_references":1,
+    "minimum_nonoverlapping_four_cycle_windows":6,
+    "require_primary_separate_carrier_gate":true
+  },
+  "phase":"One existing two-cycle correction per reference; no alternate interval/window/carrier retries on failure",
+  "limits":[
+    "Local stationary acoustic coordinates, not exact ECU RPM, engine order, thermal or measured load",
+    "Generic dynamic phase qualification remains failed; this local report alone cannot authorize model export",
+    "Independent known stationary fixtures and held-out/source budget checks required before a new profile",
+    "Retain original B raw stereo, separate from A exterior and existing accepted moving35"
+  ]
+}
