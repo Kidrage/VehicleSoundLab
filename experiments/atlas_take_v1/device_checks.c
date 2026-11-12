@@ -34,10 +34,11 @@ static int wait_end(unsigned timeout) {
     while(InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     return !InterlockedCompareExchange(&audio.device.running,0,0);
 }
-static int run(const char *path) {
+static int run(const char *path,AdSceneMode scene_mode) {
     AtTake loaded={0};AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     AdControl c=am_default_control();WoStats recorded={0},played={0},cancelled={0};uint64_t length,hash;int ok=1,stage=0,initialized=0;
     ULONGLONG deadline;FILE *report=NULL;char report_path[16384];
+    config.scene_mode=scene_mode;
     CHECK(rejected_block());
     CHECK(am_models_load(&models,0)&&am_models_bank(&models,&bank));am_audio_init(&audio,&config);initialized=1;
     c.drive.mode=VSL_BENCH;c.drive.ignition=1;c.drive.start_id=1;c.drive.rpm=4000;c.mix.body_mix=.6;c.mix.residual_gain=.5;
@@ -53,6 +54,7 @@ static int run(const char *path) {
     CHECK(wait_end(1000));am_audio_stop(&audio);recorded=wo_stats(&audio.device);
     CHECK(audio.ready&&audio.take.frames==recorded.frames&&recorded.frames==144123&&!recorded.error[0]&&stage==2);
     CHECK(audio.take.audio_hash==recorded.output_hash&&at_take_save(&audio.take,path)&&at_take_load(&loaded,path));
+    CHECK(loaded.assets->config.scene_mode==scene_mode);
     length=audio.take.frames;hash=audio.take.audio_hash;at_take_free(&audio.take);audio.take=loaded;memset(&loaded,0,sizeof loaded);
     memset(&models,0,sizeof models);memset(&bank,0,sizeof bank);
     CHECK(am_audio_replay(&audio,1)&&!am_audio_control(&audio,&c)&&wait_end(10000));am_audio_stop(&audio);played=wo_stats(&audio.device);
@@ -78,5 +80,6 @@ static int run(const char *path) {
 done:if(report&&fclose(report))ok=0;at_take_free(&loaded);if(initialized)am_audio_destroy(&audio);return ok?0:3;
 }
 int wmain(int argc,wchar_t **wide) {
-    char path[16384];if(argc!=2||!WideCharToMultiByte(CP_UTF8,0,wide[1],-1,path,sizeof path,NULL,NULL))return 2;return run(path);
+    char path[16384];if((argc!=2&&argc!=3)||(argc==3&&wcscmp(wide[2],L"--stereo-bed"))||!WideCharToMultiByte(CP_UTF8,0,wide[1],-1,path,sizeof path,NULL,NULL))return 2;
+    return run(path,argc==3?AD_SCENE_STEREO_BED:AD_SCENE_OBJECTS);
 }

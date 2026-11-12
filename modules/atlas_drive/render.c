@@ -16,12 +16,14 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     if (!s||!e||!c||!c->bank||!c->bank->count||c->bank->count>SA_MAX_ANCHORS||!ad_control_valid(p,c->channels)||
         c->profile<0||c->profile>=VSL_PROFILE_COUNT||!isfinite(c->root_per_rpm)||
         c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||
-        (!c->residual_bank&&p->mix.residual_gain>0)) return 0;
+        (!c->residual_bank&&p->mix.residual_gain>0)||
+        (c->scene_mode!=AD_SCENE_OBJECTS&&c->scene_mode!=AD_SCENE_STEREO_BED)) return 0;
     if(c->residual_bank) {
         if(!ra_bank_valid(c->residual_bank)||c->residual_bank->count!=c->bank->count)return 0;
         for(a=0;a<c->bank->count;++a)if(!c->bank->profile[a]||fabs(c->residual_bank->root[a]-c->bank->profile[a]->base_hz)>1e-8)return 0;
     }
     memset(s,0,sizeof *s);
+    if(!sb_layout_init(&s->bed_layout,(unsigned)c->channels))return 0;
     if (!sa_voice_init(&s->dna,c->bank,c->seed,0,p->mix.detail,1)) return 0;
     s->body_band=hb_band_default();
     /* Engineering voicing scale, not a measured structural transfer. */
@@ -54,6 +56,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
     e=s->owner;
     for (n=0;n<frames;++n) {
         double raw[2],body_raw[2],residual_raw[2]={0},residual[2]={0},event,spatial[VSL_MAX_CHANNELS],dry[2],aux[2];
+        double observation[2],bed[VSL_MAX_CHANNELS]={0};
         DsSourceFrame source={0};
         VslObjectFrame objects,residual_objects,body_objects={0},aux_raw,aux_objects;
         int c;
@@ -84,15 +87,17 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if(residual[c]!=0)dry[c]=(source.dna[c]+residual[c]+event)*s->gain;
             if(source.low[c]!=0)dry[c]=(source.dna[c]+source.low[c]+residual[c]+event)*s->gain;
             if(aux[c]!=0)dry[c]+=aux[c]*s->gain;
+            observation[c]=source.dna[c]+source.low[c]+residual[c];
         }
-        {
+        memset(&objects,0,sizeof objects);memset(&residual_objects,0,sizeof residual_objects);
+        if(s->config.scene_mode==AD_SCENE_OBJECTS) {
             DsSourceFrame upper=source;upper.low[0]=upper.low[1]=0;
             ds_route_frame(&upper,s->config.projection,s->config.route,&objects);
             body_objects.sample[VSL_BODY]=s->config.projection==DS_OBSERVE_LEFT?source.low[0]:
                 s->config.projection==DS_OBSERVE_RIGHT?source.low[1]:.5*(source.low[0]+source.low[1]);
             if(body_objects.sample[VSL_BODY]!=0)objects.sample[VSL_BODY]=body_objects.sample[VSL_BODY];
         }
-        {
+        if(s->config.scene_mode==AD_SCENE_OBJECTS) {
             DsSourceFrame separate={0};separate.dna[0]=residual[0];separate.dna[1]=residual[1];
             ds_route_frame(&separate,s->config.projection,s->config.route,&residual_objects);
             for(c=0;c<VSL_OBJECTS;++c)if(residual_objects.sample[c]!=0)objects.sample[c]+=residual_objects.sample[c];
@@ -102,8 +107,11 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
         /* Render spatial once from the same ongoing voice, also in dry mode,
            so switches cannot restart source, delay lines or reflection tails. */
         vsl_scene_tick(e,&objects,spatial,s->config.channels);
+        if(s->config.scene_mode==AD_SCENE_STEREO_BED)
+            sb_route(&s->bed_layout,observation,e->smooth.width,bed);
         for (c=0;c<s->config.channels;++c) {
             double x=spatial[c]*s->gain;
+            if(s->config.scene_mode==AD_SCENE_STEREO_BED)x=(spatial[c]+bed[c])*s->gain;
             if (s->config.channels==2) x=dry[c]+s->spatial_mix*(x-dry[c]);
             out[n*s->config.channels+c]=(float)x;
         }
@@ -116,7 +124,9 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if (cap->body_raw) cap->body_raw[2*n+c]=(float)body_raw[c];
             if (cap->body) cap->body[2*n+c]=(float)source.low[c];
             if (cap->aux) cap->aux[2*n+c]=(float)aux[c];
+            if (cap->observation)cap->observation[2*n+c]=(float)observation[c];
         }
+        if(cap->bed)for(c=0;c<s->config.channels;++c)cap->bed[n*s->config.channels+c]=(float)bed[c];
         if (cap->events) cap->events[n]=(float)event;
         if (cap->objects) for (c=0;c<VSL_OBJECTS;++c) cap->objects[n*VSL_OBJECTS+c]=(float)objects.sample[c];
         if (cap->residual_objects) for(c=0;c<VSL_OBJECTS;++c)cap->residual_objects[n*VSL_OBJECTS+c]=(float)residual_objects.sample[c];

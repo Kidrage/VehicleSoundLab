@@ -84,6 +84,7 @@ static int run(int argc,char **argv) {
         else if (!strcmp(name,"--gain")) control.mix.gain=x;
         else if (!strcmp(name,"--room")) control.mix.room=x;
         else if (!strcmp(name,"--spatial")) { if(x!=0&&x!=1)return 1;control.mix.spatial=(int)x; }
+        else if (!strcmp(name,"--stereo-bed")) { if(x!=0&&x!=1)return 1;config.scene_mode=(AdSceneMode)(int)x; }
         else if (!strcmp(name,"--alignment")) { if(x<0||x>32||x!=floor(x))return 1;align=(unsigned)x; }
         else if (!strcmp(name,"--rpm")) params.rpm=x;
         else if (!strcmp(name,"--load")) params.load=x;

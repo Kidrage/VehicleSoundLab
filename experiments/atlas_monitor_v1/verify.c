@@ -79,7 +79,8 @@ static int finite_run(const char *out,const char *name,int pedals) {
 static int run(int argc,char **argv) {
     AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     WoStats s;AdControl c;ULONGLONG deadline;int ok,equal;
-    if(argc!=2||!am_models_load(&models,0)||!am_models_bank(&models,&bank))return 2;
+    if((argc!=2&&argc!=3)||(argc==3&&strcmp(argv[2],"--stereo-bed"))||!am_models_load(&models,0)||!am_models_bank(&models,&bank))return 2;
+    if(argc==3)config.scene_mode=AD_SCENE_STEREO_BED;
     am_audio_init(&audio,&config);audio.capture_frames=13*48000;audio.capture=calloc(audio.capture_frames*2,sizeof(float));
     if(!audio.capture){am_audio_destroy(&audio);return 2;}
     ok=finite_run(argv[1],"bench",0);ok&=finite_run(argv[1],"pedals",1);

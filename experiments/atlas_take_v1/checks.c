@@ -29,6 +29,7 @@ int main(void) {
         residual.profile[i].band[0]=(SrBand){1200,3000,{.00001,.00002},{.4,.2}};
     }
     residual.count=2;CHECK(sa_bank_init(&bank,p,2,16)&&ra_bank_valid(&residual));
+    config.scene_mode=AD_SCENE_STEREO_BED;
     CHECK(at_take_allocate(&take,32)&&!at_take_allocate(&take,32));
     c.mix.intake_gain=.5;c.mix.mechanical_gain=.4;c.mix.air_gain=.3;c.mix.road_gain=.2;c.mix.wind_gain=.1;
     CHECK(at_take_begin(&take,&config,&c));
@@ -58,11 +59,13 @@ int main(void) {
     CHECK(at_player_init(&player,&other,&take,12));while(!at_player_complete(&player))CHECK(at_player_process(&player,surround,512,NULL)>0);
     CHECK(at_player_verified(&player)&&player.source_hash==source);
     CHECK(at_take_encode(&take,&data,&size)&&at_take_decode(&loaded,data,size));
+    CHECK(loaded.assets->config.scene_mode==AD_SCENE_STEREO_BED);
     CHECK(at_take_encode(&loaded,&data2,&size2)&&size==size2&&!memcmp(data,data2,size));free(data2);data2=NULL;
     saved=loaded.assets;data[100]^=1;CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[100]^=1;
+    data[104]=7;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[104]=1;rehash(data,size);
     CHECK(!at_take_decode(&loaded,data,size-1)&&loaded.assets==saved);
     data[12]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[12]^=1;rehash(data,size);
-    data[8]=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=2;rehash(data,size);
+    data[8]=2;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=3;rehash(data,size);
     data[76]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[76]^=1;rehash(data,size);
     data2=malloc(size+1);CHECK(data2);memcpy(data2,data,size-8);data2[size-8]=0;rehash(data2,size+1);
     CHECK(!at_take_decode(&loaded,data2,size+1)&&loaded.assets==saved);free(data2);

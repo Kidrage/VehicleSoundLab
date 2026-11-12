@@ -194,6 +194,10 @@ def code_rows():
             elif group == "state_passage_v1":
                 layer, owner = "状态片段声源诊断", "state_passage_probe"
                 role = "观察声学Hz轨迹校验／不外推取值" if p.stem == "trajectory" else "复用atlas的独立离线声源／实际音高遥测；不接管驾驶器"
+            elif group == "stereo_bed":
+                layer, owner, role = "观察立体声布局", "stereo_bed", "观察L/R一次宽度与2/12前置声床；不等同缸列或物理对象"
+            elif group == "stereo_bed_v1":
+                layer, owner, role = "立体声声床验证", "VslStereoBed_checks", "解析能量／侧相信号、驾驶与源哈希／分块／布局／对象隔离"
             yield rel, layer, owner, role, digest(p)
 
 

@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增`modules/stereo_bed/route.c/.h`：观察L/R的一次宽度控制与2／12前置声床映射。`atlas_drive`的`AdConfig.scene_mode`0沿用旧对象投影，1保留DNA／互补低频／残差stereo，并只让辅助／事件进入原空间器；`AdCapture.observation/bed`可独立捕获。`atlas_take`／`atlas_take_io`现为schema3／25控制字段并保存模式，旧schema2播放器已冻结。当前448份C/H，见[集成与证据](../research/立体声声床接入V1.md)。
+
 新增独立状态片段诊断：`experiments/state_passage_v1/trajectory.c/.h`负责非实时声学Hz轨迹的读取、验证和不外推取值；`probe.c`调用原`dna_atlas`持续生成并写实际音高遥测。它不进入默认驾驶链、不写驾驶器RPM。新增3份C/H，旧442份身份保留，详见[驻车局部对照](../research/驻车状态局部对照V1.md)与[独立构建说明](../experiments/state_passage_v1/README.md)。
 
 最新[左右声纹／叠加预算](../research/左右声纹与叠加预算V1.md)只新增离线`stereo_field_v1/{model,controls,oracle,components,budget}.py`，不改C接口。细频传递的总误差会掩盖左右平衡回退，新分量族仅D两带通过；A/E独立叠加存在非PSD差额，不能自动加宽。当前`dna_scene::ds_route_frame`明确选左／右／mid为mono，再送排气代理；`atlas_drive`的原始L/R捕获与直送保留双声道，空间12通道分支并非完整stereo声床。后续适配需先定义观测声床／源对象与联合能量预算，保持唯一控制器和一次渲染。442份C/H及认可模型SHA不变，本轮未重编或重跑C测试。

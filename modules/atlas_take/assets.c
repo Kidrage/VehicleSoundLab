@@ -15,7 +15,8 @@ int at_assets_valid(const AtAssets *a) {
         !a->config.seed||a->config.profile<0||a->config.profile>=VSL_PROFILE_COUNT||
         (a->config.channels!=2&&a->config.channels!=12)||!isfinite(a->config.root_per_rpm)||
         a->config.root_per_rpm<=0||a->config.root_per_rpm>.1||
-        !ds_routing_valid(a->config.projection,a->config.route))return 0;
+        !ds_routing_valid(a->config.projection,a->config.route)||
+        (a->config.scene_mode!=AD_SCENE_OBJECTS&&a->config.scene_mode!=AD_SCENE_STEREO_BED))return 0;
     if(a->config.residual_bank) {
         if(a->config.residual_bank!=&a->residual||!ra_bank_valid(&a->residual)||a->residual.count!=a->bank.count)return 0;
         for(i=0;i<a->bank.count;++i)if(fabs(a->residual.root[i]-a->profile[i].base_hz)>1e-8)return 0;
