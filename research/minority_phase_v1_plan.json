@@ -1,0 +1,31 @@
+{
+  "schema": "vsl.minority-phase-plan/1",
+  "scope": "Restricted minority phase departures in the finite-aperture principle study; not a real-source extractor",
+  "base_plan": "research/aperture_model_v1_plan.json",
+  "base_plan_sha256": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+  "departure_knot_cycles": 0.5,
+  "departure_control_bound_radians": 1.0,
+  "maximum_departure_partials": 2,
+  "maximum_normalized_projection_residual": 0.003,
+  "minimum_detection_explained_fraction": 0.2,
+  "minimum_remaining_carriers": 3,
+  "joint_maximum_evaluations": 120,
+  "added_cases": [
+    {"id":"independent_phase_2","phase":true,"amplitude":true,"noise":0.0001,"contaminated_order":2},
+    {"id":"independent_phase_3","phase":true,"amplitude":true,"noise":0.0001,"contaminated_order":3},
+    {"id":"independent_phase_7","phase":true,"amplitude":true,"noise":0.0001,"contaminated_order":7},
+    {"id":"two_independent_partials","phase":true,"amplitude":true,"noise":0.0001,"independent_orders":[2,7]},
+    {"id":"all_independent_partials","phase":true,"amplitude":true,"noise":0.0001,"independent_all":true,"negative":true}
+  ],
+  "policy": [
+    "Preserve all original seven cases and their unchanged error gates; independent_phase_5 remains a required positive",
+    "Choose departures from measured finite-window residual directions, without case labels, true phase or heldout lines",
+    "At most two partials may have a real phase departure; the remaining coherent partials constrain the common phase",
+    "Departure is in radians at the partial; common correction remains in coarse cycles",
+    "Use one common coordinate on original stereo, retaining minority motion rather than erasing it",
+    "No unconstrained complex envelope for every partial and no claim of physical phase identifiability",
+    "Exact original baseline estimates may be reused only after plan, executed source, fixture and actual arrays match",
+    "All33 and individual14kHz audits remain required before the original real E evaluation",
+    "No real recording read, source model export, C/runtime change, media download or new listening"
+  ]
+}

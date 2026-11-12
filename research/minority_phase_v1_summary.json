@@ -1,0 +1,177 @@
+{
+  "schema": "vsl.minority-phase-publication/1",
+  "result": "minority_principle_passed_not_full_qualification",
+  "reports": {
+    "validate1": {
+      "path": "references/analysis/minority_phase_v1/validate1/report.json",
+      "sha256": "bfe0dba621f8b9c6380ec6bae6706fe39eb2d1d6dbf7e669ac23619c026b6c33",
+      "result": "failed"
+    },
+    "validate2": {
+      "path": "references/analysis/minority_phase_v1/validate2/report.json",
+      "sha256": "cc6da17b6e128c07228d110f2f7953b3f3aa375f781be9218400d94a23407662",
+      "result": "passed"
+    },
+    "audit1": {
+      "path": "references/analysis/minority_phase_v1/audit1/report.json",
+      "sha256": "8807192c1b57d34d781eeb1138b20442a48d5444249baa154d2127693c817fc3",
+      "result": "audited_no_fit_rerun"
+    }
+  },
+  "sources": {
+    "tools/package_minority_phase_v1.py": "41a0798b47fd6e10e9c5d4869396ad1cec9d32f086042ae50de372235a2709a1",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "handoff/算法说明.md": "c569f5b4d5d010971ea14cc33feba53d8030837429bfa1d25f13fc6a3f204487",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/audit_minority_phase_v1.py": "51511223a1e0e14b2c78b412bf860a5c8a344c21e368d0abb62a444b03bcf3a6",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "research/少数声线独立相位V1.md": "45c7526629255c47b5783f4b67848c45bbb78f9644068549694df99e159909fd",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "handoff/研究续接.md": "729d443c90b22a02c948b186b00706d65f969b892707a3f28be815422e789e93",
+    "AGENTS.md": "1ec03675daf858d3e0cab037dcaee66fae33531db57c9afb39d959b4ddeff2a6",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "research/怠速与加速完成度V1.md": "91bfc4dd848ad6de3348f19350589a20f01d91389c748dbee2c7b8d272585d2b",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273"
+  },
+  "total_cases": 12,
+  "passed_cases": 12,
+  "positive_cases": 10,
+  "passed_positive_cases": 10,
+  "negative_cases": 2,
+  "correctly_rejected_negative_cases": 2,
+  "exact_reused_baseline_cases": 7,
+  "controls": {
+    "zero_departure_exact": true,
+    "jacobian": [
+      {
+        "parameter": "phase",
+        "relative_error": 1.2109080955162939e-09
+      },
+      {
+        "parameter": "departure",
+        "relative_error": 8.902042526572351e-09
+      },
+      {
+        "parameter": "departure_second",
+        "relative_error": 1.5308028642828513e-08
+      },
+      {
+        "parameter": "amplitude",
+        "relative_error": 1.9933565766412053e-09
+      },
+      {
+        "parameter": "mixed",
+        "relative_error": 4.002337333564829e-09
+      }
+    ],
+    "passed": true
+  },
+  "phase_p95_cycles": {
+    "constant": 0.0,
+    "amplitude_only": 4.308187315513765e-06,
+    "curved_phase": 3.996383022536841e-05,
+    "curved_phase_amplitude": 3.980474161449954e-05,
+    "curved_phase_noise": 4.357044953059264e-05,
+    "independent_phase_5": 4.252287463497238e-05,
+    "independent_phase_2": 4.465719645573967e-05,
+    "independent_phase_3": 4.455538158910303e-05,
+    "independent_phase_7": 4.644865605878555e-05,
+    "two_independent_partials": 5.774335347225396e-05
+  },
+  "selected_orders": {
+    "constant": [],
+    "amplitude_only": [],
+    "curved_phase": [],
+    "curved_phase_amplitude": [],
+    "curved_phase_noise": [],
+    "independent_phase_5": [
+      5.0
+    ],
+    "single_carrier": [],
+    "independent_phase_2": [
+      2.0
+    ],
+    "independent_phase_3": [
+      3.0
+    ],
+    "independent_phase_7": [
+      7.0
+    ],
+    "two_independent_partials": [
+      2.0,
+      7.0
+    ],
+    "all_independent_partials": [
+      3.0,
+      1.4
+    ]
+  },
+  "capped_joint_fits": [
+    {
+      "case": "independent_phase_5",
+      "order": 5.0
+    },
+    {
+      "case": "independent_phase_2",
+      "order": 2.0
+    },
+    {
+      "case": "independent_phase_3",
+      "order": 3.0
+    },
+    {
+      "case": "independent_phase_7",
+      "order": 7.0
+    },
+    {
+      "case": "two_independent_partials",
+      "order": 2.0
+    },
+    {
+      "case": "two_independent_partials",
+      "order": 7.0
+    },
+    {
+      "case": "all_independent_partials",
+      "order": 3.0
+    },
+    {
+      "case": "all_independent_partials",
+      "order": 1.4
+    }
+  ],
+  "source_audio_read": false,
+  "model_exported": false,
+  "real_source_permitted": false,
+  "full33_qualification_replaced": false,
+  "individual14kHz_retention_demonstrated": false,
+  "known_carrier_topology_required": true,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "c02993b93a0107e97ba5478f37ad9c8933db159789ca0c0dcc7d76f1d4d8fa45",
+  "goal_turn_classification": "progress_observation_selected_bounded_minority_phase_model",
+  "next_step": "Infer supported carrier topology from measurements and qualify the same finite-aperture model on all33 plus individual14kHz before the original E case",
+  "limits": [
+    "Known sparse topology and low-band principle do not prove a general or real engine source extractor",
+    "Numerical error gates do not establish optimizer convergence, audible improvement or state coverage",
+    "At most two departure partials; all-independent negative must not be forced into a common clock",
+    "F1/F2/F3 and A-low review questions stay pending; no duplicate requests"
+  ]
+}
