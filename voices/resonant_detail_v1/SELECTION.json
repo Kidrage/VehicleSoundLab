@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.offline-voice-selection/1",
+  "date": "2026-11-12",
+  "profile": "detail.json",
+  "profile_sha256": "2f2f9fc52c369c24ebd7a494c7e88ba0cb719a47c58cf0eabd463b019ddf8589",
+  "preset": "replace_35",
+  "selection_status": "held_moving_context_reference",
+  "rejected_alternatives": ["replace_70", "resonant_detail_v2_midrange_protection"],
+  "feedback": ["research/resonant_detail_v1_listening.json", "research/resonant_detail_v2_listening.json"],
+  "reviewed_scope": "Fixed normalized A exterior moving context at 1x; hold this sound and stop further moving-only tuning for now",
+  "native_C_detail_kernel": "not_ported",
+  "driving_integration": "not_integrated",
+  "idle_acceleration_full_state_timbre_acceptance": false
+}

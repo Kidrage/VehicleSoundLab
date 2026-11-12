@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "date": "2026-11-12",
+  "experiment": "resonant_detail_v1",
+  "user_feedback": "替换35%效果还是可以的，70太难听了，高频完全损失没了，并且中频也很糊",
+  "result": "retain_35_as_working_candidate_reject_70",
+  "accepted_scope": "Relative preference for the offline 35 percent candidate in the reviewed fixed exterior context; not final timbre, native C or full-state acceptance",
+  "actions": [
+    "Preserve original and 35 percent candidate unchanged",
+    "Reject uniform 70 percent as an improvement or default",
+    "Make a paired candidate preserving DNA below 3 kHz, tapering replacement from 3 to 6 kHz, retaining 35 percent above 6 kHz",
+    "Keep the original LF, excitation sequences, fitted resonators, room-off routing and common output gain"
+  ],
+  "causal_limit": "Near-equal band power does not preserve perceived high-frequency detail or midrange definition. Feedback alone does not identify a unique cause."
+}

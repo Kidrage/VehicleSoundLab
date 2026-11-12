@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.resonant-detail-plan/2",
+  "sample_rate": 48000,
+  "seconds": 8,
+  "replacement_maximum": 0.35,
+  "harmonic_transition_hz": [3000,6000],
+  "active_detail_band_indices": [4,5,6,7],
+  "protected_measurement_band_indices": [0,1,2,3],
+  "detail_seeds": [8121907,23117,61927],
+  "DNA_seed": 48271,
+  "output_gain": 0.5,
+  "crop_start_frames": 24000,
+  "checks": {
+    "C_subtraction_maximum_FS_error": 2e-7,
+    "maximum_active_band_power_error_db": 0.5,
+    "maximum_protected_band_change_from_original_db": 0.1,
+    "maximum_output_peak_FS": 0.95
+  },
+  "scope": "One paired offline candidate responding to listening feedback. Preserve harmonic rows <=3k exactly; taper harmonic power replacement with smoothstep3..6k to a maximum35percent. Only existing source-fitted detail filters >=3k are active. Reuse verified generated excitation stems to hold the stochastic realization fixed during the comparison; parameters store no PCM or timeline. Low-band total output may have filter skirts. Engineering audition doses, not source-separated physical fractions. No room, C/live/default/driver/take changes."
+}

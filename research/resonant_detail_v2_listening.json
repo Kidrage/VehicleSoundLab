@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "date": "2026-11-12",
+  "experiment": "resonant_detail_v2",
+  "user_feedback": "仍是上轮35%更好",
+  "followup": "没事，行驶过程的音色就这样了，你怠速情况下，和加速度过程中的音色做好没？是同一套系统做的吗？",
+  "result": "prior35_preferred_v2_not_adopted",
+  "moving_timbre_decision": "Hold the reviewed offline v1 35 percent candidate as the current moving-context reference; stop further moving timbre tuning for now",
+  "acceptance_boundary": "Does not establish native C port, idle, acceleration, full-RPM/load or other-engine acceptance",
+  "actions": [
+    "Preserve v2 evidence and numeric passes; do not promote from those metrics",
+    "Keep v1 35 percent reference, original LF and original default runtime intact",
+    "Answer idle/acceleration coverage from actual C dispatch and model provenance",
+    "Prioritize idle and real loaded acceleration evidence next, using the same driver and generator"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "vsl.resonant-detail-summary/2",
+  "date": "2026-11-12",
+  "result": "offline_candidate_technical_pass_only",
+  "feedback_file": "research/resonant_detail_v1_listening.json",
+  "prior35": "retain_working_candidate_not_final_timbre_acceptance",
+  "prior70": "rejected",
+  "candidate_listening": "prior35_preferred_v2_not_adopted",
+  "latest_feedback_file": "research/resonant_detail_v2_listening.json",
+  "latest_feedback_sha256": "640e98dc0d7f57ed3fbb528af5f0768127ee45859365d5670530411cc7542199",
+  "moving_reference": "hold_offline_v1_35_stop_moving_tuning",
+  "profile_file": "voices/resonant_detail_v2/detail.json",
+  "profile_sha256": "273ba7ea1415736ed6b0ca9aadacd18b201fb33879f746a414eb0b171650cb40",
+  "harmonic_transition_hz": [
+    3000,
+    6000
+  ],
+  "maximum_harmonic_power_reduction": 0.35,
+  "harmonic_rows_below_3k_exact": true,
+  "active_detail_band_indices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "scalar_mask_error": 1.1102230246251565e-16,
+  "C_subtraction_error_FS": 5.5942197711017494e-08,
+  "maximum_active_power_error_db": 0.06323298419116544,
+  "maximum_protected_change_db": 0.006136545336360891,
+  "maximum_peak_FS_common_gain": 0.5436517000198364,
+  "repeat_first_block_left": {
+    "1.2–1.9k": {
+      "original": 0.9115557160971942,
+      "prior35_first_seed": 0.6948263189236322,
+      "protected_three_seed_range": [
+        0.9115557095887621,
+        0.9115557204204051
+      ]
+    },
+    "1.9–3k": {
+      "original": 0.9050977483590031,
+      "prior35_first_seed": 0.6220127136734612,
+      "protected_three_seed_range": [
+        0.9046803752968374,
+        0.9049206177683919
+      ]
+    },
+    "3–6k": {
+      "original": 0.8592643156607327,
+      "prior35_first_seed": 0.5361162454756147,
+      "protected_three_seed_range": [
+        0.741975026442102,
+        0.7478914214691513
+      ]
+    },
+    "6–8k": {
+      "original": 0.790513482361629,
+      "prior35_first_seed": 0.5424121651052016,
+      "protected_three_seed_range": [
+        0.5364162398512808,
+        0.5427919712669397
+      ]
+    }
+  },
+  "excitation_seeds": [
+    8121907,
+    23117,
+    61927
+  ],
+  "excitation_float_samples_exact_v1": true,
+  "inherited_filters": true,
+  "independent_LF_preserved": true,
+  "new_room": false,
+  "C_H_unchanged": 478,
+  "Ctests_not_repeated": 47,
+  "no_native_default_driver_take_changes": true,
+  "manual_browser_interaction": false,
+  "review_URL": "http://127.0.0.1:8789/references/analysis/resonant_detail_v2/review1/index.html",
+  "review_clips": 35,
+  "baseline_files_byte_exact": 25,
+  "HTTP_FFmpeg_JS_pass": true,
+  "source_trajectory_stored": false,
+  "evidence_sha256": {
+    "fit1/report.json": "91a68bd237ddb1425f03d54a7ea2c8adc72b16428f9b54620792c13f0411c3f9",
+    "render1/report.json": "e126192a94a6f8191e3c6ac4e1a4d857970a611cc9ef1d3aed73badd08665065",
+    "review1/report.json": "97f49b908e9a803047980359e55bca7f4c773a82f9a406ae38885aa871775792"
+  },
+  "limits": [
+    "Human35 preference is conditional;70 is rejected despite similar band power",
+    "One engineering taper, not a measured physical noise fraction or independent engine validation",
+    "Same short normalized exterior context; no other state/RPM/engine acceptance",
+    "Band energy and repeat measurements do not establish definition, naturalness or perceived brightness",
+    "Protected harmonic rows are exact; detail bandpass skirts can change the total low-band signal",
+    "3–6k repeat now exceeds the reference while6–8k remains overly periodic; no complete source match claimed"
+  ]
+}
