@@ -1,0 +1,16 @@
+{
+  "schema":"vsl.cabin-low-observation-plan/1",
+  "source":"B",
+  "purpose":"Observe newly inspected stationary cabin and departure passages; separate sound presence, acoustic family and physical state",
+  "segments":[
+    {"id":"park_before_departure","seconds":[124,140],"basis":"B_idle_inspect1 native132/136s frames show P/0mph; following140s frame shows gear1 and movement","perspective":"Cabin stationary-to-departure context; engine/thermal state still to be established acoustically"},
+    {"id":"departure_middle","seconds":[160,176],"basis":"B_idle_inspect1 frames show2/23mph at164,3/35at168,4/39at172/176","perspective":"Cabin road departure with multiple upshifts; not one fixed gear or measured load"},
+    {"id":"arrival_park","seconds":[798,808],"basis":"B_idle_inspect1 shows1/low speed at798, hand at parking controls802, P/0mph and Parking brake applied at806","perspective":"Cabin arrival/parking; ignition/fueling state not inferred from P or zero speed"}
+  ],
+  "observation":{"window_ms":80,"hop_samples":240,"fft_size":16384},
+  "limits":[
+    "Original user MP3 samples; video audio offset about+0.0363s established locally, instrument latency not calibrated",
+    "No fitting or export from this observation stage; new intervals chosen from video, not retries of rejected85..88/219.5..222.5cases",
+    "Cabin perspective distinct from A exterior; no new idle/RPM/load acceptance"
+  ]
+}

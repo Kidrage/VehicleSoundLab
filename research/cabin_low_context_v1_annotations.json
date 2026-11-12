@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.cabin-low-context-annotations/1",
+  "date": "2026-11-12",
+  "inspection": "references/analysis/cabin_low_context_v1/inspect1",
+  "method": "Visually inspected both original-PTS contact sheets; 13 decoded frames; no OCR or enhancement",
+  "observations": [
+    {"source":"E","seconds":[22,30],"observation":"Rear exterior view; car near camera at22/24s, moves farther onto the road at26/28/30s.","use":"Departure context; moving distance, recording transfer and possible Doppler confound stationary timbre extraction."},
+    {"source":"E","seconds":[32,44],"observation":"Mostly empty road and other traffic; target no longer provides a close engine view.","use":"No stable near-source idle or instrument evidence added."},
+    {"source":"E","seconds":[46,46],"observation":"Cabin cluster, Corsa, displayed gear1, speed000, Thrust mode mogelijk caption.","use":"Existing staging context; zero speed does not establish idle, clutch state, pedal or load. Previously inspected adjacent staging frames indicate elevated revs."}
+  ],
+  "decision":"No new confirmed warm-idle or fixed-gear middle/low loaded source identified in this E interval. B raw audio is inspected separately; keep all perspectives separate."
+}

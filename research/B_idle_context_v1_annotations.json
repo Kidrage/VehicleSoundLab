@@ -1,0 +1,20 @@
+{
+  "schema":"vsl.b-idle-context-annotations/1",
+  "date":"2026-11-12",
+  "inspection":"references/analysis/cabin_low_context_v1/B_idle_inspect1",
+  "method":"Visually inspected all5contact sheets/36original-PTS frames plus native132.049/136.053/806.022s frames; no OCR or enhancement",
+  "observations":[
+    {"video_seconds":[100.016583,128.044583],"observation":"Reenters cabin, closes door and handles center console/steering controls; P and0mph visible in multiple frames.","interpretation":"Stationary context with actions; not a single stable idle segment."},
+    {"video_seconds":[132.048583,136.052583],"observation":"Seated in cabin, cluster P and0mph; native frames retain tach scale but do not provide a precise ECU RPM measurement.","interpretation":"Stationary engine-sound candidate to inspect acoustically; no thermal-state, exact RPM, torque or injection claim."},
+    {"video_seconds":[140.056583,176.092583],"observation":"Begins moving in gear1; gear2/23mph at164.081,gear3/35mph at168.085,gear4/39mph at172.089 and176.093; turns and changes viewing direction.","interpretation":"Departure with multiple shifts, not one fixed-gear middle/low acceleration; mph display values are not independently measured speed."},
+    {"video_seconds":[790.005833,806.021833],"observation":"Turns into parking area, gear1 at798.014; hand at controls802.018; native806.022 shows P/0mph and Parking brake applied.","interpretation":"Arrival/parking context. Do not infer ignition, fuel or brake-pedal timestamps from P or parking-brake caption."},
+    {"video_seconds":[810.025833,850.065833],"observation":"Exits and walks around car, key in hand near838; closing logo by846/850.","interpretation":"Exterior changing viewpoint and outro; not continuous cabin idle."}
+  ],
+  "display_change_brackets_video_seconds":[
+    {"from":"P","to":"1","last_old":136.052583,"first_new":140.056583},
+    {"from":"2","to":"3","last_old":164.080583,"first_new":168.084583},
+    {"from":"3","to":"4","last_old":168.084583,"first_new":172.088583}
+  ],
+  "audio_observations":"target_observe1 preserves raw stereo budgets for124..140,160..176,798..808. Multiple broad rises/falls and handling events remain; no engine source, state, phase or load model exported.",
+  "next_step":"Use local state/context boundaries before extraction, qualify the underlying acoustic coordinate, retain separate cabin/exterior parameters and unchanged runtime mappings."
+}

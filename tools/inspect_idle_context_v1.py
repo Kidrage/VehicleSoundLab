@@ -6,12 +6,14 @@ from pathlib import Path
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--workspace',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
 p.add_argument('--plan',type=Path)
+p.add_argument('--seek-ranges',action='store_true',help='Decode each source-time range independently with original PTS; avoids decoding unrelated intervening minutes')
 a=p.parse_args();repo=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(a.workspace/'tools/python_deps'))
 from PIL import Image,ImageDraw,ImageFont
 from drive_evidence_v1.sources import sha
 
 a.out.mkdir(parents=True,exist_ok=False)
+shutil.copy2(__file__,a.out/'executed_inspect.py')
 r=dict(schema='vsl.idle-context-inspection/1',result='running',sources={},source_sha256=sha(Path(__file__)))
 try:
     catalog_path=repo/'references/segments_v1.json'
@@ -30,19 +32,28 @@ try:
         stream=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0',
             '-show_entries','stream=time_base,r_frame_rate,width,height','-of','json',str(video)]))['streams'][0]
         stride=round(float(Fraction(stream['r_frame_rate']))*case['step'])
-        selection='+'.join(f'between(t,{lo},{hi})' for lo,hi in case['ranges'])
-        command=['ffmpeg','-nostdin','-n','-v','info','-to',str(max(v[1] for v in case['ranges'])+.1),
-            '-i',str(video),'-vf',f"select='({selection})*not(mod(n,{stride}))',showinfo",
-            '-fps_mode','vfr',str(output/'frame_%03d.png')]
-        done=subprocess.run(command,capture_output=True,timeout=60)
-        (output/'decode.log').write_bytes(done.stdout+done.stderr);assert done.returncode==0
-        parsed=re.findall(r'\bn:\s*(\d+) pts:\s*(-?\d+) pts_time:([-\d.]+)',done.stderr.decode('utf-8',errors='replace'))
-        rows=[];base=Fraction(stream['time_base'])
-        for number,pts,shown in parsed:
-            file=output/f'frame_{int(number)+1:03d}.png';seconds=float(int(pts)*base)
-            assert abs(seconds-float(shown))<.001
-            rows.append(dict(file=file.name,pts=int(pts),source_seconds=seconds,sha256=sha(file)))
-        assert rows and len(rows)==len(list(output.glob('frame_*.png')))
+        groups=[[interval] for interval in case['ranges']] if a.seek_ranges else [case['ranges']]
+        rows=[];base=Fraction(stream['time_base']);commands=[]
+        for part,ranges in enumerate(groups):
+            selection='+'.join(f'between(t,{lo},{hi})' for lo,hi in ranges)
+            prefix=f'part_{part}_' if a.seek_ranges else ''
+            command=['ffmpeg','-nostdin','-n','-v','info']
+            if a.seek_ranges:command+=['-ss',str(min(v[0] for v in ranges)),'-copyts']
+            command+=['-to',str(max(v[1] for v in ranges)+.1),'-i',str(video),
+                '-vf',f"select='({selection})*not(mod(n,{stride}))',showinfo",
+                '-fps_mode','vfr',str(output/(prefix+'frame_%03d.png'))]
+            commands.append(command)
+            done=subprocess.run(command,capture_output=True,timeout=60)
+            (output/(prefix+'decode.log')).write_bytes(done.stdout+done.stderr);assert done.returncode==0
+            parsed=re.findall(r'\bn:\s*(\d+) pts:\s*(-?\d+) pts_time:([-\d.]+)',done.stderr.decode('utf-8',errors='replace'))
+            part_rows=[]
+            for number,pts,shown in parsed:
+                file=output/f'{prefix}frame_{int(number)+1:03d}.png';seconds=float(int(pts)*base)
+                assert abs(seconds-float(shown))<.001
+                assert any(lo-1e-6<=seconds<=hi+1e-6 for lo,hi in ranges)
+                part_rows.append(dict(file=file.name,pts=int(pts),source_seconds=seconds,sha256=sha(file)))
+            assert part_rows and len(part_rows)==len(list(output.glob(prefix+'frame_*.png')))
+            rows+=part_rows
         boards=[]
         for first in range(0,len(rows),8):
             subset=rows[first:first+8];board=Image.new('RGB',(1280,390*((len(subset)+1)//2)),'#13202a')
@@ -55,7 +66,8 @@ try:
             file=output/f'board_{first//8+1}.jpg';board.save(file,quality=94)
             boards.append(dict(file=file.name,sha256=sha(file)))
         r['sources'][source]=dict(video=str(video),video_sha256=sha(video),approval=entry['approval'],
-            stream=stream,command=command,frames=rows,boards=boards)
+            stream=stream,command=commands[0] if len(commands)==1 else None,
+            commands=commands,seek_ranges=a.seek_ranges,frames=rows,boards=boards)
         print(json.dumps(dict(source=source,frames=len(rows),boards=[v['file'] for v in boards])),flush=True)
     shutil.copy2(__file__,a.out/'executed_inspect.py')
     r.update(result='frames_decoded_not_yet_human_annotated',limits=[

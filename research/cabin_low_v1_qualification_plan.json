@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.cabin-low-qualification-plan/1",
+  "selection_basis": "Viewed original-stereo observation plots from observe1; broad stable and rising passages selected before phase/refinement runs",
+  "cases": [
+    {"id": "steady_middle", "observation": "steady_context", "seconds": [85,88], "initial_root_hz": 41.4},
+    {"id": "rising_middle", "observation": "pull_context", "seconds": [219.5,222.5], "initial_root_hz": 51.6}
+  ],
+  "primary_reference": 5,
+  "comparison_references": [3,7],
+  "phase": "One existing two-cycle refiner per reference and case; no carrier/window/interval retries on rejection",
+  "diagnostic_gates": {
+    "maximum_root_relative_p95": 0.01,
+    "maximum_shape_difference_db": 0.5,
+    "minimum_comparison_references": 1,
+    "minimum_nonoverlapping_four_cycle_windows": 6,
+    "require_primary_separate_carrier_gate": true
+  },
+  "limits": [
+    "Acoustic coordinates only; video and user MP3 synchronization remains separate",
+    "A local pass does not qualify the failed generic phase method or establish physical RPM/load",
+    "This report alone does not permit DNA export or runtime default changes"
+  ]
+}

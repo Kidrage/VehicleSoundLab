@@ -12,6 +12,8 @@ for catalog in ['A_clip_catalog.json','B_clip_catalog.json','v02/context_catalog
     for clip in json.loads((ROOT/'references/analysis'/catalog).read_text(encoding='utf-8')):
         x,sr=sf.read(clip['file'],always_2d=True)
         row=dict(name=clip['name'],source_start=clip['start'],duration=len(x)/sr,bands=[])
+        row['scene_warning']=('Exterior front luggage hood operations; exclude from cabin/engine fitting'
+            if clip['name']=='B_cabin_steady' else 'Legacy state label is not measured pedal/load')
         row['camera_cut_warning']=clip['name'] in ['A_corsa_tailpipe_idle','A_tailpipe_road_pull']
         f,pl=signal.welch(x[:,0],sr,nperseg=4096)
         _,pr=signal.welch(x[:,1],sr,nperseg=4096)
@@ -35,7 +37,7 @@ for catalog in ['A_clip_catalog.json','B_clip_catalog.json','v02/context_catalog
         row['envelope_times_source_seconds']=t;row['relative_band_envelopes_db']=env
         rows.append(row)
 result=dict(scope='Approved A/B; Welch stereo band statistics. Coherence is not source separation or room identification.',
-    observations='A camera position known; microphone unknown. B is local MP3 without video; no visual driving-state claim.',clips=rows)
+    observations='Historical mixed-scene metrics only. B video subsequently inspected: B_cabin_steady84..94s is exterior front-luggage-hood handling. See research/B素材状态纠偏V1.md; do not use it as cabin/engine evidence.',clips=rows)
 (out/'stereo_state_metrics.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
 times=[31,33,35,37,39,208,213,238,243,248,313.5,315,316.5,318,319.5]
 board=Image.new('RGB',(1200,5*250),(20,25,34));draw=ImageDraw.Draw(board)

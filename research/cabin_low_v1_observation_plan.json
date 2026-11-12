@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.cabin-low-observation-plan/1",
+  "source": "B",
+  "purpose": "Locate resolvable low/middle acoustic families in unchanged approved stereo before any phase fitting or DNA export",
+  "segments": [
+    {"id": "steady_context", "seconds": [84,94], "basis": "Previously selected B_cabin_steady interval; legacy processed clip not read"},
+    {"id": "pull_context", "catalog_id": "B_cabin_pull", "use": "interior_channel_observation"},
+    {"id": "release_context", "catalog_id": "B_cabin_release_context", "use": "interior_dynamic_observation"}
+  ],
+  "observation": {"window_ms": 80, "hop_samples": 240, "fft_size": 16384},
+  "limits": [
+    "Audio labels are candidates, not observed gear, pedal, load or ECU RPM",
+    "No phase refinement, model export, gain normalization, filtering or runtime change in this observation stage",
+    "Do not transfer cabin timbre or inferred root-to-RPM mapping to A exterior"
+  ]
+}

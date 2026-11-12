@@ -20,8 +20,10 @@
       "raw_sha256": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
       "master": "references/clean/B_decoded_float.wav",
       "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
-      "video": null,
-      "alignment": "Audio only; no locally inspected video."
+      "video": "references/raw/B_context_720p.mp4",
+      "alignment": "Five4s L/R audio matches: video paired-audio time = local user-MP3 time + 0.036291667s; offset spread 0.020833ms. This does NOT calibrate instrument/video/engine-event latency or every intervening sample.",
+      "video_sha256": "c2c85e26c620b9401791bd0b1ee20cfc1c33e2bb3de7cb76f9c7fffecde4a5cd",
+      "alignment_evidence": "references/analysis/cabin_low_context_v1/align1/report.json"
     },
     "D": {
       "url": "https://www.youtube.com/watch?v=21q_wpc-pVA",
@@ -154,18 +156,22 @@
         218,
         230
       ],
-      "perspective": "cabin binaural, audio only",
-      "visual": null,
-      "audio_interpretation": "candidate dynamic interior passage",
+      "perspective": "cabin binaural, visually inspected road driving",
+      "visual": "Gear4 at218.018s,gear3 at220.020..230.030s; displayed speed falls then rises/falls. Video audio is about36.3ms later than user MP3.",
+      "audio_interpretation": "Mixed downshift and changing-speed cabin context; not one uniform loaded acceleration",
       "allowed_uses": [
-        "interior_channel_observation"
+        "interior_channel_observation",
+        "gear_display_context"
       ],
       "not_established": [
-        "visible state",
+        "pedal/load or injector telemetry",
+        "exact RPM",
+        "independent instrument/engine-event latency",
         "engine banks from L/R",
         "isolated engine field"
       ],
-      "existing_audition": "references/clean/B_cabin_pull.wav"
+      "existing_audition": "references/clean/B_cabin_pull.wav",
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_context_v1_annotations.json"
     },
     "B_cabin_release_context": {
       "source": "B",
@@ -173,17 +179,19 @@
         475,
         485
       ],
-      "perspective": "cabin binaural, audio only",
-      "visual": null,
-      "audio_interpretation": "candidate load/release changes",
+      "perspective": "cabin binaural, visually inspected cornering/gear change",
+      "visual": "Gear1 at476.009s,gear2 at478.011/480.013s, cornering and changing displayed speed",
+      "audio_interpretation": "Mixed upshift/cornering/speed changes; legacy release label is not measured throttle release",
       "allowed_uses": [
-        "interior_dynamic_observation"
+        "interior_dynamic_observation",
+        "gear_display_context"
       ],
       "not_established": [
         "exact release/shift timestamps",
         "pedal position"
       ],
-      "existing_audition": "references/clean/B_cabin_load_release.wav"
+      "existing_audition": "references/clean/B_cabin_load_release.wav",
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_context_v1_annotations.json"
     },
     "D_dyno_gears_context": {
       "source": "D",
@@ -298,6 +306,98 @@
         "continuous unedited audio"
       ],
       "evidence": "references/analysis/state_colour_v2/context_exploration/frames.json"
+    },
+    "B_walkaround_frunk_context": {
+      "source": "B",
+      "seconds": [
+        84,
+        94
+      ],
+      "perspective": "exterior changing viewpoint at front luggage hood",
+      "visual": "Opening/closing front luggage hood; old B_cabin_steady name is incorrect",
+      "allowed_uses": [
+        "scene_context_only",
+        "interference_observation"
+      ],
+      "audio_interpretation": "Mixed scene observation; no source/state model qualified",
+      "not_established": [
+        "engine source isolation",
+        "exact ECU RPM",
+        "pedal/load/fueling",
+        "thermal state",
+        "independent instrument/engine-event latency"
+      ],
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_context_v1_annotations.json",
+      "existing_audition": null
+    },
+    "B_stationary_departure_context": {
+      "source": "B",
+      "seconds": [
+        124,
+        140
+      ],
+      "perspective": "cabin stationary then departure",
+      "visual": "P/0mph at132/136s,gear1 by140s; control actions and acoustic rises/falls",
+      "allowed_uses": [
+        "stationary_context",
+        "interior_dynamic_observation"
+      ],
+      "audio_interpretation": "Mixed scene observation; no source/state model qualified",
+      "not_established": [
+        "engine source isolation",
+        "exact ECU RPM",
+        "pedal/load/fueling",
+        "thermal state",
+        "independent instrument/engine-event latency"
+      ],
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_idle_context_v1_annotations.json",
+      "existing_audition": null
+    },
+    "B_departure_gears_context": {
+      "source": "B",
+      "seconds": [
+        160,
+        176
+      ],
+      "perspective": "cabin road departure",
+      "visual": "Gear2/23mph at164s,gear3/35mph at168s,gear4/39mph at172/176s",
+      "allowed_uses": [
+        "gear_display_context",
+        "interior_dynamic_observation"
+      ],
+      "audio_interpretation": "Mixed scene observation; no source/state model qualified",
+      "not_established": [
+        "engine source isolation",
+        "exact ECU RPM",
+        "pedal/load/fueling",
+        "thermal state",
+        "independent instrument/engine-event latency"
+      ],
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_idle_context_v1_annotations.json",
+      "existing_audition": null
+    },
+    "B_arrival_parking_context": {
+      "source": "B",
+      "seconds": [
+        798,
+        808
+      ],
+      "perspective": "cabin arrival/parking",
+      "visual": "Gear1 at798s,hand at controls802s,P/0mph and Parking brake applied at806s",
+      "allowed_uses": [
+        "parking_context",
+        "interior_dynamic_observation"
+      ],
+      "audio_interpretation": "Mixed scene observation; no source/state model qualified",
+      "not_established": [
+        "engine source isolation",
+        "exact ECU RPM",
+        "pedal/load/fueling",
+        "thermal state",
+        "independent instrument/engine-event latency"
+      ],
+      "evidence": "references/analysis/cabin_low_context_v1/final1/exact_sources/research/B_idle_context_v1_annotations.json",
+      "existing_audition": null
     }
   },
   "superseded_for_calibration": [

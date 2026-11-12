@@ -1,3 +1,8 @@
+"""Historical processed clips; B_cabin_steady is a superseded exterior/frunk label.
+
+Use unchanged masters and references/segments_v1.json for new engine fitting.
+See research/B素材状态纠偏V1.md; names below remain only for archive compatibility.
+"""
 import sys
 import subprocess
 import json
@@ -18,7 +23,12 @@ for name,start,duration in clips:
     m=measure(x,sr)
     m.update(left=measure(x[:,:1],sr),right=measure(x[:,1:],sr),
         correlation=float(np.corrcoef(x.T)[0,1]),
-        context='B user-provided binaural POV source; stereo preserved. Motion labels inferred from spectral changes, not CAN.')
+        context=('Exterior front luggage hood opening/closing; NOT cabin steady or qualified engine evidence.'
+            if name=='B_cabin_steady' else
+            'B cabin driving contains gear changes; legacy filename is not measured pedal/load or a uniform operating state.'),
+        context_evidence='research/B_context_v1_annotations.json',
+        engine_fit_qualified=False,
+        historical_filename_retained=True)
     path.with_suffix('.analysis.json').write_text(json.dumps(m,indent=2),encoding='utf-8')
     catalog.append(dict(name=name,start=start,duration=duration,file=str(path),metrics=m))
     print(name,'centroid',round(m['centroid_hz'],1),'rms',round(m['rms_dbfs'],2),'correlation',round(m['correlation'],3))

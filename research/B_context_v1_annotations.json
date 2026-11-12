@@ -1,0 +1,15 @@
+{
+  "schema":"vsl.b-context-annotations/1",
+  "date":"2026-11-12",
+  "inspection":"references/analysis/cabin_low_context_v1/B_inspect2",
+  "method":"Visually inspected all8contact sheets/64original-PTS frames and native10.010s/222.022s frames; no OCR or enhancement",
+  "audio_relation":"Five audio-to-audio matches give video audio time = user MP3 time + about0.0363s. Instrument/scene-to-audio latency remains uncalibrated.",
+  "observations":[
+    {"video_seconds":[4.004,18.018],"observation":"Seated in cabin, hand near start controls and drive-mode selector; cluster P and0mph. Warning indicators visible; tach partly cropped at10.010s.","interpretation":"Do not identify successful engine start or stable idle from these frames alone."},
+    {"video_seconds":[20.020,98.098],"observation":"Driver exits; walks around car, opens/closes rear engine cover, returns to front and opens/closes front luggage hood.","interpretation":"Changing exterior/head-mounted observation; not a continuous cabin recording."},
+    {"video_seconds":[84.084,94.094],"observation":"Outside at front luggage hood; hood open at86/88s, held at90s and pushed closed at92s.","interpretation":"Legacy B_cabin_steady label is incorrect. Exclude84..94s from cabin/engine DNA, idle, RPM/load and mechanical-detail fitting. Broadband events cannot be labeled engine transients."},
+    {"video_seconds":[216.0158,230.0298],"observation":"Cabin road driving. Gear4 at216.0158/218.0178s; gear3 at220.0198..230.0298s. Visible speed changes from83to73 before downshift, then67/76/82/69/64/73 at220/222/224/226/228/230s; native222s unitmph.","interpretation":"Mixed deceleration/downshift/speed rise/fall context, not one fixed-gear acceleration. No pedal, torque/load, fuel or exact RPM claim; displayed speed is not independent vehicle telemetry."},
+    {"video_seconds":[474.006867,484.016867],"observation":"Cabin cornering; gear1 at474/476s and gear2 at478/480s, later gear partly occluded. Displayed speed37at476,50at478,39at480,27at482/484.","interpretation":"Contains an upshift and cornering/speed changes. Legacy load_release label is only an audio candidate, not measured throttle release."}
+  ],
+  "decision":"Keep B driving observations separate from its walkaround; qualify engine-state evidence per interval. Preserve historical files but do not promote legacy names into physical states. No runtime or model changes."
+}

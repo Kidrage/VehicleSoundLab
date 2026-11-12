@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.b-audio-alignment-plan/1",
+  "template_starts_seconds":[20,84,218,475,800],
+  "template_seconds":4,
+  "search_half_width_seconds":2,
+  "filter_hz":[60,8000],
+  "minimum_ncc":0.85,
+  "minimum_peak_margin_outside_5ms":0.02,
+  "maximum_channel_offset_difference_ms":1,
+  "maximum_cross_window_offset_range_ms":2,
+  "rule":"Locate the existing user MP3 in the newly retrieved same-source audio, independently per L/R; do not alter either waveform or assume video/ECU latency",
+  "on_failure":"Preserve measurements; no automatic audio shift, time stretch, retry-window search or state transfer"
+}
