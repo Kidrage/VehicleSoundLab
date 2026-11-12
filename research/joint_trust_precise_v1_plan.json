@@ -1,0 +1,25 @@
+{
+  "schema": "vsl.joint-trust-precise-plan/1",
+  "parent_plan": "research/joint_trust_v1_plan.json",
+  "diagnostic_case": "unknown_thirty_six",
+  "maximum_iterations": 20,
+  "initial_radius": 0.1,
+  "maximum_radius": 2.0,
+  "minimum_radius": 1e-8,
+  "acceptance_ratio": 0.1,
+  "projection_iterations": 400,
+  "projection_tolerance": 1e-10,
+  "qp_iterations": 3000,
+  "qp_kkt_tolerance": 1e-8,
+  "osqp_eps_abs": 1e-10,
+  "osqp_eps_rel": 1e-9,
+  "osqp_max_iterations": 100000,
+  "policy": [
+    "Same observed initialization, model, trust-region budget and original error gates as joint_trust_v1",
+    "Use an independent sparse convex QP solver with an objective normalized by the observed gradient, rather than a unit-floored stationarity scale",
+    "Store native certificates plus independent primal/stationarity reconstruction; no latent-phase guarantee from QP convergence",
+    "Exact cone retraction handles numerical QP feasibility before checking original bounds and trust region",
+    "Save every candidate outer phase and absolute amplitude vector for independent replay",
+    "Keep first custom-QP failure, its exact executed sources, and all qualification requirements; no real source/C/runtime/audio changes"
+  ]
+}

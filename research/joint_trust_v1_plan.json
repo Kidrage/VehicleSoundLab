@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.joint-trust-plan/1",
+  "parent_plan": "research/absolute_amplitude_v1_plan.json",
+  "diagnostic_case": "unknown_thirty_six",
+  "maximum_iterations": 20,
+  "initial_radius": 0.1,
+  "maximum_radius": 2.0,
+  "minimum_radius": 1e-8,
+  "acceptance_ratio": 0.1,
+  "projection_iterations": 400,
+  "projection_tolerance": 1e-10,
+  "qp_iterations": 3000,
+  "qp_kkt_tolerance": 1e-8,
+  "policy": [
+    "Use only observed data and the previous actual parameters, no analytic phase/amplitude/heldout initialization",
+    "Preserve original positive finite-band model, common/minority phase freedom, coefficient box and all qualification gates",
+    "Solve joint Gauss-Newton subproblems inside the amplitude cone, original phase bounds and a scaled infinity trust region",
+    "Linearize Cartesian coefficient boxes in the subproblem; exact feasible amplitude retraction and actual objective determine acceptance",
+    "Dykstra projection retains feasibility and a projection dual-gap diagnostic; independent SLSQP controls are mandatory",
+    "Save inexact or capped subproblems and failed attempts; no global convergence or new vehicle-timbre claim",
+    "No new real audio/model/C/runtime/render/media/listening before original17/full33/individual14kHz qualification"
+  ]
+}
