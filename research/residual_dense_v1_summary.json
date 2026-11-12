@@ -1,0 +1,466 @@
+{
+  "schema": "vsl.residual-dense-summary/1",
+  "date": "2026-11-12",
+  "result": "isolated_C_experiment_only",
+  "attempts": [
+    {
+      "folder": "build1",
+      "result": "pass"
+    },
+    {
+      "folder": "run1",
+      "result": "technical_pass_only"
+    },
+    {
+      "folder": "envelope1",
+      "result": "pass"
+    },
+    {
+      "folder": "review1",
+      "result": "pass"
+    }
+  ],
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1",
+  "c_h_count": 442,
+  "c_index_sha256": "424b3d3680b6d8dd8faf60e3d1b06d8c72ec3df74422997fdf3656423255fb6a",
+  "prior436_C_sources_and_ownership_unchanged": true,
+  "new_C_H_count": 6,
+  "default_ctests": 40,
+  "standalone_ctests": 1,
+  "old32_three_seed_samples_and_contract_state_exact": true,
+  "maximum_direct_sum_error_FS": 2.9707725834882126e-08,
+  "maximum_known_power_error_db": 0.3106600696400411,
+  "maximum_known_complex_coherence_error": 0.002550091123295726,
+  "maximum_mixed_power_error_db": 0.24792904468348673,
+  "maximum_mixed_complex_coherence_error": 3.5618636838853116e-08,
+  "envelope_control_maximum_cv_error": 1.7655321649101552e-12,
+  "densities": [
+    {
+      "peak": 32,
+      "counts": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "allocated_carriers": 512,
+      "high_16cycle_3bin_concentration_L_range": [
+        0.6530447203482662,
+        0.6781604394797727
+      ],
+      "high_cloud_power_cv_L_range": [
+        0.013001038862107546,
+        0.014250149126166244
+      ],
+      "high_cloud_modulation_peak_hz_L": [
+        32.5327699206623,
+        34.085029320455334,
+        30.72180062090376
+      ]
+    },
+    {
+      "peak": 64,
+      "counts": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        39,
+        64
+      ],
+      "allocated_carriers": 590,
+      "high_16cycle_3bin_concentration_L_range": [
+        0.5494758666672994,
+        0.560286182462587
+      ],
+      "high_cloud_power_cv_L_range": [
+        0.0806452171372094,
+        0.08795465587292146
+      ],
+      "high_cloud_modulation_peak_hz_L": [
+        26.00034494653329,
+        30.52776819592963,
+        29.622283546050365
+      ]
+    },
+    {
+      "peak": 128,
+      "counts": [
+        32,
+        32,
+        32,
+        39,
+        52,
+        64,
+        77,
+        128
+      ],
+      "allocated_carriers": 912,
+      "high_16cycle_3bin_concentration_L_range": [
+        0.5389068163191141,
+        0.546284264299389
+      ],
+      "high_cloud_power_cv_L_range": [
+        0.11479089348000496,
+        0.12449305604389121
+      ],
+      "high_cloud_modulation_peak_hz_L": [
+        15.91065884787858,
+        14.358399448085548,
+        15.393239047947569
+      ]
+    },
+    {
+      "peak": 256,
+      "counts": [
+        39,
+        52,
+        64,
+        77,
+        103,
+        128,
+        154,
+        256
+      ],
+      "allocated_carriers": 1746,
+      "high_16cycle_3bin_concentration_L_range": [
+        0.5369201060418592,
+        0.5405447465314183
+      ],
+      "high_cloud_power_cv_L_range": [
+        0.1326371449646961,
+        0.1370304799945955
+      ],
+      "high_cloud_modulation_peak_hz_L": [
+        7.049844774060021,
+        7.567264573991032,
+        15.069851672990687
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "block": 240,
+      "peak": 0,
+      "carriers": 512,
+      "voice_bytes": 65600,
+      "paired_process_ratio_to_legacy_median": 1.0,
+      "paired_process_ratio_range": [
+        1.0,
+        1.0
+      ],
+      "block_median_ms": 0.2034,
+      "maximum_ms": 0.6624,
+      "overruns": 0
+    },
+    {
+      "block": 240,
+      "peak": 32,
+      "carriers": 512,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.0035000911876597,
+      "paired_process_ratio_range": [
+        0.9896179082551844,
+        1.0185775137547433
+      ],
+      "block_median_ms": 0.2023,
+      "maximum_ms": 0.6994,
+      "overruns": 0
+    },
+    {
+      "block": 240,
+      "peak": 64,
+      "carriers": 590,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.1664784113681905,
+      "paired_process_ratio_range": [
+        1.154843055258556,
+        1.176180229083813
+      ],
+      "block_median_ms": 0.2357,
+      "maximum_ms": 0.8821,
+      "overruns": 0
+    },
+    {
+      "block": 240,
+      "peak": 128,
+      "carriers": 912,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.8478208943138807,
+      "paired_process_ratio_range": [
+        1.8436984289124867,
+        1.8512941946964312
+      ],
+      "block_median_ms": 0.3749,
+      "maximum_ms": 1.2936,
+      "overruns": 0
+    },
+    {
+      "block": 240,
+      "peak": 256,
+      "carriers": 1746,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 3.5975372922567437,
+      "paired_process_ratio_range": [
+        3.590136694745912,
+        4.159353666901197
+      ],
+      "block_median_ms": 0.7363,
+      "maximum_ms": 1.6171,
+      "overruns": 0
+    },
+    {
+      "block": 512,
+      "peak": 0,
+      "carriers": 512,
+      "voice_bytes": 65600,
+      "paired_process_ratio_to_legacy_median": 1.0,
+      "paired_process_ratio_range": [
+        1.0,
+        1.0
+      ],
+      "block_median_ms": 0.447,
+      "maximum_ms": 1.2329,
+      "overruns": 0
+    },
+    {
+      "block": 512,
+      "peak": 32,
+      "carriers": 512,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.011880316640569,
+      "paired_process_ratio_range": [
+        0.9997651853630249,
+        1.0156363632218595
+      ],
+      "block_median_ms": 0.4438,
+      "maximum_ms": 0.9857,
+      "overruns": 0
+    },
+    {
+      "block": 512,
+      "peak": 64,
+      "carriers": 590,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.1594163011717307,
+      "paired_process_ratio_range": [
+        1.1395352031425963,
+        1.1769932587241032
+      ],
+      "block_median_ms": 0.5007,
+      "maximum_ms": 1.16,
+      "overruns": 0
+    },
+    {
+      "block": 512,
+      "peak": 128,
+      "carriers": 912,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 1.8405473933232985,
+      "paired_process_ratio_range": [
+        1.812842805995842,
+        1.8470098554398666
+      ],
+      "block_median_ms": 0.8039,
+      "maximum_ms": 1.5705,
+      "overruns": 0
+    },
+    {
+      "block": 512,
+      "peak": 256,
+      "carriers": 1746,
+      "voice_bytes": 524352,
+      "paired_process_ratio_to_legacy_median": 3.6074842524980517,
+      "paired_process_ratio_range": [
+        3.5218508776749187,
+        3.611596095401495
+      ],
+      "block_median_ms": 1.5848,
+      "maximum_ms": 2.5122,
+      "overruns": 0
+    }
+  ],
+  "review_url": "http://127.0.0.1:8789/research/%E8%BD%BD%E6%B3%A2%E5%AF%86%E5%BA%A6%E5%AF%B9%E7%85%A7V1.html",
+  "review_audio_count": 9,
+  "review_maximum_peak": 0.5400360822677612,
+  "browser_interaction_checked": false,
+  "default_models_changed": false,
+  "driver_changes": false,
+  "old_binaries_rebuilt": false,
+  "human_accepted": false,
+  "current_source_sha256": {
+    "modules/residual_dense/carrier.c": "f58ef4820fd7e5baf7bde1900c6a9fcddf1f73bbb51ef1bf7d21a2ccb728f6e1",
+    "modules/residual_dense/carrier.h": "ef181e7811288911d72ff2df878674e9228c94863e40da2797f355a0a648a6f0",
+    "modules/residual_dense/CMakeLists.txt": "25933940d30545595c365540b19d98ab126a81132b3d973139759c2374263c98",
+    "modules/residual_dense/README.md": "7e7d5bc01cb45f09d31390fd0410e2ef5d0f161bc7c2375c61a1d1cc0b96497a",
+    "modules/residual_dense/voice.c": "f97d8b413c157e3aaabeb6aa2f754bbec211b8a2c16baf42a99ec02e782ef215",
+    "modules/residual_dense/voice.h": "c8b4aa710e0e80c8dcd60b319e836d22eae1f0e6748cf1a010f55552c37de2f1",
+    "experiments/residual_dense_v1/checks.c": "ce5012f55721dfb2683410784be9d97ebcb13e7d3e1b48325e6416f359541345",
+    "experiments/residual_dense_v1/CMakeLists.txt": "ff5b00661667a86491ea7d315fc230b5692d715d4151d11a80d517e900746016",
+    "experiments/residual_dense_v1/probe.c": "f8a51fe7c5bf96091c6997416617bed4fdf7e415eecd2aafce5f1f0cd9e4c223",
+    "experiments/residual_dense_v1/README.md": "19b3f6c06c3b02ddbdb9772e238e0e279d125ca3ca32a8b3c4bd48c576d533d6",
+    "tools/residual_dense_v1/envelope.py": "954bab8e24ffb5a081a06ac758f53bf1368a0f121b5068b3c857c5641d9860cc",
+    "tools/residual_dense_v1/oracle.py": "1aac51a345ecc75517103242890b70e72275a9bd79967a3b3d33ada28c1ca8c4",
+    "tools/build_residual_dense_v1.py": "4f7cfb039552e4ba851c5b7b5ca480c8bbd505a85516148ba3b0d24b503cd502",
+    "tools/run_residual_dense_v1.py": "144b345109536f689db836dcbe5a04442a698d57d3b60fcfd3542fb883420f8e",
+    "tools/check_residual_dense_envelope_v1.py": "6c81d83e36540391a13856d7567762e8b118b58d0f933a4c1f7bbb5aa43d3718",
+    "tools/review_residual_dense_v1.py": "92bcf3593a94c454540ec1c3e3d22b0276efcecb8df91b7e92edde1e6417901e",
+    "tools/finalize_residual_dense_v1.py": "134be6b1b47a455eddd420984e9a95f50eedb366390378b7c8f0e3fe8615372e",
+    "tools/freeze_residual_dense_v1.py": "b60309876ef792acaf2c97a17d5efc067c34de169243a29cbfc3fa8799616f4f",
+    "research/residual_dense_v1_plan.json": "2e42530f0c610da6008114271501a8b4fde300fd9e0732a73a6d2050793c234a",
+    "handoff/tools/index_sources.py": "690572d0d573de867fec904c4396f751f95640f4e0f8339e86c1e5099ccdc343"
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\build1\\report.json": "32ec4bba3fba6ed7f68ddb11b666081ed488502deb667281614b7842cc83c6c6",
+    "E:\\VehicleSoundLab\\build-residual-dense-v1\\Release\\residual_dense_probe.exe": "9e1b2ebfce0f100258a910e03a1132e8b66fca39c74988b3e25f7a3b8f38ce91",
+    "E:\\VehicleSoundLab-Git\\voices\\line_density_v1\\V10 A Density 50.residual": "c29fafd6d3c5cc2d970b7fa0384784efd15e788362cf5b7b05993c000f4cc360",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_dna.wav": "b28ab25e95c53c3706611c3e06bc223ac44a799d6738268c973c8fd52f46bc26",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\manifest.json": "ab2af360cf78a9a5ac059a9f35a0ba9c1decfaeeffe87ee1dca48b5320167193",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\evidence\\raw\\measured.wav": "89106297fdd49d812dd96b16998e34d3a912770c579dc6e938a97ad5af120686",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\manifest.json": "c9e53c8ce0201cae9edf99e4f2cea83c69938a5ad55da10c86e5614eb40b2b46",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\reference.wav": "31d8632b6f9305402e74cf29e682ecf55fc1b89be20b9b87e5dd529096f308c5",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\manifest.json": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_8121907_cloud.wav": "f768af3d20613b39a17e3bc613ca3ce433adc8b89ad4b430cad8b9e456d8a195",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_8121907_mix.wav": "742887c61ba5b2358858863be6b44e225e963924011a6d60603e7ee4e3f46275",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_23117_cloud.wav": "4f77fa612a610e401216e85f1bd1113cb41f5ea8f99ba35c7d01a001ac0054f3",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_23117_mix.wav": "d3983758dd35cc4548a84f21cf5a59ef227c55fe2f0301af1660f34d391e9dea",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_61927_cloud.wav": "a1b39e7821352a473029be26488c6e18eee8a4b075ab3d3d99a3f393e2d63032",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\density_50_61927_mix.wav": "56adceda9dcc6d463f440326caa52a1e15d51a58275536525a8fffe81339bcea",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\report.json": "13c73ea0a2e60783b3eb763746823021fdc50224b3e5741e2bcd39e63653fa5f",
+    "E:\\VehicleSoundLab\\baselines\\line_density_v1\\evidence\\render1\\raw\\accepted.wav": "fe1ed192e7e4a560f41674132f3682310ba50f670cc226206c400bbdf20fe371",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\mix_32_8121907.wav": "d46d0649078acd9b9f36c0de7195b6ed01d98f63c2d50b463263cece5ff6e6c9",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\cloud_32_8121907.wav": "f768af3d20613b39a17e3bc613ca3ce433adc8b89ad4b430cad8b9e456d8a195",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\mix_64_8121907.wav": "2fa30bfbacbaccc6ec9152e93d560d932a26dbdbf6f7d58a0e6468609aa1f4fa",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\cloud_64_8121907.wav": "11836f2053fa92ef75bbfda166b8306e20f01c862ae497a7be54c2cfb5d0cba4",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\mix_128_8121907.wav": "8183975b62f6e6c42d85c9777f25f8cf4e699241e464dace1bbeef9dd0ff1021",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\cloud_128_8121907.wav": "ff428be872d840055a4d8c105933d2016d181a81363abef424e3e4d647f02f57",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\mix_256_8121907.wav": "aeb7196ff170a9bf0067f400d7310529653288515b2a3d39f1d3487e275f888d",
+    "E:\\VehicleSoundLab\\references\\analysis\\residual_dense_v1\\run1\\raw\\cloud_256_8121907.wav": "1638a53ff3d5acec4d75cabfbbe975b6db3e3aaa17175225889384671ee95222"
+  },
+  "evidence_sha256": {
+    "build1/command_0.log": "8fa4af864c30a8a4220366dfc831545c37235567519bbcc4fc5229b33a7fdcde",
+    "build1/command_1.log": "b24ca72cdea4bbb2492076d62ee63c61c4d2dc90ae92c9a9eed416a414c8ac95",
+    "build1/command_2.log": "682c6921dd216a47b92b78ff0a7da12dd77c0ca9b8a036e112d9b2b593c5e93b",
+    "build1/command_3.log": "b9b6fef09b902b8cb23d33e493732ad507fe0669c6ffd5d9439581e1b0c83a15",
+    "build1/exact_sources/experiments/residual_dense_v1/checks.c": "ce5012f55721dfb2683410784be9d97ebcb13e7d3e1b48325e6416f359541345",
+    "build1/exact_sources/experiments/residual_dense_v1/CMakeLists.txt": "ff5b00661667a86491ea7d315fc230b5692d715d4151d11a80d517e900746016",
+    "build1/exact_sources/experiments/residual_dense_v1/probe.c": "f8a51fe7c5bf96091c6997416617bed4fdf7e415eecd2aafce5f1f0cd9e4c223",
+    "build1/exact_sources/modules/residual_dense/carrier.c": "f58ef4820fd7e5baf7bde1900c6a9fcddf1f73bbb51ef1bf7d21a2ccb728f6e1",
+    "build1/exact_sources/modules/residual_dense/carrier.h": "ef181e7811288911d72ff2df878674e9228c94863e40da2797f355a0a648a6f0",
+    "build1/exact_sources/modules/residual_dense/CMakeLists.txt": "25933940d30545595c365540b19d98ab126a81132b3d973139759c2374263c98",
+    "build1/exact_sources/modules/residual_dense/voice.c": "f97d8b413c157e3aaabeb6aa2f754bbec211b8a2c16baf42a99ec02e782ef215",
+    "build1/exact_sources/modules/residual_dense/voice.h": "c8b4aa710e0e80c8dcd60b319e836d22eae1f0e6748cf1a010f55552c37de2f1",
+    "build1/exact_sources/modules/sound_residual/CMakeLists.txt": "e91293b752154b897a8bf33331fa04cb4ae4097a7f569edb8440f611181cd6ef",
+    "build1/exact_sources/modules/sound_residual/oscillator.c": "6d8f476b29cd921497b5d3b3553a0ea45f2146c68e584baa3888ff88c90b6910",
+    "build1/exact_sources/modules/sound_residual/oscillator.h": "86f943ad7adbe573029fbe42ef94eb3bf9ba4bee8a254e6fdf2ec3039b2a4394",
+    "build1/exact_sources/modules/sound_residual/profile.c": "5f65961250764ab7f921031b13c721d350e08fd20242cbde4eaa63931f4b976b",
+    "build1/exact_sources/modules/sound_residual/profile.h": "d017388c47452c9a8ce07f550605f8f5521b4c8912e75ff6e30ab9e1bfa97ccb",
+    "build1/exact_sources/modules/sound_residual/README.md": "8794f5064159ddb44fdd85c26c4ad27087d58ca7b9361371bb1f9446c699e368",
+    "build1/exact_sources/modules/sound_residual/voice.c": "29a072018d63100c9d87c6dc5657199f54de7baf0643964be6e50076eae91c39",
+    "build1/exact_sources/modules/sound_residual/voice.h": "305b657f824f689c686264b31fd7a1ac78e00cc707b5df8bcc8221003b0faf4f",
+    "build1/exact_sources/research/residual_dense_v1_plan.json": "2e42530f0c610da6008114271501a8b4fde300fd9e0732a73a6d2050793c234a",
+    "build1/exact_sources/src/io/file.c": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8",
+    "build1/exact_sources/src/io/file.h": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477",
+    "build1/exact_sources/src/io/wav.c": "bdf21adcc64635f8862043dd156c18fa270a18f58f173701fe8bb53d25ce3be0",
+    "build1/exact_sources/src/io/wav.h": "0b70d11d0d5586168642e39beb102db1236d0dca96ae28ff3d2a675c6f722406",
+    "build1/exact_sources/tools/build_residual_dense_v1.py": "4f7cfb039552e4ba851c5b7b5ca480c8bbd505a85516148ba3b0d24b503cd502",
+    "build1/metadata.json": "e403c2a12b6672262ec1b582736b1756f72f77d903d2cb4c54edfa23a67bad8d",
+    "build1/report.json": "32ec4bba3fba6ed7f68ddb11b666081ed488502deb667281614b7842cc83c6c6",
+    "envelope1/exact_sources/tools/check_residual_dense_envelope_v1.py": "6c81d83e36540391a13856d7567762e8b118b58d0f933a4c1f7bbb5aa43d3718",
+    "envelope1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "envelope1/exact_sources/tools/residual_dense_v1/envelope.py": "954bab8e24ffb5a081a06ac758f53bf1368a0f121b5068b3c857c5641d9860cc",
+    "envelope1/report.json": "0971a8187f95cfb095166b958918314f9a5d958b0dc6da44c9de56e96e436dbc",
+    "review1/audition/accepted.wav": "e30a4c49556a48f3584b4af78cbacdd42afc691a15f5d3de1a8eebd2c6b52580",
+    "review1/audition/cloud_128.wav": "41b9971ccec464aca75f797d5647d66cdfc4e88b093022f82572872f43d584c3",
+    "review1/audition/cloud_256.wav": "87e6109ab135737af186f112c14f2be37dfddecac8438ac04580c761b70bacda",
+    "review1/audition/cloud_32.wav": "f2d8ad630fdba675593e171786c0c7b76e7c1c3c396cbb7e1de777112bbde619",
+    "review1/audition/cloud_64.wav": "b715425e37769ed91b8febc33e180252b5a2e1e5015479fc1d26f20032677b3d",
+    "review1/audition/mix_128.wav": "d7c17acee8403183fd5e32a3ccdc64368883f08584d0f8a1ab2e9ecb6bd9eb4e",
+    "review1/audition/mix_256.wav": "328cc2c72f43d8df036ee289145fa62e86777dc4c515a21df41ba10404330a4e",
+    "review1/audition/mix_32.wav": "610b03c7ae065a3b54323d68ae1802607a7040353ead5d9d394a789c96d25a1e",
+    "review1/audition/mix_64.wav": "c93eb633fca9017fbc83c7605ad7e540576556f8d0de51c27f8ad5d16d14026f",
+    "review1/exact_sources/research/residual_dense_v1_plan.json": "2e42530f0c610da6008114271501a8b4fde300fd9e0732a73a6d2050793c234a",
+    "review1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "review1/exact_sources/tools/review_residual_dense_v1.py": "92bcf3593a94c454540ec1c3e3d22b0276efcecb8df91b7e92edde1e6417901e",
+    "review1/page.html": "5128685052252260d46e5f6ed4b84ca5a7349ad8f67d095e843e7b7d89844d42",
+    "review1/report.json": "d4ed44d4919f627c8d66d758f3373b04888b0b97b0387311cbb8b94c00cf2768",
+    "run1/exact_sources/experiments/residual_dense_v1/checks.c": "ce5012f55721dfb2683410784be9d97ebcb13e7d3e1b48325e6416f359541345",
+    "run1/exact_sources/experiments/residual_dense_v1/CMakeLists.txt": "ff5b00661667a86491ea7d315fc230b5692d715d4151d11a80d517e900746016",
+    "run1/exact_sources/experiments/residual_dense_v1/probe.c": "f8a51fe7c5bf96091c6997416617bed4fdf7e415eecd2aafce5f1f0cd9e4c223",
+    "run1/exact_sources/modules/residual_dense/carrier.c": "f58ef4820fd7e5baf7bde1900c6a9fcddf1f73bbb51ef1bf7d21a2ccb728f6e1",
+    "run1/exact_sources/modules/residual_dense/carrier.h": "ef181e7811288911d72ff2df878674e9228c94863e40da2797f355a0a648a6f0",
+    "run1/exact_sources/modules/residual_dense/CMakeLists.txt": "25933940d30545595c365540b19d98ab126a81132b3d973139759c2374263c98",
+    "run1/exact_sources/modules/residual_dense/voice.c": "f97d8b413c157e3aaabeb6aa2f754bbec211b8a2c16baf42a99ec02e782ef215",
+    "run1/exact_sources/modules/residual_dense/voice.h": "c8b4aa710e0e80c8dcd60b319e836d22eae1f0e6748cf1a010f55552c37de2f1",
+    "run1/exact_sources/modules/sound_residual/CMakeLists.txt": "e91293b752154b897a8bf33331fa04cb4ae4097a7f569edb8440f611181cd6ef",
+    "run1/exact_sources/modules/sound_residual/oscillator.c": "6d8f476b29cd921497b5d3b3553a0ea45f2146c68e584baa3888ff88c90b6910",
+    "run1/exact_sources/modules/sound_residual/oscillator.h": "86f943ad7adbe573029fbe42ef94eb3bf9ba4bee8a254e6fdf2ec3039b2a4394",
+    "run1/exact_sources/modules/sound_residual/profile.c": "5f65961250764ab7f921031b13c721d350e08fd20242cbde4eaa63931f4b976b",
+    "run1/exact_sources/modules/sound_residual/profile.h": "d017388c47452c9a8ce07f550605f8f5521b4c8912e75ff6e30ab9e1bfa97ccb",
+    "run1/exact_sources/modules/sound_residual/README.md": "8794f5064159ddb44fdd85c26c4ad27087d58ca7b9361371bb1f9446c699e368",
+    "run1/exact_sources/modules/sound_residual/voice.c": "29a072018d63100c9d87c6dc5657199f54de7baf0643964be6e50076eae91c39",
+    "run1/exact_sources/modules/sound_residual/voice.h": "305b657f824f689c686264b31fd7a1ac78e00cc707b5df8bcc8221003b0faf4f",
+    "run1/exact_sources/research/line_density_v1_plan.json": "b8f47a2da72c99d2a274d86f175471bfcae010355cbe488825ad10d7f2d94941",
+    "run1/exact_sources/research/residual_dense_v1_plan.json": "2e42530f0c610da6008114271501a8b4fde300fd9e0732a73a6d2050793c234a",
+    "run1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "run1/exact_sources/tools/line_density_v1/measure.py": "5d8a768aa6417da23ea867ef712b13b28fa599518254b8631cd3f641c66f1d7f",
+    "run1/exact_sources/tools/residual_dense_v1/envelope.py": "954bab8e24ffb5a081a06ac758f53bf1368a0f121b5068b3c857c5641d9860cc",
+    "run1/exact_sources/tools/residual_dense_v1/oracle.py": "1aac51a345ecc75517103242890b70e72275a9bd79967a3b3d33ada28c1ca8c4",
+    "run1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "run1/exact_sources/tools/run_residual_dense_v1.py": "144b345109536f689db836dcbe5a04442a698d57d3b60fcfd3542fb883420f8e",
+    "run1/known_stereo.residual": "5ed4279d826bb57bd43fbb06aa8fa187f97f329cd41ebc5885808650ae2f141a",
+    "run1/metadata.json": "c2d42a11d99c7c457c80183ab290da01932bcef28a5444ccafe64a44088d615d",
+    "run1/raw/cloud_128_23117.wav": "88f02a1394dc68e58189a494ebf5d85e575caee242708eecf5429b7c2a4714cd",
+    "run1/raw/cloud_128_61927.wav": "259c40b175c9f9a482a35d23b2f9d8dd9bc7b9e7f8efe7a853c662a4f6a80b04",
+    "run1/raw/cloud_128_8121907.wav": "ff428be872d840055a4d8c105933d2016d181a81363abef424e3e4d647f02f57",
+    "run1/raw/cloud_256_23117.wav": "5aae82a873effa30a58f0b7093207ca3fb12edc9b500f399ca3228e0c76d3fd4",
+    "run1/raw/cloud_256_61927.wav": "7d0b9a62d43d6b09430e2954665a0858044b7aaf8291f45a56dd99711c2ce03b",
+    "run1/raw/cloud_256_8121907.wav": "1638a53ff3d5acec4d75cabfbbe975b6db3e3aaa17175225889384671ee95222",
+    "run1/raw/cloud_32_23117.wav": "4f77fa612a610e401216e85f1bd1113cb41f5ea8f99ba35c7d01a001ac0054f3",
+    "run1/raw/cloud_32_61927.wav": "a1b39e7821352a473029be26488c6e18eee8a4b075ab3d3d99a3f393e2d63032",
+    "run1/raw/cloud_32_8121907.wav": "f768af3d20613b39a17e3bc613ca3ce433adc8b89ad4b430cad8b9e456d8a195",
+    "run1/raw/cloud_64_23117.wav": "8877cca3edf6933163861deabe3b82a85f761ad945310ade13cf4d5caa21f104",
+    "run1/raw/cloud_64_61927.wav": "498b157e09b0e664867796760c3e069903dc749b7682736b4d92ebf6d904f4e1",
+    "run1/raw/cloud_64_8121907.wav": "11836f2053fa92ef75bbfda166b8306e20f01c862ae497a7be54c2cfb5d0cba4",
+    "run1/raw/known_128.wav": "bebe04b6f69c4fe6f6882d6a58e7e1dc98e84882a8ad623e92f21c380bdf106e",
+    "run1/raw/known_256.wav": "458daad5b06bc760f4e5b256ec5e262403cc72e00d750fd733b89c43354a5a46",
+    "run1/raw/known_32.wav": "6691cb88638ab5ee787bf7544d250a10ba13aa67fe7f7064ce9154c1f068deee",
+    "run1/raw/known_64.wav": "bb7407702dbf13ec22cda12b99b0b5822934c30e03f73316b88638d478c740d7",
+    "run1/raw/mix_128_23117.wav": "401978843694601db271e0cc8ef52fa85f21a36dbf4d3e254e0c40e3a46a83b8",
+    "run1/raw/mix_128_61927.wav": "212449ee4847adc3a7972f66b1b5bf4788d9e020ae5b7a0b88ed8052fa495fcc",
+    "run1/raw/mix_128_8121907.wav": "8183975b62f6e6c42d85c9777f25f8cf4e699241e464dace1bbeef9dd0ff1021",
+    "run1/raw/mix_256_23117.wav": "7ab53ec2ff4b5971914ce175be95546c5d9eff16a68459e2f1e4564c29cd3efc",
+    "run1/raw/mix_256_61927.wav": "f3dbd91daa8b255621e0b8e074b9a97ee3df331d76710ecaa05d6131d8706d6e",
+    "run1/raw/mix_256_8121907.wav": "aeb7196ff170a9bf0067f400d7310529653288515b2a3d39f1d3487e275f888d",
+    "run1/raw/mix_32_23117.wav": "094862b85ce068f71d5335f6154745d1ba167b9d904f159c20b39ff949cc503c",
+    "run1/raw/mix_32_61927.wav": "6b8ef74d95e6b743d688adaff4c0d3fd4441e248244a1a47d561d222a715c6c0",
+    "run1/raw/mix_32_8121907.wav": "d46d0649078acd9b9f36c0de7195b6ed01d98f63c2d50b463263cece5ff6e6c9",
+    "run1/raw/mix_64_23117.wav": "d22c329ee79925d7ff6b58c0bf4a4cb436ae4e7b3f3fcec9ec1cc1b2d67e0361",
+    "run1/raw/mix_64_61927.wav": "02463080f77472bb46d490e00cbdc66162bfa25dac9f03f84b23130dc67cbe34",
+    "run1/raw/mix_64_8121907.wav": "2fa30bfbacbaccc6ec9152e93d560d932a26dbdbf6f7d58a0e6468609aa1f4fa",
+    "run1/report.json": "13c73ea0a2e60783b3eb763746823021fdc50224b3e5741e2bcd39e63653fa5f",
+    "verification1/finalize_residual_dense_v1.py": "134be6b1b47a455eddd420984e9a95f50eedb366390378b7c8f0e3fe8615372e",
+    "verification1/report.json": "515967deef4edbaa664a65d4e1b559b5db834c140cfd85e1ab3c6139002cedd3",
+    "verification1/residual_dense_checks.exe": "bd34a2b19f515cf03a7c94d96e2669e3b27f37de685a812659fe20bdf0056cdf",
+    "verification1/residual_dense_probe.exe": "9e1b2ebfce0f100258a910e03a1132e8b66fca39c74988b3e25f7a3b8f38ce91"
+  },
+  "limits": [
+    "Independent C residual_dense, no edits to old sound_residual/driver/take binaries. Existing SrProfile moments and file grammar, caller-owned separate counts8..256, same stratification/PRNG/phase recurrence/64frame tune/1024frame normalization. Peak32 must match old samples and active carrier state. Fixed50percent DNA/LF, no new fit or per-density normalization. Three seeds and known stereo/mono power controls. Timing excludes WAV I/O and the first second, alternated runs at240/512; isolated process wall time is not full-driver or hardware realtime acceptance. Concentration/temporal statistics are descriptive, not a noise fraction or perceptual gate.",
+    "The model and frequency stratification are fixed across densities; finite seeded phases/beat patterns differ, not paired independent physical observations",
+    "Profile moments are the same prior50percent engineering candidate, not refitted per density",
+    "Known stereo controls verify spectral moments, not spatial listening or actual7.1.4",
+    "Carrier count may trade concentration for temporal lattice beating; neither metric establishes naturalness",
+    "No default driving/take/spatial adapter or new host is attached",
+    "Only one predeclared seed is used on the review page; three seeds were measured, no best-seed selection",
+    "High concentration approaches a floor with the retained50percent harmonic model; increasing density alone does not reproduce the reference",
+    "Observed meter CV and peak frequency can arise from stationary carrier beating, window smoothing and envelope sampling; no new AM model was fitted",
+    "The caller-owned dense voice uses524352bytes at every density; current frequency/weight recurrence is deliberately unoptimized",
+    "HTTP bytes andFFmpeg decode are checked; browser interaction, human listening, native-device integration and full-driver timing are not established"
+  ]
+}

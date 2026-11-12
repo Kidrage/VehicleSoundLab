@@ -82,6 +82,7 @@ MODULE_LAYERS = {
     "sound_dna": "独立 Sound DNA", "low_rumble": "独立低频 V2",
     "sound_residual": "独立谐波间残差 OSC",
     "residual_motion": "残差幅度统计变化",
+    "residual_dense": "独立可变密度残差OSC",
     "rt_numeric": "实时浮点环境作用域",
     "residual_atlas": "驾驶残差谱形与持续声源",
     "dna_scene": "声源／空间适配", "scene_monitor": "联合监听混音",
@@ -184,6 +185,12 @@ def code_rows():
                 layer, owner, role = "实时数值边界", "rt_numeric", "x64局部FTZ／DAZ、完整MXCSR保存恢复；其他架构空操作"
             elif group == "numeric_scope_v1":
                 layer, owner, role = "实时数值契约", "VslNumericScope_checks", "嵌套／舍入／状态／失败恢复、分块与变动调用环境录制回放"
+            elif group == "residual_dense":
+                layer, owner = "可变密度残差OSC", "residual_dense"
+                role = "逐带8–256共享／独立载波、复相关与相位推进" if p.stem == "carrier" else "拥有状态、控制跟随与持续块生成"
+            elif group == "residual_dense_v1":
+                layer, owner = "可变密度独立验证", "residual_dense_"+p.stem
+                role = "离线FLOAT导出／交替隔离计时" if p.stem == "probe" else "旧32样本／载波状态兼容、分块、mono、事务、拥有与静音时钟"
             yield rel, layer, owner, role, digest(p)
 
 

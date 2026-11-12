@@ -1,0 +1,19 @@
+{
+  "sample_rate": 48000,
+  "seconds": 16,
+  "seeds": [8121907,23117,61927],
+  "peaks": [32,64,128,256],
+  "counts_rule": "max(32,min(256,ceil(bandwidth_hz*peak/2000))) per active band; peak0 in probe means untouched legacy voice",
+  "candidate": "voices/line_density_v1/V10 A Density 50.residual",
+  "reference_context": "A moving-tailpipe fixed46.875Hz; same50percent harmonic reduction and frozen coherentLF as prior trial",
+  "warmup_frames": 24000,
+  "review_gain": 0.5,
+  "review_seed": 8121907,
+  "review_start_seconds": 0.5,
+  "review_seconds": 8,
+  "benchmark_seconds": 5,
+  "benchmark_blocks": [240,512],
+  "benchmark_orders": [[0,32,64,128,256],[256,128,64,32,0],[128,0,256,32,64]],
+  "tolerances": {"known_power_error_db":0.5,"known_complex_coherence_error":0.02,"direct_sum_maximum_FS_error":2e-7,"mixed_band_power_error_db":0.5,"mixed_complex_coherence_error":0.01,"review_peak_maximum":0.95},
+  "scope": "Independent C residual_dense, no edits to old sound_residual/driver/take binaries. Existing SrProfile moments and file grammar, caller-owned separate counts8..256, same stratification/PRNG/phase recurrence/64frame tune/1024frame normalization. Peak32 must match old samples and active carrier state. Fixed50percent DNA/LF, no new fit or per-density normalization. Three seeds and known stereo/mono power controls. Timing excludes WAV I/O and the first second, alternated runs at240/512; isolated process wall time is not full-driver or hardware realtime acceptance. Concentration/temporal statistics are descriptive, not a noise fraction or perceptual gate."
+}

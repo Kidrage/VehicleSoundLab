@@ -1,0 +1,7 @@
+add_library(residual_dense STATIC carrier.c voice.c)
+target_include_directories(residual_dense PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(residual_dense PUBLIC sound_residual)
+target_compile_features(residual_dense PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(residual_dense PRIVATE /W4 /we4013 /utf-8)
+endif()
