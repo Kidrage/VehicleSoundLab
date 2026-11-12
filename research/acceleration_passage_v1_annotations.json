@@ -1,0 +1,32 @@
+{
+  "schema": "vsl.acceleration-passage-annotations/1",
+  "date": "2026-11-12",
+  "source": "E",
+  "method": "Visual reinspection of the unchanged native-PTS instrument sheets04,05,06 from drive_evidence_v1/observed/E_video. Digital dash speed only; no phone/GPS or ECU calibration. Existing broad tach intervals are retained without new precision readings.",
+  "observations": [
+    {"seconds":89.00,"gear":5,"dash_kmh":194},
+    {"seconds":89.25,"gear":5,"dash_kmh":197},
+    {"seconds":89.50,"gear":5,"dash_kmh":200},
+    {"seconds":89.75,"gear":5,"dash_kmh":203},
+    {"seconds":90.00,"gear":5,"dash_kmh":206},
+    {"seconds":90.25,"gear":5,"dash_kmh":208},
+    {"seconds":90.50,"gear":5,"dash_kmh":211},
+    {"seconds":90.75,"gear":5,"dash_kmh":214},
+    {"seconds":91.00,"gear":5,"dash_kmh":217},
+    {"seconds":91.25,"gear":5,"dash_kmh":220},
+    {"seconds":91.50,"gear":5,"dash_kmh":222},
+    {"seconds":91.75,"gear":5,"dash_kmh":225},
+    {"seconds":92.00,"gear":5,"dash_kmh":227},
+    {"seconds":92.25,"gear":5,"dash_kmh":230},
+    {"seconds":92.50,"gear":5,"dash_kmh":232},
+    {"seconds":92.75,"gear":5,"dash_kmh":235}
+  ],
+  "interpretation": "Observed fixed displayed gear and increasing displayed speed/tach support an acceleration context. This does not identify full throttle, torque, exact audio-frame state or independent uninterrupted test repetition.",
+  "boundaries": {
+    "previous_display_change_seconds": [88.75,89.0],
+    "next_display_change_seconds": [92.75,93.25],
+    "previous_acoustic_landmark_seconds":88.45,
+    "next_acoustic_landmark_seconds":92.85,
+    "landmarks_are_not_clutch_or_torque_cut_timestamps":true
+  }
+}

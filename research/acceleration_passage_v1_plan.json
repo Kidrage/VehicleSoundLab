@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.acceleration-passage-plan/1",
+  "source_segment": "E_corsa_second_context",
+  "source_use": "cabin_dynamic_observation",
+  "audio_seconds": [89.6, 91.6],
+  "display_gear5_interval_seconds": [89.0, 92.75],
+  "display_minus_audio_sensitivity_seconds": [-0.6, 0.6],
+  "clock": "frozen drive_evidence_v1/evidence/summary_v3/report.json; no new phase fit",
+  "models": "voices/cabin_anchors_v1/index.json",
+  "warmup_frames": 96000,
+  "seed": 48271,
+  "detail": 1,
+  "alignment_harmonics": 8,
+  "common_listening_gain": 0.5,
+  "source_only": true,
+  "new_timbre_candidate": false,
+  "purpose": "Diagnose current C atlas during observed fixed-gear acceleration, distinguish clock following, anchor coverage and mixed-recording band deficits before fitting a new state voice.",
+  "limits": [
+    "E cabin only, not the held A exterior 35percent recipe",
+    "Both anchor training windows overlap this passage; not held-out generalization",
+    "No measured pedal, load, precise RPM, injector state or independent AV alignment",
+    "The +/-0.6s offset is an engineering sensitivity, not a confidence bound",
+    "Frozen coarse acoustic family is not qualified instantaneous phase or crank telemetry",
+    "No source loudness envelope, new LF, residual, room or recorded PCM in synthesis"
+  ]
+}

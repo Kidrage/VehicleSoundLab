@@ -1,0 +1,450 @@
+{
+  "schema": "vsl.acceleration-passage-summary/1",
+  "date": "2026-11-12",
+  "result": "existing_C_source_diagnostic_only",
+  "source": "E",
+  "source_seconds": [
+    89.6,
+    91.6
+  ],
+  "source_context": "cabin fixed displayed gear5 rising displayed speed",
+  "approved_raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+  "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+  "acoustic_root_endpoints_hz": [
+    60.15661146351387,
+    66.12949835857675
+  ],
+  "measured_RPM": null,
+  "measured_load": null,
+  "original_phase_clock_qualification": "not_passed_unchanged",
+  "context": {
+    "frames": [
+      {
+        "file": "frame_029.png",
+        "source_frame_index": 5340,
+        "pts": 89000,
+        "source_seconds": 89.0,
+        "sha256": "4fc5fae5893b002ebceb7c981acadcbd3bab6e4e2713d23c450407a32edf6c64",
+        "seconds": 89.0,
+        "gear": 5,
+        "dash_kmh": 194
+      },
+      {
+        "file": "frame_030.png",
+        "source_frame_index": 5355,
+        "pts": 89250,
+        "source_seconds": 89.25,
+        "sha256": "7e7204cf888e213fdcc580f3aa84a84ce1e13a64184fa827345d41f3f9c45766",
+        "seconds": 89.25,
+        "gear": 5,
+        "dash_kmh": 197
+      },
+      {
+        "file": "frame_031.png",
+        "source_frame_index": 5370,
+        "pts": 89500,
+        "source_seconds": 89.5,
+        "sha256": "44c9ead6a24aa1ce59823b974cbc718d1ff4d595c87db14c5e862490b1339228",
+        "seconds": 89.5,
+        "gear": 5,
+        "dash_kmh": 200
+      },
+      {
+        "file": "frame_032.png",
+        "source_frame_index": 5385,
+        "pts": 89750,
+        "source_seconds": 89.75,
+        "sha256": "8c645eb18d702f57b9148fe5164967b2f8272feb2a5aaa2a8e0f28d3c5a4ef19",
+        "seconds": 89.75,
+        "gear": 5,
+        "dash_kmh": 203
+      },
+      {
+        "file": "frame_033.png",
+        "source_frame_index": 5400,
+        "pts": 90000,
+        "source_seconds": 90.0,
+        "sha256": "8d66f81055e9db83299ef2a972249322397ff3c5825fe66ed8018aba7195542b",
+        "seconds": 90.0,
+        "gear": 5,
+        "dash_kmh": 206
+      },
+      {
+        "file": "frame_034.png",
+        "source_frame_index": 5415,
+        "pts": 90250,
+        "source_seconds": 90.25,
+        "sha256": "d4e9d2730801850279160d27ff60908a9944c94a20c6d87ddc6ec77418f895ff",
+        "seconds": 90.25,
+        "gear": 5,
+        "dash_kmh": 208
+      },
+      {
+        "file": "frame_035.png",
+        "source_frame_index": 5430,
+        "pts": 90500,
+        "source_seconds": 90.5,
+        "sha256": "1cbc03dec28b5e9e6dfa774d136bfebd3a0b50505226a45866dbfbdc156491a5",
+        "seconds": 90.5,
+        "gear": 5,
+        "dash_kmh": 211
+      },
+      {
+        "file": "frame_036.png",
+        "source_frame_index": 5445,
+        "pts": 90750,
+        "source_seconds": 90.75,
+        "sha256": "b42cf83818ad59fb83638b0dcf7919ace9c3f7fff2d80f3da3cdc4992b14f07e",
+        "seconds": 90.75,
+        "gear": 5,
+        "dash_kmh": 214
+      },
+      {
+        "file": "frame_037.png",
+        "source_frame_index": 5460,
+        "pts": 91000,
+        "source_seconds": 91.0,
+        "sha256": "c87c9a826b94973efd7d95f88f45c69eb0a8b6edaf32f7283f4eb92c70a3f9b1",
+        "seconds": 91.0,
+        "gear": 5,
+        "dash_kmh": 217
+      },
+      {
+        "file": "frame_038.png",
+        "source_frame_index": 5475,
+        "pts": 91250,
+        "source_seconds": 91.25,
+        "sha256": "ee4e2e1aa2b9edab20f48567266e3b3daa71f0282e4d0e4164962d88d6580ece",
+        "seconds": 91.25,
+        "gear": 5,
+        "dash_kmh": 220
+      },
+      {
+        "file": "frame_039.png",
+        "source_frame_index": 5490,
+        "pts": 91500,
+        "source_seconds": 91.5,
+        "sha256": "462e1890ba6c9874abbff28fcfa383a64dc52465d07ae1d75368419d1cb7362a",
+        "seconds": 91.5,
+        "gear": 5,
+        "dash_kmh": 222
+      },
+      {
+        "file": "frame_040.png",
+        "source_frame_index": 5505,
+        "pts": 91750,
+        "source_seconds": 91.75,
+        "sha256": "31154e817727a12b51eff736298865640168605c83e53dd7cf95432303b83f47",
+        "seconds": 91.75,
+        "gear": 5,
+        "dash_kmh": 225
+      },
+      {
+        "file": "frame_041.png",
+        "source_frame_index": 5520,
+        "pts": 92000,
+        "source_seconds": 92.0,
+        "sha256": "e352065846e966c96d6eb8103473ab331062df48d89b921b56a6ec9ceb181756",
+        "seconds": 92.0,
+        "gear": 5,
+        "dash_kmh": 227
+      },
+      {
+        "file": "frame_042.png",
+        "source_frame_index": 5535,
+        "pts": 92250,
+        "source_seconds": 92.25,
+        "sha256": "b7926431b7154d9dd747e658fe0c1fe38a9b6092250977ee74935aa3ce8f0fb7",
+        "seconds": 92.25,
+        "gear": 5,
+        "dash_kmh": 230
+      },
+      {
+        "file": "frame_043.png",
+        "source_frame_index": 5550,
+        "pts": 92500,
+        "source_seconds": 92.5,
+        "sha256": "973a8e08b1b2ef1d6e414a541519ddf14d67031724ec22e151ced5fda05a1cb5",
+        "seconds": 92.5,
+        "gear": 5,
+        "dash_kmh": 232
+      },
+      {
+        "file": "frame_044.png",
+        "source_frame_index": 5565,
+        "pts": 92750,
+        "source_seconds": 92.75,
+        "sha256": "2f8ae628833d6d21ad93801452d88e1a955a55b8d5f3ade91511e18e93f06463",
+        "seconds": 92.75,
+        "gear": 5,
+        "dash_kmh": 235
+      }
+    ],
+    "safe_audio_interval_under_assumed_offset": [
+      89.6,
+      92.15
+    ],
+    "observed_display_speed_kmh": [
+      194,
+      235
+    ],
+    "display_observation_span": [
+      89.0,
+      92.75
+    ],
+    "C_H_unchanged": 478,
+    "source_only_not_driver_validation": true
+  },
+  "controls": {
+    "known250Hz_power_error_db": 3.4977976522370304e-07,
+    "scalar_fft_power_error": 3.469446951953614e-18
+  },
+  "traces": {
+    "single_anchor": {
+      "follower_oracle_error_hz": 1.0729195309977513e-12,
+      "pitch_target_error_rms_hz": 0.15031887354081516,
+      "pitch_target_error_max_hz": 0.6807781525862424,
+      "telemetry_rows": 401,
+      "telemetry_colour_coverage_fraction": 0.0,
+      "peak_FS": 0.6815418601036072
+    },
+    "two_anchors": {
+      "follower_oracle_error_hz": 1.0729195309977513e-12,
+      "pitch_target_error_rms_hz": 0.15031887354081516,
+      "pitch_target_error_max_hz": 0.6807781525862424,
+      "telemetry_rows": 401,
+      "telemetry_colour_coverage_fraction": 0.6533665835411472,
+      "peak_FS": 0.6062103509902954
+    }
+  },
+  "metrics": {
+    "bands_hz": [
+      [
+        28,
+        120
+      ],
+      [
+        120,
+        400
+      ],
+      [
+        400,
+        1200
+      ],
+      [
+        1200,
+        3000
+      ],
+      [
+        3000,
+        8000
+      ],
+      [
+        8000,
+        16000
+      ]
+    ],
+    "comparisons": {
+      "single_anchor": {
+        "mean_power_error_db_LR": [
+          [
+            -6.409500116523871,
+            -6.109744059110447
+          ],
+          [
+            0.7004061417910934,
+            0.6087753255310382
+          ],
+          [
+            0.03224060735746014,
+            0.1886725473416629
+          ],
+          [
+            -0.003179220206780092,
+            -0.6852692315783954
+          ],
+          [
+            -3.523049584713747,
+            -4.336283788739484
+          ],
+          [
+            -4.283853940222461,
+            -3.910874285929509
+          ]
+        ],
+        "half_mean_power_error_db_LR": [
+          [
+            [
+              -6.672097835314105,
+              -6.530219747570481
+            ],
+            [
+              -0.08063950349665411,
+              -0.04303812118405506
+            ],
+            [
+              -0.4534122942751635,
+              -0.30642905117417873
+            ],
+            [
+              -0.9528852813516495,
+              -0.9030340104700112
+            ],
+            [
+              -1.8034222030647638,
+              -2.274110834848317
+            ],
+            [
+              -4.038915706341507,
+              -4.178802352456829
+            ]
+          ],
+          [
+            [
+              -6.168097354942325,
+              -5.727975577479693
+            ],
+            [
+              1.643459076236118,
+              1.3672106772498966
+            ],
+            [
+              0.4579990961038687,
+              0.6630207111364649
+            ],
+            [
+              0.7862966919743868,
+              -0.5131852202512426
+            ],
+            [
+              -4.542960028252004,
+              -5.45005125996306
+            ],
+            [
+              -4.403203658724968,
+              -3.768159281345395
+            ]
+          ]
+        ]
+      },
+      "two_anchors": {
+        "mean_power_error_db_LR": [
+          [
+            -6.2322592777653245,
+            -6.009086758633284
+          ],
+          [
+            -0.8708846462154067,
+            -0.7422328105279212
+          ],
+          [
+            -0.5807059614431122,
+            -0.6829881314890829
+          ],
+          [
+            -1.2382301114347618,
+            -0.9867168282722341
+          ],
+          [
+            -2.6910219295472566,
+            -2.9864313321037277
+          ],
+          [
+            -4.233366880336369,
+            -3.916467399305046
+          ]
+        ],
+        "half_mean_power_error_db_LR": [
+          [
+            [
+              -6.3352854514908845,
+              -6.1579873435564005
+            ],
+            [
+              -0.6970514531922073,
+              -0.529412716192098
+            ],
+            [
+              -0.6111659457537546,
+              -0.63566917680064
+            ],
+            [
+              -1.5399659700004473,
+              -1.1549324033659594
+            ],
+            [
+              -2.0738990259030197,
+              -2.2380024584889537
+            ],
+            [
+              -4.3311191088266074,
+              -4.32179914303991
+            ]
+          ],
+          [
+            [
+              -6.134189589459944,
+              -5.8657272337987365
+            ],
+            [
+              -1.1404053224458857,
+              -1.0516378536689919
+            ],
+            [
+              -0.551255659401761,
+              -0.7342530233815536
+            ],
+            [
+              -0.9520231854389245,
+              -0.8524465162816015
+            ],
+            [
+              -2.9865513717395675,
+              -3.3016142595428577
+            ],
+            [
+              -4.188439978676303,
+              -3.7055808410594744
+            ]
+          ]
+        ]
+      }
+    },
+    "warning": "Mixed raw recording versus DNA only; missing broadband/space/level/clock effects are not isolated engine-component gains."
+  },
+  "selected_clock_rows": 201,
+  "clock_rows_two_or_more_supports": 132,
+  "source_training_overlap": true,
+  "new_timbre": false,
+  "human_accepted": false,
+  "runtime_changed": false,
+  "C_H_unchanged": 478,
+  "Ctests_not_repeated": 47,
+  "device_or_longrun_tests": false,
+  "new_review_files": 12,
+  "review_URL": "http://127.0.0.1:8789/references/analysis/acceleration_passage_v1/review1/index.html",
+  "HTTP_FFmpeg_JS_pass": true,
+  "manual_browser_interaction": false,
+  "manual_plot_and_three_existing_sheets_inspected": true,
+  "moving_selection_sha256": "a5231518c8c2f161d52ef8e63ca8e6fe548b24e58f958927dd09119cf9357657",
+  "moving_selection_unchanged": true,
+  "idle_listening_still_pending": true,
+  "no_new_listening_question": true,
+  "frozen_clock_report_and_verification_link_pass": true,
+  "evidence_sha256": {
+    "references/analysis/acceleration_passage_v1/run1/report.json": "6dd4afe4518ba9cca113e8e8806a4dd2e8a13d839dcd9a80cb45ed368afd3f5a",
+    "references/analysis/acceleration_passage_v1/review1/report.json": "9cb0bbf865893a2a71e2bb466991ef1ee0c2ad52f5acf060eec3ba64fc21bbca"
+  },
+  "limits": [
+    "E cabin only, not the held A exterior 35percent recipe",
+    "Both anchor training windows overlap this passage; not held-out generalization",
+    "No measured pedal, load, precise RPM, injector state or independent AV alignment",
+    "The +/-0.6s offset is an engineering sensitivity, not a confidence bound",
+    "Frozen coarse acoustic family is not qualified instantaneous phase or crank telemetry",
+    "No source loudness envelope, new LF, residual, room or recorded PCM in synthesis",
+    "Pitch followers verify control operation, not inferred real engine timing or naturalness",
+    "Colour clamps to endpoint outside fitted root interval; pitch itself is not clamped",
+    "Same-source training overlap and one random seed are diagnostic, not held-out or statistical validation",
+    "No new state voice fitted: quantitative deficits cannot all be assigned to one physical layer"
+  ]
+}

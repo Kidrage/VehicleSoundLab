@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[加速诊断](../research/固定挡位加速核查V1.md)复用`experiments/state_passage_v1/{trajectory,probe}`与当前`dna_atlas`；没有新增C/H、控制字段或默认路径。Python的`acceleration_passage_v1/evidence`只绑定素材／模型／上下文，`diagnostics`只测宽频带预算；离线输入轨迹不接管统一驾驶器，音色未验收。
+
 新增[低转离线配方](../research/驻车低转声源V1.md)仍复用原C DNA，未新增C/H。`tools/idle_texture_v1/{profile,envelope,power}`分别负责按实际根音派生参数、资格检查及任意周期的预算；连续生成仍调用原`resonant_detail_v1.voice`。新`voices/idle_resonant_v1/detail.json`不含PCM／时间轴，也没有C加载器／驾驶字段。原478份C/H保持，音色待评。
 
 最新状态：用户暂留共振细节V1的35%，否决70%；中频保护V2不采用，停止继续调同一行驶片段。它们均是离线原型，**尚无该细节核的C加载器／驾驶接口**。现有`atlas_drive/render.c`调用同一200Hz控制器和`dna_atlas/voice.c`，怠速／加速使用同一C生成链；负载目前主要进包络，完整状态声纹未标定。见[实际完成度](../research/怠速与加速完成度V1.md)。原478份C/H保持。
