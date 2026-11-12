@@ -1,0 +1,182 @@
+{
+  "schema": "vsl.idle-resonant-summary/1",
+  "date": "2026-11-12",
+  "result": "offline_candidate_technical_pass_only",
+  "source_seconds": [
+    243.9,
+    247.1
+  ],
+  "acoustic_root_hz": 10.005673871228469,
+  "source_RPM": null,
+  "source_thermal_state": null,
+  "context_frames_inspected": 47,
+  "annotations": "research/idle_context_v1_annotations.json",
+  "annotations_sha256": "4070a004ade1fd543cd8721ec28dfc900d36eab8c02a82ef0a7e5874310be712",
+  "profile_file": "voices/idle_resonant_v1/detail.json",
+  "profile_sha256": "3e662df22b15b40faec3379477c9d9fea1136ad006418b2bda7d5bd7d8cfbf8e",
+  "controls": {
+    "exact_shift_relative_error": 2.476633016712562e-14,
+    "known20s_Welch_error_db": 0.04847750987825843,
+    "root_hz": 10.005673871228469,
+    "period_frames": 4797.278086189181,
+    "not_integer_period": true
+  },
+  "maximum_pole_radius": 0.9992222118770111,
+  "enabled_envelope_bands": [],
+  "trials": [
+    {
+      "label": "add_only",
+      "seeds": [
+        8121907,
+        23117,
+        61927
+      ],
+      "maximum_power_error_db": 0.29358374880746935,
+      "maximum_coherence_error": 0.0064117450984920105,
+      "maximum_peak_FS_common_gain": 0.5558801293373108,
+      "maximum_absolute20_300Hz_change_db": 2.270661275014836e-05,
+      "repeat_first_block_left": [
+        {
+          "band_hz": [
+            30,
+            120
+          ],
+          "range": [
+            0.9991444916461674,
+            0.9991444995065673
+          ]
+        },
+        {
+          "band_hz": [
+            120,
+            400
+          ],
+          "range": [
+            0.9977898493242796,
+            0.9977953432441189
+          ]
+        },
+        {
+          "band_hz": [
+            400,
+            1200
+          ],
+          "range": [
+            0.7395548973211674,
+            0.7533213358352311
+          ]
+        },
+        {
+          "band_hz": [
+            1200,
+            2800
+          ],
+          "range": [
+            0.2906065003026016,
+            0.3010456169611656
+          ]
+        },
+        {
+          "band_hz": [
+            3000,
+            8000
+          ],
+          "range": [
+            0.038831953379784,
+            0.04040415239486201
+          ]
+        }
+      ]
+    },
+    {
+      "label": "replace35",
+      "seeds": [
+        8121907,
+        23117,
+        61927
+      ],
+      "maximum_power_error_db": 0.29348649824185336,
+      "maximum_coherence_error": 0.006726573977713065,
+      "maximum_peak_FS_common_gain": 0.556520938873291,
+      "maximum_absolute20_300Hz_change_db": 2.2655961644100842e-05,
+      "repeat_first_block_left": [
+        {
+          "band_hz": [
+            30,
+            120
+          ],
+          "range": [
+            0.999144491722458,
+            0.9991444995928277
+          ]
+        },
+        {
+          "band_hz": [
+            120,
+            400
+          ],
+          "range": [
+            0.997789849168728,
+            0.9977953431092487
+          ]
+        },
+        {
+          "band_hz": [
+            400,
+            1200
+          ],
+          "range": [
+            0.7395587484519406,
+            0.7533254517872128
+          ]
+        },
+        {
+          "band_hz": [
+            1200,
+            2800
+          ],
+          "range": [
+            0.21881771008839768,
+            0.2298710227448101
+          ]
+        },
+        {
+          "band_hz": [
+            3000,
+            8000
+          ],
+          "range": [
+            0.03890007302137289,
+            0.04025469802211302
+          ]
+        }
+      ]
+    }
+  ],
+  "C_H_unchanged": 478,
+  "Ctests_not_repeated": 47,
+  "moving_selection_sha256": "a5231518c8c2f161d52ef8e63ca8e6fe548b24e58f958927dd09119cf9357657",
+  "moving_reference_changed": false,
+  "no_native_default_driver_or_take_changes": true,
+  "listening": "pending",
+  "review_URL": "http://127.0.0.1:8789/references/analysis/idle_resonant_v1/review1/index.html",
+  "review_clips": 35,
+  "HTTP_FFmpeg_JS_pass": true,
+  "manual_browser_interaction": false,
+  "evidence_sha256": {
+    "references/analysis/idle_context_v1/inspect1/report.json": "3394c795f580ae21657051a4d3a2c4aacea5610143a055913288c5ce8f7ba05c",
+    "references/analysis/idle_context_v1/inspect2/report.json": "a7a1503f45daf6d940fd376ec5dc54ae2dc44b3bd987185ffa32577739dd4b5e",
+    "references/analysis/idle_context_v1/analysis1/report.json": "2a225775e181779491d5a4230cc894892a8c7080ca1d4b18d7055a7a3b6b61cd",
+    "references/analysis/idle_resonant_v1/fit1/report.json": "e7db54aa110e7a6c05904e8ffc32cdcb042e48a3b07a5d7650a986e6542dcbcf",
+    "references/analysis/idle_resonant_v1/render1/report.json": "abc1c807ec011a3dc3313465173f2603058ca6b17bafa259d0c31aa22816d548",
+    "references/analysis/idle_resonant_v1/review1/report.json": "4076f6f92f249488af9034162304c69ee4f0c6ef91caa78a58832ac4a63a5da1"
+  },
+  "limits": [
+    "Not confirmed warm idle, measured engine RPM, physical source separation or full-state calibration",
+    "All periodic detail envelopes disabled;2.2–3k passed half validation but exceeded the predeclared weak-depth bound",
+    "3–8k source coverage restored only as a candidate; above8k is not fitted by this source profile",
+    "Rank-one shared stereo is a near-mono approximation; no new width or physical speaker information",
+    "Fixed-pitch offline source only; no detail pitch/load/state driver port or listening acceptance",
+    "Band powers, period repeats and stability do not establish mechanical naturalness"
+  ]
+}

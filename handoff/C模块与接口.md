@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[低转离线配方](../research/驻车低转声源V1.md)仍复用原C DNA，未新增C/H。`tools/idle_texture_v1/{profile,envelope,power}`分别负责按实际根音派生参数、资格检查及任意周期的预算；连续生成仍调用原`resonant_detail_v1.voice`。新`voices/idle_resonant_v1/detail.json`不含PCM／时间轴，也没有C加载器／驾驶字段。原478份C/H保持，音色待评。
+
 最新状态：用户暂留共振细节V1的35%，否决70%；中频保护V2不采用，停止继续调同一行驶片段。它们均是离线原型，**尚无该细节核的C加载器／驾驶接口**。现有`atlas_drive/render.c`调用同一200Hz控制器和`dna_atlas/voice.c`，怠速／加速使用同一C生成链；负载目前主要进包络，完整状态声纹未标定。见[实际完成度](../research/怠速与加速完成度V1.md)。原478份C/H保持。
 
 新[共振细节替换](../research/连续共振细节替换V1.md)仅为分模块Python离线原型：`envelope`／`filters`／`voice`／`controls`分别负责弱能量形状、共振拟合与预算、持续生成、独立验证；`voices/resonant_detail_v1/detail.json`为纯参数快照，尚无C加载器。原C DNA核复用、478份C/H未改，驾驶／设备／行程没有新接口。听评成立后再按同样职责移入C，不把离线脚本写成实时接入已完成。

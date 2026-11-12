@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.idle-texture-plan/1",
+  "sample_rate": 48000,
+  "source_segment": "A_exterior_blips",
+  "source_use": "exterior_dynamic_observation",
+  "source_seconds": [243.9,247.1],
+  "base_model": "voices/exterior_anchors_v1/A Stationary Low.model",
+  "bands_hz": [[30,120],[120,400],[400,1200],[1200,2800],[3000,8000]],
+  "filter_taps": 2049,
+  "edge_discard_frames": 4096,
+  "cycle_lags": [1,2,4],
+  "lag_relative_search": 0.05,
+  "controls": {"comb_minimum_repeat": 0.97,"noise_maximum_repeat": 0.35,"direct_error": 1e-10},
+  "unsupported_relative_band_power": 0.0001,
+  "scope": "Stationary rear low-speed acoustic context only; not confirmed warm idle or calibrated engine RPM. Compare raw and frozen normalized recording separately. No physical noise fraction, source separation, thermal/load labels, runtime change or new listening acceptance."
+}

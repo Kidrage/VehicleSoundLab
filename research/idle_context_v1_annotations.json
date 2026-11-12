@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.idle-context-annotations/1",
+  "date": "2026-11-12",
+  "method": "Assistant visually inspected all seven decoded contact sheets and native E frame at46s. No OCR, synthetic enhancement or new audio clarity claim.",
+  "observations": [
+    {"inspection": "inspect1", "source": "A", "seconds": [204,211], "observation": "204.204s contains a visible dissolve.205.205..207.207s shows Switching To Corsa text over close tailpipes.208.208..210.210s remains close exterior exhaust view.", "use": "Near-tailpipe low-speed context only; mode caption is not measured valve position, RPM, pedal or thermal state."},
+    {"inspection": "inspect1", "source": "A", "seconds": [241,247.5], "observation": "Rear three-quarter stationary framing, driver door open; a different microphone/camera observation from the close-tailpipe208s scene.", "use": "Keep the existing243.9..247.1s stationary-low acoustic reference separate from208s and moving316s; no warm-idle/RPM claim."},
+    {"inspection": "inspect1", "source": "D", "seconds": [0,18], "observation": "0..6s black/logo frames;9/12/15s show dyno-room rear view and blurred rear-wheel spokes.", "use": "This inspected opening does not supply a verified exterior idle/RPM calibration. No claim about uninspected later parts of D."},
+    {"inspection": "inspect1", "source": "E", "seconds": [0,21], "observation": "Exterior rear walkaround/parking view, roadside vehicles and changing camera distance, no visible tachometer.", "use": "Other exterior context; not the same source transfer as A, no RPM labels."},
+    {"inspection": "inspect2", "source": "A", "seconds": [39,45.5], "observation": "Cabin and instrument view after the start sequence; remains a distinct perspective from exterior tailpipes.", "use": "Start/settle context; do not attach its indicated RPM directly to a later exterior segment."},
+    {"inspection": "inspect2", "source": "E", "seconds": [24,46], "observation": "24..44s exterior departure/road view.46s changes to Corsa cluster, gear1, speed000 and Thrust mode mogelijk text; phone overlay reads0.", "use": "One zero-speed first-gear frame is insufficient to label stable idle. Thrust mode mogelijk means available/possible, not proof that launch mode is active. No exact RPM, pedal or independent dash/phone synchronization derived."}
+  ],
+  "decision": "Use approved A243.9..247.1s as a stationary low-speed sound-source candidate, not a confirmed warm-idle calibration. No new media or runtime RPM/controller changes."
+}
