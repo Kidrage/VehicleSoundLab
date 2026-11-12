@@ -15,6 +15,7 @@ typedef struct {
     double startup_gain; /* Independent observed-stereo startup layer, default0. */
     double catch_gain; /* Optional coherent CATCH LF support, default0. */
     double resonant_gain; /* Optional local continuous resonance detail, default0. */
+    double coherent_low_gain; /* Independent measured-phase LF recipe, default0. */
 } AdMix;
 typedef struct { AdInput drive; AdMix mix; } AdControl;
 

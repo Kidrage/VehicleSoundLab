@@ -4,8 +4,8 @@
 
 | 文件 | 责任 |
 |---|---|
-| `assets.*` | 深拷贝 DNA／残差／启动纹理／接火低频／有效对齐相位与查表；校验、内部指针绑定。 |
-| `parameters.*` | 27 个语义控制字段，含五路辅助量、启动量及接火量；比较不依赖结构体 padding。 |
+| `assets.*` | 深拷贝DNA／残差／启动／接火／双核细节／完整配方独立LF与功率mask／有效对齐相位及查表；校验、内部指针绑定。 |
+| `parameters.*` | 29个语义控制字段，含五路辅助、启动／接火、连续共振和独立相干LF；比较不依赖结构体padding。 |
 | `take.*` | 预分配事件、成功提交帧计数、停止边界、源／输出 FNV64。 |
 | `player.*` | 在事件／停止帧切块，重建控制与淡化；2／12通道共用声源。 |
 
@@ -15,6 +15,6 @@
 
 `at_player_process` 可接受任意块长；完成后 `verified` 比较源哈希及原布局输出哈希。12通道导出只改变空间布局，源哈希相同。它不是实际扬声器的测量结果。
 
-当前 `.vslrun` schema5保存对象／立体声声床配置及可选启动／接火模型，共27控制字段。辅助对象、启动stereo和接火附加量逐帧纳入源哈希，记录／设备／播放器均预分配缓冲区，不存PCM。schema4匹配播放器保存在`catch_drive_v1/before/bin`，schema3在`startup_drive_v1/before/bin`，schema2在`system_status_v1`及`stereo_bed_v1/before/bin`；旧schema1继续用原冻结二进制，不做静默格式迁移。上述证据目录均位于本地`references/analysis`或对应冻结快照。
+当前`.vslrun`为schema8／29控制，拥有双核细节参数及稳定证书、独立相干LF／校准量／局部支持／功率mask。源哈希包括主DNA raw／输出、残差、互补低频、事件、辅助对象、启动、接火、连续细节、相干LF raw／输出；记录／设备／播放器均预分配缓冲，不存PCM。schema7匹配播放器和真实设备take保存在`full_recipe_drive_v1/before1`；schema6及更早版本使用各自冻结播放器，不静默迁移。证据目录均位于本地`references/analysis`或对应`baselines`。
 
 兼容性由DSP／控制／播放器源码、编译器及配置旗标的SHA256身份约束，文件另存于 `atlas_take_io`。保留相匹配的二进制；跨平台／跨编译器不保证浮点位级一致。FNV用于重建与意外损坏检测，不是数字签名。

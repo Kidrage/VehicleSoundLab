@@ -40,6 +40,7 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
         capture.startup=a->startup;
         capture.catch_bloom=a->catch_bloom;
         capture.resonant=a->resonant;
+        capture.coherent_low_raw=a->coherent_low_raw;capture.coherent_low=a->coherent_low;
     }
     capture.telemetry=telemetry;
     if(!am_render_process(&a->render,pcm,frames,stopping,&capture))return -1;

@@ -10,6 +10,7 @@
 #include "start_texture/voice.h"
 #include "catch_bloom/voice.h"
 #include "drive_resonance/voice.h"
+#include "drive_recipe/voice.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -25,6 +26,7 @@ typedef struct {
     const StProfile *startup_profile; /* Opt-in cabin observation, replaces legacy starter only. */
     const CbProfile *catch_profile; /* Optional observation colour, no physical-source claim. */
     const DrsBank *resonant_bank; /* Optional local continuous detail; missing anchors stay silent. */
+    const DrcBank *recipe_bank; /* Optional coupled DNA withdrawal + independent coherent LF. */
 } AdConfig;
 
 typedef struct {
@@ -38,6 +40,7 @@ typedef struct {
     int fuel_mode;
     unsigned rotating_strikes, fired_strikes;
     double resonant_support,resonant_gain; /* Local engineering support, not measured RPM coverage. */
+    double coherent_low_support,coherent_low_gain,coherent_low_envelope;
 } AdTelemetry;
 typedef struct {
     float *dna_raw; /* Observation stereo, before driving envelope. */
@@ -60,6 +63,7 @@ typedef struct {
     float *startup; /* Independent observed L/R startup layer before width/master. */
     float *catch_bloom; /* Coherent CATCH delta L/R before width/master. */
     float *resonant_raw,*resonant; /* Local detail before/after amount and driving envelope. */
+    float *coherent_low_raw,*coherent_low; /* Independent calibrated LF, not complementary body tap. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
@@ -71,10 +75,12 @@ typedef struct {
     StVoice startup;
     CbVoice catch_bloom;
     DrsVoice resonant;
+    DrcVoice recipe;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;
     double gain, event_gain, spatial_mix, envelope, follow;
+    double low_envelope;
     uint64_t frame;
 } AdRender;
 
@@ -82,7 +88,8 @@ typedef struct {
    all profiles must outlive this object. Never share owner with other renders.
    Optional residual atlas is separate from DNA and old procedural events.
    LF is a complementary harmonic partition, not a separated physical source;
-   independent cabin sub-bass remains absent. Auxiliary intake/mechanical/air/
+   optional recipe LF is separately fitted in its own observation context.
+   Auxiliary intake/mechanical/air/
    road/wind are optional engineering templates, not fitted physical sources. */
 int ad_render_init(AdRender *render,VslEngine *owner,const AdConfig *config,const AdControl *control);
 int ad_render_set(AdRender *render,const AdControl *control);

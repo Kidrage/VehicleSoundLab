@@ -28,6 +28,7 @@ unsigned at_player_process(AtPlayer *p,float *out,unsigned frames,AdTelemetry *t
         c.startup=p->startup;
         c.catch_bloom=p->catch_bloom;
         c.resonant=p->resonant;
+        c.coherent_low_raw=p->coherent_low_raw;c.coherent_low=p->coherent_low;
         if(telemetry)c.telemetry=telemetry+done;
         if(!am_render_process(&p->render,out+done*p->config.channels,n,at>=t->stop_frame,&c))return done;
         p->source_hash=at_hash_sources(p->source_hash,&c,n);

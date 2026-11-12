@@ -20,16 +20,25 @@ done:SelectObject(m,old);DeleteObject(bitmap);DeleteDC(m);ReleaseDC(w,dc);return
 int am_resonant_ui_check(HWND w,AmAudio *a,const wchar_t *path) {
     unsigned checks=0;int line=0,ok=0;AdControl c=am_audio_get(a);FILE *f;wchar_t bmp[4096];HWND detail=GetDlgItem(w,26),mode=GetDlgItem(w,41);
     CHECK(a->config.resonant_bank&&!a->config.residual_bank&&a->config.scene_mode==AD_SCENE_STEREO_BED);
-    CHECK(!a->device.running&&!c.drive.ignition&&c.drive.mode==VSL_BENCH&&c.mix.resonant_gain==0&&c.mix.room==0);
+    CHECK(!a->device.running&&!c.drive.ignition&&c.drive.mode==VSL_BENCH&&c.mix.resonant_gain==(a->config.recipe_bank?1:0)&&c.mix.room==0);
     CHECK(IsWindowEnabled(detail)&&!IsWindowEnabled(GetDlgItem(w,40)));
     CHECK(SendMessageW(GetDlgItem(w,40),CB_GETCURSEL,0,0)==0);
     {
         wchar_t text[128];SendMessageW(GetDlgItem(w,40),CB_GETLBTEXT,0,(LPARAM)text);
-        CHECK(wcsstr(text,a->config.resonant_bank->kind[0]==DRS_STEREO?L"双声道":L"车外局部")!=NULL);
+        CHECK(wcsstr(text,a->config.recipe_bank?L"35%完整配方":a->config.resonant_bank->kind[0]==DRS_STEREO?L"双声道":L"车外局部")!=NULL);
     }
     for(int i=0;i<=100;i+=50) {
         SendMessageW(detail,TBM_SETPOS,TRUE,i);SendMessageW(w,WM_HSCROLL,TB_THUMBPOSITION,(LPARAM)detail);
         c=am_audio_get(a);CHECK(c.mix.resonant_gain==i/100.&&c.mix.residual_gain==0);
+    }
+    if(a->config.recipe_bank) {
+        HWND low=GetDlgItem(w,27);wchar_t text[128];
+        CHECK(c.mix.body_mix==0&&c.mix.coherent_low_gain==1&&SendMessageW(low,TBM_GETPOS,0,0)==100);
+        GetWindowTextW(GetDlgItem(w,77),text,128);CHECK(wcsstr(text,L"相干低频")!=NULL);
+        for(int i=0;i<=100;i+=50) {
+            SendMessageW(low,TBM_SETPOS,TRUE,i);SendMessageW(w,WM_HSCROLL,TB_THUMBPOSITION,(LPARAM)low);
+            c=am_audio_get(a);CHECK(c.mix.coherent_low_gain==i/100.&&c.mix.body_mix==0&&c.mix.resonant_gain==1);
+        }
     }
     SendMessageW(mode,CB_SETCURSEL,0,0);SendMessageW(w,WM_COMMAND,MAKEWPARAM(41,CBN_SELCHANGE),(LPARAM)mode);
     CHECK(am_audio_get(a).drive.mode==VSL_PEDALS&&IsWindowEnabled(GetDlgItem(w,20)));

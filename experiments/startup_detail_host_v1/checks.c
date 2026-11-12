@@ -30,6 +30,6 @@ int main(int argc,char **argv) {
     memset(&variant,0,sizeof variant);memset(&bank,0,sizeof bank);
     CHECK(at_assets_valid(assets)&&assets->config.residual_bank==&assets->residual&&assets->residual.count==1);
     CHECK(assets->residual.profile[0].bands==12);free(assets);
-    {const AtField *fields=at_fields(&count);CHECK(count==28&&!strcmp(fields[26].name,"catch_gain")&&!strcmp(fields[27].name,"resonant_gain"));}
+    {const AtField *fields=at_fields(&count);CHECK(count==29&&!strcmp(fields[26].name,"catch_gain")&&!strcmp(fields[27].name,"resonant_gain"));}
     puts("PASS: startup detail context/transaction/owned12band assets");return 0;
 }

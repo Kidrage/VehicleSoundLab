@@ -1,103 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="984" viewBox="0 0 1320 984" role="img" aria-labelledby="title desc">
-<title id="title">Vehicle Sound Lab 系统总图</title>
-<desc id="desc">上半部分是现有 C 驾驶声场与录制回放，下半部分是独立声纹研究与后续接入条件。</desc>
-<style>
-text{font-family:"Microsoft YaHei UI","Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#132e41}
-.eyebrow{font-size:14px;letter-spacing:2px;font-weight:bold;fill:#326675}.title{font-size:40px;font-weight:bold}
-.sub{font-size:17px;fill:#405a68}.band{font-size:22px;font-weight:bold}.tag{font-size:14px;font-weight:bold;fill:#326675}
-.label{font-size:20px;font-weight:bold}.copy{font-size:15px;fill:#294453}.file{font-size:14px;fill:#3a5867}
-</style>
-<defs>
-<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8z" fill="#3c6675"/></marker>
-<marker id="trace" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8z" fill="#685e88"/></marker>
-</defs>
-<rect x="0" y="0" width="1320" height="984" rx="0" fill="#f4f7f8" stroke="none"/>
-<text x="44" y="33" class="eyebrow">VSL  /  ENGINEERING HANDOFF  /  2026.11.11</text>
-<text x="44" y="79" class="title">Vehicle Sound Lab · 系统总图</text>
-<text x="46" y="110" class="sub">统一入口：Launch-System.cmd   ｜   C11 驾驶与原生监听   ｜   分层声源、空间输出与可重建驾驶录制</text>
-<rect x="32" y="131" width="1256" height="502" rx="18" fill="#e9f2f5" stroke="#cadce2"/>
-<text x="56" y="169" class="band">01  驾驶主线</text>
-<text x="237" y="168" class="tag">DSP / APP 0.20.0  ·  驾驶与录制功能可用，目标音色仍在研究</text>
-<path d="M396 233H459" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M799 233H862" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M1032 274V295H226V316" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M629 295V316" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M1032 295V316" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M226 410V431H226" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round"/>
-<path d="M629 410V431H226" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round"/>
-<path d="M1032 410V431H226" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round"/>
-<path d="M226 431V450" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M396 496H459" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M799 496H862" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M178 274V290H46V588H56" fill="none" stroke="#685e88" stroke-width="2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#trace)"/>
-<path d="M629 563V547H425V233H459" fill="none" stroke="#685e88" stroke-width="2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#trace)"/>
-<rect x="56" y="192" width="340" height="82" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="73" y="221" class="label">控制入口</text>
-<text x="73" y="246" class="file">src/app/ · UI、键盘、预设</text>
-<text x="73" y="267" class="copy">控制快照 VslParams</text>
-<rect x="459" y="192" width="340" height="82" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="476" y="221" class="label">驾驶状态机 · 200 Hz</text>
-<text x="476" y="246" class="file">src/drive/ · VslDrive</text>
-<text x="476" y="267" class="copy">启停、换挡、断油、RPM 与负载</text>
-<rect x="862" y="192" width="340" height="82" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="879" y="221" class="label">声层映射与时钟</text>
-<text x="879" y="246" class="file">orchestrator.c / clocks.c / voicing.c</text>
-<text x="879" y="267" class="copy">状态包络、独立转动与音色时钟</text>
-<rect x="56" y="316" width="340" height="94" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="73" y="345" class="label">DNA / 排气</text>
-<text x="73" y="370" class="file">dna.c / high_orders.c</text>
-<text x="73" y="391" class="copy">旧 .dna 与排气阶次；默认 Original OSC</text>
-<rect x="459" y="316" width="340" height="94" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="476" y="345" class="label">机体轰鸣</text>
-<text x="476" y="370" class="file">pad.c / acoustics.c</text>
-<text x="476" y="391" class="copy">现有 PAD；IR 返回进入 BODY</text>
-<rect x="862" y="316" width="340" height="94" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="879" y="345" class="label">噪声 / NVH / 事件</text>
-<text x="879" y="370" class="file">nvh.c / mechanical*.c / events.c</text>
-<text x="879" y="391" class="copy">机械、进气、空气、路、风与瞬态</text>
-<rect x="56" y="450" width="340" height="93" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="73" y="479" class="label">10 路独立声源</text>
-<text x="73" y="504" class="file">engine.c → VslObjectFrame</text>
-<text x="73" y="525" class="copy">空间处理前、主音量前；可独立导出</text>
-<rect x="459" y="450" width="340" height="93" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="476" y="479" class="label">空间与输出混音</text>
-<text x="476" y="504" class="file">src/spatial/ · scene.c / propagation.c</text>
-<text x="476" y="525" class="copy">布局、可选几何传播、主音量</text>
-<rect x="862" y="450" width="340" height="93" rx="12" fill="#ffffff" stroke="#b5cbd2"/>
-<text x="879" y="479" class="label">监听与导出</text>
-<text x="879" y="504" class="file">audio_device.c / src/cli/</text>
-<text x="879" y="525" class="copy">实时 stereo；离线 stereo / 7.1.4</text>
-<rect x="56" y="563" width="340" height="62" rx="12" fill="#f5f2fa" stroke="#c6b9da"/>
-<text x="73" y="592" class="label">已应用控制帧 → Take</text>
-<text x="73" y="617" class="file">src/session/ / src/io/take_file.c</text>
-<rect x="459" y="563" width="743" height="62" rx="12" fill="#f5f2fa" stroke="#c6b9da"/>
-<text x="476" y="592" class="label">Take 重放 → 同一 C 引擎</text>
-<text x="476" y="617" class="file">take_render.c · 恢复参数、DNA/IR、seed；重新合成，不是播放旧 WAV</text>
-<path d="M396 588H459" fill="none" stroke="#685e88" stroke-width="2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#trace)"/>
-<rect x="32" y="654" width="1256" height="282" rx="18" fill="#edf2ec" stroke="#d1dfd0"/>
-<text x="56" y="690" class="band">02  独立音色研究</text>
-<text x="271" y="689" class="tag">分析在离线进行  ·  监听实时生成  ·  研究模型未替换驾驶声源</text>
-<path d="M356 779H391" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<path d="M691 779H726" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<rect x="56" y="719" width="300" height="119" rx="12" fill="#fff" stroke="#b7ccbb"/>
-<text x="73" y="748" class="label">批准素材与观察</text>
-<text x="73" y="773" class="file">references/segments_v1.json</text>
-<text x="73" y="794" class="copy">A 车外 / B 车内 / D 台架 / E 车内</text>
-<text x="73" y="815" class="copy">切片、身份、限制与验证分别建档</text>
-<rect x="391" y="719" width="300" height="119" rx="12" fill="#fff" stroke="#b7ccbb"/>
-<text x="408" y="748" class="label">离线分析 / 生成模型</text>
-<text x="408" y="773" class="file">tools/ · Python 与音频分析脚本</text>
-<text x="408" y="794" class="copy">声线、幅度 / 相位和统计变化</text>
-<text x="408" y="815" class="copy">模型预载；音频线程不读素材</text>
-<rect x="726" y="710" width="476" height="82" rx="12" fill="#fff" stroke="#b7ccbb"/>
-<text x="743" y="739" class="label">Sound DNA V1 · 固定相位方案获认可</text>
-<text x="743" y="764" class="file">modules/sound_dna/ → sustain_monitor_v3</text>
-<text x="743" y="785" class="copy">独立持续 OSC；V10 监听 + 两个合成复用测试</text>
-<path d="M708 779V840H726" fill="none" stroke="#3c6675" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<rect x="726" y="800" width="476" height="82" rx="12" fill="#fff7ec" stroke="#d4b490"/>
-<text x="743" y="829" class="label">低频轰鸣 V2 · 听评未通过</text>
-<text x="743" y="854" class="file">modules/low_rumble/ → sustain_monitor_v4</text>
-<text x="743" y="875" class="copy">风声／低频噪声感；保留对照与四种录音视角</text>
-<text x="56" y="912" class="sub">下一步（未接入驾驶）：提取发动机同步低频 → 留出验证相位和包络 → 等低频 RMS 听评 → 新版本适配工况。</text>
-<text x="44" y="964" class="file">实线：当前处理路径     虚线：Take 录制与重放     入口职责、接口、文件哈希及历史阶段见交接索引。</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120">
+<title>Vehicle Sound Lab 当前统一 C 系统</title>
+<desc>唯一驾驶控制器、Sound DNA、独立低频与连续细节、空间路由、自包含行程。怠速及带载音色仍待标定。</desc>
+<rect width="1440" height="1120" fill="#f4f7f8"/>
+<text x="44" y="24" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#3c6878">VSL  /  C11 ENGINEERING HANDOFF  /  2026.11.13</text>
+<text x="44" y="61" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="36" fill="#193347">Vehicle Sound Lab · 当前统一系统</text>
+<text x="44" y="118" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="18" fill="#193347">新 atlas 驾驶链 · 540份 C/H · 55项 CTest · 独立声源参数与设备／文件操作</text>
+<rect x="44" y="176" width="420" height="142" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="62" y="191" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">驾驶输入与原生监听</text>
+<text x="62" y="229" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">点火 / 油门 / 制动 / 挡位 / 转速台架</text>
+<text x="62" y="257" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">experiments/atlas_monitor_v1</text>
+<text x="62" y="285" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">开始、停止、分层量与行程录放</text>
+<rect x="510" y="176" width="420" height="142" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="528" y="191" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">唯一驾驶控制器 · 200 Hz</text>
+<text x="528" y="229" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">src/drive + core/orchestrator</text>
+<text x="528" y="257" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">RPM / 负载 / 启停 / 换挡 / 断油</text>
+<text x="528" y="285" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">各层包络由状态统一调度</text>
+<rect x="976" y="176" width="420" height="142" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="994" y="191" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">素材 → 纯参数</text>
+<text x="994" y="229" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">批准素材 → 离线分析 / 留出核查</text>
+<text x="994" y="257" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">车型、录音视角、状态各自保留</text>
+<text x="994" y="285" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">.model / .rdetail / .sres；无PCM循环</text>
+<polyline points="464,247 510,247" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="510,247 500,241 500,253" fill="#587789"/>
+<polyline points="720,318 720,345 254,345 254,372" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="254,372 248,362 260,362" fill="#587789"/>
+<polyline points="720,318 720,372" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="720,372 714,362 726,362" fill="#587789"/>
+<polyline points="1186,318 1186,372" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="1186,372 1180,362 1192,362" fill="#587789"/>
+<rect x="44" y="372" width="420" height="176" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="62" y="387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">Sound DNA · 主声线</text>
+<text x="62" y="425" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">sound_dna + dna_atlas</text>
+<text x="62" y="453" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">一组 OSC / 固定平均相位 / 统计幅度</text>
+<text x="62" y="481" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">按声学根音插值；共享实际相位</text>
+<text x="62" y="509" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">35%配方：主DNA替换量随细节淡出</text>
+<rect x="510" y="372" width="420" height="176" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="528" y="387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">低频 · 两条独立路径</text>
+<text x="528" y="425" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">harmonic_body：主DNA互补分层</text>
+<text x="528" y="453" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">drive_recipe：实测相位LF独立参数</text>
+<text x="528" y="481" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">共用主DNA相位；独立量与机体包络</text>
+<text x="528" y="509" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">不能把互补分层当作新增低频声源</text>
+<rect x="976" y="372" width="420" height="176" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="994" y="387" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">连续细节与辅助层</text>
+<text x="994" y="425" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">drive_resonance → Rdt / Rvs</text>
+<text x="994" y="453" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">AR／双通道VAR / SOS / 连续新激励</text>
+<text x="994" y="481" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">drive_aux / start_texture / events</text>
+<text x="994" y="509" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">进气、机械、启动、换挡等分开维护</text>
+<polyline points="254,548 254,579" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="254,579 248,569 260,569" fill="#587789"/>
+<polyline points="720,548 720,579" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="720,579 714,569 726,569" fill="#587789"/>
+<polyline points="1186,548 1186,579" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="1186,579 1180,569 1192,569" fill="#587789"/>
+<rect x="44" y="579" width="1352" height="126" rx="14" fill="#e7f1f5" stroke="#bfd0d8" stroke-width="2"/>
+<text x="62" y="594" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">统一调度与分轨 · modules/atlas_drive</text>
+<text x="62" y="632" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">可选 recipe_bank：先计算DNA功率替换 → 主DNA采样 → 同相位LF与细节 → 各自包络 → 一次混音</text>
+<text x="62" y="660" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">独立采集主DNA、互补低频、相干LF、连续细节、辅助与事件；静音／范围外继续推进内部状态</text>
+<polyline points="254,705 254,745" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="254,745 248,735 260,735" fill="#587789"/>
+<polyline points="720,705 720,745" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="720,745 714,735 726,735" fill="#587789"/>
+<polyline points="1186,705 1186,745" fill="none" stroke="#587789" stroke-width="3"/>
+<polygon points="1186,745 1180,735 1192,735" fill="#587789"/>
+<rect x="44" y="745" width="420" height="144" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="62" y="760" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">空间与输出</text>
+<text x="62" y="798" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">stereo_bed / src/spatial</text>
+<text x="62" y="826" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">观察L/R保留；辅助对象只空间化一次</text>
+<text x="62" y="854" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">设备stereo；2 / 12通道离线导出</text>
+<rect x="510" y="745" width="420" height="144" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="528" y="760" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">录制 → 自包含重合成</text>
+<text x="528" y="798" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">atlas_take / atlas_take_io</text>
+<text x="528" y="826" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">schema8 / 29控制字段 / 模型与seed</text>
+<text x="528" y="854" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">严格版本身份；保存分层源与输出哈希</text>
+<rect x="976" y="745" width="420" height="144" rx="14" fill="#ffffff" stroke="#bfd0d8" stroke-width="2"/>
+<text x="994" y="760" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">宿主与实时边界</text>
+<text x="994" y="798" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">atlas_monitor / win_output</text>
+<text x="994" y="826" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">预分配缓冲、启停淡变、成功提交帧</text>
+<text x="994" y="854" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">加载 / 校验 / 文件IO均在音频线程外</text>
+<rect x="44" y="925" width="1352" height="150" rx="14" fill="#fff3e5" stroke="#bfd0d8" stroke-width="2"/>
+<text x="62" y="940" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="22" fill="#193347">本轮接入与未完成项</text>
+<text x="62" y="978" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">入口：Launch-Full-Recipe-Drive-Study.cmd；默认停止、未点火、房间0；保留35%原参数</text>
+<text x="62" y="1006" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">此配方仅有46.875 Hz局部锚点；1/120是工程映射。支持区不是实测发动机RPM／负载覆盖。</text>
+<text x="62" y="1034" dominant-baseline="text-before-edge" font-family="Microsoft YaHei UI,Microsoft YaHei,sans-serif" font-size="16" fill="#193347">真实怠速、中低转带载、同RPM负载声纹、多发动机听评及实际7.1.4验证仍待完成。</text>
 </svg>

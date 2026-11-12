@@ -1,7 +1,7 @@
 # 行程文件 I/O
 
-非实时模块。`at_take_encode/decode` 处理内存，`at_take_save/load` 处理 UTF8 路径。当前独立 `.vslrun` schema5，27控制字段，保存对象／立体声声床模式及可选启动／接火模型；旧 `.vsltake` schema5是另一协议。schema4匹配播放器见`references/analysis/catch_drive_v1/before/bin`，schema3见`startup_drive_v1/before/bin`，schema2见`baselines/system_status_v1`或`stereo_bed_v1/before/bin`，schema1见`baselines/atlas_take_v1`。本版本明确拒绝旧格式／旧渲染身份。
+非实时模块。`at_take_encode/decode`处理内存，`at_take_save/load`处理UTF8路径。当前独立`.vslrun`为schema8／29控制，保存声床模式、可选启动／接火、Rdt／Rvs及稳定证书、独立LF与功率替换参数；旧`.vsltake`是另一协议。schema7匹配播放器和实际设备take在`references/analysis/full_recipe_drive_v1/before1`，更早版本见各自冻结快照。本版本明确拒绝旧格式／旧渲染身份。
 
-文件顺序：8字节 `VSLRUN\r\n` → u32版本 → 64字节渲染身份 → u32控制字段数 → 配置／DNA／对齐后的相位、单位复数、差分、正弦表／可选残差／可选启动谱矩与淡化／可选接火模式、beta与时间常数 → 初始化控制 → 帧数、停止帧、双哈希 → 控制事件 → u64 FNV校验。整数与IEEE754双精度均显式小端，不dump C结构体。
+文件顺序：8字节`VSLRUN\r\n` → u32版本 → 64字节渲染身份 → u32控制字段数 → 配置／DNA／有效相位与查表／可选残差／启动／接火／逐锚点Rdt或Rvs参数与稳定证书／可选完整配方LF模型、校准量、支持界限、编译功率mask → 初始化控制 → 帧数、停止帧、双哈希 → 控制事件 → u64 FNV校验。整数与IEEE754双精度均显式小端，不dump C结构体。
 
 最大32MiB；锚点、谐波、统计组件、残差频带、事件数量及所有控制均有上限和范围验证。截断、尾随、错误版本／身份／校验及非法模型事务拒绝，原行程不变。成功载入拥有全部模型，不依赖外部路径。保存通过同目录独占临时文件、flush和原子替换；普通I/O失败保留既有文件。

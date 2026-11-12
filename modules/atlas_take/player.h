@@ -14,6 +14,7 @@ typedef struct {
     float startup[1024];
     float catch_bloom[1024];
     float resonant[1024];
+    float coherent_low_raw[1024],coherent_low[1024];
 } AtPlayer;
 /* Override layout2/12 for export; source controls are identical,12forces only
    spatial routing. Recorded presentation hash applies to its original layout. */

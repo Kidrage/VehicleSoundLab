@@ -26,8 +26,10 @@ void at_take_finish(AtTake *take);
 int at_take_valid(const AtTake *take);
 uint64_t at_hash_samples(uint64_t hash,const float *audio,unsigned samples);
 /* Frame-interleaved order: DNA raw,L/R; DNA voiced,L/R; residual,L/R;
-   body,L/R; event mono; auxiliary10objects; startupL/R; catch delta L/R; resonant L/R. All earlier capture pointers must be
-   present; NULL resonant means two zeros. Configured nonzero resonant must be captured.
+   body,L/R; event mono; auxiliary10objects; startupL/R; catch delta L/R;
+   resonant L/R; coherent LF raw,L/R and output,L/R. All earlier capture pointers
+   must be present; NULL optional resonant/LF means zeros. Configured nonzero
+   layers must be captured, including LF raw even when its amount is zero.
    Same source hash for stereo and12channel playback. */
 uint64_t at_hash_sources(uint64_t hash,const AdCapture *capture,unsigned frames);
 const char *at_render_id(void);
