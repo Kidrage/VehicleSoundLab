@@ -1,0 +1,462 @@
+{
+  "schema": "vsl.A-startup-HD-summary/1",
+  "date": "2026-11-12",
+  "result": "instrument_shape_observed_only",
+  "decoded_frames": 50,
+  "indicated_RPM_readings": [
+    {
+      "source_frame_index": 2214,
+      "rpm_interval": [
+        0,
+        200
+      ],
+      "label": "cluster on; indicated near zero",
+      "seconds": 36.9369,
+      "file": "frame_015.png",
+      "sha256": "98cd7ce133b2506a261a61fc6fd3b86c8c43c7e994dc4d669800ccf0bc61ac42"
+    },
+    {
+      "source_frame_index": 2226,
+      "rpm_interval": [
+        0,
+        200
+      ],
+      "label": "indicated near zero",
+      "seconds": 37.1371,
+      "file": "frame_017.png",
+      "sha256": "3e182e2578635045b489784ad4a0da9095e8d5c664d747784fb98f01e3193437"
+    },
+    {
+      "source_frame_index": 2238,
+      "rpm_interval": [
+        0,
+        200
+      ],
+      "label": "new cluster layout; near zero",
+      "seconds": 37.3373,
+      "file": "frame_019.png",
+      "sha256": "16f1bfcbd860cd6cf39d6d3e7e8449274c593414cb1de3a20faeda73ce701c02"
+    },
+    {
+      "source_frame_index": 2244,
+      "rpm_interval": [
+        0,
+        250
+      ],
+      "label": "near zero",
+      "seconds": 37.4374,
+      "file": "frame_020.png",
+      "sha256": "c479201a2bd049b08f072a7bcbe20f35c55c3d85174cb3c69759de3be92aadba"
+    },
+    {
+      "source_frame_index": 2250,
+      "rpm_interval": [
+        100,
+        600
+      ],
+      "label": "first clear indicated rise",
+      "seconds": 37.5375,
+      "file": "frame_021.png",
+      "sha256": "4d0b3567557aacd7798aa60a44ecd8b610306d91bd465cb69728c4c084effa55"
+    },
+    {
+      "source_frame_index": 2256,
+      "rpm_interval": [
+        600,
+        1200
+      ],
+      "label": "rising",
+      "seconds": 37.6376,
+      "file": "frame_022.png",
+      "sha256": "ff3e9b781ccade40039cf640e558d45af0736290aaf242bba43b0eced0532bf7"
+    },
+    {
+      "source_frame_index": 2262,
+      "rpm_interval": [
+        1300,
+        2000
+      ],
+      "label": "rising",
+      "seconds": 37.7377,
+      "file": "frame_023.png",
+      "sha256": "cb02a49e7b263502b1fc6caa591723e8a0aa70e6737a81e160b3eb0db2c9b5bd"
+    },
+    {
+      "source_frame_index": 2268,
+      "rpm_interval": [
+        1700,
+        2400
+      ],
+      "label": "upper flare",
+      "seconds": 37.8378,
+      "file": "frame_024.png",
+      "sha256": "21174c4fabc5911534a3421449771b0c25a2aadbd3abafc58e999fe5c9eb3c8c"
+    },
+    {
+      "source_frame_index": 2274,
+      "rpm_interval": [
+        1800,
+        2500
+      ],
+      "label": "upper flare",
+      "seconds": 37.9379,
+      "file": "frame_025.png",
+      "sha256": "c93a42e89c9b32041df3ac47da69527ace73ee1aa08f1281c4077658d393d7a1"
+    },
+    {
+      "source_frame_index": 2280,
+      "rpm_interval": [
+        1800,
+        2500
+      ],
+      "label": "upper flare",
+      "seconds": 38.038,
+      "file": "frame_026.png",
+      "sha256": "7ab692d862b99333b5086878239fa07cb51e7e23e6714830d8eb7b65468341c7"
+    },
+    {
+      "source_frame_index": 2286,
+      "rpm_interval": [
+        1700,
+        2400
+      ],
+      "label": "upper flare",
+      "seconds": 38.1381,
+      "file": "frame_027.png",
+      "sha256": "b7200687895359168eefefd9b51243e544c7a38d203435c1c055ec42f8bd4c65"
+    },
+    {
+      "source_frame_index": 2292,
+      "rpm_interval": [
+        1500,
+        2200
+      ],
+      "label": "falling",
+      "seconds": 38.2382,
+      "file": "frame_028.png",
+      "sha256": "edac1c2a4b39a8353484c7a839dfef0e6bc3ab6e50fa6b455c4ff4d2704df8e6"
+    },
+    {
+      "source_frame_index": 2298,
+      "rpm_interval": [
+        1300,
+        2000
+      ],
+      "label": "falling",
+      "seconds": 38.3383,
+      "file": "frame_029.png",
+      "sha256": "12982a1f8e6b5e54dcd23103b86ceacd445fa3d89cef9b2e77c3986f21a99e42"
+    },
+    {
+      "source_frame_index": 2304,
+      "rpm_interval": [
+        1100,
+        1700
+      ],
+      "label": "falling",
+      "seconds": 38.4384,
+      "file": "frame_030.png",
+      "sha256": "66d426bfd82df4954374e7dc8921327e3d05af3c3125672695e963823c0b5267"
+    },
+    {
+      "source_frame_index": 2310,
+      "rpm_interval": [
+        900,
+        1450
+      ],
+      "label": "falling toward low running",
+      "seconds": 38.5385,
+      "file": "frame_031.png",
+      "sha256": "f4dfa287403500ec2b621a3197de4d188dfcfec9f22ee9b2c9d6f0a70d858f02"
+    },
+    {
+      "source_frame_index": 2316,
+      "rpm_interval": [
+        700,
+        1250
+      ],
+      "label": "low running",
+      "seconds": 38.6386,
+      "file": "frame_032.png",
+      "sha256": "05c1309458ff1ac5cf5ef9f266ea1acada7a8d11ef5ed4c1564952b3b842d864"
+    },
+    {
+      "source_frame_index": 2322,
+      "rpm_interval": [
+        650,
+        1150
+      ],
+      "label": "low running",
+      "seconds": 38.7387,
+      "file": "frame_033.png",
+      "sha256": "4e48e7df574d3ea5b850162644c2897738c69d41ad54d8ff70b1b9346f381f91"
+    },
+    {
+      "source_frame_index": 2334,
+      "rpm_interval": [
+        650,
+        1150
+      ],
+      "label": "low running",
+      "seconds": 38.9389,
+      "file": "frame_035.png",
+      "sha256": "0804e87d4609364fcb775b03217cd4466a6017ae93f28657391d2d6f3b64c5e1"
+    },
+    {
+      "source_frame_index": 2352,
+      "rpm_interval": [
+        650,
+        1150
+      ],
+      "label": "low running",
+      "seconds": 39.2392,
+      "file": "frame_038.png",
+      "sha256": "ef9e5aa7905dfc3ca1912366694606bec15d97eb50de09fccf62b975d3afa04f"
+    },
+    {
+      "source_frame_index": 2364,
+      "rpm_interval": [
+        650,
+        1150
+      ],
+      "label": "low running",
+      "seconds": 39.4394,
+      "file": "frame_040.png",
+      "sha256": "8572cfb4696ad9534f71350abd10bd201b63b6b733fe613c3c4d486190124920"
+    }
+  ],
+  "indicated_shape": {
+    "peak_observed_lower_bound_RPM": 1800,
+    "peak_observed_upper_bound_RPM": 2500,
+    "old_1150_peak_below_indicated_flare": true,
+    "interpretation": "Instrument-indicated broad shape only; not calibrated crank trace or source phase"
+  },
+  "controller_policy": {
+    "crank_seconds": 0.28,
+    "crank_asymptote_rpm": 220,
+    "catch_rise_seconds": 0.2,
+    "catch_settle_seconds": 0.45,
+    "flare_rpm": 1150,
+    "idle_rpm": 850
+  },
+  "coarse_paths": [
+    {
+      "status": "no_connected_family",
+      "rows": []
+    },
+    {
+      "status": "no_connected_family",
+      "rows": []
+    }
+  ],
+  "coarse_pair_gate": {
+    "passed": false,
+    "reason": "Missing complete independent coarse family"
+  },
+  "known_chirp_controls": [
+    {
+      "reference": 3,
+      "p95_error_hz": 0.09638015049749526
+    },
+    {
+      "reference": 5,
+      "p95_error_hz": 0.07974426664914347
+    }
+  ],
+  "runtime_changed": false,
+  "C_H_unchanged": 478,
+  "new_CTests_run": false,
+  "phase_qualified": false,
+  "physical_RPM_calibrated": false,
+  "independent_AV_alignment": false,
+  "review": {
+    "result": "approved_A_context_and_observation_page_published",
+    "media_command": [
+      "ffmpeg",
+      "-v",
+      "info",
+      "-nostdin",
+      "-n",
+      "-to",
+      "39.8",
+      "-i",
+      "E:\\VehicleSoundLab\\references\\analysis\\A_hires_v1\\fetch1\\A_picture.mp4.part",
+      "-to",
+      "39.8",
+      "-i",
+      "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+      "-filter_complex",
+      "[0:v]trim=start=35.5:end=39.8,setpts=PTS-STARTPTS[v];[1:a]atrim=start=35.5:end=39.8,asetpts=PTS-STARTPTS[a]",
+      "-map",
+      "[v]",
+      "-map",
+      "[a]",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "fast",
+      "-crf",
+      "18",
+      "-pix_fmt",
+      "yuv420p",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "192k",
+      "-movflags",
+      "+faststart",
+      "-shortest",
+      "E:\\VehicleSoundLab\\references\\analysis\\A_startup_video_v2\\review1\\A_start_context.mp4"
+    ],
+    "nominal_source_interval_seconds": [
+      35.5,
+      39.8
+    ],
+    "independent_AV_alignment_established": false,
+    "gain_or_denoising": false,
+    "files": [
+      {
+        "file": "A_start_context.mp4",
+        "sha256": "74121561d282a101b83580a6f0f1fb3363def5d03687c94688517f67ce776a78",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/A_start_context.mp4"
+      },
+      {
+        "file": "comparison.png",
+        "sha256": "29caaf1c51bea632ff308c2ea3328480726ae6b59683194a70d9a96cf5f74ea7",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/comparison.png"
+      },
+      {
+        "file": "frame_020.png",
+        "sha256": "c479201a2bd049b08f072a7bcbe20f35c55c3d85174cb3c69759de3be92aadba",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/frame_020.png"
+      },
+      {
+        "file": "frame_026.png",
+        "sha256": "7ab692d862b99333b5086878239fa07cb51e7e23e6714830d8eb7b65468341c7",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/frame_026.png"
+      },
+      {
+        "file": "frame_035.png",
+        "sha256": "0804e87d4609364fcb775b03217cd4466a6017ae93f28657391d2d6f3b64c5e1",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/frame_035.png"
+      },
+      {
+        "file": "index.html",
+        "sha256": "37fd6b353b23d8367612578dc045fa4c6a340d39fd79c8019fecc92c1146dc29",
+        "url": "http://127.0.0.1:8789/references/analysis/A_startup_video_v2/review1/index.html"
+      }
+    ],
+    "source_sha256": "5cb292f9018eac8e3778cc130ba7d0374f6675a082c4990248416f8e7d045109"
+  },
+  "external_source": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\A_hires_v1\\fetch1\\A_picture.mp4.part",
+    "sha256": "d92b727520d82da7306cdad65245719b791f99a64c7b85c50d4296990284d63c",
+    "whole_download_completed": false
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab-Git\\research\\A_startup_video_v2_annotations.json": "c9a864806385d9c07255ecfb536c0b0562b6adcd4c3b54af9ec6a0822860a705",
+    "E:\\VehicleSoundLab\\references\\analysis\\A_startup_video_v2\\observation1\\report.json": "297f5bd0b9e0fb300bc2c36172995f1cff2948705b290bc24b6da2159a47495b",
+    "E:\\VehicleSoundLab-Git\\src\\profiles\\lifecycle.c": "5dbabbe80fb9594946e9c3c25511851fb2e10b056b4319760791a3a34737a777",
+    "E:\\VehicleSoundLab\\references\\analysis\\startup_action_v1\\audit1\\report.json": "56a8c5186b0ef22a5453f93118c643d9c059086213f89bb2e5b7be261cef1591"
+  },
+  "limits": [
+    "Cluster changes layout around37.2s and shows startup warning graphics; do not equate layout change with catch",
+    "No full-range tach sweep appears in the sampled frames, but these observations do not calibrate instrument dynamics",
+    "Needle thickness, small native dial and perspective limit readings; bounds are visual estimates, not confidence intervals",
+    "Do not transfer E display-marker timing or root/RPM mapping to A",
+    "Audio corroboration and instantaneous acoustic phase remain separate qualifications",
+    "No source model compilation or new startup/controller settings",
+    "No instantaneous phase, physical engine order or A/V calibration inferred from a coarse path"
+  ],
+  "current_source_sha256": {
+    "research/A启动动作与仪表V2.md": "7f3323e9e96d65dd780f52fe135ad4855fddd1b09aceaaca547b3b91b008be9c",
+    "research/A_startup_video_v2_annotations.json": "c9a864806385d9c07255ecfb536c0b0562b6adcd4c3b54af9ec6a0822860a705",
+    "research/动作转速与高频边界V1.md": "006a3a16323265c348e08f0abfd1330a490a08f1b8fba9341c1da5816f66673e",
+    "handoff/研究续接.md": "2b406ad46bf249d27250f009332f88c00d1da02835860c8a5c1f090cc7ef840a",
+    "handoff/C文件索引.csv": "6d5b791fad90b976e2d79d5c99f20b35c02149e788fd235e79c5ddd8274011db",
+    "AGENTS.md": "7734d305cb6ed67d6a0724a8c915b609c1a931bf7d90fda03f962e86143a63e7",
+    "README.md": "5993733f5aca54da3bbd7f1796eeefc06bc2b5ee546d9b3695e50d729393e47d",
+    "tools/observe_A_startup_v2.py": "fd85da052c4df5f50f2352f71912bb9339142e3a275faa1d3b8b5fb48365a8fa",
+    "tools/analyze_A_startup_video_v2.py": "92b05ed083fa651957a73f2e0966960a1901c69812d7328d200ab95862455f9a",
+    "tools/review_A_startup_video_v2.py": "5cb292f9018eac8e3778cc130ba7d0374f6675a082c4990248416f8e7d045109",
+    "tools/finalize_A_startup_video_v2.py": "9383492d6df3e54f2ae724d312846bd86a3c763b174efdcc3d86dda1f2951689",
+    "tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+  },
+  "evidence_sha256": {
+    "analysis1/comparison.png": "29caaf1c51bea632ff308c2ea3328480726ae6b59683194a70d9a96cf5f74ea7",
+    "analysis1/exact_sources/research/A_startup_video_v2_annotations.json": "c9a864806385d9c07255ecfb536c0b0562b6adcd4c3b54af9ec6a0822860a705",
+    "analysis1/exact_sources/tools/analyze_A_startup_video_v2.py": "92b05ed083fa651957a73f2e0966960a1901c69812d7328d200ab95862455f9a",
+    "analysis1/exact_sources/tools/drive_evidence_v1/family.py": "a03b8425e15a69f2ace5cff06291e00cbd7d205e0ef76e2e53a2ec70dc1460bd",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/report.json": "dd847b1d9d9f4f3aa7cfdadd702a24f787ea980788f177fde313ed3987c38f08",
+    "observation1/decode.log": "dc751bc7f4842772416db9b189ebe84bdb8f48d180157abefe649a66777111d8",
+    "observation1/executed_observe.py": "fd85da052c4df5f50f2352f71912bb9339142e3a275faa1d3b8b5fb48365a8fa",
+    "observation1/frame_001.png": "c0e9d1778781a7f5d7c6fba0ece7d319017a80237213b7396eb7a42f6640ec6f",
+    "observation1/frame_002.png": "191e7f3c7397f58774ed23b3ce8d848469bf83796c27fe801ddb41a5ce766cc4",
+    "observation1/frame_003.png": "256d344a05a876962fa41fe24d28195d66a8a1c8057f7672826bc098beee6f92",
+    "observation1/frame_004.png": "94a480e58307aab21b19a11ed922a9bb7705e9adb23da608704ea7b600d1be8d",
+    "observation1/frame_005.png": "9560dc705717fa0ad92054dbb3c9206e17c0acd13bd6583f0346596a77c4650a",
+    "observation1/frame_006.png": "6f1c2274ca3a7af205f8e27fb89d92d22211ee8cd9286905d1a2c38fbd0fd234",
+    "observation1/frame_007.png": "e88d2f99f71c47f455ce8b4994b13300bc15aa8216e7f1440ecafd9b030a9e77",
+    "observation1/frame_008.png": "92124591e8dc9b0fc9ba91054553f1041a69d6a296df879ccc04aae7d3054b03",
+    "observation1/frame_009.png": "3121d83a594cc5bc79cd95c0ab2ef01c8ba744dfeef8e58dd8184d3af10c0789",
+    "observation1/frame_010.png": "1cf57b8b4e830c713dc6b06942e0f680ed756b49863c39435ef65113d8a40ead",
+    "observation1/frame_011.png": "388bf6a0121ef32024993afb348b31b3fa8926bf21d33bfbb8a6b0ec6ae88be5",
+    "observation1/frame_012.png": "76dc5932bdda486d08f2411913de269e5c5e177570ce567cc327fc16419e0f2b",
+    "observation1/frame_013.png": "eea7fe1d43523f021d4daef06a78c0922434298969ba52e9de3e4b004d92c0c1",
+    "observation1/frame_014.png": "c3dce82bdc7e2934f6f3ad31c2e877dcc187ff59a6166aad03a92f6807eb9b9c",
+    "observation1/frame_015.png": "98cd7ce133b2506a261a61fc6fd3b86c8c43c7e994dc4d669800ccf0bc61ac42",
+    "observation1/frame_016.png": "54227d61d64b5e52bfc19d2d95aa05693c96acc58aa5b44d199a9b1955bd95c0",
+    "observation1/frame_017.png": "3e182e2578635045b489784ad4a0da9095e8d5c664d747784fb98f01e3193437",
+    "observation1/frame_018.png": "278c19f12d17736f22b930fb34f048e231b03903c654c7a514a4a4af23d8b5d7",
+    "observation1/frame_019.png": "16f1bfcbd860cd6cf39d6d3e7e8449274c593414cb1de3a20faeda73ce701c02",
+    "observation1/frame_020.png": "c479201a2bd049b08f072a7bcbe20f35c55c3d85174cb3c69759de3be92aadba",
+    "observation1/frame_021.png": "4d0b3567557aacd7798aa60a44ecd8b610306d91bd465cb69728c4c084effa55",
+    "observation1/frame_022.png": "ff3e9b781ccade40039cf640e558d45af0736290aaf242bba43b0eced0532bf7",
+    "observation1/frame_023.png": "cb02a49e7b263502b1fc6caa591723e8a0aa70e6737a81e160b3eb0db2c9b5bd",
+    "observation1/frame_024.png": "21174c4fabc5911534a3421449771b0c25a2aadbd3abafc58e999fe5c9eb3c8c",
+    "observation1/frame_025.png": "c93a42e89c9b32041df3ac47da69527ace73ee1aa08f1281c4077658d393d7a1",
+    "observation1/frame_026.png": "7ab692d862b99333b5086878239fa07cb51e7e23e6714830d8eb7b65468341c7",
+    "observation1/frame_027.png": "b7200687895359168eefefd9b51243e544c7a38d203435c1c055ec42f8bd4c65",
+    "observation1/frame_028.png": "edac1c2a4b39a8353484c7a839dfef0e6bc3ab6e50fa6b455c4ff4d2704df8e6",
+    "observation1/frame_029.png": "12982a1f8e6b5e54dcd23103b86ceacd445fa3d89cef9b2e77c3986f21a99e42",
+    "observation1/frame_030.png": "66d426bfd82df4954374e7dc8921327e3d05af3c3125672695e963823c0b5267",
+    "observation1/frame_031.png": "f4dfa287403500ec2b621a3197de4d188dfcfec9f22ee9b2c9d6f0a70d858f02",
+    "observation1/frame_032.png": "05c1309458ff1ac5cf5ef9f266ea1acada7a8d11ef5ed4c1564952b3b842d864",
+    "observation1/frame_033.png": "4e48e7df574d3ea5b850162644c2897738c69d41ad54d8ff70b1b9346f381f91",
+    "observation1/frame_034.png": "0df160d431ef464c0b05755c72b82fa895eabd79ba3ce4eb8b50e06c645412b9",
+    "observation1/frame_035.png": "0804e87d4609364fcb775b03217cd4466a6017ae93f28657391d2d6f3b64c5e1",
+    "observation1/frame_036.png": "fbe9f42c2fd977183c84003d8dff19f31c3975ba990314122c8027ee084486d5",
+    "observation1/frame_037.png": "143cdf3f323da9c2e4745e87a1bede54dc3d7f64bbc06a90c75d597486d7d561",
+    "observation1/frame_038.png": "ef9e5aa7905dfc3ca1912366694606bec15d97eb50de09fccf62b975d3afa04f",
+    "observation1/frame_039.png": "1ddb71538a0f3173a432d83adadc0ecaf1e65d7ee1cbab9ea4b755b66636c1c4",
+    "observation1/frame_040.png": "8572cfb4696ad9534f71350abd10bd201b63b6b733fe613c3c4d486190124920",
+    "observation1/frame_041.png": "044875fb19a12e3fe188c744250f5416f10d7ca0e6e5d9a1b98c67ee11660e77",
+    "observation1/frame_042.png": "3a0eb344bb456e28193f23292e908fbf548f720c63f8e4b3bafb2e26f41749da",
+    "observation1/frame_043.png": "3a60d3d8d693927db5163d801b62f0305d307a77d44d595c1555c928227d46a0",
+    "observation1/frame_044.png": "b6f83d22ce0a15f864730e116dcdec757584872139fae2739886ae6d7058c816",
+    "observation1/frame_045.png": "8cf2b9bac0798ebc9b0376a446566653b997ee8b4a73ccd91a8639ed532f07ba",
+    "observation1/frame_046.png": "f564fee171e3176a72eb0d25bea224046d19f6556a768f866d99a3ae809d7b8e",
+    "observation1/frame_047.png": "f8e25b9292b392230de3011f3e8dcfdc02642c0ebc4307ba79f6a6d2e5c1970b",
+    "observation1/frame_048.png": "637a8e798e17734298a0d6968358c78faa76bb0e10242721faf324b6dd800ed6",
+    "observation1/frame_049.png": "7b6d0555b95532f14fc95fb62de5fb511138d4f2d1953256f12d2e5943a5927d",
+    "observation1/frame_050.png": "fb4a263b84ef508754781bfb4c3b2ff60cea0fdbf6601c90f161850995d5b8e5",
+    "observation1/frame_index.json": "e7c1c32177a4a97606f50c09e88bbef13d3a09bb29edfe9e1fb1e92f48441e5f",
+    "observation1/index_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "observation1/report.json": "297f5bd0b9e0fb300bc2c36172995f1cff2948705b290bc24b6da2159a47495b",
+    "observation1/sheet_01.png": "93be0d7408bac1c781872a84a19768a70fd745f272c46e2b93a24e19650bc519",
+    "observation1/sheet_02.png": "adb7cac4b17ae6cb7150d7e2d5565e03aff18df20c3f907fde1a954e6cbf82e9",
+    "observation1/sheet_03.png": "ffdde2768c89f3d7d87f0b7a7a5b1ab2245eeff4af335e3af6183eb5ae310ac6",
+    "observation1/sheet_04.png": "d997d8cb61cb7865b7c169f2a3adcc33526f1fb0fe5a5948e4f8bd527ff41d5b",
+    "observation1/sheet_05.png": "8b4d057ca048ed289113996e724eb3fe887d594ed501215f61bb4f5d51ef2f8d",
+    "review1/A_start_context.mp4": "74121561d282a101b83580a6f0f1fb3363def5d03687c94688517f67ce776a78",
+    "review1/comparison.png": "29caaf1c51bea632ff308c2ea3328480726ae6b59683194a70d9a96cf5f74ea7",
+    "review1/encode.log": "0393f3620865f5c7dd9fe6c37a9d7ae23725b7503dbb766504a465e265f3821e",
+    "review1/frame_020.png": "c479201a2bd049b08f072a7bcbe20f35c55c3d85174cb3c69759de3be92aadba",
+    "review1/frame_026.png": "7ab692d862b99333b5086878239fa07cb51e7e23e6714830d8eb7b65468341c7",
+    "review1/frame_035.png": "0804e87d4609364fcb775b03217cd4466a6017ae93f28657391d2d6f3b64c5e1",
+    "review1/index.html": "37fd6b353b23d8367612578dc045fa4c6a340d39fd79c8019fecc92c1146dc29",
+    "review1/report.json": "35a75354e90c05ff944e504afef143bea3eef44e0517c4b4fbc517e16cd7ee9f"
+  }
+}

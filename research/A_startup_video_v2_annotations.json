@@ -1,0 +1,53 @@
+{
+  "schema": "vsl.instrument-observation/1",
+  "source": "A",
+  "video_id": "7aZm1Wkp6QM",
+  "observation": "E:/VehicleSoundLab/references/analysis/A_startup_video_v2/observation1/report.json",
+  "method": "Human visual reading of native 1080p frame crops; broad indicated-RPM intervals, not ECU telemetry",
+  "units": "indicated RPM",
+  "time_coordinate": "Decoded picture PTS seconds; unknown display/audio offset",
+  "exact_physical_crank_RPM_identified": false,
+  "pedal_or_load_observed": false,
+  "scene": "Park gear and displayed zero vehicle speed; cluster boot, indicated flare and return",
+  "cautions": [
+    "Cluster changes layout around37.2s and shows startup warning graphics; do not equate layout change with catch",
+    "No full-range tach sweep appears in the sampled frames, but these observations do not calibrate instrument dynamics",
+    "Needle thickness, small native dial and perspective limit readings; bounds are visual estimates, not confidence intervals",
+    "Do not transfer E display-marker timing or root/RPM mapping to A",
+    "Audio corroboration and instantaneous acoustic phase remain separate qualifications"
+  ],
+  "readings": [
+    {"source_frame_index": 2214, "rpm_interval": [0, 200], "label": "cluster on; indicated near zero"},
+    {"source_frame_index": 2226, "rpm_interval": [0, 200], "label": "indicated near zero"},
+    {"source_frame_index": 2238, "rpm_interval": [0, 200], "label": "new cluster layout; near zero"},
+    {"source_frame_index": 2244, "rpm_interval": [0, 250], "label": "near zero"},
+    {"source_frame_index": 2250, "rpm_interval": [100, 600], "label": "first clear indicated rise"},
+    {"source_frame_index": 2256, "rpm_interval": [600, 1200], "label": "rising"},
+    {"source_frame_index": 2262, "rpm_interval": [1300, 2000], "label": "rising"},
+    {"source_frame_index": 2268, "rpm_interval": [1700, 2400], "label": "upper flare"},
+    {"source_frame_index": 2274, "rpm_interval": [1800, 2500], "label": "upper flare"},
+    {"source_frame_index": 2280, "rpm_interval": [1800, 2500], "label": "upper flare"},
+    {"source_frame_index": 2286, "rpm_interval": [1700, 2400], "label": "upper flare"},
+    {"source_frame_index": 2292, "rpm_interval": [1500, 2200], "label": "falling"},
+    {"source_frame_index": 2298, "rpm_interval": [1300, 2000], "label": "falling"},
+    {"source_frame_index": 2304, "rpm_interval": [1100, 1700], "label": "falling"},
+    {"source_frame_index": 2310, "rpm_interval": [900, 1450], "label": "falling toward low running"},
+    {"source_frame_index": 2316, "rpm_interval": [700, 1250], "label": "low running"},
+    {"source_frame_index": 2322, "rpm_interval": [650, 1150], "label": "low running"},
+    {"source_frame_index": 2334, "rpm_interval": [650, 1150], "label": "low running"},
+    {"source_frame_index": 2352, "rpm_interval": [650, 1150], "label": "low running"},
+    {"source_frame_index": 2364, "rpm_interval": [650, 1150], "label": "low running"}
+  ],
+  "audio_family_trial_predeclaration": {
+    "purpose": "Revisit coarse peak-to-settle family using new video-constrained octave range; not phase qualification or model compilation",
+    "audio_source_seconds": [37.58, 38.60],
+    "anchor_root_hz": 85,
+    "anchor_interpretation": "Engineering bank-order2.5 hypothesis at roughly2000indicatedRPM gives~83Hz; not measured physical order",
+    "root_bounds_hz": [30, 110],
+    "window_ms": 160,
+    "reference_multiples": [3, 5],
+    "check_multiples": [2, 7],
+    "max_octaves_per_second": 4,
+    "paired_coarse_frequency_gate": "Same existing p95<=5percent, maximum<=10percent; a pass cannot qualify instantaneous phase"
+  }
+}
