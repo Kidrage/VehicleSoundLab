@@ -198,6 +198,12 @@ def code_rows():
                 layer, owner, role = "观察立体声布局", "stereo_bed", "观察L/R一次宽度与2/12前置声床；不等同缸列或物理对象"
             elif group == "stereo_bed_v1":
                 layer, owner, role = "立体声声床验证", "VslStereoBed_checks", "解析能量／侧相信号、驾驶与源哈希／分块／布局／对象隔离"
+            elif group == "start_texture":
+                layer, owner = "独立启动前段纹理", "start_texture"
+                role = "谱矩／工程淡化参数的事务读取与校验" if p.stem == "profile" else "复用持续OSC核、独立门控与量跟随；非PCM或完整启动"
+            elif group == "start_texture_v1":
+                layer, owner = "启动纹理独立验证", "start_texture_"+p.stem
+                role = "既有唯一驾驶器的两次启停与分轨" if p.stem == "probe" else "解析门控、相位／量隔离、持续与分块、事务校验"
             yield rel, layer, owner, role, digest(p)
 
 

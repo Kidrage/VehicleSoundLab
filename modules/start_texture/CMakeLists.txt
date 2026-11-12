@@ -1,0 +1,7 @@
+add_library(start_texture STATIC profile.c voice.c)
+target_include_directories(start_texture PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(start_texture PUBLIC sound_residual)
+target_compile_features(start_texture PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(start_texture PRIVATE /W4 /we4013 /utf-8)
+endif()

@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增独立 `modules/start_texture/profile.c/.h`（谱矩与起落参数）和 `voice.c/.h`（持续OSC、门控、量跟随）。`experiments/start_texture_v1/probe.c`复用唯一驾驶器导出两次启动附加层，`checks.c`验证门控与声源隔离；仅新增6份C/H，旧448份不变，现454份。该层尚未进入默认UI／atlas／录制协议，也不含接火低频。见[方法与证据](../research/启动机械纹理V1.md)。
+
 新增`modules/stereo_bed/route.c/.h`：观察L/R的一次宽度控制与2／12前置声床映射。`atlas_drive`的`AdConfig.scene_mode`0沿用旧对象投影，1保留DNA／互补低频／残差stereo，并只让辅助／事件进入原空间器；`AdCapture.observation/bed`可独立捕获。`atlas_take`／`atlas_take_io`现为schema3／25控制字段并保存模式，旧schema2播放器已冻结。当前448份C/H，见[集成与证据](../research/立体声声床接入V1.md)。
 
 新增独立状态片段诊断：`experiments/state_passage_v1/trajectory.c/.h`负责非实时声学Hz轨迹的读取、验证和不外推取值；`probe.c`调用原`dna_atlas`持续生成并写实际音高遥测。它不进入默认驾驶链、不写驾驶器RPM。新增3份C/H，旧442份身份保留，详见[驻车局部对照](../research/驻车状态局部对照V1.md)与[独立构建说明](../experiments/state_passage_v1/README.md)。
