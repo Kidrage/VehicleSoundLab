@@ -1,0 +1,269 @@
+{
+  "schema": "vsl.observed-topology-publication/1",
+  "result": "observed_topology_principle_rejected",
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/observed_topology_v1/observe1/report.json",
+      "sha256": "608920145444dfda4679d425235a574cae11f86587c5df26006026bd50731371",
+      "result": "observed"
+    },
+    "observe2": {
+      "path": "references/analysis/observed_topology_v1/observe2/report.json",
+      "sha256": "e26d133ae4fa3b4d716878e1959ef1665820251ee6c24e84cf98350d09ee0031",
+      "result": "observed"
+    },
+    "validate1": {
+      "path": "references/analysis/observed_topology_v1/validate1/report.json",
+      "sha256": "db1ba4fca2704f0468ab7a0547d6e5c2870aa772c93f25ee52b3f3b07826aa38",
+      "result": "failed"
+    },
+    "validate2": {
+      "path": "references/analysis/observed_topology_v1/validate2/report.json",
+      "sha256": "c0cfd385b8646439a827677d78f8bfe27d9e9ae144c1c05b4d3866c5db854905",
+      "result": "rejected"
+    },
+    "audit1": {
+      "path": "references/analysis/observed_topology_v1/audit1/report.json",
+      "sha256": "881104856f23ac63c7bb2c3b69448ea93a9d25a5ffa208a7a86b896d97e64cf9",
+      "result": "strict_input_pipeline_audited"
+    },
+    "dense_diagnose1": {
+      "path": "references/analysis/observed_topology_v1/dense_diagnose1/report.json",
+      "sha256": "e368ec8145c0f368d860eb8e81ae31e81eba9abb8dce4a440b3e7be3125f8f2d",
+      "result": "diagnosed_dense_failure_no_qualification_change"
+    }
+  },
+  "sources": {
+    "tools/package_observed_topology_v1.py": "611a3ea4a26a9377b7e65524ecdc4fd9f2f9942f082b2478c01543052f2648d7",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/audit_observed_topology_v1.py": "8434066f6e3b7e707904e8aaa769c5a315a364712a9cc705d616b7891879c47f",
+    "AGENTS.md": "169575fcc74beb699c10214640971317eafdf23b44453e4d6332899f0f5b0b6f",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "handoff/开发留痕.md": "65d0b1b752d7cba47bdb816dcd5535a403a635251d806292ee1bb0bd4a8e0b7f",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "handoff/算法说明.md": "3227ab5af87cdee7868930a2a3b1e1b02292b3918d45e05467a89e0bb450456e",
+    "research/实测声线结构V1.md": "daa37adde3ab5648dd1e9c59cf20588a22560c48c471a77403e5c149816b0746",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "handoff/研究续接.md": "24d0ef0f69405858af383713bdf84128bbf14be3cd73dbccc01e356053b59961",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "research/怠速与加速完成度V1.md": "b0026e7e29d5e1028d046c7cd8f4e2afbd2862cb7f0ce780a3dcf01a66970fba",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/diagnose_observed_dense_v1.py": "749f7d999fea5e7fc47e043756a22d1b57aea12e7bde20c44efa47efefdc6ca2",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90"
+  },
+  "total_cases": 17,
+  "passed_cases": 16,
+  "positive_cases": 14,
+  "passed_positive_cases": 13,
+  "negative_cases": 3,
+  "correctly_rejected_negative_cases": 3,
+  "exact_reused_fits": 10,
+  "new_fits": 5,
+  "topology_early_rejections": 2,
+  "initial_candidate_count": {
+    "constant": 14,
+    "amplitude_only": 14,
+    "curved_phase": 14,
+    "curved_phase_amplitude": 14,
+    "curved_phase_noise": 14,
+    "independent_phase_5": 14,
+    "single_carrier": 1,
+    "independent_phase_2": 14,
+    "independent_phase_3": 14,
+    "independent_phase_7": 14,
+    "two_independent_partials": 15,
+    "all_independent_partials": 20,
+    "unknown_six": 6,
+    "unknown_eighteen": 18,
+    "unknown_twenty_six": 26,
+    "unknown_thirty_six": 36,
+    "off_grid_single": 2
+  },
+  "selected_departures": {
+    "constant": [],
+    "amplitude_only": [],
+    "curved_phase": [],
+    "curved_phase_amplitude": [],
+    "curved_phase_noise": [],
+    "independent_phase_5": [
+      5.0
+    ],
+    "single_carrier": [],
+    "independent_phase_2": [
+      2.0
+    ],
+    "independent_phase_3": [
+      3.0
+    ],
+    "independent_phase_7": [
+      7.0
+    ],
+    "two_independent_partials": [
+      2.0,
+      7.0
+    ],
+    "all_independent_partials": [
+      3.0,
+      1.4
+    ],
+    "unknown_six": [],
+    "unknown_eighteen": [
+      2.6
+    ],
+    "unknown_twenty_six": [],
+    "unknown_thirty_six": [],
+    "off_grid_single": []
+  },
+  "additional6_8": {
+    "phase_p95_cycles": 5.775074768725087e-05,
+    "fitted_amplitude": 2.99613633343526e-05,
+    "discovery_threshold": 0.0033524972375103003
+  },
+  "dense36": {
+    "original_phase_p95_cycles": 0.0033278100196399802,
+    "continued": {
+      "evaluations": 300,
+      "success": false,
+      "message": "The maximum number of function evaluations is exceeded.",
+      "optimality": 3.6175656385672287e-06,
+      "cost": 8.306003001428468e-07,
+      "original_cost": 8.404036686447794e-07,
+      "assessment": {
+        "point_phase_p95_cycles": 0.003300724909756469,
+        "root_relative_p95": 0.009151728897406272,
+        "maximum_heldout_power_error_db": 0.04145614957986314,
+        "maximum_heldout_complex_correlation_error": 4.8640554679435055e-05,
+        "fitted_separate_carriers": 36,
+        "heldout_supported_carriers": 2,
+        "fitted_carrier_amplitudes": [
+          0.0643322950788457,
+          0.06626774097396401,
+          0.0660150839832947,
+          0.06278494376215422,
+          0.061472080181399276,
+          0.12178097202165288,
+          0.05959631943114863,
+          0.05662079683702717,
+          0.04924729817343697,
+          0.0484393367725117,
+          0.11967651833500982,
+          0.04963251402019908,
+          0.05298427516256978,
+          0.05089819356956167,
+          0.050739911748151074,
+          0.05511431892000238,
+          0.05959636085029896,
+          0.0594128207392552,
+          0.05706464882171387,
+          0.05983947436329288,
+          0.10711182604317455,
+          0.061349265647254056,
+          0.06310532043546588,
+          0.05810121236049777,
+          0.05531700039333231,
+          0.05761399310131812,
+          0.060151982931858604,
+          0.054631364251983505,
+          0.047714883793168475,
+          0.051936231919431926,
+          0.11625538484189976,
+          0.05123778702547675,
+          0.05006492473012586,
+          0.044078138415949715,
+          0.04761299784924498,
+          0.05375080669565718
+        ],
+        "heldout_powers": [
+          [
+            0.0027024402595651506,
+            0.001817570959623302
+          ],
+          [
+            0.0027848450844865204,
+            0.001871928890924153
+          ]
+        ],
+        "oracle_heldout_powers": [
+          [
+            0.0027189688801573402,
+            0.0018284477706804094
+          ],
+          [
+            0.002811372365910439,
+            0.0018898831899834725
+          ]
+        ],
+        "qualified": false
+      },
+      "seconds": 217.594349199906
+    },
+    "fixed_true_phase": {
+      "evaluations": 24,
+      "success": true,
+      "message": "`gtol` termination condition is satisfied.",
+      "initial_known_envelope_cost": 7.596234086779627e-06,
+      "cost": 1.3587668554284758e-06,
+      "uses_exact_analytic_phase": true,
+      "uses_known_amplitude_for_initialization": true,
+      "may_authorize_estimator": false
+    },
+    "comparison": {
+      "continued_phase_gate_passed": false,
+      "continued_cost_lower_than_fixed_true": true,
+      "global_optimum_or_identifiability_proven": false
+    },
+    "qualification": "failed_positive_retained"
+  },
+  "input_boundary": {
+    "original_catalog_metadata_unread": true,
+    "strict_whitelist_now_enforced": true,
+    "discovery_numerical_body_AST_identical": true,
+    "current_callers_source_exact": true,
+    "unexpected_truth_field_rejected": true
+  },
+  "source_audio_read": false,
+  "model_exported": false,
+  "real_source_permitted": false,
+  "full33_qualification_replaced": false,
+  "individual14kHz_retention_demonstrated": false,
+  "known_active_line_list_required": false,
+  "declared_fifth_grid_still_required": true,
+  "physical_source_identity_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "533560973809d7581c3aa59b42784206591839c8e9b69e9bfc906b36d6ae9fda",
+  "goal_turn_classification": "progress_measured_active_topology_and_strict_input_reconstruction",
+  "next_step": "Resolve dense-spectrum phase/amplitude approximation bias with independently validated bounded real envelopes; then all17, original33 and individual14kHz before original E",
+  "limits": [
+    "Active line candidates on a declared grid are not physical source identities or arbitrary lattice/RPM inference",
+    "Sideband candidates may be present; do not remove them using fixture truth or raise thresholds to match truth",
+    "Dense36 remains a failed positive after300 additional evaluations; small spectral residual does not certify phase",
+    "A lower biased-phase objective than the fixed-true-phase fit suggests model coupling, not a proof of global optimality or nonidentifiability",
+    "Original33 and high-frequency gates remain required; optimizer convergence is not established",
+    "F1/F2/F3 and A-low review questions stay pending; no duplicate requests"
+  ]
+}

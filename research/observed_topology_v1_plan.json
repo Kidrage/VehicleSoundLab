@@ -1,0 +1,29 @@
+{
+  "schema": "vsl.observed-topology-plan/1",
+  "scope": "Infer active lines on a declared fifth grid; not unknown lattice/RPM inference or full33/HF qualification",
+  "base_plan": "research/aperture_model_v1_plan.json",
+  "base_plan_sha256": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+  "minority_plan": "research/minority_phase_v1_plan.json",
+  "dictionary_denominator": 5,
+  "dictionary_order_range": [1,8],
+  "minimum_relative_amplitude": 0.08,
+  "minimum_absolute_amplitude": 0.0001,
+  "maximum_dictionary_condition": 100000,
+  "support_intervals": [[0,40],[0,20],[20,40]],
+  "added_cases": [
+    {"id":"unknown_six","phase":true,"amplitude":true,"noise":0.0001,"fixture_orders":[1.2,2.6,3.8,4.6,6.2,7.8],"gain":1},
+    {"id":"unknown_eighteen","phase":true,"amplitude":true,"noise":0.0001,"fixture_orders":[1,1.2,1.6,2,2.4,2.6,3,3.6,4,4.2,4.6,5,5.6,6,6.4,6.6,7.2,7.8],"contaminated_order":2.6,"gain":1},
+    {"id":"unknown_twenty_six","phase":true,"amplitude":true,"noise":0.0001,"fixture_orders":[1,1.2,1.6,1.8,2,2.2,2.6,2.8,3,3.2,3.6,3.8,4,4.2,4.6,4.8,5,5.2,5.6,5.8,6,6.2,6.6,6.8,7.2,7.8],"gain":0.55},
+    {"id":"unknown_thirty_six","phase":true,"amplitude":true,"noise":0.0001,"fixture_orders":[1,1.2,1.4,1.6,1.8,2,2.2,2.4,2.6,2.8,3,3.2,3.4,3.6,3.8,4,4.2,4.4,4.6,4.8,5,5.2,5.4,5.6,5.8,6,6.2,6.4,6.6,6.8,7,7.2,7.4,7.6,7.8,8],"gain":2.5},
+    {"id":"off_grid_single","phase":false,"amplitude":false,"noise":0,"fixture_orders":[1.53],"gain":1,"negative":true}
+  ],
+  "policy": [
+    "Inference receives geometry and dictionary settings, never the source-order truth, case labels or heldout observations",
+    "The candidate fifth grid remains explicit; active line discovery is not physical source or lattice identification",
+    "Keep the original12 cases and all unchanged phase/root/power/stereo gates",
+    "A line must exceed the same declared threshold in full and both contiguous halves; do not fill missing support",
+    "Infer first, then use the unchanged finite-aperture and restricted-minority fits",
+    "Reuse an existing executed fit only when inferred geometry, actual signal, source hashes and all effective fit inputs are exactly identical",
+    "No real source read/model export/C/runtime/audio/media changes; all33 plus individual14kHz remain required"
+  ]
+}
