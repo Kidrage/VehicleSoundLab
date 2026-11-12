@@ -1,0 +1,250 @@
+{
+  "schema": "vsl.aperture-model-publication/1",
+  "result": "finite_aperture_principle_incomplete",
+  "reports": {
+    "validate1": {
+      "path": "references/analysis/aperture_model_v1/validate1/report.json",
+      "sha256": "3529c4adb3b3e8e8a5bcee4e5c1537dbff8d31b407d04e95ebea58d5ad299d52",
+      "result": "rejected"
+    },
+    "diagnose1": {
+      "path": "references/analysis/aperture_model_v1/diagnose1/report.json",
+      "sha256": "b67d271f822f988d7c04e9de6c486e44c3be8ec2bd59ba5e4138bdfe44ceebfa",
+      "result": "failed"
+    },
+    "diagnose2": {
+      "path": "references/analysis/aperture_model_v1/diagnose2/report.json",
+      "sha256": "cdcacecbcd3ae6be9dc20901ebbe30a746dae598bf3696f98a60bc9c773c6951",
+      "result": "diagnosed_no_qualification_change"
+    },
+    "diagnose3": {
+      "path": "references/analysis/aperture_model_v1/diagnose3/report.json",
+      "sha256": "6aed870e65de993485b0363155ecf8d39e75abab7ed73ac26b2ddd7a4d59ef58",
+      "result": "diagnosed_no_qualification_change"
+    }
+  },
+  "sources": {
+    "tools/package_aperture_model_v1.py": "228f7fe4cf5a922dcb5868566a2a4cd88f3681b4b3dc4875ba9d2fee39250ce3",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "research/怠速与加速完成度V1.md": "b10cfac1ed0a1d6cf3ade2e4e273170b6487aa8ff8f591c258a5846f2d3c9c02",
+    "tools/validate_aperture_model_v1.py": "8b5054a6c1d2cbb9a714f506e722224a0752bade5543a13076646e859f63a20e",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "handoff/算法说明.md": "30558fd0fe5b740ed16a2fc93bac2efc34249cf24a9a6408f9640fb36f07268d",
+    "handoff/研究续接.md": "180c6d482dcc859a36abebcda6e572ae3809c66e61c91d9344fa4f9aa32191d5",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "research/有限窗共同相位V1.md": "3165615e298c40b5fb951e072ed058499bc46948781614f42681f25f9146b967",
+    "tools/diagnose_aperture_model_v1.py": "aeddbe631b2970799275678a120b1f5eb277e1b48c7334aa9f8461c5eea6f837",
+    "AGENTS.md": "c9b815a94c6a6305037ba9ff9151c10f02a3380a12f94a1e9e8e603be621b708"
+  },
+  "total_cases": 7,
+  "gate_passed_cases": 6,
+  "positive_cases": 6,
+  "gate_passed_positive_cases": 5,
+  "negative_cases": 1,
+  "correctly_rejected_negative_cases": 1,
+  "controls": {
+    "forward_maximum_error": 2.8676023231177265e-15,
+    "jacobian": [
+      {
+        "parameter": "cartesian",
+        "relative_error": 1.036096035865129e-11
+      },
+      {
+        "parameter": "phase",
+        "relative_error": 8.344753253434883e-10
+      },
+      {
+        "parameter": "envelope",
+        "relative_error": 1.143464746958697e-09
+      },
+      {
+        "parameter": "mixed",
+        "relative_error": 4.6254052166604955e-09
+      }
+    ],
+    "complex_envelope_ambiguity": {
+      "maximum_sample_difference": 1.4387392104762614e-14,
+      "maximum_phase_difference_cycles": 0.04000379552220903,
+      "identifiable_with_unrestricted_complex_envelopes": false
+    },
+    "parameter_count": 194,
+    "phase_count": 82,
+    "envelope_count": 6,
+    "passed": true
+  },
+  "failed_positive": {
+    "case": {
+      "id": "independent_phase_5",
+      "phase": true,
+      "amplitude": true,
+      "noise": 0.0001,
+      "contaminated_order": 5
+    },
+    "fit": {
+      "success": false,
+      "status": 0,
+      "message": "The maximum number of function evaluations is exceeded.",
+      "evaluations": 80,
+      "parameters": 194,
+      "normalized_projection_residual": 0.14128973533985612,
+      "minimum_envelope": 0.752455161695092,
+      "maximum_envelope": 1.2499999999602636,
+      "minimum_phase_derivative": 0.9425319161423321,
+      "scaled_jacobian_condition": 280753.32508942625,
+      "identifiability": "Local scaled Jacobian diagnostic only; no calibrated real-source uncertainty"
+    },
+    "assessment": {
+      "point_phase_p95_cycles": 0.0005403101285648085,
+      "root_relative_p95": 0.0010948929442369398,
+      "maximum_heldout_power_error_db": 0.004141624009003232,
+      "maximum_heldout_complex_correlation_error": 1.9885333421852296e-05,
+      "fitted_separate_carriers": 14,
+      "heldout_supported_carriers": 2,
+      "fitted_carrier_amplitudes": [
+        0.02544662674556973,
+        0.026112125238606787,
+        0.04715986405269004,
+        0.024867426177109835,
+        0.02432847777799161,
+        0.04823671972349338,
+        0.022640955317260226,
+        0.02427202129237807,
+        0.05000227013029902,
+        0.01927195924260218,
+        0.020221530790170087,
+        0.048140660809723596,
+        0.020111723609846397,
+        0.020013433982289303
+      ],
+      "heldout_powers": [
+        [
+          0.0003804071167177433,
+          0.00025589013532222905
+        ],
+        [
+          0.00040921400154983093,
+          0.00027508442265605543
+        ]
+      ],
+      "oracle_heldout_powers": [
+        [
+          0.0003807700627801686,
+          0.0002560987386819276
+        ],
+        [
+          0.0004089082597039972,
+          0.00027485314733164816
+        ]
+      ],
+      "qualified": false
+    },
+    "seconds": 27.414313999935985,
+    "passed": false
+  },
+  "solver_not_converged_cases": [
+    "amplitude_only",
+    "curved_phase",
+    "curved_phase_amplitude",
+    "curved_phase_noise",
+    "independent_phase_5",
+    "single_carrier"
+  ],
+  "continuation": {
+    "evaluations": 300,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded.",
+    "optimality": 4.558802863525746e-06,
+    "assessment": {
+      "point_phase_p95_cycles": 0.000540307493374408,
+      "root_relative_p95": 0.001094894416663196,
+      "maximum_heldout_power_error_db": 0.003772227856278857,
+      "maximum_heldout_complex_correlation_error": 9.25194977659986e-05,
+      "fitted_separate_carriers": 14,
+      "heldout_supported_carriers": 2,
+      "fitted_carrier_amplitudes": [
+        0.025446496919416833,
+        0.026112373544372753,
+        0.04715942019765612,
+        0.02486777898450091,
+        0.024328515628341013,
+        0.04823672060542701,
+        0.02264077352544127,
+        0.024272020491055923,
+        0.050002261291517025,
+        0.01927194830539568,
+        0.02022151165011632,
+        0.04814076773300344,
+        0.020112005213441853,
+        0.020013780295078595
+      ],
+      "heldout_powers": [
+        [
+          0.0003804394742326384,
+          0.0002558911089827029
+        ],
+        [
+          0.0004090368510806786,
+          0.00027495764450369807
+        ]
+      ],
+      "oracle_heldout_powers": [
+        [
+          0.0003807700627801686,
+          0.0002560987386819276
+        ],
+        [
+          0.0004089082597039972,
+          0.00027485314733164816
+        ]
+      ],
+      "qualified": false
+    },
+    "cost": 0.0007846920888610598,
+    "original_cost": 0.0007846922254398221,
+    "seconds": 96.98157240008004
+  },
+  "fixed_true_phase": {
+    "evaluations": 28,
+    "success": true,
+    "message": "`gtol` termination condition is satisfied.",
+    "maximum_phase_representation_error": 0.0,
+    "unused_spline_maximum_error": 0.00010148143600125642,
+    "cost": 0.0007904143088062454,
+    "uses_exact_analytic_phase": true,
+    "uses_known_truth": true,
+    "may_authorize_estimator": false
+  },
+  "conclusion": {
+    "continued_phase_gate_passed": false,
+    "biased_solution_has_lower_objective": true,
+    "model_assumption_violated": "One partial has independent phase motion, while the model permits only real positive envelope motion"
+  },
+  "source_audio_read": false,
+  "model_exported": false,
+  "real_source_permitted": false,
+  "full33_qualification_replaced": false,
+  "individual14kHz_retention_demonstrated": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "0222662f5acccfda7fa6cecbf6cc13a7a3d5e8fdf4fb03c5853b6bc6742eef11",
+  "goal_turn_classification": "progress_finite_aperture_controls_and_shared_phase_model_limit",
+  "limits": [
+    "Sparse known low-band topology is not a general vehicle source extractor",
+    "Five positive gate passes do not establish optimizer convergence or real idle/acceleration timbre",
+    "Independent-phase contamination remains a required positive; do not relabel it or relax gates",
+    "Original33 plus individual high-frequency and real-source holdouts remain required",
+    "F1/F2/F3 and A-low review questions stay pending; no duplicate requests"
+  ]
+}

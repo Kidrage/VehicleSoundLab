@@ -1,0 +1,47 @@
+{
+  "schema": "vsl.aperture-model-plan/1",
+  "scope": "Independent finite-aperture inversion principle, not the full33 engine-clock qualification or a real-source model",
+  "cycles": 40,
+  "samples_per_cycle": 128,
+  "base_hz": 32.8,
+  "source_orders": [1.4,1.8,2,2.2,2.4,3,3.4,4.4,5,5.2,5.4,7,7.2,7.4],
+  "heldout_orders": [10,15],
+  "observed_order_range": [1,8],
+  "observed_order_step": 0.2,
+  "projection_cycles": 10,
+  "projection_hop_cycles": 0.25,
+  "phase_knot_cycles": 0.5,
+  "amplitude_knot_cycles": 10,
+  "phase_control_bound_cycles": 0.18,
+  "amplitude_control_bound": 0.25,
+  "maximum_evaluations": 80,
+  "soft_l1_scale": 0.0002,
+  "rules": {
+    "maximum_point_phase_p95_cycles": 0.0001,
+    "maximum_root_relative_p95": 0.01,
+    "maximum_heldout_line_power_error_db": 0.5,
+    "maximum_heldout_complex_correlation_error": 0.05,
+    "minimum_separate_carriers": 2,
+    "minimum_carrier_amplitude": 0.005,
+    "maximum_forward_check_error": 1e-12,
+    "maximum_jacobian_relative_error": 0.000001
+  },
+  "cases": [
+    {"id":"constant","phase":false,"amplitude":false,"noise":0},
+    {"id":"amplitude_only","phase":false,"amplitude":true,"noise":0},
+    {"id":"curved_phase","phase":true,"amplitude":false,"noise":0},
+    {"id":"curved_phase_amplitude","phase":true,"amplitude":true,"noise":0},
+    {"id":"curved_phase_noise","phase":true,"amplitude":true,"noise":0.0001},
+    {"id":"independent_phase_5","phase":true,"amplitude":true,"noise":0.0001,"contaminated_order":5},
+    {"id":"single_carrier","phase":true,"amplitude":false,"noise":0,"single":true,"negative":true}
+  ],
+  "policy": [
+    "Fit L only; apply one estimated coordinate to original L/R; recording channels are not physical engine banks",
+    "A real positive slowly varying amplitude envelope multiplies each constant complex harmonic coefficient; epsilon is one common spline with an explicit phase-origin gauge",
+    "Use full real-signal finite-window projections including neighbouring observed bins and negative-frequency images; do not equate a coefficient angle with point phase",
+    "Analytic fixture phase and amplitude use independent Gaussian/sine formulas, not the fitted spline basis",
+    "Known sparse partial topology and40cycle examples do not authorize real recordings or replace full33 plus HF qualification",
+    "Keep a complex-envelope ambiguity counterexample; never claim physical identifiability for unrestricted time-varying complex coefficients",
+    "No real source read, model export, C/runtime change or new listening in this stage"
+  ]
+}
