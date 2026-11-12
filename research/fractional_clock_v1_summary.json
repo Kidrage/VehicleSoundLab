@@ -1,0 +1,175 @@
+{
+  "schema": "vsl.fractional-clock-publication/1",
+  "result": "partial_qualification_rejected_no_source_fit",
+  "reports": {
+    "validate1": {
+      "path": "references/analysis/fractional_clock_v1/validate1/report.json",
+      "sha256": "3f38e5ddae5c1ce4a1ff3f0b9a178276b5bfe342d293cb2569ebc64a65cfd0c7",
+      "result": "passed"
+    },
+    "validate2": {
+      "path": "references/analysis/fractional_clock_v1/validate2/report.json",
+      "sha256": "00e354408762727a2668748e9e828d02e206f59da77519315fa965f96b481e4e",
+      "result": "rejected"
+    },
+    "validate3": {
+      "path": "references/analysis/fractional_clock_v1/validate3/report.json",
+      "sha256": "4897aa2b73f78b6a9eb5ff17566cff53d7d811c8785d36fcd81af6b832e3a1d7",
+      "result": "rejected"
+    },
+    "validate4": {
+      "path": "references/analysis/fractional_clock_v1/validate4/report.json",
+      "sha256": "d0e95e8d7490fc3a7619fe48c1eb420b11fbe011e3688981df281e8bf18b35d7",
+      "result": "rejected"
+    },
+    "validate6": {
+      "path": "references/analysis/fractional_clock_v1/validate6/report.json",
+      "sha256": "257c20a8d81b0aefedf6c7419b7e202e318d10cd3819d8cc6e2f6057a1506e38",
+      "result": "rejected"
+    },
+    "validate7": {
+      "path": "references/analysis/fractional_clock_v1/validate7/report.json",
+      "sha256": "d0a4e446232187a08c5aec3d91e54d3f4400f847353ca79ea9be6257ba6836a1",
+      "result": "rejected"
+    },
+    "validate8": {
+      "path": "references/analysis/fractional_clock_v1/validate8/report.json",
+      "sha256": "d546866c746dcb3eb62dce7f392b6b4657563312c3c6b7a3dca1aac9aa58b6e2",
+      "result": "rejected"
+    },
+    "validate9": {
+      "path": "references/analysis/fractional_clock_v1/validate9/report.json",
+      "sha256": "08ba8c3e05e6f3e2ee5aae25c5cbccdde0e03737878dcb018e9b9083753c1a5b",
+      "result": "rejected"
+    },
+    "validate5": {
+      "result": "failed_JSON_inf_serialization",
+      "exact_sources": {
+        "research/fractional_clock_v1_plan.json": "70947137c535898bb1247326f3a3b96f96818c12374037bc3bfa0d3a911b8783",
+        "tools/validate_fractional_clock_v1.py": "4788fb6dea0ae1caea4ab777ffd38305118ff0e82edd0268cb98ca2f928daa6d",
+        "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+        "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+        "tools/fractional_clock_v1/coordinate.py": "db67195516a6c32d63ae970b6408fa3d9653e03f464bc692ecd409672e76e3b1",
+        "tools/fractional_clock_v1/fixtures.py": "4f5b3433811af1215c3e0071cb01d4f34b6ca432bfc0ab0f889950bef347ff84",
+        "tools/fractional_clock_v1/measure.py": "e926807ddb61d7ed001701ff0cb26095040b5cf4bea9e6550d1f1acf4ac88baf",
+        "tools/fractional_clock_v1/phase.py": "96dfe3fee1d97da9be7564c8d6565bf192553b0f92610be3d4ae0425c1d58f35",
+        "tools/fractional_clock_v1/projection.py": "fbd32e0a5beba7f2dc539a6ca764457c0c9e58a4163f6e83864da722557122b6",
+        "tools/fractional_clock_v1/__init__.py": "9da760f6d3d0acf68608708c293ce80e9360c1caa8b55b1af5e92928b5edeef9",
+        "tools/multicarrier_clock_v1/coarse.py": "c3e0305e620e15761bc921d879d3d9ce4759f8f1d30d6f51e5d371f57c9022af",
+        "tools/multicarrier_clock_v1/fixtures.py": "f0ca56eba46a22f786fc775f66f861cf32b9a9886109fd239f28cd17344b5f1e",
+        "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+        "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04"
+      },
+      "failure_log": "references/analysis/fractional_clock_v1/validate5/serialization_failure.txt",
+      "failure_log_sha256": "75fc1fe492b98a50fe71fed28f3a9cb2c1e6bd0c3ae37c16bf6d7ecb1a6f5e81"
+    },
+    "validate5_repro1": {
+      "result": "failed_JSON_inf_serialization",
+      "exact_sources": {
+        "research/fractional_clock_v1_plan.json": "70947137c535898bb1247326f3a3b96f96818c12374037bc3bfa0d3a911b8783",
+        "tools/validate_fractional_clock_v1.py": "4788fb6dea0ae1caea4ab777ffd38305118ff0e82edd0268cb98ca2f928daa6d",
+        "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+        "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+        "tools/fractional_clock_v1/coordinate.py": "db67195516a6c32d63ae970b6408fa3d9653e03f464bc692ecd409672e76e3b1",
+        "tools/fractional_clock_v1/fixtures.py": "4f5b3433811af1215c3e0071cb01d4f34b6ca432bfc0ab0f889950bef347ff84",
+        "tools/fractional_clock_v1/measure.py": "e926807ddb61d7ed001701ff0cb26095040b5cf4bea9e6550d1f1acf4ac88baf",
+        "tools/fractional_clock_v1/phase.py": "96dfe3fee1d97da9be7564c8d6565bf192553b0f92610be3d4ae0425c1d58f35",
+        "tools/fractional_clock_v1/projection.py": "fbd32e0a5beba7f2dc539a6ca764457c0c9e58a4163f6e83864da722557122b6",
+        "tools/fractional_clock_v1/__init__.py": "9da760f6d3d0acf68608708c293ce80e9360c1caa8b55b1af5e92928b5edeef9",
+        "tools/multicarrier_clock_v1/coarse.py": "c3e0305e620e15761bc921d879d3d9ce4759f8f1d30d6f51e5d371f57c9022af",
+        "tools/multicarrier_clock_v1/fixtures.py": "f0ca56eba46a22f786fc775f66f861cf32b9a9886109fd239f28cd17344b5f1e",
+        "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+        "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04"
+      },
+      "failure_log": "references/analysis/fractional_clock_v1/validate5/serialization_failure.txt",
+      "failure_log_sha256": "75fc1fe492b98a50fe71fed28f3a9cb2c1e6bd0c3ae37c16bf6d7ecb1a6f5e81"
+    },
+    "guard1": {
+      "path": "references/analysis/fractional_clock_v1/guard1/report.json",
+      "sha256": "ee21c1e5906d2b9d2adfd166db9bbdc85a96e3c5a7d19b25849a3749b6e7c327",
+      "result": "rejected_before_source_read"
+    }
+  },
+  "sources": {
+    "tools/package_fractional_clock_v1.py": "e230bc87cf5be0aa497275362ddb133afe0ff61343fd37c76806e230d42fdd1c",
+    "tools/validate_fractional_clock_v1.py": "4788fb6dea0ae1caea4ab777ffd38305118ff0e82edd0268cb98ca2f928daa6d",
+    "tools/evaluate_fractional_source_v1.py": "c0938928cf1c57c941168b0b6b293a5681ef60f2ecae3636252893c3fa9c068f",
+    "research/fractional_clock_v1_plan.json": "f5afc84ec4aa480ea73cf9f950a2d1d116b57b85e8d3418754d0f4422ca61469",
+    "research/分数谱线与相位提取V1.md": "d31c2cdeadfabcb9be3757d7dd35e8ab41034d6d405c7fcea591d9bd28f1a70c",
+    "handoff/算法说明.md": "f672049561a79eae98f45df73d718aff21f5c9062ab217c992f5326dd2e32a6b",
+    "handoff/研究续接.md": "9e047e4836ff6388e59a57711a65c5aa55b96816c99e0dca794506ac5626ed27",
+    "research/怠速与加速完成度V1.md": "3ae687531b3729a00e8b68e72e452fa6b8a2e3ae4f6e218c14c27eeed6a28de4",
+    "AGENTS.md": "9d6d294e154a513425de7e9133fe15b40ae71bfd0524a1ca0ab9ca82edb3be8d",
+    "tools/fractional_clock_v1/coordinate.py": "db67195516a6c32d63ae970b6408fa3d9653e03f464bc692ecd409672e76e3b1",
+    "tools/fractional_clock_v1/fixtures.py": "4f5b3433811af1215c3e0071cb01d4f34b6ca432bfc0ab0f889950bef347ff84",
+    "tools/fractional_clock_v1/measure.py": "e926807ddb61d7ed001701ff0cb26095040b5cf4bea9e6550d1f1acf4ac88baf",
+    "tools/fractional_clock_v1/phase.py": "3ae4c4478d679e045f36707afe90f974a12d91da95705d80f11b64e8797fd433",
+    "tools/fractional_clock_v1/projection.py": "fbd32e0a5beba7f2dc539a6ca764457c0c9e58a4163f6e83864da722557122b6",
+    "tools/fractional_clock_v1/__init__.py": "9da760f6d3d0acf68608708c293ce80e9360c1caa8b55b1af5e92928b5edeef9"
+  },
+  "prior_publication": {
+    "path": "references/analysis/fractional_clock_v1/final1/report.json",
+    "sha256": "36ebc3b10b7044ab62e005a85ec781d49b0fb31c41c7d80b2e031f12ac0db32b",
+    "result": "failed_cache_files_in_source_comparison",
+    "executed_publisher_sha256": "cba0bd138a23fef69775b02d3a3c740d53b73f109ec877eef4d0570741d18875",
+    "correction": "Compare authored.py/.json sources; original frozen execution also generated.pyc caches"
+  },
+  "date": "2026-11-13",
+  "total_cases": 29,
+  "positive_cases": 26,
+  "positive_passed": 23,
+  "negative_cases": 3,
+  "negative_passed": 3,
+  "failed": [
+    {
+      "id": "fifth_masking_7",
+      "status": "measured",
+      "reason": null,
+      "root_relative_p95": 0.0008595346824209909,
+      "coherent_power_error_db": 0.5452019756299183,
+      "coherent_complex_correlation_error": 0.03621908850495958
+    },
+    {
+      "id": "fifth_masking_15",
+      "status": "measured",
+      "reason": null,
+      "root_relative_p95": 0.0014610847988609542,
+      "coherent_power_error_db": 1.8802027874308358,
+      "coherent_complex_correlation_error": 0.13287237882436212
+    },
+    {
+      "id": "fifth_rapid_corner",
+      "status": "phase_rejected",
+      "reason": "Fractional-grid calibrated lines remain incompatible",
+      "root_relative_p95": null,
+      "coherent_power_error_db": null,
+      "coherent_complex_correlation_error": null
+    }
+  ],
+  "passing_positive_max_root_relative_p95": 0.0008484637570827828,
+  "passing_positive_max_coherent_power_error_db": 0.29237261383013047,
+  "strict_source_evaluation_permitted": false,
+  "source_audio_read": false,
+  "real_source_evaluated": false,
+  "model_exported": false,
+  "real_C_render_executed": false,
+  "vehicle_timbre_accepted": false,
+  "C_H": 540,
+  "runtime_changed": false,
+  "existing_Ctests_rerun": false,
+  "idle_acceleration_complete": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "86773c4af3e14e407dab44aebfcf03250d30667b062114487071021be0d3e81e",
+  "next_step": "Audit mask-induced coarse-clock residue and known coherent/independent component meter effects; handle rapid high-order phase branches and curvature without relaxing gates",
+  "goal_turn_classification": "progress_new_qualification_cases_metrics_and_reproducible_failures",
+  "limits": [
+    "validate1 only covers integrated Welch; cannot authorize real-source fitting",
+    "All29 complete strengthened controls must pass, not a steady or majority subset",
+    "Known fixture spectrum is not physical engine separation, RPM or warm-idle proof",
+    "guard1 tests rejection only; real-source positive branch unexecuted",
+    "No new timbre, C implementation or runtime acceptance; original pending F/A questions unchanged"
+  ]
+}
