@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.active-nullspace-qp-plan/1",
+  "parent_plan": "research/refined_qp_v1_plan.json",
+  "active_set_maximum_steps": 20,
+  "policy": [
+    "Saved dual-only projection failed to reduce the free-variable stationarity error; preserve all prior replays",
+    "Refine the primal in the null space of contact inequality rows using the original observed weighted least-squares system",
+    "Contact threshold is the original1e-9 primal gate; add violated constraints or drop negative multipliers, at most20 active-set steps",
+    "No ridge, phase/model/observation change or gate relaxation; independently certify original Gram, feasibility, dual signs and complementarity",
+    "This diagnostic alone does not authorize nonlinear estimation; independently qualify the new active-set refinement before integration"
+  ]
+}

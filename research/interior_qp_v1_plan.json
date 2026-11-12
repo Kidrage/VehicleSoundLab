@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.interior-qp-plan/1",
+  "parent_plan": "research/joint_trust_precise_v1_plan.json",
+  "replay_iterations": [1, 20],
+  "ipm_max_iterations": 200,
+  "ipm_tolerance": 1e-11,
+  "ipm_max_threads": 2,
+  "maximum_primal_violation": 1e-9,
+  "maximum_normalized_stationarity": 1e-8,
+  "maximum_complementarity": 1e-8,
+  "policy": [
+    "Independent interior-point QP backend with the original objective, variable scaling, all linear constraints and exact nonlinear retraction",
+    "Normalize the nonzero objective by the same observed gradient scale; do not externally add a ridge or alter the original Hessian",
+    "First qualify against independent explicit-polytope/SLSQP controls and replay the declared first and last saved actual subproblems",
+    "Native success alone is insufficient: reconstruct original primal feasibility, normalized stationarity, inequality dual signs and complementarity",
+    "Only after both replays have full certificates, run the same declared20-step nonlinear estimator from the exact previous observed initialization",
+    "No truth/heldout may initialize or select an estimate; no degree/knot/tolerance sweep",
+    "Keep all caps/failures, original17/full33/individual14kHz/original E and moving35; no real source/C/runtime/audio changes"
+  ]
+}

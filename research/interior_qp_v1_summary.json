@@ -1,0 +1,301 @@
+{
+  "schema": "vsl.interior-qp-publication/1",
+  "result": "all20_QPs_certified_but_actual_phase_rejected",
+  "sources": {
+    "tools/interior_qp_v1/certified.py": "69622bbda34ae8ddc7845be9dfd625a8acfce014f241ea3f28261fcd87e34bf5",
+    "tools/diagnose_quintic_phase_v1.py": "25a74bda1223b57780ea72e2baaaa8f94fd60f260cb17414c9f80cd12c4a32f6",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/interior_qp_v1/__init__.py": "5fce775f59eb1ca7a378279d8ed2a1ed519ae30da41ea6ef9c6cb63bbd496aa0",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/interior_qp_v1/checks.py": "14d5de58a868445936642c95d89101afe328afb387287af77974573cc1907bcf",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "handoff/开发留痕.md": "518a3d1f9a0a022ed5cfdf7783a854afbbfe653d2205a9ed03c1a3b8f0d26471",
+    "tools/absolute_amplitude_v1/fit.py": "effe61b872721002fd86461765d2bb8a180e3329180bea2c76e3be45fe11d520",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/diagnose_interior_qp_v1.py": "6db80cb499d9a52ad3b180393cdecf6ac4fdc8a0ccee559470a8ca0499a32228",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "research/平方根受约束求解V1.md": "88dd067d27463a1c4668b2742744951477f004ae469f4594a30915b9ff6a02e1",
+    "research/certified_qp_v1_plan.json": "d1f6e5c597823b094d3dab81f43c7b1b6277b131dac2e61cbe92fd153c143959",
+    "handoff/算法说明.md": "8cc84db606ffc87ce100738e474c8b95687e597c8470c8e9d662b5239375c8c3",
+    "tools/diagnose_positive_band_envelope_v1.py": "66be659f6de5a5964f6e2176aefb37a1a287d568c597caac4b321e7250239e47",
+    "tools/guard_observation_v1/__init__.py": "331f9f1efffaf705808aef8a22faeb3ab3891243502ac7136ae2a94b9e568780",
+    "tools/diagnose_certified_noise_v1.py": "cc66cf51db8590afef29d3ca2e38579318c038d2c5486602a131d873093b8352",
+    "tools/guard_observation_v1/checks.py": "9c316af35846217a71fe36670827f50e5f2b05ba420ea0486e6bfdc90d43287a",
+    "tools/quintic_phase_v1/checks.py": "5969c500aa794712352adaca9929e4b4e5361bf56a4f18ba1d19842384df4194",
+    "tools/interior_qp_v1/square_root.py": "fa32ef4c63cf34021bfefa668cff6779abd7d0fab575c2f1b211f1664f7d6077",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/joint_trust_v1/osqp_backend.py": "a76aae8a7987639f748748ca5f646aef1d4506f71bcb0376f946814b342dc403",
+    "tools/quintic_phase_v1/model.py": "7c82e703549db08b1a3dd49c2aa5154f6593d5c09019c256a32fe287fde8f923",
+    "research/sqrt_qp_v1_plan.json": "32d41a6012be997c3bbad49c0da88d1c56329d4ea7507d7af551f03248263473",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "tools/quintic_phase_v1/basis.py": "25cdacdbdc7021d3b01e106908bae5bcbeb1bfdc1916dd0e190079b1587ce91f",
+    "tools/quintic_phase_v1/initialize.py": "f7a7ce49ecc14df54fc28949930dfb979968c350f6d4d569913bb37578753d9a",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "tools/joint_trust_v1/quadratic.py": "a445dba8f298aacbba4b0b28db8d0c7a2d17f4695d6400bc84b7515067191c18",
+    "tools/offline_qp_requirements.txt": "44920b06170c2b3150f3b1af9df0113e94b773b9ff8ad348c93a6ccd3a6e83df",
+    "AGENTS.md": "7e4cbf618afd4728cc6d43cb4ba99db3c6d7ebdbf973e9195d6f7f5bfebef47d",
+    "tools/quintic_phase_v1/__init__.py": "a7978fa785a73677fd9efb40964fdd7c8e762acd7d36adca91fa870eaf852da0",
+    "tools/interior_qp_v1/active_set.py": "11ac8b6babe9af43a66669aa7274a12e972d9ba9d8ab024855d04b72d9a676a7",
+    "research/怠速与加速完成度V1.md": "6f7b2326b20aca7886935376cc646056f70c177a156befe7831a6ccd084ef6b9",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "tools/audit_interior_qp_v1.py": "012177d2c40a98fa1b08c1348e7219a8131a3e06bc03ab4e7bcda8beb9643530",
+    "tools/diagnose_qp_dual_v1.py": "b95b219a26885ea578dbec7c9e57bcbb56c4af044d7c50d8d5dd53544059da05",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/diagnose_absolute_amplitude_v1.py": "cd77317cd6852a1ef83ca1db4d56e926f6bfd6b770f847563e6aeda7ce0a994f",
+    "tools/absolute_amplitude_v1/quadratic.py": "3be08a5f5af7ec4da2f0aa424b581852956c68119493d85069a5805855f22cec",
+    "tools/positive_band_envelope_v1/fit.py": "1a64de78be1803b92f4b9e40072a3d55774ed19f934b82d9710dc8a895f39045",
+    "research/active_qp_v1_plan.json": "179f902642a5550eff98e9a7868c28bea47ccd6807ac3a0ee233645e9966aaba",
+    "tools/absolute_amplitude_v1/amplitude.py": "0eea45aacc8f2301fe04c42a033890f4c9fa393035c6f9b1fd54ed34193490ea",
+    "tools/joint_trust_v1/__init__.py": "2ca1cf0e131a7d14ced48997e6df74e2e0922fc37660e46fa91f2971b16a0472",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/diagnose_guard_observation_v1.py": "8735173dfbc64ce5169a624f1da6b2527f35607aabe9edf28f3e4ba0eab5401b",
+    "research/interior_qp_v1_plan.json": "233cf864724d4bae9f03d924b155914fa89ba5c372a251ff3f77d9a4e6061267",
+    "research/refined_qp_v1_plan.json": "89ad3d0728e70b9c4b2f680d82f4d7e5b7eb5a6371b70dca1b3ebfd2d1c7adcc",
+    "research/joint_trust_precise_v1_plan.json": "ac913fa0cdaf922ba07a51b50f454fca3e736671ee02e7ccf120705607b47c8e",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/guard_observation_v1/geometry.py": "7659f52bb2e94690b2c1ec779e2a4fe6e8be4b7616bb17d35fbb269a1a95faf4",
+    "tools/diagnose_refined_qp_v1.py": "7cb2676c94073ecd72c06cbdaaffbeba118d356169f524edad568498a9e95cc7",
+    "tools/absolute_amplitude_v1/__init__.py": "75f432c7f696ad5b38ed029589090b1876ee9f1c391d1e03d69a7183b4866f98",
+    "tools/joint_trust_v1/fit.py": "3b0b7e1d0b583d4871dc071b60ce169d0aeedbacfa4b539434155dd0eb94660b",
+    "tools/interior_qp_v1/active_checks.py": "ad1c79d8a4dad00b59dedd975375daf6606cf2bfa87d346b3c27bd3975daf268",
+    "tools/positive_band_envelope_v1/checks.py": "f74f53b9c094ab80f6897e1dffb323c63ad6df1879cb91613dfaa5c84a3cfb93",
+    "research/guard_observation_v1_plan.json": "2b2f311dcb42c1408fb7de502426dde23f774c9a02f8560688063c5344ef31a9",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "tools/positive_band_envelope_v1/model.py": "a7e5d540aa222c0cb1960e19b10f23d49f220430b437c0fcc651b932e1f2fa5e",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/interior_qp_v1/sqrt_checks.py": "6571eccf38d34b05ea426ebaa66bac890a6069ee2fead62c843f4dc93cf4501a",
+    "tools/diagnose_qp_active_v1.py": "2875cb4d4b2074d2e0cb81deb680a86693fca158fe4ca2c6ba2f6f4b182285a9",
+    "tools/diagnose_certified_qp_v1.py": "11bb20f513f440f2f1a12e205c25827984f8e2d3b4436cc36ef4e54367054261",
+    "research/absolute_amplitude_v1_plan.json": "9260dbd680d47e02989dfba77c9e59f5f7746fd55fdc642f8bdd3aee60cac945",
+    "tools/diagnose_sqrt_qp_v1.py": "b367a6a2e492120368136a8957353920343da5f576f97c1fd00dbadf5bfb80ee",
+    "tools/positive_band_envelope_v1/__init__.py": "7b530d49e68cfdfa4a26af916bef0c08fa6f62b4dc0792ad38869581689c936c",
+    "tools/interior_qp_v1/backend.py": "bd74ef3e551cda8fbd64eb68a7acaa224193b6bbc26afe97f1eed625868431ef",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "tools/joint_trust_v1/constraints.py": "9521d54ce82f17a312f563b23aa1c101f3ca8c50b4a3ffed933b587e13d7b808",
+    "tools/joint_trust_v1/checks.py": "032657547705fdfca250ff986bceaafc724d830db0c904c6bda3a19bc2019ca8",
+    "tools/absolute_amplitude_v1/model.py": "b70511bf98a7e7662c71b0d52836483815b92d8f46900938dbe6563c550442d4",
+    "tools/offline_ipm_requirements.txt": "349764303482a554f658768fbaa9d003625697ce97957b4aa06edf4cf345cc1c",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/absolute_amplitude_v1/checks.py": "91383f27d9e83540493e4783b369cc13d1c4be0f1010de0dbf67ca7a88e9e7fb",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/interior_qp_v1/refine.py": "daf9d075f6e55adb9e6fc75a22e0949993898613d9fc2fdd0b4b8d4794a72933",
+    "handoff/研究续接.md": "672c404026688847b2a0e9e980aab00d0c4093957fba79a852d0c823674b4c15",
+    "tools/package_interior_qp_v1.py": "d4f9305efabf024bbc5cbd0d6bf0e291a4d1aa405f4f9b0e0de02f2cf883e8ce",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "tools/absolute_amplitude_v1/cone.py": "81d93db648e354d9dae6209e96192d05ed2ddad619d0446e42d6deb4a51a1582",
+    "research/quintic_phase_v1_plan.json": "7c6918734600b52a50cd39984a4c5c1a2764feb21e3bf64ef4453bba893d151b",
+    "tools/positive_band_envelope_v1/basis.py": "883bd6cfa372f7f828a0ecba3d96c39fcadc31664d779fe287305c723bfa490a",
+    "research/positive_band_envelope_v1_plan.json": "d3cca7de7d5f75a749828bc7af298f3de294fe23b082ddbb7603165a3bd834cb"
+  },
+  "reports": {
+    "replay1": {
+      "path": "references/analysis/interior_qp_v1/replay1/report.json",
+      "sha256": "6d02d49cc725b22addaa264d67ef37191a97886f78b6e57d699e43438ea20b3b",
+      "result": "failed",
+      "changed_executed_sources": []
+    },
+    "replay_qr1": {
+      "path": "references/analysis/interior_qp_v1/replay_qr1/report.json",
+      "sha256": "eacbf661e001fcf1858466da0a507250a89122a7595bd8df6725ab3d220c3d97",
+      "result": "failed",
+      "changed_executed_sources": []
+    },
+    "replay_refined1": {
+      "path": "references/analysis/interior_qp_v1/replay_refined1/report.json",
+      "sha256": "4c810bba2db92787a24a6afa465a6764177b76d264e0828d482e75f619d81c65",
+      "result": "failed",
+      "changed_executed_sources": [
+        "tools/diagnose_refined_qp_v1.py"
+      ]
+    },
+    "replay_refined2": {
+      "path": "references/analysis/interior_qp_v1/replay_refined2/report.json",
+      "sha256": "9aee7f596dd1f31ee000baa867cb6e18d16b8c2b86e8d0519eb713098400d30d",
+      "result": "failed",
+      "changed_executed_sources": []
+    },
+    "dual_geometry1": {
+      "path": "references/analysis/interior_qp_v1/dual_geometry1/report.json",
+      "sha256": "c5e703dc266496932ef3cda0a47945eba77dc58d27caabb449bf6af78a6842e0",
+      "result": "contact_dual_geometry_diagnosed",
+      "changed_executed_sources": []
+    },
+    "active_geometry1": {
+      "path": "references/analysis/interior_qp_v1/active_geometry1/report.json",
+      "sha256": "ff1ff10825cffb1992c962e57cf6971ccf92e1165a89271640809279ca1e4965",
+      "result": "primal_active_set_geometry_diagnosed",
+      "changed_executed_sources": [
+        "tools/interior_qp_v1/active_set.py"
+      ]
+    },
+    "replay_certified1": {
+      "path": "references/analysis/interior_qp_v1/replay_certified1/recovered_failure.json",
+      "sha256": "018edc383f97b24d85ce3d9e69c46dd1253ab4149bd9accccaef2d53d1ce9fc8",
+      "result": "serialization_failed_before_QP_replays",
+      "changed_executed_sources": [
+        "tools/interior_qp_v1/active_set.py"
+      ]
+    },
+    "replay_certified2": {
+      "path": "references/analysis/interior_qp_v1/replay_certified2/report.json",
+      "sha256": "fad11678700c9ef9cd47acfb0eaef770623c34afafb49c155c87723cd121bd2b",
+      "result": "independent_controls_and_actual_subproblem_replays_certified",
+      "changed_executed_sources": []
+    },
+    "fit1": {
+      "path": "references/analysis/interior_qp_v1/fit1/report.json",
+      "sha256": "1631e60c18bd55d9574d76fcb4e9f122ceea5e2dfd686bc6309f5ab3120c0162",
+      "result": "dense_diagnostic_rejected",
+      "changed_executed_sources": []
+    },
+    "audit1": {
+      "path": "references/analysis/interior_qp_v1/audit1/report.json",
+      "sha256": "024c9793a2fa842dc0597af2f9c1f96e1b6565ca7fc2c3520ddd8b7b5f6c5f99",
+      "result": "reconstructed_original_QP_certificates_and_full_trace",
+      "changed_executed_sources": []
+    },
+    "noise1": {
+      "path": "references/analysis/interior_qp_v1/noise1/report.json",
+      "sha256": "d3d3e0b222fe04b777b5306d51477e9fe1a0b9ae92e73bfe13c108729e224c96",
+      "result": "diagnosed_certified_fit_known_noise_not_qualified",
+      "changed_executed_sources": []
+    }
+  },
+  "actual_fit": {
+    "initial_cost": 2.3378960218220768e-06,
+    "final_cost": 8.637912784758045e-08,
+    "accepted_steps": 15,
+    "normalized_projection_residual": 0.0001004062631266973,
+    "seconds": 95.96884410013445,
+    "assessment": {
+      "point_phase_p95_cycles": 0.0009300643623305256,
+      "root_relative_p95": 0.0035997760175248846,
+      "maximum_heldout_power_error_db": 0.01753164407950915,
+      "maximum_heldout_complex_correlation_error": 0.00014413475771542372,
+      "fitted_separate_carriers": 36,
+      "heldout_supported_carriers": 2,
+      "fitted_carrier_amplitudes": [
+        0.06469827850873171,
+        0.06292862862319522,
+        0.06545229586102952,
+        0.06208414174001007,
+        0.06179911407736835,
+        0.12016432711443664,
+        0.05661045216187932,
+        0.05492260888572012,
+        0.053928222056153136,
+        0.05327078199150773,
+        0.12382896197310798,
+        0.05028112037226929,
+        0.05110723175810902,
+        0.0536426411707008,
+        0.05583694316588928,
+        0.05849130476927365,
+        0.05948441899646072,
+        0.06244975155149593,
+        0.06342713973676535,
+        0.06343447753574288,
+        0.10836044453541961,
+        0.06105526960260864,
+        0.05720370847331159,
+        0.05682219236226754,
+        0.05486389518248088,
+        0.0538230094805851,
+        0.04936931412547076,
+        0.049495075064565686,
+        0.05273261080757731,
+        0.04910359459066562,
+        0.10999831050642145,
+        0.044608281098029154,
+        0.05107478777630096,
+        0.050859816115163055,
+        0.056316103892484926,
+        0.050965652622532755
+      ],
+      "heldout_powers": [
+        [
+          0.0027080150429195675,
+          0.0018216731984076221
+        ],
+        [
+          0.0028017519266607415,
+          0.0018834370917018982
+        ]
+      ],
+      "oracle_heldout_powers": [
+        [
+          0.0027189688801573402,
+          0.0018284477706804094
+        ],
+        [
+          0.002811372365910439,
+          0.0018898831899834725
+        ]
+      ],
+      "qualified": false
+    }
+  },
+  "QP_certified": 20,
+  "QP_uncertified": 0,
+  "complete_trace_reconstructed": true,
+  "independent_controls": {
+    "analytic": 9,
+    "explicit_polytope": 4,
+    "active_add_drop_zero_singular": true
+  },
+  "actual_replay_iterations": [
+    1,
+    20
+  ],
+  "diagnostic_noise": {
+    "norms": {
+      "known_noise": 0.0011350561439637192,
+      "omitted_line_projection": 6.635230195141058e-05,
+      "actual_residual": 0.0004158529594886223,
+      "actual_model_vs_clean": 0.0010429536121179764
+    },
+    "costs": {
+      "actual_on_observed": 8.637912784758045e-08,
+      "actual_on_clean": 5.426376193907718e-07
+    },
+    "actual_model_error_noise_correlation": 0.9293662822166084
+  },
+  "native_status_not_sufficient": true,
+  "original_certification_gates_unchanged": true,
+  "original17_rerun": false,
+  "full33_replaced": false,
+  "individual14kHz_demonstrated": false,
+  "real_source_permitted": false,
+  "source_audio_read": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "ipm_install_report_sha256": "6f422f07a5c699155b188e5a0ddbcbc9ec6c10f268b289c0306ea64872bd0202",
+  "previous_goal_turn_classification": "progress_actual_quintic_fit_audit_and_observation_diagnosis",
+  "goal_turn_classification": "progress_independent_QP_solver_active_set_certification_full_actual_fit_and_noise_evidence",
+  "next_step": "Use the now-certified solver to quantify bound-aware common-phase sensitivity/noise regularization while retaining rapid changes, original failed dense positive/all17/full33/individual14kHz/original E; no more blind solver/iteration sweeps",
+  "limits": [
+    "All20 accurate convex subproblems still fail original latent-phase gate; solver accuracy alone does not fix this case",
+    "15accepted/5rejected finite-budget nonlinear steps do not prove nonlinear/global convergence",
+    "Known noise correlation .929 is diagnosis only, not physical crank or real-recording uncertainty/sole-cause proof",
+    "All native/precision/dual-only failures and two implementation failures with exact sources are retained",
+    "Clarabel0.11.1 in isolated ipm_deps is optional offline tooling, not a C/audio runtime dependency",
+    "F1/F2/F3 and original A-low remain pending; no duplicate requests/downloads"
+  ]
+}

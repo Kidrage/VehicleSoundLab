@@ -1,0 +1,3 @@
+# Optional offline QP certification only; not part of the C/audio runtime.
+# Numerical NumPy/SciPy and CFFI come from the recorded existing environment.
+clarabel==0.11.1

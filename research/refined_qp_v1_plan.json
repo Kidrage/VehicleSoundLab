@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.certificate-refined-qp-plan/1",
+  "parent_plan": "research/sqrt_qp_v1_plan.json",
+  "precision_refinement_attempts": 1,
+  "precision_safety_divisor": 8.0,
+  "precision_minimum_tolerance": 2.220446049250313e-16,
+  "policy": [
+    "Keep failed direct-Gram and lifted-QR replays; QR native success failed the original stationarity certificate",
+    "One deterministic numerical precision refinement, driven only by the original observed primal/stationarity/complementarity certificate excess",
+    "Refined tolerance equals original IPM tolerance divided by8 and by the maximum certificate-to-original-limit ratio (at least1), with machine-epsilon floor",
+    "This is a bounded solver-accuracy correction, not a model/gate/tolerance grid search or statistical estimator selection",
+    "Save BOTH coarse and refined raw primal/dual solutions and tolerances; all original certification/model/phase gates stay unchanged",
+    "One refined attempt at most per subproblem; if still uncertified retain failure, no full fit until both declared replays certify"
+  ]
+}

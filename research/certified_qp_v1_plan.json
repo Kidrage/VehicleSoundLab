@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.certified-qr-active-qp-plan/1",
+  "parent_plan": "research/active_qp_v1_plan.json",
+  "replay_iterations": [1, 20],
+  "policy": [
+    "Preserve direct-Gram, QR, precision-refined and dual-only failures; null-space primal refinement passed the original saved final QP certificate",
+    "One original observed QR interior candidate, then finite active-set least-squares polish only when the original certificate fails",
+    "Independent explicit-polytope/SLSQP controls plus known active-set addition, removal, zero and singular PSD solutions must pass before replay/full fit",
+    "A polished solved status is emitted only after independently checking the ORIGINAL Gram/gradient, constraints, dual signs and complementarity; preserve the external native status and full coarse candidate",
+    "Same observed initial parameters, same20-step nonlinear controller, phase/amplitude/minority bounds and all original error gates",
+    "Do not infer true latent phase or real timbre from certified QPs; original17/full33/individual14kHz/original E still required"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.square-root-qp-plan/1",
+  "parent_plan": "research/interior_qp_v1_plan.json",
+  "replay_iterations": [1, 20],
+  "policy": [
+    "Direct Gram interior replay failed on original stationarity/native status; keep replay1 and all original gates",
+    "Use a thin QR of the exact observed weighted Jacobian, then a lifted least-squares QP with explicit equality residual variables",
+    "Keep original Gram/gradient/constraints/retraction; independently certify against the ORIGINAL Gram, not only the QR/lifted system",
+    "Same declared IPM tolerances/budget, no external ridge, degree/knot/iteration/tolerance sweep or altered nonlinear objective",
+    "First independent analytic/SLSQP controls and the same saved actual iterations1/20; full20-step run only if both certify",
+    "No analytic truth/heldout initialization; retain failed dense positive, all17/full33/individual14kHz/original E and moving35"
+  ]
+}
