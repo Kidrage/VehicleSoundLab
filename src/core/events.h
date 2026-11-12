@@ -8,4 +8,5 @@ typedef struct {
     double wait,envelope,phase,frequency,gain,noise_low;
     double starter_phase,starter_mod,starter_envelope;
 } VslEvents;
+typedef struct {double transients,starter;} VslEventFrame;
 #endif

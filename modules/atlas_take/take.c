@@ -13,7 +13,7 @@ void at_take_free(AtTake *t) {if(t){free(t->events);free(t->assets);memset(t,0,s
 int at_take_begin(AtTake *t,const AdConfig *config,const AdControl *initial) {
     AtAssets *candidate;
     if(!t||!t->events||!t->assets||!config||!ad_control_valid(initial,config->channels)||
-        (!config->residual_bank&&initial->mix.residual_gain>0))return 0;
+        (!config->residual_bank&&initial->mix.residual_gain>0)||(!config->startup_profile&&initial->mix.startup_gain>0))return 0;
     candidate=calloc(1,sizeof *candidate);if(!candidate)return 0;
     if(!at_assets_copy(candidate,config)){free(candidate);return 0;}
     free(t->assets);t->assets=candidate;
@@ -22,7 +22,7 @@ int at_take_begin(AtTake *t,const AdConfig *config,const AdControl *initial) {
 }
 int at_take_event(AtTake *t,uint64_t frame,const AdControl *c) {
     if(!t||!t->assets||!t->events||!ad_control_valid(c,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&c->mix.residual_gain>0)||frame!=t->frames||frame>=AT_MAX_FRAMES)return 0;
+        (!t->assets->config.residual_bank&&c->mix.residual_gain>0)||(!t->assets->config.startup_profile&&c->mix.startup_gain>0)||frame!=t->frames||frame>=AT_MAX_FRAMES)return 0;
     if(t->count&&frame==t->events[t->count-1].frame){t->events[t->count-1].control=*c;return 1;}
     if(t->count&&at_control_same(c,&t->events[t->count-1].control))return 1;
     if(t->count>=t->capacity){t->overflow=1;return 0;}
@@ -43,10 +43,11 @@ int at_take_valid(const AtTake *t) {
         !t->frames||t->frames>AT_MAX_FRAMES||t->events[0].frame||
         (t->stop_frame!=UINT64_MAX&&t->stop_frame>=t->frames)||!at_assets_valid(t->assets)||
         !ad_control_valid(&t->initial,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&t->initial.mix.residual_gain>0))return 0;
+        (!t->assets->config.residual_bank&&t->initial.mix.residual_gain>0)||(!t->assets->config.startup_profile&&t->initial.mix.startup_gain>0))return 0;
     for(i=0;i<t->count;++i)if(t->events[i].frame>=t->frames||(i&&t->events[i].frame<=t->events[i-1].frame)||
         !ad_control_valid(&t->events[i].control,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&t->events[i].control.mix.residual_gain>0))return 0;
+        (!t->assets->config.residual_bank&&t->events[i].control.mix.residual_gain>0)||
+        (!t->assets->config.startup_profile&&t->events[i].control.mix.startup_gain>0))return 0;
     return 1;
 }
 uint64_t at_hash_samples(uint64_t hash,const float *audio,unsigned samples) {
@@ -62,6 +63,7 @@ uint64_t at_hash_sources(uint64_t hash,const AdCapture *c,unsigned frames) {
         hash=at_hash_samples(hash,c->residual+2*n,2);hash=at_hash_samples(hash,c->body+2*n,2);
         hash=at_hash_samples(hash,c->events+n,1);
         hash=at_hash_samples(hash,c->aux_objects+n*VSL_OBJECTS,VSL_OBJECTS);
+        hash=at_hash_samples(hash,c->startup+2*n,2);
     }
     return hash;
 }

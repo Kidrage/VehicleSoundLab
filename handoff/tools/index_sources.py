@@ -19,7 +19,7 @@ def read(p):
 
 def write(name, header, rows):
     with (OUT / name).open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(header)
         writer.writerows(rows)
 
@@ -200,10 +200,12 @@ def code_rows():
                 layer, owner, role = "立体声声床验证", "VslStereoBed_checks", "解析能量／侧相信号、驾驶与源哈希／分块／布局／对象隔离"
             elif group == "start_texture":
                 layer, owner = "独立启动前段纹理", "start_texture"
-                role = "谱矩／工程淡化参数的事务读取与校验" if p.stem == "profile" else "复用持续OSC核、独立门控与量跟随；非PCM或完整启动"
+                role = "兼容单／双端点谱矩及工程淡化参数的事务读取校验" if p.stem == "profile" else "持续OSC核、PSD谱形插值、独立门控／量；载波连续，非完整启动"
             elif group == "start_texture_v1":
                 layer, owner = "启动纹理独立验证", "start_texture_"+p.stem
                 role = "既有唯一驾驶器的两次启停与分轨" if p.stem == "probe" else "解析门控、相位／量隔离、持续与分块、事务校验"
+            elif group == "startup_drive_v1":
+                layer, owner, role = "启动层统一驾驶验证", "VslStartupDrive_checks", "PSD解析矩阵、两次驾驶器门控、独立量、分块／2与12前置一次路由"
             yield rel, layer, owner, role, digest(p)
 
 

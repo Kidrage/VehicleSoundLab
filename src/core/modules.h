@@ -20,4 +20,5 @@ double vsl_ir_tick(VslEngine *e,double input);
 void vsl_orchestrate(VslEngine *e,double dt);
 void vsl_events_update(VslEngine *e);
 double vsl_events_tick(VslEngine *e);
+void vsl_events_tick_parts(VslEngine *e,VslEventFrame *parts);
 #endif

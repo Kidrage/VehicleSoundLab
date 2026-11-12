@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 static AmModels models;static SaBank bank;static AmAudio audio;
+static StProfile startup_profile;static int startup_enabled;
 
 static int replay(const WoStats *s) {
     AmRender *render=calloc(1,sizeof *render);VslEngine *engine=calloc(1,sizeof *engine);
@@ -56,6 +57,7 @@ static int finite_run(const char *out,const char *name,int pedals) {
     AdControl c=am_default_control();uint64_t limit=(pedals?12u:6u)*48000;
     ULONGLONG deadline;int stage=0,equal;WoStats s;
     c.drive.ignition=1;c.drive.start_id=1;
+    if(startup_enabled)c.mix.startup_gain=.5;
     c.mix.residual_gain=.5;c.mix.body_mix=.6;
     if(!pedals){c.drive.mode=VSL_BENCH;c.drive.automatic=0;c.drive.rpm=3600;}
     if(!am_audio_control(&audio,&c)||!am_audio_start(&audio,1,limit))return 0;
@@ -79,8 +81,10 @@ static int finite_run(const char *out,const char *name,int pedals) {
 static int run(int argc,char **argv) {
     AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     WoStats s;AdControl c;ULONGLONG deadline;int ok,equal;
-    if((argc!=2&&argc!=3)||(argc==3&&strcmp(argv[2],"--stereo-bed"))||!am_models_load(&models,0)||!am_models_bank(&models,&bank))return 2;
-    if(argc==3)config.scene_mode=AD_SCENE_STEREO_BED;
+    {int i;for(i=2;i<argc;++i)if(!strcmp(argv[i],"--stereo-bed"))config.scene_mode=AD_SCENE_STEREO_BED;
+        else if(!strcmp(argv[i],"--startup"))startup_enabled=1;else return 2;}
+    if(argc<2||!am_models_load(&models,startup_enabled?1:0)||!am_models_bank(&models,&bank))return 2;
+    if(startup_enabled){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;}
     am_audio_init(&audio,&config);audio.capture_frames=13*48000;audio.capture=calloc(audio.capture_frames*2,sizeof(float));
     if(!audio.capture){am_audio_destroy(&audio);return 2;}
     ok=finite_run(argv[1],"bench",0);ok&=finite_run(argv[1],"pedals",1);

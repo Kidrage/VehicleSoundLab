@@ -9,13 +9,14 @@
 #include "models.h"
 #include "takes.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
+static StProfile startup_profile;static int startup_study;
 static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
 static double *aux_amount(AdControl *c,int index) {
     switch(index) {
     case 0:return &c->mix.intake_gain;case 1:return &c->mix.mechanical_gain;
-    case 2:return &c->mix.air_gain;case 3:return &c->mix.road_gain;default:return &c->mix.wind_gain;
+    case 2:return &c->mix.air_gain;case 3:return &c->mix.road_gain;case 4:return &c->mix.wind_gain;default:return &c->mix.startup_gain;
     }
 }
 
@@ -37,6 +38,7 @@ static void labels(HWND owner) {
     SendMessageW(slider[8],TBM_SETPOS,TRUE,(int)(*aux_amount(&c,auxiliary_index)*100));
     EnableWindow(auxiliary,!playing);
     for(i=0;i<9;++i)EnableWindow(slider[i],!playing);
+    if(auxiliary_index==5&&!audio.config.startup_profile)EnableWindow(slider[8],FALSE);
     for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[2],!playing&&c.drive.mode==VSL_BENCH);
     EnableWindow(gear,!playing&&c.drive.mode!=VSL_BENCH);
@@ -76,7 +78,11 @@ static int load_bank(int index) {
     if(candidate&&am_models_load(candidate,index)) {
         am_audio_stop(&audio);models=*candidate;
         /* Rebind borrowed pointers to committed storage, never the candidate. */
-        if(am_models_bank(&models,&bank)){bank_index=index;ok=1;}
+        if(am_models_bank(&models,&bank)){
+            AdControl c=am_audio_get(&audio);c.mix.startup_gain=0;
+            audio.config.startup_profile=startup_study&&index==1?&startup_profile:NULL;
+            am_audio_control(&audio,&c);bank_index=index;ok=1;
+        }
     }
     free(candidate);return ok;
 }
@@ -109,6 +115,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"进气");SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"机械");
         SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"排气空气");SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"道路");
         SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"风");SendMessageW(auxiliary,CB_SETCURSEL,0,0);
+        if(startup_study)SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"启动机械声");
         item(owner,L"BUTTON",L"空间监听",BS_AUTOCHECKBOX|WS_TABSTOP,30,24,670,210,28);
         item(owner,L"BUTTON",L"瞬态层（实验）",BS_AUTOCHECKBOX|WS_TABSTOP,31,276,670,240,28);
         item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,712,204,40);
@@ -159,7 +166,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         }
         if(id==43&&notify==CBN_SELCHANGE) {
             int selected=(int)SendMessageW(auxiliary,CB_GETCURSEL,0,0);
-            if(selected>=0&&selected<5)auxiliary_index=selected;
+            if(selected>=0&&selected<(startup_study?6:5))auxiliary_index=selected;
             labels(owner);return 0;
         }
         break;
@@ -207,14 +214,18 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
     if(!args)return 2;
     for(i=1;i<argc;++i)if(!wcscmp(args[i],L"--muted"))muted=1;
         else if(!wcscmp(args[i],L"--stereo-bed"))config.scene_mode=AD_SCENE_STEREO_BED;
+        else if(!wcscmp(args[i],L"--startup-study"))startup_study=1;
         else{LocalFree(args);return 2;}
     LocalFree(args);
-    if(!project_directory()||!am_models_load(&models,0)||!am_models_bank(&models,&bank))return 2;
+    bank_index=startup_study?1:0;
+    if(!project_directory()||!am_models_load(&models,bank_index)||!am_models_bank(&models,&bank))return 2;
+    if(startup_study){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;config.scene_mode=AD_SCENE_STEREO_BED;}
     am_audio_init(&audio,&config);InitCommonControlsEx(&common);
+    if(startup_study){AdControl c=am_audio_get(&audio);c.mix.startup_gain=.5;am_audio_control(&audio,&c);}
     SetProcessDPIAware();klass.lpfnWndProc=procedure;klass.hInstance=instance;klass.lpszClassName=L"VslAtlasMonitor";
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
-    window=CreateWindowW(klass.lpszClassName,config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
+    window=CreateWindowW(klass.lpszClassName,startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
         CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}ShowWindow(window,show);UpdateWindow(window);
     while(GetMessageW(&message,NULL,0,0)>0)if(!IsDialogMessageW(window,&message)){TranslateMessage(&message);DispatchMessageW(&message);}

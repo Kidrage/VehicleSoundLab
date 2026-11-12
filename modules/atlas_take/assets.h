@@ -6,6 +6,7 @@ typedef struct {
     SaBank bank;
     RaBank residual;
     AdConfig config;
+    StProfile startup;
 } AtAssets;
 /* Owned, immutable render assets. Pointers stay inside this heap object. */
 int at_assets_copy(AtAssets *destination,const AdConfig *source);

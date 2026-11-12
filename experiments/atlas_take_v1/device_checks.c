@@ -8,6 +8,7 @@
 #include <string.h>
 #include <math.h>
 static AmModels models;static SaBank bank;static AmAudio audio;
+static StProfile startup_profile;
 typedef struct {unsigned calls,committed;uint64_t hash;} SubmissionCheck;
 static int bad_output(void *context,float *pcm,unsigned frames,int stopping) {
     SubmissionCheck *s=context;unsigned i;(void)stopping;
@@ -34,13 +35,15 @@ static int wait_end(unsigned timeout) {
     while(InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     return !InterlockedCompareExchange(&audio.device.running,0,0);
 }
-static int run(const char *path,AdSceneMode scene_mode) {
+static int run(const char *path,AdSceneMode scene_mode,int startup) {
     AtTake loaded={0};AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     AdControl c=am_default_control();WoStats recorded={0},played={0},cancelled={0};uint64_t length,hash;int ok=1,stage=0,initialized=0;
     ULONGLONG deadline;FILE *report=NULL;char report_path[16384];
     config.scene_mode=scene_mode;
     CHECK(rejected_block());
-    CHECK(am_models_load(&models,0)&&am_models_bank(&models,&bank));am_audio_init(&audio,&config);initialized=1;
+    CHECK(am_models_load(&models,startup?1:0)&&am_models_bank(&models,&bank));
+    if(startup){CHECK(am_startup_load(&startup_profile));config.startup_profile=&startup_profile;c.mix.startup_gain=.5;}
+    am_audio_init(&audio,&config);initialized=1;
     c.drive.mode=VSL_BENCH;c.drive.ignition=1;c.drive.start_id=1;c.drive.rpm=4000;c.mix.body_mix=.6;c.mix.residual_gain=.5;
     c.mix.intake_gain=.5;c.mix.mechanical_gain=.5;c.mix.air_gain=.5;c.mix.road_gain=.5;c.mix.wind_gain=.5;
     CHECK(am_audio_control(&audio,&c)&&am_audio_record(&audio,1,144123));
@@ -55,8 +58,10 @@ static int run(const char *path,AdSceneMode scene_mode) {
     CHECK(audio.ready&&audio.take.frames==recorded.frames&&recorded.frames==144123&&!recorded.error[0]&&stage==2);
     CHECK(audio.take.audio_hash==recorded.output_hash&&at_take_save(&audio.take,path)&&at_take_load(&loaded,path));
     CHECK(loaded.assets->config.scene_mode==scene_mode);
+    CHECK((loaded.assets->config.startup_profile!=NULL)==startup);
     length=audio.take.frames;hash=audio.take.audio_hash;at_take_free(&audio.take);audio.take=loaded;memset(&loaded,0,sizeof loaded);
     memset(&models,0,sizeof models);memset(&bank,0,sizeof bank);
+    memset(&startup_profile,0,sizeof startup_profile);
     CHECK(am_audio_replay(&audio,1)&&!am_audio_control(&audio,&c)&&wait_end(10000));am_audio_stop(&audio);played=wo_stats(&audio.device);
     CHECK(!played.error[0]&&played.frames==length&&played.output_hash==hash&&InterlockedCompareExchange(&audio.replay_result,0,0)==1);
     CHECK(am_audio_replay(&audio,1));deadline=GetTickCount64()+5000;
@@ -64,6 +69,7 @@ static int run(const char *path,AdSceneMode scene_mode) {
     am_audio_stop(&audio);cancelled=wo_stats(&audio.device);
     CHECK(!cancelled.error[0]&&cancelled.frames<length&&InterlockedCompareExchange(&audio.replay_result,0,0)==2&&audio.take.audio_hash==hash);
     CHECK(am_models_load(&models,1)&&am_models_bank(&models,&bank));c.drive.rpm=7600;
+    if(startup)CHECK(am_startup_load(&startup_profile));
     CHECK(am_audio_control(&audio,&c)&&am_audio_record(&audio,1,0));deadline=GetTickCount64()+5000;
     while(wo_stats(&audio.device).frames<24000&&InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     am_audio_stop(&audio);CHECK(audio.ready&&audio.take.stop_frame<UINT64_MAX&&audio.render.release==480);
@@ -80,6 +86,9 @@ static int run(const char *path,AdSceneMode scene_mode) {
 done:if(report&&fclose(report))ok=0;at_take_free(&loaded);if(initialized)am_audio_destroy(&audio);return ok?0:3;
 }
 int wmain(int argc,wchar_t **wide) {
-    char path[16384];if((argc!=2&&argc!=3)||(argc==3&&wcscmp(wide[2],L"--stereo-bed"))||!WideCharToMultiByte(CP_UTF8,0,wide[1],-1,path,sizeof path,NULL,NULL))return 2;
-    return run(path,argc==3?AD_SCENE_STEREO_BED:AD_SCENE_OBJECTS);
+    char path[16384];int i,startup=0;AdSceneMode scene=AD_SCENE_OBJECTS;
+    if(argc<2||!WideCharToMultiByte(CP_UTF8,0,wide[1],-1,path,sizeof path,NULL,NULL))return 2;
+    for(i=2;i<argc;++i)if(!wcscmp(wide[i],L"--stereo-bed"))scene=AD_SCENE_STEREO_BED;
+        else if(!wcscmp(wide[i],L"--startup"))startup=1;else return 2;
+    return run(path,scene,startup);
 }

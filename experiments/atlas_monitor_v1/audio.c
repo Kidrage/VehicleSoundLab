@@ -37,6 +37,7 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
         a->take.stop_frame=a->stop_frame;
         capture.dna_raw=a->raw;capture.dna=a->dna;capture.residual=a->residual;capture.body=a->body;capture.events=a->events;
         capture.aux_objects=a->auxiliary;
+        capture.startup=a->startup;
     }
     capture.telemetry=telemetry;
     if(!am_render_process(&a->render,pcm,frames,stopping,&capture))return -1;
@@ -62,7 +63,7 @@ void am_audio_init(AmAudio *a,const AdConfig *config) {
 }
 int am_audio_control(AmAudio *a,const AdControl *c) {
     if(am_audio_replaying(a))return 0;
-    if(!ad_control_valid(c,2)||(!a->config.residual_bank&&c->mix.residual_gain>0))return 0;
+    if(!ad_control_valid(c,2)||(!a->config.residual_bank&&c->mix.residual_gain>0)||(!a->config.startup_profile&&c->mix.startup_gain>0))return 0;
     EnterCriticalSection(&a->lock);a->control=*c;++a->generation;LeaveCriticalSection(&a->lock);return 1;
 }
 AdControl am_audio_get(AmAudio *a) {

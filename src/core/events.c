@@ -22,7 +22,7 @@ void vsl_events_update(VslEngine *e) {
         }
     }
 }
-double vsl_events_tick(VslEngine *e) {
+void vsl_events_tick_parts(VslEngine *e,VslEventFrame *parts) {
     VslEvents *v=&e->events;double out=0,sr=e->sample_rate;
     if(v->remaining>0 && (v->wait-=1/sr)<=0) {
         v->envelope=v->gain;v->frequency=75+random_unit(v)*60;v->phase=0;
@@ -36,7 +36,10 @@ double vsl_events_tick(VslEngine *e) {
         v->starter_envelope+=(1-exp(-1/((crank?.005:.018)*sr)))*(crank-v->starter_envelope);
         v->starter_phase=fmod(v->starter_phase+2*VSL_PI*85/sr,2*VSL_PI);
         v->starter_mod=fmod(v->starter_mod+2*VSL_PI*11/sr,2*VSL_PI);
-        out+=.045*(sin(v->starter_phase)+.25*sin(v->starter_phase*8))*(.55+.45*cos(v->starter_mod))*v->starter_envelope;
+        parts->starter=.045*(sin(v->starter_phase)+.25*sin(v->starter_phase*8))*(.55+.45*cos(v->starter_mod))*v->starter_envelope;
     }
-    return out;
+    parts->transients=out;
+}
+double vsl_events_tick(VslEngine *e) {
+    VslEventFrame p;vsl_events_tick_parts(e,&p);return p.transients+p.starter;
 }

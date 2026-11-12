@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+int am_startup_load(StProfile *p) {
+    FILE *f=vsl_fopen("voices/startup_drive_v1/A cabin motion.start","rb");int ok;
+    if(!f)return 0;ok=st_profile_read(f,p);if(fclose(f))ok=0;return ok;
+}
 int am_models_bank(const AmModels *m,SaBank *bank) {
     const SdProfile *profiles[SA_MAX_ANCHORS];unsigned i;
     if(!m||!bank||m->count<1||m->count>SA_MAX_ANCHORS)return 0;

@@ -7,6 +7,7 @@
 #include "harmonic_body/mix.h"
 #include "drive_aux/voice.h"
 #include "stereo_bed/route.h"
+#include "start_texture/voice.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -19,6 +20,7 @@ typedef struct {
     DsRoute route;
     const RaBank *residual_bank; /* Optional, same acoustic anchors/context. */
     AdSceneMode scene_mode; /* Default0 retains former mono proxy routing. */
+    const StProfile *startup_profile; /* Opt-in cabin observation, replaces legacy starter only. */
 } AdConfig;
 
 typedef struct {
@@ -50,6 +52,7 @@ typedef struct {
     float *aux; /* Direct stereo auxiliary monitor, before master gain. */
     float *observation; /* DNA+body+residual L/R before width/master, both modes. */
     float *bed; /* Routed observation bed, config.channels, before master;0 in object mode. */
+    float *startup; /* Independent observed L/R startup layer before width/master. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
@@ -58,6 +61,7 @@ typedef struct {
     HbMix body;
     DaVoice auxiliary;
     SbLayout bed_layout;
+    StVoice startup;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;

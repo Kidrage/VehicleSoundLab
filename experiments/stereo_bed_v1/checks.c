@@ -11,6 +11,7 @@ static AdRender render[4];static VslEngine engine[4];
 static float out[4][N*12],raw[4][N*2],dna[4][N*2],body[4][N*2],noise[4][N*2];
 static float event[4][N],aux[4][N*VSL_OBJECTS],obj[4][N*VSL_OBJECTS];
 static float observation[4][N*2],bed[4][N*12];
+static float startup[4][N*2];
 static AdCapture capture[4];
 
 static int routing(void) {
@@ -57,6 +58,7 @@ int main(void) {
         capture[i].dna_raw=raw[i];capture[i].dna=dna[i];capture[i].body=body[i];capture[i].residual=noise[i];
         capture[i].events=event[i];capture[i].aux_objects=aux[i];capture[i].objects=obj[i];
         capture[i].observation=observation[i];capture[i].bed=bed[i];
+        capture[i].startup=startup[i];
     }
     for(block=0;block<1600;++block) {
         vsl_scenario_apply(VSL_SCENARIO_SHIFTS,block*.005,&params);
@@ -73,6 +75,7 @@ int main(void) {
                 AdCapture c=capture[i];
                 c.dna_raw+=j*2;c.dna+=j*2;c.body+=j*2;c.residual+=j*2;c.events+=j;
                 c.aux_objects+=j*VSL_OBJECTS;c.objects+=j*VSL_OBJECTS;c.observation+=j*2;c.bed+=j*2;
+                c.startup+=j*2;
                 CHECK(ad_render_process(render+i,out[i]+2*j,1,&c));
             }
             hash[i]=at_hash_sources(hash[i],capture+i,N);

@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前[启动层统一驾驶](../research/启动层统一驾驶V1.md)：`start_texture/profile.*`兼容单／双端点谱矩，`voice.*`提供`st_voice_position`和持续OSC谱矩插值；`atlas_drive`新增可选`startup_profile`、独立`startup_gain`及`AdCapture.startup`。同一CRANK门控、载波不调频、stereo前置一次路由；`events`分开旧starter与transients，仅新模型存在时替换前者。`atlas_take`拥有模型、26字段与源哈希，`atlas_take_io`schema4严格拒绝旧身份，旧schema3播放器冻结。43项CTest与短设备／录放通过，现455份C/H；新增`experiments/startup_drive_v1/checks.c`，其余为明确接口适配。入口`Launch-Startup-Study.cmd`，未替换已认可固定情境或旧运行窗口；完整接火／低频与听评未完成。下文保留各阶段当时接口。
+
 新增独立 `modules/start_texture/profile.c/.h`（谱矩与起落参数）和 `voice.c/.h`（持续OSC、门控、量跟随）。`experiments/start_texture_v1/probe.c`复用唯一驾驶器导出两次启动附加层，`checks.c`验证门控与声源隔离；仅新增6份C/H，旧448份不变，现454份。该层尚未进入默认UI／atlas／录制协议，也不含接火低频。见[方法与证据](../research/启动机械纹理V1.md)。
 
 新增`modules/stereo_bed/route.c/.h`：观察L/R的一次宽度控制与2／12前置声床映射。`atlas_drive`的`AdConfig.scene_mode`0沿用旧对象投影，1保留DNA／互补低频／残差stereo，并只让辅助／事件进入原空间器；`AdCapture.observation/bed`可独立捕获。`atlas_take`／`atlas_take_io`现为schema3／25控制字段并保存模式，旧schema2播放器已冻结。当前448份C/H，见[集成与证据](../research/立体声声床接入V1.md)。

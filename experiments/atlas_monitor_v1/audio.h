@@ -23,6 +23,7 @@ typedef struct {
     volatile LONG replay_result; /*0pending,1verified,-1failed,2cancelled. */
     float raw[1024],dna[1024],residual[1024],body[1024],events[512];
     float auxiliary[512*VSL_OBJECTS];
+    float startup[1024];
 } AmAudio;
 AdControl am_default_control(void);
 void am_audio_init(AmAudio *audio,const AdConfig *config);
