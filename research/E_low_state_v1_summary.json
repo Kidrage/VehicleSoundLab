@@ -1,0 +1,230 @@
+{
+  "schema": "vsl.E-low-state-publication/1",
+  "result": "source_context_bound_fixed_tracking_rejected",
+  "reports": {
+    "inspect1": {
+      "path": "references/analysis/E_low_state_v1/inspect1/report.json",
+      "sha256": "6d6100d2b218fa6ef785ed982da7bddf8a4af8a2628021ce3ecdae9f1155b588"
+    },
+    "observe1": {
+      "path": "references/analysis/E_low_state_v1/observe1/report.json",
+      "sha256": "0fd6d703a3e64f75d34e525ac97fa96036deccb26e6d8e1f90c8fb52d7287e27"
+    },
+    "observe2": {
+      "path": "references/analysis/E_low_state_v1/observe2/report.json",
+      "sha256": "e2bbae3882c14da5ec35ad7e1158ea80c373c9e151fb79bd2bdec341a8f0fc6b"
+    },
+    "qualify1": {
+      "path": "references/analysis/E_low_state_v1/qualify1/report.json",
+      "sha256": "d4b60c0e30a8004eeb1c6afb9e0df0e930c95b96b9a1321469b2d9ae280755fc"
+    },
+    "track_audit1": {
+      "path": "references/analysis/E_low_state_v1/track_audit1/report.json",
+      "sha256": "b05fbb9ac1e6bbc452aa2d56e5b0782956cee5610c95db3568db64f0d1831f1f"
+    },
+    "prelaunch_inspect1": {
+      "path": "references/analysis/E_prelaunch_v1/inspect1/report.json",
+      "sha256": "0a0e5fdf7761ccde46845e4d5adeea4487c30f6e808e74bcc9a3f31ef2ddc3ce"
+    }
+  },
+  "sources": {
+    "tools/package_E_low_state_v1.py": "2402c974f606277538c269c9e5450701e160d15d9cbdf6c173db5d2b5a7c0976",
+    "references/segments_v1.json": "42f6fd4aaf7809c37ea09136fa826cf51d250ca7862eeba50042d101d602848c",
+    "research/E_low_state_v1_annotations.json": "f0feafff9c34f0ee3a1ebabc88f326df1c8f877108ff1f41abfb0a6471d75f92",
+    "research/E驻车与起步低转核查V1.md": "c106ea468f5378eef760311889d32c8b08564363b9933c20fe05cb1aa32acbdc",
+    "research/E_low_state_v1_inspection_plan.json": "3e761c11c3eba6824b47886f6a7a6b7d72d3b2031a51e96dd359b77070e4c2dc",
+    "research/E_low_state_v1_observation_plan.json": "61e056307a5e61582811e254e96fd8be6d0878682d6dd2b1ba1a4b9e1f404c08",
+    "research/E_prelaunch_v1_inspection_plan.json": "d414909986ddbc46188f7619997db80f052f04b19fc3a2234e36d5db2af686cd",
+    "research/E_stationary_dna_v1_plan.json": "5734b068fd5ea2f8f26ec643901ae127ed0010c74226bea4228416a766291c10",
+    "tools/observe_source_states_v1.py": "bb86155b08a19854da76cbb74a255f70ecafdae5a068989a23b998ff4612cd5f",
+    "tools/qualify_source_states_v1.py": "eb4aede660b7cd58fa2d5ede93b0f5721d366acfe29f47cd4bdd68733c9a7cf0",
+    "tools/audit_source_tracking_v1.py": "aeb654c6b699e5b1cd0e3dd8ef7f1cbcd482f3752d6e93f14471f6c0e8d0c97e",
+    "tools/inspect_idle_context_v1.py": "ad011a0dffdbd2b5940900d028defc3883fc48ae6085682c0d682293744b6bb1"
+  },
+  "inspected_frames": 42,
+  "unchanged_reference_samples_verified": true,
+  "case": {
+    "measured_frames": 521,
+    "references": {
+      "5": {
+        "existing_status": "disconnected",
+        "no_candidate_frames": 0,
+        "no_candidate_seconds": [],
+        "no_candidate_near_initial_root_frames": 5,
+        "no_candidate_near_initial_root_seconds": [
+          5.77,
+          5.775,
+          5.78,
+          5.785,
+          6.405
+        ],
+        "candidate_count_quantiles": [
+          2.0,
+          5.0,
+          9.0
+        ]
+      },
+      "2": {
+        "existing_status": "missing_reference",
+        "no_candidate_frames": 3,
+        "no_candidate_seconds": [
+          5.415,
+          6.235,
+          6.385
+        ],
+        "no_candidate_near_initial_root_frames": 40,
+        "no_candidate_near_initial_root_seconds": [
+          5.235,
+          5.415,
+          5.42,
+          5.745,
+          5.895,
+          5.925,
+          6.045,
+          6.05,
+          6.055,
+          6.08,
+          6.085,
+          6.2,
+          6.205,
+          6.235,
+          6.26,
+          6.265,
+          6.27,
+          6.385,
+          6.39,
+          6.395,
+          6.42,
+          6.425,
+          6.515,
+          6.545,
+          6.55,
+          6.61,
+          6.665,
+          6.67,
+          6.675,
+          6.73,
+          6.735,
+          6.91,
+          6.915,
+          7.18,
+          7.1850000000000005,
+          7.425,
+          7.545,
+          7.55,
+          7.605,
+          7.609999999999999
+        ],
+        "candidate_count_quantiles": [
+          0.0,
+          2.0,
+          5.0
+        ]
+      },
+      "3": {
+        "existing_status": "disconnected",
+        "no_candidate_frames": 0,
+        "no_candidate_seconds": [],
+        "no_candidate_near_initial_root_frames": 68,
+        "no_candidate_near_initial_root_seconds": [
+          5.295,
+          5.325,
+          5.33,
+          5.375,
+          5.38,
+          5.385,
+          5.415,
+          5.465,
+          5.47,
+          5.475,
+          5.48,
+          5.68,
+          5.6850000000000005,
+          5.77,
+          5.775,
+          5.78,
+          5.8,
+          5.805,
+          5.825,
+          5.83,
+          5.835,
+          5.915,
+          5.92,
+          5.925,
+          5.975,
+          5.98,
+          5.985,
+          5.99,
+          6.075,
+          6.08,
+          6.13,
+          6.135,
+          6.14,
+          6.23,
+          6.235,
+          6.29,
+          6.295,
+          6.325,
+          6.33,
+          6.385,
+          6.39,
+          6.51,
+          6.6,
+          6.605,
+          6.695,
+          6.7,
+          6.755,
+          6.76,
+          6.765,
+          6.77,
+          6.775,
+          6.78,
+          6.785,
+          6.79,
+          6.795,
+          6.8,
+          6.88,
+          6.885,
+          6.9399999999999995,
+          6.945,
+          6.97,
+          6.975,
+          7.005,
+          7.12,
+          7.125,
+          7.27,
+          7.275,
+          7.365
+        ],
+        "candidate_count_quantiles": [
+          1.0,
+          4.0,
+          6.0
+        ]
+      }
+    },
+    "known_stationary_control": {
+      "root_hz": 32.8,
+      "reference": 5,
+      "source_seconds": [
+        0.2,
+        2.8
+      ],
+      "status": "measured_connected",
+      "rows": 521,
+      "scope": "Coarse tracking diagnostic only, not complete phase/profile validation or vehicle audio"
+    }
+  },
+  "C_files": 540,
+  "C_hashes_sha256": "4f1e3299513ec8798bcfc7e15805b635e010e14487a64855de5bd54b3fb7b186",
+  "voices_hashes_sha256": "05d5f798da5e36b9efb38e00e0ecf2380238b96db17bdb3c07ffa1d316411b86",
+  "runtime_changed": false,
+  "profiles_exported": 0,
+  "timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "new_media_downloaded": false,
+  "existing_tests_rerun": false,
+  "moving35": "held_unchanged",
+  "date": "2026-11-13",
+  "next_step": "Independent masked/sideband/missing-line/swept estimator validation before another predeclared real-source evaluation"
+}

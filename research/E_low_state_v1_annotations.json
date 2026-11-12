@@ -1,0 +1,29 @@
+{
+  "schema": "vsl.source-state-annotations/1",
+  "date": "2026-11-13",
+  "source": "E",
+  "video_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+  "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+  "visual_evidence": [
+    {"path": "references/analysis/E_low_state_v1/inspect1/report.json", "review": "All13decoded frames in both boards inspected; exterior rear-left parked car, handheld camera, moving adjacent traffic. Brake lights illuminated through7.5s sample, unilluminated at8s sample."},
+    {"path": "references/analysis/E_prelaunch_v1/inspect1/report.json", "review": "All29decoded frames in four boards inspected; original quarter-second PTS retained."}
+  ],
+  "observations": [
+    {"seconds": [5, 8], "visual": "Exterior rear-left car stays parked at sampled half-second points; neighboring roadway vehicles move.", "audio": "Dominant low-frequency family with spacing near33Hz; levels and stereo balance vary. Not an independently isolated engine source or cycle clock."},
+    {"seconds": [8, 10], "visual": "Same parked rear-left view; brake lights no longer illuminated in the8.0s frame.", "audio": "Low-band frequencies and levels change; no assertion that braking causes the sound change."},
+    {"seconds": [10, 20], "visual": "Prior coarse3s frames show parked exterior view; no continuous-frame guarantee.", "audio": "Several rising/falling harmonic families; this whole interval is not one stationary idle fit."},
+    {"seconds": [76, 77.75], "visual": "SPORT cluster, sixth gear, dash speed188to175km/h; phone speed differs.", "audio": "No new fit or precise audio/instrument alignment."},
+    {"seconds": [77.75, 78], "visual": "Visible edit from moving SPORT sixth gear to stationary CORSA first gear; dash clock14:18to14:08, phone14:20to14:10.", "audio": "Retain edit boundary; do not treat it as one physical deceleration."},
+    {"seconds": [78, 79.25], "visual": "First gear, zero indicated speed, low nonzero tach bar roughly between1500and2000RPM at coarse visual precision. Text Thrust mode mogelijk visible at79.25s.", "audio": "Short low-frequency plateau, followed by rise. No calibrated A/V offset, exact RPM, pedal or active launch-control label."},
+    {"seconds": [79.5, 80.75], "visual": "Tach bar rises by79.5s and is around4500RPM from79.75s, while displayed speed remains zero.", "audio": "Rising then held family; not a stable warm-idle reference."},
+    {"seconds": [81, 83], "visual": "Phone shows departure by81s, dash first nonzero sampled speed at81.5s; displays disagree. First gear remains visible.", "audio": "Departure/engine-speed changes observed only as mixed source context; no throttle, torque-cut or clutch timing inferred."}
+  ],
+  "fixed_fit_attempt": {"seconds": [5.2, 7.8], "root_guess_hz": 32.8, "references": [5, 2, 3], "window_ms": 80, "result": "All fixed coarse paths rejected before phase fitting; no model exported"},
+  "limits": [
+    "Same mux timeline does not measure A/V, instrument or engine-event latency",
+    "Parked/zero indicated speed and low bar do not establish warm idle or source isolation",
+    "Frame sampling does not rule out every intervening edit or short action",
+    "Acoustic spacing is not physical engine-cycle frequency or ECU RPM",
+    "The failed80ms path must not be replaced by an interval/reference/window search for a passing result"
+  ]
+}

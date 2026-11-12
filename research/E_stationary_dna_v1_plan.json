@@ -1,0 +1,32 @@
+{
+  "schema": "vsl.source-stationary-coordinate-plan/1",
+  "source": "E",
+  "selection_basis": "First observed exterior pitch plateau in the fixed 5..20 second context, ending before the visible spectral step near 8 seconds. One interval, no searches for passing alternatives.",
+  "cases": [
+    {
+      "id": "exterior_before_blips",
+      "observation": "exterior_stationary_context",
+      "window_ms": 80,
+      "seconds": [5.2, 7.8],
+      "initial_root_hz": 32.8,
+      "primary_reference": 5,
+      "comparison_references": [2, 3]
+    }
+  ],
+  "primary_reference": 5,
+  "comparison_references": [2, 3],
+  "diagnostic_gates": {
+    "maximum_root_relative_p95": 0.01,
+    "maximum_shape_difference_db": 0.5,
+    "minimum_comparison_references": 1,
+    "minimum_nonoverlapping_four_cycle_windows": 6,
+    "require_primary_separate_carrier_gate": true
+  },
+  "limits": [
+    "The approximately 33 Hz acoustic spacing is not an independently identified engine-cycle clock or physical RPM",
+    "Exterior parked observation only; warm idle, pedal, torque load and temperature are not established",
+    "Reuse the existing fixed-plan estimator without interval/reference retries or missing-line interpolation",
+    "Any local pass still needs independent contiguous-half validation before a new statistical profile",
+    "Generic dynamic phase qualification and all accepted moving models remain unchanged"
+  ]
+}

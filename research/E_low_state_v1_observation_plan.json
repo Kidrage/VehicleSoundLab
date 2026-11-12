@@ -1,0 +1,33 @@
+{
+  "schema": "vsl.source-state-observation-plan/1",
+  "source": "E",
+  "purpose": "Check the already-approved exterior stationary intro and cabin prelaunch context before choosing any sound-DNA fit interval",
+  "segments": [
+    {
+      "id": "exterior_stationary_context",
+      "seconds": [5, 20],
+      "perspective": "Exterior rear-left; handheld camera and adjacent roadway/trucks",
+      "basis": "Original frames at 6/9/12/15/18 seconds show a parked car. Running state, revs, background sound and thermal state remain unverified.",
+      "regions": [[5, 8], [8, 11], [11, 14], [14, 17], [17, 20]]
+    },
+    {
+      "id": "cabin_prelaunch_context",
+      "seconds": [77.8, 83],
+      "perspective": "Cabin instrument view; different recording context from the exterior intro",
+      "basis": "Original PTS frames show an edit near 78 seconds, first gear and zero indicated speed, a brief low tach bar, then tach rise and launch. Exact RPM, A/V latency and control inputs are unknown.",
+      "regions": [[78.1, 79.2], [79.5, 80.75], [81.5, 83]]
+    }
+  ],
+  "observation": {
+    "windows_ms": [80, 320],
+    "hop_samples": 240,
+    "fft_size": 16384
+  },
+  "limits": [
+    "Fixed regions are observations, not accepted stationary fitting windows or measured idle/load states",
+    "Unchanged decoded stereo FLOAT samples; no filtering, gain normalization, downmix or noise removal",
+    "No sound-DNA fit, new RPM mapping, model export or runtime changes at this stage",
+    "Exterior and cabin observations stay separate; no transfer of their room/microphone response",
+    "Window centers near boundaries include sound from both sides; clip-edge windows are omitted"
+  ]
+}

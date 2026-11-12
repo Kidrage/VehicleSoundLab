@@ -400,6 +400,77 @@
       "evidence": "references/analysis/B_stationary_dna_v1/final1/exact_sources/research/B_stationary_action_v1_annotations.json",
       "stationary_fit_status": "800.2..805.2 disjoint full-timbre holdout rejected, despite local low-carrier agreement; no model; not continuous stationary idle",
       "existing_audition": null
+    },
+    "E_exterior_stationary_intro_context": {
+      "source": "E",
+      "seconds": [
+        5,
+        20
+      ],
+      "perspective": "exterior rear-left parked; handheld camera, adjacent roadway traffic",
+      "visual": "Parked at sampled4.5..10.5s frames; brake lights change between7.5and8s samples",
+      "audio_interpretation": "Approx33Hz family at5..8; pitch/level step near8; repeated rises/falls after10. Whole interval is not one steady idle.",
+      "allowed_uses": [
+        "stationary_context",
+        "exterior_spectral_observation",
+        "rev_sequence_context"
+      ],
+      "stationary_fit_status": "Fixed5.2..7.8/root32.8/ref5,2,3/80ms coarse paths rejected; no phase or model. No interval/reference/window search to pass.",
+      "evidence": "research/E_low_state_v1_annotations.json",
+      "not_established": [
+        "exact ECU RPM or physical cycle order",
+        "warm-idle thermal state",
+        "pedal, torque, injector or clutch measurements",
+        "independent A/V or display latency",
+        "engine/background/recording-transfer separation"
+      ],
+      "existing_audition": null
+    },
+    "E_prelaunch_low_context": {
+      "source": "E",
+      "seconds": [
+        78,
+        79.25
+      ],
+      "perspective": "cabin CORSA first gear after an edit",
+      "visual": "Dash/phone zero speed, low nonzero tach bar; preceding77.75..78 edit changes mode/gear/time",
+      "audio_interpretation": "Brief low family before rise; not independently verified stable warm idle",
+      "allowed_uses": [
+        "stationary_context",
+        "interior_spectral_observation"
+      ],
+      "evidence": "research/E_low_state_v1_annotations.json",
+      "not_established": [
+        "exact ECU RPM or physical cycle order",
+        "warm-idle thermal state",
+        "pedal, torque, injector or clutch measurements",
+        "independent A/V or display latency",
+        "engine/background/recording-transfer separation"
+      ],
+      "existing_audition": null
+    },
+    "E_prelaunch_rise_departure_context": {
+      "source": "E",
+      "seconds": [
+        79.25,
+        83
+      ],
+      "perspective": "cabin CORSA first gear",
+      "visual": "Thrust mode mogelijk text, tach rise and hold around4500indicatedRPM, departure with disagreeing phone/dash speed",
+      "audio_interpretation": "Rising/held/departure families; not an exact launch-control, torque-cut or clutch measurement",
+      "allowed_uses": [
+        "gear_display_context",
+        "interior_dynamic_observation"
+      ],
+      "evidence": "research/E_low_state_v1_annotations.json",
+      "not_established": [
+        "exact ECU RPM or physical cycle order",
+        "warm-idle thermal state",
+        "pedal, torque, injector or clutch measurements",
+        "independent A/V or display latency",
+        "engine/background/recording-transfer separation"
+      ],
+      "existing_audition": null
     }
   },
   "superseded_for_calibration": [
