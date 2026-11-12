@@ -1,0 +1,574 @@
+{
+  "schema": "vsl.period-structure-publication/1",
+  "result": "fractional_structure_and_short_projection_leakage_observed",
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/period_structure_v1/observe1/report.json",
+      "sha256": "b91a3be056d4fa7bb659a7a15dd9e9f561fb6b00441e46571abe630bf9dce70e",
+      "result": "observed_no_new_clock_or_model"
+    },
+    "observe2": {
+      "path": "references/analysis/period_structure_v1/observe2/report.json",
+      "sha256": "a8b086485d2c2a64263f3ef0d72a6fb1261e479966ff98b5c2600f9607f15b67",
+      "result": "observed_no_new_clock_or_model"
+    },
+    "leakage1": {
+      "path": "references/analysis/period_structure_v1/leakage1/report.json",
+      "sha256": "04845333fab3232b18337377a088034ca0556b70ac8299c8e804f3ec8ba99f7f",
+      "result": "analytic_short_projection_leakage_confirmed"
+    },
+    "leakage2": {
+      "path": "references/analysis/period_structure_v1/leakage2/report.json",
+      "sha256": "ce1693fefa807b0b70344df059c8e31af53dac05fa938261a0926e72cc6b2777",
+      "result": "analytic_short_projection_leakage_confirmed"
+    }
+  },
+  "sources": {
+    "tools/package_period_structure_v1.py": "cf8daa6cb724004cb7ef231deb59af0d774277b76ef45c619c6db03aae284f6b",
+    "research/低转周期结构与带宽V1.md": "325e6610b8ed3559d32b60c6a0f021bead74ef16daf057e3565d69ce44c8c800",
+    "research/period_structure_v1_plan.json": "fc156755f7027b3d1895279c3807d1239f13043fcfb1e1a30a1f9c91fdeadef4",
+    "research/period_structure_v1_leakage_plan.json": "e760eb3fc6130894beb2e792831c51f02b2ac4f535c34a53132b1a30812fbb97",
+    "tools/observe_period_structure_v1.py": "38e2d4a0c74b893b785586f2241215711633a00962fa875b649c9cbd7be063b5",
+    "tools/diagnose_period_leakage_v1.py": "741903105e04e4688b8aad8e82fd8de2839320dce8445ab9708cb2031e4f1285",
+    "handoff/算法说明.md": "5a0de759a51411f312e19495673c3d1f13fe047bac6d8d9ec9ffc1310fdb83dd",
+    "handoff/研究续接.md": "efbb6227a09c72029d68be08476b09238d1878223140c3d57cf8e42ba654ec55",
+    "research/怠速与加速完成度V1.md": "a99296dec81e0f167683279539588814e3fbd9309bd101e5453e562832ca0a9d",
+    "AGENTS.md": "3b4af42a9c29978d61177e3df151f43f55367f3e577583ef25d9824f509334af",
+    "tools/period_structure_v1/fixtures.py": "f0d8a379761458badcbb49dcbc7f7fade5038aaa3148c375f38783bb5208cd79",
+    "tools/period_structure_v1/phase.py": "4469cbda57a97f376b3f6a3bf0715828c449c5414a8a983c40cfdd60ff6b1e8c",
+    "tools/period_structure_v1/spectrum.py": "ff15285af8e3ff6ba1b69e254b7d14ad7660d55ab7eebea4abf5d248c4af3eba",
+    "tools/period_structure_v1/__init__.py": "5ad343009c322220e25198df66b83b48b214cd0a53c2416c67672c4684ee794b"
+  },
+  "date": "2026-11-13",
+  "source_seconds": [
+    5.2,
+    7.8
+  ],
+  "existing_coarse_root_hz": 33.084458080041166,
+  "frequency_meter_positive_checks": 5,
+  "noise_meter": "observed_only_not_period_qualified",
+  "maximum_analytic_peak_order_error": 1.0728507017887523e-05,
+  "AM_long_period_formula_difference": 3.2866070975856587e-13,
+  "selected_fractional_peak_occupancy": {
+    "raw_spectrum": {
+      "full": [
+        {
+          "integer_peaks": 9,
+          "fractional_peaks": 28,
+          "fifth_grid": {
+            "noninteger_matches": 6,
+            "distinct_integer_neighborhoods": 6,
+            "fractional_power_fraction": 0.13448505550945009,
+            "matched_orders": [
+              1.7788496869958617,
+              7.6036004536674255,
+              8.565037955652306,
+              14.214749429420936,
+              22.43496848537615,
+              29.2177765497295
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 4,
+          "fractional_peaks": 26,
+          "fifth_grid": {
+            "noninteger_matches": 7,
+            "distinct_integer_neighborhoods": 7,
+            "fractional_power_fraction": 0.034353772862507556,
+            "matched_orders": [
+              7.603697896565688,
+              9.204958868845246,
+              14.215141018651796,
+              16.38659767372804,
+              24.81754849836841,
+              25.371182120631957,
+              28.77100030425042
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ],
+      "first_half": [
+        {
+          "integer_peaks": 11,
+          "fractional_peaks": 51,
+          "fifth_grid": {
+            "noninteger_matches": 18,
+            "distinct_integer_neighborhoods": 13,
+            "fractional_power_fraction": 0.2859811829116875,
+            "matched_orders": [
+              1.7726143202070983,
+              7.602133446976181,
+              8.565376250337147,
+              9.177160537341509,
+              9.770628104345096,
+              10.196848510397386,
+              10.833060595729899,
+              11.182573226254691,
+              17.401468745227096,
+              20.42091624460673,
+              22.43189730373306,
+              26.206346032456377,
+              27.17401672053593,
+              27.790290976595838,
+              28.201189668230644,
+              28.62486388224322,
+              29.211421335263434,
+              29.6173357485139
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 9,
+          "fractional_peaks": 55,
+          "fifth_grid": {
+            "noninteger_matches": 21,
+            "distinct_integer_neighborhoods": 16,
+            "fractional_power_fraction": 0.2575713109212121,
+            "matched_orders": [
+              1.775459444776212,
+              3.5661552805781316,
+              5.791528033801709,
+              7.575277141643692,
+              8.226295587810712,
+              8.403448967108043,
+              9.76511410168562,
+              10.204416509077552,
+              10.416554048148145,
+              10.778755698172475,
+              13.618535090890452,
+              16.384482697531727,
+              17.407786671898574,
+              22.623423663818645,
+              23.83409059739002,
+              24.625857801235288,
+              24.822660111229435,
+              26.167719293461136,
+              26.825346900745867,
+              28.779171738116087,
+              29.766173463463083
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ],
+      "last_half": [
+        {
+          "integer_peaks": 9,
+          "fractional_peaks": 38,
+          "fifth_grid": {
+            "noninteger_matches": 16,
+            "distinct_integer_neighborhoods": 12,
+            "fractional_power_fraction": 0.7514246779777817,
+            "matched_orders": [
+              1.3782546266894566,
+              1.7682922946465742,
+              3.408724124180295,
+              4.417224772359453,
+              4.608639026888672,
+              5.216645223336813,
+              5.414111703597002,
+              5.829042826721012,
+              7.612419250497549,
+              9.421305859697455,
+              10.623854301957591,
+              11.414860810785633,
+              13.3921037605599,
+              19.217288519352408,
+              20.1987310432909,
+              29.426075307203856
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 13,
+          "fractional_peaks": 46,
+          "fifth_grid": {
+            "noninteger_matches": 21,
+            "distinct_integer_neighborhoods": 14,
+            "fractional_power_fraction": 0.7339649740154304,
+            "matched_orders": [
+              1.3798775177509461,
+              1.5713184978334807,
+              3.6158540094865845,
+              4.416820984417137,
+              4.608439785404289,
+              5.216983169591753,
+              5.415140939067715,
+              5.833380301182741,
+              7.6328357392770005,
+              8.410927367805316,
+              8.616553668160721,
+              8.817430371314943,
+              9.209827462337548,
+              9.41102403597041,
+              12.596214394658842,
+              13.425912153406356,
+              15.425750761898515,
+              18.369266968535047,
+              19.19708404779763,
+              28.767480907578314,
+              30.186550653676974
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ]
+    },
+    "coarse_coordinate_spectrum": {
+      "full": [
+        {
+          "integer_peaks": 16,
+          "fractional_peaks": 20,
+          "fifth_grid": {
+            "noninteger_matches": 17,
+            "distinct_integer_neighborhoods": 15,
+            "fractional_power_fraction": 0.9712963043024024,
+            "matched_orders": [
+              4.408657981501829,
+              5.406981732453671,
+              7.609606018174206,
+              8.81354848535993,
+              9.389341605509523,
+              10.821677406812153,
+              11.231300993768325,
+              11.384171129326965,
+              11.61461359487678,
+              13.224342308433286,
+              15.802739222644425,
+              16.212944912516907,
+              20.809377789107497,
+              23.401282903644905,
+              24.79778077059699,
+              27.824615180736135,
+              29.422296589058124
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 17,
+          "fractional_peaks": 19,
+          "fifth_grid": {
+            "noninteger_matches": 14,
+            "distinct_integer_neighborhoods": 11,
+            "fractional_power_fraction": 0.9224857880006055,
+            "matched_orders": [
+              3.410836998543695,
+              3.6089961798218604,
+              4.408977565856219,
+              4.612443924436261,
+              5.406783976638315,
+              7.61176001545383,
+              8.606331675612312,
+              8.81817931332477,
+              10.595414181593464,
+              11.622460240276007,
+              16.211474234492346,
+              22.79662060708064,
+              24.403888940081323,
+              25.57833679499852
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ],
+      "first_half": [
+        {
+          "integer_peaks": 12,
+          "fractional_peaks": 44,
+          "fifth_grid": {
+            "noninteger_matches": 18,
+            "distinct_integer_neighborhoods": 12,
+            "fractional_power_fraction": 0.7870132958542883,
+            "matched_orders": [
+              3.416031125784394,
+              3.609996495743197,
+              4.207992283929694,
+              4.414097515624284,
+              4.613017527822667,
+              4.826497049527528,
+              5.417421427313095,
+              7.620082066167059,
+              9.381361474980919,
+              11.381835051349045,
+              11.573903154069287,
+              20.409245835341935,
+              22.825076391774974,
+              23.413741868757945,
+              24.433299181384875,
+              24.79139390299922,
+              27.82679488023079,
+              29.417247150760144
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 14,
+          "fractional_peaks": 47,
+          "fifth_grid": {
+            "noninteger_matches": 22,
+            "distinct_integer_neighborhoods": 15,
+            "fractional_power_fraction": 0.7662500020413611,
+            "matched_orders": [
+              1.7698235439094878,
+              3.408343595955564,
+              3.6042561921058356,
+              3.8110843171592217,
+              4.416461220429435,
+              4.612839957620444,
+              4.8259503920614035,
+              5.419093291498984,
+              8.623007881490974,
+              8.833706268527495,
+              9.429092280426573,
+              9.810942586220051,
+              10.173101370226034,
+              10.634809557623788,
+              11.576158593282546,
+              12.62207606830638,
+              14.182633377963006,
+              15.398755781649886,
+              23.191551128125337,
+              24.425823808824607,
+              25.579510116155188,
+              27.81388204219153
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ],
+      "last_half": [
+        {
+          "integer_peaks": 17,
+          "fractional_peaks": 29,
+          "fifth_grid": {
+            "noninteger_matches": 25,
+            "distinct_integer_neighborhoods": 15,
+            "fractional_power_fraction": 0.9693454492702867,
+            "matched_orders": [
+              1.3741964811233094,
+              3.3975504766567957,
+              3.829703996525707,
+              4.178798955978968,
+              4.40406611140808,
+              4.594365627758161,
+              5.196661460972649,
+              5.39928780995742,
+              5.808201137446178,
+              7.597994563426984,
+              7.8018003869308465,
+              8.595444164302325,
+              9.389727033304709,
+              10.597025133743848,
+              11.18801426781738,
+              11.385807337243728,
+              12.191275988089924,
+              12.799530358416282,
+              13.194346311676687,
+              13.592696504235708,
+              13.795181735680407,
+              16.202952262988934,
+              17.584327106726732,
+              18.1892138868575,
+              23.399217562406566
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        },
+        {
+          "integer_peaks": 19,
+          "fractional_peaks": 44,
+          "fifth_grid": {
+            "noninteger_matches": 37,
+            "distinct_integer_neighborhoods": 21,
+            "fractional_power_fraction": 0.9660567119827588,
+            "matched_orders": [
+              1.3762020467569789,
+              1.5668828375036497,
+              3.6176013253463326,
+              4.404082511389505,
+              4.594334817135033,
+              4.793417570503436,
+              5.197395060822976,
+              5.400172515528125,
+              5.811598282584923,
+              7.6111135680505715,
+              8.200238563448224,
+              8.37433514595259,
+              8.597807298946163,
+              8.796522205407085,
+              9.188750669317855,
+              9.383226694966162,
+              9.604450628448584,
+              10.597979499354917,
+              11.583180914785537,
+              12.192541484697104,
+              12.796400682280671,
+              13.192212263385052,
+              13.399308489006271,
+              14.397577576198463,
+              14.586773896383255,
+              15.785272418044212,
+              16.203638473510928,
+              18.386456451209877,
+              18.579741738970306,
+              19.37039657279316,
+              20.424252392744012,
+              22.581521119387183,
+              22.796713719820467,
+              23.390292536063033,
+              23.583641035037918,
+              24.39172124728955,
+              29.828388484657168
+            ],
+            "warning": "Descriptive occupancy only; harmonically nested grids, AM and noise are not engine-cycle identification"
+          }
+        }
+      ]
+    }
+  },
+  "analytic_projection_comparison": [
+    {
+      "id": "integer_delayed_stereo",
+      "windows": {
+        "4": 1.9589885269510886e-14,
+        "20": 1.567357355014565e-14
+      }
+    },
+    {
+      "id": "fifth_grid",
+      "windows": {
+        "4": 7.094856053045011,
+        "20": 9.642286968869484e-15
+      }
+    },
+    {
+      "id": "am_sidebands",
+      "windows": {
+        "4": 0.0004041875852330489,
+        "20": 1.56846757803919e-14
+      }
+    },
+    {
+      "id": "same_samples_long_period_description",
+      "windows": {
+        "4": 0.0004041875852358855,
+        "20": 1.577349362236191e-14
+      }
+    }
+  ],
+  "conditional_bandwidth_budget": [
+    {
+      "divisor": 1,
+      "hypothetical_root_hz": 33.084458080041166,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 10587.026585613174,
+      "current_warp_lowpass_hz": 12244.961472298652,
+      "harmonics_required_through_14khz": 424,
+      "cycle_samples_required_for_existing_antialias_margin": 1171
+    },
+    {
+      "divisor": 2,
+      "hypothetical_root_hz": 16.542229040020583,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 5293.513292806587,
+      "current_warp_lowpass_hz": 6122.480736149326,
+      "harmonics_required_through_14khz": 847,
+      "cycle_samples_required_for_existing_antialias_margin": 2342
+    },
+    {
+      "divisor": 3,
+      "hypothetical_root_hz": 11.028152693347055,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 3529.008861871058,
+      "current_warp_lowpass_hz": 4081.6538240995505,
+      "harmonics_required_through_14khz": 1270,
+      "cycle_samples_required_for_existing_antialias_margin": 3513
+    },
+    {
+      "divisor": 4,
+      "hypothetical_root_hz": 8.271114520010292,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 2646.7566464032934,
+      "current_warp_lowpass_hz": 3061.240368074663,
+      "harmonics_required_through_14khz": 1693,
+      "cycle_samples_required_for_existing_antialias_margin": 4684
+    },
+    {
+      "divisor": 5,
+      "hypothetical_root_hz": 6.616891616008234,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 2117.4053171226346,
+      "current_warp_lowpass_hz": 2448.99229445973,
+      "harmonics_required_through_14khz": 2116,
+      "cycle_samples_required_for_existing_antialias_margin": 5854
+    },
+    {
+      "divisor": 6,
+      "hypothetical_root_hz": 5.514076346673527,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 1764.504430935529,
+      "current_warp_lowpass_hz": 2040.8269120497753,
+      "harmonics_required_through_14khz": 2539,
+      "cycle_samples_required_for_existing_antialias_margin": 7025
+    },
+    {
+      "divisor": 7,
+      "hypothetical_root_hz": 4.726351154291595,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 1512.4323693733106,
+      "current_warp_lowpass_hz": 1749.2802103283789,
+      "harmonics_required_through_14khz": 2963,
+      "cycle_samples_required_for_existing_antialias_margin": 8196
+    },
+    {
+      "divisor": 8,
+      "hypothetical_root_hz": 4.135557260005146,
+      "current_max_harmonics": 320,
+      "current_harmonic_ceiling_hz": 1323.3783232016467,
+      "current_warp_lowpass_hz": 1530.6201840373315,
+      "harmonics_required_through_14khz": 3386,
+      "cycle_samples_required_for_existing_antialias_margin": 9367
+    }
+  ],
+  "prior_real_phase_gate": "source_phase_rejected_unchanged",
+  "model_exported": false,
+  "real_C_render_executed": false,
+  "engine_period_identified": false,
+  "vehicle_timbre_accepted": false,
+  "runtime_changed": false,
+  "existing_Ctests_rerun": false,
+  "C_H": 540,
+  "moving35": "held_unchanged",
+  "idle_acceleration_complete": false,
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "2bf13d3cdaa829d95a7a2b6247d92047527a8d655cece43018a8bf5bbf7d832f",
+  "voice_hashes_sha256": "05d5f798da5e36b9efb38e00e0ecf2380238b96db17bdb3c07ffa1d316411b86",
+  "plot": {
+    "path": "references/analysis/period_structure_v1/observe2/period_structure.png",
+    "sha256": "e799c468f27aa743ff1bbc753cf240b9b21c4ee6b9331391f3bb8cb48c053e05",
+    "visually_inspected": true
+  },
+  "previous_goal_turn": "no_progress_status_only_revalidated",
+  "this_turn": "progress_new_source_structure_leakage_controls_and_bandwidth_evidence",
+  "next_step": "Independently qualify fractional-line-resolving common phase and high-frequency/stereo retention; then one declared source case plus independent carriers and contiguous-half timbre holdouts",
+  "limits": [
+    "Fifth-grid occupancy is selected-peak power, not total power or a period probability",
+    "AM, longer cycles, source mixture and transfer remain ambiguous; no root/5 or physical RPM asserted",
+    "Known analytic leakage does not establish the sole cause of real-source rejection",
+    "Wider/sparse harmonic representation and bandwidth must be designed before any lower-root model export",
+    "F1/F2/F3 and original A low listening remain pending; no duplicate question"
+  ],
+  "attempts": {
+    "observe1": "Initial window-energy scale retained; no model accepted",
+    "observe2": "Coherent-line normalization correction; initial stereo/coordinates exactly equal",
+    "leakage1": "Initial analytic projection counterexamples",
+    "leakage2": "Adds saved-coordinate constant-sine null and preserves identical analytic results"
+  }
+}

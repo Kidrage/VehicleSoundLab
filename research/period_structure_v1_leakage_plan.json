@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.period-projection-leakage-plan/1",
+  "scope": "Analytic-only counterexample to interpreting short-window phase disagreement as incompatible clocks",
+  "cycle_samples": 1024,
+  "coarse_root_hz": 33,
+  "known_fractional_spacing_orders": 0.2,
+  "projection_cycles": [4, 20],
+  "fixture_provider": "tools/period_structure_v1/fixtures.py",
+  "cases": ["integer_delayed_stereo", "fifth_grid", "am_sidebands", "same_samples_long_period_description"],
+  "independent_equation": "sin(A)*(1+0.6*cos(B)) equals sin(A)+0.3*sin(A+B)+0.3*sin(A-B), B=2pi*0.2*coarse_phase",
+  "expectation": "20 coarse cycles contain 4 full periods of the known fifth-grid fixture. Compare against 4 coarse cycles at the same known carrier frequencies, offsets removed; do not retime either signal.",
+  "rules": {
+    "maximum_long_window_pair_drift_cycles": 0.0001,
+    "minimum_short_window_AM_pair_drift_cycles": 0.0001
+  },
+  "warp_null": {
+    "coordinate_file": "references/analysis/period_structure_v1/observe2/initial_coordinates_and_stereo.npz",
+    "read_npz_members": ["source_seconds"],
+    "orders": [2, 3, 5, 7, 15],
+    "amplitudes": [0.4, 0.3, 0.9, 0.25, 0.15],
+    "phases_radians": [0.4, 1.1, -0.2, 0.6, -0.7],
+    "right_delay_seconds": 0.0007,
+    "purpose": "Measure whether the fixed saved time warp itself produces fractional occupancy from stationary analytic integer carriers; do not read or copy the recorded stereo"
+  },
+  "policy": [
+    "Fixed two windows justified by independently known analytic grid, not tuned against the source",
+    "No real E read, no changed real-source gate or new phase fit",
+    "This only establishes that near-carrier lines can corrupt a short projection; it does not establish that they explain every real-source phase discrepancy"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "vsl.period-structure-plan/1",
+  "scope": "Offline observation of the already rejected coordinate; not a replacement clock, RPM measurement or model qualification",
+  "source": "E",
+  "segment": "E_exterior_stationary_intro_context",
+  "source_seconds": [5.2, 7.8],
+  "coarse_report": "references/analysis/multicarrier_clock_v1/E_source1/coarse.json",
+  "prior_report": "references/analysis/multicarrier_clock_v1/E_source1/report.json",
+  "coordinate": "Reconstruct initial warp from the saved coarse rows; do not call track/refine or change its root",
+  "spectrum": {
+    "window_cycles": 32,
+    "hop_cycles": 8,
+    "zero_padding": 4,
+    "band_hz": [35, 1000],
+    "peak_prominence_db": 8,
+    "peak_relative_db": -30,
+    "integer_guard_orders": 0.08,
+    "fraction_tolerance_orders": 0.035,
+    "denominators": [2, 3, 4, 5, 6, 7, 8]
+  },
+  "phase": {
+    "projection_cycles": 4,
+    "hop_samples": 256,
+    "orders": [2, 3, 5, 7, 15],
+    "support_relative_db": -30,
+    "minimum_contiguous_rows": 8,
+    "warning_phase_step_radians": 2.5132741228718345
+  },
+  "fixture_gate": {
+    "maximum_peak_order_error": 0.003,
+    "maximum_pair_drift_cycles": 0.0001,
+    "maximum_ambiguous_waveform_difference": 1e-11
+  },
+  "policy": [
+    "Run independently constructed integer, fifth-grid, seventh-grid, AM ambiguity, delayed-stereo and noise observations before source analysis",
+    "One fixed configuration, full interval and contiguous equal halves; do not search for passing windows",
+    "Fractional combs alone cannot distinguish a longer engine cycle from AM, multiple sources or transfer changes",
+    "The raw and shared-warp observations are both retained; no per-channel phase correction",
+    "Do not divide the source root, export parameters or make C/runtime changes based on these diagnostics",
+    "Preserve failures, exact sources, hashes and the original phase rejection; do not change existing gates"
+  ]
+}
