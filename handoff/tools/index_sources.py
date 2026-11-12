@@ -206,6 +206,8 @@ def code_rows():
                 role = "既有唯一驾驶器的两次启停与分轨" if p.stem == "probe" else "解析门控、相位／量隔离、持续与分块、事务校验"
             elif group == "startup_drive_v1":
                 layer, owner, role = "启动层统一驾驶验证", "VslStartupDrive_checks", "PSD解析矩阵、两次驾驶器门控、独立量、分块／2与12前置一次路由"
+            elif group == "startup_scene_v1":
+                layer, owner, role = "同录音启动声源诊断", "startup_scene_probe", "复用单锚点atlas／原驾驶器，A车内前段与趋稳DNA两次启停、分轨和2／12导出"
             yield rel, layer, owner, role, digest(p)
 
 
