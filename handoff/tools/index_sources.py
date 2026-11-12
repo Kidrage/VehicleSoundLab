@@ -191,6 +191,9 @@ def code_rows():
             elif group == "residual_dense_v1":
                 layer, owner = "可变密度独立验证", "residual_dense_"+p.stem
                 role = "离线FLOAT导出／交替隔离计时" if p.stem == "probe" else "旧32样本／载波状态兼容、分块、mono、事务、拥有与静音时钟"
+            elif group == "state_passage_v1":
+                layer, owner = "状态片段声源诊断", "state_passage_probe"
+                role = "观察声学Hz轨迹校验／不外推取值" if p.stem == "trajectory" else "复用atlas的独立离线声源／实际音高遥测；不接管驾驶器"
             yield rel, layer, owner, role, digest(p)
 
 
