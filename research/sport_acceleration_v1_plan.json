@@ -1,0 +1,21 @@
+{
+  "schema": "vsl.sport-acceleration-plan/1",
+  "source_segment": "E_sport_context",
+  "source_use": "cabin_dynamic_observation",
+  "low_case": {"id":"sport_fourth_low", "seconds":[58.6,59.6], "initial_root_hz":25.0},
+  "primary_reference":5,
+  "comparison_references":[3,7],
+  "coarse": "Existing measured-peak path,80ms Hann/5ms hop,4dB prominence,-30dB relative gate,16oct/s; no missing peak fill",
+  "phase": "One predeclared two-cycle refiner per reference; no alternate windows/carriers/anchors on failure",
+  "diagnostic_gates": {
+    "maximum_root_relative_p95":0.01,
+    "maximum_shape_difference_db":0.5,
+    "minimum_comparison_references":1,
+    "minimum_nonoverlapping_four_cycle_windows":6,
+    "require_primary_separate_carrier_gate":true
+  },
+  "raw_budget_intervals_seconds": [[58.6,59.6],[60.5,61.5],[62.5,63.5],[64.6,65.4]],
+  "visual_context": "A visible edit occurs between57.75and58.00; Sport gear4 remains displayed58.00..60.25; selected low interval stays within that visual span under an assumed+/-0.6s offset. This is not measured AV alignment.",
+  "raw_budget_rule": "80ms real windows entirely inside each interval; fixed absolute bands, original L/R samples; no phase warp",
+  "claim_boundary": "New independent source context relative to E Corsa anchor windows; not a new engine, pedal/load telemetry, matched-condition trial or promotion of previously failed generic phase qualification"
+}

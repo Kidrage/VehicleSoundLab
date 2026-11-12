@@ -1,0 +1,330 @@
+{
+  "schema": "vsl.sport-acceleration-summary/1",
+  "date": "2026-11-12",
+  "result": "new_context_only_not_new_DNA",
+  "inspected_frame_files": 48,
+  "visible_edit_seconds": [
+    57.75,
+    58
+  ],
+  "display_downshifts": [
+    [
+      4,
+      3
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "low_case": {
+    "id": "sport_fourth_low",
+    "seconds": [
+      58.6,
+      59.6
+    ],
+    "initial_root_hz": 25.0
+  },
+  "local_diagnostic_gate": false,
+  "coarse_path_status": {
+    "5": "observed",
+    "3": "missing_coarse_path",
+    "7": "missing_coarse_path"
+  },
+  "observed_primary_root_range_hz": [
+    26.11004164641866,
+    28.29208526348475
+  ],
+  "primary_separate_carrier_gate": {
+    "passed": true,
+    "orders": [
+      7,
+      10,
+      15
+    ],
+    "rule": ">=2 separate L carriers; support fraction>=.8 and phase coherence>=.8"
+  },
+  "missing_separate_path_references": [
+    3,
+    7
+  ],
+  "new_model": false,
+  "generic_phase_status": "not_passed_unchanged",
+  "raw_budgets": [
+    {
+      "source_seconds": [
+        58.6,
+        59.6
+      ],
+      "seconds": [
+        58.64,
+        59.56
+      ],
+      "frames": 184,
+      "power_LR": [
+        [
+          0.004273229920198103,
+          0.04568522663473448,
+          0.0006525688666961883,
+          2.9170490084782693e-05,
+          2.322802474600747e-06,
+          3.888986410462363e-09
+        ],
+        [
+          0.0036082577953680714,
+          0.03816858222431924,
+          0.0005183183059632418,
+          1.3755203657274058e-05,
+          1.340536666132251e-06,
+          3.073513184026312e-09
+        ]
+      ],
+      "lr_level_db": [
+        0.7345870200948422,
+        0.7806975535794594,
+        1.0002980273938114,
+        3.26476700770571,
+        2.387335828071466,
+        1.0220134517260162
+      ],
+      "complex_band_correlation": [
+        [
+          0.977619737410386,
+          -0.05844945842284899
+        ],
+        [
+          0.994343215242806,
+          -0.0009498729041138032
+        ],
+        [
+          0.9105301639504838,
+          0.011361743946072896
+        ],
+        [
+          0.6598472647338783,
+          -0.18170303793756326
+        ],
+        [
+          0.25492390161222134,
+          -0.3855957678010865
+        ],
+        [
+          -0.07600051129663118,
+          0.020787609095355035
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        60.5,
+        61.5
+      ],
+      "seconds": [
+        60.54,
+        61.46
+      ],
+      "frames": 184,
+      "power_LR": [
+        [
+          0.011229806876782805,
+          0.04224348302736894,
+          0.009142435158094691,
+          0.000888670081994984,
+          2.2421629451097857e-05,
+          1.7704052446915495e-08
+        ],
+        [
+          0.009907104289243235,
+          0.03478507094252368,
+          0.00805922196522296,
+          0.0004376645515333718,
+          8.546780861604775e-06,
+          1.4867531691254981e-08
+        ]
+      ],
+      "lr_level_db": [
+        0.5442555288997954,
+        0.8436682570083243,
+        0.5476877165134788,
+        3.0759918690938957,
+        4.188646021210675,
+        0.7583381458219306
+      ],
+      "complex_band_correlation": [
+        [
+          0.9891841749742009,
+          -0.01676268833838836
+        ],
+        [
+          0.992286108613319,
+          -0.02012795241118034
+        ],
+        [
+          0.886006545791306,
+          0.03840485805096574
+        ],
+        [
+          0.7560526580469685,
+          -0.0677290240529454
+        ],
+        [
+          0.4067463326206485,
+          -0.37046020247005806
+        ],
+        [
+          -0.12918758284166315,
+          -0.06006151926650339
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        62.5,
+        63.5
+      ],
+      "seconds": [
+        62.54,
+        63.46
+      ],
+      "frames": 184,
+      "power_LR": [
+        [
+          0.015589185323566278,
+          0.02728101848400419,
+          0.012104985503380784,
+          0.0019836437043065057,
+          8.683784885879567e-05,
+          7.608735616541604e-08
+        ],
+        [
+          0.01337465401253921,
+          0.023633477495004565,
+          0.008625637458041232,
+          0.0009238959013863162,
+          3.1384171639226035e-05,
+          5.1483382654580134e-08
+        ]
+      ],
+      "lr_level_db": [
+        0.6654086383099121,
+        0.6233295020958934,
+        1.4717307320476947,
+        3.3184062776305696,
+        4.4199838632936626,
+        1.696454198034762
+      ],
+      "complex_band_correlation": [
+        [
+          0.9652842862378871,
+          -0.07310966061252952
+        ],
+        [
+          0.9889427030927385,
+          -0.03471658584232466
+        ],
+        [
+          0.8684442557217611,
+          0.16431248137604387
+        ],
+        [
+          0.7724225581710987,
+          -0.10369535091265014
+        ],
+        [
+          0.4163708264784142,
+          -0.41212976433727583
+        ],
+        [
+          -0.0721576427916369,
+          -0.0674578517442037
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        64.6,
+        65.4
+      ],
+      "seconds": [
+        64.64,
+        65.36
+      ],
+      "frames": 144,
+      "power_LR": [
+        [
+          0.015539640147794243,
+          0.023024677896426003,
+          0.01270198024106367,
+          0.0022852078078200028,
+          8.912779592646154e-05,
+          6.912758084681253e-08
+        ],
+        [
+          0.013178713277899138,
+          0.021267249264913354,
+          0.007877547909245811,
+          0.0010710708718856047,
+          4.065854286802785e-05,
+          5.881669917793616e-08
+        ]
+      ],
+      "lr_level_db": [
+        0.7156794822400757,
+        0.3448224205844052,
+        2.07480379701301,
+        3.2910749054146056,
+        3.4086135661404993,
+        0.7015071076736236
+      ],
+      "complex_band_correlation": [
+        [
+          0.9814816516056153,
+          -0.060231838541120596
+        ],
+        [
+          0.9869087675616417,
+          -0.06039931777679298
+        ],
+        [
+          0.8468531070614063,
+          0.21854320573596325
+        ],
+        [
+          0.7401810316178141,
+          -0.1880094646057567
+        ],
+        [
+          0.4397152466106436,
+          -0.38262574038267216
+        ],
+        [
+          -0.13298253740733654,
+          -0.05955327874664297
+        ]
+      ]
+    }
+  ],
+  "runtime_or_state_policy_changed": false,
+  "preserved_attempts": [
+    "inspect1",
+    "inspect2",
+    "analysis1",
+    "analysis2"
+  ],
+  "entry_guard_revision": "analysis2 allows future C index growth; numerical observations equal analysis1",
+  "evidence_sha256": {
+    "references/analysis/sport_acceleration_v1/inspect1/report.json": "f02909e84cc6d804c6187b9708e87a15d157ca900d38296728e4fc5849f136d1",
+    "references/analysis/sport_acceleration_v1/inspect2/report.json": "14658d9938302d0ee79730f07eca8626cad3a74f697714ed3f3b8e9edae0426e",
+    "references/analysis/sport_acceleration_v1/analysis1/report.json": "8b604e3a17ae7eba5c294f12cd5252fc0a0e82a1938c0b6c6d467fbc9ecb7a29",
+    "references/analysis/sport_acceleration_v1/analysis2/report.json": "94de2cdf635622b3725d48278e284acfc59f3da82bbfad2d55056329f0456fbb"
+  },
+  "limits": [
+    "Sport versus Corsa are different runs/layouts and recording conditions, not matched load trials",
+    "Local phase diagnostics cannot promote generic phase_clock_v1, which remains not_passed",
+    "No extra method/reference/anchor/window search on failure; no model exported",
+    "Raw absolute bands and common46.875Hz harmonic colour use different coordinates",
+    "Stereo observations are not engine banks or physical speakers",
+    "Frame/video PTS and gear animation brackets are not clutch/cut/fueling timestamps",
+    "No new listening question, native/device/longrun/spatial validation or replacement of moving35/idle candidates"
+  ]
+}

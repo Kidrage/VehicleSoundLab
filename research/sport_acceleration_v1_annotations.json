@@ -1,0 +1,30 @@
+{
+  "schema":"vsl.sport-acceleration-annotations/1",
+  "date":"2026-11-12",
+  "source":"E",
+  "inspection":"sport_acceleration_v1/inspect1 and inspect2; all7contact sheets,48decoded full frames; original video PTS; no enhancement/OCR",
+  "visible_edit":{"last_Corsa_seconds":57.75,"first_Sport_seconds":58.00,"dash_speed_kmh_before":95,"dash_speed_kmh_after":67,"dash_clock_before":"14:12","dash_clock_after":"14:17","interpretation":"Visible change of layout, composition, dash time and speed; do not treat these shots as one continuous run or transfer AV/clock fits across the cut."},
+  "display_changes":[
+    {"from":4,"to":3,"last_old_seconds":60.25,"first_new_seconds":60.50},
+    {"from":3,"to":2,"last_old_seconds":60.50,"first_new_seconds":60.75},
+    {"from":2,"to":3,"last_old_seconds":62.00,"first_new_seconds":62.25},
+    {"from":3,"to":4,"last_old_seconds":63.75,"first_new_seconds":64.00},
+    {"from":4,"to":5,"last_old_seconds":66.00,"first_new_seconds":66.25}
+  ],
+  "speed_observations":[
+    {"seconds":58.00,"gear":4,"dash_kmh":67,"phone_kmh":62},
+    {"seconds":59.00,"gear":4,"dash_kmh":71,"phone_kmh":65},
+    {"seconds":60.00,"gear":4,"dash_kmh":76,"phone_kmh":68},
+    {"seconds":60.50,"gear":3,"dash_kmh":76,"phone_kmh":71},
+    {"seconds":61.00,"gear":2,"dash_kmh":83,"phone_kmh":72},
+    {"seconds":62.00,"gear":2,"dash_kmh":112,"phone_kmh":96},
+    {"seconds":63.00,"gear":3,"dash_kmh":137,"phone_kmh":118},
+    {"seconds":64.00,"gear":4,"dash_kmh":156,"phone_kmh":139},
+    {"seconds":65.00,"gear":4,"dash_kmh":173,"phone_kmh":158},
+    {"seconds":66.00,"gear":4,"dash_kmh":189,"phone_kmh":172},
+    {"seconds":67.00,"gear":5,"dash_kmh":201,"phone_kmh":187},
+    {"seconds":68.00,"gear":5,"dash_kmh":214,"phone_kmh":198}
+  ],
+  "interpretation":"Initially mild fourth-gear acceleration, then successive displayed downshifts4->3->2 and rising speed, followed by upshifts. Pedal-triggered kickdown is a candidate interpretation, not measured throttle evidence.",
+  "not_established":["pedal or torque load","exact RPM","independent AV/cluster/phone latency","gear actuator or torque-cut timestamps","uninterrupted audio","same recording transfer as E Corsa or A exterior","physical separation of L/R"]
+}

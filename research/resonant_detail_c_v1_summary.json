@@ -1,0 +1,51 @@
+{
+  "schema": "vsl.resonant-detail-c-summary/1",
+  "date": "2026-11-12",
+  "result": "modular_C_kernel_parity_pass_only",
+  "prior_C_H_unchanged": 478,
+  "new_C_H": 14,
+  "C_H_index_rows": 492,
+  "C_H_index_sha256": "2c3def9677039303614f69b201c8614ef098fcbd7a2d124428c125291cf28c73",
+  "Ctests": 48,
+  "max_unit_band_error": 3.108624468950438e-14,
+  "max_stereo_error_FS": 5.48172618408671e-16,
+  "actual_comparisons": 9,
+  "profiles": [
+    "moving_35",
+    "idle_add",
+    "idle_35"
+  ],
+  "phase_and_engine_clock_owned_by_caller": true,
+  "kernel_does_not_allocate_or_perform_IO": true,
+  "no_source_PCM_or_timeline": true,
+  "new_fitting": false,
+  "default_driver_take_UI_changed": false,
+  "source_context_listening_status": {
+    "moving35": "held offline recipe; C detail kernel parity only",
+    "idle": "pending original question"
+  },
+  "full_mixture_parity": false,
+  "driver_integration": false,
+  "native_listening": false,
+  "device_or_longrun": false,
+  "public_namespace": "Rdt types,rdt_ functions,RDT_ constants; coexistence with residual_dense compiled and linked",
+  "retained_failure": "verify1 valid48-pass log regex failed; verify2 reused proof; interface_review1 RD namespace collision; verify3 missing old library target fixed; verify4 passed48tests/9comparisons, final2 pre-regeneration cache hash failed; verify5 mistakenly rejected expected2 invalid-input logs during proof reuse; verify6 binds post-build cache and reuses unchanged verify4 build/CTest proof",
+  "evidence_sha256": {
+    "references/analysis/resonant_detail_c_v1/export1/report.json": "e94323272123a67a2bcded8af51a9ee1cfc772a05a76141331d5f38dbc838830",
+    "references/analysis/resonant_detail_c_v1/verify1/report.json": "095bd4f8fde030821f92f52cb610275fb925aa9793913366799a3ced0bdbfff7",
+    "references/analysis/resonant_detail_c_v1/verify2/report.json": "b94685ceb60d50b732ca2dcea3be95bfb7ae5d9f84bd0c27b48f632eda55ef83",
+    "references/analysis/resonant_detail_c_v1/interface_review1/report.json": "95ddaacdcdef5b4557abd266bf26e16dc48ea8608f1488c5496180a6190de23b",
+    "references/analysis/resonant_detail_c_v1/verify3/report.json": "8e978dc51f82147199d05ead7b360d30e9358017c2b0f5e7b2d493f7bc0e3fc1",
+    "references/analysis/resonant_detail_c_v1/verify4/report.json": "1b1f68f2a61e99a3594e7204ea615e011845253986b9445cdbdb2336affad574",
+    "references/analysis/resonant_detail_c_v1/final2/report.json": "4affff51d1de3519cec7528d792a2fce1da231e88b071063d1de480a38421a3b",
+    "references/analysis/resonant_detail_c_v1/verify5/report.json": "6ca8a86d206e10549d11cbf26627a6d53128be67c23892f0275603bb0fadf43e",
+    "references/analysis/resonant_detail_c_v1/verify6/report.json": "b73389bee551a40254dc480363ac45d5f09d18ccbbe0af4f1cd17068b35bbcfe"
+  },
+  "limits": [
+    "C kernel only: no full mixture/native UI/driver/take adapter or new timbre acceptance",
+    "Same existing parameters and random streams; parity is not a new naturalness rating",
+    "Fixed-Hz resonators are source-context parameters, not a calibrated fullRPM/load map",
+    "Rank-one detail L/R ratios are observation transfer, not engine banks or speaker positions",
+    "All48Ctests are contracts; no callback budget,longrun or physical7.1.4 claim"
+  ]
+}

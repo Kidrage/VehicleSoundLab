@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前新增C接口：[连续共振细节核](../modules/resonant_detail/README.md)的`profile/envelope/excitation/filter/voice`只处理参数校验和连续细节；`resonant_detail_io/profile`负责独立非实时事务加载。`rdt_voice_tick`消费外部主声相位，不持有RPM时钟，不分配／I/O；模型整个运行期由调用者只读持有。参数与混合职责见[参数说明](../voices/resonant_detail_c_v1/README.md)。三个参数×三个seed细节核数值通过，48项CTest通过，现492份C/H（原478份不变、14新增）。**没有完整混音适配器／驾驶字段／UI／行程接入或原生听评**；下文历史“无C加载器”记录仅描述当时状态。
+
 新增[加速诊断](../research/固定挡位加速核查V1.md)复用`experiments/state_passage_v1/{trajectory,probe}`与当前`dna_atlas`；没有新增C/H、控制字段或默认路径。Python的`acceleration_passage_v1/evidence`只绑定素材／模型／上下文，`diagnostics`只测宽频带预算；离线输入轨迹不接管统一驾驶器，音色未验收。
 
 新增[低转离线配方](../research/驻车低转声源V1.md)仍复用原C DNA，未新增C/H。`tools/idle_texture_v1/{profile,envelope,power}`分别负责按实际根音派生参数、资格检查及任意周期的预算；连续生成仍调用原`resonant_detail_v1.voice`。新`voices/idle_resonant_v1/detail.json`不含PCM／时间轴，也没有C加载器／驾驶字段。原478份C/H保持，音色待评。
@@ -32,7 +34,7 @@
 
 最新[左右声纹／叠加预算](../research/左右声纹与叠加预算V1.md)只新增离线`stereo_field_v1/{model,controls,oracle,components,budget}.py`，不改C接口。细频传递的总误差会掩盖左右平衡回退，新分量族仅D两带通过；A/E独立叠加存在非PSD差额，不能自动加宽。当前`dna_scene::ds_route_frame`明确选左／右／mid为mono，再送排气代理；`atlas_drive`的原始L/R捕获与直送保留双声道，空间12通道分支并非完整stereo声床。后续适配需先定义观测声床／源对象与联合能量预算，保持唯一控制器和一次渲染。442份C/H及认可模型SHA不变，本轮未重编或重跑C测试。
 
-新增独立[可变载波密度](../research/可变载波密度V1.md)：`modules/residual_dense/carrier.*`校验逐带8–256数量、生成共享／独立正弦和复相关；`voice.*`拥有数值状态、平滑控制和持续块生成。`rd_voice_init/set/process`复用旧`SrProfile`谱矩但数量由独立数组提供，不改旧布局／常量；全部32条时输出／活动状态兼容。调用者在非实时预分配524352字节；处理不分配／I/O／空间／驾驶。`experiments/residual_dense_v1/{probe,checks}.c`只管导出／隔离计时与契约，未接默认宿主或行程。既有40项CTest＋独立1项通过，442份C/H索引保持旧436份职责／哈希。更密固定载波仍有拍频，不代表真实燃烧AM或已认可音色。
+新增独立[可变载波密度](../research/可变载波密度V1.md)：`modules/residual_dense/carrier.*`校验逐带8–256数量、生成共享／独立正弦和复相关；`voice.*`拥有数值状态、平滑控制和持续块生成。`rdt_voice_init/set/process`复用旧`SrProfile`谱矩但数量由独立数组提供，不改旧布局／常量；全部32条时输出／活动状态兼容。调用者在非实时预分配524352字节；处理不分配／I/O／空间／驾驶。`experiments/residual_dense_v1/{probe,checks}.c`只管导出／隔离计时与契约，未接默认宿主或行程。既有40项CTest＋独立1项通过，442份C/H索引保持旧436份职责／哈希。更密固定载波仍有拍频，不代表真实燃烧AM或已认可音色。
 
 新增独立[高频密度C对照](../research/局部谱线与高频密度V1.md)继续使用原`sd_voice`／`sr_voice`，离线派生`voices/line_density_v1`模型并汇总C分轨；未改C接口或接入默认宿主。`line_density_v1/{measure,controls,profiles,review}.py`分开测量／已知控制／正增益编译／试听，后续不可把它理解成新实时混音器或已认可物理声源。三种子和实际WAV门槛通过，自然度仍待听评；现有云每带32有效共享载波的密度限制需另测，不能只看总分配数512。
 

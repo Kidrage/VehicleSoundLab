@@ -1,0 +1,7 @@
+add_library(resonant_detail_io STATIC profile.c "${VSL_ROOT}/src/io/file.c")
+target_include_directories(resonant_detail_io PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/.." "${VSL_ROOT}/src")
+target_link_libraries(resonant_detail_io PUBLIC resonant_detail)
+target_compile_features(resonant_detail_io PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(resonant_detail_io PRIVATE /W4 /we4013 /utf-8)
+endif()
