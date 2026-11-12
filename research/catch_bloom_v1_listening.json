@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "date": "2026-11-12",
+  "experiment": "catch_bloom_v1",
+  "page": "http://127.0.0.1:8789/research/接火低频建立V1.html",
+  "user_feedback": "差别不明显而且好像没那么好听。你知道这个声音模拟的是什么动作吗？你知道转速变化是多少吗？你目标模拟的转速变化是怎样的？",
+  "result": "catch_bloom_improvement_not_accepted",
+  "scope": "New CATCH low-frequency0/50/100 candidate only; no rejection of accepted fixed exterior coherent LF",
+  "audio_sha256": {
+    "mix0.wav": "14b8d24bcbf201c7960effb4d473447299146e01bcf5b6f863b85abb5e7e4c15",
+    "mix100.wav": "5f6741a1de51d025153eb6a66bd7b4493ff1604d6cd697f8ee011350b71a1e45",
+    "mix50.wav": "5fcec32deab890828e8d2c4a6a45b2c751292825f80ae1d35766dd04b5b3bd99"
+  },
+  "action_audit_sha256": "56a8c5186b0ef22a5453f93118c643d9c059086213f89bb2e5b7be261cef1591",
+  "high_frequency_question": "这套系统好像丢失了很多高频细节；要求说明高频模块、逼近实录的方法和真实可控范围。",
+  "exact_reference_RPM_established": false,
+  "runtime_changed": false
+}
