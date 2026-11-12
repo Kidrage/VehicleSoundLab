@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.measured-root-high-audit-plan/1",
+  "scope": "Independent central-HF-line audit on every measured case of one frozen candidate; does not replace full-mixture gates",
+  "validation": "references/analysis/measured_root_v1/validate1",
+  "baseline_validation": "references/analysis/fractional_clock_v1/validate9",
+  "baseline_cases": ["fifth_steady","fifth_masking_7","fifth_masking_15"],
+  "highest_physical_hz_targets": [12000,13500],
+  "projection_coarse_cycles": 20,
+  "projection_hop_coarse_cycles": 0.25,
+  "maximum_line_power_error_db": 0.5,
+  "maximum_line_complex_correlation_error": 0.05,
+  "policy": [
+    "Use existing saved coordinates and exact validation fixtures; no clock re-estimation, crop, reference, or source model",
+    "Keep total Welch and coherent-grid checks and all33 validation cases; no new pass can override a rejected rapid case",
+    "Known individual high carriers can lose substantially more than a wide-band average; compare full-mixture line capture, not just band totals",
+    "No real source evaluation or C/model/runtime change is permitted by this diagnostic alone"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.fractional-residue-plan/1",
+  "scope": "Offline diagnosis of frozen validate9 clock residual and measurement interaction; no real audio or qualification promotion",
+  "validation": "references/analysis/fractional_clock_v1/validate9",
+  "cases": ["fifth_steady", "fifth_masking_7", "fifth_masking_15", "fifth_rapid_corner"],
+  "components": ["common_phase_family", "fixed_hz_detail", "known_noise", "independent_mask"],
+  "linearity_tolerance_fs": 2e-12,
+  "projection_orders": [2,3,5,7,15,31,47,63],
+  "trace_all_fixed_passes": true,
+  "predict_known_high_carrier_loss_from_phase_truth": true,
+  "component_display_support_relative_power": 1e-8,
+  "policy": [
+    "Keep all29 validation cases and the existing power/stereo/root thresholds unchanged",
+    "Evaluate frozen successful coordinates; no alternate crop, reference, smoother, or window sweep",
+    "Reconstruct independent components only from the known fixture formula, never interpret recording residuals as physically separated sources",
+    "Trace every fixed pass and verify successful final coordinates byte-for-byte; compare known point-phase versus finite-aperture phase and retain rapid rejection",
+    "Component-only absent-band ratios are labelled unsupported; all original full-mixture gates remain exactly unchanged",
+    "A diagnostic does not authorize a real source fit, C model export, runtime change, or new timbre acceptance"
+  ]
+}

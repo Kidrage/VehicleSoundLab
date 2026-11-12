@@ -1,0 +1,139 @@
+{
+  "schema": "vsl.measured-root-publication/1",
+  "result": "partial_improvement_not_qualified",
+  "reports": {
+    "diagnose1": {
+      "path": "references/analysis/fractional_residue_v1/diagnose1/report.json",
+      "sha256": "55514846018ff9c13177e22b7f022e093a2bffa4d49de3226a9ea430e2344bf6",
+      "result": "diagnostic_complete_no_qualification"
+    },
+    "diagnose2": {
+      "path": "references/analysis/fractional_residue_v1/diagnose2/report.json",
+      "sha256": "5bb2dd38b40a47ca5b2f31d931c0c2378923d0d2541a189381757c9993a44236",
+      "result": "diagnostic_complete_no_qualification"
+    },
+    "validate1": {
+      "path": "references/analysis/measured_root_v1/validate1/report.json",
+      "sha256": "ddd752a70f3431634e64e90877a963fc1242f8218c36263bacec1cdf86f9695e",
+      "result": "rejected"
+    },
+    "high_audit1": {
+      "path": "references/analysis/measured_root_v1/high_audit1/report.json",
+      "sha256": "1a90d28f50467231e47dd931b2868f226ae94f61fc2a9b1d6cf83b04d2d7b950",
+      "result": "rejected"
+    },
+    "rapid_audit1": {
+      "path": "references/analysis/measured_root_v1/rapid_audit1/report.json",
+      "sha256": "0897ac1a516a319b9581c5b5fb873526c6f492bdec4c5ffc577fd1f2f2997311",
+      "result": "diagnosed_no_algorithm_change"
+    }
+  },
+  "sources": {
+    "tools/package_measured_root_v1.py": "399c12160fc584fdc483aa409fb266a8d17972757a3cd11ab4e01f77cc27ebad",
+    "handoff/算法说明.md": "3925428c536b3a91da05e870a6882b9b21d2a319bb02bd4f1eb98517bb407d8e",
+    "tools/fractional_residue_v1/components.py": "1753e24d2943c3550e79bc4d1f68227a0aa879336f8391495dbcb27c1aaa5b0c",
+    "tools/multicarrier_clock_v1/fixtures.py": "f0ca56eba46a22f786fc775f66f861cf32b9a9886109fd239f28cd17344b5f1e",
+    "tools/fractional_clock_v1/fixtures.py": "4f5b3433811af1215c3e0071cb01d4f34b6ca432bfc0ab0f889950bef347ff84",
+    "tools/fractional_residue_v1/observations.py": "0ddcda86fc9f5ffe801f1f4c8e5c044017b65e133ad056e3139104f08b8ee371",
+    "research/fractional_residue_v1_plan.json": "697fa67de880935a477ab61896c4e78ce7c4346a6637711f44a0c1985c71831a",
+    "tools/validate_fractional_clock_v1.py": "4788fb6dea0ae1caea4ab777ffd38305118ff0e82edd0268cb98ca2f928daa6d",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "research/measured_root_v1_plan.json": "34bdf3bf01546a2354d906b2a24998e9500277fab89aca2ba4d2dcfa32c11667",
+    "research/实测根音与高频保留V1.md": "d6baf2a8f466d4e13d2c4b44205ca558cca882c348155c790db3ab9c2f6a70aa",
+    "tools/fractional_residue_v1/__init__.py": "173acd31e20fe2062274b07d71d3524a7591c7d524eb3864b309f2396af8495b",
+    "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "tools/fractional_clock_v1/coordinate.py": "db67195516a6c32d63ae970b6408fa3d9653e03f464bc692ecd409672e76e3b1",
+    "tools/fractional_clock_v1/__init__.py": "9da760f6d3d0acf68608708c293ce80e9360c1caa8b55b1af5e92928b5edeef9",
+    "tools/fractional_clock_v1/projection.py": "fbd32e0a5beba7f2dc539a6ca764457c0c9e58a4163f6e83864da722557122b6",
+    "research/fractional_clock_v1_plan.json": "f5afc84ec4aa480ea73cf9f950a2d1d116b57b85e8d3418754d0f4422ca61469",
+    "tools/measured_root_v1/__init__.py": "7c03c3f3540bce08858c04cda92ec5906237ca61f5df82d99a4125a6a8243fea",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "research/怠速与加速完成度V1.md": "b7f2754bcc3be14c7028cd7b164f2da6656d238a02d84a5bcac451aab8fa76da",
+    "tools/fractional_clock_v1/phase.py": "3ae4c4478d679e045f36707afe90f974a12d91da95705d80f11b64e8797fd433",
+    "tools/validate_measured_root_v1.py": "867a7e366fcb4026031e0660c6fdbbbeedda70f5e0d479e1a0f23f3c212ccc1f",
+    "tools/audit_measured_root_high_v1.py": "c14296c84dae8eebc81bde57f9c58ae11f1fa5c6276ff716fdbd6fc3ce889027",
+    "research/measured_root_high_v1_plan.json": "476b81edfcae100963c21817673dd3a7244315ae21acd2909c80b7942aadab36",
+    "AGENTS.md": "28cf75a693d5ac15da8174d2192978aa7498a360ed47bf3cd20fbdf20a4e8839",
+    "tools/measured_root_v1/coarse.py": "4ede3a22aadf42ddc0995b5aebc331b85efbb784099bcc69253e7a52bf824c43",
+    "handoff/研究续接.md": "b2981f6a73cad3774c959ecc9744a26b23b8eacacade82d9efd68cc9cebe6d9f",
+    "tools/multicarrier_clock_v1/coarse.py": "c3e0305e620e15761bc921d879d3d9ce4759f8f1d30d6f51e5d371f57c9022af",
+    "tools/fractional_clock_v1/measure.py": "e926807ddb61d7ed001701ff0cb26095040b5cf4bea9e6550d1f1acf4ac88baf",
+    "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "tools/diagnose_fractional_residue_v1.py": "dbab212c7ad766b4db65625d5355d3416ce1c9550c7381e2414216f53952de8b",
+    "tools/diagnose_measured_root_rapid_v1.py": "6ee9804b852f0eb7bc95471094fc1be858237d800cd0843079509999c1ef48fc"
+  },
+  "total_cases": 33,
+  "passed_cases": 32,
+  "positive_cases": 30,
+  "passed_positive_cases": 29,
+  "negative_cases": 3,
+  "passed_negative_cases": 3,
+  "individually_audited_HF_positive_cases": 29,
+  "passed_HF_positive_cases": 29,
+  "maximum_HF_line_error_db": 0.25637874062118454,
+  "maximum_HF_line_complex_correlation_error": 0.014622900011321513,
+  "known_phase_prediction_maximum_error_db": 0.00018650670322184482,
+  "rapid_failure": {
+    "seconds": 1.895,
+    "lattice_root_hz": 47.82878363871786,
+    "original_smoothed_root_hz": 48.24380577532194,
+    "known_frequency_hz": 48.39598997493735,
+    "proposal_root_hz": 48.40071557695595,
+    "measured_orders": [
+      2,
+      3,
+      10,
+      20
+    ],
+    "measured_peak_frequencies_hz": [
+      96.8014311539119,
+      139.02027278811366,
+      467.8765668944299,
+      975.3860984154526
+    ],
+    "measured_roots_hz": [
+      48.40071557695595,
+      46.34009092937122,
+      46.78765668944299,
+      48.769304920772626
+    ],
+    "capped_weights": [
+      4.0,
+      2.612940467176853,
+      100.0,
+      104.0
+    ],
+    "proposal_supported_orders": [
+      2,
+      20
+    ],
+    "original_smoothed_supported_orders": [
+      2,
+      3,
+      20
+    ]
+  },
+  "source_audio_read": false,
+  "real_source_evaluated": false,
+  "model_exported": false,
+  "real_C_render_executed": false,
+  "strict_source_evaluation_permitted": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "C_H": 540,
+  "runtime_changed": false,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "93ff3c66e70b0173f9618ac312c1a7b455b2be92c31a91d5344de17a27560704",
+  "next_step": "Project continuous median into distinct-measured-line feasible support, qualify all33 plus individual HF, then resolve aperture average versus instantaneous phase/curvature",
+  "goal_turn_classification": "progress_known-component_attribution_and_substantial_measured-root_HF_improvement",
+  "limits": [
+    "No whole-algorithm qualification or real-source evaluation from32/33",
+    "Known components are not physical source separation or engine RPM/load measurements",
+    "High-frequency numerical preservation is not vehicle listening acceptance",
+    "Original F1/F2/F3 and A-low questions remain pending; no duplicate requests"
+  ]
+}

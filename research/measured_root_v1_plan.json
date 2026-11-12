@@ -1,0 +1,315 @@
+{
+  "schema": "vsl.measured-root-plan/1",
+  "scope": "One offline candidate: refine supported lattice roots with a capped-precision median of actual peaks; keep all phase/window/support/bandwidth settings unchanged",
+  "coarse": {
+    "window_ms": 80,
+    "hop_samples": 240,
+    "root_range_hz": [
+      15,
+      80
+    ],
+    "grid_count": 769,
+    "orders": [
+      2,
+      3,
+      5,
+      7,
+      10,
+      15,
+      20
+    ],
+    "minimum_observed_lines": 3,
+    "maximum_octaves_per_second": 16,
+    "smoothing_hz": 4,
+    "precision_weight_median_cap": 2
+  },
+  "coordinate": {
+    "samples_per_coarse_cycle": 2048,
+    "fractional_denominator": 5,
+    "source_lowpass_hz": 14000,
+    "source_antialias_margin": 0.38
+  },
+  "phase": {
+    "fit_orders": [
+      2,
+      3,
+      5,
+      7,
+      15,
+      31,
+      47,
+      63
+    ],
+    "minimum_fit_lines": 2,
+    "projection_cycles": 10,
+    "projection_mode": "hann_grid",
+    "hop_coarse_cycles": 0.25,
+    "support_relative_db": -30,
+    "outlier_cycles": 0.003,
+    "global_iterations": 8,
+    "refinement_passes": 3
+  },
+  "heldout_orders": [
+    1.4,
+    2.4,
+    3.4,
+    4.4,
+    5.4,
+    7.4,
+    10,
+    20
+  ],
+  "heldout_projection_cycles": 10,
+  "seconds": 6,
+  "selected_seconds": [
+    0.5,
+    5.5
+  ],
+  "power_window_coarse_cycles": 8,
+  "coherent_power_window_coarse_cycles": 20,
+  "require_coherent_grid_power_and_stereo": true,
+  "bands_hz": [
+    [
+      28,
+      120
+    ],
+    [
+      120,
+      400
+    ],
+    [
+      400,
+      1200
+    ],
+    [
+      1200,
+      3000
+    ],
+    [
+      3000,
+      8000
+    ],
+    [
+      8000,
+      14000
+    ]
+  ],
+  "rules": {
+    "maximum_root_relative_p95": 0.01,
+    "maximum_oracle_band_power_error_db": 0.5,
+    "maximum_oracle_complex_correlation_error": 0.05,
+    "minimum_separate_carriers": 2,
+    "minimum_carrier_support": 0.8,
+    "minimum_carrier_coherence": 0.8
+  },
+  "fixtures": [
+    {
+      "id": "integer_steady",
+      "kind": "steady",
+      "root_hz": 32.8,
+      "fractional": false
+    },
+    {
+      "id": "fifth_steady",
+      "kind": "steady",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_high_steady",
+      "kind": "steady",
+      "root_hz": 60
+    },
+    {
+      "id": "fifth_low_drift",
+      "kind": "drift",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_high_drift",
+      "kind": "drift",
+      "root_hz": 60
+    },
+    {
+      "id": "fifth_partial_gap",
+      "kind": "partial_gap",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_sideband",
+      "kind": "sideband",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_masking_2",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 2
+    },
+    {
+      "id": "fifth_masking_3",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 3
+    },
+    {
+      "id": "fifth_masking_5",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 5
+    },
+    {
+      "id": "fifth_phase_2",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 2
+    },
+    {
+      "id": "fifth_phase_3",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 3
+    },
+    {
+      "id": "fifth_phase_5",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 5
+    },
+    {
+      "id": "fifth_masking_7",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 7
+    },
+    {
+      "id": "fifth_masking_15",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 15
+    },
+    {
+      "id": "fifth_phase_7",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 7
+    },
+    {
+      "id": "fifth_phase_15",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 15
+    },
+    {
+      "id": "fifth_masking_31",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 31
+    },
+    {
+      "id": "fifth_masking_47",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 47
+    },
+    {
+      "id": "fifth_masking_63",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 63
+    },
+    {
+      "id": "fifth_phase_31",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 31
+    },
+    {
+      "id": "fifth_phase_47",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 47
+    },
+    {
+      "id": "fifth_phase_63",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 63
+    },
+    {
+      "id": "fifth_masking_10",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 10
+    },
+    {
+      "id": "fifth_masking_20",
+      "kind": "masking",
+      "root_hz": 32.8,
+      "masked_order": 20
+    },
+    {
+      "id": "fifth_phase_10",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 10
+    },
+    {
+      "id": "fifth_phase_20",
+      "kind": "phase_contamination",
+      "root_hz": 32.8,
+      "contaminated_order": 20
+    },
+    {
+      "id": "fifth_delayed_stereo",
+      "kind": "stereo_delay",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_loaded_rise",
+      "kind": "rise",
+      "root_hz": 32.8
+    },
+    {
+      "id": "fifth_rapid_corner",
+      "kind": "rapid_corner",
+      "root_hz": 25
+    },
+    {
+      "id": "single_carrier",
+      "kind": "single_carrier",
+      "root_hz": 32.8,
+      "negative": true
+    },
+    {
+      "id": "all_carriers_gap",
+      "kind": "all_carriers_gap",
+      "root_hz": 32.8,
+      "negative": true
+    },
+    {
+      "id": "noise_only",
+      "kind": "noise_only",
+      "root_hz": 32.8,
+      "negative": true
+    }
+  ],
+  "real_case": {
+    "source": "E",
+    "seconds": [
+      5.2,
+      7.8
+    ],
+    "saved_coarse": "references/analysis/multicarrier_clock_v1/E_source1/coarse.json",
+    "one_evaluation_only_after_all_controls_pass": true
+  },
+  "policy": [
+    "Same root, power, stereo and independent-line thresholds as multicarrier_clock_v1; integrated Welch alone does not prove harmonic detail retention, so BOTH Welch and full fifth-grid coherent power/stereo must pass",
+    "Retain explicit fractional orders without silently changing coarse root into an engine-cycle root",
+    "Never truncate source bandwidth to fit old1024point/320harmonic capacity; no profile export in this clock stage",
+    "All real-source crops/references/defaults and moving35 remain unchanged; no new media",
+    "Every failure and exact executed source is retained; no real-source use before all positives and negatives qualify",
+    "Additional masking/PM controls on coarse orders10 and20 prevent treating the two highest coarse peaks as permanently clean",
+    "This candidate changes only continuous coarse-root estimation; all original29 cases plus4 extra, same thresholds,10cycle Hann,4Hz smoothing,3fixed original-stereo passes",
+    "A successful diagnostic or subset is insufficient; no source evaluator or runtime is changed in this stage"
+  ]
+}
