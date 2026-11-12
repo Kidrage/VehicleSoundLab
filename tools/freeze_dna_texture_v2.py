@@ -26,6 +26,6 @@ subprocess.run(['git','archive','--format=zip','--output='+str(freeze/'source.zi
 with zipfile.ZipFile(freeze/'source.zip') as z:assert z.testzip() is None
 files=[dict(path=p.relative_to(freeze).as_posix(),bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(freeze.rglob('*')) if p.is_file()]
 (freeze/'manifest.json').write_text(json.dumps(dict(schema='vsl.freeze/1',source_commit=commit,
-    new_timbre_accepted=False,new_C_H=False,files=files),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    new_timbre_accepted=False,new_C_H=False,files=files),ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 for row in files:assert sha(freeze/row['path'])==row['sha256']
 print(json.dumps(dict(result='frozen',files=len(files),commit=commit)))

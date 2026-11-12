@@ -46,7 +46,7 @@
     "next_design": "Separate coherent high-harmonic energy from diffuse/detail energy with replacement, then fit noise-driven resonators to short-lag structure. Introduce a periodic detail envelope only if it validates on held-out halves. No independent fixed HF cloud, generic saw/friction layer or deeper common PM."
   },
   "source_sha256": {
-    "tools\\analyze_dna_texture_v2.py": "1d12bcf9e4eb4d5cecea92d4b62b680c3a600c7c0362b24b9c106f412c938a56",
+    "tools\\analyze_dna_texture_v2.py": "e89d15d52bc00111084635294e6aaa1850665cfcbc9e5f264252fdb861aeef18",
     "research\\dna_texture_v2_plan.json": "9cb4c006c67b5fe1f3a5fcbe5a86c29001cec0f4f71c424ea0390e8ef04975d6",
     "tools\\dna_texture_v2\\controls.py": "2b5fe3f8d8fd399607c8d6e527541e913e634c7b4df60e2c053044a46c973888",
     "tools\\dna_texture_v2\\observe.py": "3543a0ca5bf83916897b05aac7944da7fe6d1363ea9a4ec02296975c0b96c2a6"

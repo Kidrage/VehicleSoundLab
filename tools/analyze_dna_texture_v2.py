@@ -44,6 +44,6 @@ try:
     r.update(result='diagnostics_pass',C_H_unchanged=478,Ctests_not_repeated=True,no_audio_candidate=True,
         causal_limit='Repeat/periodic envelopes describe this normalized recording; they do not identify physical friction, cylinder events or a unique audible cause')
 except Exception as exc:r.update(result='failed',error=repr(exc));raise
-finally:(a.out/'report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-(repo/'research/dna_texture_v2_summary.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+finally:(a.out/'report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+(repo/'research/dna_texture_v2_summary.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(dict(result=r['result'],known_control=r['known_controls']['result'],unchanged_C_H=478)))

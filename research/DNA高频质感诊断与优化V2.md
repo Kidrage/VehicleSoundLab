@@ -67,4 +67,4 @@ mask在1.2–1.9kHz平滑过渡；低于1.2kHz的原谐波贡献保持，独立�
 
 `tools/dna_texture_v2/observe.py`负责分频／重复度／双向留出，`controls.py`负责已知控制，`analyze_dna_texture_v2.py`绑定来源与C索引。预定数值方案见`dna_texture_v2_plan.json`；没有看结果后增加窗、根音或阶次搜索。
 
-478份C/H及认可模型哈希全部未变，47项既有CTest未重复；无新实时／设备／UI或音色声明，无新试听候选。证据在`E:/VehicleSoundLab/references/analysis/dna_texture_v2/analysis1`。离线／C审计在`E:/VehicleSoundLab/references/analysis/phase_texture_parity_v1/audit1`，保存了查阅NumPy源码的记录；没有将其引入工程或实现PCG移植。
+478份C/H及认可模型哈希全部未变，47项既有CTest未重复；无新实时／设备／UI或音色声明，无新试听候选。证据在`E:/VehicleSoundLab/references/analysis/dna_texture_v2/analysis1`及`analysis2`。初次发布的JSON含CRLF，Git空白检查未通过；明确以LF输出后重跑相同数值诊断，不改门槛／算法，保留初次结果。离线／C审计在`E:/VehicleSoundLab/references/analysis/phase_texture_parity_v1/audit1`，保存了查阅NumPy源码的记录；没有将其引入工程或实现PCG移植。

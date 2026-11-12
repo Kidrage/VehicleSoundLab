@@ -43,5 +43,5 @@ for name in ('numpy/random/src/pcg64/pcg64.h','numpy/random/src/distributions/di
     with urllib.request.urlopen(base+name,timeout=30) as response:target.write_bytes(response.read())
 r['upstream']={str(x.relative_to(a.out)):dict(sha256=sha(x),bytes=x.stat().st_size) for x in (a.out/'upstream').rglob('*') if x.is_file()}
 shutil.copy2(__file__,a.out/'executed_audit.py')
-(a.out/'report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(a.out/'report.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(r,ensure_ascii=False))
