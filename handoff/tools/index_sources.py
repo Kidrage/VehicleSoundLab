@@ -208,6 +208,12 @@ def code_rows():
                 layer, owner, role = "启动层统一驾驶验证", "VslStartupDrive_checks", "PSD解析矩阵、两次驾驶器门控、独立量、分块／2与12前置一次路由"
             elif group == "startup_scene_v1":
                 layer, owner, role = "同录音启动声源诊断", "startup_scene_probe", "复用单锚点atlas／原驾驶器，A车内前段与趋稳DNA两次启停、分轨和2／12导出"
+            elif group == "catch_bloom":
+                layer, owner = "接火相干低频附加层", "catch_bloom"
+                role = {"profile":"固定模式／beta／平滑参数的事务读取校验", "filter":"共享固定系数／左右独立状态RBJ带通", "envelope":"归一化beta凸起与指数跟随", "voice":"拥有模型／持续滤波／CATCH进度和独立量；输出仅附加量"}[p.stem]
+            elif group == "catch_bloom_v1":
+                layer, owner = "接火低频独立验证", "catch_bloom_"+p.stem
+                role = "复用唯一驾驶链／包络后DNA，离线前置一次叠加与分轨" if p.stem == "probe" else "解析包络／频响／衰减、状态连续、分块／同址与事务契约"
             yield rel, layer, owner, role, digest(p)
 
 

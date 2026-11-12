@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[接火低频建立V1](../research/接火低频建立V1.md)：`catch_bloom/profile.*`校验模式与包络，`filter.*`固定带通，`envelope.*`共同beta／指数跟随，`voice.*`持续处理DNA并只输出附加量。唯一驾驶器的CATCH进度由独立离线宿主读取，未新增车辆时钟、随机源或空间器。`experiments/catch_bloom_v1`检查解析频响／包络／状态连续及两次启停／2与12前置一次路由；8模块＋2宿主C/H新增、旧456身份不变，现466份索引。尚未接默认实时UI／行程，也未获听评；不能把宽带颜色拟合叫物理车体分离或完整启动恢复。
+
 新增同录音启动诊断：`experiments/startup_scene_v1/probe.c`复用原`atlas_drive`／唯一驾驶器／`dna_atlas`／`start_texture`，将A启动前段与新A趋稳DNA做两次启停、raw／层分轨和2／12导出；它仅是离线宿主。`tools/startup_catch_v1/{clock,slow_phase}.py`分开慢相位观察与独立局部核对，不进入实时链。旧455份C/H字节保持，新增1份、当前456份；原43CTest／UI／schema4身份不变。快速接火及新声音听评未完成，见[启动后车内DNA](../research/启动后车内DNAV1.md)。
 
 当前[启动层统一驾驶](../research/启动层统一驾驶V1.md)：`start_texture/profile.*`兼容单／双端点谱矩，`voice.*`提供`st_voice_position`和持续OSC谱矩插值；`atlas_drive`新增可选`startup_profile`、独立`startup_gain`及`AdCapture.startup`。同一CRANK门控、载波不调频、stereo前置一次路由；`events`分开旧starter与transients，仅新模型存在时替换前者。`atlas_take`拥有模型、26字段与源哈希，`atlas_take_io`schema4严格拒绝旧身份，旧schema3播放器冻结。43项CTest与短设备／录放通过，现455份C/H；新增`experiments/startup_drive_v1/checks.c`，其余为明确接口适配。入口`Launch-Startup-Study.cmd`，未替换已认可固定情境或旧运行窗口；完整接火／低频与听评未完成。下文保留各阶段当时接口。
