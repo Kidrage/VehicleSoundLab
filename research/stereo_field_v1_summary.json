@@ -1,0 +1,412 @@
+{
+  "schema": "vsl.stereo-field-summary/1",
+  "date": "2026-11-12",
+  "result": "diagnostic_only_no_runtime_promotion",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\stereo_field_v1",
+  "attempts": [
+    {
+      "folder": "analysis1",
+      "result": "diagnostics_completed"
+    },
+    {
+      "folder": "budget1",
+      "result": "diagnostics_completed"
+    },
+    {
+      "folder": "detail1",
+      "result": "pass"
+    },
+    {
+      "folder": "components1",
+      "result": "diagnostics_completed"
+    }
+  ],
+  "synthetic_controls_per_family": 12,
+  "known_alpha_controls": 6,
+  "recorded_cases": [
+    {
+      "name": "A_moving",
+      "seconds": [
+        316,
+        319
+      ],
+      "source": "A",
+      "blocks": 3,
+      "joint_family_qualified": [],
+      "component_family_qualified": [],
+      "insufficient_training": true
+    },
+    {
+      "name": "A_stationary_tail",
+      "seconds": [
+        244,
+        247
+      ],
+      "source": "A",
+      "blocks": 3,
+      "joint_family_qualified": [],
+      "component_family_qualified": [],
+      "insufficient_training": true
+    },
+    {
+      "name": "B_pull",
+      "seconds": [
+        218,
+        230
+      ],
+      "source": "B",
+      "blocks": 12,
+      "joint_family_qualified": [],
+      "component_family_qualified": [],
+      "insufficient_training": false
+    },
+    {
+      "name": "B_release",
+      "seconds": [
+        475,
+        485
+      ],
+      "source": "B",
+      "blocks": 10,
+      "joint_family_qualified": [],
+      "component_family_qualified": [],
+      "insufficient_training": false
+    },
+    {
+      "name": "D_dyno",
+      "seconds": [
+        20,
+        32
+      ],
+      "source": "D",
+      "blocks": 12,
+      "joint_family_qualified": [
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.15610652278882164,
+            0.11946477975301584
+          ]
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.31971502699907006,
+            0.23800973511347534
+          ]
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.11534031339548734,
+            0.16081049067828646
+          ]
+        }
+      ],
+      "component_family_qualified": [
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.31971502699907006,
+            0.23800973511347545
+          ]
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.11534031339548734,
+            0.16081049067828646
+          ]
+        }
+      ],
+      "insufficient_training": false
+    },
+    {
+      "name": "E_high_cabin",
+      "seconds": [
+        88,
+        94
+      ],
+      "source": "E",
+      "blocks": 6,
+      "joint_family_qualified": [
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.13898689821046262,
+            0.1610921827356483
+          ]
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "axes": [
+            "joint",
+            "joint"
+          ],
+          "subdivisions": [
+            8,
+            8
+          ],
+          "forward_reverse_RMSE_reduction": [
+            0.11039679559947657,
+            0.13785163410325696
+          ]
+        }
+      ],
+      "component_family_qualified": [],
+      "insufficient_training": false
+    }
+  ],
+  "original_joint_maximum_oracle_absolute_error": 4.440892098500626e-16,
+  "maximum_synthetic_DFT_relative_error": 2.20393545047657e-14,
+  "maximum_alpha_control_error": 4.000000053405727e-09,
+  "maximum_budget_scalar_eigenvalue_error": 2.498001805406602e-16,
+  "fixed_model_clipping_reproduced": [
+    {
+      "identity": "A_exterior",
+      "maximum_normalized_moment_error": 1.1102230246251565e-16,
+      "profile_sha256": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a"
+    },
+    {
+      "identity": "E_cabin",
+      "maximum_normalized_moment_error": 8.326672684688674e-17,
+      "profile_sha256": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f"
+    }
+  ],
+  "additive_budget": [
+    {
+      "identity": "A_exterior",
+      "subdivisions": 1,
+      "cells": 8,
+      "infeasible_cells": 4,
+      "target_trace_in_infeasible_cells_fraction": 0.8069826227480894,
+      "minimum_DNA_power_alpha_bound": 0.24808836418160113,
+      "maximum_raw_negative_eigenvalue_relative": 0.0016620024659243782
+    },
+    {
+      "identity": "A_exterior",
+      "subdivisions": 4,
+      "cells": 32,
+      "infeasible_cells": 13,
+      "target_trace_in_infeasible_cells_fraction": 0.5774913327699488,
+      "minimum_DNA_power_alpha_bound": 0.11835346070520913,
+      "maximum_raw_negative_eigenvalue_relative": 0.005812917799528694
+    },
+    {
+      "identity": "A_exterior",
+      "subdivisions": 8,
+      "cells": 64,
+      "infeasible_cells": 26,
+      "target_trace_in_infeasible_cells_fraction": 0.5964209999292529,
+      "minimum_DNA_power_alpha_bound": 0.07948836923410936,
+      "maximum_raw_negative_eigenvalue_relative": 0.01572444983748003
+    },
+    {
+      "identity": "E_cabin",
+      "subdivisions": 1,
+      "cells": 8,
+      "infeasible_cells": 3,
+      "target_trace_in_infeasible_cells_fraction": 0.7729281165802282,
+      "minimum_DNA_power_alpha_bound": 0.7891436024740166,
+      "maximum_raw_negative_eigenvalue_relative": 0.05217553552253668
+    },
+    {
+      "identity": "E_cabin",
+      "subdivisions": 4,
+      "cells": 32,
+      "infeasible_cells": 8,
+      "target_trace_in_infeasible_cells_fraction": 0.4451766369714401,
+      "minimum_DNA_power_alpha_bound": 0.43963856811324603,
+      "maximum_raw_negative_eigenvalue_relative": 0.17017773032084021
+    },
+    {
+      "identity": "E_cabin",
+      "subdivisions": 8,
+      "cells": 64,
+      "infeasible_cells": 25,
+      "target_trace_in_infeasible_cells_fraction": 0.5211517325616571,
+      "minimum_DNA_power_alpha_bound": 0.27996574674406227,
+      "maximum_raw_negative_eigenvalue_relative": 0.3118887182483999
+    }
+  ],
+  "C_H_unchanged": 442,
+  "c_index_sha256": "424b3d3680b6d8dd8faf60e3d1b06d8c72ec3df74422997fdf3656423255fb6a",
+  "accepted_model_sha256": {
+    "voices/dna_bank_v1/V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "voices/coherent_low_v1/measured_phase.model": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895"
+  },
+  "C_changes": false,
+  "models_changed": false,
+  "driver_changes": false,
+  "new_audio": false,
+  "human_accepted": false,
+  "current_source_sha256": {
+    "tools/stereo_field_v1/budget.py": "d041cd97696a0763c6d6a245ffb670fd1d9b867bd62114afd151cf1a9332de23",
+    "tools/stereo_field_v1/components.py": "2c9ad7206f1099cea89d16ee98be29d164a02f5d5722e096bb47675640033173",
+    "tools/stereo_field_v1/controls.py": "a54965d88120632d5ce749ce1544d49d1c859479f52f9499c505097b6df6868b",
+    "tools/stereo_field_v1/model.py": "1cc886c2194df29718f4358963a5356a4c62ed5daa1eef121926bdd55c286c3b",
+    "tools/stereo_field_v1/oracle.py": "f175beab090de491eab0be4d553b12053d8edf27384a39c3e35640b9d35b251a",
+    "tools/analyze_stereo_field_v1.py": "d5bfe1b3dd884cdc896b86962b1258b4c4b105af50b6172c4d3642d2bc11c362",
+    "tools/analyze_stereo_budget_v1.py": "17061b0e8f9769c776a13eb7dfdba12e5188b92c0831f6788a4b9a7d188c912e",
+    "tools/detail_stereo_field_v1.py": "475b2b102ac36b1f324d388a27880780a08aa672c71c6e08dde2f9909ef9c1a3",
+    "tools/analyze_stereo_components_v1.py": "885d65f43e436e6ce2bd56bb9e1fc0bacbccca5e5255fc0ee4d5d53915593f8f",
+    "tools/finalize_stereo_field_v1.py": "85eae18ddced33360985d2966e758cacb9f54958f712bc05347c86f7eb18bd9c",
+    "tools/freeze_stereo_field_v1.py": "0be96389cf5c60fb9cd13695081674e34fd60cf1723b8f31deadcf4304e18453",
+    "research/stereo_field_v1_plan.json": "3c9f0ea582addd333f1878ffd8f03922ad082bc12c128a03ca12031427bf84ab",
+    "research/stereo_budget_v1_plan.json": "d28f690596f4a5937549d6625ce16e5713cff392ce29dc51526f34e7caa2d6e8",
+    "research/stereo_components_v1_plan.json": "151dadefcaea068a71384eb5d64155d482d7c09d4f05eb27a1f7abbb99ea0ceb"
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\report.json": "64a62385bf44a94f32c268904978394c07d42f132ece0db31fbd21a8f2809481",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\manifest.json": "7ebae1bdee186f7867c079ef842300f73031bef8646aa527c942140767200b7b",
+    "E:\\VehicleSoundLab\\references\\segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "E:\\VehicleSoundLab\\references\\raw\\A_7aZm1Wkp6QM.webm": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+    "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+    "E:\\VehicleSoundLab\\references\\raw\\B_local_Tecnica_binaural.mp3": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+    "E:\\VehicleSoundLab\\references\\clean\\B_decoded_float.wav": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+    "E:\\VehicleSoundLab\\references\\raw\\D_21q_wpc-pVA.mkv": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+    "E:\\VehicleSoundLab\\references\\clean\\D_decoded_float.wav": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+    "E:\\VehicleSoundLab\\references\\raw\\E_GIceP3oLuDQ.mkv": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+    "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\A_moving_observations.npz": "9c02771594ee19c052b591636a66210b3103baea477599a57520e251a81ea7f5",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\A_stationary_tail_observations.npz": "788747eddabb10d6b2ee9104af7e6c6384cb9f342f07c1858fc120649c6a2cb8",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\B_pull_observations.npz": "afff3edebd721cbad7128c4220be09472fe08d8497ab8d6ee557448bbcdf02e4",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\B_release_observations.npz": "4a501bf51aedb3a2c359b44c9b5bf43912b35ce630f4067152542078ae07bf8c",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\D_dyno_observations.npz": "5a72d6fe484ccae481e6c0d3f0328d6fe7de6bbca34eb87c908e72bf4cc8b41f",
+    "E:\\VehicleSoundLab\\baselines\\reference_audit_v1\\evidence\\stereo_delay_v1\\analysis1\\E_high_cabin_observations.npz": "dcec21e4921840bd0ae0727a70c91a60c3128902f31150e738850b879669e5ff",
+    "E:\\VehicleSoundLab-Git\\handoff\\C文件索引.csv": "424b3d3680b6d8dd8faf60e3d1b06d8c72ec3df74422997fdf3656423255fb6a",
+    "E:\\VehicleSoundLab\\baselines\\exterior_anchors_v1\\evidence\\anchors_v2\\A Stationary Upper Mid\\raw_1.0.wav": "4272d8d609fd1220c5ac0a4069c43bbc664904e7237b816a501d1bf60b7c4001",
+    "E:\\VehicleSoundLab\\baselines\\exterior_anchors_v1\\evidence\\anchors_v2\\A Stationary Upper Mid\\normalized_float.wav": "e11b879e32ba102120c1f34f0d7b8d4dc3196d84a0baa6d2256bae3809abc1e6",
+    "E:\\VehicleSoundLab\\baselines\\drive_evidence_v1\\evidence\\cabin_anchors_tapered\\E Cabin Lower\\raw_1.0.wav": "516b3d92895dd57ca0833ba206e5158115bfb191b25ba6e82f7c9cafd8b1464c",
+    "E:\\VehicleSoundLab\\baselines\\drive_evidence_v1\\evidence\\cabin_anchors_tapered\\E Cabin Lower\\normalized_reference_float.wav": "cf0b069f59f263184a40f13bf22b4fb6dffa95e7a98b2edc4bf1ec9203b1ef94",
+    "E:\\VehicleSoundLab\\references\\analysis\\stereo_field_v1\\analysis1\\report.json": "80712e634a66f22e00fc39267976d51572058249d9fec9af437ac6f0239641bf",
+    "E:\\VehicleSoundLab\\references\\analysis\\stereo_field_v1\\budget1\\report.json": "7db96912ffc6a5c3a72c2fcc8e37c7d7c6d81fbc13d1a1d412e3f40aeb74999b",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_osc_v1\\A_exterior.residual": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_osc_v1\\E_cabin.residual": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f"
+  },
+  "evidence_sha256": {
+    "analysis1/exact_sources/research/stereo_field_v1_plan.json": "3c9f0ea582addd333f1878ffd8f03922ad082bc12c128a03ca12031427bf84ab",
+    "analysis1/exact_sources/tools/analyze_stereo_field_v1.py": "d5bfe1b3dd884cdc896b86962b1258b4c4b105af50b6172c4d3642d2bc11c362",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/exact_sources/tools/stereo_delay_v1/spectrum.py": "adc6f28d65e7a989f75b017c44a66dbc855bdb1a4efb8f3143d64eb487e17f06",
+    "analysis1/exact_sources/tools/stereo_field_v1/controls.py": "a54965d88120632d5ce749ce1544d49d1c859479f52f9499c505097b6df6868b",
+    "analysis1/exact_sources/tools/stereo_field_v1/model.py": "1cc886c2194df29718f4358963a5356a4c62ed5daa1eef121926bdd55c286c3b",
+    "analysis1/exact_sources/tools/stereo_field_v1/oracle.py": "f175beab090de491eab0be4d553b12053d8edf27384a39c3e35640b9d35b251a",
+    "analysis1/metadata.json": "124c7579d25b6c608a86da211f3dabb8baa185104a8b7256632ab1cedcfe13cd",
+    "analysis1/report.json": "80712e634a66f22e00fc39267976d51572058249d9fec9af437ac6f0239641bf",
+    "budget1/exact_sources/research/stereo_budget_v1_plan.json": "d28f690596f4a5937549d6625ce16e5713cff392ce29dc51526f34e7caa2d6e8",
+    "budget1/exact_sources/tools/analyze_stereo_budget_v1.py": "17061b0e8f9769c776a13eb7dfdba12e5188b92c0831f6788a4b9a7d188c912e",
+    "budget1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "budget1/exact_sources/tools/residual_osc_v1/sources.py": "d12474131f65dbeb87378f84f121dd030614199f73d2eaf70338f40578a6649d",
+    "budget1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "budget1/exact_sources/tools/stereo_field_v1/budget.py": "d041cd97696a0763c6d6a245ffb670fd1d9b867bd62114afd151cf1a9332de23",
+    "budget1/metadata.json": "32cbcd2aef831ad96bdd9d5f0d80a9fe4dfabebc5d316c79613b9d5ffe61467a",
+    "budget1/report.json": "7db96912ffc6a5c3a72c2fcc8e37c7d7c6d81fbc13d1a1d412e3f40aeb74999b",
+    "components1/exact_sources/research/stereo_components_v1_plan.json": "151dadefcaea068a71384eb5d64155d482d7c09d4f05eb27a1f7abbb99ea0ceb",
+    "components1/exact_sources/research/stereo_field_v1_plan.json": "3c9f0ea582addd333f1878ffd8f03922ad082bc12c128a03ca12031427bf84ab",
+    "components1/exact_sources/tools/analyze_stereo_components_v1.py": "885d65f43e436e6ce2bd56bb9e1fc0bacbccca5e5255fc0ee4d5d53915593f8f",
+    "components1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "components1/exact_sources/tools/stereo_delay_v1/spectrum.py": "adc6f28d65e7a989f75b017c44a66dbc855bdb1a4efb8f3143d64eb487e17f06",
+    "components1/exact_sources/tools/stereo_field_v1/budget.py": "d041cd97696a0763c6d6a245ffb670fd1d9b867bd62114afd151cf1a9332de23",
+    "components1/exact_sources/tools/stereo_field_v1/components.py": "2c9ad7206f1099cea89d16ee98be29d164a02f5d5722e096bb47675640033173",
+    "components1/exact_sources/tools/stereo_field_v1/controls.py": "a54965d88120632d5ce749ce1544d49d1c859479f52f9499c505097b6df6868b",
+    "components1/exact_sources/tools/stereo_field_v1/model.py": "1cc886c2194df29718f4358963a5356a4c62ed5daa1eef121926bdd55c286c3b",
+    "components1/exact_sources/tools/stereo_field_v1/oracle.py": "f175beab090de491eab0be4d553b12053d8edf27384a39c3e35640b9d35b251a",
+    "components1/metadata.json": "75386644c621f7db7b57406552eaa58402b9ae5f56f867b01ba55d97576f9c6a",
+    "components1/report.json": "1b902f3f7d15e0fbe1aca73389cfbf2b3a18eaed5ea0c16848aec6c04e2e714c",
+    "detail1/exact_sources/tools/detail_stereo_field_v1.py": "475b2b102ac36b1f324d388a27880780a08aa672c71c6e08dde2f9909ef9c1a3",
+    "detail1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "detail1/exact_sources/tools/stereo_field_v1/model.py": "1cc886c2194df29718f4358963a5356a4c62ed5daa1eef121926bdd55c286c3b",
+    "detail1/report.json": "bce7a2478b71fcbde28d6d1a50d02bfaaa4c2ffd841760fd4eafbad27fe14869",
+    "verification1/finalize_stereo_field_v1.py": "85eae18ddced33360985d2966e758cacb9f54958f712bc05347c86f7eb18bd9c",
+    "verification1/report.json": "7b04037fd29d7f4f497ed38f835ec6484a9a3c2fb5ccf2d5fab2ff2ed0eab825"
+  },
+  "limits": [
+    "Reuse manifest-bound raw stereo Welch blocks from reference_audit_v1; no new media or normalization/phase warp of source audio. Recorded transfer only, not physical-source separation, head geometry, true load or unseen-recording validation. No borrowing cabin width for A. A3block cases lack two training blocks and are reported as insufficient. A passing raw-recording covariance gate alone does not authorize adding a residual to an existing DNA, whose spectral debt may not be PSD. No C/model/UI/driver/take change or listening acceptance.",
+    "Equal-length first/last halves of whole disjoint one-second blocks; odd central block unused. Within each training half choose complexity by leave-one-block-out; do not select on test blocks. Both temporal directions must pass independently for a band to qualify.",
+    "More detailed recording covariance is not automatically a PSD additive residual relative to the existing DNA",
+    "No synthesis or spatial/listening improvement has been established by this raw-data prediction experiment",
+    "Diagnostic only: frozen A stationary-rear and E lower-cabin normalized references and their actual original C48kHz8s DNA renders; not the accepted moving A pair. Compare T-B PSD feasibility on original eight Welch bands and native-bin-aligned4/8child grids. Common per-cell DNA power alpha is an upper bound for independently additive residual feasibility, not a proposed gain, new fit, or measured source/noise fraction. Different cells must not become a runtime gain curve from this audit. Reference excerpts are short and previously observed; Welch window/cell resolution, pitch normalization, finite seed and phase relationships affect debt. Retain the old clipping result and old models; do not export new audio/models or borrow cabin transfer for exterior.",
+    "The alpha bound is conditional on same-window measured target/base matrices and the chosen numerical tolerance, not a physical engine-source budget",
+    "Independent stochastic addition assumes zero ensemble cross with DNA; finite deterministic OSC sums can have finite-window cross terms",
+    "A different PSD projection may redistribute error but cannot exactly represent an indefinite independent-additive debt at unchanged base",
+    "Exploratory follow-up motivated by the joint model hiding held-out balance regressions, notably E1.5–1.9kHz. Same previously studied recordings, not independent confirmation. This is a new predeclared candidate family with an added component gate; all original joint-family results remain intact. No runtime profile/audio export, C/UI/driver/take change or listening acceptance.",
+    "Fit original PSD child moments. Joint uses them directly; cross_only retains parent diagonal and projects child cross onto that fixed PSD disk; balance_only retains child diagonal and projects parent cross onto its disk. Choose axis/count/prior solely by training-half leave-one-block-out total error, then apply all held-out gates in both directions.",
+    "The same previously observed time blocks support exploration; no independent recording or end-to-end source qualification",
+    "Individual component gates concern this covariance metric, not stereo audibility or physical source identity",
+    "The original joint total gate passed five recorded bands but can hide balance regression; the new axis family/component gate is a separate exploratory result, not a revised threshold on the original run",
+    "Only two D dyno bands survive the component family. No cabin transfer candidate qualified; do not select a one-direction E improvement or relax the10percent gate",
+    "A uses only three raw blocks, insufficient for train-only selection; its near-mono debt can require a small alpha because of a weak side direction, not a recommended large attenuation",
+    "Feasibility counts/trace fractions do not measure audible defect size; alpha must never be automatically used as a per-cell gain curve",
+    "No C contract changed, no C tests or device build rerun, and no additional listening question was issued"
+  ]
+}

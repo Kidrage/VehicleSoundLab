@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "received_date": "2026-11-12",
+  "experiment": "temporal_texture_v1 / harmonic_magnitude_v1",
+  "question_item_id": "[\"request_user_input_async\",\"call_6279953116984a17a659a86770dd8ea7\",0]",
+  "page": "http://127.0.0.1:8789/research/谐波幅度统计V1.html",
+  "reference": "原认可 DNA＋低频",
+  "candidates": ["新幅度50%","新幅度100%"],
+  "verbatim_answer": "原版更好／新候选有其他问题",
+  "result": "baseline_preferred_candidates_not_accepted",
+  "decision": "Retain the accepted original DNA/coherent-LF baseline. Do not promote these harmonic log-magnitude candidates or their AR timescale derivatives into realtime C from objective-score improvements alone.",
+  "unknown": ["The user did not specify which additional problem", "No candidate-specific ranking beyond preference for the original"],
+  "scope": "This feedback applies to harmonic_magnitude_v1, not the later line_density_v1 harmonic-power allocation or residual_dense_v1 carrier-count comparison. Preserve all frozen runs and retain their original pending fields as historical state."
+}

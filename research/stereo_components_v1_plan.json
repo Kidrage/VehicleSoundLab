@@ -1,0 +1,8 @@
+{
+  "extends": "research/stereo_field_v1_plan.json",
+  "axes": ["joint","cross_only","balance_only"],
+  "component_mse_regression_tolerance": 2e-12,
+  "control_policy": "Repeat all twelve original synthetic controls with the expanded train-only candidate family. Keep all original aggregate thresholds; additionally each direction must not regress either diagonal-balance MSE or complex-cross MSE. Do not alter the first joint-field report or retroactively call it failed.",
+  "fit": "Fit original PSD child moments. Joint uses them directly; cross_only retains parent diagonal and projects child cross onto that fixed PSD disk; balance_only retains child diagonal and projects parent cross onto its disk. Choose axis/count/prior solely by training-half leave-one-block-out total error, then apply all held-out gates in both directions.",
+  "scope": "Exploratory follow-up motivated by the joint model hiding held-out balance regressions, notably E1.5–1.9kHz. Same previously studied recordings, not independent confirmation. This is a new predeclared candidate family with an added component gate; all original joint-family results remain intact. No runtime profile/audio export, C/UI/driver/take change or listening acceptance."
+}

@@ -1,0 +1,10 @@
+{
+  "sample_rate": 48000,
+  "subdivisions": [1,4,8],
+  "PSD_relative_tolerance": 1e-9,
+  "bisection_steps": 80,
+  "known_alpha_error_maximum": 1e-8,
+  "independent_matrix_error_maximum": 1e-12,
+  "cases": ["A_exterior","E_cabin"],
+  "scope": "Diagnostic only: frozen A stationary-rear and E lower-cabin normalized references and their actual original C48kHz8s DNA renders; not the accepted moving A pair. Compare T-B PSD feasibility on original eight Welch bands and native-bin-aligned4/8child grids. Common per-cell DNA power alpha is an upper bound for independently additive residual feasibility, not a proposed gain, new fit, or measured source/noise fraction. Different cells must not become a runtime gain curve from this audit. Reference excerpts are short and previously observed; Welch window/cell resolution, pitch normalization, finite seed and phase relationships affect debt. Retain the old clipping result and old models; do not export new audio/models or borrow cabin transfer for exterior."
+}

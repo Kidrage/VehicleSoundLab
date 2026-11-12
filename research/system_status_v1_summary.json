@@ -1,0 +1,217 @@
+{
+  "schema": "vsl.system-status-summary/1",
+  "date": "2026-11-12",
+  "result": "short_functional_checks_and_reference_inventory",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\system_status_v1",
+  "C_H_unchanged": 442,
+  "c_index_sha256": "424b3d3680b6d8dd8faf60e3d1b06d8c72ec3df74422997fdf3656423255fb6a",
+  "native_stereo_device_checked": true,
+  "device_cases": {
+    "bench": {
+      "frames": 288000,
+      "healthy": true,
+      "offline_float_equal": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 6.0883,
+      "shifts": 0,
+      "overruns": 0
+    },
+    "pedals": {
+      "frames": 576000,
+      "healthy": true,
+      "offline_float_equal": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 8.5608,
+      "shifts": 2,
+      "overruns": 1
+    },
+    "stopped": {
+      "frames": 25088,
+      "healthy": true,
+      "offline_float_equal": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 3.4234,
+      "shifts": 0,
+      "overruns": 0
+    },
+    "cabin_restart": {
+      "frames": 48000,
+      "healthy": true,
+      "offline_float_equal": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 3.9854,
+      "shifts": 0,
+      "overruns": 0
+    }
+  },
+  "take_verified": true,
+  "take_queue_empty": [
+    0,
+    0
+  ],
+  "take_over_budget": [
+    0,
+    0
+  ],
+  "offline_exports": [
+    {
+      "frames": 144123,
+      "channels": 2,
+      "verified": true,
+      "audio_hash": "3ba229453e1e0f5a",
+      "source_hash": "19aeef03a43ec54d",
+      "render_id": "e6c4745f2dea99f03592dd827d5d701258a48eba51dc3274bb316393f59658fc"
+    },
+    {
+      "frames": 144123,
+      "channels": 12,
+      "verified": true,
+      "audio_hash": "31b7d7de7b1b493c",
+      "source_hash": "19aeef03a43ec54d",
+      "render_id": "e6c4745f2dea99f03592dd827d5d701258a48eba51dc3274bb316393f59658fc"
+    }
+  ],
+  "actual_12channel_device_checked": false,
+  "long_run_checked": false,
+  "new_UI_interaction_checked": false,
+  "page": "http://127.0.0.1:8789/research/%E7%8A%B6%E6%80%81%E7%B4%A0%E6%9D%90%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%9B%9E%E6%94%BEV1.html",
+  "reference_clips": [
+    {
+      "key": "start",
+      "title": "启动／接火",
+      "source": "A",
+      "seconds": [
+        33,
+        40
+      ],
+      "limits": "车内启动语境；接火时刻、RPM未精确标定。"
+    },
+    {
+      "key": "low",
+      "title": "驻车低转",
+      "source": "A",
+      "seconds": [
+        208,
+        211
+      ],
+      "limits": "车外低转参考；不能确认是850RPM暖怠速。"
+    },
+    {
+      "key": "blips",
+      "title": "驻车补油",
+      "source": "A",
+      "seconds": [
+        238,
+        248
+      ],
+      "limits": "驻车尾排升降转；挡位、踏板与负载未被测定。"
+    },
+    {
+      "key": "bay",
+      "title": "机舱混合声",
+      "source": "A",
+      "seconds": [
+        270,
+        277
+      ],
+      "limits": "含发动机／进排气／空间，不能当作独立进气或机械录音。"
+    },
+    {
+      "key": "release",
+      "title": "车内减速",
+      "source": "E",
+      "seconds": [
+        52,
+        54.4
+      ],
+      "limits": "已有3挡减速画面观察；喷油、踏板及准确同步未知。"
+    },
+    {
+      "key": "shifts",
+      "title": "车内升挡语境",
+      "source": "E",
+      "seconds": [
+        82,
+        94
+      ],
+      "limits": "已有1→6挡画面观察；显示时刻不能当作切扭／离合时刻。"
+    }
+  ],
+  "C_device_capture_clips": 2,
+  "matched_state_timbre_comparison_complete": false,
+  "human_timbre_accepted": false,
+  "C_changes": false,
+  "current_source_sha256": {
+    "tools/probe_current_system_v1.py": "c263134168506e02cb0695f9468c59b301770fcc9b333fd7e29a44120e4fae24",
+    "tools/make_state_reference_review_v1.py": "e1f71bde21a1df459be75f26ec61024b204491e7a4d7766d72093fd20bc6601c",
+    "tools/summarize_system_status_v1.py": "49c327ce9d4a1aef111ffbb6192b56bad4662ac0717fe7b2f4cf61948c13b6d0",
+    "tools/freeze_system_status_v1.py": "52c030dd3894b385082592640f48f55cd486ad378344016e1ec39c486c266351"
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\references\\segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "E:\\VehicleSoundLab\\references\\analysis\\system_status_v1\\device1\\report.json": "0ac6a8ca3914261ce44edac573c9025f8b3b950cfb3246d418de7c791f0d6cb1",
+    "E:\\VehicleSoundLab\\references\\raw\\A_7aZm1Wkp6QM.webm": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+    "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+    "E:\\VehicleSoundLab\\references\\raw\\E_GIceP3oLuDQ.mkv": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+    "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "E:\\VehicleSoundLab\\references\\analysis\\system_status_v1\\device1\\device\\bench.wav": "005220ec2923013ed82f8eec362d9eb6f5d346db71f79e088564e2143c1a0135",
+    "E:\\VehicleSoundLab\\references\\analysis\\system_status_v1\\device1\\device\\pedals.wav": "a40baea57d58f1f85c48d26383980f83b7be5308e76e16fb7643608541286305"
+  },
+  "evidence_sha256": {
+    "device1/bin/VslAtlasMonitor.exe": "077586bd854f284fdd104c09d387e7e293b61b0b72138eac8ee61770af2bd5c1",
+    "device1/bin/VslAtlasMonitor_device_verify.exe": "71d80af2e0d677883eecf9a4df2c072c5b4300feab9655f4ae9450ef8a7b9fa9",
+    "device1/bin/VslAtlasTake_device_checks.exe": "a0030788d725e973ad0a4ab8c2215ff3286590a34fe31ad2ac2095c48243b55b",
+    "device1/bin/VslAtlasTake_render.exe": "0fe8ce19483b044299976014d64b6dd36b134686086cf8eb698b9b0f32b3c47e",
+    "device1/command_0.log": "ba165af6c85dbe162b9929878ea5462977081ab4b7bc1bf54165517a328b2732",
+    "device1/command_1.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "device1/command_2.log": "b05e749c3fb01be91dbec07b2f7c678623d78e6ef4f99ddf27c591086c19de8a",
+    "device1/command_3.log": "aebc72ebbc0a0ab1ebd1cedc2d888b7aff231196a9daf627d1de66d157d15be7",
+    "device1/C文件索引.csv": "424b3d3680b6d8dd8faf60e3d1b06d8c72ec3df74422997fdf3656423255fb6a",
+    "device1/device/bench.json": "78dc55c31835fc871cf19c5c1b3ea02d8260817cbddd26324d93d4618a46f34c",
+    "device1/device/bench.wav": "005220ec2923013ed82f8eec362d9eb6f5d346db71f79e088564e2143c1a0135",
+    "device1/device/cabin_restart.json": "f42dfc8a03518a484ec67c2dc959d89d3e0f6da09b115ecdfe0a9fba194b5200",
+    "device1/device/cabin_restart.wav": "0339e030ac87feada1cd2e6941eccca9eb884184d633c5aba904bdff74af8267",
+    "device1/device/pedals.json": "552e6e7d4befa6cc100137f0c1935df7c26ce0e07d1b775df2bdc77075fede44",
+    "device1/device/pedals.wav": "a40baea57d58f1f85c48d26383980f83b7be5308e76e16fb7643608541286305",
+    "device1/device/stopped.json": "712b0c710d425eec626e09cf6e3ae45e1009ddfc889401525f9c6bba90a6a8df",
+    "device1/device/stopped.wav": "170ea010b0750a17cd1aae23414163b7670e6d446b102a15646ecd9714cfb2d3",
+    "device1/device_take.vslrun": "a145421c26924c7c12aa059aa90a79387c852eab4b7f9b7a2796caa5076143f2",
+    "device1/device_take.vslrun.json": "856e04b3e4de5c08ccb77de9fd3bef8f1177be581dc047f2d826097fd714d7a4",
+    "device1/metadata.json": "31f30d7a23f17563f5132b2ae47ddfd38419af8a1c6aca1b62442fe92a68973c",
+    "device1/probe_current_system_v1.py": "c263134168506e02cb0695f9468c59b301770fcc9b333fd7e29a44120e4fae24",
+    "device1/report.json": "0ac6a8ca3914261ce44edac573c9025f8b3b950cfb3246d418de7c791f0d6cb1",
+    "device1/take_12.wav": "4b072416ed778fe55f47c1a52d9e32649b51d10021879bcc16a92ae80bcdb33c",
+    "device1/take_2.wav": "9c0129ce5a959882971571701f1eb174b56e678767cc6b92d85b97a5e2ae2290",
+    "publication1/before/听评记录.md": "772588a7a16cf97f1f7731e132e33b4cdf3d5d92f7e2b4be74082f4ce1e72e26",
+    "publication1/before/高频时间细节V1.md": "8b8e9e83b890d10a44c234d6f1f10c581bb5e6b4cf6471bc38cc13ac6691ad16",
+    "publication1/report.json": "64b3cbff589f964f877ab297a610bc69512ce5ecfee418173104f157f481c3c7",
+    "publication1/whitespace_after.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "publication1/whitespace_before.log": "a4e1f934f3834ad7dc7a0c013d0eb35bc35c6397ea83caefc3df7c1defcce7fb",
+    "reference1/audio/bay.wav": "61753bdaabc8715e7b250402f69aace50a38d823f5fe5e55ca00482e5c4d2719",
+    "reference1/audio/blips.wav": "4cd3c3d7a1af489755e3377d0e0f4b18cd1698002a5d7344708e6bc4bb7648f9",
+    "reference1/audio/low.wav": "0835c196034742794985bdd06060b020de0917baa51357f93ed39589e5f68471",
+    "reference1/audio/release.wav": "ea3478df2fa34828bafd5314510c00c3fe40b8f98c036660dac8e67cb8ef0c47",
+    "reference1/audio/shifts.wav": "00e0a81251f19b26a9be4139a5851387bb9c2b1cc3f8c7cc725869934a784aee",
+    "reference1/audio/start.wav": "a8f1a568aeb6bdba2e6dd56a139713b9985ed83d6f922c5f3f2ce5469f6b8aca",
+    "reference1/audio/system_bench.wav": "a6d39b9b58898fea75d5287aaa155e82083727f998848e841f00cf477deb6fcc",
+    "reference1/audio/system_pedals.wav": "f84ef16634611ec8ca5b5e80a2cd517c9dac40ec3a3390456b9f334ebd62d128",
+    "reference1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "reference1/exact_sources/tools/make_state_reference_review_v1.py": "e1f71bde21a1df459be75f26ec61024b204491e7a4d7766d72093fd20bc6601c",
+    "reference1/page.html": "c38a102e744aeb75154dd4ac0f20d07aa72be8b565361ff2d1426c2546e39eb5",
+    "reference1/report.json": "a43f344ddc6be358c8c361cef0c6d136a57a5767d0e3b105c1b2c8bbcea12c88",
+    "reference1/segments_v1.json": "d930083f668efa1c88b41b2795f51db7421f5d6fb2d95e978851312e187dd371",
+    "ui_launch.json": "b0aaf488d29834ff2b2626330c3861ec0f4b78562309df3a7ce6f71c47886914"
+  },
+  "limitations": [
+    "Actual muted short stereo tests verify function/control/replay, not sound realism or a long-run realtime guarantee",
+    "Current12channel source consistency is offline; spatial routing still uses the explicit mono-proxy path",
+    "A low-rev reference is not confirmed warm idle; stationary revs do not establish neutral gear or pedal/load",
+    "Startup is cabin reference, not an exterior transient fit; E transitions have display/synchronization limits",
+    "Shutdown, isolated backfire and isolated intake lack confirmed clean reference excerpts",
+    "Reference clips and functional captures have different actions/perspectives/levels and are not a matched AB test"
+  ]
+}
