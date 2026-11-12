@@ -1,0 +1,90 @@
+{
+  "schema": "vsl.resonant-monitor-summary/1",
+  "date": "2026-11-12",
+  "result": "native_monitor_technical_pass",
+  "prior_C_H_unchanged": 500,
+  "new_C_H": 11,
+  "C_H_rows": 511,
+  "C_H_index_sha256": "8a27414fdca5becc8b98cd49dd37d623d6d27ecd875e91ed4f3a09311b4f312d",
+  "Ctests": 50,
+  "native_host": true,
+  "default_stopped": true,
+  "recipe_count": 5,
+  "device_runs": [
+    {
+      "name": "moving",
+      "frames": 144123,
+      "exact_replay": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 4.3748
+    },
+    {
+      "name": "low",
+      "frames": 144123,
+      "exact_replay": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 3.5936
+    },
+    {
+      "name": "stopped",
+      "frames": 25088,
+      "exact_replay": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 3.3412
+    },
+    {
+      "name": "restart",
+      "frames": 24637,
+      "exact_replay": true,
+      "queue_empty": 0,
+      "budget_exceeded": 0,
+      "render_max_ms": 3.2388
+    }
+  ],
+  "dry_comparisons": [
+    {
+      "name": "moving_35",
+      "frames": 384000,
+      "max_FS": 0.0,
+      "float_exact": true,
+      "file": "device/moving_35_dry.wav",
+      "sha256": "c958ba47dfcf82309725e670d5433d2d77cfade2b07b64b8fbf10a6defed4d9d"
+    },
+    {
+      "name": "idle_add",
+      "frames": 384000,
+      "max_FS": 0.0,
+      "float_exact": true,
+      "file": "device/idle_add_dry.wav",
+      "sha256": "3f817ee958debb35184414fe3cd1cd1c858a2fcae3db5b14535c6d67591e813c"
+    },
+    {
+      "name": "idle_35",
+      "frames": 384000,
+      "max_FS": 0.0,
+      "float_exact": true,
+      "file": "device/idle_35_dry.wav",
+      "sha256": "6b18de21b5aaea076776dd1f0c1d78dabf98db2626077f085ba07ad8d8146b38"
+    }
+  ],
+  "visual_qa": true,
+  "manual_mouse_verification": false,
+  "driver_or_take_or_existing_default_changed": false,
+  "new_parameters_or_room_or_PCM": false,
+  "new_listening_acceptance": false,
+  "idle": "pending original audition; RPM and thermal state unconfirmed",
+  "acceleration": "existing driver/atlas functional; full RPM/load timbre map incomplete",
+  "evidence_sha256": {
+    "references/analysis/resonant_monitor_v1/verify1/verification.json": "c2190cc0eeaf56bcbee1857b72fdd4c0a515bbce55d19a4e07e98c193984f5f8",
+    "references/analysis/resonant_monitor_v1/verify1/visual_qa.json": "e1c29d8cd339df357f2ae22054c47d0c70800ff2bd49a1839f85f1738e7f63be"
+  },
+  "limits": [
+    "Own-program UI messages and screenshots; no manual mouse verification",
+    "Short muted stereo device test; no long-run or physical 7.1.4 acceptance",
+    "Fixed-context source and limited pitch .9..1.1, not a calibrated RPM/load atlas",
+    "Idle listening remains pending; moving 35% retained without new tuning"
+  ]
+}

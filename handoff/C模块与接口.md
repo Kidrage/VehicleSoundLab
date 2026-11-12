@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前新增[完整声源监听适配器](../modules/resonant_monitor/README.md)：`rsm_render_init/set/process`负责借用模型、平滑、10ms启停、一次输出及分轨；实时无I/O／分配。宿主`models`拥有并非实时加载，`audio`复用`win_output`和成功提交帧调试记录，`ui`默认停止；没有新驾驶／行程字段。原500C/H字节保持，11新增、索引511；50项CTest及四次短静音设备重现通过。三配方8秒dry与既有C基准完全一致，音色未新增验收。
+
 当前[完整配方接口](../modules/resonant_source/README.md)：`rss_profile_prepare`非实时向独立模型编译谐波功率替换；`rss_voice_init/set/tick`组合原DNA／匹配LF和连续共振细节，只预热细节，运行按同一DNA采样相位；`rss_output_frame`一次主增益／宽度及2／12前置声床。9组8秒完整混音、3组2／12对照及49项CTest通过，原492C/H不变、8新增、共500份。没有新原生／驾驶／行程字段或默认改动；此状态覆盖下面历史“无完整混音适配器”，仍不等于音色／完整RPM负载覆盖。
 
 当前新增C接口：[连续共振细节核](../modules/resonant_detail/README.md)的`profile/envelope/excitation/filter/voice`只处理参数校验和连续细节；`resonant_detail_io/profile`负责独立非实时事务加载。`rdt_voice_tick`消费外部主声相位，不持有RPM时钟，不分配／I/O；模型整个运行期由调用者只读持有。参数与混合职责见[参数说明](../voices/resonant_detail_c_v1/README.md)。三个参数×三个seed细节核数值通过，48项CTest通过，现492份C/H（原478份不变、14新增）。**没有完整混音适配器／驾驶字段／UI／行程接入或原生听评**；下文历史“无C加载器”记录仅描述当时状态。
