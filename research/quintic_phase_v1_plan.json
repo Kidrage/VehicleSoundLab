@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.quintic-phase-plan/1",
+  "parent_plan": "research/joint_trust_precise_v1_plan.json",
+  "common_phase_degree": 5,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "One declared same-knot-spacing quintic common-phase representation based on the frozen representation diagnosis, not a degree/knot sweep",
+    "Keep original gauge, phase bounds, positive finite-band amplitudes, minority departure representation, source topology and all qualification gates",
+    "Bounded migration fits only the previous observed cubic phase; coefficients, amplitudes and minority departures remain unchanged",
+    "The quintic space is not an exact superset of the cubic space; save the actual migration error and do not claim exact equivalence",
+    "Use the unchanged joint trust-region controller and independent QP backend, full candidate/primal/dual traces",
+    "No analytic truth or heldout input may initialize or select actual estimates",
+    "Keep failed positives and capped results; original17/full33/individual14kHz/original E still required",
+    "No real source/model/C/runtime/render/media/listening changes"
+  ]
+}

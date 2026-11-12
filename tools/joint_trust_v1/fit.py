@@ -25,6 +25,11 @@ def scales_from_observation(model, outer, controls, target, scale):
 
 def estimate(audio, time, plan, variant, settings, selected, initial, progress=None, qp_solver=solve):
     model = AbsoluteModel(time, plan, variant, selected)
+    return estimate_with_model(model, audio, time, plan, variant, settings, initial, progress, qp_solver)
+
+
+def estimate_with_model(model, audio, time, plan, variant, settings, initial, progress=None, qp_solver=solve):
+    selected = model.original.selected
     outer, controls = model.unpack(initial)
     target = real_rows(model.original.aperture.apply(audio[:, 0]))
     scale = plan['soft_l1_scale']
