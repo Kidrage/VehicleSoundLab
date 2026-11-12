@@ -1,0 +1,40 @@
+{
+  "schema": "vsl.multicarrier-clock-plan/1",
+  "scope": "Offline common stereo acoustic coordinate; not engine order, ECU RPM or measured load",
+  "coarse": {"window_ms": 80, "hop_samples": 240, "root_range_hz": [15, 80], "grid_count": 769, "orders": [2, 3, 5, 7, 10, 15, 20], "minimum_observed_lines": 3, "maximum_octaves_per_second": 16, "smoothing_hz": 8},
+  "phase": {"fit_orders": [2, 3, 5, 7, 15], "minimum_fit_lines": 2, "projection_cycles": 4, "hop_samples": 256, "support_relative_db": -30, "outlier_cycles": 0.003, "global_iterations": 8, "refinement_passes": 3},
+  "heldout_orders": [1, 4, 6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20],
+  "fixtures": [
+    {"id": "low_steady", "kind": "steady", "root_hz": 32.8},
+    {"id": "high_steady", "kind": "steady", "root_hz": 60},
+    {"id": "low_drift", "kind": "drift", "root_hz": 32.8},
+    {"id": "high_drift", "kind": "drift", "root_hz": 60},
+    {"id": "low_partial_gap", "kind": "partial_gap", "root_hz": 32.8},
+    {"id": "low_sideband", "kind": "sideband", "root_hz": 32.8},
+    {"id": "low_masking", "kind": "masking", "root_hz": 32.8},
+    {"id": "low_phase_contamination", "kind": "phase_contamination", "root_hz": 32.8},
+    {"id": "low_phase_contamination_2", "kind": "phase_contamination", "root_hz": 32.8, "contaminated_order": 2},
+    {"id": "low_phase_contamination_3", "kind": "phase_contamination", "root_hz": 32.8, "contaminated_order": 3},
+    {"id": "low_masking_2", "kind": "masking", "root_hz": 32.8, "masked_order": 2},
+    {"id": "low_masking_3", "kind": "masking", "root_hz": 32.8, "masked_order": 3},
+    {"id": "stereo_delay", "kind": "stereo_delay", "root_hz": 32.8},
+    {"id": "loaded_rise", "kind": "rise", "root_hz": 32.8},
+    {"id": "rapid_corner", "kind": "rapid_corner", "root_hz": 25},
+    {"id": "single_carrier", "kind": "single_carrier", "root_hz": 32.8, "negative": true},
+    {"id": "all_carriers_gap", "kind": "all_carriers_gap", "root_hz": 32.8, "negative": true},
+    {"id": "noise_only", "kind": "noise_only", "root_hz": 32.8, "negative": true}
+  ],
+  "seconds": 4,
+  "selected_seconds": [0.5, 3.5],
+  "harmonics": 288,
+  "bands_hz": [[28, 120], [120, 400], [400, 1200], [1200, 3000], [3000, 8000], [8000, 14000]],
+  "rules": {"maximum_root_relative_p95": 0.01, "maximum_oracle_band_power_error_db": 0.5, "maximum_oracle_complex_correlation_error": 0.05, "minimum_separate_carriers": 2, "minimum_carrier_support": 0.8, "minimum_carrier_coherence": 0.8},
+  "policy": [
+    "One algorithm and fixed parameters across all independent fixtures; keep every failure",
+    "No source interpolation over missing consensus or missing phase measurement; reject the whole requested interval",
+    "A coarse consensus does not authorize a profile without phase, heldout and timbre validation",
+    "Any failed positive blocks a new real-source fit with this version",
+    "Real E5.2..7.8 remains the single planned stationary target after independent qualification, with no crop/reference/window search",
+    "No runtime, accepted moving35, room, controller or download changes"
+  ]
+}

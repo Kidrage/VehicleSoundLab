@@ -1,0 +1,103 @@
+{
+  "schema": "vsl.multicarrier-clock-publication/1",
+  "result": "analytic_controls_pass_real_phase_rejected",
+  "reports": {
+    "validate1": {
+      "path": "references/analysis/multicarrier_clock_v1/validate1/report.json",
+      "sha256": "bbb1c9ce372ad96f16ac9d2d60560ded1db585afcc149e933ff0d36f72a9fdb3",
+      "result": "failed"
+    },
+    "validate2": {
+      "path": "references/analysis/multicarrier_clock_v1/validate2/report.json",
+      "sha256": "39bd7eef5ef200e59105af0dd4c27f4dee5b17668507e38b2e58e3da43b218a2",
+      "result": "rejected"
+    },
+    "validate3": {
+      "path": "references/analysis/multicarrier_clock_v1/validate3/report.json",
+      "sha256": "48829374e7d95e938326c7e206f74c0916d63d6daf577f9d1b1109c821375090",
+      "result": "rejected"
+    },
+    "validate4": {
+      "path": "references/analysis/multicarrier_clock_v1/validate4/report.json",
+      "sha256": "ac60696b71c2eadf07eb8121ddfbe04ded2ddb6e385c3877ffd54deae8b70062",
+      "result": "rejected"
+    },
+    "validate5": {
+      "path": "references/analysis/multicarrier_clock_v1/validate5/report.json",
+      "sha256": "ad261c3bdddeef6e268291cd96d5ddd51c7dc9aa868a045409fec5345ef2e24e",
+      "result": "rejected"
+    },
+    "validate6": {
+      "path": "references/analysis/multicarrier_clock_v1/validate6/report.json",
+      "sha256": "beea24280062d0849295a03ea4ba3f75f73c54843bbde3036f9a5998fbf9214b",
+      "result": "rejected"
+    },
+    "validate7": {
+      "path": "references/analysis/multicarrier_clock_v1/validate7/report.json",
+      "sha256": "3841f4219b82dcc80d9336cdf94144b1af0c64dcd09c2a95c654f15ae16c724f",
+      "result": "rejected"
+    },
+    "validate8": {
+      "path": "references/analysis/multicarrier_clock_v1/validate8/report.json",
+      "sha256": "5a03b1a2beb3985dfcbf198b3ef0a4fe4b7b52c3dec84d785b00edeac1eb5243",
+      "result": "rejected"
+    },
+    "validate9": {
+      "path": "references/analysis/multicarrier_clock_v1/validate9/report.json",
+      "sha256": "e57551159b35f60ce913f082ca4266accf1657e1a9930b2dc45a8b5c89eecbae",
+      "result": "passed"
+    },
+    "E_source1": {
+      "path": "references/analysis/multicarrier_clock_v1/E_source1/report.json",
+      "sha256": "1026dbaaf112c08ad8814aced332b52c7997f9c5b08815024c4fd7ede1da0c20",
+      "result": "source_phase_rejected"
+    }
+  },
+  "sources": {
+    "tools/package_multicarrier_clock_v1.py": "0a4b17c18d46c70f8929bde353b782a7b6c7d47e9032fa005d27b5badbf546bb",
+    "tools/validate_multicarrier_clock_v1.py": "2e88c32c007c2a4f99be1329e382f33c5e94a70f539787c87261d2beed81ac2f",
+    "tools/fit_multicarrier_source_v1.py": "dca79a6e2257b7b288407722172c50840ee2e4da1d130da6cc733e1a19a02b70",
+    "research/multicarrier_clock_v1_plan.json": "ddf4cdd53c81961da23de6d1a022d7b99f6708f5abd036a9d91a2cb147941f72",
+    "research/多谱线声学坐标V1.md": "cc332ef73afb9b5a5f8a1f056cf69e9944674033fc539441d2ef4d40f3c07dce",
+    "research/E_stationary_dna_v1_plan.json": "5734b068fd5ea2f8f26ec643901ae127ed0010c74226bea4228416a766291c10",
+    "tools/multicarrier_clock_v1/coarse.py": "c3e0305e620e15761bc921d879d3d9ce4759f8f1d30d6f51e5d371f57c9022af",
+    "tools/multicarrier_clock_v1/fixtures.py": "f0ca56eba46a22f786fc775f66f861cf32b9a9886109fd239f28cd17344b5f1e",
+    "tools/multicarrier_clock_v1/phase.py": "f1582db4848fb81951f9801c5e1862b6d46bbeca0da2b804f93aa6c655ecd066",
+    "tools/multicarrier_clock_v1/__init__.py": "92610603aa880d28b2b3ccf00ad6732c10c2c3a37d146dced70b244f11c29b28"
+  },
+  "positive_controls": 15,
+  "negative_controls": 3,
+  "maximum_root_relative_p95": 0.0016209424151473208,
+  "maximum_oracle_band_power_error_db": 0.44009435559911353,
+  "maximum_oracle_complex_correlation_error": 0.037212180314231125,
+  "real_source_result": "source_phase_rejected",
+  "real_source_case": {
+    "id": "exterior_before_blips",
+    "observation": "exterior_stationary_context",
+    "window_ms": 80,
+    "seconds": [
+      5.2,
+      7.8
+    ],
+    "initial_root_hz": 32.8,
+    "primary_reference": 5,
+    "comparison_references": [
+      2,
+      3
+    ]
+  },
+  "real_coarse_rows": 521,
+  "model_exported": false,
+  "real_C_render_executed": false,
+  "vehicle_timbre_accepted": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "C_hashes_sha256": "2bf13d3cdaa829d95a7a2b6247d92047527a8d655cece43018a8bf5bbf7d832f",
+  "voice_hashes_sha256": "05d5f798da5e36b9efb38e00e0ecf2380238b96db17bdb3c07ffa1d316411b86",
+  "plot_sha256": "a67907a007e8ac7bac9df38dbcc548e7fcfac7dcc60c8c3dbd7c7fa4a72459f7",
+  "existing_Ctests_rerun": false,
+  "idle_acceleration_complete": false,
+  "original_generic_phase_gate": "not_passed_unchanged",
+  "moving35": "held_unchanged",
+  "date": "2026-11-13"
+}
