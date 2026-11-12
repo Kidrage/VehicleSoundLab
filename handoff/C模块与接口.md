@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新[共振细节替换](../research/连续共振细节替换V1.md)仅为分模块Python离线原型：`envelope`／`filters`／`voice`／`controls`分别负责弱能量形状、共振拟合与预算、持续生成、独立验证；`voices/resonant_detail_v1/detail.json`为纯参数快照，尚无C加载器。原C DNA核复用、478份C/H未改，驾驶／设备／行程没有新接口。听评成立后再按同样职责移入C，不把离线脚本写成实时接入已完成。
+
 最新状态：共同微扰原生C未通过音色听评，用户补充离线／C均不足。[新诊断及计划](../research/DNA高频质感诊断与优化V2.md)优先修DNA高频过度周期化；没有新C模块或默认改动，原478份C/H保持。下文技术接入通过不能作为音色验收。
 
 新增[共同微扰C接入](../research/共同微扰C接入V1.md)：`modules/phase_texture/motion.*`负责独立随机控制／样条，`voice.*`负责原幅度与同组谐波的共同相位适配。`DsSourceControl.phase_texture`为0–1轻量强度，`DsSourceConfig.phase_seed`为独立种子，默认强度0；`--phase-texture`研究监听打开轻量开关。478份C/H，466原件不变，47项CTest／短设备通过。旧玩家已存，驾驶器／行程未加新控制；原生听评待确认。

@@ -1,0 +1,70 @@
+{
+  "schema": "vsl.resonant-detail-summary/1",
+  "date": "2026-11-12",
+  "result": "offline_candidate_technical_pass_only",
+  "model_profile": "voices/resonant_detail_v1/detail.json",
+  "model_sha256": "2f2f9fc52c369c24ebd7a494c7e88ba0cb719a47c58cf0eabd463b019ddf8589",
+  "controls": {
+    "result": "pass",
+    "direct_recurrence_error_FS": 0.0,
+    "direct_response_error": 9.144356508438812e-15,
+    "expected_Welch_maximum_error_db": 0.04115502642363787,
+    "known_pole_radius": 0.97
+  },
+  "maximum_pole_radius": 0.9994543776981144,
+  "trials": [
+    {
+      "amount": 0.35,
+      "seeds": [
+        8121907,
+        23117,
+        61927
+      ],
+      "maximum_mean_band_error_db": 0.11762417686984257,
+      "maximum_complex_coherence_error": 2.572316406669012e-07,
+      "repeat_6_8k_first_block_left_range": [
+        0.5365205416989516,
+        0.5429345280233169
+      ],
+      "maximum_peak_FS_common_gain": 0.5467084050178528
+    },
+    {
+      "amount": 0.7,
+      "seeds": [
+        8121907,
+        23117,
+        61927
+      ],
+      "maximum_mean_band_error_db": 0.19955197509025163,
+      "maximum_complex_coherence_error": 1.3515847243953976e-07,
+      "repeat_6_8k_first_block_left_range": [
+        0.2300088139575007,
+        0.24717959837229647
+      ],
+      "maximum_peak_FS_common_gain": 0.5507246255874634
+    }
+  ],
+  "C_H_unchanged": 478,
+  "Ctests_not_repeated": 47,
+  "no_native_or_driver_changes": true,
+  "independent_LF_preserved": true,
+  "source_trajectory_stored": false,
+  "new_width_information": false,
+  "listening": "pending",
+  "manual_browser_interaction": false,
+  "javascript_syntax_pass": true,
+  "review_URL": "http://127.0.0.1:8789/references/analysis/resonant_detail_v1/review1/index.html",
+  "review_clips": 35,
+  "evidence_sha256": {
+    "fit1\\report.json": "d06d9f80d90bce70c4960cb92c97606e4009b13864eff5cb0f21441087f8b8e3",
+    "render1\\report.json": "c367dcce237d965fa2595a09786947f34c9211c81f112667100704f8e3f1ea77",
+    "review1\\report.json": "e96bd1983dbf8a64fcc8297f4296b0b0b5a51dc654557445137c840f58a16789"
+  },
+  "limits": [
+    "Same1.217s normalized A training source; not raw-engine/RPM/state/other-engine calibration",
+    "AR poles fit colour, not identified physical friction/exhaust modes",
+    "Uniform replacement amounts can over-diffuse middle bands while highest band remains too periodic",
+    "Weak validated envelope is not complete source time dynamics; recorded transfer remains embedded",
+    "Statistics/mean energy/decode checks do not establish naturalness or real12speaker/longrun acceptance"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.resonant-detail-plan/1",
+  "sample_rate": 48000,
+  "seconds": 8,
+  "cycle_frames": 1024,
+  "bands_hz": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "harmonic_transition_hz": [1200,1900],
+  "replacement_amounts": [0.35,0.70],
+  "AR_order": 24,
+  "AR_diagonal_ridge": 0.0001,
+  "maximum_pole_radius": 0.9998,
+  "source_spectrum_smoothing_hz": 50,
+  "band_padding_fraction": 0.10,
+  "post_bandpass_order": 4,
+  "spectral_grid_frames": 16384,
+  "warmup_frames": 96000,
+  "review_crop_frames": [24000,384000],
+  "detail_seeds": [8121907,23117,61927],
+  "DNA_seed": 48271,
+  "output_gain": 0.5,
+  "checks": {"direct_recurrence_error": 1e-10, "C_subtraction_maximum_FS_error": 2e-7, "maximum_mixed_band_power_error_db": 0.5, "known_theory_power_error_db": 0.25},
+  "scope": "Offline replacement in the same normalized A moving-tailpipe context. AR poles describe a spectrum, not identified physical engine modes. Eight independent continuously excited filters, source-derived weak periodic power envelopes only in validated bands. No room, extra fixed OSC cloud, PCM/timeline loop, new C/default/driver/take or other-engine claim. Amounts are engineering audition doses, not physical noise fractions."
+}
