@@ -1,0 +1,800 @@
+{
+  "schema": "vsl.stereo-drive-summary/1",
+  "date": "2026-11-12",
+  "result": "stereo_driver_technical_pass",
+  "C_H_rows": 530,
+  "unchanged_prior_C_H": 519,
+  "modified_prior_C_H": [
+    "modules/atlas_take_io/codec.c",
+    "experiments/atlas_monitor_v1/ui.c",
+    "experiments/atlas_take_v1/checks.c",
+    "modules/drive_resonance/bank.c",
+    "modules/drive_resonance/bank.h",
+    "modules/drive_resonance/voice.c",
+    "modules/drive_resonance/voice.h",
+    "experiments/drive_resonance_v1/checks.c",
+    "experiments/drive_resonance_v1/device.c",
+    "experiments/drive_resonance_v1/ui_checks.c"
+  ],
+  "new_C_H": 1,
+  "Ctests_passed": 53,
+  "C_H_index_sha256": "6ecd97ba5a4180f489dd7d7abb152114add1e9b63a0f658baf21d44b7b41f18e",
+  "schema_version": 7,
+  "control_fields": 28,
+  "driver_integrated": true,
+  "native_integrated": true,
+  "owned_take_integrated": true,
+  "context": "A startup-settling cabin, not confirmed warm idle/exterior",
+  "parameters_unchanged": true,
+  "devices": {
+    "rdt_bench": {
+      "device": {
+        "result": "pass",
+        "muted": true,
+        "schema": 7,
+        "fields": 28,
+        "frames": 144123,
+        "owned_models_destroyed_before_replay": true,
+        "record_hash": "c122639a3784b05b",
+        "play_hash": "c122639a3784b05b",
+        "record_queue_empty": 0,
+        "play_queue_empty": 0,
+        "record_budget_exceeded": 0,
+        "play_budget_exceeded": 0,
+        "record_max_ms": 6.3367,
+        "play_max_ms": 5.5952,
+        "active_and_missing_support_observed": true,
+        "pedal_scenario": false,
+        "cancel_frames": 24576,
+        "controls": [
+          {
+            "frame": 0,
+            "mode": 0,
+            "rpm_input": 1200.6808645474164,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 24576,
+            "mode": 0,
+            "rpm_input": 1300,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 1
+          },
+          {
+            "frame": 48128,
+            "mode": 0,
+            "rpm_input": 6000,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 1
+          },
+          {
+            "frame": 72704,
+            "mode": 0,
+            "rpm_input": 1200.6808645474164,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.4
+          }
+        ],
+        "stereo_kernel": false
+      },
+      "state": {
+        "result": "pass",
+        "frames": 144123,
+        "source_hash": "62a805777e6c39d5",
+        "output_hash": "c122639a3784b05b",
+        "shifts": 0,
+        "overruns": 0,
+        "lifecycle": {
+          "OFF": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "READY": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CRANK": {
+            "frames": 13440,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 215.67221390076142,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CATCH": {
+            "frames": 31200,
+            "detail_supported_frames": 8142,
+            "rpm_min": 215.67221390076142,
+            "rpm_max": 1150,
+            "mean_support": 0.12023998182157392,
+            "dna_rms": 0.1316625857180487,
+            "detail_rms": 0.004592654336406168
+          },
+          "RUNNING": {
+            "frames": 99483,
+            "detail_supported_frames": 41112,
+            "rpm_min": 872.0516682280804,
+            "rpm_max": 5970.049654139444,
+            "mean_support": 0.3684234150270553,
+            "dna_rms": 0.33064654117376924,
+            "detail_rms": 0.007258728194748662
+          },
+          "STOPPING": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          }
+        },
+        "running_operating": {
+          "IDLE": {
+            "frames": 2400,
+            "detail_supported_frames": 0,
+            "rpm_min": 872.0516682280804,
+            "rpm_max": 1027.1280962226494,
+            "mean_support": 0,
+            "dna_rms": 0.25054509934834424,
+            "detail_rms": 0
+          },
+          "FREE REV": {
+            "frames": 97083,
+            "detail_supported_frames": 41112,
+            "rpm_min": 1040.4362160074566,
+            "rpm_max": 5970.049654139444,
+            "mean_support": 0.3775312526099991,
+            "dna_rms": 0.3323823236927784,
+            "detail_rms": 0.007347902365087562
+          },
+          "PULL": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CRUISE": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "OVERRUN": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "SHIFT CUT": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "SHIFT RECOVER": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "REV MATCH": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          }
+        },
+        "limits": "Synthetic pedal controls and engineering RPM mapping, not real vehicle measurements or timbre acceptance. Stems precede host master/fades."
+      },
+      "exports": [
+        {
+          "frames": 144123,
+          "channels": 2,
+          "verified": true,
+          "audio_hash": "c122639a3784b05b",
+          "source_hash": "62a805777e6c39d5",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        },
+        {
+          "frames": 144123,
+          "channels": 12,
+          "verified": true,
+          "audio_hash": "ad6f53610fe8b3fb",
+          "source_hash": "62a805777e6c39d5",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        }
+      ],
+      "source_and_front_2_12_exact": true,
+      "scalar_support_max_error": 2.220446049250313e-16
+    },
+    "stereo_bench": {
+      "device": {
+        "result": "pass",
+        "muted": true,
+        "schema": 7,
+        "fields": 28,
+        "frames": 144123,
+        "owned_models_destroyed_before_replay": true,
+        "record_hash": "c9dee310f5ad342f",
+        "play_hash": "c9dee310f5ad342f",
+        "record_queue_empty": 0,
+        "play_queue_empty": 0,
+        "record_budget_exceeded": 0,
+        "play_budget_exceeded": 0,
+        "record_max_ms": 4.4929,
+        "play_max_ms": 4.5053,
+        "active_and_missing_support_observed": true,
+        "pedal_scenario": false,
+        "cancel_frames": 25088,
+        "controls": [
+          {
+            "frame": 0,
+            "mode": 0,
+            "rpm_input": 850,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 24576,
+            "mode": 0,
+            "rpm_input": 883.9999999999999,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 1
+          },
+          {
+            "frame": 48128,
+            "mode": 0,
+            "rpm_input": 6000,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 1
+          },
+          {
+            "frame": 72704,
+            "mode": 0,
+            "rpm_input": 850,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.4
+          }
+        ],
+        "stereo_kernel": true
+      },
+      "state": {
+        "result": "pass",
+        "frames": 144123,
+        "source_hash": "7762eb798465ca23",
+        "output_hash": "c9dee310f5ad342f",
+        "shifts": 0,
+        "overruns": 0,
+        "lifecycle": {
+          "OFF": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "READY": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CRANK": {
+            "frames": 13440,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 215.67221390076142,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CATCH": {
+            "frames": 31200,
+            "detail_supported_frames": 7888,
+            "rpm_min": 215.67221390076142,
+            "rpm_max": 1150,
+            "mean_support": 0.1777625314324866,
+            "dna_rms": 0.03475732851596694,
+            "detail_rms": 0.005609022963218818
+          },
+          "RUNNING": {
+            "frames": 99483,
+            "detail_supported_frames": 41029,
+            "rpm_min": 850.7992768746501,
+            "rpm_max": 5968.711445617954,
+            "mean_support": 0.3711248598428046,
+            "dna_rms": 0.11647693505391356,
+            "detail_rms": 0.009271415145255998
+          },
+          "STOPPING": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          }
+        },
+        "running_operating": {
+          "IDLE": {
+            "frames": 47883,
+            "detail_supported_frames": 40772,
+            "rpm_min": 850.7992768746501,
+            "rpm_max": 1029.059264764103,
+            "mean_support": 0.7681304920612989,
+            "dna_rms": 0.11573796346465832,
+            "detail_rms": 0.013297080461441346
+          },
+          "FREE REV": {
+            "frames": 51600,
+            "detail_supported_frames": 257,
+            "rpm_min": 1034.4039264146122,
+            "rpm_max": 5968.711445617954,
+            "mean_support": 0.002717482177723466,
+            "dna_rms": 0.11715850549916412,
+            "detail_rms": 0.0012847292366538255
+          },
+          "PULL": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CRUISE": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "OVERRUN": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "SHIFT CUT": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "SHIFT RECOVER": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "REV MATCH": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          }
+        },
+        "limits": "Synthetic pedal controls and engineering RPM mapping, not real vehicle measurements or timbre acceptance. Stems precede host master/fades."
+      },
+      "exports": [
+        {
+          "frames": 144123,
+          "channels": 2,
+          "verified": true,
+          "audio_hash": "c9dee310f5ad342f",
+          "source_hash": "7762eb798465ca23",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        },
+        {
+          "frames": 144123,
+          "channels": 12,
+          "verified": true,
+          "audio_hash": "08475a412ebd2a8f",
+          "source_hash": "7762eb798465ca23",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        }
+      ],
+      "source_and_front_2_12_exact": true,
+      "scalar_support_max_error": 0.0
+    },
+    "stereo_pedals": {
+      "device": {
+        "result": "pass",
+        "muted": true,
+        "schema": 7,
+        "fields": 28,
+        "frames": 768123,
+        "owned_models_destroyed_before_replay": true,
+        "record_hash": "baae64a7a8e05f67",
+        "play_hash": "baae64a7a8e05f67",
+        "record_queue_empty": 0,
+        "play_queue_empty": 0,
+        "record_budget_exceeded": 0,
+        "play_budget_exceeded": 0,
+        "record_max_ms": 5.2736,
+        "play_max_ms": 5.0824,
+        "active_and_missing_support_observed": true,
+        "pedal_scenario": true,
+        "cancel_frames": 24576,
+        "controls": [
+          {
+            "frame": 0,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 76800,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0.85,
+            "brake": 0,
+            "gear_request": 1,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 192512,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0.85,
+            "brake": 0,
+            "gear_request": 2,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 288256,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0.85,
+            "brake": 0,
+            "gear_request": 3,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 336896,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0,
+            "brake": 0,
+            "gear_request": 3,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 384000,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0,
+            "brake": 0.6,
+            "gear_request": 3,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 480768,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0.3,
+            "brake": 0,
+            "gear_request": 2,
+            "ignition": 1,
+            "resonant_gain": 0.7
+          },
+          {
+            "frame": 552448,
+            "mode": 1,
+            "rpm_input": 850,
+            "throttle": 0.3,
+            "brake": 0,
+            "gear_request": 2,
+            "ignition": 0,
+            "resonant_gain": 0.7
+          }
+        ],
+        "stereo_kernel": true
+      },
+      "state": {
+        "result": "pass",
+        "frames": 768123,
+        "source_hash": "49d385c4f390d187",
+        "output_hash": "baae64a7a8e05f67",
+        "shifts": 3,
+        "overruns": 1,
+        "lifecycle": {
+          "OFF": {
+            "frames": 189243,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 8.699647751415262e-07,
+            "detail_rms": 0
+          },
+          "READY": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CRANK": {
+            "frames": 13440,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 215.67221390076142,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "CATCH": {
+            "frames": 31200,
+            "detail_supported_frames": 7888,
+            "rpm_min": 215.67221390076142,
+            "rpm_max": 1150,
+            "mean_support": 0.1777625314324866,
+            "dna_rms": 0.03475732851596694,
+            "detail_rms": 0.00409496267593132
+          },
+          "RUNNING": {
+            "frames": 507840,
+            "detail_supported_frames": 33841,
+            "rpm_min": 850.000000081475,
+            "rpm_max": 8304.995790405892,
+            "mean_support": 0.0659622696156335,
+            "dna_rms": 0.08745824396706392,
+            "detail_rms": 0.002514968511919404
+          },
+          "STOPPING": {
+            "frames": 26400,
+            "detail_supported_frames": 1155,
+            "rpm_min": 65.86664874042349,
+            "rpm_max": 6181.392762449263,
+            "mean_support": 0.0272176476747993,
+            "dna_rms": 0.019490024426958467,
+            "detail_rms": 3.510726844206777e-05
+          }
+        },
+        "running_operating": {
+          "IDLE": {
+            "frames": 32160,
+            "detail_supported_frames": 32160,
+            "rpm_min": 850.000000081475,
+            "rpm_max": 850.0992592592592,
+            "mean_support": 1,
+            "dna_rms": 0.04286512068617666,
+            "detail_rms": 0.009629001620695264
+          },
+          "FREE REV": {
+            "frames": 0,
+            "detail_supported_frames": 0,
+            "rpm_min": 0,
+            "rpm_max": 0,
+            "mean_support": 0,
+            "dna_rms": 0,
+            "detail_rms": 0
+          },
+          "PULL": {
+            "frames": 224880,
+            "detail_supported_frames": 0,
+            "rpm_min": 1122.6422803323896,
+            "rpm_max": 8261.910807825665,
+            "mean_support": 0,
+            "dna_rms": 0.12307361328214295,
+            "detail_rms": 0
+          },
+          "CRUISE": {
+            "frames": 61440,
+            "detail_supported_frames": 1681,
+            "rpm_min": 853.5052780528661,
+            "rpm_max": 6788.312160473682,
+            "mean_support": 0.021781884791720645,
+            "dna_rms": 0.05319700370245152,
+            "detail_rms": 0.0019361617182713652
+          },
+          "OVERRUN": {
+            "frames": 140160,
+            "detail_supported_frames": 0,
+            "rpm_min": 4296.910209128135,
+            "rpm_max": 6786.043969115661,
+            "mean_support": 0,
+            "dna_rms": 0.029682048247051673,
+            "detail_rms": 0
+          },
+          "SHIFT CUT": {
+            "frames": 27600,
+            "detail_supported_frames": 0,
+            "rpm_min": 4277.793358381847,
+            "rpm_max": 8304.995790405892,
+            "mean_support": 0,
+            "dna_rms": 0.056606379391717004,
+            "detail_rms": 0
+          },
+          "SHIFT RECOVER": {
+            "frames": 13680,
+            "detail_supported_frames": 0,
+            "rpm_min": 5193.370917386352,
+            "rpm_max": 6121.283304029415,
+            "mean_support": 0,
+            "dna_rms": 0.03548110570002006,
+            "detail_rms": 0
+          },
+          "REV MATCH": {
+            "frames": 7920,
+            "detail_supported_frames": 0,
+            "rpm_min": 4340.526121137208,
+            "rpm_max": 5814.916622159275,
+            "mean_support": 0,
+            "dna_rms": 0.04501789603477027,
+            "detail_rms": 0
+          }
+        },
+        "limits": "Synthetic pedal controls and engineering RPM mapping, not real vehicle measurements or timbre acceptance. Stems precede host master/fades."
+      },
+      "exports": [
+        {
+          "frames": 768123,
+          "channels": 2,
+          "verified": true,
+          "audio_hash": "baae64a7a8e05f67",
+          "source_hash": "49d385c4f390d187",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        },
+        {
+          "frames": 768123,
+          "channels": 12,
+          "verified": true,
+          "audio_hash": "fe6e4602c83904e7",
+          "source_hash": "49d385c4f390d187",
+          "render_id": "eae1169ae57c226b836cbc842d3edce2fa37b010276eac5dbdb2f638cd8e222e"
+        }
+      ],
+      "source_and_front_2_12_exact": true,
+      "scalar_support_max_error": 0.0
+    }
+  },
+  "ui": {
+    "--resonant-study": {
+      "result": "pass",
+      "checks": 13,
+      "failed_line": 0,
+      "own_program_controls": true,
+      "audio_started": false,
+      "manual_mouse_verified": false
+    },
+    "--stereo-resonant-study": {
+      "result": "pass",
+      "checks": 13,
+      "failed_line": 0,
+      "own_program_controls": true,
+      "audio_started": false,
+      "manual_mouse_verified": false
+    }
+  },
+  "zero_regression": [
+    {
+      "case": "A_direct",
+      "WAV_bytes_equal": 28,
+      "trace_exact": true
+    },
+    {
+      "case": "A_objects12",
+      "WAV_bytes_equal": 28,
+      "trace_exact": true
+    },
+    {
+      "case": "E_objects2",
+      "WAV_bytes_equal": 28,
+      "trace_exact": true
+    }
+  ],
+  "diagnostic_result": "lossless_stereo_correction_not_qualified",
+  "diagnostic_heldout_improvements": [
+    0.5473373685208893,
+    0.74796617287366
+  ],
+  "diagnostic_necessary_feasible": [
+    true,
+    false
+  ],
+  "moving35_complete_recipe_in_driver": false,
+  "listening_accepted": false,
+  "full_idle_or_acceleration_calibrated": false,
+  "limits": [
+    "Cabin startup-settling context only; engineering850 mapping is not a measured idle target",
+    "Local .9..1.1 support is not full RPM/load coverage; moving35 full replacement remains separate",
+    "No physical crank or load calibration, new room model or stereo-source isolation",
+    "Short muted device/own UI controls, not longrun/manual mouse/physical7.1.4 acceptance"
+  ],
+  "evidence_sha256": {
+    "references/analysis/stereo_drive_v1/verify3/report.json": "417ce93f1b2d4ad7be553d4c348dde5fc48ecdf03c0de163fd404dbc167333c4",
+    "references/analysis/stereo_drive_v1/ui_fix1/report.json": "f13279b79d5a527dca3b2a9b5ef356f26ece859e0c826d982f4fb64c6db4e560",
+    "references/analysis/stereo_joint_v1/analysis1/report.json": "2de7c5d236eee38df1770659cb60baab751dab9725a7857419199de4b914dce4",
+    "references/analysis/dyno_tail_v1/inspect1/report.json": "d14e76f15645e8d876ad83ce7127a9b865f5f8ddf8728a271700fd562e0512e4",
+    "references/analysis/stereo_drive_v1/before1/snapshot.json": "5a1c02815ec2c1be605328138debb27048eea1ee4df4401fcb50e59620604335"
+  }
+}

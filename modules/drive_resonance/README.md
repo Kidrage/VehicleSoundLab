@@ -1,10 +1,11 @@
 # 驾驶连续共振细节
 
-同一驾驶链的可选附加层，不持有RPM／燃烧／车辆时钟。当前真实参数只接A驻车低转`idle_add`候选，未接行驶35%谐波替换。
+同一驾驶链的可选附加层，不持有RPM／燃烧／车辆时钟。每锚点可选旧Rdt或新Rvs核；真实参数分别为A驻车车外低转`idle_add`和A启动趋稳车内双声道候选，各研究入口保持机位独立。未接行驶35%谐波替换。
 
 | 文件／接口 | 职责 |
 |---|---|
 | `bank.*`／`drs_bank_init` | 非实时事务建立与DNA逐锚点匹配的参数库；复制参数，NULL为缺失，至少一档有效 |
+| `drs_bank_init_stereo`／`drs_bank_init_mixed` | 同一库拥有双声道系数／稳定证书；每档至多一个核，参数不能重叠；大临时库用非实时堆 |
 | `voice.*`／`drs_voice_init` | 借用不可变库，预热每个已配共振器；仅此阶段做重校验 |
 | `drs_voice_set` | 设置0–1目标量，18ms跟随；非法值不改状态 |
 | `drs_voice_tick` | 读取主DNA实际采样相位、刚更新的声学根音／锚点权重；持续生成和局部范围淡变 |
@@ -17,6 +18,8 @@
 
 静音或局部范围为0时，全部已配RNG／滤波继续推进。最后独立细节量乘主DNA驾驶包络，再进入已有的观察stereo声床或对象路径；仍只调用一次空间渲染。
 
-`AdConfig.resonant_bank`可为空，`AdMix.resonant_gain`默认0。缺库时拒绝非零量；`AdCapture.resonant_raw/resonant`分别供独立分析和源哈希。正式行程schema6／28字段拥有完整库及新控制，播放器不依赖外部素材。旧schema5使用保存的旧播放器。
+`AdConfig.resonant_bank`可为空，`AdMix.resonant_gain`默认0。缺库时拒绝非零量；`AdCapture.resonant_raw/resonant`分别供独立分析和源哈希。正式行程schema7／28字段拥有完整双核库／证书，播放器不依赖外部素材。旧schema5／6使用各自保存的旧播放器。
+
+`Launch-Stereo-Drive-Study.cmd`使用原窗口和细节量，锁定车内趋稳语境，已有`base_hz/850`工程映射；不是实测热怠速，也不覆盖带载加速。Rvs没有周期包络／私有相位，固定Hz统计仅在相同局部支持内使用。见[接入与实测](../../research/双声道细节统一驾驶V1.md)。
 
 研究入口`Launch-Drive-Resonance-Study.cmd`复用既有驾驶窗口；A车外参数、台架约1201工程RPM、默认未点火／停止／细节0、房间0。原1/120映射尚未实车标定。低转候选仍待原听评，完整怠速／加速／多发动机声纹不因此完成。

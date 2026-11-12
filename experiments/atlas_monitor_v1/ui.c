@@ -11,11 +11,13 @@
 #include "../startup_detail_host_v1/ui_checks.h"
 #include "../drive_resonance_v1/ui_checks.h"
 #include "resonant_detail_io/profile.h"
+#include "stereo_resonance_io/profile.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_study;
 static CbProfile catch_profile;static int catch_study;
 static int startup_detail_study;static wchar_t ui_check_path[4096];
 static int resonant_study;static DrsBank resonant_bank;static RdtProfile resonant_profile;
+static RvsProfile stereo_profile;
 static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
@@ -65,7 +67,7 @@ static void labels(HWND owner) {
         SendMessageW(mode,CB_SETCURSEL,c.drive.mode==VSL_BENCH?1:0,0);
         SendMessageW(gear,CB_SETCURSEL,c.drive.automatic?0:c.drive.gear+1,0);
     }
-    SendMessageW(voice,CB_SETCURSEL,playing?(catch_study?3:2):bank_index,0);
+    SendMessageW(voice,CB_SETCURSEL,playing?(catch_study?3:2):resonant_study?0:bank_index,0);
     SendMessageW(GetDlgItem(owner,30),BM_SETCHECK,c.mix.spatial?BST_CHECKED:BST_UNCHECKED,0);
     SendMessageW(GetDlgItem(owner,31),BM_SETCHECK,c.mix.event_gain>0?BST_CHECKED:BST_UNCHECKED,0);
     SetWindowTextW(GetDlgItem(owner,12),c.drive.ignition?L"熄火":L"点火");
@@ -110,7 +112,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         heading=CreateFontW(-24,0,0,0,FW_SEMIBOLD,0,0,0,DEFAULT_CHARSET,0,0,CLEARTYPE_QUALITY,0,L"Microsoft YaHei UI");
         SendMessageW(item(owner,L"STATIC",L"DNA 驾驶监听",0,0,24,18,510,36),WM_SETFONT,(WPARAM)heading,TRUE);
         voice=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,40,24,65,510,160);
-        SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)(resonant_study?L"V10 · 车外局部细节（实验）":L"V10 · 驻车车外四档（实验）"));
+        SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)(resonant_study==2?L"V10 · 启动趋稳双声道（实验）":resonant_study?L"V10 · 车外局部细节（实验）":L"V10 · 驻车车外四档（实验）"));
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 高转车内两档（实验）");SendMessageW(voice,CB_SETCURSEL,0,0);
         if(catch_study)SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 启动车内趋稳（实验）");
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"行程内嵌音色（回放）");
@@ -243,13 +245,14 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         else if(!wcscmp(args[i],L"--catch-study")){catch_study=1;startup_study=1;}
         else if(!wcscmp(args[i],L"--startup-detail-study")){startup_detail_study=1;catch_study=1;startup_study=1;}
         else if(!wcscmp(args[i],L"--resonant-study"))resonant_study=1;
+        else if(!wcscmp(args[i],L"--stereo-resonant-study"))resonant_study=2;
         else if(!wcscmp(args[i],L"--ui-check")&&i+1<argc) {
             if(wcslen(args[i+1])>=4096){LocalFree(args);return 2;}wcscpy_s(ui_check_path,4096,args[++i]);
         }
         else{LocalFree(args);return 2;}
     LocalFree(args);
     if(resonant_study&&startup_study)return 2;
-    bank_index=catch_study?2:startup_study?1:0;
+    bank_index=resonant_study==2?2:catch_study?2:startup_study?1:0;
     if(!project_directory()||!am_models_load_variant(&models,bank_index,startup_detail_study)||!am_models_bank(&models,&bank))return 2;
     if(startup_study){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;config.scene_mode=AD_SCENE_STEREO_BED;}
     if(catch_study) {
@@ -259,7 +262,11 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
     }
     if(resonant_study) {
         const RdtProfile *detail[SA_MAX_ANCHORS]={&resonant_profile};
-        if(!rdt_profile_load("voices/resonant_detail_c_v1/idle_add.rdetail",&resonant_profile)||!drs_bank_init(&resonant_bank,&bank,detail))return 2;
+        if(resonant_study==2) {
+            const RvsProfile *stereo[SA_MAX_ANCHORS]={&stereo_profile};
+            if(!rvs_profile_load("voices/stereo_resonance_v1/A cabin settle.sres",&stereo_profile)||!drs_bank_init_stereo(&resonant_bank,&bank,stereo))return 2;
+            config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;
+        } else if(!rdt_profile_load("voices/resonant_detail_c_v1/idle_add.rdetail",&resonant_profile)||!drs_bank_init(&resonant_bank,&bank,detail))return 2;
         config.resonant_bank=&resonant_bank;config.residual_bank=NULL;config.scene_mode=AD_SCENE_STEREO_BED;
     }
     am_audio_init(&audio,&config);InitCommonControlsEx(&common);
@@ -269,12 +276,12 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         c.mix.width=1;c.mix.spatial=1;am_audio_control(&audio,&c);
     }
     if(startup_detail_study){AdControl c=am_audio_get(&audio);c.mix.catch_gain=.5;am_audio_control(&audio,&c);}
-    if(resonant_study){AdControl c=am_audio_get(&audio);c.drive.mode=VSL_BENCH;c.drive.rpm=resonant_profile.base_hz/config.root_per_rpm;
+    if(resonant_study){AdControl c=am_audio_get(&audio);c.drive.mode=VSL_BENCH;c.drive.rpm=(resonant_study==2?stereo_profile.base_hz:resonant_profile.base_hz)/config.root_per_rpm;
         c.mix.width=1;am_audio_control(&audio,&c);}
     SetProcessDPIAware();klass.lpfnWndProc=procedure;klass.hInstance=instance;klass.lpszClassName=L"VslAtlasMonitor";
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
-    window=CreateWindowW(klass.lpszClassName,resonant_study?L"Vehicle Sound Lab · DNA Drive · Resonant Detail":startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
+    window=CreateWindowW(klass.lpszClassName,resonant_study==2?L"Vehicle Sound Lab · DNA Drive · Stereo Detail":resonant_study?L"Vehicle Sound Lab · DNA Drive · Resonant Detail":startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
         CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}
     if(ui_check_path[0]) {

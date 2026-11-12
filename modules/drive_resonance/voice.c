@@ -21,6 +21,10 @@ int drs_voice_init(DrsVoice *out,const DrsBank *b,const SaBank *dna,uint64_t see
     if(!out||!unit(amount)||!drs_bank_valid(b,dna))return 0;
     memset(&v,0,sizeof v);v.bank=b;v.amount=v.target=amount;v.follow=1-exp(-1/(.018*48000));
     for(a=0;a<b->count;++a)if(b->enabled[a]) {
+        if(b->kind[a]==DRS_STEREO) {
+            if(!rvs_voice_init(v.stereo+a,b->stereo+a,seed^(UINT64_C(0x9e3779b97f4a7c15)*a),1))return 0;
+            continue;
+        }
         const RdtProfile *p=b->profile+a;double unused[2];
         if(!rdt_voice_init(v.voice+a,p,seed^(UINT64_C(0x9e3779b97f4a7c15)*a)))return 0;
         for(n=0;n<p->warmup_frames;++n) {
@@ -37,7 +41,8 @@ int drs_voice_tick(DrsVoice *v,const SaVoice *dna,double sampled_phase,DrsFrame 
     b=v->bank;memset(f,0,sizeof *f);
     for(a=0;a<b->count;++a)if(b->enabled[a]) {
         double x[2],weight=0,phase=cycle((sampled_phase+dna->bank->offset[a])/(2*DRS_PI));
-        if(!rdt_voice_tick(v->voice+a,phase,x,NULL))return 0;
+        if(b->kind[a]==DRS_STEREO) {if(!rvs_voice_tick(v->stereo+a,x,NULL))return 0;}
+        else if(!rdt_voice_tick(v->voice+a,phase,x,NULL))return 0;
         if(dna->lower==dna->upper){if(a==dna->lower)weight=1;}
         else if(a==dna->lower)weight=1-dna->blend;else if(a==dna->upper)weight=dna->blend;
         weight=sqrt(weight)*support(b,a,dna->root_hz);f->support+=weight*weight;

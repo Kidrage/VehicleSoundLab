@@ -1,6 +1,6 @@
 add_library(drive_resonance STATIC bank.c voice.c)
 target_include_directories(drive_resonance PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
-target_link_libraries(drive_resonance PUBLIC dna_atlas resonant_detail)
+target_link_libraries(drive_resonance PUBLIC dna_atlas resonant_detail stereo_resonance)
 target_compile_features(drive_resonance PUBLIC c_std_11)
 if(MSVC)
   target_compile_options(drive_resonance PRIVATE /W4 /we4013 /utf-8 /fp:strict)

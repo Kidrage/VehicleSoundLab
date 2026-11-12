@@ -3,9 +3,11 @@
 #include "bank.h"
 #include "dna_atlas/voice.h"
 #include "resonant_detail/voice.h"
+#include "stereo_resonance/voice.h"
 typedef struct {
     const DrsBank *bank;
     RdtVoice voice[SA_MAX_ANCHORS];
+    RvsVoice stereo[SA_MAX_ANCHORS];
     double amount,target,follow;
     uint64_t frame;
 } DrsVoice;

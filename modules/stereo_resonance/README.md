@@ -29,6 +29,10 @@ must consume the existing controller, own models in takes, define supported
 root/load ranges, and route the observed stereo once through the existing bed.
 Do not invent surround/height/LFE data from these two observed channels.
 
-Current host: `experiments/stereo_resonance_v1/probe.c`, offline double output.
-The standalone block timing is not an audio-device or full-driver budget test.
-The module is not enabled in a native monitor, driver, default or schema6 take.
+The original offline host remains `experiments/stereo_resonance_v1/probe.c`.
+`drive_resonance` now adapts Rdt or Rvs per anchor to the SAME atlas driver,
+native study and owned schema7 take (28 controls). It consumes existing root,
+blend and support, routing recorded stereo once. Default detail is zero.
+`--stereo-resonant-study` is an opt-in startup-settling cabin study using the
+existing engineering850 mapping, not verified warm-idle/loaded coverage.
+See `research/双声道细节统一驾驶V1.md`. Schema6 binaries/takes remain frozen.

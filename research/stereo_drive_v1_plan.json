@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.stereo-drive-plan/1",
+  "date": "2026-11-12",
+  "purpose": "Integrate existing stereo continuous detail into one driver, native study and owned take without refitting sound",
+  "prior_C_H": 529,
+  "prior_schema": 6,
+  "schema": 7,
+  "control_fields": 28,
+  "context": "A38.48..39.51 startup-settling cabin, not verified warm idle or exterior",
+  "model": "voices/startup_settle_v1/A start cabin settle.model",
+  "profile": "voices/stereo_resonance_v1/A cabin settle.sres",
+  "engineering_root_per_rpm": "existing cabin base_hz / controller idle850",
+  "support_ratios": [0.9, 0.96, 1.04, 1.1],
+  "preserve": ["accepted moving V1_35", "all DNA and fitted parameters", "Rdt seeds and phase/warmup", "single controller and spatial route", "old binaries and real schema6 take", "all failed attempts"],
+  "checks": ["mixed Rdt/Rvs anchors and explicit gaps", "transactional ownership and stability rejection", "mute advances RNG and filters", "direct Rvs oracle", "driver zero and source/control invariants", "owned schema7 replay after external model destruction", "2/12 front and source equality", "actual muted device bench and pedal lifecycle", "own UI controls and captured window", "full current CTest suite"],
+  "not_claimed": ["warm idle or loaded acceleration calibrated", "physical crank/RPM or pedal measurements", "new listening acceptance", "7.1.4 physical speaker acceptance", "new room model or source isolation"]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "vsl.dyno-tail-observation/1",
+  "date": "2026-11-12",
+  "report_sha256": "d14e76f15645e8d876ad83ce7127a9b865f5f8ddf8728a271700fd562e0512e4",
+  "video_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+  "frames": 14,
+  "visually_inspected_boards": [
+    "board_1.jpg",
+    "board_2.jpg"
+  ],
+  "observations": [
+    {
+      "seconds": [
+        32.032,
+        52.052
+      ],
+      "description": "Car strapped on dyno, rear wheel visibly blurred/spinning in inspected frames"
+    },
+    {
+      "seconds": 40.04,
+      "description": "Visible blue exhaust plume; caption HERE COME THE FLAMES. No trigger/physics inference."
+    },
+    {
+      "seconds": [
+        54.054,
+        58.058
+      ],
+      "description": "Black outro then logo"
+    }
+  ],
+  "decision": "No stable idle established in these coarse frames. No RPM/state/profile exported.",
+  "not_established": [
+    "Screen units and calibrated RPM",
+    "Pedal/load/fuel state or exact backfire trigger",
+    "A/V synchronization, continuous unedited interval or warm-idle identity"
+  ]
+}

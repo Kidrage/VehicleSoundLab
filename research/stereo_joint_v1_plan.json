@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.stereo-joint-diagnostic/1",
+  "source": "A startup-settling cabin38.48..39.51s",
+  "band_hz": [600, 850],
+  "source_halves": "Split unchanged raw samples at midpoint; scale each whole stereo covariance by a single trace ratio to the full-source trace. Do not normalize channels separately.",
+  "base": "Unchanged actual C DNA,48s after2s warmup, frozen stereo_resonance_v1 verify1",
+  "transform": "Closest lossless complex unitary mapping sorted base eigenvectors to target eigenvectors. Diagnostic bound only; no profile or audio export.",
+  "checks": {
+    "matrix_relative_tolerance": 1e-10,
+    "scalar_eigenvalue_absolute_tolerance": 1e-14,
+    "heldout_shape_improvement_minimum": 0.10
+  },
+  "qualification": "Require nonnegative target-minus-transformed-base eigenvalues for full and BOTH trace-normalized halves, plus both heldout shape improvements. Preserve every failure; do not add gain attenuation or search other bands/transforms until passing.",
+  "claim_boundary": "An additive-feasibility bound under assumed second-order independence, not physical source/room separation, RPM/load calibration, or listening acceptance. Half-level normalization is diagnostic only, never applied to a listening file."
+}

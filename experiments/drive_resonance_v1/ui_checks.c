@@ -22,6 +22,11 @@ int am_resonant_ui_check(HWND w,AmAudio *a,const wchar_t *path) {
     CHECK(a->config.resonant_bank&&!a->config.residual_bank&&a->config.scene_mode==AD_SCENE_STEREO_BED);
     CHECK(!a->device.running&&!c.drive.ignition&&c.drive.mode==VSL_BENCH&&c.mix.resonant_gain==0&&c.mix.room==0);
     CHECK(IsWindowEnabled(detail)&&!IsWindowEnabled(GetDlgItem(w,40)));
+    CHECK(SendMessageW(GetDlgItem(w,40),CB_GETCURSEL,0,0)==0);
+    {
+        wchar_t text[128];SendMessageW(GetDlgItem(w,40),CB_GETLBTEXT,0,(LPARAM)text);
+        CHECK(wcsstr(text,a->config.resonant_bank->kind[0]==DRS_STEREO?L"双声道":L"车外局部")!=NULL);
+    }
     for(int i=0;i<=100;i+=50) {
         SendMessageW(detail,TBM_SETPOS,TRUE,i);SendMessageW(w,WM_HSCROLL,TB_THUMBPOSITION,(LPARAM)detail);
         c=am_audio_get(a);CHECK(c.mix.resonant_gain==i/100.&&c.mix.residual_gain==0);
