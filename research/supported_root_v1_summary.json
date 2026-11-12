@@ -1,0 +1,213 @@
+{
+  "schema": "vsl.supported-root-publication/1",
+  "result": "coarse_support_repaired_phase_unqualified",
+  "reports": {
+    "controls1": {
+      "path": "references/analysis/supported_root_v1/controls1/report.json",
+      "sha256": "991a7c9bc9491d468a5f5793ae4f53d327a9e40fb6457affd60efef478cc8632",
+      "result": "passed"
+    },
+    "controls2": {
+      "path": "references/analysis/supported_root_v1/controls2/report.json",
+      "sha256": "c050a900c949b386e2c73e7977e86d649cd00ad51a3efd5697914700b6f7ebab",
+      "result": "passed"
+    },
+    "rapid1": {
+      "path": "references/analysis/supported_root_v1/rapid1/report.json",
+      "sha256": "2ad25e00c845493280d61650702ab03afb9b42d0bf8a0b8dec0e4945096dfa7c",
+      "result": "rejected"
+    },
+    "rapid2": {
+      "path": "references/analysis/supported_root_v1/rapid2/report.json",
+      "sha256": "89b51d51a5e250017f8eb6139f09cc652d1881c469a2ff7f9eed8ffb87c2fbca",
+      "result": "rejected"
+    },
+    "rapid3": {
+      "path": "references/analysis/supported_root_v1/rapid3/report.json",
+      "sha256": "eeb97a2e7c3bd8c9af5d0215a41b56fa731aefb2dd0ec00c45c8ad53c6aeb7c3",
+      "result": "rejected"
+    },
+    "phase_trace1": {
+      "path": "references/analysis/supported_root_v1/phase_trace1/report.json",
+      "sha256": "00889036eff32168d64a9715c72c132ef2370669e67ae5b017cdc421e508f5e2",
+      "result": "traced_rejection_no_algorithm_change"
+    },
+    "phase_trace2": {
+      "path": "references/analysis/supported_root_v1/phase_trace2/report.json",
+      "sha256": "132c9f3a02aa6e0c7155e2a068e401076a39d0ed0c11d38f6ec63d1638103600",
+      "result": "traced_rejection_no_algorithm_change"
+    },
+    "validate1": {
+      "path": "references/analysis/supported_root_v1/validate1/report.json",
+      "sha256": "381c9c262473a9321ad25702f0d8d804dfb82a11ad607d6a86f28b66e5f89e70",
+      "result": "rejected"
+    },
+    "high_audit1": {
+      "path": "references/analysis/supported_root_v1/high_audit1/report.json",
+      "sha256": "1669580c9b84a99888146f733aa34be4dfac69366935f4ef0c5e82c96f62f949",
+      "result": "rejected"
+    }
+  },
+  "sources": {
+    "tools/package_supported_root_v1.py": "0ba84ccf298499ffd6753451d5ff8c25f8e1f12a6b1f918aaabbd501a60da60e",
+    "tools/measured_root_v1/__init__.py": "7c03c3f3540bce08858c04cda92ec5906237ca61f5df82d99a4125a6a8243fea",
+    "tools/multicarrier_clock_v1/fixtures.py": "f0ca56eba46a22f786fc775f66f861cf32b9a9886109fd239f28cd17344b5f1e",
+    "tools/state_colour_v2/clock.py": "6cbb31f479a7b9c6283c5d0f72a6e2264ea7fb7e5967d1dd22bb254c70d5df04",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/multicarrier_clock_v1/coarse.py": "c3e0305e620e15761bc921d879d3d9ce4759f8f1d30d6f51e5d371f57c9022af",
+    "tools/supported_root_v1/__init__.py": "cca7baabf6ee42787f53fe9afa752ac036c3ebfdc738925d13ed2601f7853278",
+    "tools/fractional_clock_v1/__init__.py": "9da760f6d3d0acf68608708c293ce80e9360c1caa8b55b1af5e92928b5edeef9",
+    "tools/trace_supported_phase_v1.py": "e4149f8fd82eeea455f7751df7bd61ea36bc246fa3b38312fb80735b7864f670",
+    "tools/shift_evidence_v1/spectrum.py": "908e16963a261dfb5f0fabb062b0b53198b3e7a339ff79a3a5ccd13c9d5382ff",
+    "tools/fractional_clock_v1/measure.py": "e926807ddb61d7ed001701ff0cb26095040b5cf4bea9e6550d1f1acf4ac88baf",
+    "AGENTS.md": "c69d3a431e6db639bf0dafdc03a337616ddaeb397c7217c80d6c8c475e19abb8",
+    "handoff/算法说明.md": "843b97b0b495f810365b243e572708e827aab12a873492b6face52bd4ac9997c",
+    "tools/supported_root_v1/phase.py": "a61a514630aaddd887250b25c288406d6b72bcab49da3f232014418ff02a23ce",
+    "tools/supported_root_v1/coarse.py": "71c91a52d9382b143e2c0e91c6b9681cff42a4e83db8948c55eca0248acd9dbd",
+    "tools/supported_root_v1/feasible.py": "728d553e388f924bcbf88d1c9ce3827469e1abb1d941fe1ad71c77dba89dce1b",
+    "tools/measured_root_v1/coarse.py": "4ede3a22aadf42ddc0995b5aebc331b85efbb784099bcc69253e7a52bf824c43",
+    "tools/validate_supported_root_controls_v1.py": "fa218a3300d345918d7f06e0039b66e220703edcb30b18159e073c535f02395e",
+    "research/共同支持与瞬时相位V1.md": "c1a2214e1b88daeec724fd2829bf67afddca336faa75d46795e942c8e2b7f97f",
+    "tools/fractional_residue_v1/__init__.py": "173acd31e20fe2062274b07d71d3524a7591c7d524eb3864b309f2396af8495b",
+    "research/supported_root_controls_v1_plan.json": "4e88859d165f44c77a8011747a5344c66e4e8923ffca8f95ce86824181fc6b41",
+    "tools/fractional_clock_v1/coordinate.py": "db67195516a6c32d63ae970b6408fa3d9653e03f464bc692ecd409672e76e3b1",
+    "tools/fractional_residue_v1/components.py": "1753e24d2943c3550e79bc4d1f68227a0aa879336f8391495dbcb27c1aaa5b0c",
+    "tools/fractional_residue_v1/observations.py": "0ddcda86fc9f5ffe801f1f4c8e5c044017b65e133ad056e3139104f08b8ee371",
+    "tools/audit_supported_root_v1.py": "6e19150b8aa01893480af01dde5b551edf1fa00161b7adebc0a684bfb0b38ab6",
+    "tools/validate_supported_root_v1.py": "0183571d36628dc6a8a42822ca31cd21c889e02d9d89d53c14dd18308b41c26f",
+    "research/supported_root_v1_plan.json": "f6ebefa398b03512fc616eda2569c1a11d37b749fe124cdfe374e3c49350fd46",
+    "handoff/研究续接.md": "0fbb877607a6e66bdfe90e11f2641651e11e99583462bab2127d8e131c0ba047",
+    "research/怠速与加速完成度V1.md": "4e251ce5eac0f842c3ea7dce07b8e5c878a0e8bca3de542fc420ae315ef3833a",
+    "tools/fractional_clock_v1/projection.py": "fbd32e0a5beba7f2dc539a6ca764457c0c9e58a4163f6e83864da722557122b6",
+    "tools/fractional_clock_v1/phase.py": "3ae4c4478d679e045f36707afe90f974a12d91da95705d80f11b64e8797fd433",
+    "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+    "tools/fractional_clock_v1/fixtures.py": "4f5b3433811af1215c3e0071cb01d4f34b6ca432bfc0ab0f889950bef347ff84"
+  },
+  "support_control_cases": 23,
+  "total_cases": 33,
+  "passed_cases": 32,
+  "positive_cases": 30,
+  "passed_positive_cases": 29,
+  "negative_cases": 3,
+  "passed_negative_cases": 3,
+  "rapid_rows": 1001,
+  "rapid_median_projections": 1,
+  "rapid_smoothed_projections": 14,
+  "rapid_minimum_distinct_support": 3,
+  "rapid_median_projection": {
+    "seconds": 1.895,
+    "root_hz": 48.21156035474578,
+    "measured_lattice_root_hz": 47.82878363871786,
+    "smoothing_constrained_to_observation": false,
+    "observed_lines": 4,
+    "measured_root_spread_hz": 1.4886927093466369,
+    "lattice_score": 2.6204921615880923,
+    "original_smoothed_root_hz": 48.24380577532194,
+    "measured_refinement": {
+      "orders": [
+        2,
+        3,
+        10,
+        20
+      ],
+      "measured_roots_hz": [
+        48.40071557695595,
+        46.34009092937122,
+        46.78765668944299,
+        48.769304920772626
+      ],
+      "capped_precision_weights": [
+        4.0,
+        2.612940467176853,
+        100.0,
+        104.0
+      ],
+      "median_root_hz": 48.40071557695595,
+      "median_projection": {
+        "projected": true,
+        "delta_hz": -0.060624647584731406,
+        "before_count": 2,
+        "supported_orders": [
+          2.0,
+          3.0,
+          20.0
+        ],
+        "feasible_cells_examined": 188
+      },
+      "smoothed_projection": {
+        "projected": false,
+        "delta_hz": 0.0,
+        "before_count": 3,
+        "supported_orders": [
+          2.0,
+          3.0,
+          20.0
+        ],
+        "feasible_cells_examined": 0
+      }
+    }
+  },
+  "reused_exact_HF_positive_cases": 29,
+  "fresh_HF_measurements": 0,
+  "phase_hierarchy_adopted": false,
+  "phase_point_diagnosis": {
+    "stage": 1,
+    "orders": [
+      2,
+      3,
+      5
+    ],
+    "input_residue": {
+      "phase_residue_rms_cycles": 0.014210627916566947,
+      "phase_residue_p95_cycles": 0.03552655906479707,
+      "time_residue_rms_us": 518.908712664367,
+      "time_residue_p95_us": 1420.1708027000493,
+      "root_relative_p95": 0.006465515092011459
+    },
+    "aperture": [
+      {
+        "order": 2,
+        "point_vs_aperture_p95_cycles": 0.0078110297513058,
+        "point_vs_aperture_maximum_cycles": 0.06056608289905142,
+        "relative_coherence": 0.9979197931504245
+      },
+      {
+        "order": 3,
+        "point_vs_aperture_p95_cycles": 0.008676195487744072,
+        "point_vs_aperture_maximum_cycles": 0.056385313544545575,
+        "relative_coherence": 0.9957766647705139
+      },
+      {
+        "order": 5,
+        "point_vs_aperture_p95_cycles": 0.008861030929662835,
+        "point_vs_aperture_maximum_cycles": 0.05408695488271241,
+        "relative_coherence": 0.991755093021176
+      }
+    ],
+    "status": "rejected",
+    "reason": "Fractional-grid calibrated lines remain incompatible"
+  },
+  "plot_sha256": "6d0b98888b29f3692dfbdd70bf3c99e5e83979ea0595afc99df8dfb161101ae9",
+  "source_audio_read": false,
+  "real_source_evaluated": false,
+  "model_exported": false,
+  "real_C_render_executed": false,
+  "strict_source_evaluation_permitted": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "C_H": 540,
+  "runtime_changed": false,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "next_step": "Independently test phase-curvature versus amplitude identifiability and a finite-aperture forward-response model including neighbouring lines; preserve all33 plus individual HF gates",
+  "goal_turn_classification": "progress_exact_supported_coordinate_and_rejected_low_order_phase_hypothesis",
+  "limits": [
+    "Coarse support success is not common-phase qualification or a new real idle timbre",
+    "HF reuse requires exact actual coordinate and waveform-source equality; no new listening acceptance",
+    "Both original phase and low-order hierarchy reject rapid corner; do not remove or relabel that positive case",
+    "Original pending F1/F2/F3 and A-low questions stay pending; no duplicate requests"
+  ]
+}

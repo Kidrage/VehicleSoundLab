@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.supported-root-controls-plan/1",
+  "scope": "Independent scalar-nearest and closed-form checks of continuous measured-support projection, no vehicle audio",
+  "root_range_hz": [15,80],
+  "minimum_distinct_lines": 3,
+  "random_seed": 910232,
+  "random_cases": 12,
+  "independent_grid_points": 4097,
+  "maximum_closed_form_error_hz": 1e-10,
+  "policy": [
+    "The exact original nearest-peak/tolerance/distinctness predicate remains authoritative",
+    "Projection may move only within a nonempty region of actual measured support; no gap filling or tolerance relaxation",
+    "Check desired35Hz inclusion and1200Hz exclusion separately from interpolated measured-peak positions, duplicate/absent peaks, root-range boundaries, nearest distance, and identity before full33 controls"
+  ]
+}
