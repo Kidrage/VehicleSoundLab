@@ -1,0 +1,347 @@
+{
+  "schema": "vsl.absolute-amplitude-publication/1",
+  "result": "absolute_amplitude_improved_phase_still_rejected",
+  "sources": {
+    "research/positive_band_envelope_v1_plan.json": "d3cca7de7d5f75a749828bc7af298f3de294fe23b082ddbb7603165a3bd834cb",
+    "tools/positive_band_envelope_v1/fit.py": "1a64de78be1803b92f4b9e40072a3d55774ed19f934b82d9710dc8a895f39045",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "research/怠速与加速完成度V1.md": "f6b21df1ad4b8d33fe911a1f57b67e5d72802b33bc03745f56cae4598a27e676",
+    "tools/guard_observation_v1/checks.py": "9c316af35846217a71fe36670827f50e5f2b05ba420ea0486e6bfdc90d43287a",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/absolute_amplitude_v1/direction.py": "62366860ce6bd298e96f07dc065fe12f09d7fd9e248387e91873994bd1cedf6e",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/guard_observation_v1/__init__.py": "331f9f1efffaf705808aef8a22faeb3ab3891243502ac7136ae2a94b9e568780",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/audit_absolute_amplitude_v1.py": "2211269d6f8ee70fad1c87e79abc8998921ad20e9f6b82d78d9026a862a8f5a0",
+    "tools/positive_band_envelope_v1/model.py": "a7e5d540aa222c0cb1960e19b10f23d49f220430b437c0fcc651b932e1f2fa5e",
+    "AGENTS.md": "f5c08e4e2878f501bbd03dc9b52a274fb17f5ab627f2d3650e44f3846b77547a",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "tools/verify_absolute_amplitude_v1.py": "6ca974dba75b49873ad6d73fe1b160b3c03d71e941096bdaace09a5e7f423693",
+    "research/绝对幅度分块求解V1.md": "449a4349d2e16c694b7d27b1ad7bcdd45bcfcbc3fd44b5437655ef5ece0bf50e",
+    "tools/positive_band_envelope_v1/checks.py": "f74f53b9c094ab80f6897e1dffb323c63ad6df1879cb91613dfaa5c84a3cfb93",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/positive_band_envelope_v1/__init__.py": "7b530d49e68cfdfa4a26af916bef0c08fa6f62b4dc0792ad38869581689c936c",
+    "tools/positive_band_envelope_v1/basis.py": "883bd6cfa372f7f828a0ecba3d96c39fcadc31664d779fe287305c723bfa490a",
+    "tools/package_absolute_amplitude_v1.py": "b74561e3fe1e6fa7e3713de9a221767e1b8bdf635a26b3f6ecba825a324254d8",
+    "tools/diagnose_positive_band_envelope_v1.py": "66be659f6de5a5964f6e2176aefb37a1a287d568c597caac4b321e7250239e47",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "handoff/开发留痕.md": "a2a26c4081816d8bd8a9ec3e4553c381383d5f7aaa63907c0882f83ec79eb5a7",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "handoff/算法说明.md": "cc1913c34a8b2b1a1a6fbc924e685d2e9b2078ef75b402905d30a8e22c00d259",
+    "tools/absolute_amplitude_v1/checks.py": "91383f27d9e83540493e4783b369cc13d1c4be0f1010de0dbf67ca7a88e9e7fb",
+    "tools/guard_observation_v1/geometry.py": "7659f52bb2e94690b2c1ec779e2a4fe6e8be4b7616bb17d35fbb269a1a95faf4",
+    "tools/diagnose_absolute_amplitude_v1.py": "cd77317cd6852a1ef83ca1db4d56e926f6bfd6b770f847563e6aeda7ce0a994f",
+    "tools/absolute_amplitude_v1/quadratic.py": "3be08a5f5af7ec4da2f0aa424b581852956c68119493d85069a5805855f22cec",
+    "tools/absolute_amplitude_v1/model.py": "b70511bf98a7e7662c71b0d52836483815b92d8f46900938dbe6563c550442d4",
+    "tools/diagnose_guard_observation_v1.py": "8735173dfbc64ce5169a624f1da6b2527f35607aabe9edf28f3e4ba0eab5401b",
+    "handoff/研究续接.md": "ec15b562f1f5594a9919c1cafb96e3ff55d82f2030724c414d5b9a72fabea7f4",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/diagnose_absolute_direction_v1.py": "f416c8b5612e1727def05f3dd7b6228c45c2656fe9d4b51ba19b711cccd784e5",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/absolute_amplitude_v1/fit.py": "effe61b872721002fd86461765d2bb8a180e3329180bea2c76e3be45fe11d520",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/absolute_amplitude_v1/amplitude.py": "0eea45aacc8f2301fe04c42a033890f4c9fa393035c6f9b1fd54ed34193490ea",
+    "tools/absolute_amplitude_v1/cone.py": "81d93db648e354d9dae6209e96192d05ed2ddad619d0446e42d6deb4a51a1582",
+    "research/guard_observation_v1_plan.json": "2b2f311dcb42c1408fb7de502426dde23f774c9a02f8560688063c5344ef31a9",
+    "tools/absolute_amplitude_v1/__init__.py": "75f432c7f696ad5b38ed029589090b1876ee9f1c391d1e03d69a7183b4866f98",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "research/absolute_amplitude_v1_plan.json": "9260dbd680d47e02989dfba77c9e59f5f7746fd55fdc642f8bdd3aee60cac945",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e"
+  },
+  "reports": {
+    "dense1": {
+      "path": "references/analysis/absolute_amplitude_v1/dense1/report.json",
+      "sha256": "058fd691c2c7f7c3a7b6a5e3f247241e3f75fbba47f66dc38928485777d4ae25",
+      "result": "dense_diagnostic_rejected",
+      "changed_executed_sources": []
+    },
+    "controls1": {
+      "path": "references/analysis/absolute_amplitude_v1/controls1/report.json",
+      "sha256": "233f75c27e97f0f26e52b261ff6209abb91e4d993f02790fd15a465cd10da936",
+      "result": "passed",
+      "changed_executed_sources": []
+    },
+    "direction1": {
+      "path": "references/analysis/absolute_amplitude_v1/direction1/report.json",
+      "sha256": "cb63b06a63fefcffe47889294994c392b363684cf91456890ef93ce067c2ecfb",
+      "result": "failed",
+      "changed_executed_sources": [
+        "tools/absolute_amplitude_v1/direction.py"
+      ]
+    },
+    "direction2": {
+      "path": "references/analysis/absolute_amplitude_v1/direction2/report.json",
+      "sha256": "54c978fd6e31a2d3f99f2c9b16683ac53a65bd42e3e8fce7655ae7b38f1dfae9",
+      "result": "joint_direction_diagnostic_no_qualification",
+      "changed_executed_sources": []
+    },
+    "audit1": {
+      "path": "references/analysis/absolute_amplitude_v1/audit1/report.json",
+      "sha256": "df95475c0fed2b46d8d8d79e561ea040c50c2165e619e172fb30ecca390dd42a",
+      "result": "reconstructed_actual_output_no_qualification",
+      "changed_executed_sources": []
+    }
+  },
+  "assessment": {
+    "point_phase_p95_cycles": 0.0007671482922074485,
+    "root_relative_p95": 0.003090725472325621,
+    "maximum_heldout_power_error_db": 0.005530477246981471,
+    "maximum_heldout_complex_correlation_error": 3.5504297999456286e-05,
+    "fitted_separate_carriers": 36,
+    "heldout_supported_carriers": 2,
+    "fitted_carrier_amplitudes": [
+      0.06446585269094726,
+      0.062261146483864806,
+      0.06378808412019422,
+      0.06274321124083634,
+      0.06229352161165839,
+      0.1204362565567017,
+      0.05636324936225199,
+      0.054315815661175555,
+      0.05524362534899838,
+      0.05434856764258635,
+      0.12403373534477459,
+      0.05088642456740092,
+      0.05109712314562738,
+      0.054801411403840136,
+      0.05850039257999911,
+      0.05900450257915672,
+      0.0585613030016928,
+      0.06150270420465622,
+      0.0650910518419117,
+      0.06300816657747994,
+      0.11059472694394128,
+      0.06094135764320396,
+      0.058493709813349774,
+      0.05775794280815622,
+      0.05931168791385083,
+      0.05130809593804426,
+      0.048542923376941556,
+      0.047945181687627236,
+      0.05207707156968644,
+      0.04717857731295974,
+      0.10757848258424575,
+      0.044375162108729896,
+      0.050167673206955594,
+      0.05371358186666677,
+      0.05824250462317285,
+      0.05511849641840967
+    ],
+    "heldout_powers": [
+      [
+        0.002715508641601002,
+        0.0018266499446994808
+      ],
+      [
+        0.0028134435440683734,
+        0.0018907116527939847
+      ]
+    ],
+    "oracle_heldout_powers": [
+      [
+        0.0027189688801573402,
+        0.0018284477706804094
+      ],
+      [
+        0.002811372365910439,
+        0.0018898831899834725
+      ]
+    ],
+    "qualified": false
+  },
+  "initial_cost": 4.1445153255867605e-05,
+  "final_cost": 1.8025928817826254e-07,
+  "normalized_projection_residual": 0.0001451887532374922,
+  "outer_cycles": 8,
+  "final_inner_success": true,
+  "joint_convergence_demonstrated": false,
+  "independent_audit": {
+    "schema": "vsl.absolute-amplitude-audit/1",
+    "result": "reconstructed_actual_output_no_qualification",
+    "real_audio_read": false,
+    "real_source_permitted": false,
+    "qualification_changed": false,
+    "nonlinear_estimator_rerun": false,
+    "diagnosis_report_sha256": "058fd691c2c7f7c3a7b6a5e3f247241e3f75fbba47f66dc38928485777d4ae25",
+    "controls_report_sha256": "233f75c27e97f0f26e52b261ff6209abb91e4d993f02790fd15a465cd10da936",
+    "direction_report_sha256": "54c978fd6e31a2d3f99f2c9b16683ac53a65bd42e3e8fce7655ae7b38f1dfae9",
+    "phase_residual_cost_assessment_exact": true,
+    "original_bounds_retained": true,
+    "independent_final_amplitude_kkt": 8.244453967213272e-09,
+    "original_final_amplitude_kkt": 8.244453853997622e-09,
+    "amplitude_constraint_violation": 6.938893903907228e-18,
+    "objective_reduction_factor": 229.91965448616187,
+    "all_eight_block_objectives_monotone": true,
+    "ordinary_joint_differential_failed_preserved": true,
+    "independent_joint_sample_differential_passed": true,
+    "joint_direction_not_adopted": true,
+    "C_H": 540,
+    "voices_and_moving35_unchanged": true
+  },
+  "direction": {
+    "active_equalities": 104,
+    "tangent_columns": 626,
+    "numerical_rank": 626,
+    "scaled_joint_condition": 34950758.012216166,
+    "active_equality_direction_error": 1.712519015484304e-14,
+    "ordinary_joint_finite_difference_relative_error": 1.774072955825994,
+    "independent_sample_differential_relative_error": 2.4531478916192293e-10,
+    "direction_norm": 9600.558993821036,
+    "ordinary_finite_difference_step": 1.0416060154868112e-10,
+    "directional_gradient": -3.5261639439926744e-07,
+    "predicted_linearized_residual_norm": 0.0001058995922172567,
+    "original_residual_norm": 0.0006013287501980064,
+    "initial_cost": 1.8025928817679543e-07,
+    "trials": [
+      {
+        "amount": 1.0,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.5,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.25,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.0625,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.03125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.015625,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.0078125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.00390625,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.001953125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.0009765625,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.00048828125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.000244140625,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 0.0001220703125,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 6.103515625e-05,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 3.0517578125e-05,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 1.52587890625e-05,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 7.62939453125e-06,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 3.814697265625e-06,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 1.9073486328125e-06,
+        "feasible": false,
+        "cost": null
+      },
+      {
+        "amount": 9.5367431640625e-07,
+        "feasible": false,
+        "cost": null
+      }
+    ],
+    "accepted": false,
+    "truth_used": false,
+    "heldout_used": false,
+    "limits": [
+      "Active constraints are held on a local equality face; releases and full optimizer convergence are not established",
+      "Joint Gauss-Newton curvature is local and does not prove accurate latent phase or real-engine coverage"
+    ]
+  },
+  "original17_rerun": false,
+  "full33_replaced": false,
+  "individual14kHz_demonstrated": false,
+  "real_source_permitted": false,
+  "source_audio_read": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "goal_turn_classification": "progress_observed_convex_amplitude_solver_and_actual_constraint_diagnosis",
+  "next_step": "Bounded joint trust-region solve inside the original amplitude cone and phase limits; not unbounded tangent or blind BCD iteration increases; retain full17/full33/individual14kHz/original E",
+  "limits": [
+    "Lower waveform projection residual does not establish latent phase accuracy or vehicle realism",
+    "Intermediate QP caps and ordinary joint finite-difference failure retained with exact sources",
+    "A local constrained tangent is not a complete variable-projection/trust-region solver",
+    "F1/F2/F3 and original A-low questions remain pending; no duplicate requests"
+  ]
+}

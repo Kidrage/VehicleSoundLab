@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.absolute-amplitude-plan/1",
+  "parent_plan": "research/positive_band_envelope_v1_plan.json",
+  "diagnostic_case": "unknown_thirty_six",
+  "outer_cycles": 8,
+  "phase_evaluations_per_cycle": 15,
+  "irls_iterations": 12,
+  "qp_iterations": 2000,
+  "qp_kkt_tolerance": 1e-8,
+  "irls_gradient_tolerance": 1e-7,
+  "objective_decrease_tolerance": 1e-12,
+  "policy": [
+    "Use only observed audio, numerical geometry, measured candidates and previously saved actual estimates",
+    "Keep the same positive finite-band model, original common/minority phase freedom, coefficient box and all qualification gates",
+    "Represent absolute amplitude controls by a convex cone at fixed phases; solve the original soft_l1 objective by certified IRLS/QP",
+    "Alternate amplitude and phase blocks; do not claim a reduced-objective Jacobian or global convergence",
+    "Keep failed and iteration-capped results; oracle amplitudes/phase may never initialize the estimator",
+    "No new real audio/model/C/runtime/render/media/listening until original17/full33/individual14kHz qualification"
+  ]
+}
