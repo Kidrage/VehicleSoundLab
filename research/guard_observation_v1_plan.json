@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.guard-observation-plan/1",
+  "scope": "Observe boundary sidebands of a measured dense candidate set, keeping all original gates",
+  "parent_plan": "research/envelope_resolution_v1_plan.json",
+  "guard_rule": "extend original observation range only where needed to cover inferred_min-minus_min_gap and inferred_max-plus_min_gap",
+  "maximum_evaluations": 120,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Guard observations do not add candidate source lines; source candidates still come from the original declared-grid discovery",
+    "Never narrow the original observation band, and do not supply heldout line identities or fixture truth to geometry or fitting",
+    "One minimum-gap guard on both ends follows first-order phase sideband mixing; no gate-driven guard-width sweep",
+    "Use the same measured-gap real envelope refinement and original phase/minority bounds; no extra phase smoothing",
+    "Save the failed amplitude-regularization attempts and the explicit boundary-alias control",
+    "All17, original33, individual14kHz and original E remain required before real-source extraction"
+  ]
+}

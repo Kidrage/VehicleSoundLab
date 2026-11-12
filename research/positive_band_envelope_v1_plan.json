@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.positive-band-envelope-plan/1",
+  "scope": "Positive finite-band real amplitude basis with measured boundary observations",
+  "parent_plan": "research/guard_observation_v1_plan.json",
+  "period_rule": "2*observed_cycles",
+  "maximum_amplitude_frequency_rule": "minimum_measured_order_gap/2",
+  "basis": "Fejer positive partition,2K+1 translates,first control fixed0 as amplitude gauge",
+  "maximum_evaluations": 120,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Amplitude is a real trigonometric polynomial with literal finite bandwidth, positive partition weights and the original bounded controls",
+    "The first translate control is fixed0 to remove the constant coefficient/amplitude scaling gauge; phase origin is unchanged",
+    "Use measured candidates and one-gap observations; do not add source lines, read fixture truth or select cutoff from gate outcomes",
+    "Approximate the prior observed envelope for initialization only; re-fit actual observations, no oracle initialization",
+    "Keep original common/minority phase freedom and all phase/root/power/stereo/support gates",
+    "No real-source read, model, C/runtime/audio/media changes; full17/full33/individual14kHz/original E remain necessary"
+  ]
+}

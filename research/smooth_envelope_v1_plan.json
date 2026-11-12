@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.smooth-envelope-plan/1",
+  "scope": "Observation-scaled real amplitude roughness, keeping original common phase freedom and qualification gates",
+  "parent_plan": "research/envelope_resolution_v1_plan.json",
+  "derivative_order": 3,
+  "amplitude_prior_standard_deviation_rule": "original_amplitude_control_bound/sqrt(3)",
+  "cutoff_rule": "minimum_measured_order_gap/2",
+  "residual_scale_rule": "1.4826*median(abs(original_projection_residual-median(residual)))",
+  "maximum_evaluations": 120,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Regularize real amplitude only; do not constrain or lowpass the common phase or independent departures",
+    "Use exact third derivative integral of the clamped cubic amplitude splines, with midpoint quadrature exact on each knot interval",
+    "Scale from the actually fitted observation residual, not analytic fixture noise, phase, amplitudes or heldout outcomes",
+    "The residual scale is a proxy, not calibrated real recording uncertainty; derivative penalty is a soft prior, not a strict bandlimit",
+    "Keep every original phase/root/power/stereo and support gate; retain the dense positive even if it fails",
+    "No weight or cutoff sweep based on gate outcomes; all17, original33 and individual14kHz remain necessary before original E",
+    "No real-source read, profile, C/runtime, audio, room or media changes in this principle stage"
+  ]
+}

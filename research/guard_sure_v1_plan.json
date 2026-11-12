@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.guard-sure-plan/1",
+  "scope": "Compose measured boundary observations with observation-selected real amplitude roughness",
+  "guard_plan": "research/guard_observation_v1_plan.json",
+  "smooth_plan": "research/smooth_envelope_sure_v1_plan.json",
+  "maximum_evaluations": 120,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Use exactly the one-gap guards and the same local correlated-aperture predictive-risk selector; no manual weight/guard sweep",
+    "The two component-only candidates remain failed positives and are preserved",
+    "Keep original shared/minority phase freedom and all phase/root/power/stereo/support gates",
+    "Candidate inputs and amplitude-prior selection contain no fixture truth or heldout values",
+    "A dense diagnostic cannot replace all17/full33/individual14kHz qualification or original E",
+    "No real-source reads, profiles, C/runtime, audio, media or listening changes"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.smooth-envelope-sure-plan/1",
+  "scope": "Observation-only local predictive-risk selection with exact aperture noise covariance trace",
+  "parent_plan": "research/smooth_envelope_v1_plan.json",
+  "selector": "local_sure_exact_aperture_covariance",
+  "derivative_order": 3,
+  "maximum_evaluations": 120,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Keep real amplitude roughness only; no new common or minority phase penalty",
+    "Account for overlapping window correlation with the exact adjoint and covariance trace, not independent projection rows",
+    "Estimate additive white source-noise scale from the local residual orthogonal to the observed Jacobian, with its effective covariance trace",
+    "Minimize local linear predictive risk over one scalar weight using observations only; no fixture truth, heldout outcomes or gate-based weight sweep",
+    "Local SURE ignores nonlinear changes and active bounds, and source noise may be coloured; this is not a real-recording uncertainty certificate",
+    "The dense positive, all17, original33, individual14kHz and original E gates remain mandatory",
+    "No real-source read, profiles, C/runtime/audio/room/media changes in this principle stage"
+  ]
+}
