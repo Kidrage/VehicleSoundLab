@@ -1,0 +1,217 @@
+{
+  "schema": "vsl.pedal-resonance-summary/1",
+  "result": "pedal_state_replay_technical_pass",
+  "date": "2026-11-12",
+  "C_H_rows": 521,
+  "unchanged_prior_C_H": 518,
+  "modified_prior_C_H": 1,
+  "new_C_H": 2,
+  "C_H_index_sha256": "17093a90ddb1e7b3f5e0787d4108ed55f8be584b58302e2d87ddb43d5e9821e8",
+  "existing_targeted_contracts_passed": 1,
+  "current_full_suite_count": 51,
+  "full_suite_not_repeated": true,
+  "frames": 768123,
+  "shifts": 3,
+  "overruns": 1,
+  "running_operating": {
+    "IDLE": {
+      "frames": 32160,
+      "detail_supported_frames": 0,
+      "rpm_min": 850.000000081475,
+      "rpm_max": 850.0992592592592,
+      "mean_support": 0,
+      "dna_rms": 0.140213792924764,
+      "detail_rms": 0
+    },
+    "FREE REV": {
+      "frames": 0,
+      "detail_supported_frames": 0,
+      "rpm_min": 0,
+      "rpm_max": 0,
+      "mean_support": 0,
+      "dna_rms": 0,
+      "detail_rms": 0
+    },
+    "PULL": {
+      "frames": 224880,
+      "detail_supported_frames": 1603,
+      "rpm_min": 1122.6422803323896,
+      "rpm_max": 8261.910807825665,
+      "mean_support": 0.004376278120318447,
+      "dna_rms": 0.3885217160073086,
+      "detail_rms": 0.0011399492750036714
+    },
+    "CRUISE": {
+      "frames": 62400,
+      "detail_supported_frames": 0,
+      "rpm_min": 853.5052780528661,
+      "rpm_max": 6788.312160473682,
+      "mean_support": 0,
+      "dna_rms": 0.18265016208981777,
+      "detail_rms": 0
+    },
+    "OVERRUN": {
+      "frames": 139680,
+      "detail_supported_frames": 0,
+      "rpm_min": 4320.9679065619,
+      "rpm_max": 6786.043969115661,
+      "mean_support": 0,
+      "dna_rms": 0.10070219121726962,
+      "detail_rms": 0
+    },
+    "SHIFT CUT": {
+      "frames": 27600,
+      "detail_supported_frames": 0,
+      "rpm_min": 4301.8394739629875,
+      "rpm_max": 8304.995790405892,
+      "mean_support": 0,
+      "dna_rms": 0.2182189139248907,
+      "detail_rms": 0
+    },
+    "SHIFT RECOVER": {
+      "frames": 13680,
+      "detail_supported_frames": 0,
+      "rpm_min": 5193.370917386352,
+      "rpm_max": 6121.283304029415,
+      "mean_support": 0,
+      "dna_rms": 0.10462572888928033,
+      "detail_rms": 0
+    },
+    "REV MATCH": {
+      "frames": 7920,
+      "detail_supported_frames": 0,
+      "rpm_min": 4364.713322480944,
+      "rpm_max": 5847.519785093325,
+      "mean_support": 0,
+      "dna_rms": 0.15942209400287324,
+      "detail_rms": 0
+    }
+  },
+  "device": {
+    "result": "pass",
+    "muted": true,
+    "schema": 6,
+    "fields": 28,
+    "frames": 768123,
+    "owned_models_destroyed_before_replay": true,
+    "record_hash": "6196c9bf3bdc6257",
+    "play_hash": "6196c9bf3bdc6257",
+    "record_queue_empty": 0,
+    "play_queue_empty": 0,
+    "record_budget_exceeded": 0,
+    "play_budget_exceeded": 0,
+    "record_max_ms": 6.0876,
+    "play_max_ms": 7.1051,
+    "active_and_missing_support_observed": true,
+    "pedal_scenario": true,
+    "cancel_frames": 24576,
+    "controls": [
+      {
+        "frame": 0,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0,
+        "brake": 0,
+        "gear_request": 1,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 76800,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0.85,
+        "brake": 0,
+        "gear_request": 1,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 192512,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0.85,
+        "brake": 0,
+        "gear_request": 2,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 288256,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0.85,
+        "brake": 0,
+        "gear_request": 3,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 336896,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0,
+        "brake": 0,
+        "gear_request": 3,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 384512,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0,
+        "brake": 0.6,
+        "gear_request": 3,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 480256,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0.3,
+        "brake": 0,
+        "gear_request": 2,
+        "ignition": 1,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 552960,
+        "mode": 1,
+        "rpm_input": 1200.6808645474161,
+        "throttle": 0.3,
+        "brake": 0,
+        "gear_request": 2,
+        "ignition": 0,
+        "resonant_gain": 0.7
+      }
+    ]
+  },
+  "source_and_front_2_12_exact": true,
+  "independent_state_rms_max_error": 2.9976021664879227e-14,
+  "independent_support_max_error": 1.5543122344752192e-15,
+  "stable_idle_detail_output": false,
+  "low_profile_base_hz": 10.005673871228469,
+  "detail_support_engineering_rpm": [
+    1080.6127780926745,
+    1320.7489510021578
+  ],
+  "controller_idle_engineering_rpm": 850,
+  "controller_idle_acoustic_target_hz": 7.083333333333333,
+  "parameter_index_sha256": "63318b6d5c6ca4eddd01005fd4fb1207ac216a951221a6d0ea5693b95c37d646",
+  "no_controller_or_parameter_changes": true,
+  "default_host_changed": false,
+  "new_listening_acceptance": false,
+  "full_idle_or_acceleration_timbre_calibrated": false,
+  "limits": [
+    "Synthetic pedal inputs, not physical pedal hardware or real-vehicle calibration",
+    "Only one16smanual-shift scenario; neutral/auto/longrun/manual UI/physical7.1.4 not qualified",
+    "Fixed low-detail support does not cover850engineeringRPM idle; no widening or remapping",
+    "No new timbre fit, sound quality score or idle listening acceptance"
+  ],
+  "evidence_sha256": {
+    "references/analysis/pedal_resonance_v1/verify1/report.json": "ddde02c874d71e7b2a2f3652663492939500e735fb4cc30a0aa2ff0ed1f58155",
+    "references/analysis/pedal_resonance_v1/final1/coverage.png": "98bbc09a3fcfecb6e76a79a1395c101ed1d230495acf84eb0dda7902c7c61ced"
+  }
+}

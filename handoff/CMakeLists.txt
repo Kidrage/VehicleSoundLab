@@ -317,6 +317,7 @@ if(MSVC)
 endif()
 if(WIN32)
   add_executable(VslDriveResonance_device "${VSL_ROOT}/experiments/drive_resonance_v1/device.c"
+    "${VSL_ROOT}/experiments/drive_resonance_v1/inspect.c"
     "${VSL_ROOT}/experiments/atlas_monitor_v1/audio.c" "${VSL_ROOT}/experiments/atlas_monitor_v1/models.c")
   target_link_libraries(VslDriveResonance_device PRIVATE atlas_take_io resonant_detail_io win_output)
   target_compile_options(VslDriveResonance_device PRIVATE /W4 /we4013 /utf-8 /fp:strict)
