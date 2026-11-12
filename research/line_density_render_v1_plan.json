@@ -1,0 +1,15 @@
+{
+  "seconds": 16,
+  "dna_seed": 48271,
+  "residual_seeds": [8121907,23117,61927],
+  "power_reduction_amounts": [0,0.25,0.5],
+  "transition_hz": [1200,1900],
+  "output_gain": 0.5,
+  "warmup_frames": 24000,
+  "direct_sum_check_frames": 48000,
+  "review_seed": 8121907,
+  "review_start_seconds": 0.5,
+  "review_seconds": 8,
+  "tolerances": {"C_direct_sum_maximum_FS_error":2e-7,"mixed_band_power_error_db":0.5,"mixed_complex_coherence_error":0.01,"review_peak_maximum":0.95,"minimum_high_concentration_reduction":0.03},
+  "scope": "Only if the predeclared local-concentration diagnostic gate permits. Bounded engineering trials, not measured noise percentages: multiply mean/basis/root of each harmonic by sqrt(1-amount*smoothstep(1200..1900Hz)), preserve common L/R gain and all correlation/RNG dimensions; use actual C output to fit nonnegative Welch residual debt. Retain original C LF stem/scale and accepted baseline. Three independent OSC-cloud seeds. No per-WAV normalization or model/default/driver promotion; old and new listener judgments remain separate. Static carrier cloud has no newly fitted temporal envelopes or physical-source identification."
+}

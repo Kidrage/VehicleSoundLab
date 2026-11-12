@@ -1,0 +1,16 @@
+{
+  "sample_rate": 48000,
+  "cycle_frames": 1024,
+  "hop": 1024,
+  "cycles": [8,16],
+  "support_bins": [3,5],
+  "bands": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000]],
+  "candidate_block_starts_seconds": [0.5,2.5,4.5,6.5],
+  "known_detune": 0.001,
+  "known_chirp_relative_per_second": 0.002,
+  "known_noise_seed": 8121907,
+  "known_noise_relative_rms_db": -25,
+  "tolerances": {"direct_DFT_relative":1e-9,"parseval_relative":1e-12,"gain_invariance":1e-12,"pure_tone_minimum_concentration":0.97,"noise_maximum_concentration":0.8},
+  "experimental_render_gate": {"primary_support_bins":3,"high_band_indices":[4,5,6,7],"minimum_concentration_gap":0.05,"minimum_bands_per_window":2},
+  "scope": "Measurement only: native-grid periodic-Hann spectra, energy in the strongest contiguous3/5bins allowed to move inside each nominal harmonic cell, compared with fixed-center support. Local translation does not compensate intrawindow chirp or identify a physical noise fraction. Window sizes change concentration baselines. A single short normalized recording and four same-seed C intervals are descriptive, not independent engine trials. A gate only permits a separate bounded experimental C render, never model or listening acceptance."
+}

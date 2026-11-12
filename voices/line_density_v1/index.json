@@ -1,0 +1,32 @@
+{
+  "schema": "vsl.line-density-experimental/1",
+  "context": "A moving-tailpipe316.10..317.25s, fixed46.875Hz coordinate",
+  "status": "unaccepted_opt_in_experiment",
+  "default_driver_attached": false,
+  "human_accepted": false,
+  "low": "voices/coherent_low_v1/measured_phase.model",
+  "low_scale": 1.6658265329883064,
+  "entries": [
+    {
+      "amount": 0,
+      "dna": "voices/dna_bank_v1/V10 Exterior.model",
+      "residual": "voices/line_density_v1/V10 A Density 0.residual",
+      "dna_sha256": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+      "residual_sha256": "67665a63ddfa0cb74d313ccccd0f77abe253637a577febbef2ec0e787da5c80b"
+    },
+    {
+      "amount": 0.25,
+      "dna": "voices/line_density_v1/V10 A Density 25.model",
+      "residual": "voices/line_density_v1/V10 A Density 25.residual",
+      "dna_sha256": "187109fccd4af2c294d9a8aa95bc8e41863dff5274861b0d266d1141fc01b660",
+      "residual_sha256": "ef7a50a365c43f996620159ce04510558698bb441ebe621bdeb86ff1f53bc158"
+    },
+    {
+      "amount": 0.5,
+      "dna": "voices/line_density_v1/V10 A Density 50.model",
+      "residual": "voices/line_density_v1/V10 A Density 50.residual",
+      "dna_sha256": "dc780739ffaa5b23c8918b6cd3c50c9266af76b23dba7d26435a6200c0c6b178",
+      "residual_sha256": "c29fafd6d3c5cc2d970b7fa0384784efd15e788362cf5b7b05993c000f4cc360"
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "schema": "vsl.line-density-summary/1",
+  "date": "2026-11-12",
+  "result": "experimental_C_render_only",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\line_density_v1",
+  "attempts": [
+    {
+      "folder": "analysis1",
+      "result": "failed",
+      "error": "AssertionError()"
+    },
+    {
+      "folder": "analysis2",
+      "result": "diagnostics_completed",
+      "error": null
+    },
+    {
+      "folder": "render1",
+      "result": "technical_pass_only",
+      "error": null
+    }
+  ],
+  "diagnostic_gate": {
+    "pure_minimum_concentration": 0.9834496036289033,
+    "stationary_noise_maximum_concentration": 0.6268040268920144,
+    "controls_qualified": true,
+    "gaps": [
+      {
+        "cycles": 8,
+        "C_minus_reference_LR": [
+          [
+            -0.01673799201505133,
+            -0.01673798662185766
+          ],
+          [
+            0.03726218712737861,
+            0.03726218393268732
+          ],
+          [
+            0.053757167311807796,
+            0.05375717185150386
+          ],
+          [
+            0.036223499456845554,
+            0.036223498737261495
+          ],
+          [
+            0.08879891487592595,
+            0.08879890318563144
+          ],
+          [
+            0.1570864435510193,
+            0.15708639281156356
+          ],
+          [
+            0.20523244067437652,
+            0.20523244059056778
+          ],
+          [
+            0.26107448711196213,
+            0.26107455316076233
+          ]
+        ],
+        "qualifying_high_bands": 4
+      },
+      {
+        "cycles": 16,
+        "C_minus_reference_LR": [
+          [
+            -0.01918964217275987,
+            -0.01918964019007463
+          ],
+          [
+            0.05922412222221218,
+            0.05922411992329335
+          ],
+          [
+            0.0997930280884256,
+            0.09979303431302566
+          ],
+          [
+            0.08290210314561064,
+            0.08290210336046588
+          ],
+          [
+            0.16501904911538956,
+            0.16501904372595833
+          ],
+          [
+            0.2779923819979654,
+            0.2779923175565375
+          ],
+          [
+            0.35290800300114045,
+            0.3529080489802321
+          ],
+          [
+            0.4256946191684962,
+            0.42569478651044557
+          ]
+        ],
+        "qualifying_high_bands": 4
+      }
+    ],
+    "separate_experimental_C_render_eligible": true
+  },
+  "diagnostic_maximum_DFT_relative": 8.9289786083824e-12,
+  "diagnostic_maximum_parseval_relative": 3.963833199511428e-14,
+  "maximum_direct_C_subtraction_error": 5.935879106820641e-08,
+  "maximum_candidate_power_error_db": 0.24792904682953437,
+  "maximum_complex_coherence_error": 3.5574560226882017e-07,
+  "maximum_coherence_projection_excess": 3.6067038244880223e-10,
+  "fixed_reference_concentration": [
+    [
+      0.8939961934370719,
+      0.893996190798907
+    ],
+    [
+      0.8751014282873891,
+      0.8751014323426783
+    ],
+    [
+      0.7943309428677807,
+      0.7943309431337584
+    ],
+    [
+      0.8017706229297371,
+      0.801770619648181
+    ],
+    [
+      0.7019983875341319,
+      0.7019983847899901
+    ],
+    [
+      0.5625546983637641,
+      0.5625546888854331
+    ],
+    [
+      0.48799387631305646,
+      0.48799390468800774
+    ],
+    [
+      0.4057104047555074,
+      0.40571043655212113
+    ]
+  ],
+  "C_review_seed_concentrations": {
+    "density_0": [
+      [
+        0.7562895102473568,
+        0.7562894997387479
+      ],
+      [
+        0.9122458598048023,
+        0.9122458608111673
+      ],
+      [
+        0.869017015934431,
+        0.8690170255605923
+      ],
+      [
+        0.7958428919213886,
+        0.7958429115399612
+      ],
+      [
+        0.7914784851598239,
+        0.7914784829455233
+      ],
+      [
+        0.8374245751818015,
+        0.8374245105790666
+      ],
+      [
+        0.8439695213425457,
+        0.8439695856499245
+      ],
+      [
+        0.8265500425587341,
+        0.8265502514066329
+      ]
+    ],
+    "density_25": [
+      [
+        0.7310507938662116,
+        0.7310507859695411
+      ],
+      [
+        0.7946694918384846,
+        0.794669486156699
+      ],
+      [
+        0.7531014638795958,
+        0.7531014668445455
+      ],
+      [
+        0.6691136240456044,
+        0.6691136347714108
+      ],
+      [
+        0.6621409328155399,
+        0.6621409249603928
+      ],
+      [
+        0.7003793011730295,
+        0.7003792553145444
+      ],
+      [
+        0.6992610251277138,
+        0.6992610970046824
+      ],
+      [
+        0.7206954796136678,
+        0.7206954872332892
+      ]
+    ],
+    "density_50": [
+      [
+        0.7066469417593791,
+        0.7066469349712693
+      ],
+      [
+        0.660522002206903,
+        0.6605219978861805
+      ],
+      [
+        0.6480449734164104,
+        0.6480449724321887
+      ],
+      [
+        0.5589650529413432,
+        0.5589650557562249
+      ],
+      [
+        0.5750326778108378,
+        0.5750326557156858
+      ],
+      [
+        0.6095783147239634,
+        0.6095782759380428
+      ],
+      [
+        0.6207521779290162,
+        0.620752358891765
+      ],
+      [
+        0.6781604394797727,
+        0.6781606204383878
+      ]
+    ]
+  },
+  "review_url": "http://127.0.0.1:8789/research/%E9%AB%98%E9%A2%91%E5%AF%86%E5%BA%A6%E5%AF%B9%E7%85%A7V1.html",
+  "review_page_sha256": "97c50e9c041c6044410e085acd36837d0882d106376603f7a63a773ec4678762",
+  "original_C_stem_exact": true,
+  "frozen_low_stem_preserved": true,
+  "authored_experimental_profiles": [
+    {
+      "amount": 0,
+      "dna": "voices/dna_bank_v1/V10 Exterior.model",
+      "residual": "voices/line_density_v1/V10 A Density 0.residual",
+      "dna_sha256": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+      "residual_sha256": "67665a63ddfa0cb74d313ccccd0f77abe253637a577febbef2ec0e787da5c80b"
+    },
+    {
+      "amount": 0.25,
+      "dna": "voices/line_density_v1/V10 A Density 25.model",
+      "residual": "voices/line_density_v1/V10 A Density 25.residual",
+      "dna_sha256": "187109fccd4af2c294d9a8aa95bc8e41863dff5274861b0d266d1141fc01b660",
+      "residual_sha256": "ef7a50a365c43f996620159ce04510558698bb441ebe621bdeb86ff1f53bc158"
+    },
+    {
+      "amount": 0.5,
+      "dna": "voices/line_density_v1/V10 A Density 50.model",
+      "residual": "voices/line_density_v1/V10 A Density 50.residual",
+      "dna_sha256": "dc780739ffaa5b23c8918b6cd3c50c9266af76b23dba7d26435a6200c0c6b178",
+      "residual_sha256": "c29fafd6d3c5cc2d970b7fa0384784efd15e788362cf5b7b05993c000f4cc360"
+    }
+  ],
+  "C_changes": false,
+  "default_models_changed": false,
+  "driver_changes": false,
+  "human_accepted": false,
+  "c_h_count": 436,
+  "c_index_sha256": "51bcb0f363671e452553316e9f73e1d2432cf14b6cdd7944958b3ffb2351b0c4",
+  "current_source_sha256": {
+    "tools/finalize_line_density_v1.py": "bee8c11ec83104ba548db52272091238c0d9b795d7085c64b8fc3f72008cc9a7",
+    "tools/freeze_line_density_v1.py": "143fe676500ae2d50a45183362b8ae52e929480fd5937dac020186b08ead1a1f",
+    "tools/analyze_line_density_v1.py": "76e6710ae70f075e0f8e3b5263133753a92ea784c6f9742f8b6f7cf7a66b40b3",
+    "tools/render_line_density_v1.py": "c3daf8fbaadf91baa05516532706ffacdecd08b905e7ec04a8dc906fb5afb476",
+    "research/line_density_v1_plan.json": "b8f47a2da72c99d2a274d86f175471bfcae010355cbe488825ad10d7f2d94941",
+    "research/line_density_render_v1_plan.json": "59ce2d7ce4eebec2c608e85500a2d07597e2605c2c35d209133c040ceb83adf9",
+    "tools/line_density_v1/controls.py": "8873edbce132cc1ff1a04f8de4ffd95ce8aadfe57bd9137b7820a1e7e83e4379",
+    "tools/line_density_v1/measure.py": "5d8a768aa6417da23ea867ef712b13b28fa599518254b8631cd3f641c66f1d7f",
+    "tools/line_density_v1/profiles.py": "a9ca3e666eb1b2b08c0419adf0ec681418eb38d4afc97b2e19477c7a5784c5d2",
+    "tools/line_density_v1/review.py": "4cd27619d1d4af1e2cae93e7efd8fdb01fef5129dd989aad1312f712d0307dd4",
+    "tools/normalize_line_density_profiles_v1.py": "7e0282f6285add5cafe0b9f02c8ab7d0d61b2b13429091c8486356087a5fb4df"
+  },
+  "evidence_sha256": {
+    "analysis1/exact_sources/research/line_density_v1_plan.json": "b8f47a2da72c99d2a274d86f175471bfcae010355cbe488825ad10d7f2d94941",
+    "analysis1/exact_sources/tools/analyze_line_density_v1.py": "3c02c58417707368bd28eaa6668f368e6a361347395717a278c8ab0b9f1bb760",
+    "analysis1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis1/exact_sources/tools/line_density_v1/controls.py": "8873edbce132cc1ff1a04f8de4ffd95ce8aadfe57bd9137b7820a1e7e83e4379",
+    "analysis1/exact_sources/tools/line_density_v1/measure.py": "cc55d2ee6c63cb82c8aa399a400f5477f0fa564390205f20ea5a27cc38b84ac5",
+    "analysis1/metadata.json": "176f8d37669f1abc2ed7820c0fb07d35891e5dbc1d935bcd4755e9f5b2dae4bd",
+    "analysis1/report.json": "10cd6799f4400034ab539f8ebc3e63b0d5afcf12ceecb0748c699df4d0ea2a18",
+    "analysis2/accepted_C_0.5.npz": "db1473e37afbfcf020a5fca29b3dbdf735cf3cc0a2c539f7da8cd7dc43036103",
+    "analysis2/accepted_C_2.5.npz": "3042e22f116d6b5cd375fa2cae0f6ae2c222b60f1be9d51bb3282d08cb6b42fe",
+    "analysis2/accepted_C_4.5.npz": "22615d48fd334be3cd4efea1e5a69578ead3691b28f0db05e66faaa30c8beab5",
+    "analysis2/accepted_C_6.5.npz": "2803689e52f4758645a18fc34d835ee72ca208aa6b027b42e400013e58914a1e",
+    "analysis2/exact_sources/research/line_density_v1_plan.json": "b8f47a2da72c99d2a274d86f175471bfcae010355cbe488825ad10d7f2d94941",
+    "analysis2/exact_sources/tools/analyze_line_density_v1.py": "76e6710ae70f075e0f8e3b5263133753a92ea784c6f9742f8b6f7cf7a66b40b3",
+    "analysis2/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "analysis2/exact_sources/tools/line_density_v1/controls.py": "8873edbce132cc1ff1a04f8de4ffd95ce8aadfe57bd9137b7820a1e7e83e4379",
+    "analysis2/exact_sources/tools/line_density_v1/measure.py": "5d8a768aa6417da23ea867ef712b13b28fa599518254b8631cd3f641c66f1d7f",
+    "analysis2/fixed_A_reference.npz": "d2ca747cd68f984857550d5c2376f3c0cfe89b52ae041a14173b79bae275ab8f",
+    "analysis2/known_chirp_OSC.npz": "f23951dd18370047945dc7e8594be80fa922baabae8c468b93f2ed58645801bb",
+    "analysis2/known_detuned_OSC.npz": "2de20d3a826f365e08c4323f4f360fbb80c3a978d20dc1ec2083b9abe8b2df73",
+    "analysis2/known_fixed_OSC.npz": "4c567b5f11db41d17f847807ec7ce364a8fa6f062d8070bdb5e7daac5a07b29b",
+    "analysis2/known_OSC_plus_noise.npz": "0f1410e4c3db2f04226b0f16bffab5259949a7761888254550709e066cda6462",
+    "analysis2/known_stationary_noise.npz": "f30e3e0914ded70e517784345faa67191bb532106727e1207e171444b6ddc51a",
+    "analysis2/magnitude_0.5.npz": "501e474eb8f0c85e972713f003d4420f1b98544761951beb9e7165f54a75e63d",
+    "analysis2/magnitude_1.0.npz": "0db3412a68f3f5053d7d7bd752154e393b12bb6e853dd3b5b0e4f0bf214f712a",
+    "analysis2/metadata.json": "81fd95e4a3403ba806b300d553878db1e471476875e53f1ae3d1e116afb9c50c",
+    "analysis2/report.json": "f3a868e9f05626e5f17871876330c34f94328ded47395d7ca6b1ff49c141040a",
+    "publication1/exact_sources/tools/finalize_line_density_v1.py": "bee8c11ec83104ba548db52272091238c0d9b795d7085c64b8fc3f72008cc9a7",
+    "publication1/exact_sources/tools/normalize_line_density_profiles_v1.py": "b1cccfc2843e981634d74022f5c594cec9d30660a33d24f7c368e0d3579f9023",
+    "publication1/failure.json": "e787e6944ac6f38098aa81bfc2c51223b3046c44f78c942942464b46e747c39f",
+    "publication1/index_before_publication.json": "9f5d78877305a1b071c30602ccd6e91c05519586b9e5e28dbdd4fda732c59e2d",
+    "publication1/summary_before_publication.json": "53e639df03a3bd2265278758e2380d94476f27c490d9f4c3a52cff65189b4e37",
+    "publication2/exact_sources/tools/finalize_line_density_v1.py": "bee8c11ec83104ba548db52272091238c0d9b795d7085c64b8fc3f72008cc9a7",
+    "publication2/exact_sources/tools/normalize_line_density_profiles_v1.py": "7e0282f6285add5cafe0b9f02c8ab7d0d61b2b13429091c8486356087a5fb4df",
+    "publication2/index_before_publication.json": "9f5d78877305a1b071c30602ccd6e91c05519586b9e5e28dbdd4fda732c59e2d",
+    "publication2/normalized_0_cloud.wav": "3c353ee474d742b2ca8e47e10c5bf1cf10f1e062a4a906b1a8b0d4ea1f51e9f2",
+    "publication2/normalized_25_cloud.wav": "ecf4b6fec79c99d53689a26835233e382c433423bea88cbbd414bac5514ab28f",
+    "publication2/normalized_50_cloud.wav": "25f2ff4744f47485b77656d9b9397a70788824868ecd69be80dc60fc13583442",
+    "publication2/original_V10 A Density 0.residual": "a09a4bb74d02337968bdbbc6d1105ec887f3e2e28a7fc2d5ce0cb61b6acc7ea7",
+    "publication2/original_V10 A Density 25.residual": "6c78c45c35829a8c14eb923157b41708a54e7507a1e3ae1b374931f9dd617a9c",
+    "publication2/original_V10 A Density 50.residual": "6d922f27ab1a8e730d0da8e52889180f778ee85be4adc7f45d0990a4f271bb64",
+    "publication2/report.json": "c35fe26ecbb71e6baa8b4a7273d6a32bceddcdac5a6b5b27bd890b7d9f8532f8",
+    "publication2/staged_whitespace_failure.txt": "b8c6c057991b5b6e40810a2f8da20c3efeb6dd1d0d50d00ebf466f24caf3aca7",
+    "publication2/summary_before_publication.json": "53e639df03a3bd2265278758e2380d94476f27c490d9f4c3a52cff65189b4e37",
+    "render1/audition/accepted.wav": "87c5ae4b467e611a04f5a619b8efb92577ee3cc49123a6c1526dd4373c83a691",
+    "render1/audition/cloud_0.wav": "bcc436746237c610c933a4329bc7428646346380a9783f6ccd9205dc496085e7",
+    "render1/audition/cloud_25.wav": "7d5d62da76ca249fa8006eac37618c18d5478d73acbe6c99e075a7386468d7cc",
+    "render1/audition/cloud_50.wav": "f2d8ad630fdba675593e171786c0c7b76e7c1c3c396cbb7e1de777112bbde619",
+    "render1/audition/density_0.wav": "a911b1dd27ca85abd915e7cdf204e7cf6c9e4bf44e7649ca963754b81d0013dd",
+    "render1/audition/density_25.wav": "67d67ae5938d4ec8f2da918d4168fb1e028aed653922081de6fa9e399bb8542a",
+    "render1/audition/density_50.wav": "d0af5aa23d09d146816a02efc12efac3347accaeb075168b363f252afbf2feec",
+    "render1/exact_sources/experiments/residual_osc_v1/probe.c": "9af587fc2e34325538a0086a8ca86b5b3f1d07d0b98384f5ae0a0472275fbabf",
+    "render1/exact_sources/experiments/sustain_monitor_v3/probe.c": "0d97cd66965441fc7984e97c6b4cd65141996cbac3ab7829ed73cad68f886b3e",
+    "render1/exact_sources/experiments/sustain_monitor_v3/render.c": "a61700efc979de55213b344962253c870ef38afdd494cb791698bc606e107b87",
+    "render1/exact_sources/experiments/sustain_monitor_v3/render.h": "7ccd5e08c49911acf5938151ce430861ee499c052e57552efa7ae3ecf359b39f",
+    "render1/exact_sources/handoff/CMakeLists.txt": "11a1dd5ffd19ea2cb05fb6d40ee3a09a8b6a78f7a567c38a2bdb1d3ce48400a7",
+    "render1/exact_sources/modules/sound_dna/oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+    "render1/exact_sources/modules/sound_dna/oscillator.h": "46897bb43696cbb27ef052f4f50d0a8498492e73942341e11a23c3ff409b6c92",
+    "render1/exact_sources/modules/sound_dna/profile.c": "a4fb7e89cdbc88fb3ba94414c53694e4ee267d6d49dd1088e4fe486a4a2a97f7",
+    "render1/exact_sources/modules/sound_dna/profile.h": "cc748aac70e297eea04ef4075631f37c93204921fcd3085dcb42fa8bfd1f397c",
+    "render1/exact_sources/modules/sound_dna/texture.c": "cb17bfb003c4ccfb87fe5e3ce5f1cc7ae4c3dc8a3970ec17d1120739769bf746",
+    "render1/exact_sources/modules/sound_dna/texture.h": "25311f8a7215188bee05e6aa390bb84801af7fb6fb9596bc6ac0455527fac4f6",
+    "render1/exact_sources/modules/sound_dna/voice.c": "360ed4efd0bf1c0eb3f6e7d28d24c3e6a852ac22e09c7b6b3909105ad882302c",
+    "render1/exact_sources/modules/sound_dna/voice.h": "23dbb55a701471ac6522d9c28c5903eeff755168acad53094eeb0b2f05d492b8",
+    "render1/exact_sources/modules/sound_residual/oscillator.c": "6d8f476b29cd921497b5d3b3553a0ea45f2146c68e584baa3888ff88c90b6910",
+    "render1/exact_sources/modules/sound_residual/oscillator.h": "86f943ad7adbe573029fbe42ef94eb3bf9ba4bee8a254e6fdf2ec3039b2a4394",
+    "render1/exact_sources/modules/sound_residual/profile.c": "5f65961250764ab7f921031b13c721d350e08fd20242cbde4eaa63931f4b976b",
+    "render1/exact_sources/modules/sound_residual/profile.h": "d017388c47452c9a8ce07f550605f8f5521b4c8912e75ff6e30ab9e1bfa97ccb",
+    "render1/exact_sources/modules/sound_residual/voice.c": "29a072018d63100c9d87c6dc5657199f54de7baf0643964be6e50076eae91c39",
+    "render1/exact_sources/modules/sound_residual/voice.h": "305b657f824f689c686264b31fd7a1ac78e00cc707b5df8bcc8221003b0faf4f",
+    "render1/exact_sources/research/coherent_low_v1_acceptance.json": "7dda0f4622b51c8c3dd425f6e68b2a34db2e97ce9e23adade18e7a0f78b1edd8",
+    "render1/exact_sources/research/line_density_render_v1_plan.json": "59ce2d7ce4eebec2c608e85500a2d07597e2605c2c35d209133c040ceb83adf9",
+    "render1/exact_sources/research/line_density_v1_plan.json": "b8f47a2da72c99d2a274d86f175471bfcae010355cbe488825ad10d7f2d94941",
+    "render1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "render1/exact_sources/tools/harmonic_magnitude_v1/legacy.py": "1f63eaba7c9664395a513f09d2da03fb2fc789d2b17845f81cfc7d0c4e2647ba",
+    "render1/exact_sources/tools/line_density_v1/controls.py": "8873edbce132cc1ff1a04f8de4ffd95ce8aadfe57bd9137b7820a1e7e83e4379",
+    "render1/exact_sources/tools/line_density_v1/measure.py": "5d8a768aa6417da23ea867ef712b13b28fa599518254b8631cd3f641c66f1d7f",
+    "render1/exact_sources/tools/line_density_v1/profiles.py": "a9ca3e666eb1b2b08c0419adf0ec681418eb38d4afc97b2e19477c7a5784c5d2",
+    "render1/exact_sources/tools/line_density_v1/review.py": "4cd27619d1d4af1e2cae93e7efd8fdb01fef5129dd989aad1312f712d0307dd4",
+    "render1/exact_sources/tools/render_line_density_v1.py": "c3daf8fbaadf91baa05516532706ffacdecd08b905e7ec04a8dc906fb5afb476",
+    "render1/exact_sources/tools/residual_osc_v1/__init__.py": "67b1913be626a40b31605fc388b9c949fa87fd0611681541daf5ffaae3f23bc0",
+    "render1/exact_sources/tools/residual_osc_v1/fit.py": "03cdb309d0c50c9cb652deada89916b1456ff698d50d6dae0667b01d8f80fb05",
+    "render1/exact_sources/tools/residual_osc_v1/review.py": "0806d7afed0cf90dd16d5e2682e6cb527febc4c065dd07d3027c8250d5ab1549",
+    "render1/exact_sources/tools/residual_osc_v1/sources.py": "d12474131f65dbeb87378f84f121dd030614199f73d2eaf70338f40578a6649d",
+    "render1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "render1/exact_sources/tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+    "render1/exact_sources/tools/sustain_osc_v1/profile.py": "4cb52c9d71f050b4cb1f3c56635f5420fd15a0d5d733afba6c78187d8451e831",
+    "render1/metadata.json": "49e252da4b8b5468aa1af74a9e6b2c0757c5d29f2fba99eb0237dcbf831450a6",
+    "render1/models/density_0.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "render1/models/density_0.residual": "a09a4bb74d02337968bdbbc6d1105ec887f3e2e28a7fc2d5ce0cb61b6acc7ea7",
+    "render1/models/density_25.model": "187109fccd4af2c294d9a8aa95bc8e41863dff5274861b0d266d1141fc01b660",
+    "render1/models/density_25.residual": "6c78c45c35829a8c14eb923157b41708a54e7507a1e3ae1b374931f9dd617a9c",
+    "render1/models/density_50.model": "dc780739ffaa5b23c8918b6cd3c50c9266af76b23dba7d26435a6200c0c6b178",
+    "render1/models/density_50.residual": "6d922f27ab1a8e730d0da8e52889180f778ee85be4adc7f45d0990a4f271bb64",
+    "render1/raw/accepted.wav": "fe1ed192e7e4a560f41674132f3682310ba50f670cc226206c400bbdf20fe371",
+    "render1/raw/density_0_23117_cloud.wav": "d147e9bbc2159c9347f65417a8646f5f4c1184cda6e7e2dfa803c8a5957c8376",
+    "render1/raw/density_0_23117_mix.wav": "b3271d362131b50bb5c4c8d1120f9288fab7073653495d312718df0fabebe93d",
+    "render1/raw/density_0_61927_cloud.wav": "fa40444c0ce4d33aca93d85709d7b6bc408f863f1ab5995a05ed0522499dbfa5",
+    "render1/raw/density_0_61927_mix.wav": "06d7a75d8421a8e979c5c839b31c87d49b6d9857c101992bc0effcb8b3ff980d",
+    "render1/raw/density_0_8121907_cloud.wav": "f4f51018f0edf6545c7f4801727d82ed3657cf01c27befd98a0e851c241201d6",
+    "render1/raw/density_0_8121907_mix.wav": "9a29dd97bbab296638becd346d4b542ea6315aa2c858f444e41dd1aedfbbbeb7",
+    "render1/raw/density_0_dna.wav": "4d5e384b73f04498019b11bb15188784d0dda2f8e45cda7e96fc48541f35bd5e",
+    "render1/raw/density_25_23117_cloud.wav": "bcb94c7d2dca2b5580fdf428fdb0836268aa612b9d45094c084e51cfc89f39b5",
+    "render1/raw/density_25_23117_mix.wav": "049d64fc9776aeb207f7fd59caf4c634cc5de0fc50bdc70caa20fafd8afe7092",
+    "render1/raw/density_25_61927_cloud.wav": "e764998d0320ab3fd86a8e28929ce9470c0967213a2951427cead44498d570e6",
+    "render1/raw/density_25_61927_mix.wav": "1c266459f4c08932524282a8c84243040ff61bd2e9176e76c1dfdeb5393723ab",
+    "render1/raw/density_25_8121907_cloud.wav": "fddd4dead9f4142f88faf60db7fa8d3002607b99d0e8b1b96df940a0baeebf63",
+    "render1/raw/density_25_8121907_mix.wav": "4c9eea5ee6759debee89bfd5c66adf2218ef91f22b11bebcfe08a7656ffe0567",
+    "render1/raw/density_25_dna.wav": "429e9ccf5de95841fcd4c01ba6fd498e33913318d1fec58b6581e2135a5b888a",
+    "render1/raw/density_50_23117_cloud.wav": "4f77fa612a610e401216e85f1bd1113cb41f5ea8f99ba35c7d01a001ac0054f3",
+    "render1/raw/density_50_23117_mix.wav": "d3983758dd35cc4548a84f21cf5a59ef227c55fe2f0301af1660f34d391e9dea",
+    "render1/raw/density_50_61927_cloud.wav": "a1b39e7821352a473029be26488c6e18eee8a4b075ab3d3d99a3f393e2d63032",
+    "render1/raw/density_50_61927_mix.wav": "56adceda9dcc6d463f440326caa52a1e15d51a58275536525a8fffe81339bcea",
+    "render1/raw/density_50_8121907_cloud.wav": "f768af3d20613b39a17e3bc613ca3ce433adc8b89ad4b430cad8b9e456d8a195",
+    "render1/raw/density_50_8121907_mix.wav": "742887c61ba5b2358858863be6b44e225e963924011a6d60603e7ee4e3f46275",
+    "render1/raw/density_50_dna.wav": "b28ab25e95c53c3706611c3e06bc223ac44a799d6738268c973c8fd52f46bc26",
+    "render1/raw/original_dna.wav": "4d5e384b73f04498019b11bb15188784d0dda2f8e45cda7e96fc48541f35bd5e",
+    "render1/report.json": "eac554f2a8ff79ecc3bb9a460a6394df1aceedc25df0615bb57560930bb74859",
+    "render1/review.html": "97c50e9c041c6044410e085acd36837d0882d106376603f7a63a773ec4678762",
+    "verification.json": "2fcd18eda3f12405fa71ab04e83eed027ce38dbc2b9c2029dada57f67dfdb6ae"
+  },
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\reference.wav": "31d8632b6f9305402e74cf29e682ecf55fc1b89be20b9b87e5dd529096f308c5",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\manifest.json": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\accepted_pair.wav": "62e44a9ba7998380cb13003d868f2882439f32b6e504862aac6c74ea1fe8e1b2",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\candidate_moments.npz": "b2a94315fd2c222cb4289b6241e79988dc50a65ed716b6c98aefd65fc1d28579",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\manifest.json": "edad05adc1d2f38c633e27841ee2cd32493cf9f1cf15a88a17948ef0ba63d6f8",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\report.json": "175d20a0415c9631ff45d1434bcc172ed7c1e45a6374e68962a98b06126c6f99",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\magnitude_78283_0.5.wav": "7a0155c28a61fca30e911b6a832af8f23442c0148ef7568b8043d51a6b330c51",
+    "E:\\VehicleSoundLab\\baselines\\temporal_texture_v1\\evidence\\magnitude1\\magnitude_78283_1.wav": "4b0e5a62a8d9c68fb1bca3e196ddaacb23d90ee55b382ac82a545eae8bda9e2c",
+    "E:\\VehicleSoundLab\\references\\analysis\\line_density_v1\\analysis2\\report.json": "f3a868e9f05626e5f17871876330c34f94328ded47395d7ca6b1ff49c141040a",
+    "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslSoundDna_probe.exe": "8c9b5dc7605bf81099073cc8715f5d646c2875a93f2e80edf526522951279b74",
+    "E:\\VehicleSoundLab-Git\\handoff-build\\bin\\Release\\VslResidual_probe.exe": "60ee076efc9b22a59fe66e842d82ecdee963e78b7695451280b52a0a81e8682c",
+    "E:\\VehicleSoundLab-Git\\voices\\dna_bank_v1\\V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\evidence\\raw\\measured.wav": "89106297fdd49d812dd96b16998e34d3a912770c579dc6e938a97ad5af120686",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\manifest.json": "c9e53c8ce0201cae9edf99e4f2cea83c69938a5ad55da10c86e5614eb40b2b46",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\evidence\\raw\\dna.wav": "b2ec634c807cdbd18b7d809dc0d8d33e066b4fb687ae5e761447f71ef1d7d88f"
+  },
+  "limits": [
+    "Measurement only: native-grid periodic-Hann spectra, energy in the strongest contiguous3/5bins allowed to move inside each nominal harmonic cell, compared with fixed-center support. Local translation does not compensate intrawindow chirp or identify a physical noise fraction. Window sizes change concentration baselines. A single short normalized recording and four same-seed C intervals are descriptive, not independent engine trials. A gate only permits a separate bounded experimental C render, never model or listening acceptance.",
+    "Movable-support concentration is not an oscillator/noise power fraction or a realism score",
+    "Finite-window chirps/AM can spread pure harmonic energy even when the local peak can translate",
+    "Different native grids/support widths have different stationary-noise baselines",
+    "No real intrawindow chirp or source/recording contribution is identified here",
+    "The experimental gate only authorizes a bounded separate engineering trial, not a physical separation recipe",
+    "Only if the predeclared local-concentration diagnostic gate permits. Bounded engineering trials, not measured noise percentages: multiply mean/basis/root of each harmonic by sqrt(1-amount*smoothstep(1200..1900Hz)), preserve common L/R gain and all correlation/RNG dimensions; use actual C output to fit nonnegative Welch residual debt. Retain original C LF stem/scale and accepted baseline. Three independent OSC-cloud seeds. No per-WAV normalization or model/default/driver promotion; old and new listener judgments remain separate. Static carrier cloud has no newly fitted temporal envelopes or physical-source identification.",
+    "C stems are rendered independently then summed offline; this is not a new combined realtime host",
+    "Nonnegative diagonal and coherence clipping do not guarantee exact full spectral-matrix restitution",
+    "Mean power gates do not establish loudness equality, temporal naturalness or perceptual quality",
+    "Fixed A is nearly dual-mono; this trial does not establish stereo widening or physical7.1.4",
+    "Same-target training fit and procedural seeds are not independent-recording generalization",
+    "Original direct-DFT null-bin precision failure is retained/reproduced; integer modular phase correction changed the oracle, not the plan threshold",
+    "Low profile rows and independent LF stem are invariant; high-harmonic AM sidebands can still affect lowpass mixed audio",
+    "HTTP byte checks/FFmpeg decoding do not prove browser interaction or perceived naturalness",
+    "Existing magnitude listening remains pending; this separate page creates no duplicate question or implied acceptance",
+    "Git residual copies have canonical LF; publication1 preserves the pre-mutation exit-code assertion failure; publication2 retains raw CRLF copies/pre-publication summary/index and exact normalized C-reader sample parity"
+  ],
+  "publication_normalization": {
+    "report": "publication2/report.json",
+    "report_sha256": "c35fe26ecbb71e6baa8b4a7273d6a32bceddcdac5a6b5b27bd890b7d9f8532f8",
+    "original_exports_preserved": true,
+    "token_sequences_exact": true,
+    "C_decoded_samples_exact": true
+  }
+}
