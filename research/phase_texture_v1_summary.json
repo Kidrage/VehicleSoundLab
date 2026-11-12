@@ -1,0 +1,1120 @@
+{
+  "schema": "vsl.phase-texture-summary/1",
+  "date": "2026-11-12",
+  "result": "offline_hypothesis_listening_only",
+  "latest_user_feedback": {
+    "schema": "vsl.listening-feedback/1",
+    "date": "2026-11-12",
+    "experiment": "hf_bandwidth_v1",
+    "user_feedback": "不够好，我都听了，方向不对，有明显的劣质合成器的音色在里面，不像车的机械发动机声。再优化一下，然后告诉我你的优化思路。",
+    "result": "rejected_timbre_direction",
+    "scope": "Latest raw-Hz standalone HF OSC supplementary comparisons; not a rejection of separately accepted fixed-context DNA and coherent LF",
+    "decision": "Do not promote static fixed-carrier HF covariance filling as a timbre improvement. Investigate source-linked spectral structure on the accepted baseline; mean power matching is insufficient."
+  },
+  "source_phase_observation": {
+    "frames": 225,
+    "selected_hz": [
+      1900,
+      8000
+    ],
+    "grid_limit_microseconds": 20,
+    "boundary_fraction": 0.4,
+    "alternating_harmonic_delay_correlation": 0.5876300566427365,
+    "fast_delay_rms_microseconds": 5.449858107068895,
+    "engineering_highpass_hz": 20,
+    "warning": "Bounded phase-coordinate fit can contain clock error, source mixing and estimation noise; not measured crank jitter or a validated causal model"
+  },
+  "strength_policy": {
+    "source_phase_qualified": false,
+    "full_strength_microseconds": 4.0,
+    "meaning": "Explicit engineering hypothesis; source phase estimate not reliable enough for calibration"
+  },
+  "known_controls": {
+    "static_delay_recovery_error_seconds": 1.6940658945086007e-21,
+    "legacy_C_error_FS": 5.521291202015277e-08,
+    "zero_motion_delta_exact": true,
+    "low_harmonic_mask_exact_zero": true
+  },
+  "trials": [
+    {
+      "seed": 8121907,
+      "amount": 0.5,
+      "maximum_power_change_db": 0.0017571819462138235,
+      "actual_delay_rms_microseconds": 1.6134124783650352,
+      "delay_bound_microseconds": 3.7838080571378874,
+      "motion_below4Hz_power_fraction": 0.0002367307607693925,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.0003638736984294547,
+            -0.00036387418126672177
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999999707,
+            1.3679927770575145e-08
+          ],
+          "complex_coherence_error": 1.1509924908517869e-10
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.0009719593380952506,
+            -0.0009719590398401331
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999625,
+            4.240853632586092e-09
+          ],
+          "complex_coherence_error": 3.5104131162424074e-11
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            0.0017571807085876403,
+            0.0017571819462138235
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.999999999999877,
+            7.314804432787103e-09
+          ],
+          "complex_coherence_error": 5.655061186590564e-11
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            -0.00011419271707542513,
+            -0.00011419281379808455
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997671,
+            2.8344546221728222e-08
+          ],
+          "complex_coherence_error": 1.7832413934531405e-10
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            0.001519780776681434,
+            0.001519779615356817
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999991317,
+            -3.846483898425472e-09
+          ],
+          "complex_coherence_error": 5.659377232554554e-11
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            -0.0008929266697607115,
+            -0.0008929221277848134
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999946462,
+            -7.08424704849971e-09
+          ],
+          "complex_coherence_error": 6.211578517202964e-11
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            0.00023770696230403465,
+            0.0002376867962143654
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999817052,
+            3.0693232858132214e-07
+          ],
+          "complex_coherence_error": 6.642340413705936e-10
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            2.773811806937742e-06,
+            2.758957238958877e-06
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999083103,
+            1.8729453085163895e-07
+          ],
+          "complex_coherence_error": 8.22043286463263e-10
+        }
+      ],
+      "raw_sha256": "781b83fa3632b10b92aa2aad0ff966a31f75e315256193b5d36f97c9a4411aa2"
+    },
+    {
+      "seed": 8121907,
+      "amount": 1.0,
+      "maximum_power_change_db": 0.004029497658884104,
+      "actual_delay_rms_microseconds": 3.2268249567300704,
+      "delay_bound_microseconds": 7.567616114275775,
+      "motion_below4Hz_power_fraction": 0.0002367307607693925,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.0009278812415231214,
+            -0.0009278822534075205
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999999707,
+            1.3486573690158481e-08
+          ],
+          "complex_coherence_error": 3.084533295018423e-10
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.00253487333624692,
+            -0.002534872823324646
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999625,
+            4.236825224048996e-09
+          ],
+          "complex_coherence_error": 3.9132539699448316e-11
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            0.004029494638710964,
+            0.004029497658884104
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.999999999999877,
+            7.269512304211647e-09
+          ],
+          "complex_coherence_error": 1.0184274044131291e-10
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            -0.00016241744122507122,
+            -0.00016241703078086222
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997672,
+            2.8620337778145907e-08
+          ],
+          "complex_coherence_error": 4.5411569576298285e-10
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            0.0030583035509424527,
+            0.003058300020983825
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.999999999999132,
+            -3.777244479344674e-09
+          ],
+          "complex_coherence_error": 1.2583319140590565e-10
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            -0.0020082988896301173,
+            -0.0020082885211022182
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999946401,
+            -6.826065123687328e-09
+          ],
+          "complex_coherence_error": 3.2029770993014165e-10
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            0.0005264883523035379,
+            0.0005264529214198692
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999817132,
+            3.078577970347387e-07
+          ],
+          "complex_coherence_error": 1.589702494821155e-09
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            0.0004542284604287019,
+            0.00045419025143034273
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.999999999908352,
+            1.875812436103971e-07
+          ],
+          "complex_coherence_error": 1.108756046683684e-09
+        }
+      ],
+      "raw_sha256": "625adf3d26b217d372d3cf43c8721ba0f0a789b4762d62ff5da670639a11a190"
+    },
+    {
+      "seed": 23117,
+      "amount": 0.5,
+      "maximum_power_change_db": 0.0009823905850509876,
+      "actual_delay_rms_microseconds": 1.5590347533462943,
+      "delay_bound_microseconds": 3.7618436325317464,
+      "motion_below4Hz_power_fraction": 0.0002936482235283847,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.0003138045666896919,
+            -0.00031380435288863064
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.999999999999971,
+            1.3778422033589202e-08
+          ],
+          "complex_coherence_error": 1.660498607446182e-11
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.0003128234195812546,
+            -0.00031282441178849877
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999628,
+            4.210349404475741e-09
+          ],
+          "complex_coherence_error": 6.560835927216701e-11
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            0.0009823905850509876,
+            0.000982389923788626
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999998769,
+            7.3615989155004345e-09
+          ],
+          "complex_coherence_error": 9.75612915246506e-12
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            3.53358816345242e-05,
+            3.5336034904448996e-05
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997672,
+            2.8153887248706084e-08
+          ],
+          "complex_coherence_error": 1.2334833681459242e-11
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            -0.00046110945344187613,
+            -0.00046111102350186045
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.999999999999131,
+            -3.6879791179013697e-09
+          ],
+          "complex_coherence_error": 2.1509855284434066e-10
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            0.00043932473680865494,
+            0.00043932556990909264
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999946533,
+            -6.892881867911284e-09
+          ],
+          "complex_coherence_error": 2.5348096548469594e-10
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            -0.00040934975867422353,
+            -0.00040933243524380095
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999816936,
+            3.070135133621144e-07
+          ],
+          "complex_coherence_error": 7.454188221782707e-10
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            -0.00017468049669996596,
+            -0.000174691503664915
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999082981,
+            1.863169166450327e-07
+          ],
+          "complex_coherence_error": 1.5557092056372196e-10
+        }
+      ],
+      "raw_sha256": "d8f3451082dd062333bf673a6df5353c518010626bbb7c03ea4a87f9aadba0aa"
+    },
+    {
+      "seed": 23117,
+      "amount": 1.0,
+      "maximum_power_change_db": 0.0024591948830884713,
+      "actual_delay_rms_microseconds": 3.1180695066925885,
+      "delay_bound_microseconds": 7.523687265063493,
+      "motion_below4Hz_power_fraction": 0.0002936482235283847,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.0008272125146983074,
+            -0.0008272122831924802
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999999708,
+            1.3707401340849767e-08
+          ],
+          "complex_coherence_error": 8.762567881062662e-11
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.001174015506431749,
+            -0.00117401763748003
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999626,
+            4.143917028274232e-09
+          ],
+          "complex_coherence_error": 1.3204073547362905e-10
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            0.0024591948830884713,
+            0.002459194312204023
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999998768,
+            7.362839382750479e-09
+          ],
+          "complex_coherence_error": 8.515661903144409e-12
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            0.0001272607350039173,
+            0.00012726171215530647
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997672,
+            2.819775633788773e-08
+          ],
+          "complex_coherence_error": 3.153425550644191e-11
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            -0.0008736306589126496,
+            -0.0008736340198812754
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999991306,
+            -3.42443990923723e-09
+          ],
+          "complex_coherence_error": 4.786377615085677e-10
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            0.0006473864114561843,
+            0.0006473895229802433
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.999999999994655,
+            -6.353392706097461e-09
+          ],
+          "complex_coherence_error": 7.929701273012427e-10
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            -0.0006481082868919569,
+            -0.0006480700550824145
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999816875,
+            3.0802210509685535e-07
+          ],
+          "complex_coherence_error": 1.7540105569355345e-09
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            -1.838564571183188e-05,
+            -1.8417763601586405e-05
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999083174,
+            1.8555471901714777e-07
+          ],
+          "complex_coherence_error": 9.177685486587294e-10
+        }
+      ],
+      "raw_sha256": "61a5f0672bfeec2dc414b62e7b30aa093980ac1ee5319e4f02b243092ea5cb17"
+    },
+    {
+      "seed": 61927,
+      "amount": 0.5,
+      "maximum_power_change_db": 0.001161352786405799,
+      "actual_delay_rms_microseconds": 1.696100044035464,
+      "delay_bound_microseconds": 3.7391000109782064,
+      "motion_below4Hz_power_fraction": 0.00029494983100019143,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.00014640151934373427,
+            -0.00014640049827794658
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.999999999999971,
+            1.3681245042884091e-08
+          ],
+          "complex_coherence_error": 1.1378197677672033e-10
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.0003130519226153927,
+            -0.00031305050183731145
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999627,
+            4.2401031818328804e-09
+          ],
+          "complex_coherence_error": 3.585458191493363e-11
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            7.416039827926662e-05,
+            7.416107640976232e-05
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999998765,
+            7.459378485187165e-09
+          ],
+          "complex_coherence_error": 8.802344053489522e-11
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            0.0003626172458948064,
+            0.0003626187594182857
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997667,
+            2.7952917711311378e-08
+          ],
+          "complex_coherence_error": 2.1330437107169753e-10
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            0.0003684209592109062,
+            0.00036841983686655857
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999991307,
+            -3.86482156555628e-09
+          ],
+          "complex_coherence_error": 3.825610519004616e-11
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            -0.0010145486957068152,
+            -0.0010145376662774206
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999946477,
+            -6.628135988784893e-09
+          ],
+          "complex_coherence_error": 5.182268446262336e-10
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            -0.00022314470558586398,
+            -0.00022313698105471777
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999816892,
+            3.057682706468121e-07
+          ],
+          "complex_coherence_error": 4.998238932841123e-10
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            0.001161352786405799,
+            0.0011613406185291822
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.999999999908324,
+            1.8635346328243825e-07
+          ],
+          "complex_coherence_error": 1.1902428766621969e-10
+        }
+      ],
+      "raw_sha256": "b2355abf85c1f9b12bc43dae25a04ddda2b098bd6d928c15dabdc37c16817308"
+    },
+    {
+      "seed": 61927,
+      "amount": 1.0,
+      "maximum_power_change_db": 0.0028273136651925965,
+      "actual_delay_rms_microseconds": 3.392200088070928,
+      "delay_bound_microseconds": 7.478200021956413,
+      "motion_below4Hz_power_fraction": 0.00029494983100019143,
+      "band_changes": [
+        {
+          "hz": [
+            1200,
+            1500
+          ],
+          "power_delta_db": [
+            -0.0005364429489592584,
+            -0.0005364411429534555
+          ],
+          "reference_coherence": [
+            0.9999999999999707,
+            1.3795027019660324e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999999708,
+            1.3475142236646714e-08
+          ],
+          "complex_coherence_error": 3.1988478301362905e-10
+        },
+        {
+          "hz": [
+            1500,
+            1900
+          ],
+          "power_delta_db": [
+            -0.0012706959549158316,
+            -0.0012706931947084439
+          ],
+          "reference_coherence": [
+            0.9999999999999627,
+            4.275957763747814e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999999626,
+            4.2087298293001465e-09
+          ],
+          "complex_coherence_error": 6.722793444775918e-11
+        },
+        {
+          "hz": [
+            1900,
+            2400
+          ],
+          "power_delta_db": [
+            0.0006922519299793833,
+            0.0006922541537892924
+          ],
+          "reference_coherence": [
+            0.9999999999998769,
+            7.3713550446528995e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999998769,
+            7.534317076961012e-09
+          ],
+          "complex_coherence_error": 1.6296203230811202e-10
+        },
+        {
+          "hz": [
+            2400,
+            3000
+          ],
+          "power_delta_db": [
+            0.0008446573073091504,
+            0.0008446612816617135
+          ],
+          "reference_coherence": [
+            0.9999999999997669,
+            2.8166222082383047e-08
+          ],
+          "candidate_coherence": [
+            0.9999999999997666,
+            2.7789173779843495e-08
+          ],
+          "complex_coherence_error": 3.7704830253961693e-10
+        },
+        {
+          "hz": [
+            3000,
+            3800
+          ],
+          "power_delta_db": [
+            0.0007398083994747607,
+            0.0007398056160127053
+          ],
+          "reference_coherence": [
+            0.9999999999991309,
+            -3.903077670745682e-09
+          ],
+          "candidate_coherence": [
+            0.9999999999991311,
+            -3.843256195769295e-09
+          ],
+          "complex_coherence_error": 5.982147497679853e-11
+        },
+        {
+          "hz": [
+            3800,
+            4800
+          ],
+          "power_delta_db": [
+            -0.0022467107653104863,
+            -0.002246688124403255
+          ],
+          "reference_coherence": [
+            0.9999999999946521,
+            -7.146362833393038e-09
+          ],
+          "candidate_coherence": [
+            0.999999999994644,
+            -5.819885043446262e-09
+          ],
+          "complex_coherence_error": 1.326477789971535e-09
+        },
+        {
+          "hz": [
+            4800,
+            6000
+          ],
+          "power_delta_db": [
+            -0.00042342324983720044,
+            -0.00042340476035927733
+          ],
+          "reference_coherence": [
+            0.9999999999817005,
+            3.062680945399679e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999816809,
+            3.057370339389493e-07
+          ],
+          "complex_coherence_error": 5.310606013822067e-10
+        },
+        {
+          "hz": [
+            6000,
+            8000
+          ],
+          "power_delta_db": [
+            0.0028273136651925965,
+            0.002827276352105348
+          ],
+          "reference_coherence": [
+            0.9999999999082906,
+            1.8647248756541323e-07
+          ],
+          "candidate_coherence": [
+            0.9999999999083776,
+            1.8559172599012132e-07
+          ],
+          "complex_coherence_error": 8.807615795928615e-10
+        }
+      ],
+      "raw_sha256": "0526ee1e73eac1901d847a61e739cfe11fde34d264b945564b00d99fcf4fd6b7"
+    }
+  ],
+  "clips": [
+    {
+      "file": "accepted_original.wav",
+      "sha256": "b83453689101bfcf35bc7d21bee9d224ae3d70222d4bf31aac830da2d3c64a86",
+      "url": "http://127.0.0.1:8789/references/analysis/phase_texture_v1/trial2/accepted_original.wav",
+      "peak_FS": 0.5374482066083357,
+      "http_decode": true
+    },
+    {
+      "file": "short_reference.wav",
+      "sha256": "067c3d7c451b38ecde38f8898c9ea587153de681f741ec964c4b4b09275fb43b",
+      "url": "http://127.0.0.1:8789/references/analysis/phase_texture_v1/trial2/short_reference.wav",
+      "peak_FS": 0.37466052174568176,
+      "http_decode": true
+    },
+    {
+      "file": "common_phase_0.5.wav",
+      "sha256": "5fe83d91a44d5bb7371164d07124e20c9a800a8f7a5f26d11b2938f92142d7d1",
+      "url": "http://127.0.0.1:8789/references/analysis/phase_texture_v1/trial2/common_phase_0.5.wav",
+      "peak_FS": 0.5384384541622534,
+      "http_decode": true
+    },
+    {
+      "file": "common_phase_1.wav",
+      "sha256": "5568d81d122d6bbcd9ca5c3bf840d2067007d4de7e72ce15d32c92ddcee9c97c",
+      "url": "http://127.0.0.1:8789/references/analysis/phase_texture_v1/trial2/common_phase_1.wav",
+      "peak_FS": 0.53941209963442,
+      "http_decode": true
+    }
+  ],
+  "verification": {
+    "schema": "vsl.phase-texture-verification/1",
+    "result": "pass",
+    "human_accepted": false,
+    "C_H_unchanged": 472,
+    "accepted_baseline_PCM24_max_error_FS": 1.189763921827236e-07,
+    "new_CTests_run": false,
+    "device_checked": false,
+    "browser_interaction": false,
+    "page_sha256": "363afe543a96ac52d56c114c4b0d3c12318e7af48a398511a08233f94ff45423",
+    "page": "http://127.0.0.1:8789/references/analysis/phase_texture_v1/trial2/index.html",
+    "source_phase_calibration": "not_passed"
+  },
+  "runtime_changed": false,
+  "human_accepted": false,
+  "limits": [
+    "Offline same accepted A moving-tailpipe context; not physical crank/firing jitter identification",
+    "Bounded shared HF phase motion is a synthesis hypothesis, not restoration of all original mechanical detail",
+    "No independent HF carrier cloud, added noise, EQ brightness or per-file loudness normalization",
+    "No default/source-model/native driver/UI/take changes; no device or multichannel test"
+  ],
+  "input_sha256": {
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\evidence\\fit1\\reference.wav": "31d8632b6f9305402e74cf29e682ecf55fc1b89be20b9b87e5dd529096f308c5",
+    "E:\\VehicleSoundLab\\baselines\\residual_motion_v1\\manifest.json": "c6504a916d2f4f3140c2be43d643d9d500680d8d97d88b5367159eaaee17cc32",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\evidence\\raw\\dna.wav": "b2ec634c807cdbd18b7d809dc0d8d33e066b4fb687ae5e761447f71ef1d7d88f",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\manifest.json": "c9e53c8ce0201cae9edf99e4f2cea83c69938a5ad55da10c86e5614eb40b2b46",
+    "E:\\VehicleSoundLab\\baselines\\coherent_low_v1\\evidence\\raw\\measured.wav": "89106297fdd49d812dd96b16998e34d3a912770c579dc6e938a97ad5af120686",
+    "E:\\VehicleSoundLab-Git\\voices\\dna_bank_v1\\V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7"
+  },
+  "current_source_sha256": {
+    "AGENTS.md": "8d2d37050298a9920f0fc3183ac5ceea3250f88068b701eb8758832cec6e7937",
+    "README.md": "2da90ef02ef5dc9add4f32a8723689089c6e3661f06cfb66debf931db6a65db6",
+    "research/听评记录.md": "1380953a35298a76f8614ec0704a95bb2f99220346b4fecabb9f3aa7b9912dea",
+    "research/hf_bandwidth_v1_listening.json": "4a13e6d66231a82fd84ac95da8c3ac36736ab8c4847ac5aed6ab671151365b73",
+    "research/主声线共同微扰V1.md": "88494bb60a60565d076b3c14a2fad200dbcaf6d479f44ab8851ff312cefc0d00",
+    "handoff/声纹沉淀与控制边界.md": "e2bb7afc7fb7cfe5131fc32e64f9425e42c5a573b4dc5f48ebde13842bc5c533",
+    "tools/try_phase_texture_v1.py": "f502a67dea8e2f4070028f9cee4bf57ab4fed2eac57b07e4b8e390b99c4a3870",
+    "tools/finalize_phase_texture_v1.py": "6ebbbda8305de842ae1b7f374e337debeb1c109fe9c4f59520417eff2412577e",
+    "tools/phase_texture_v1/source.py": "2499f19e65ca4782396ae905b54238d02ef99eed31436730fca069ac13fa1c48",
+    "tools/phase_texture_v1/render.py": "c33fb7c60f66671d5fc32d1b9679e101559b6dabdac16f4590e93d3cb1ffcad3"
+  },
+  "evidence_sha256": {
+    "trial1/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "trial1/exact_sources/tools/harmonic_magnitude_v1/legacy.py": "1f63eaba7c9664395a513f09d2da03fb2fc789d2b17845f81cfc7d0c4e2647ba",
+    "trial1/exact_sources/tools/phase_texture_v1/render.py": "c33fb7c60f66671d5fc32d1b9679e101559b6dabdac16f4590e93d3cb1ffcad3",
+    "trial1/exact_sources/tools/phase_texture_v1/source.py": "2499f19e65ca4782396ae905b54238d02ef99eed31436730fca069ac13fa1c48",
+    "trial1/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "trial1/exact_sources/tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+    "trial1/exact_sources/tools/try_phase_texture_v1.py": "6acd7616cc706311400bd771609892f49f892ed827edc311560aee0ae116cbf8",
+    "trial1/report.json": "b5279aabb61e4f1dd72fd5a625b23b5122b5bcad73a2625115c101fa8aabce18",
+    "trial2/accepted_original.wav": "b83453689101bfcf35bc7d21bee9d224ae3d70222d4bf31aac830da2d3c64a86",
+    "trial2/common_phase_0.5.wav": "5fe83d91a44d5bb7371164d07124e20c9a800a8f7a5f26d11b2938f92142d7d1",
+    "trial2/common_phase_1.wav": "5568d81d122d6bbcd9ca5c3bf840d2067007d4de7e72ce15d32c92ddcee9c97c",
+    "trial2/exact_sources/tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "trial2/exact_sources/tools/harmonic_magnitude_v1/legacy.py": "1f63eaba7c9664395a513f09d2da03fb2fc789d2b17845f81cfc7d0c4e2647ba",
+    "trial2/exact_sources/tools/phase_texture_v1/render.py": "c33fb7c60f66671d5fc32d1b9679e101559b6dabdac16f4590e93d3cb1ffcad3",
+    "trial2/exact_sources/tools/phase_texture_v1/source.py": "2499f19e65ca4782396ae905b54238d02ef99eed31436730fca069ac13fa1c48",
+    "trial2/exact_sources/tools/residual_osc_v1/spectrum.py": "2c806ba28fe384fd4d72ff6b5afa6519c79cc8c648505f713b4c27d9f92dd4c7",
+    "trial2/exact_sources/tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+    "trial2/exact_sources/tools/try_phase_texture_v1.py": "f502a67dea8e2f4070028f9cee4bf57ab4fed2eac57b07e4b8e390b99c4a3870",
+    "trial2/index.html": "363afe543a96ac52d56c114c4b0d3c12318e7af48a398511a08233f94ff45423",
+    "trial2/raw_23117_0.5.wav": "d8f3451082dd062333bf673a6df5353c518010626bbb7c03ea4a87f9aadba0aa",
+    "trial2/raw_23117_1.wav": "61a5f0672bfeec2dc414b62e7b30aa093980ac1ee5319e4f02b243092ea5cb17",
+    "trial2/raw_61927_0.5.wav": "b2355abf85c1f9b12bc43dae25a04ddda2b098bd6d928c15dabdc37c16817308",
+    "trial2/raw_61927_1.wav": "0526ee1e73eac1901d847a61e739cfe11fde34d264b945564b00d99fcf4fd6b7",
+    "trial2/raw_8121907_0.5.wav": "781b83fa3632b10b92aa2aad0ff966a31f75e315256193b5d36f97c9a4411aa2",
+    "trial2/raw_8121907_1.wav": "625adf3d26b217d372d3cf43c8721ba0f0a789b4762d62ff5da670639a11a190",
+    "trial2/report.json": "702d33cdb1c63a7a9191a409146f12cf60adc4d9716be67f81f9ac2a94113bab",
+    "trial2/short_reference.wav": "067c3d7c451b38ecde38f8898c9ea587153de681f741ec964c4b4b09275fb43b",
+    "trial2/source_phase_observation.npz": "f2098d34f13be8fe24da38454902d8587cdba72d012b30314642b992abec2368",
+    "verification1/report.json": "8f47a972ff9de5a4b165a1468622f0b3573a5439773f9b7af15dc06a9d30d3b8"
+  }
+}
