@@ -1,0 +1,176 @@
+{
+  "schema": "vsl.stereo-resonance-summary/1",
+  "date": "2026-11-12",
+  "result": "stereo_candidate_technical_pass",
+  "C_H_rows": 529,
+  "unchanged_prior_C_H": 521,
+  "new_C_H": 8,
+  "Ctests_passed": 52,
+  "C_H_index_sha256": "0062e162279ebc8bbebcbcf56355f07d4f54053feee860e3fab8c2ba803c8e31",
+  "source_seconds": [
+    38.48,
+    39.51
+  ],
+  "source_context": "A startup-settling cabin; not confirmed warm idle/exterior",
+  "main_model_unchanged": true,
+  "DNA_first8s_exact_to_frozen": true,
+  "profile_path": "voices/stereo_resonance_v1/A cabin settle.sres",
+  "profile_sha256": "45346dc779fcdb37057590b732bbeea6d92023f0e34d6ccbe1868b266667a475",
+  "fitted_bands": [
+    [
+      400,
+      600
+    ],
+    [
+      850,
+      1200
+    ],
+    [
+      1200,
+      1600
+    ],
+    [
+      1600,
+      2200
+    ],
+    [
+      2200,
+      3000
+    ],
+    [
+      3000,
+      4000
+    ],
+    [
+      4000,
+      6000
+    ],
+    [
+      6000,
+      8000
+    ]
+  ],
+  "skipped": [
+    {
+      "band": [
+        600,
+        850
+      ],
+      "debt_eigenvalues": [
+        -1.992261889701948e-05,
+        0.0006915233261702702
+      ],
+      "reason": "Non-PSD additive debt; no clipping or harmonic attenuation"
+    }
+  ],
+  "controls": {
+    "known_VAR3_predictor": {
+      "coefficient_error": 1.6653345369377348e-16,
+      "innovation_covariance_error": 2.7755575615628914e-17
+    },
+    "signed_delay_channel_swap": {
+      "density_error": 0.0,
+      "swap_error": 3.3881317890172014e-21,
+      "Welch": [
+        {
+          "power_db": [
+            -0.009839061848173385,
+            0.047836600173030916
+          ],
+          "coherence_error": 0.003368924434468523
+        },
+        {
+          "power_db": [
+            0.001756123503728216,
+            0.00022068585720129763
+          ],
+          "coherence_error": 0.0014291333595689746
+        },
+        {
+          "power_db": [
+            0.0075327013905187295,
+            0.0003611665676468985
+          ],
+          "coherence_error": 0.001961358801790227
+        }
+      ]
+    },
+    "known_C_VAR3_SOS_error": 1.3877787807814457e-16
+  },
+  "continuous_C_trials": [
+    {
+      "seed": 8121907,
+      "frames": 2304000,
+      "supported_max_power_error_db": 0.1557358849415811,
+      "supported_max_coherence_error": 0.02219301678661283,
+      "low20_300_change_db": [
+        2.138326256688161e-05,
+        8.86255304220302e-06
+      ],
+      "peak_raw_FS": 0.8284515228210537,
+      "performance": {
+        "frames": 2304000,
+        "generation_wall_seconds": 1.71344379,
+        "maximum_block_ms": 0.762199983,
+        "not_device_test": true
+      }
+    },
+    {
+      "seed": 8121919,
+      "frames": 2304000,
+      "supported_max_power_error_db": 0.15101083100914792,
+      "supported_max_coherence_error": 0.022453780302954966,
+      "low20_300_change_db": [
+        7.965123814802767e-06,
+        5.030010873621294e-06
+      ],
+      "peak_raw_FS": 0.8645112330910332,
+      "performance": {
+        "frames": 2304000,
+        "generation_wall_seconds": 1.72303039,
+        "maximum_block_ms": 0.980000012,
+        "not_device_test": true
+      }
+    },
+    {
+      "seed": 8121931,
+      "frames": 2304000,
+      "supported_max_power_error_db": 0.22024769259302784,
+      "supported_max_coherence_error": 0.020322479309138722,
+      "low20_300_change_db": [
+        4.4481130575890763e-07,
+        1.8331111988051425e-06
+      ],
+      "peak_raw_FS": 0.8581687420728142,
+      "performance": {
+        "frames": 2304000,
+        "generation_wall_seconds": 1.7286501,
+        "maximum_block_ms": 1.1952999,
+        "not_device_test": true
+      }
+    }
+  ],
+  "maximum_C_theory_power_error_db": 0.11466724641613857,
+  "maximum_C_theory_coherence_error": 0.013927524906429881,
+  "maximum_reference_half_drift_db": 3.8548975013709446,
+  "review_url": "http://127.0.0.1:8789/references/analysis/stereo_resonance_v1/review1/index.html",
+  "review_files": 27,
+  "listening_accepted": false,
+  "driver_integrated": false,
+  "native_integrated": false,
+  "new_room": false,
+  "new_source_or_RPM_calibration": false,
+  "full_idle_or_acceleration_calibrated": false,
+  "limits": [
+    "One startup-settling cabin context, not confirmed warm idle or exterior transfer",
+    "600..850Hz remains unfilled; positive-debt detail cannot repair an indefinite covariance difference",
+    "Stationary new excitation; no validated cycle envelope, acceleration/load axis or physical source separation",
+    "No native/device/take/driver/physical7.1.4 or listening acceptance; standalone block timing is diagnostic only"
+  ],
+  "evidence_sha256": {
+    "references/analysis/stereo_resonance_v1/fit2/report.json": "2320ed27535a0eae54359526f84ac1f1d546968aa7168abb5dc302d11b910576",
+    "references/analysis/stereo_resonance_v1/verify1/report.json": "0328bc44e15fd16e2cf2d7e7060cc81a60da993d34de5f14be3d29f78690c478",
+    "references/analysis/stereo_resonance_v1/review1/report.json": "9f88e4280eaa74cf2ef4974dc007481277c4413dc7d7f382cd743d0ef328cba1",
+    "references/analysis/idle_target_v2/inspect1/report.json": "c0be2bcfcfde3985e9ee3cf5606382059326a52b4fde12fcb67a2bcb66f7135a"
+  }
+}

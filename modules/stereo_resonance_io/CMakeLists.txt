@@ -1,0 +1,6 @@
+add_library(stereo_resonance_io STATIC profile.c)
+target_include_directories(stereo_resonance_io PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(stereo_resonance_io PUBLIC stereo_resonance vsl_core)
+if(MSVC)
+  target_compile_options(stereo_resonance_io PRIVATE /W4 /we4013 /utf-8 /fp:strict)
+endif()

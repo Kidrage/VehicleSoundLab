@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[双声道连续共振核](../modules/stereo_resonance/README.md)：`profile.*`做非实时稳定证书校验，`voice.*`连续生成2×2跨延迟VAR／独立激励／SOS／18ms量平滑，独立`stereo_resonance_io/profile.*`事务加载。旧521份C/H不变，8新增、索引529；52项CTest、已知多阶／相位方向／声道交换及三48秒C统计核对通过。A启动后车内候选无PCM／新房间／驾驶／行程接入，600–850Hz缺口及热怠速／负载标定未解决，见[证据与限制](../research/低转双声道连续细节V1.md)。
+
 最新[踏板状态核查](../research/踏板状态与细节覆盖V1.md)：`experiments/drive_resonance_v1/device.c --pedals`复用原驾驶输入／设备／行程；新增`inspect.c/.h`只在设备停止后离线导出分轨／状态，不进入实时库。521份C/H，518旧文件不变、1实验宿主适配、2新增。七种运行工况走通，但稳定850工程RPM怠速细节为0，加速也仅短暂支持；下一步需补参数与转速依据。
 
 当前新增[drive_resonance](../modules/drive_resonance/README.md)：`bank`非实时拥有匹配锚点参数；`voice`预热／消费同一主DNA相位和周期原点，无独立RPM时钟。`AdConfig.resonant_bank`、`AdMix.resonant_gain`、`AdCapture.resonant_raw/resonant`连接同一驾驶／混音链；`atlas_take`拥有库、schema6／28字段及新增源哈希。原生研究入口复用滑条6并停用旧残差，默认0。519份C/H＝原511中492不变／19适配＋8新增；51项CTest、84旧WAV及短设备录放通过。仅A低转add候选，行驶35%完整配方及全RPM／负载标定仍未接通。

@@ -1,0 +1,7 @@
+add_library(stereo_resonance STATIC profile.c voice.c)
+target_include_directories(stereo_resonance PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(stereo_resonance PUBLIC resonant_detail)
+target_compile_features(stereo_resonance PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(stereo_resonance PRIVATE /W4 /we4013 /utf-8 /fp:strict)
+endif()

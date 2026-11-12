@@ -1,0 +1,57 @@
+{
+  "schema": "vsl.idle-target-observation/1",
+  "date": "2026-11-12",
+  "inspection_report_sha256": "c0be2bcfcfde3985e9ee3cf5606382059326a52b4fde12fcb67a2bcb66f7135a",
+  "video_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+  "inspected_boards": [
+    "E/board_1.jpg",
+    "E/board_2.jpg",
+    "E/board_3.jpg"
+  ],
+  "frames": 17,
+  "observation": [
+    {
+      "seconds": [
+        45.867,
+        46.267
+      ],
+      "gear_display": 1,
+      "speed_display_kmh": 0,
+      "tach_description": "Pointer rises from approximately1500..2000 through about3700RPM; visually read, not ECU telemetry"
+    },
+    {
+      "seconds": [
+        46.4,
+        47.6
+      ],
+      "gear_display": 1,
+      "speed_display_kmh": 0,
+      "tach_description": "Pointer near4500RPM; stationary elevated-rev staging, not stable idle"
+    },
+    {
+      "seconds": 47.733,
+      "gear_display": 1,
+      "dash_speed_kmh": 0,
+      "phone_speed_kmh": 1
+    },
+    {
+      "seconds": 47.867,
+      "gear_display": 1,
+      "dash_speed_kmh": 7,
+      "phone_speed_kmh": 4
+    },
+    {
+      "seconds": 48,
+      "gear_display": 1,
+      "dash_speed_kmh": 17,
+      "phone_speed_kmh": 11,
+      "tach_description": "Pointer approximately5600RPM"
+    }
+  ],
+  "decision": "Exclude E46..47 as idle. Keep as stationary staging-to-launch context only.",
+  "not_established": [
+    "Actual pedal/brake/clutch/load/boost/fueling inputs",
+    "Activation of launch/thrust control",
+    "ECU RPM accuracy, dash/phone latency or calibrated audio/video offset"
+  ]
+}
