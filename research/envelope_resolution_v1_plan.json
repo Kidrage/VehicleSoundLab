@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.envelope-resolution-plan/1",
+  "scope": "Observation-gap-informed real amplitude refinement; original17 and full33/HF remain mandatory",
+  "parent_plan": "research/observed_topology_v1_plan.json",
+  "spacing_rule": "min(previous_spacing, reciprocal_minimum_observed_order_gap)",
+  "maximum_evaluations": 120,
+  "minimum_envelope_transfer_accuracy": 1e-11,
+  "diagnostic_case": "unknown_thirty_six",
+  "policy": [
+    "Spacing is determined from measured candidate orders only, without fixture amplitudes, phase, labels or heldout lines",
+    "Keep real positive bounded envelopes, fixed coefficient phase, the common phase and minority departure bounds unchanged",
+    "Transfer the previous actually fitted envelope into the nested spline space; no oracle initialization for the estimator",
+    "One declared refinement, no knot-spacing sweep or phase-threshold relaxation",
+    "A spline spacing is a representation scale, not a strict band limit or physical identifiability proof",
+    "Save fitted parameters before monotonic/support assessment; unsupported coordinates are never resampled",
+    "The dense diagnostic alone cannot qualify extraction or authorize new real media, profiles, C or audio"
+  ]
+}

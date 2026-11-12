@@ -1,0 +1,309 @@
+{
+  "schema": "vsl.envelope-resolution-publication/1",
+  "result": "envelope_resolution_not_qualified",
+  "reports": {
+    "dense1": {
+      "path": "references/analysis/envelope_resolution_v1/dense1/report.json",
+      "sha256": "324618e20f5eab506e8d1d2420800e7bb109513ca15eb6f0c5375dad30e87402",
+      "result": "dense_diagnostic_rejected"
+    },
+    "bias1": {
+      "path": "references/analysis/envelope_resolution_v1/bias1/report.json",
+      "sha256": "2536bdb520d290f28265136b896b5a81959b8c6bf8ad9e98293054666d476e96",
+      "result": "diagnosed_no_qualification_change"
+    },
+    "tangent1": {
+      "path": "references/analysis/envelope_resolution_v1/tangent1/report.json",
+      "sha256": "076b1ff649d468cd1ad3e96a3e7f75d218b38ac96561da1af3e0295ae7310a88",
+      "result": "diagnosed_linear_sensitivity_no_qualification_change"
+    },
+    "tangent2": {
+      "path": "references/analysis/envelope_resolution_v1/tangent2/report.json",
+      "sha256": "ab97ed3a1acb230b9a75aa2b08f9b467b58db8bac57eaf58ed5e12c7d40eade9",
+      "result": "diagnosed_linear_sensitivity_no_qualification_change"
+    }
+  },
+  "sources": {
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "handoff/算法说明.md": "7e6744ca38685e7b87b190bc43e023edba90ff56fc7faec7e9cb291fc0c4f1b7",
+    "tools/diagnose_envelope_bias_v1.py": "4ba5bd539bbe42f208c0613d9b7fd39759241fb7597f128692ab4f0ee434047c",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "tools/envelope_resolution_v1/checks.py": "9918d1a2b33a4a9bcfc38f8674f664015a766c57fb4d34ac6bbd85a3bf41fcd3",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "research/实慢幅度分辨率V1.md": "dba067d86749094a1f1925fb174afb1279b84f6fe9fdd5211d4675114561fa5e",
+    "tools/validate_envelope_resolution_v1.py": "14de96f377755055dffae7ba9af9590e61601ba195afac057db137556a6bbca1",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/diagnose_envelope_resolution_v1.py": "38217a563803aa4468aa7c7005edac760e02b24b13e5096b51998e095d25ecf5",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "AGENTS.md": "5e485ae85cd059d99b89baef7962220d522e3456d5a946f94633a81437214978",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "tools/diagnose_envelope_tangent_v1.py": "804ee08ea43697af81ea0e21e4eebd70dd21acb11f2ec7c2578fa59f95f2c3e8",
+    "tools/package_envelope_resolution_v1.py": "7fbae1eda7026a99ff085c227a68013817b79ce4253b1eb439eddfcf56e6931e",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "handoff/开发留痕.md": "4a72cbe3b61cede16d30c2441b5536caeafafab3ef0ebb5be2c12abf4cd256de",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "handoff/研究续接.md": "9e8a9875fd8d0d35eb6084ff48b9061853cd0de0b848489d9d4f02ed24c4de19",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "research/怠速与加速完成度V1.md": "b551aca6b61acbef3408f256204bb29418cc01f6c00ca0c2e3f4eda347988bf6",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8"
+  },
+  "dense_original_phase_p95": 0.0033278100196399802,
+  "dense_refined_phase_p95": 0.001485845843062652,
+  "dense_fit": {
+    "solver_success": false,
+    "message": "The maximum number of function evaluations is exceeded.",
+    "evaluations": 120,
+    "optimality": 5.626443972902966e-06,
+    "parameters": 514,
+    "normalized_projection_residual": 0.0001394770872393518,
+    "remaining_carriers": 36,
+    "observation_supported": true,
+    "selected_indices": [],
+    "minimum_envelope": 0.7514796318434828,
+    "maximum_envelope": 1.2485600270731467,
+    "minimum_coordinate_step": 0.007458559610554971,
+    "truth_used": false,
+    "heldout_used": false,
+    "seconds": 149.53479270008393
+  },
+  "initialization_diagnosis": {
+    "warm_phase_p95": 0.001485845843062652,
+    "warm_cost": 1.6650630266468052e-07,
+    "fresh_phase_p95": 0.0015506454709867412,
+    "fresh_cost": 1.6922033360342063e-07,
+    "fixed_true_phase_cost": 2.478540778979678e-07,
+    "global_optimality_or_nonidentifiability_proven": false
+  },
+  "fixed_true_phase": {
+    "cost": 2.478540778979678e-07,
+    "evaluations": 80,
+    "success": false,
+    "message": "The maximum number of function evaluations is exceeded.",
+    "uses_oracle": true,
+    "may_initialize_estimator": false
+  },
+  "fresh_fit": {
+    "fit": {
+      "success": false,
+      "status": 0,
+      "message": "The maximum number of function evaluations is exceeded.",
+      "evaluations": 80,
+      "parameters": 514,
+      "normalized_projection_residual": 0.00014060973217174975,
+      "minimum_envelope": 0.7519252019038107,
+      "maximum_envelope": 1.2012751271753594,
+      "minimum_phase_derivative": 0.9547152148478544,
+      "scaled_jacobian_condition": 5027786.097848907,
+      "identifiability": "Local scaled Jacobian diagnostic only; no calibrated real-source uncertainty"
+    },
+    "seconds": 94.09710939996876,
+    "cost": 1.6922033360342063e-07,
+    "uses_oracle": false,
+    "assessment": {
+      "point_phase_p95_cycles": 0.0015506454709867412,
+      "root_relative_p95": 0.004772742760326814,
+      "maximum_heldout_power_error_db": 0.03822598812110099,
+      "maximum_heldout_complex_correlation_error": 5.2571265310192925e-05,
+      "fitted_separate_carriers": 36,
+      "heldout_supported_carriers": 2,
+      "fitted_carrier_amplitudes": [
+        0.06399875069501428,
+        0.063683795541233,
+        0.06275449458964241,
+        0.060546099063490524,
+        0.05714201573460304,
+        0.1152369473064074,
+        0.05071302669638659,
+        0.04696977676404948,
+        0.04664931447173916,
+        0.04397961208123505,
+        0.11531336093359104,
+        0.044922647618635556,
+        0.04547447243666215,
+        0.04837843462885452,
+        0.05117824322944093,
+        0.0543195484569927,
+        0.05791495262072781,
+        0.06000165236420374,
+        0.06307931912093262,
+        0.06378264702595675,
+        0.11041141330302127,
+        0.06425995077079869,
+        0.06194020363917331,
+        0.061572035439556465,
+        0.058032320895105516,
+        0.05687844977409373,
+        0.05395194306349105,
+        0.05087966586333642,
+        0.05090433806442474,
+        0.04733717324426321,
+        0.10995946666230037,
+        0.04804364171278818,
+        0.04691205534289128,
+        0.051953796551264496,
+        0.05229714123535429,
+        0.05427330410183182
+      ],
+      "heldout_powers": [
+        [
+          0.0027056470945468303,
+          0.0018192305676357839
+        ],
+        [
+          0.0027868364796398573,
+          0.0018733216974241536
+        ]
+      ],
+      "oracle_heldout_powers": [
+        [
+          0.0027189688801573402,
+          0.0018284477706804094
+        ],
+        [
+          0.002811372365910439,
+          0.0018898831899834725
+        ]
+      ],
+      "qualified": false
+    }
+  },
+  "tangent_components": [
+    {
+      "component": "real_envelope_approximation",
+      "projection_norm": 0.00019038388435032373,
+      "profiled_projection_norm": 3.263521275687138e-05,
+      "linearized_phase_p95_cycles": 4.465286719661823e-05,
+      "maximum_absolute_linear_phase_control": 0.013072209782893694
+    },
+    {
+      "component": "omitted_heldout_line_projection",
+      "projection_norm": 2.867924315669136e-05,
+      "profiled_projection_norm": 2.6694456078233897e-05,
+      "linearized_phase_p95_cycles": 1.2283768532130992e-05,
+      "maximum_absolute_linear_phase_control": 0.0022156832537138667
+    },
+    {
+      "component": "fixture_noise",
+      "projection_norm": 0.0011188705821562415,
+      "profiled_projection_norm": 0.0007042073408912173,
+      "linearized_phase_p95_cycles": 0.0020444079385608066,
+      "maximum_absolute_linear_phase_control": 0.19665081170891371
+    }
+  ],
+  "tangent_phase_condition": 4531886.305586652,
+  "actual_vs_linear_phase_correlation": 0.7117784689249769,
+  "tangent_interpretation": "Local unweighted noise sensitivity dominates in this fixture; not calibrated real-source uncertainty or a bounded robust fit",
+  "nested_transfer": {
+    "maximum_sample_envelope_phase_difference": 4.440892098500626e-16,
+    "original_parameters": 370,
+    "refined_parameters": 514,
+    "old_envelope_controls": 6,
+    "new_envelope_controls": 10,
+    "independent_phase_partials": 0,
+    "bounds_unchanged": true
+  },
+  "geometry": {
+    "minimum_measured_order_gap": 0.1999999999999993,
+    "previous_spacing": 10,
+    "spacing": 5.0,
+    "nested_refinement_ratio": 2,
+    "rule": "min(previous_spacing, reciprocal_minimum_observed_order_gap)",
+    "truth_used": false,
+    "heldout_used": false,
+    "strict_bandlimit_claimed": false
+  },
+  "controls": {
+    "passed": true,
+    "geometry": {
+      "minimum_measured_order_gap": 0.1999999999999993,
+      "previous_spacing": 10,
+      "spacing": 5.0,
+      "nested_refinement_ratio": 2,
+      "rule": "min(previous_spacing, reciprocal_minimum_observed_order_gap)",
+      "truth_used": false,
+      "heldout_used": false,
+      "strict_bandlimit_claimed": false
+    },
+    "nested_transfer": {
+      "maximum_sample_envelope_phase_difference": 4.440892098500626e-16,
+      "original_parameters": 452,
+      "refined_parameters": 596,
+      "old_envelope_controls": 6,
+      "new_envelope_controls": 10,
+      "independent_phase_partials": 1,
+      "bounds_unchanged": true
+    },
+    "jacobian": [
+      {
+        "name": "envelope",
+        "relative_error": 1.4813714885624532e-09
+      },
+      {
+        "name": "departure",
+        "relative_error": 5.1573902480914144e-08
+      },
+      {
+        "name": "mixed",
+        "relative_error": 5.62535363497194e-09
+      }
+    ],
+    "invalid_topologies_rejected": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        3
+      ]
+    ]
+  },
+  "original17_rerun": false,
+  "full33_replaced": false,
+  "individual14kHz_demonstrated": false,
+  "all17_validator": "authored but not executed because declared dense candidate failed",
+  "source_audio_read": false,
+  "model_exported": false,
+  "real_source_permitted": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "new_media_downloaded": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "goal_turn_classification": "progress_dense_amplitude_resolution_and_initialization_evidence",
+  "next_step": "Constrain true amplitude temporal bandwidth and audit observation-noise amplification before any more resolution increase; qualify original17/full33/individual14kHz before original E",
+  "limits": [
+    "Observed-gap spline spacing is not a strict amplitude bandwidth or physical order/RPM identification",
+    "Oracle branch is diagnostic only and never initializes the estimator",
+    "Dense positive remains failed; do not drop it, relax gates or call iteration-capped solves converged",
+    "All17, original33, individual14kHz and original E remain required before real extraction",
+    "F1/F2/F3 and original A-low listening questions remain pending; no duplicate requests"
+  ]
+}
