@@ -10,6 +10,7 @@
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_enabled;
 static CbProfile catch_profile;static int catch_enabled;
+static int startup_detail_enabled;
 
 static int replay(const WoStats *s) {
     AmRender *render=calloc(1,sizeof *render);VslEngine *engine=calloc(1,sizeof *engine);
@@ -89,11 +90,13 @@ static int run(int argc,char **argv) {
     WoStats s;AdControl c;ULONGLONG deadline;int ok,equal;
     {int i;for(i=2;i<argc;++i)if(!strcmp(argv[i],"--stereo-bed"))config.scene_mode=AD_SCENE_STEREO_BED;
         else if(!strcmp(argv[i],"--startup"))startup_enabled=1;
-        else if(!strcmp(argv[i],"--catch")){catch_enabled=1;startup_enabled=1;}else return 2;}
-    if(argc<2||!am_models_load(&models,catch_enabled?2:startup_enabled?1:0)||!am_models_bank(&models,&bank))return 2;
+        else if(!strcmp(argv[i],"--catch")){catch_enabled=1;startup_enabled=1;}
+        else if(!strcmp(argv[i],"--startup-detail")){startup_detail_enabled=1;catch_enabled=1;startup_enabled=1;}else return 2;}
+    if(argc<2||!am_models_load_variant(&models,catch_enabled?2:startup_enabled?1:0,startup_detail_enabled)||!am_models_bank(&models,&bank))return 2;
     if(startup_enabled){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;}
     if(catch_enabled) {
-        if(!am_catch_load(&catch_profile))return 2;config.catch_profile=&catch_profile;config.residual_bank=NULL;
+        if(!am_catch_load(&catch_profile))return 2;config.catch_profile=&catch_profile;
+        config.residual_bank=startup_detail_enabled?&models.residual:NULL;
         config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;
     }
     am_audio_init(&audio,&config);audio.capture_frames=13*48000;audio.capture=calloc(audio.capture_frames*2,sizeof(float));
@@ -106,7 +109,7 @@ static int run(int argc,char **argv) {
     while(wo_stats(&audio.device).frames<24000&&InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     am_audio_stop(&audio);s=wo_stats(&audio.device);equal=replay(&s);
     ok&=save(argv[1],"stopped",&s,equal)&&healthy(&s)&&equal&&audio.render.release==480;
-    if(!am_models_load(&models,catch_enabled?2:1)||!am_models_bank(&models,&bank)){ok=0;goto done;}
+    if(!am_models_load_variant(&models,catch_enabled?2:1,startup_detail_enabled)||!am_models_bank(&models,&bank)){ok=0;goto done;}
     c.drive.mode=VSL_BENCH;c.drive.rpm=7600;c.mix.residual_gain=.5;c.mix.body_mix=1;
     if(!audio.config.residual_bank)c.mix.residual_gain=0;
     if(!am_audio_control(&audio,&c)||!am_audio_start(&audio,1,48000)){ok=0;goto done;}

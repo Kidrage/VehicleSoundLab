@@ -219,6 +219,9 @@ def code_rows():
                 role = "同一atlas驾驶链两次启停／独立分轨／2与12导出" if p.stem == "probe" else "唯一驾驶器／完整DNA输入、独立量、旁路、分块、一次路由与声部对照"
             elif group == "startup_detail_v1":
                 layer, owner, role = "启动车内细节诊断", "startup_detail_probe", "复用同一驾驶器／DNA与单锚点残差，独立量、启停／持续分轨和2／12导出"
+            elif group == "startup_detail_host_v1":
+                layer, owner = "启动细节原生接入验证", "VslAtlasMonitor / VslStartupDetailHost_checks"
+                role = "原生控件消息与控制绑定自检" if p.stem == "ui_checks" else "同语境模型、事务失败保护与12带行程资产拥有"
             yield rel, layer, owner, role, digest(p)
 
 

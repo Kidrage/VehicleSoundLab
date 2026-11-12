@@ -17,19 +17,25 @@ int am_models_bank(const AmModels *m,SaBank *bank) {
     for(i=0;i<m->count;++i)profiles[i]=&m->profile[i];
     return sa_bank_init(bank,profiles,m->count,32);
 }
-int am_models_load(AmModels *destination,int index) {
+int am_models_load_variant(AmModels *destination,int index,int startup_detail) {
     static const char *exterior[]={"voices/exterior_anchors_v1/A Stationary Low.model",
         "voices/exterior_anchors_v1/A Stationary Lower Mid.model","voices/exterior_anchors_v1/A Stationary Upper Mid.model",
         "voices/exterior_anchors_v1/A Stationary High.model"};
     static const char *cabin[]={"voices/cabin_anchors_v1/E Cabin Lower.model","voices/cabin_anchors_v1/E Cabin Upper.model"};
     AmModels *candidate;SaBank *trial;unsigned i;int ok=0;
     SrProfile detail[RA_MAX_ANCHORS];const SrProfile *detail_ptr[RA_MAX_ANCHORS];double roots[RA_MAX_ANCHORS];
-    if(!destination||index<0||index>2)return 0;
+    if(!destination||index<0||index>2||(startup_detail!=0&&startup_detail!=1))return 0;
     candidate=calloc(1,sizeof *candidate);trial=malloc(sizeof *trial);
     if(!candidate||!trial)goto done;
     if(index==2) {
         candidate->count=1;
         if(!sd_profile_load("voices/startup_settle_v1/A start cabin settle.model",&candidate->profile[0]))goto done;
+        if(startup_detail) {
+            FILE *stream=vsl_fopen("voices/startup_detail_v1/A startup settling detail.residual","rb");int read_ok;
+            if(!stream)goto done;read_ok=sr_profile_read(stream,&detail[0]);if(fclose(stream))read_ok=0;
+            if(!read_ok)goto done;detail_ptr[0]=&detail[0];roots[0]=candidate->profile[0].base_hz;
+            if(!ra_bank_init(&candidate->residual,detail_ptr,roots,1))goto done;
+        }
         if(am_models_bank(candidate,trial)){*destination=*candidate;ok=1;}
         goto done;
     }
@@ -48,3 +54,4 @@ int am_models_load(AmModels *destination,int index) {
 done:
     free(candidate);free(trial);return ok;
 }
+int am_models_load(AmModels *destination,int index) {return am_models_load_variant(destination,index,0);}

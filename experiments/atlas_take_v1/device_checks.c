@@ -36,16 +36,17 @@ static int wait_end(unsigned timeout) {
     while(InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     return !InterlockedCompareExchange(&audio.device.running,0,0);
 }
-static int run(const char *path,AdSceneMode scene_mode,int startup,int catching) {
+static int run(const char *path,AdSceneMode scene_mode,int startup,int catching,int startup_detail) {
     AtTake loaded={0};AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     AdControl c=am_default_control();WoStats recorded={0},played={0},cancelled={0};uint64_t length,hash;int ok=1,stage=0,initialized=0;
     ULONGLONG deadline;FILE *report=NULL;char report_path[16384];
     config.scene_mode=scene_mode;
     CHECK(rejected_block());
-    CHECK(am_models_load(&models,catching?2:startup?1:0)&&am_models_bank(&models,&bank));
+    CHECK(am_models_load_variant(&models,catching?2:startup?1:0,startup_detail)&&am_models_bank(&models,&bank));
     if(startup){CHECK(am_startup_load(&startup_profile));config.startup_profile=&startup_profile;c.mix.startup_gain=.5;}
     if(catching) {
-        CHECK(am_catch_load(&catch_profile));config.catch_profile=&catch_profile;c.mix.catch_gain=.5;config.residual_bank=NULL;
+        CHECK(am_catch_load(&catch_profile));config.catch_profile=&catch_profile;c.mix.catch_gain=.5;
+        config.residual_bank=startup_detail?&models.residual:NULL;
         config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;
     }
     am_audio_init(&audio,&config);initialized=1;
@@ -66,6 +67,8 @@ static int run(const char *path,AdSceneMode scene_mode,int startup,int catching)
     CHECK(loaded.assets->config.scene_mode==scene_mode);
     CHECK((loaded.assets->config.startup_profile!=NULL)==startup);
     CHECK((loaded.assets->config.catch_profile!=NULL)==catching);
+    if(startup_detail)CHECK(loaded.assets->residual.count==1&&loaded.assets->residual.profile[0].bands==12&&
+        loaded.assets->config.residual_bank==&loaded.assets->residual);
     length=audio.take.frames;hash=audio.take.audio_hash;at_take_free(&audio.take);audio.take=loaded;memset(&loaded,0,sizeof loaded);
     memset(&models,0,sizeof models);memset(&bank,0,sizeof bank);
     memset(&startup_profile,0,sizeof startup_profile);
@@ -76,7 +79,7 @@ static int run(const char *path,AdSceneMode scene_mode,int startup,int catching)
     while(wo_stats(&audio.device).frames<24000&&InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     am_audio_stop(&audio);cancelled=wo_stats(&audio.device);
     CHECK(!cancelled.error[0]&&cancelled.frames<length&&InterlockedCompareExchange(&audio.replay_result,0,0)==2&&audio.take.audio_hash==hash);
-    CHECK(am_models_load(&models,catching?2:1)&&am_models_bank(&models,&bank));c.drive.rpm=7600;
+    CHECK(am_models_load_variant(&models,catching?2:1,startup_detail)&&am_models_bank(&models,&bank));c.drive.rpm=7600;
     if(startup)CHECK(am_startup_load(&startup_profile));
     if(catching)CHECK(am_catch_load(&catch_profile));
     CHECK(am_audio_control(&audio,&c)&&am_audio_record(&audio,1,0));deadline=GetTickCount64()+5000;
@@ -85,20 +88,21 @@ static int run(const char *path,AdSceneMode scene_mode,int startup,int catching)
     CHECK(!at_take_load(&audio.take,"no-such-recording.vslrun")&&audio.ready&&am_audio_replay(&audio,1)&&wait_end(5000));am_audio_stop(&audio);
     CHECK(InterlockedCompareExchange(&audio.replay_result,0,0)==1);
     snprintf(report_path,sizeof report_path,"%s.json",path);report=vsl_fopen(report_path,"wb");CHECK(report);
-    fprintf(report,"{\"schema\":\"vsl.atlas-take-device/1\",\"muted\":true,\"verified\":true,\"rejected_block_excluded\":true,\"frames\":%llu,\"record_hash\":\"%016llx\","
+    fprintf(report,"{\"schema\":\"vsl.atlas-take-device/1\",\"muted\":true,\"verified\":true,\"rejected_block_excluded\":true,\"startup_detail\":%s,\"frames\":%llu,\"record_hash\":\"%016llx\","
         "\"play_hash\":\"%016llx\",\"record_queue_empty\":%u,\"play_queue_empty\":%u,\"record_over_budget\":%u,\"play_over_budget\":%u,"
         "\"record_max_ms\":%.9g,\"play_max_ms\":%.9g,\"record_device_seconds\":%.9g,\"record_wall_seconds\":%.9g,"
         "\"play_device_seconds\":%.9g,\"play_wall_seconds\":%.9g,\"cancel_frames\":%llu,\"manual_stop_frames\":%llu,\"render_id\":\"%s\"}\n",
-        (unsigned long long)length,(unsigned long long)hash,(unsigned long long)played.output_hash,recorded.queue_empty,played.queue_empty,
+        startup_detail?"true":"false",(unsigned long long)length,(unsigned long long)hash,(unsigned long long)played.output_hash,recorded.queue_empty,played.queue_empty,
         recorded.budget_exceeded,played.budget_exceeded,recorded.render_ms_max,played.render_ms_max,recorded.device_seconds,recorded.playback_wall_seconds,
         played.device_seconds,played.playback_wall_seconds,(unsigned long long)cancelled.frames,(unsigned long long)audio.take.frames,at_render_id());
 done:if(report&&fclose(report))ok=0;at_take_free(&loaded);if(initialized)am_audio_destroy(&audio);return ok?0:3;
 }
 int wmain(int argc,wchar_t **wide) {
-    char path[16384];int i,startup=0,catching=0;AdSceneMode scene=AD_SCENE_OBJECTS;
+    char path[16384];int i,startup=0,catching=0,startup_detail=0;AdSceneMode scene=AD_SCENE_OBJECTS;
     if(argc<2||!WideCharToMultiByte(CP_UTF8,0,wide[1],-1,path,sizeof path,NULL,NULL))return 2;
     for(i=2;i<argc;++i)if(!wcscmp(wide[i],L"--stereo-bed"))scene=AD_SCENE_STEREO_BED;
         else if(!wcscmp(wide[i],L"--startup"))startup=1;
-        else if(!wcscmp(wide[i],L"--catch")){catching=1;startup=1;}else return 2;
-    return run(path,scene,startup,catching);
+        else if(!wcscmp(wide[i],L"--catch")){catching=1;startup=1;}
+        else if(!wcscmp(wide[i],L"--startup-detail")){startup_detail=1;catching=1;startup=1;}else return 2;
+    return run(path,scene,startup,catching,startup_detail);
 }

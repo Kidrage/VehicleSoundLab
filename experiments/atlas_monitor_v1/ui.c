@@ -8,9 +8,11 @@
 #include "audio.h"
 #include "models.h"
 #include "takes.h"
+#include "../startup_detail_host_v1/ui_checks.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_study;
 static CbProfile catch_profile;static int catch_study;
+static int startup_detail_study;static wchar_t ui_check_path[4096];
 static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
@@ -34,12 +36,14 @@ static void labels(HWND owner) {
     swprintf(text,128,L"输出    %.0f dB",20*log10(fmax(1e-12,c.mix.gain/.5)));SetWindowTextW(label[3],text);
     swprintf(text,128,L"空间宽度    %.0f%%",c.mix.width*100);SetWindowTextW(label[4],text);
     swprintf(text,128,L"房间量    %.0f%%",c.mix.room*100);SetWindowTextW(label[5],text);
-    swprintf(text,128,L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
+    swprintf(text,128,startup_detail_study?L"声纹细节    %.0f%%":L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
     swprintf(text,128,L"低频分层    %.0f%%",c.mix.body_mix*100);SetWindowTextW(label[7],text);
     swprintf(text,128,L"声层量    %.0f%%",*aux_amount(&c,auxiliary_index)*100);SetWindowTextW(label[8],text);
     SendMessageW(slider[8],TBM_SETPOS,TRUE,(int)(*aux_amount(&c,auxiliary_index)*100));
     EnableWindow(auxiliary,!playing);
     for(i=0;i<9;++i)EnableWindow(slider[i],!playing);
+    EnableWindow(slider[6],!playing&&audio.config.residual_bank!=NULL);
+    SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)(c.mix.residual_gain*100));
     if(auxiliary_index==5&&!audio.config.startup_profile)EnableWindow(slider[8],FALSE);
     if(auxiliary_index==6&&!audio.config.catch_profile)EnableWindow(slider[8],FALSE);
     for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
@@ -78,7 +82,7 @@ static void changed(HWND owner,int index) {
 }
 static int load_bank(int index) {
     AmModels *candidate=malloc(sizeof *candidate);int ok=0;
-    if(candidate&&am_models_load(candidate,index)) {
+    if(candidate&&am_models_load_variant(candidate,index,startup_detail_study)) {
         am_audio_stop(&audio);models=*candidate;
         /* Rebind borrowed pointers to committed storage, never the candidate. */
         if(am_models_bank(&models,&bank)){
@@ -231,13 +235,18 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         else if(!wcscmp(args[i],L"--stereo-bed"))config.scene_mode=AD_SCENE_STEREO_BED;
         else if(!wcscmp(args[i],L"--startup-study"))startup_study=1;
         else if(!wcscmp(args[i],L"--catch-study")){catch_study=1;startup_study=1;}
+        else if(!wcscmp(args[i],L"--startup-detail-study")){startup_detail_study=1;catch_study=1;startup_study=1;}
+        else if(!wcscmp(args[i],L"--ui-check")&&i+1<argc) {
+            if(wcslen(args[i+1])>=4096){LocalFree(args);return 2;}wcscpy_s(ui_check_path,4096,args[++i]);
+        }
         else{LocalFree(args);return 2;}
     LocalFree(args);
     bank_index=catch_study?2:startup_study?1:0;
-    if(!project_directory()||!am_models_load(&models,bank_index)||!am_models_bank(&models,&bank))return 2;
+    if(!project_directory()||!am_models_load_variant(&models,bank_index,startup_detail_study)||!am_models_bank(&models,&bank))return 2;
     if(startup_study){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;config.scene_mode=AD_SCENE_STEREO_BED;}
     if(catch_study) {
-        if(!am_catch_load(&catch_profile))return 2;config.catch_profile=&catch_profile;config.residual_bank=NULL;
+        if(!am_catch_load(&catch_profile))return 2;config.catch_profile=&catch_profile;
+        config.residual_bank=models.residual.count?&models.residual:NULL;
         config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;auxiliary_index=6;
     }
     am_audio_init(&audio,&config);InitCommonControlsEx(&common);
@@ -246,12 +255,18 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         AdControl c=am_audio_get(&audio);c.drive.mode=VSL_BENCH;c.drive.rpm=vsl_profile(VSL_V10)->idle_rpm;
         c.mix.width=1;c.mix.spatial=1;am_audio_control(&audio,&c);
     }
+    if(startup_detail_study){AdControl c=am_audio_get(&audio);c.mix.catch_gain=.5;am_audio_control(&audio,&c);}
     SetProcessDPIAware();klass.lpfnWndProc=procedure;klass.hInstance=instance;klass.lpszClassName=L"VslAtlasMonitor";
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
-    window=CreateWindowW(klass.lpszClassName,catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
+    window=CreateWindowW(klass.lpszClassName,startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
         CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
-    if(!window){am_audio_destroy(&audio);return 2;}ShowWindow(window,show);UpdateWindow(window);
+    if(!window){am_audio_destroy(&audio);return 2;}
+    if(ui_check_path[0]) {
+        int ok=am_startup_detail_ui_check(window,&audio,&models,startup_detail_study,ui_check_path);
+        DestroyWindow(window);am_audio_destroy(&audio);return ok?0:3;
+    }
+    ShowWindow(window,show);UpdateWindow(window);
     while(GetMessageW(&message,NULL,0,0)>0)if(!IsDialogMessageW(window,&message)){TranslateMessage(&message);DispatchMessageW(&message);}
     am_audio_destroy(&audio);return (int)message.wParam;
 }
