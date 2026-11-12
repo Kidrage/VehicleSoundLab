@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前[完整配方接口](../modules/resonant_source/README.md)：`rss_profile_prepare`非实时向独立模型编译谐波功率替换；`rss_voice_init/set/tick`组合原DNA／匹配LF和连续共振细节，只预热细节，运行按同一DNA采样相位；`rss_output_frame`一次主增益／宽度及2／12前置声床。9组8秒完整混音、3组2／12对照及49项CTest通过，原492C/H不变、8新增、共500份。没有新原生／驾驶／行程字段或默认改动；此状态覆盖下面历史“无完整混音适配器”，仍不等于音色／完整RPM负载覆盖。
+
 当前新增C接口：[连续共振细节核](../modules/resonant_detail/README.md)的`profile/envelope/excitation/filter/voice`只处理参数校验和连续细节；`resonant_detail_io/profile`负责独立非实时事务加载。`rdt_voice_tick`消费外部主声相位，不持有RPM时钟，不分配／I/O；模型整个运行期由调用者只读持有。参数与混合职责见[参数说明](../voices/resonant_detail_c_v1/README.md)。三个参数×三个seed细节核数值通过，48项CTest通过，现492份C/H（原478份不变、14新增）。**没有完整混音适配器／驾驶字段／UI／行程接入或原生听评**；下文历史“无C加载器”记录仅描述当时状态。
 
 新增[加速诊断](../research/固定挡位加速核查V1.md)复用`experiments/state_passage_v1/{trajectory,probe}`与当前`dna_atlas`；没有新增C/H、控制字段或默认路径。Python的`acceleration_passage_v1/evidence`只绑定素材／模型／上下文，`diagnostics`只测宽频带预算；离线输入轨迹不接管统一驾驶器，音色未验收。

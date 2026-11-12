@@ -1,0 +1,48 @@
+{
+  "schema": "vsl.resonant-source-summary/1",
+  "date": "2026-11-12",
+  "result": "full_C_mixture_parity_only",
+  "prior_C_H_unchanged": 492,
+  "new_C_H": 8,
+  "C_H_rows": 500,
+  "C_H_index_sha256": "4021795ab602f4363c69654e4afa99951ea7f5fefba633ab55c9e849a6fa84da",
+  "Ctests": 49,
+  "comparisons": 9,
+  "comparison_seconds_each": 8,
+  "output_routes": 3,
+  "maximum_errors": {
+    "DNA_stem_maximum_FS": 5.9556036546837277e-08,
+    "LF_raw_maximum_FS": 7.443565430698129e-09,
+    "detail_maximum_FS": 8.250344851745695e-13,
+    "mix_maximum_FS": 1.1788465581474838e-07
+  },
+  "maximum_phase_error_cycles": 8.815614904733593e-12,
+  "maximum_peak_FS": 0.5565209664583632,
+  "prepared_model_compiled_in_C": true,
+  "detail_uses_source_phase": true,
+  "only_detail_prewarmed": true,
+  "no_new_fitting_or_room_or_PCM": true,
+  "source_2_12_exact": true,
+  "other10channels_zero": true,
+  "native_driver_take_or_default_integrated": false,
+  "new_listening_acceptance": false,
+  "listening": {
+    "moving35": "held existing offline recipe; no new moving audition",
+    "idle": "pending original question"
+  },
+  "preserved_attempts": [
+    "verify1 passed49tests/3moving cases then wrong idle archive prefix failed",
+    "verify2 fixed evidence path only and reused exact build/test proof"
+  ],
+  "evidence_sha256": {
+    "references/analysis/resonant_source_v1/verify1/report.json": "691b47b06c40a7f633be1457a90ebae319736874bc1c75bc043c58dc7fb41765",
+    "references/analysis/resonant_source_v1/verify2/report.json": "ab83cbbda731ceb0c8d1557bbe8635726771eb80080bd63dad66cf5e2d7b1733"
+  },
+  "limits": [
+    "Matches held offline recipes within float-stage rounding, not new naturalness acceptance",
+    "Same three existing contexts; idle thermal state and engine RPM remain unknown",
+    "Fixed-Hz resonators and .9..1.1 pitch range are not a full RPM/load map",
+    "2/12 preserves recording FL/FR only; no physical source separation or immersive upmix",
+    "No new native host,driver,take adapter,device or longrun validation"
+  ]
+}

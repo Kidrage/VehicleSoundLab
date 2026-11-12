@@ -271,3 +271,15 @@ add_test(NAME handoff_resonant_detail_contract COMMAND VslResonantDetail_checks
   "${VSL_ROOT}/voices/resonant_detail_c_v1/moving_35.rdetail"
   "${VSL_ROOT}/voices/resonant_detail_c_v1/idle_add.rdetail")
 target_link_libraries(VslResonantDetail_checks PRIVATE residual_dense)
+
+add_subdirectory("${VSL_ROOT}/modules/resonant_source" resonant-source)
+add_executable(VslResonantSource_probe "${VSL_ROOT}/experiments/resonant_source_v1/probe.c")
+add_executable(VslResonantSource_checks "${VSL_ROOT}/experiments/resonant_source_v1/checks.c")
+foreach(target VslResonantSource_probe VslResonantSource_checks)
+  target_link_libraries(${target} PRIVATE resonant_source resonant_detail_io)
+  handoff_output(${target})
+  if(MSVC)
+    target_compile_options(${target} PRIVATE /W4 /we4013 /utf-8 /fp:strict)
+  endif()
+endforeach()
+add_test(NAME handoff_resonant_source_contract COMMAND VslResonantSource_checks)
