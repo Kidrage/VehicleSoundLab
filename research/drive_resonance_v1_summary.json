@@ -1,0 +1,92 @@
+{
+  "schema": "vsl.driving-resonant-detail-summary/1",
+  "date": "2026-11-12",
+  "result": "optional_driving_detail_technical_pass",
+  "C_H_rows": 519,
+  "new_C_H": 8,
+  "modified_prior_C_H": 19,
+  "unchanged_prior_C_H": 492,
+  "C_H_index_sha256": "cc003bf23336e7533794c1ed751318514a4d1f12847e610635c9c66b3dd82811",
+  "Ctests": 51,
+  "legacy_WAV_byte_exact": 84,
+  "legacy_trace_byte_exact": 3,
+  "one_main_phase": true,
+  "aligned_prewarm": true,
+  "take_schema": 6,
+  "control_fields": 28,
+  "owned_parameters": true,
+  "source_and_front_2_12_exact": true,
+  "remaining10zero": true,
+  "device": {
+    "result": "pass",
+    "muted": true,
+    "schema": 6,
+    "fields": 28,
+    "frames": 144123,
+    "owned_models_destroyed_before_replay": true,
+    "record_hash": "db2b8b6e348610c7",
+    "play_hash": "db2b8b6e348610c7",
+    "record_queue_empty": 0,
+    "play_queue_empty": 0,
+    "record_budget_exceeded": 0,
+    "play_budget_exceeded": 0,
+    "record_max_ms": 6.2499,
+    "play_max_ms": 6.239,
+    "active_and_missing_support_observed": true,
+    "cancel_frames": 24576,
+    "controls": [
+      {
+        "frame": 0,
+        "rpm": 1200.6808645474161,
+        "resonant_gain": 0.7
+      },
+      {
+        "frame": 24064,
+        "rpm": 1300,
+        "resonant_gain": 1
+      },
+      {
+        "frame": 48128,
+        "rpm": 6000,
+        "resonant_gain": 1
+      },
+      {
+        "frame": 72192,
+        "rpm": 1200.6808645474161,
+        "resonant_gain": 0.4
+      }
+    ]
+  },
+  "UI": {
+    "result": "pass",
+    "checks": 11,
+    "failed_line": 0,
+    "own_program_controls": true,
+    "audio_started": false,
+    "manual_mouse_verified": false
+  },
+  "visual_qa": true,
+  "manual_mouse_verified": false,
+  "moving35_not_tuned": true,
+  "real_parameter_context": "A stationary low idle_add only; pending existing listening question",
+  "old_schema5_player_preserved": true,
+  "new_listening_acceptance": false,
+  "full_idle_or_loaded_acceleration_calibrated": false,
+  "attempts": [
+    "before1 preserves prior driver/player and actual schema5 take",
+    "verify1 new driver contract passed; three old 27-field assertions failed",
+    "verify2 updates field assertions;51tests/84WAV/device/take/UI pass",
+    "verify3 aligns prewarm origin for future nonzero-offset anchors and strengthens independent filter-state oracle;full proof rerun passes",
+    "wrap_boundary1 reproduces a tiny-negative phase rounding to1;verify4 canonicalizes phase to[0,1), includes nextafter regression and reruns all proof"
+  ],
+  "evidence_sha256": {
+    "references/analysis/drive_resonance_v1/verify4/verification.json": "9a3c71021d69a19f55ff860961aaafcdeeb9c183fb568e46cfadf6ffaad8214f",
+    "references/analysis/drive_resonance_v1/verify4/visual_qa.json": "15565ba89cb5be825543fcd96a0f7c2c2419676f5bd3a39d733457da4f470cc3"
+  },
+  "limits": [
+    "Local additive low candidate only; no moving35 replacement in driving atlas",
+    "Support .9..1.1 with inner .96..1.04 is an engineering fade, not measured RPM/load coverage",
+    "No new RPM/load evidence, hot-idle calibration or full acceleration timbre acceptance",
+    "Short muted stereo device and own-control UI check, not long-run/manual mouse/physical7.1.4 acceptance"
+  ]
+}

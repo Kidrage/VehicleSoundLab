@@ -9,10 +9,13 @@
 #include "models.h"
 #include "takes.h"
 #include "../startup_detail_host_v1/ui_checks.h"
+#include "../drive_resonance_v1/ui_checks.h"
+#include "resonant_detail_io/profile.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_study;
 static CbProfile catch_profile;static int catch_study;
 static int startup_detail_study;static wchar_t ui_check_path[4096];
+static int resonant_study;static DrsBank resonant_bank;static RdtProfile resonant_profile;
 static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
@@ -36,27 +39,28 @@ static void labels(HWND owner) {
     swprintf(text,128,L"输出    %.0f dB",20*log10(fmax(1e-12,c.mix.gain/.5)));SetWindowTextW(label[3],text);
     swprintf(text,128,L"空间宽度    %.0f%%",c.mix.width*100);SetWindowTextW(label[4],text);
     swprintf(text,128,L"房间量    %.0f%%",c.mix.room*100);SetWindowTextW(label[5],text);
-    swprintf(text,128,startup_detail_study?L"声纹细节    %.0f%%":L"高频细节    %.0f%%",c.mix.residual_gain*100);SetWindowTextW(label[6],text);
+    swprintf(text,128,resonant_study?L"连续共振细节    %.0f%%":startup_detail_study?L"声纹细节    %.0f%%":L"高频细节    %.0f%%",
+        (resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100);SetWindowTextW(label[6],text);
     swprintf(text,128,L"低频分层    %.0f%%",c.mix.body_mix*100);SetWindowTextW(label[7],text);
     swprintf(text,128,L"声层量    %.0f%%",*aux_amount(&c,auxiliary_index)*100);SetWindowTextW(label[8],text);
     SendMessageW(slider[8],TBM_SETPOS,TRUE,(int)(*aux_amount(&c,auxiliary_index)*100));
     EnableWindow(auxiliary,!playing);
     for(i=0;i<9;++i)EnableWindow(slider[i],!playing);
-    EnableWindow(slider[6],!playing&&audio.config.residual_bank!=NULL);
-    SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)(c.mix.residual_gain*100));
+    EnableWindow(slider[6],!playing&&(resonant_study?audio.config.resonant_bank!=NULL:audio.config.residual_bank!=NULL));
+    SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100));
     if(auxiliary_index==5&&!audio.config.startup_profile)EnableWindow(slider[8],FALSE);
     if(auxiliary_index==6&&!audio.config.catch_profile)EnableWindow(slider[8],FALSE);
     for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[2],!playing&&c.drive.mode==VSL_BENCH);
     EnableWindow(gear,!playing&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[4],!playing&&c.mix.spatial);EnableWindow(slider[5],!playing&&c.mix.spatial);
-    EnableWindow(voice,!playing);EnableWindow(mode,!playing);
+    EnableWindow(voice,!playing&&!resonant_study);EnableWindow(mode,!playing);
     EnableWindow(GetDlgItem(owner,12),!playing);EnableWindow(GetDlgItem(owner,30),!playing);EnableWindow(GetDlgItem(owner,31),!playing);
     EnableWindow(GetDlgItem(owner,14),audio.ready||audio.transport==1);
     if(audio.transport==2) {
         int values[8]={(int)(c.drive.throttle*100),(int)(c.drive.brake*100),(int)c.drive.rpm,
             (int)(20*log10(fmax(1e-12,c.mix.gain/.5))),(int)(c.mix.width*100),(int)(c.mix.room*100),
-            (int)(c.mix.residual_gain*100),(int)(c.mix.body_mix*100)};
+            (int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100),(int)(c.mix.body_mix*100)};
         for(i=0;i<8;++i)SendMessageW(slider[i],TBM_SETPOS,TRUE,values[i]);
         SendMessageW(mode,CB_SETCURSEL,c.drive.mode==VSL_BENCH?1:0,0);
         SendMessageW(gear,CB_SETCURSEL,c.drive.automatic?0:c.drive.gear+1,0);
@@ -75,12 +79,13 @@ static void changed(HWND owner,int index) {
     else if(index==3)c.mix.gain=.5*pow(10,value/20.);
     else if(index==4)c.mix.width=value/100.;
     else if(index==5)c.mix.room=value/100.;
-    else if(index==6)c.mix.residual_gain=value/100.;
+    else if(index==6){if(resonant_study)c.mix.resonant_gain=value/100.;else c.mix.residual_gain=value/100.;}
     else if(index==7)c.mix.body_mix=value/100.;
     else if(index==8)*aux_amount(&c,auxiliary_index)=value/100.;
     am_audio_control(&audio,&c);labels(owner);
 }
 static int load_bank(int index) {
+    if(resonant_study)return index==0;
     AmModels *candidate=malloc(sizeof *candidate);int ok=0;
     if(candidate&&am_models_load_variant(candidate,index,startup_detail_study)) {
         am_audio_stop(&audio);models=*candidate;
@@ -105,13 +110,13 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         heading=CreateFontW(-24,0,0,0,FW_SEMIBOLD,0,0,0,DEFAULT_CHARSET,0,0,CLEARTYPE_QUALITY,0,L"Microsoft YaHei UI");
         SendMessageW(item(owner,L"STATIC",L"DNA 驾驶监听",0,0,24,18,510,36),WM_SETFONT,(WPARAM)heading,TRUE);
         voice=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,40,24,65,510,160);
-        SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 驻车车外四档（实验）");
+        SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)(resonant_study?L"V10 · 车外局部细节（实验）":L"V10 · 驻车车外四档（实验）"));
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 高转车内两档（实验）");SendMessageW(voice,CB_SETCURSEL,0,0);
         if(catch_study)SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"V10 · 启动车内趋稳（实验）");
         SendMessageW(voice,CB_ADDSTRING,0,(LPARAM)L"行程内嵌音色（回放）");
         mode=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,41,24,108,245,150);
         SendMessageW(mode,CB_ADDSTRING,0,(LPARAM)L"模拟驾驶");SendMessageW(mode,CB_ADDSTRING,0,(LPARAM)L"转速台架");SendMessageW(mode,CB_SETCURSEL,0,0);
-        if(catch_study)SendMessageW(mode,CB_SETCURSEL,1,0);
+        if(catch_study||resonant_study)SendMessageW(mode,CB_SETCURSEL,1,0);
         gear=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,42,289,108,245,270);
         SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)L"自动挡 · 运动");SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)L"空挡 N");
         for(i=1;i<=7;++i){wchar_t text[32];swprintf(text,32,L"手动 %d 挡",i);SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)text);}
@@ -124,7 +129,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
             SendMessageW(slider[i],TBM_SETRANGEMIN,FALSE,minimum[i]);SendMessageW(slider[i],TBM_SETRANGEMAX,TRUE,maximum[i]);
             SendMessageW(slider[i],TBM_SETPOS,TRUE,initial[i]);
         }
-        if(catch_study) {
+        if(catch_study||resonant_study) {
             AdControl c=am_audio_get(&audio);
             SendMessageW(slider[2],TBM_SETPOS,TRUE,(int)c.drive.rpm);
             SendMessageW(slider[4],TBM_SETPOS,TRUE,(int)(100*c.mix.width));
@@ -144,7 +149,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         item(owner,L"BUTTON",L"保存行程",BS_PUSHBUTTON|WS_TABSTOP,14,194,764,158,36);
         item(owner,L"BUTTON",L"载入回放",BS_PUSHBUTTON|WS_TABSTOP,15,364,764,170,36);
         status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,813,510,30);
-        item(owner,L"STATIC",L"声层独立调节 · 音色仍在完善",0,0,24,854,510,27);
+        item(owner,L"STATIC",resonant_study?L"局部低转细节 · 转速映射待标定":L"声层独立调节 · 音色仍在完善",0,0,24,854,510,27);
         labels(owner);SetTimer(owner,1,40,NULL);return 0;
     }
     case WM_HSCROLL: {
@@ -195,6 +200,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         if(t.gear>0)swprintf(g,16,L"%d 挡",t.gear);else wcscpy_s(g,16,L"N");
         if(am_audio_get(&audio).drive.mode==VSL_BENCH)swprintf(text,180,L"%.0f RPM    转速台架",t.rpm);
         else swprintf(text,180,L"%.0f RPM    %.1f km/h    %ls",t.rpm,t.speed,g);
+        if(resonant_study)swprintf(text,180,L"%.0f RPM    细节启用范围 %.0f%%",t.rpm,100*t.resonant_support);
         SetWindowTextW(telemetry,text);
         labels(owner);
         if(s.error[0])SetWindowTextW(status,s.error);
@@ -236,11 +242,13 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         else if(!wcscmp(args[i],L"--startup-study"))startup_study=1;
         else if(!wcscmp(args[i],L"--catch-study")){catch_study=1;startup_study=1;}
         else if(!wcscmp(args[i],L"--startup-detail-study")){startup_detail_study=1;catch_study=1;startup_study=1;}
+        else if(!wcscmp(args[i],L"--resonant-study"))resonant_study=1;
         else if(!wcscmp(args[i],L"--ui-check")&&i+1<argc) {
             if(wcslen(args[i+1])>=4096){LocalFree(args);return 2;}wcscpy_s(ui_check_path,4096,args[++i]);
         }
         else{LocalFree(args);return 2;}
     LocalFree(args);
+    if(resonant_study&&startup_study)return 2;
     bank_index=catch_study?2:startup_study?1:0;
     if(!project_directory()||!am_models_load_variant(&models,bank_index,startup_detail_study)||!am_models_bank(&models,&bank))return 2;
     if(startup_study){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;config.scene_mode=AD_SCENE_STEREO_BED;}
@@ -249,6 +257,11 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         config.residual_bank=models.residual.count?&models.residual:NULL;
         config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;auxiliary_index=6;
     }
+    if(resonant_study) {
+        const RdtProfile *detail[SA_MAX_ANCHORS]={&resonant_profile};
+        if(!rdt_profile_load("voices/resonant_detail_c_v1/idle_add.rdetail",&resonant_profile)||!drs_bank_init(&resonant_bank,&bank,detail))return 2;
+        config.resonant_bank=&resonant_bank;config.residual_bank=NULL;config.scene_mode=AD_SCENE_STEREO_BED;
+    }
     am_audio_init(&audio,&config);InitCommonControlsEx(&common);
     if(startup_study){AdControl c=am_audio_get(&audio);c.mix.startup_gain=.5;am_audio_control(&audio,&c);}
     if(catch_study) {
@@ -256,14 +269,16 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         c.mix.width=1;c.mix.spatial=1;am_audio_control(&audio,&c);
     }
     if(startup_detail_study){AdControl c=am_audio_get(&audio);c.mix.catch_gain=.5;am_audio_control(&audio,&c);}
+    if(resonant_study){AdControl c=am_audio_get(&audio);c.drive.mode=VSL_BENCH;c.drive.rpm=resonant_profile.base_hz/config.root_per_rpm;
+        c.mix.width=1;am_audio_control(&audio,&c);}
     SetProcessDPIAware();klass.lpfnWndProc=procedure;klass.hInstance=instance;klass.lpszClassName=L"VslAtlasMonitor";
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
-    window=CreateWindowW(klass.lpszClassName,startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
+    window=CreateWindowW(klass.lpszClassName,resonant_study?L"Vehicle Sound Lab · DNA Drive · Resonant Detail":startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
         CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}
     if(ui_check_path[0]) {
-        int ok=am_startup_detail_ui_check(window,&audio,&models,startup_detail_study,ui_check_path);
+        int ok=resonant_study?am_resonant_ui_check(window,&audio,ui_check_path):am_startup_detail_ui_check(window,&audio,&models,startup_detail_study,ui_check_path);
         DestroyWindow(window);am_audio_destroy(&audio);return ok?0:3;
     }
     ShowWindow(window,show);UpdateWindow(window);

@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前新增[drive_resonance](../modules/drive_resonance/README.md)：`bank`非实时拥有匹配锚点参数；`voice`预热／消费同一主DNA相位和周期原点，无独立RPM时钟。`AdConfig.resonant_bank`、`AdMix.resonant_gain`、`AdCapture.resonant_raw/resonant`连接同一驾驶／混音链；`atlas_take`拥有库、schema6／28字段及新增源哈希。原生研究入口复用滑条6并停用旧残差，默认0。519份C/H＝原511中492不变／19适配＋8新增；51项CTest、84旧WAV及短设备录放通过。仅A低转add候选，行驶35%完整配方及全RPM／负载标定仍未接通。
+
 当前新增[完整声源监听适配器](../modules/resonant_monitor/README.md)：`rsm_render_init/set/process`负责借用模型、平滑、10ms启停、一次输出及分轨；实时无I/O／分配。宿主`models`拥有并非实时加载，`audio`复用`win_output`和成功提交帧调试记录，`ui`默认停止；没有新驾驶／行程字段。原500C/H字节保持，11新增、索引511；50项CTest及四次短静音设备重现通过。三配方8秒dry与既有C基准完全一致，音色未新增验收。
 
 当前[完整配方接口](../modules/resonant_source/README.md)：`rss_profile_prepare`非实时向独立模型编译谐波功率替换；`rss_voice_init/set/tick`组合原DNA／匹配LF和连续共振细节，只预热细节，运行按同一DNA采样相位；`rss_output_frame`一次主增益／宽度及2／12前置声床。9组8秒完整混音、3组2／12对照及49项CTest通过，原492C/H不变、8新增、共500份。没有新原生／驾驶／行程字段或默认改动；此状态覆盖下面历史“无完整混音适配器”，仍不等于音色／完整RPM负载覆盖。

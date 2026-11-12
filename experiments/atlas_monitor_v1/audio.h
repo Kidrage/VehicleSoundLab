@@ -25,6 +25,7 @@ typedef struct {
     float auxiliary[512*VSL_OBJECTS];
     float startup[1024];
     float catch_bloom[1024];
+    float resonant[1024];
 } AmAudio;
 AdControl am_default_control(void);
 void am_audio_init(AmAudio *audio,const AdConfig *config);

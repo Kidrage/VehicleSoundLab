@@ -8,6 +8,7 @@ typedef struct {
     AdConfig config;
     StProfile startup;
     CbProfile catch_bloom;
+    DrsBank resonant;
 } AtAssets;
 /* Owned, immutable render assets. Pointers stay inside this heap object. */
 int at_assets_copy(AtAssets *destination,const AdConfig *source);

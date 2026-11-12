@@ -9,6 +9,7 @@
 #include "stereo_bed/route.h"
 #include "start_texture/voice.h"
 #include "catch_bloom/voice.h"
+#include "drive_resonance/voice.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -23,6 +24,7 @@ typedef struct {
     AdSceneMode scene_mode; /* Default0 retains former mono proxy routing. */
     const StProfile *startup_profile; /* Opt-in cabin observation, replaces legacy starter only. */
     const CbProfile *catch_profile; /* Optional observation colour, no physical-source claim. */
+    const DrsBank *resonant_bank; /* Optional local continuous detail; missing anchors stay silent. */
 } AdConfig;
 
 typedef struct {
@@ -35,6 +37,7 @@ typedef struct {
     double auxiliary_rpm, firing;
     int fuel_mode;
     unsigned rotating_strikes, fired_strikes;
+    double resonant_support,resonant_gain; /* Local engineering support, not measured RPM coverage. */
 } AdTelemetry;
 typedef struct {
     float *dna_raw; /* Observation stereo, before driving envelope. */
@@ -56,6 +59,7 @@ typedef struct {
     float *bed; /* Routed observation bed, config.channels, before master;0 in object mode. */
     float *startup; /* Independent observed L/R startup layer before width/master. */
     float *catch_bloom; /* Coherent CATCH delta L/R before width/master. */
+    float *resonant_raw,*resonant; /* Local detail before/after amount and driving envelope. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
@@ -66,6 +70,7 @@ typedef struct {
     SbLayout bed_layout;
     StVoice startup;
     CbVoice catch_bloom;
+    DrsVoice resonant;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;

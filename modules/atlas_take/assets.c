@@ -19,6 +19,7 @@ int at_assets_valid(const AtAssets *a) {
         (a->config.scene_mode!=AD_SCENE_OBJECTS&&a->config.scene_mode!=AD_SCENE_STEREO_BED))return 0;
     if(a->config.startup_profile&&(a->config.startup_profile!=&a->startup||!st_profile_valid(&a->startup)))return 0;
     if(a->config.catch_profile&&(a->config.catch_profile!=&a->catch_bloom||!cb_profile_valid(&a->catch_bloom)))return 0;
+    if(a->config.resonant_bank&&(a->config.resonant_bank!=&a->resonant||!drs_bank_valid(&a->resonant,&a->bank)))return 0;
     if(a->config.residual_bank) {
         if(a->config.residual_bank!=&a->residual||!ra_bank_valid(&a->residual)||a->residual.count!=a->bank.count)return 0;
         for(i=0;i<a->bank.count;++i)if(fabs(a->residual.root[i]-a->profile[i].base_hz)>1e-8)return 0;
@@ -50,6 +51,7 @@ int at_assets_copy(AtAssets *to,const AdConfig *from) {
     if(from->residual_bank)to->residual=*from->residual_bank;
     if(from->startup_profile){to->startup=*from->startup_profile;to->config.startup_profile=&to->startup;}
     if(from->catch_profile){to->catch_bloom=*from->catch_profile;to->config.catch_profile=&to->catch_bloom;}
+    if(from->resonant_bank){to->resonant=*from->resonant_bank;to->config.resonant_bank=&to->resonant;}
     at_assets_bind(to,from->residual_bank!=NULL);
     return at_assets_valid(to);
 }

@@ -18,6 +18,7 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
         c->profile<0||c->profile>=VSL_PROFILE_COUNT||!isfinite(c->root_per_rpm)||
         c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||
         (!c->residual_bank&&p->mix.residual_gain>0)||(!c->startup_profile&&p->mix.startup_gain>0)||(!c->catch_profile&&p->mix.catch_gain>0)||
+        (!c->resonant_bank&&p->mix.resonant_gain>0)||
         (c->scene_mode!=AD_SCENE_OBJECTS&&c->scene_mode!=AD_SCENE_STEREO_BED)) return 0;
     if(c->residual_bank) {
         if(!ra_bank_valid(c->residual_bank)||c->residual_bank->count!=c->bank->count)return 0;
@@ -25,11 +26,13 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     }
     if(c->startup_profile&&!st_profile_valid(c->startup_profile))return 0;
     if(c->catch_profile&&!cb_profile_valid(c->catch_profile))return 0;
+    if(c->resonant_bank&&!drs_bank_valid(c->resonant_bank,c->bank))return 0;
     memset(s,0,sizeof *s);
     if(!sb_layout_init(&s->bed_layout,(unsigned)c->channels))return 0;
     if(c->startup_profile&&!st_voice_init(&s->startup,c->startup_profile,c->seed^UINT64_C(0xf4c25171),p->mix.startup_gain))return 0;
     if(c->catch_profile&&!cb_voice_init(&s->catch_bloom,c->catch_profile,p->mix.catch_gain))return 0;
     if (!sa_voice_init(&s->dna,c->bank,c->seed,0,p->mix.detail,1)) return 0;
+    if(c->resonant_bank&&!drs_voice_init(&s->resonant,c->resonant_bank,c->bank,c->seed^UINT64_C(48271)^UINT64_C(8121907),p->mix.resonant_gain))return 0;
     s->body_band=hb_band_default();
     /* Engineering voicing scale, not a measured structural transfer. */
     if(!hb_mix_init(&s->body,48000,p->mix.body_mix,1.6))return 0;
@@ -49,7 +52,9 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
 int ad_render_set(AdRender *s,const AdControl *p) {
     double aux[DA_LAYERS];
     if (!s||!s->owner||!ad_control_valid(p,s->config.channels)||(!s->config.residual_bank&&p->mix.residual_gain>0)||
-        (!s->config.startup_profile&&p->mix.startup_gain>0)||(!s->config.catch_profile&&p->mix.catch_gain>0)) return 0;
+        (!s->config.startup_profile&&p->mix.startup_gain>0)||(!s->config.catch_profile&&p->mix.catch_gain>0)||
+        (!s->config.resonant_bank&&p->mix.resonant_gain>0)) return 0;
+    if(s->config.resonant_bank&&!drs_voice_set(&s->resonant,p->mix.resonant_gain))return 0;
     amounts(p,aux);da_voice_set(&s->auxiliary,aux);
     s->target=*p;hb_mix_set(&s->body,p->mix.body_mix);ad_control_apply(s->owner,p);return 1;
 }
@@ -65,6 +70,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
         double observation[2],bed[VSL_MAX_CHANNELS]={0};
         double starter[2]={0},starter_bed[VSL_MAX_CHANNELS]={0};
         double catch_delta[2]={0},catch_bed[VSL_MAX_CHANNELS]={0};
+        DrsFrame resonance={0};double resonant[2]={0},sampled_phase;
         DsSourceFrame source={0};
         VslObjectFrame objects,residual_objects,body_objects={0},aux_raw,aux_objects;
         int c;
@@ -87,7 +93,9 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 cb_voice_set(&s->catch_bloom,gate,u,s->target.mix.catch_gain);
             }
         }
+        sampled_phase=s->dna.phase;
         if(!sa_voice_tick_body(&s->dna,&s->body_band,raw,body_raw))return 0;
+        if(s->config.resonant_bank&&!drs_voice_tick(&s->resonant,&s->dna,sampled_phase,&resonance))return 0;
         if(s->config.residual_bank)ra_voice_tick(&s->residual,residual,residual_raw);
         s->envelope+=s->follow*(e->voice.dna_gain-s->envelope);
         s->gain+=s->follow*(s->target.mix.gain-s->gain);
@@ -110,6 +118,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
         }
         for (c=0;c<2;++c) {
             residual[c]*=s->envelope;
+            resonant[c]=resonance.output[c]*s->envelope;
             /* Explicit bypass preserves former output at exactly zero amount. */
             dry[c]=(source.dna[c]+event)*s->gain;
             if(residual[c]!=0)dry[c]=(source.dna[c]+residual[c]+event)*s->gain;
@@ -117,7 +126,9 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if(aux[c]!=0)dry[c]+=aux[c]*s->gain;
             if(starter[c]!=0)dry[c]+=starter[c]*s->gain;
             if(catch_delta[c]!=0)dry[c]+=catch_delta[c]*s->gain;
+            if(resonant[c]!=0)dry[c]+=resonant[c]*s->gain;
             observation[c]=source.dna[c]+source.low[c]+residual[c];
+            if(resonant[c]!=0)observation[c]+=resonant[c];
         }
         memset(&objects,0,sizeof objects);memset(&residual_objects,0,sizeof residual_objects);
         if(s->config.scene_mode==AD_SCENE_OBJECTS) {
@@ -131,6 +142,11 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             DsSourceFrame separate={0};separate.dna[0]=residual[0];separate.dna[1]=residual[1];
             ds_route_frame(&separate,s->config.projection,s->config.route,&residual_objects);
             for(c=0;c<VSL_OBJECTS;++c)if(residual_objects.sample[c]!=0)objects.sample[c]+=residual_objects.sample[c];
+            if(s->config.resonant_bank) {
+                VslObjectFrame detail_objects;separate.dna[0]=resonant[0];separate.dna[1]=resonant[1];
+                ds_route_frame(&separate,s->config.projection,s->config.route,&detail_objects);
+                for(c=0;c<VSL_OBJECTS;++c)if(detail_objects.sample[c]!=0)objects.sample[c]+=detail_objects.sample[c];
+            }
         }
         objects.sample[VSL_EVENT]=event;
         for(c=0;c<VSL_OBJECTS;++c)if(aux_objects.sample[c]!=0)objects.sample[c]+=aux_objects.sample[c];
@@ -161,6 +177,8 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if (cap->observation)cap->observation[2*n+c]=(float)observation[c];
             if (cap->startup)cap->startup[2*n+c]=(float)starter[c];
             if (cap->catch_bloom)cap->catch_bloom[2*n+c]=(float)catch_delta[c];
+            if (cap->resonant_raw)cap->resonant_raw[2*n+c]=(float)resonance.raw[c];
+            if (cap->resonant)cap->resonant[2*n+c]=(float)resonant[c];
         }
         if(cap->bed)for(c=0;c<s->config.channels;++c)cap->bed[n*s->config.channels+c]=(float)bed[c];
         if (cap->events) cap->events[n]=(float)event;
@@ -180,6 +198,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             t->body_mix=s->body.amount;t->body_envelope=s->body.envelope;
             t->auxiliary_rpm=e->control.rpm;t->firing=e->excitation.firing;t->fuel_mode=e->drive.fuel.mode;
             t->rotating_strikes=e->mechanical.rotating_strikes;t->fired_strikes=e->mechanical.fired_strikes;
+            t->resonant_support=resonance.support;t->resonant_gain=s->config.resonant_bank?s->resonant.amount:0;
         }
         ++s->frame;++e->frame;
     }

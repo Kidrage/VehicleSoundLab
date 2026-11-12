@@ -16,7 +16,7 @@ int main(void) {
     AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR};
     AdControl c={{VSL_BENCH,0,0,0,0,0,850,0,0,0},{.2,1,0,1,0,0,1,0}};
     CbVoice oracle;unsigned n,i,j,h,mask=0,count;double peak=0,error=0,mix_error=0;
-    const AtField *fields=at_fields(&count);CHECK(count==27&&!strcmp(fields[count-1].name,"catch_gain"));
+    const AtField *fields=at_fields(&count);CHECK(count==28&&!strcmp(fields[26].name,"catch_gain")&&!strcmp(fields[27].name,"resonant_gain"));
     profile.rate=48000;profile.window=1024;profile.hop=256;profile.base_hz=35;profile.harmonics=24;
     for(h=0;h<24;++h){profile.harmonic[h].mean[0]=.02/(h+1);profile.harmonic[h].mean[2]=.017/(h+1);}
     CHECK(sa_bank_init(&bank,models,1,0));config.root_per_rpm=35./850;config.scene_mode=AD_SCENE_STEREO_BED;
