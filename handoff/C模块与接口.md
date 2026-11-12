@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增独立[启动车内细节](../research/启动车内细节V1.md)：`experiments/startup_detail_v1/probe.c`复用原atlas／残差／唯一驾驶器及启停层；只新增1份离线宿主，原468份C/H及职责保持，现469份。Python的`startup_detail_v1/budget.py`校验左右可加差额，`controls.py`做已知矩阵／DFT核对。沿用SrProfile、RaBank和原渲染接口，没有改UI／schema5；11带新增量、600–850Hz为0。8条共增益试听待听评，三seed平均统计不能代替自然度。
+
 当前接口以[接火低频统一驾驶V1](../research/接火低频统一驾驶V1.md)为准：`atlas_drive`可选`catch_profile`／`catch_gain`／`AdCapture.catch_bloom`，由唯一200Hz驾驶器CATCH调度，完整包络后DNA在互补重分配前输入，新层仅一次前置路由。`atlas_take`拥有启动／接火模型，schema5／27字段及新源哈希；旧schema4匹配播放器已保存。独立研究入口`Launch-Catch-Study.cmd`，接火量默认0%，音色仍待听评。45项CTest、108旧WAV字节回归、短设备与录放／2和12导出通过，现468份C/H。新增`experiments/catch_drive_v1/{checks,probe}.c`，八份接火内核C/H不改。以下按各阶段记录当时接口，不据旧版本描述判断当前集成状态。
 
 新增[接火低频建立V1](../research/接火低频建立V1.md)：`catch_bloom/profile.*`校验模式与包络，`filter.*`固定带通，`envelope.*`共同beta／指数跟随，`voice.*`持续处理DNA并只输出附加量。唯一驾驶器的CATCH进度由独立离线宿主读取，未新增车辆时钟、随机源或空间器。`experiments/catch_bloom_v1`检查解析频响／包络／状态连续及两次启停／2与12前置一次路由；8模块＋2宿主C/H新增、旧456身份不变，现466份索引。尚未接默认实时UI／行程，也未获听评；不能把宽带颜色拟合叫物理车体分离或完整启动恢复。

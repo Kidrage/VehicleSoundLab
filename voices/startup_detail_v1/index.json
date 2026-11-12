@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.startup-detail-models/1",
+  "context": "A V10 startup settling cabin",
+  "source_seconds": [
+    38.48,
+    39.51
+  ],
+  "DNA_sha256": "d5dbe07bb4f9cc0f324a21d52ea7c26d9907c166184dc98e41a03cbcf847af23",
+  "file": "A startup settling detail.residual",
+  "model_sha256": "c2e38e4fdd8eabf20b3b09b2ba81ca53b4874b1be5fe972cc67f58ec2aa346b9",
+  "fit_report_sha256": "2acbfe10fe15d45bd37eb6fe414043983a82e020a093818e98827354342ce1d0",
+  "active_bands": 11,
+  "silent_infeasible_band_Hz": [
+    600,
+    850
+  ],
+  "human_accepted": false,
+  "native_default": false,
+  "limits": [
+    "Mixed same-A startup settling observation, not an isolated physical noise source",
+    "No fast catch pitch, full startup timing or measured load/RPM calibration",
+    "Fixed-Hz OSC detail and single acoustic anchor; not wide-RPM/detail modulation evidence",
+    "Infeasible stereo bands remain silent; no automatic DNA attenuation or cross clipping",
+    "Split of one short training passage is only local sensitivity, not independent recording validation"
+  ]
+}
