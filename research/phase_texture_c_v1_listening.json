@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "date": "2026-11-12",
+  "experiment": "phase_texture_c_v1",
+  "question": "C版是否保住已认可的机械质感？滤波与强度相同，但使用新的随机序列。",
+  "user_feedback": "C版仍有电子感／比离线轻量差",
+  "result": "native_timbre_not_accepted",
+  "offline_light_acceptance_unchanged": true,
+  "action": "Pause driving integration and audit accepted offline versus C signal parity before any further sound tuning",
+  "causal_limit": "Feedback rejects native parity; it does not identify RNG, device, gain or modulation as the unique cause"
+}

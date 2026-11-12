@@ -1,5 +1,7 @@
 # Shared phase texture
 
+Latest listening: native C rejected; the user subsequently found both offline/native insufficient overall. The earlier LIGHT preference was relative, not final timbre acceptance. Preserve this optional experiment, do not promote it to driving/defaults. See [source diagnosis and next design](../../research/DNA高频质感诊断与优化V2.md).
+
 An optional adapter for an initialized, valid 48kHz `SdVoice`; it borrows the same immutable profile. The caller owns all state and must pass that same voice/profile for its lifetime.
 
 - `motion.*`: independent stochastic control; fixed20–70Hz bandpass at187.5Hz, streamed natural spline, bounded4us displacement.

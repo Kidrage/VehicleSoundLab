@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.dna-texture-diagnostic-plan/1",
+  "date": "2026-11-12",
+  "sample_rate": 48000,
+  "acoustic_cycle_frames": 1024,
+  "bands_hz": [[1200, 1900], [1900, 3000], [3000, 6000], [6000, 8000]],
+  "filter_taps": 1025,
+  "edge_discard_frames": 2048,
+  "cycle_lags": [1, 2, 4],
+  "lag_relative_search": 0.02,
+  "envelope_smoothing_frames": 128,
+  "envelope_fourier_orders": 8,
+  "controls": {
+    "comb_minimum_repeat": 0.97,
+    "band_noise_maximum_repeat": 0.30,
+    "direct_correlation_error": 1e-10,
+    "gain_invariance_error": 1e-12,
+    "heldout_AM_minimum_improvement": 0.80
+  },
+  "envelope_gate": "Both forward and reverse half validation must improve normalized power-envelope MSE by at least 10 percent, with no smoothing/order/root search",
+  "scope": "Same accepted normalized A moving-tailpipe acoustic coordinate, not crank-angle, physical-source decomposition, RPM/load evidence or listener acceptance",
+  "next_design": "Separate coherent high-harmonic energy from diffuse/detail energy with replacement, then fit noise-driven resonators to short-lag structure. Introduce a periodic detail envelope only if it validates on held-out halves. No independent fixed HF cloud, generic saw/friction layer or deeper common PM."
+}
