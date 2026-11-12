@@ -6,7 +6,7 @@ static int unit(double x) { return isfinite(x) && x >= 0 && x <= 1; }
 
 int ds_source_control_valid(const DsSourceControl *c) {
     return c && isfinite(c->pitch) && c->pitch >= .9 && c->pitch <= 1.1 &&
-        unit(c->dna_detail) && unit(c->low_detail) && unit(c->dna_gain) && unit(c->low_gain);
+        unit(c->dna_detail) && unit(c->low_detail) && unit(c->dna_gain) && unit(c->low_gain) && unit(c->phase_texture);
 }
 
 int ds_source_init(DsSource *s, const DsSourceConfig *c, const DsSourceControl *p) {
@@ -19,6 +19,7 @@ int ds_source_init(DsSource *s, const DsSourceConfig *c, const DsSourceControl *
         c->low->hop != c->dna->hop)) return 0;
     memset(s, 0, sizeof *s);
     if (!sd_voice_init(&s->dna, c->dna, c->dna_seed, p->pitch, p->dna_detail, 1)) return 0;
+    if (!pt_voice_init(&s->phase, c->dna, c->phase_seed, p->phase_texture)) return 0;
     if (c->low && !sd_voice_init(&s->low, c->low, c->low_seed, p->pitch, p->low_detail, 1)) return 0;
     s->has_low = c->low != NULL;
     s->target = *p;
@@ -32,6 +33,7 @@ int ds_source_init(DsSource *s, const DsSourceConfig *c, const DsSourceControl *
 int ds_source_set(DsSource *s, const DsSourceControl *c) {
     if (!s || !s->dna.model || !ds_source_control_valid(c)) return 0;
     sd_voice_set(&s->dna, c->pitch, c->dna_detail, 1);
+    pt_voice_set(&s->phase, c->phase_texture);
     if (s->has_low) sd_voice_set(&s->low, c->pitch, c->low_detail, 1);
     s->target = *c;
     return 1;
@@ -39,7 +41,7 @@ int ds_source_set(DsSource *s, const DsSourceControl *c) {
 
 void ds_source_tick(DsSource *s, DsSourceFrame *f) {
     int c;
-    sd_voice_process(&s->dna, f->dna_raw, 1);
+    pt_voice_tick(&s->phase, &s->dna, f->dna_raw);
     f->low_raw[0] = f->low_raw[1] = 0;
     /* Muting a layer never pauses its clock or its random process. */
     if (s->has_low) sd_voice_process(&s->low, f->low_raw, 1);

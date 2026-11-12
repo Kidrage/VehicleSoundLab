@@ -47,6 +47,11 @@ void smo_ui_checks_tick(SmoUiChecks *t, HWND owner, SaAudio *a) {
     if (!t->enabled) return;
     if (s.error[0]) { t->passed = 0; DestroyWindow(owner); return; }
     if (t->stage == 0 && s.frames >= 24000) {
+        if (GetDlgItem(owner, 32)) {
+            c = sa_audio_control(a); t->controls_ok &= c.scene.source.phase_texture == 1;
+            checkbox(owner, 32, 0); c = sa_audio_control(a); t->controls_ok &= c.scene.source.phase_texture == 0;
+            checkbox(owner, 32, 1); c = sa_audio_control(a); t->controls_ok &= c.scene.source.phase_texture == 1;
+        }
         slider(owner, 20, 900); c = sa_audio_control(a);
         t->controls_ok &= c.scene.source.pitch == .9 && c.scene.source.low_gain == 1 && c.spatial == 0 && c.scene.output_gain == .5;
         t->stage = 1;

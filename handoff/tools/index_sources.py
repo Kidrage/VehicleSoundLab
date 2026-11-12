@@ -161,6 +161,12 @@ def code_rows():
             if group == "harmonic_body":
                 layer, owner = "相干低频分层", "harmonic_body / atlas_drive"
                 role = "频率掩码" if p.stem == "band" else "互补分层与独立工况包络"
+            elif group == "phase_texture":
+                layer, owner = "主声线共同微扰", "phase_texture"
+                role = "独立随机控制／带通／流式自然样条" if p.stem == "motion" else "原幅度与同组OSC的有界共同相位适配；零量原版"
+            elif group == "phase_texture_c_v1":
+                layer, owner = "共同微扰C验证", "VslPhaseTexture_"+p.stem
+                role = "解析OSC／原版与低频回归／分块契约" if p.stem == "checks" else "原生C声源与微扰控制离线分轨"
             elif group == "harmonic_body_v1":
                 layer, owner, role = "相干低频验证", "VslHarmonicBody_checks", "解析OSC、互补重合、驾驶／布局不变性"
             elif group == "atlas_take":

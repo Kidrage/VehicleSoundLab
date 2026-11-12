@@ -1,0 +1,140 @@
+{
+  "schema": "vsl.tach-mapping-summary/1",
+  "date": "2026-11-12",
+  "result": "E_mapping_interval_sensitivity_observed",
+  "known_controls": {
+    "shared_offset_sign": true,
+    "known_exact_mapping": true,
+    "unsupported_not_extrapolated": true,
+    "dense_membership_candidates": 10001,
+    "interval_membership_exact": true
+  },
+  "sensitivities": [
+    {
+      "acoustic_fraction": 0,
+      "feasible_offsets": 38,
+      "unsupported_offsets": 59,
+      "union_envelope_root_per_rpm": [
+        0.007856173786951267,
+        0.008357293887703432
+      ],
+      "default_1_over_120_supported_offsets": [
+        -0.01,
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.09
+      ]
+    },
+    {
+      "acoustic_fraction": 0.01,
+      "feasible_offsets": 48,
+      "unsupported_offsets": 59,
+      "union_envelope_root_per_rpm": [
+        0.007777612049081754,
+        0.008440866826580466
+      ],
+      "default_1_over_120_supported_offsets": [
+        -0.01,
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1,
+        0.11,
+        0.12,
+        0.13,
+        0.14,
+        0.15
+      ]
+    },
+    {
+      "acoustic_fraction": 0.02,
+      "feasible_offsets": 62,
+      "unsupported_offsets": 59,
+      "union_envelope_root_per_rpm": [
+        0.0076990503112122416,
+        0.0085244397654575
+      ],
+      "default_1_over_120_supported_offsets": [
+        -0.01,
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1,
+        0.11,
+        0.12,
+        0.13,
+        0.14,
+        0.15,
+        0.16,
+        0.17,
+        0.18,
+        0.19,
+        0.2,
+        0.21,
+        0.22,
+        0.23,
+        0.24,
+        0.25,
+        0.26,
+        0.27,
+        0.28,
+        0.29
+      ]
+    }
+  ],
+  "limits": [
+    "E high-rev cabin only; these visual intervals are not ECU telemetry or precise RPM targets",
+    "Shared time offset includes unknown A/V, display and observation latency; its causes are not separated",
+    "Offset grid +/-0.6s and acoustic perturbations0/1/2percent are design sensitivity, not confidence bounds",
+    "Existing acoustic family is reused; this does not requalify instantaneous phase tracking or source separation",
+    "Missing acoustic support is untested, never extrapolated or counted as an incompatible reading",
+    "Not transferred to A startup/exterior, B or D, and not a new driving control trajectory"
+  ],
+  "A_hires_fetch": {
+    "schema": "vsl.A-hires-picture/1",
+    "result": "failed",
+    "approval_evidence": "2026-11-09 user: 批准 A + B：Performante 主参考，Tecnica 车内补充",
+    "approval_manifest_sha256": "d7ebe1534e28146191c06dbab4c762d50db2e3d63106deb4f1661cbf1699c454",
+    "video_id": "7aZm1Wkp6QM",
+    "yt_dlp_version": "2026.10.26",
+    "browser_cookies_used": false,
+    "source_sha256": "0967e39f1b949f2379912de951a4d54d35efeaf05814424f5e58425876403c4a",
+    "purpose": "Read existing approved startup tach; no audio re-analysis or new media identity",
+    "proxy": "existing local HTTP proxy",
+    "error": "ERROR: \r[download] Got error: The read operation timed out. Giving up after 1 retries"
+  },
+  "A_native_frame_sha256": "dd57be3e1ce78e8d741e3eb6ae13bd2583fa3d0b113b4b43b0f05e2eb8c975e3",
+  "partial_video": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\A_hires_v1\\fetch1\\A_picture.mp4.part",
+    "sha256": "d92b727520d82da7306cdad65245719b791f99a64c7b85c50d4296990284d63c",
+    "bytes": 52169197,
+    "whole_download_completed": false
+  },
+  "source_sha256": {
+    "tools/analyze_tach_mapping_v1.py": "e9cc749773d5744dcf9e92c3999d3c87a108b8170f00ab7d3b71e64775ea5f80",
+    "tools/tach_mapping_v1/intervals.py": "e89d508d75f756c6665e2b2d692103a436d80bf872aaaccca8d01cb851233e51",
+    "tools/fetch_A_hires_v1.py": "0967e39f1b949f2379912de951a4d54d35efeaf05814424f5e58425876403c4a",
+    "tools/finalize_tach_mapping_v1.py": "45fd6c7ebff8ad2ce6f0ffd8a49f11bd9d2445b5734b7e8f47328326dd0e82a4",
+    "research/转速映射证据补记V1.md": "d46297e2fdc07f67f1efb49a1cebc86fe760767e65efc86c70303697241f4844"
+  },
+  "runtime_mapping_or_timbre_changed": false,
+  "A_startup_RPM_calibrated": false
+}

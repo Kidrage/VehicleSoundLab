@@ -16,6 +16,7 @@ static SmoUiChecks checks;
 static HWND sliders[5], labels[5], status, voices;
 static HFONT font, heading;
 static int last_voice;
+static int phase_study;
 static const wchar_t *dna_paths[] = {L"voices/dna_bank_v1/V10 Exterior.model", L"voices/dna_bank_v1/Warm Additive.model", L"voices/dna_bank_v1/Hollow Spectrum.model"};
 static const wchar_t *low_path = L"voices/coherent_low_v1/measured_phase.model";
 
@@ -30,6 +31,7 @@ static void controls(HWND owner) {
     c.scene.width = values[2] / 100.; c.scene.space = values[3] / 100.; c.scene.output_gain = .5 * pow(10, values[4] / 20.);
     c.spatial = SendMessageW(GetDlgItem(owner, 30), BM_GETCHECK, 0, 0) == BST_CHECKED;
     c.scene.propagation = SendMessageW(GetDlgItem(owner, 31), BM_GETCHECK, 0, 0) == BST_CHECKED;
+    c.scene.source.phase_texture = phase_study && SendMessageW(GetDlgItem(owner, 32), BM_GETCHECK, 0, 0) == BST_CHECKED ? 1 : 0;
     sa_audio_controls(&audio, &c);
     swprintf(text, 100, L"相对音高    ×%.2f", c.scene.source.pitch); SetWindowTextW(labels[0], text);
     if (models.has_low) swprintf(text, 100, L"低频轰鸣    %d%%", values[1]); else wcscpy_s(text, 100, L"低频轰鸣    当前音色未配低频模型");
@@ -73,6 +75,10 @@ static LRESULT CALLBACK procedure(HWND owner, UINT message, WPARAM w, LPARAM l) 
         heading = CreateFontW(-24, 0, 0, 0, FW_SEMIBOLD, 0, 0, 0, DEFAULT_CHARSET, 0, 0, CLEARTYPE_QUALITY, 0, L"Microsoft YaHei UI");
         SendMessageW(control(owner, L"STATIC", L"持续声源", 0, 0, 24, 18, 470, 32), WM_SETFONT, (WPARAM)heading, TRUE);
         control(owner, L"STATIC", L"DNA + 低频轰鸣", 0, 0, 24, 55, 470, 26);
+        if (phase_study) {
+            HWND phase = control(owner, L"BUTTON", L"共同微扰 · 轻量", BS_AUTOCHECKBOX | WS_TABSTOP, 32, 275, 52, 230, 28);
+            SendMessageW(phase, BM_SETCHECK, BST_CHECKED, 0);
+        }
         voices = control(owner, WC_COMBOBOXW, L"", CBS_DROPDOWNLIST | WS_TABSTOP, 40, 24, 88, 342, 200);
         SendMessageW(voices, CB_ADDSTRING, 0, (LPARAM)L"V10 · 车外"); SendMessageW(voices, CB_ADDSTRING, 0, (LPARAM)L"Warm · 合成测试");
         SendMessageW(voices, CB_ADDSTRING, 0, (LPARAM)L"Hollow · 合成测试"); SendMessageW(voices, CB_SETCURSEL, 0, 0);
@@ -95,7 +101,7 @@ static LRESULT CALLBACK procedure(HWND owner, UINT message, WPARAM w, LPARAM l) 
     }
     case WM_HSCROLL: controls(owner); return 0;
     case WM_COMMAND:
-        if (LOWORD(w) == 30 || LOWORD(w) == 31) { controls(owner); return 0; }
+        if (LOWORD(w) == 30 || LOWORD(w) == 31 || LOWORD(w) == 32) { controls(owner); return 0; }
         if (LOWORD(w) == 40 && HIWORD(w) == CBN_SELCHANGE) {
             int selection = (int)SendMessageW(voices, CB_GETCURSEL, 0, 0);
             if (selection >= 0 && selection < 3) {
@@ -158,6 +164,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, PWSTR command, int s
     if (!args) return 2;
     for (i = 1; i < argc; ++i) {
         if (!wcscmp(args[i], L"--muted")) muted = 1;
+        else if (!wcscmp(args[i], L"--phase-texture")) phase_study = 1;
         else if (!wcscmp(args[i], L"--ui-checks") && i + 1 < argc) {
             checks.enabled = 1; muted = 1; checks.passed = checks.controls_ok = 1;
             if (!GetFullPathNameW(args[++i], 2048, checks.directory, NULL)) { LocalFree(args); return 2; }
@@ -169,7 +176,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, PWSTR command, int s
     InitCommonControlsEx(&common); klass.lpfnWndProc = procedure; klass.hInstance = instance;
     klass.lpszClassName = L"VslSceneMonitorV1"; klass.hCursor = LoadCursorW(NULL, IDC_ARROW); klass.hbrBackground = GetSysColorBrush(COLOR_WINDOW);
     if (!RegisterClassW(&klass)) { sa_audio_destroy(&audio); return 2; }
-    window = CreateWindowW(klass.lpszClassName, L"Vehicle Sound Lab · DNA + Low + Space", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
+    window = CreateWindowW(klass.lpszClassName, phase_study ? L"Vehicle Sound Lab · Shared Phase" : L"Vehicle Sound Lab · DNA + Low + Space", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
         CW_USEDEFAULT, CW_USEDEFAULT, 560, 710, NULL, NULL, instance, NULL);
     if (!window) { sa_audio_destroy(&audio); return 2; }
     if (checks.enabled) {

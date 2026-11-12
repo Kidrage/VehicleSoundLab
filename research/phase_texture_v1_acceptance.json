@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.listening-acceptance/1",
+  "date": "2026-11-12",
+  "experiment": "phase_texture_v1",
+  "user_feedback": "更接近机械声，保留这条方向",
+  "accepted_scope": "Light shared high-harmonic phase motion versus accepted A moving-exterior DNA plus coherent LF, offline fixed context",
+  "candidate": "common_phase_0.5.wav",
+  "motion_seed": 8121907,
+  "design_scale_microseconds": 2,
+  "bounded_displacement_microseconds": 4,
+  "evidence": "E:/VehicleSoundLab/baselines/phase_texture_v1/evidence/trial2",
+  "not_established": [
+    "Medium 4us design-scale candidate acceptance",
+    "Measured crank jitter or source-calibrated motion spectrum",
+    "Native C implementation listening parity",
+    "Whole RPM/load/state coverage or other engines"
+  ],
+  "frozen_payload_policy": "Append later human feedback separately; preserve original pending reports and audio"
+}

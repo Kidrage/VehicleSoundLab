@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[共同微扰C接入](../research/共同微扰C接入V1.md)：`modules/phase_texture/motion.*`负责独立随机控制／样条，`voice.*`负责原幅度与同组谐波的共同相位适配。`DsSourceControl.phase_texture`为0–1轻量强度，`DsSourceConfig.phase_seed`为独立种子，默认强度0；`--phase-texture`研究监听打开轻量开关。478份C/H，466原件不变，47项CTest／短设备通过。旧玩家已存，驾驶器／行程未加新控制；原生听评待确认。
+
 最新[启动细节原生接入](../research/启动细节原生接入V1.md)：`experiments/atlas_monitor_v1/models.c::am_models_load_variant`非实时事务装入同A细节，`ui.c`绑定既有细节量；新增`experiments/startup_detail_host_v1/{checks,ui_checks}.c/.h`只负责模型／资产和控件消息验证。原`src/`及`modules/`保持，472份C/H含3新增／5宿主验证修改；46项CTest及短设备／schema5录放通过。没有新增驾驶器、实时声源或协议。
 
 新增独立[启动车内细节](../research/启动车内细节V1.md)：`experiments/startup_detail_v1/probe.c`复用原atlas／残差／唯一驾驶器及启停层；只新增1份离线宿主，原468份C/H及职责保持，现469份。Python的`startup_detail_v1/budget.py`校验左右可加差额，`controls.py`做已知矩阵／DFT核对。沿用SrProfile、RaBank和原渲染接口，没有改UI／schema5；11带新增量、600–850Hz为0。8条共增益试听待听评，三seed平均统计不能代替自然度。

@@ -51,11 +51,11 @@ static int save_trace(const char *directory, const char *name, const SaAudio *a)
     fprintf(file, ",\"events\":[");
     for (i = 0; i < a->trace_count; ++i) {
         const SmoControl *c = &a->trace[i].control;
-        fprintf(file, "%s{\"frame\":%llu,\"pitch\":%.17g,\"dna_detail\":%.17g,\"low_detail\":%.17g,\"dna_gain\":%.17g,\"low_gain\":%.17g,\"output_gain\":%.17g,\"width\":%.17g,\"space\":%.17g,\"perspective\":%.17g,\"propagation\":%d,\"spatial\":%d}",
+        fprintf(file, "%s{\"frame\":%llu,\"pitch\":%.17g,\"dna_detail\":%.17g,\"low_detail\":%.17g,\"dna_gain\":%.17g,\"low_gain\":%.17g,\"output_gain\":%.17g,\"width\":%.17g,\"space\":%.17g,\"perspective\":%.17g,\"propagation\":%d,\"spatial\":%d,\"phase_texture\":%.17g}",
             i ? "," : "", (unsigned long long)a->trace[i].frame, c->scene.source.pitch,
             c->scene.source.dna_detail, c->scene.source.low_detail, c->scene.source.dna_gain,
             c->scene.source.low_gain, c->scene.output_gain, c->scene.width, c->scene.space,
-            c->scene.perspective, c->scene.propagation, c->spatial);
+            c->scene.perspective, c->scene.propagation, c->spatial, c->scene.source.phase_texture);
     }
     fprintf(file, "]}\n"); ok = !ferror(file); if (fclose(file)) ok = 0; return ok;
 }
@@ -69,8 +69,10 @@ static void stats_json(FILE *file, const char *key, const SaStats *s, int equal)
 static int run(int argc, char **argv) {
     DsSceneConfig config; SmoControl control = smo_recipe_control();
     SaStats baseline, live, stopped, restarted; int equal[4] = {0}, ok = 1, stage = 0;
-    FILE *file; char path[4096]; ULONGLONG deadline;
-    if (argc != 4 || !sd_profile_load(argv[1], &dna) || !sd_profile_load(argv[2], &low)) return 2;
+    FILE *file; char path[4096]; ULONGLONG deadline; int phase_study = 0;
+    if (argc == 5 && !strcmp(argv[4], "--phase-texture")) phase_study = 1;
+    if ((argc != 4 && !phase_study) || !sd_profile_load(argv[1], &dna) || !sd_profile_load(argv[2], &low)) return 2;
+    control.scene.source.phase_texture = phase_study ? 1 : 0;
     config = smo_recipe_config(&dna, &low); sa_audio_init(&audio, &config, &control, 1);
     audio.capture_frames = 8 * 48000;
     audio.capture = calloc(audio.capture_frames * 2, sizeof(float));
@@ -89,18 +91,18 @@ static int run(int argc, char **argv) {
         SaStats s = sa_audio_stats(&audio);
         if (stage == 0 && s.frames >= 24000) { control.scene.source.pitch = .9; stage = 1; sa_audio_controls(&audio, &control); }
         else if (stage == 1 && s.frames >= 60000) { control.scene.source.low_gain = 0; stage = 2; sa_audio_controls(&audio, &control); }
-        else if (stage == 2 && s.frames >= 96000) { control.spatial = 1; control.scene.space = .65; stage = 3; sa_audio_controls(&audio, &control); }
+        else if (stage == 2 && s.frames >= 96000) { control.spatial = 1; control.scene.space = .65; control.scene.source.phase_texture = 0; stage = 3; sa_audio_controls(&audio, &control); }
         else if (stage == 3 && s.frames >= 132000) { control.scene.width = 0; control.scene.propagation = 1; stage = 4; sa_audio_controls(&audio, &control); }
         else if (stage == 4 && s.frames >= 168000) { control.scene.output_gain = .5 * pow(10, -6./20); stage = 5; sa_audio_controls(&audio, &control); }
-        else if (stage == 5 && s.frames >= 204000) { control.scene.source.low_gain = 1; control.scene.source.pitch = 1.1; stage = 6; sa_audio_controls(&audio, &control); }
+        else if (stage == 5 && s.frames >= 204000) { control.scene.source.low_gain = 1; control.scene.source.pitch = 1.1; control.scene.source.phase_texture = phase_study ? 1 : 0; stage = 6; sa_audio_controls(&audio, &control); }
         else if (stage == 6 && s.frames >= 240000) { control.spatial = 0; stage = 7; sa_audio_controls(&audio, &control); }
         else if (stage == 7 && s.frames >= 288000) { control.scene.width = .6; control.spatial = 1; stage = 8; sa_audio_controls(&audio, &control); }
-        else if (stage == 8 && s.frames >= 336000) { control = smo_recipe_control(); stage = 9; sa_audio_controls(&audio, &control); }
+        else if (stage == 8 && s.frames >= 336000) { control = smo_recipe_control(); control.scene.source.phase_texture = phase_study ? 1 : 0; stage = 9; sa_audio_controls(&audio, &control); }
         Sleep(10);
     }
     sa_audio_stop(&audio); live = sa_audio_stats(&audio); equal[1] = replay(&audio, &live);
     ok &= healthy(&live) && equal[1] && stage == 9 && live.frames == 8 * 48000 && save(argv[3], "live_controls", audio.capture, (unsigned)live.frames) && save_trace(argv[3], "live", &audio);
-    control = smo_recipe_control(); sa_audio_controls(&audio, &control); audio.frame_limit = 0;
+    control = smo_recipe_control(); control.scene.source.phase_texture = phase_study ? 1 : 0; sa_audio_controls(&audio, &control); audio.frame_limit = 0;
     if (!sa_audio_start(&audio)) goto failed;
     deadline = GetTickCount64() + 5000;
     while (sa_audio_stats(&audio).frames < 24000 && InterlockedCompareExchange(&audio.running, 0, 0) && GetTickCount64() < deadline) Sleep(10);

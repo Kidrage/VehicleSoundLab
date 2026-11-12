@@ -10,6 +10,7 @@ file(GLOB_RECURSE at_render_files CONFIGURE_DEPENDS
   "${VSL_ROOT}/modules/residual_atlas/*.c" "${VSL_ROOT}/modules/residual_atlas/*.h"
   "${VSL_ROOT}/modules/dna_atlas/*.c" "${VSL_ROOT}/modules/dna_atlas/*.h"
   "${VSL_ROOT}/modules/dna_scene/*.c" "${VSL_ROOT}/modules/dna_scene/*.h"
+  "${VSL_ROOT}/modules/phase_texture/*.c" "${VSL_ROOT}/modules/phase_texture/*.h"
   "${VSL_ROOT}/modules/harmonic_body/*.c" "${VSL_ROOT}/modules/harmonic_body/*.h"
   "${VSL_ROOT}/modules/drive_aux/*.c" "${VSL_ROOT}/modules/drive_aux/*.h"
   "${VSL_ROOT}/modules/rt_numeric/*.c" "${VSL_ROOT}/modules/rt_numeric/*.h"
