@@ -10,6 +10,6 @@
 
 独立构建：`cmake -S experiments/start_texture_v1 -B build-start-texture-v1 -A x64`，随后Release构建、CTest。探针参数：`start_texture_probe MODEL old|new|held OUTPUT.wav RAW.wav TRACE.csv 4 SEED`。`old/new` 用同一个既有驾驶器做两次启动；`held`仅用于持续源检查。
 
-统一链可选接入：`AdConfig.startup_profile`＋`AdMix.startup_gain`，正量必须提供模型；仅CRANK门控，谱形位置按既有拖转进度给定。新入口`Launch-Startup-Study.cmd`使用独立构建、车内库、50%层量，默认停止。附加层保留stereo只路由一次到FL/FR；不进房间／传播／视角处理。录制schema4拥有模型并保存26字段控制，旧播放器保留。不是将另一视角的启动层默认覆盖到认可车外配方。
+统一链可选接入：`AdConfig.startup_profile`＋`AdMix.startup_gain`，正量必须提供模型；仅CRANK门控，谱形位置按既有拖转进度给定。入口`Launch-Startup-Study.cmd`使用独立构建、车内库、50%层量，默认停止。附加层保留stereo只路由一次到FL/FR；不进房间／传播／视角处理。当前录制schema5拥有模型并保存27字段控制，原schema4播放器保留。后续`Launch-Catch-Study.cmd`可在同A趋稳DNA上另加独立`catch_bloom`；本模块仍只负责启动前段。不是将另一视角的启动层默认覆盖到认可车外配方。
 
 见[初版研究](../../research/启动机械纹理V1.md)及[统一链与证据](../../research/启动层统一驾驶V1.md)。

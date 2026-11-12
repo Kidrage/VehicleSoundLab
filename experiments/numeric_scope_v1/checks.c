@@ -17,6 +17,7 @@ static AmRender voices[2];static VslEngine engines[3];static AtPlayer player;
 static float audio[2][FRAMES*2],raw[512*2],dna[512*2],body[512*2],events[512];
 static float residual[512*2],auxiliary[512*VSL_OBJECTS];
 static float startup[1024];
+static float catch_bloom[1024];
 static unsigned original;
 static unsigned get_flags(void) {
 #if HAS_MXCSR
@@ -107,7 +108,7 @@ static int recording(void) {
     CHECK(at_take_event(&take,0,&c));
     CHECK(am_render_init(voices,engines,&take.assets->config,&c));
     capture.dna_raw=raw;capture.dna=dna;capture.body=body;capture.events=events;
-    capture.residual=residual;capture.aux_objects=auxiliary;capture.startup=startup;
+    capture.residual=residual;capture.aux_objects=auxiliary;capture.startup=startup;capture.catch_bloom=catch_bloom;
     for(at=0;at<FRAMES;) {
         unsigned n=257,flags=caller((int)(at&1));
         if(n>FRAMES-at)n=FRAMES-at;

@@ -214,6 +214,9 @@ def code_rows():
             elif group == "catch_bloom_v1":
                 layer, owner = "接火低频独立验证", "catch_bloom_"+p.stem
                 role = "复用唯一驾驶链／包络后DNA，离线前置一次叠加与分轨" if p.stem == "probe" else "解析包络／频响／衰减、状态连续、分块／同址与事务契约"
+            elif group == "catch_drive_v1":
+                layer, owner = "接火层统一驾驶验证", "VslCatchDrive_"+p.stem
+                role = "同一atlas驾驶链两次启停／独立分轨／2与12导出" if p.stem == "probe" else "唯一驾驶器／完整DNA输入、独立量、旁路、分块、一次路由与声部对照"
             yield rel, layer, owner, role, digest(p)
 
 

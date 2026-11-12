@@ -15,4 +15,4 @@
 delta[c] = amount × smooth(beta(progress)) × Σ gain[i] × bandpass[i](DNA[c])
 ```
 
-当前仅`experiments/catch_bloom_v1`离线宿主调用。它读取既有渲染器的DNA分轨，新增量经同一主增益只加一次FL/FR；没有接入默认UI或行程协议。模型是A车内混合录音的粗颜色／包络，不能称独立车体传递、真实RPM或完整接火恢复。见[测量与验证](../../research/接火低频建立V1.md)。
+当前可由`atlas_drive`通过`AdConfig.catch_profile`＋`AdMix.catch_gain`可选调用；正量要求有效模型。输入为互补低频重分配之前的完整包络后DNA，输出经同一主增益只加一次FL/FR；独立分轨为`AdCapture.catch_bloom`。`Launch-Catch-Study.cmd`提供原生研究入口，接火量默认0%；schema5行程拥有模型并记录第27字段。模型是A车内混合录音的粗颜色／包络，不能称独立车体传递、真实RPM或完整接火恢复。见[原始测量](../../research/接火低频建立V1.md)及[集成与验证](../../research/接火低频统一驾驶V1.md)。

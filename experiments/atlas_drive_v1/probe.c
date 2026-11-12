@@ -15,7 +15,7 @@
 #endif
 
 #define BLOCK 240
-#define AUDIO_FILES 11
+#define AUDIO_FILES 12
 #define RAW_AUX_FILES 6
 #define FILES (AUDIO_FILES+VSL_OBJECTS+RAW_AUX_FILES)
 static const int aux_source[RAW_AUX_FILES]={VSL_INTAKE,VSL_MECHANICAL,VSL_AIR_L,VSL_AIR_R,VSL_ROAD,VSL_WIND};
@@ -30,6 +30,7 @@ static float residual_raw[BLOCK*2],residual[BLOCK*2];
 static float body_raw[BLOCK*2],body[BLOCK*2];
 static float aux[BLOCK*2],aux_raw[BLOCK*VSL_OBJECTS],aux_objects[BLOCK*VSL_OBJECTS];
 static StProfile startup_profile;static float startup[BLOCK*2];
+static CbProfile catch_profile;static float catch_bloom[BLOCK*2];
 static AdTelemetry trace[BLOCK];
 static double timer(void) {
 #ifdef _WIN32
@@ -59,8 +60,8 @@ static int run(int argc,char **argv) {
     AdCapture capture={raw,dna,events,dry,objects,trace};
     VslParams params=vsl_default_params(VSL_V10);
     VslWavWriter writers[FILES]={{0}};
-    float *buffers[AUDIO_FILES]={output,raw,dna,dry,events,residual_raw,residual,body_raw,body,aux,startup};
-    const char *suffix[AUDIO_FILES]={"render","dna_raw","dna","dry","event_layer","residual_raw","residual","harmonic_body_raw","harmonic_body","auxiliary","startup"};
+    float *buffers[AUDIO_FILES]={output,raw,dna,dry,events,residual_raw,residual,body_raw,body,aux,startup,catch_bloom};
+    const char *suffix[AUDIO_FILES]={"render","dna_raw","dna","dry","event_layer","residual_raw","residual","harmonic_body_raw","harmonic_body","auxiliary","startup","catch_bloom"};
     char paths[FILES][4096],csv_path[4096],json_path[4096];
     FILE *csv=NULL,*report=NULL;
     double seconds=30,peak=0,total_time=0,max_block=0;
@@ -78,9 +79,14 @@ static int run(int argc,char **argv) {
         if (!strcmp(name,"--anchor")) { if(count==SA_MAX_ANCHORS)return 1;model_paths[count++]=arg;continue; }
         if (!strcmp(name,"--residual-anchor")) {if(residual_count==SA_MAX_ANCHORS)return 1;residual_paths[residual_count++]=arg;continue;}
         if (!strcmp(name,"--startup-profile")) {
-            FILE *f=vsl_fopen(arg,"rb");int ok;if(!f)return 2;
-            ok=st_profile_read(f,&startup_profile);if(fclose(f))ok=0;if(!ok)return 2;
+            FILE *f=vsl_fopen(arg,"rb");int read_ok;if(!f)return 2;
+            read_ok=st_profile_read(f,&startup_profile);if(fclose(f))read_ok=0;if(!read_ok)return 2;
             config.startup_profile=&startup_profile;continue;
+        }
+        if (!strcmp(name,"--catch-profile")) {
+            FILE *f=vsl_fopen(arg,"rb");int read_ok;if(!f)return 2;
+            read_ok=cb_profile_read(f,&catch_profile);if(fclose(f))read_ok=0;if(!read_ok)return 2;
+            config.catch_profile=&catch_profile;continue;
         }
         if (!number(arg,&x)) return 1;
         if (!strcmp(name,"--seconds")) seconds=x;
@@ -103,6 +109,7 @@ static int run(int argc,char **argv) {
         else if (!strcmp(name,"--road")) control.mix.road_gain=x;
         else if (!strcmp(name,"--wind")) control.mix.wind_gain=x;
         else if (!strcmp(name,"--startup-gain")) control.mix.startup_gain=x;
+        else if (!strcmp(name,"--catch-gain")) control.mix.catch_gain=x;
         else return 1;
     }
     if (config.channels==12) control.mix.spatial=1;
@@ -124,6 +131,7 @@ static int run(int argc,char **argv) {
     capture.body_raw=body_raw;capture.body=body;
     capture.aux=aux;capture.aux_raw=aux_raw;capture.aux_objects=aux_objects;
     capture.startup=startup;
+    capture.catch_bloom=catch_bloom;
     vsl_scenario_apply(scenario,0,&params);inputs(&control,&params);
     if (!ad_render_init(&render,&engine,&config,&control)) return 2;
     /* Check every output before opening any, to preserve previous experiments. */

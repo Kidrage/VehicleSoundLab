@@ -7,6 +7,10 @@ int am_startup_load(StProfile *p) {
     FILE *f=vsl_fopen("voices/startup_drive_v1/A cabin motion.start","rb");int ok;
     if(!f)return 0;ok=st_profile_read(f,p);if(fclose(f))ok=0;return ok;
 }
+int am_catch_load(CbProfile *p) {
+    FILE *f=vsl_fopen("voices/catch_bloom_v1/A cabin catch.cb","rb");int ok;
+    if(!f)return 0;ok=cb_profile_read(f,p);if(fclose(f))ok=0;return ok;
+}
 int am_models_bank(const AmModels *m,SaBank *bank) {
     const SdProfile *profiles[SA_MAX_ANCHORS];unsigned i;
     if(!m||!bank||m->count<1||m->count>SA_MAX_ANCHORS)return 0;
@@ -20,9 +24,15 @@ int am_models_load(AmModels *destination,int index) {
     static const char *cabin[]={"voices/cabin_anchors_v1/E Cabin Lower.model","voices/cabin_anchors_v1/E Cabin Upper.model"};
     AmModels *candidate;SaBank *trial;unsigned i;int ok=0;
     SrProfile detail[RA_MAX_ANCHORS];const SrProfile *detail_ptr[RA_MAX_ANCHORS];double roots[RA_MAX_ANCHORS];
-    if(!destination||index<0||index>1)return 0;
+    if(!destination||index<0||index>2)return 0;
     candidate=calloc(1,sizeof *candidate);trial=malloc(sizeof *trial);
     if(!candidate||!trial)goto done;
+    if(index==2) {
+        candidate->count=1;
+        if(!sd_profile_load("voices/startup_settle_v1/A start cabin settle.model",&candidate->profile[0]))goto done;
+        if(am_models_bank(candidate,trial)){*destination=*candidate;ok=1;}
+        goto done;
+    }
     candidate->count=index==0?4u:2u;
     for(i=0;i<candidate->count;++i) {
         const char *path=index==0?exterior[i]:cabin[i],*name=strrchr(path,'/');char residual_path[512];FILE *stream;int read_ok;

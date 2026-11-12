@@ -9,6 +9,7 @@
 #include <string.h>
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_enabled;
+static CbProfile catch_profile;static int catch_enabled;
 
 static int replay(const WoStats *s) {
     AmRender *render=calloc(1,sizeof *render);VslEngine *engine=calloc(1,sizeof *engine);
@@ -46,10 +47,12 @@ static int save(const char *root,const char *name,const WoStats *s,int equal) {
         const AdControl *c=&audio.trace[i].control;
         fprintf(f,"%s{\"frame\":%llu,\"mode\":%d,\"ignition\":%d,\"start_id\":%d,\"gear\":%d,\"automatic\":%d,\"backfire\":%d,"
             "\"rpm\":%.17g,\"load\":%.17g,\"throttle\":%.17g,\"brake\":%.17g,\"gain\":%.17g,\"detail\":%.17g,\"event_gain\":%.17g,"
-            "\"width\":%.17g,\"room\":%.17g,\"perspective\":%.17g,\"spatial\":%d,\"propagation\":%d,\"residual_gain\":%.17g,\"body_mix\":%.17g}",i?",":"",
+            "\"width\":%.17g,\"room\":%.17g,\"perspective\":%.17g,\"spatial\":%d,\"propagation\":%d,\"residual_gain\":%.17g,\"body_mix\":%.17g,"
+            "\"intake_gain\":%.17g,\"mechanical_gain\":%.17g,\"air_gain\":%.17g,\"road_gain\":%.17g,\"wind_gain\":%.17g,\"startup_gain\":%.17g,\"catch_gain\":%.17g}",i?",":"",
             (unsigned long long)audio.trace[i].frame,c->drive.mode,c->drive.ignition,c->drive.start_id,c->drive.gear,c->drive.automatic,c->drive.backfire,
             c->drive.rpm,c->drive.load,c->drive.throttle,c->drive.brake,c->mix.gain,c->mix.detail,c->mix.event_gain,c->mix.width,c->mix.room,
-            c->mix.perspective,c->mix.spatial,c->mix.propagation,c->mix.residual_gain,c->mix.body_mix);
+            c->mix.perspective,c->mix.spatial,c->mix.propagation,c->mix.residual_gain,c->mix.body_mix,
+            c->mix.intake_gain,c->mix.mechanical_gain,c->mix.air_gain,c->mix.road_gain,c->mix.wind_gain,c->mix.startup_gain,c->mix.catch_gain);
     }
     fputs("]}\n",f);ok&=!ferror(f);if(fclose(f))ok=0;return ok;
 }
@@ -58,7 +61,9 @@ static int finite_run(const char *out,const char *name,int pedals) {
     ULONGLONG deadline;int stage=0,equal;WoStats s;
     c.drive.ignition=1;c.drive.start_id=1;
     if(startup_enabled)c.mix.startup_gain=.5;
+    if(catch_enabled)c.mix.catch_gain=.7;
     c.mix.residual_gain=.5;c.mix.body_mix=.6;
+    if(!audio.config.residual_bank)c.mix.residual_gain=0;
     if(!pedals){c.drive.mode=VSL_BENCH;c.drive.automatic=0;c.drive.rpm=3600;}
     if(!am_audio_control(&audio,&c)||!am_audio_start(&audio,1,limit))return 0;
     deadline=GetTickCount64()+20000;
@@ -72,6 +77,7 @@ static int finite_run(const char *out,const char *name,int pedals) {
         else if(pedals&&now.frames>=7*48000&&stage==5){c.drive.brake=0;c.drive.throttle=.7;stage=6;}
         else if(pedals&&now.frames>=9*48000&&stage==6){c.drive.ignition=0;c.drive.throttle=0;stage=7;}
         else {Sleep(5);continue;}
+        if(!audio.config.residual_bank)c.mix.residual_gain=0;
         if(!am_audio_control(&audio,&c)){am_audio_stop(&audio);return 0;}
     }
     am_audio_stop(&audio);s=wo_stats(&audio.device);equal=replay(&s);
@@ -82,20 +88,27 @@ static int run(int argc,char **argv) {
     AdConfig config={&bank,48271,VSL_V10,2,1./120,DS_OBSERVE_MID,DS_ROUTE_PAIR,&models.residual};
     WoStats s;AdControl c;ULONGLONG deadline;int ok,equal;
     {int i;for(i=2;i<argc;++i)if(!strcmp(argv[i],"--stereo-bed"))config.scene_mode=AD_SCENE_STEREO_BED;
-        else if(!strcmp(argv[i],"--startup"))startup_enabled=1;else return 2;}
-    if(argc<2||!am_models_load(&models,startup_enabled?1:0)||!am_models_bank(&models,&bank))return 2;
+        else if(!strcmp(argv[i],"--startup"))startup_enabled=1;
+        else if(!strcmp(argv[i],"--catch")){catch_enabled=1;startup_enabled=1;}else return 2;}
+    if(argc<2||!am_models_load(&models,catch_enabled?2:startup_enabled?1:0)||!am_models_bank(&models,&bank))return 2;
     if(startup_enabled){if(!am_startup_load(&startup_profile))return 2;config.startup_profile=&startup_profile;}
+    if(catch_enabled) {
+        if(!am_catch_load(&catch_profile))return 2;config.catch_profile=&catch_profile;config.residual_bank=NULL;
+        config.root_per_rpm=models.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;
+    }
     am_audio_init(&audio,&config);audio.capture_frames=13*48000;audio.capture=calloc(audio.capture_frames*2,sizeof(float));
     if(!audio.capture){am_audio_destroy(&audio);return 2;}
     ok=finite_run(argv[1],"bench",0);ok&=finite_run(argv[1],"pedals",1);
     c=am_default_control();c.drive.ignition=1;c.drive.start_id=1;
+    if(catch_enabled){c.mix.catch_gain=.7;c.mix.startup_gain=.5;}
     if(!am_audio_control(&audio,&c)||!am_audio_start(&audio,1,0)){ok=0;goto done;}
     deadline=GetTickCount64()+5000;
     while(wo_stats(&audio.device).frames<24000&&InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
     am_audio_stop(&audio);s=wo_stats(&audio.device);equal=replay(&s);
     ok&=save(argv[1],"stopped",&s,equal)&&healthy(&s)&&equal&&audio.render.release==480;
-    if(!am_models_load(&models,1)||!am_models_bank(&models,&bank)){ok=0;goto done;}
+    if(!am_models_load(&models,catch_enabled?2:1)||!am_models_bank(&models,&bank)){ok=0;goto done;}
     c.drive.mode=VSL_BENCH;c.drive.rpm=7600;c.mix.residual_gain=.5;c.mix.body_mix=1;
+    if(!audio.config.residual_bank)c.mix.residual_gain=0;
     if(!am_audio_control(&audio,&c)||!am_audio_start(&audio,1,48000)){ok=0;goto done;}
     deadline=GetTickCount64()+5000;
     while(InterlockedCompareExchange(&audio.device.running,0,0)&&GetTickCount64()<deadline)Sleep(5);
