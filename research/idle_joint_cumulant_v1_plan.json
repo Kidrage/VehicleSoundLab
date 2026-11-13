@@ -1,0 +1,21 @@
+{
+  "schema": "vsl.idle-joint-cumulant/1",
+  "purpose": "Check missing simultaneous high-band concentration before any new idle tuning or C promotion; existing listening remains pending.",
+  "parent": "Frozen idle_excitation_moments_v1 native F2 training6..9s/check9..12s, all9 generated mixes and saved effective responses; conditioned-detail50 all3seeds as separate comparison. Every parent input hash verified against its frozen manifest.",
+  "sample_rate": 48000,
+  "bands_hz": [[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "trim_frames": 4800,
+  "comparison_frames": 144000,
+  "local_power_frames": 1920,
+  "seeds": [149921,277139,381611],
+  "amounts": [0,0.5,1],
+  "observation": "Center each band. K_bc=mean(x_b^2*x_c^2)-var_b*var_c-2*cov_bc^2. Normalize by var_b*var_c; diagonal equals ordinary excess kurtosis. Raw and additional nonoverlapping40ms per-band RMS-normalized observations, same transform on every condition. Normalization changes statistics and can create finite bias; it is diagnostic, not source separation. No lag/threshold/window/seed search.",
+  "comparisons": "Both3s source portions plus all3common-LR same-PSD phase controls for each; all4nonoverlapping3s portions of each12s generated mix, no selecting favorable portions. Separate original deterministic main. Every4x4 matrix and all6offdiagonals retained. No waveform/profile export or fitted joint parameter.",
+  "architecture": "For independent unit-variance innovations, stationary cross-cumulant K_bc=sum_i kappa_i*sum_n(h_bi[n]^2*h_ci[n]^2). Add original finite deterministic-main term only; normalize with frozen model variance. At amount a, independent excitation contribution is a^2. This is not an exact finite12s prediction, and no analytic claim applies after local RMS normalization.",
+  "controls_first": "Exact weighted three-point Gaussian-to-fourth-order ensembles with independent versus shared Bernoulli marks p=.25: same zero cross-covariance/unit variance/diagonal9, independent offdiagonal0 versus shared3. Exact independent binary2tap4input FIR ensemble verifies full mixed cumulant formula. Scale/sign invariance and diagonal identity. Common random amplitude can have same moments as putative events, so joint concentration cannot identify mechanical origin.",
+  "interpretation": "Report whether each source pair in BOTH portions exceeds its own ALL3phase controls and the fixed full independent-innovation expectation. Descriptive finite comparisons only, not significance/source detector/acceptance or actual firing time. Same already-inspected recording, not pristine holdout. A joint-innovation mechanism may be investigated only from observed gap, not adopted for timbre without listening.",
+  "verification": "Independent scalar compensated sums of every saved matrix; separate FFT SOS-polynomial filtering; known ensembles and analytic FIR overlaps independently enumerated; parent hashes, phase-spectrum identities and all summaries. Save exact executed source/failures.612C-H67voices/accepted moving35/old binaries and takes preserved; no unrelated61driving tests.",
+  "new_download": false,
+  "runtime_changed": false,
+  "listening_accepted": false
+}
