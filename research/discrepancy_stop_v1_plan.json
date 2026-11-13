@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.discrepancy-stop-plan/1",
+  "parent": "research/bounded_phase_noise_v1_plan.json",
+  "rule": "First feasible accepted prefix whose squared unweighted aperture residual is no larger than observed white-noise proxy variance times exact aperture covariance trace",
+  "noise_multiplier": 1.0,
+  "policy": [
+    "One predeclared discrepancy rule; no noise multiplier or stopping-iteration sweep",
+    "Replay the already audited zero-perturbation original initialization and accepted prefixes; no duplicate nonlinear solve",
+    "Selection uses observed audio and the existing white-noise proxy only; never fixture truth or heldout lines",
+    "Evaluate original gates only after selection and preserve a failed candidate",
+    "Expected noise energy is not a confidence bound; coloured real-engine noise is not calibrated",
+    "No real source/model/C/audio changes; all17/full33/individual14kHz/original E still required"
+  ]
+}

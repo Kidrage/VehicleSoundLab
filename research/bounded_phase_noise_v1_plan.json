@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.bounded-phase-noise-plan/1",
+  "parent_plan": "research/certified_qp_v1_plan.json",
+  "perturbation_seed": 931074,
+  "perturbation_signs": [-1, 1],
+  "noise_proxy_nyquist_fraction": 0.75,
+  "minimum_noise_bins": 64,
+  "policy": [
+    "A finite antithetic observation perturbation diagnostic using the actual bounded nonlinear estimator, not an unbounded tangent correction",
+    "Estimate a white-noise proxy from the upper quarter of observed sample spectrum; no analytic source/noise/truth or spectral heldout input to the estimator",
+    "One fixed generated source-noise direction at plus/minus the same estimated sigma; not a noise-level/seed sweep or estimator selection",
+    "Use exact original observed initialization, model,20-step controller, parameter bounds, solver and error gates for both signs",
+    "Reuse the frozen zero-perturbation fit only after source/library/model/plan/input/scales/initial identity verification; do not rerun unchanged controls",
+    "Keep all capped/uncertified results and the original failed dense positive; actual sensitivity is not real-recording uncertainty or a qualification pass",
+    "No real audio/model/C/runtime/render/media/listening changes; original17/full33/individual14kHz/original E remain required"
+  ]
+}
