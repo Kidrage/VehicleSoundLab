@@ -22,5 +22,9 @@ int ms_voice_set(MsVoice *voice,double ratio,double gain);
 /* RT, preallocated outputs, no I/O or allocation. All modes advance at zero
    gain and while their anti-alias weights are zero. Invalid calls do not mutate. */
 int ms_voice_tick(MsVoice *voice,double stereo[2]);
+/* Optional common-L/R amplitude per mode, in profile order. NULL preserves
+   the original arithmetic. Finite nonnegative gains are checked before any
+   state change; the caller supplies profile->count values. No phase change. */
+int ms_voice_tick_gains(MsVoice *voice,const double *mode_gain,double stereo[2]);
 int ms_voice_process(MsVoice *voice,double *interleaved,unsigned frames);
 #endif

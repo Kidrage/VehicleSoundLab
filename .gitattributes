@@ -2,3 +2,5 @@
 * -text
 *.png binary
 *.model -text
+# Versioned Windows parameter files keep their exact CRLF bytes.
+*.mtexture whitespace=cr-at-eol

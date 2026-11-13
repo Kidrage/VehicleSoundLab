@@ -1,0 +1,9 @@
+{
+  "schema":"vsl.modal-texture-c/1",
+  "purpose":"Port the pending amplitude-only idle experiment as an isolated generic C kernel, without promoting its timbre, changing the driver, defaults, takes or filters.",
+  "module":"Immutable factor profile -> autonomous positive envelope -> existing modal_source optional common-LR gains; separate non-RT versioned IO and experimental probe.",
+  "domain":{"rate":48000,"max_modes":64,"alpha":[0,0.98],"hop_frames":[1,480000],"max_row_std":0.25,"amount":[0,1],"ramp_frames":864},
+  "compatibility":"NULL gains preserve original oscillator arithmetic. Zero amount advances all envelope states/RNG and bypasses multiplication. Previous source profiles, voice layout, driver code/assets/defaults and frozen executables remain unchanged.",
+  "validation":"Known independent two-mode timbre with correlated and singular envelopes; transactional invalid inputs, full finite ramps, repeated targets, zero-state progression, block invariance; C gain dump vs unchanged Python state/gain oracle; all frozen3seeds x3amounts at ratio1, additional finite ratio checks; existing59 CTests and frozen legacy render samples after optional oscillator API extension.",
+  "scope":"C oscillator+amplitude kernel only. Fine-static8192tap texture remains an explicitly Python-rendered comparison bus. Combining the C core with that same bus is a hybrid audition, never a claim of an all-C full mix or real-time FIR certification. No PM/FM/room/PCM source loop, no new raw source fit or download, no actual RPM/load or shared engine-phase qualification. Listening remains pending; do not repeat original questions."
+}
