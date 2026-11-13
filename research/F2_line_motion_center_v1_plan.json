@@ -1,0 +1,10 @@
+{
+  "schema":"vsl.F2-line-motion-center-plan/1",
+  "parent":"F2_line_motion_v1/observe1 failed before recording read: AM-only75.19Hz returned error.00942976Hz, exceeding original.001Hz. All original failed sources/report retained",
+  "mechanism":"Derivative frequency reassignment evaluated at an off-center carrier weights AM sidebands asymmetrically. Evaluate the same statistic at its own local zero-offset carrier rather than accepting the biased single off-center reading",
+  "method":"Independently for every line/channel, bracket the zero of Im(D/C) within the original native bin +/-0.5Hz rounding box, using Brent root solve. Keep initial moments, bracket values, root residual and resolved flag. No bracket growth, grid/window/threshold sweeps or forced fill when not bracketed",
+  "stopping":"Brent absolute carrier tolerance1e-10Hz,max100iter is a numerical root tolerance, not physical frequency accuracy. Root existence within a bracket is not uniqueness or calibrated uncertainty in mixed recordings",
+  "qualification":"Exact same five known-control inputs and original fixed.001Hz sine/AM and.01Hz chirp/mixture errors must pass before reading approved recording. White noise and unrelated tones remain negative observations without physical-period claims",
+  "source_scope":"Same F2 six seconds, original9windows and5fixed native peak bins. No phase trajectory, clock fit, RPM, DNA export or C/runtime/model change. If an anchor root is unresolved, do not promote that row's acoustic-family comparison",
+  "keep":"Original phase-extraction failed36/all17/full33/individual14k/originalE gates unchanged; moving35 and F3 rejection persist"
+}

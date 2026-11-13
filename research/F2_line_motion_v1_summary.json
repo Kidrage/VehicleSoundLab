@@ -1,0 +1,215 @@
+{
+  "schema": "vsl.F2-line-motion-final/1",
+  "result": "F2_local_line_motion_audited_frozen_not_idle_DNA_or_period_qualification",
+  "sources": {
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "tools/publish_F2_line_motion_v1.py": "925127985febc81760e3c9852470bff3411e91678d6c2bde9cb7125c6864f180",
+    "research/怠速与加速完成度V1.md": "900540e9ef51307638c4226b5c5d284b77f30f8f557db6d77df50795b9fb399b",
+    "tools/observe_F2_line_motion_v1.py": "f01b84dd6911066d5eaeddd7447f75ef94732a885d4eb180d0952e933e13ce2b",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "research/F2_line_motion_center_v1_plan.json": "358ffeac7b6efb349d0f09251679f6ef8d90855f5248715e8e309675e9a1e183",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "AGENTS.md": "62eba06bcf8a34ef856f20fb6e05acb4fd4d2ef32c48db5b298e1a13b6c3adb4",
+    "tools/package_F2_line_motion_v1.py": "fe9660e49a68e6dc49651d7e0ca65ee1715c8c30299d604ab605a2c4b8b78121",
+    "handoff/算法说明.md": "1796c746e905168db1baaa5b1fc0e05671961dd76ff35a94807d33a65c97bbea",
+    "handoff/研究续接.md": "11ae05b7f0c49924329d3f4e5e6fed90a74520804e73f57b23fd1c546daa7bd5",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "handoff/开发留痕.md": "32a57d41d18c3e3c1f3d79d66d1fc0d8c7b236b4f109ee455c1083dfd6330f64",
+    "tools/audit_F2_line_motion_v1.py": "05ddebcdbfad3d735848f0ce2ada7793e84369c50acb10440437fc12bc734bc4",
+    "research/F2声线变化V1.md": "9fa1924d9717630d29db7c7d9e5a7f6b3ccece50ab9cc16f56788fc6ce876a0c",
+    "research/F2_line_motion_v1_plan.json": "09ee89f314b8ff00288da7525a7c4b41cd0e745aae7588587eb642c8408c6367"
+  },
+  "reports": {
+    "observe1": {
+      "sha256": "24626a68f19906d3eb104e6d25dc9df04ddcbd9ed6f5bad7340a4bc9267f189d",
+      "result": "failed"
+    },
+    "observe2": {
+      "sha256": "9863ca155e28c87767624eca22b408d61354117c734e8434ec04c2217569a169",
+      "result": "separate_F2_line_frequency_moments_observed_not_period_or_DNA_qualification"
+    },
+    "audit1": {
+      "sha256": "647c47bb17a03bd31284f417cfcc9a273de1e0628d71ddd7bcd7729950fe5460",
+      "result": "F2_initial_AM_failure_and_all90_local_frequency_observations_independently_replayed"
+    },
+    "review1": {
+      "sha256": "4b27461b5b1de3bb920e64f3abc6a1153ebc168ae06dc8a184174406fc430d39",
+      "result": "audited_local_line_observations_published_with_unresolved_rows_explicit"
+    },
+    "review2": {
+      "sha256": "d2ed18c1ccec20dbab831eddeba310387502bdba613c503e0d37f7443059efc4",
+      "result": "audited_local_line_observations_published_with_unresolved_rows_explicit"
+    }
+  },
+  "real_audio_read": true,
+  "phase_estimator_run": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "source_variants": {
+    "tools/observe_F2_line_motion_v1.py": {
+      "observe1": "69e0c17ec271414db592ab412754e79206b10933874188dcd74400f55cd17037",
+      "observe2": "f01b84dd6911066d5eaeddd7447f75ef94732a885d4eb180d0952e933e13ce2b"
+    },
+    "research/F2_line_motion_v1_plan.json": {
+      "observe1": "09ee89f314b8ff00288da7525a7c4b41cd0e745aae7588587eb642c8408c6367",
+      "observe2": "09ee89f314b8ff00288da7525a7c4b41cd0e745aae7588587eb642c8408c6367"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "observe2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "observe2": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "observe2": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "observe1": "9037863b11d44a3b07a8470b474cc18aabd67a90d1ef93249d46f1eb7379a4c0",
+      "observe2": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "observe2": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "research/F2_line_motion_center_v1_plan.json": {
+      "observe2": "358ffeac7b6efb349d0f09251679f6ef8d90855f5248715e8e309675e9a1e183"
+    },
+    "tools/line_motion_v1/center.py": {
+      "observe2": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/audit_F2_line_motion_v1.py": {
+      "audit1": "05ddebcdbfad3d735848f0ce2ada7793e84369c50acb10440437fc12bc734bc4"
+    },
+    "tools/publish_F2_line_motion_v1.py": {
+      "review1": "f040b92ecf679eee4faf4be045214d5dc9f66f9ed9172974b71b9504f637a094",
+      "review2": "925127985febc81760e3c9852470bff3411e91678d6c2bde9cb7125c6864f180"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "counts": {
+    "observations": 90,
+    "resolved": 62,
+    "unresolved": 28,
+    "anchor_complete_rows": 3
+  },
+  "eligible_anchor_rows": [
+    {
+      "source_seconds": [
+        6.0,
+        7.0
+      ],
+      "base_Hz": [
+        37.38373477085469,
+        37.38373477085469
+      ],
+      "max_leave_one_out_Hz": 0.007507685812662146,
+      "heldout_order1_resolved": true,
+      "heldout_order1_error_Hz": [
+        0.056836226837930326,
+        0.056836226837930326
+      ],
+      "extra_11_over_5_resolved": false,
+      "extra_11_over_5_error_Hz": [
+        0.19905181699604668,
+        0.19905181699604668
+      ]
+    },
+    {
+      "source_seconds": [
+        6.5,
+        7.5
+      ],
+      "base_Hz": [
+        37.44024081089554,
+        37.44024081089554
+      ],
+      "max_leave_one_out_Hz": 0.01494507558674485,
+      "heldout_order1_resolved": true,
+      "heldout_order1_error_Hz": [
+        -0.007235706294260069,
+        -0.007235706294260069
+      ],
+      "extra_11_over_5_resolved": true,
+      "extra_11_over_5_error_Hz": [
+        0.060995750665156834,
+        0.060995750665156834
+      ]
+    },
+    {
+      "source_seconds": [
+        10.5,
+        11.5
+      ],
+      "base_Hz": [
+        37.80775806221363,
+        37.80775806221363
+      ],
+      "max_leave_one_out_Hz": 0.0078679844674312,
+      "heldout_order1_resolved": true,
+      "heldout_order1_error_Hz": [
+        0.019885049907088614,
+        0.019885049907088614
+      ],
+      "extra_11_over_5_resolved": false,
+      "extra_11_over_5_error_Hz": [
+        -2.529649421092529,
+        -2.529649421092529
+      ]
+    }
+  ],
+  "independent_errors": {
+    "moment_relative": 4.091940317843172e-14,
+    "derivative_relative": 3.7949623472205684e-13,
+    "endpoint_Hz": 2.042810365310288e-14,
+    "initial_Hz": 2.842170943040401e-14,
+    "root_Hz": 2.397371190454578e-11,
+    "root_residual_Hz": 2.951972184689767e-14
+  },
+  "initial_AM_error_Hz": 0.009429755993707545,
+  "centered_AM_error_Hz": 1.908376731307726e-05,
+  "first_failure_sources_preserved": true,
+  "review1_label_layout_superseded_by_review2": true,
+  "both_review_figures_visually_checked": true,
+  "complete_continuous_coordinate_established": false,
+  "selected_fundamental": null,
+  "RPM_inferred": false,
+  "phase_extracted_real_model_permitted": false,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "existing55CTests_rerun": false,
+  "moving35": "held_unchanged",
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_F2_exact_intervals_and_1080native_F3_display_evidence_audited_frozen_pushed",
+  "current_goal_turn": "progress_actual_AM_bias_failure_repair_and_independent90local_F2_frequency_observations",
+  "next_step": "Validate per-window native spectral peak locations and adjacent-line bias; never widen boxes to force old failures to pass, interpolate unknowns, or convert acoustic grouping to RPM. Original failed36/all17/full33/individual14k/originalE gates remain required before phase-extracted real models.",
+  "limits": [
+    "Six of nine rows do not resolve all3 roots in the fixed original rounding boxes; no promotion/interpolation",
+    "Unresolved root residual entries are placeholders, never evidence of a solved root; retained raw reassignment only",
+    "Three complete local rows are acoustic family observations, not common phase or physical period qualification",
+    "82Hz comparisons using unresolved roots remain raw derivative diagnostics only",
+    "Local derivatives in mixed audio can be biased by neighboring lines, drift, AM and noise; no calibrated frequency confidence",
+    "Orders chosen after viewing prior spectrum; heldout line is independent of the3-line mean, not independent hypothesis discovery",
+    "Shared motion cannot select physical period or distinguish slower fundamental/sidebands/microphone effects",
+    "No source separation, new audio/DNA/model/runtime/C changes"
+  ]
+}

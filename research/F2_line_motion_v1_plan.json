@@ -1,0 +1,14 @@
+{
+  "schema":"vsl.F2-line-motion-plan/1",
+  "purpose":"Observe whether separately measured low spectral lines have common acoustic frequency motion. No phase trajectory, periodic waveform fit, RPM or DNA export",
+  "source":"Existing approved F2_tailpipe6..12s, native48k stereo FLOAT, fixed_window_spectral_observation permission",
+  "windows":"Keep the original three2s blocks and the same three1s periodic Hann windows at0/.5/1s within each block; no window, hop, band or strength sweep",
+  "carriers":"All five original native1Hz peak bins per block, unchanged rank and including82Hz. These were selected after viewing F2 and are exploratory, not independent peak discovery",
+  "frequency_observation":"For each fixed nominal bin, C=sum(x*w*exp(-i2pi*f*t)); D=sum(x*w_prime*exp(-i2pi*f*t)); report f-Im(D/C)/(2pi), complex moment magnitude and support relative to the largest of the5 lines in the same window/channel. This is a local frequency reassignment statistic, not a unique tone estimate in mixed audio",
+  "supported_relative_db":-30,
+  "groups":"Exploratory2/3/5 orders from the first3 strong peaks. Report each divided frequency, leave-one-out predictions, and all3 mean. Compare the independent37/38Hz line at order1 and82/81Hz at hypothetical11/5; never drop either or force agreement. Smaller subharmonic bases remain ambiguous",
+  "controls":"Before recording: fixed detuned real sines max error<=.001Hz; common linear chirp each local frequency max error<=.01Hz; mixture with fixed82Hz and37Hz heldout retains all lines; missing carrier is unsupported at original-30dB; AM-only detuned real sine retains fixed frequency. Nonharmonic and fixed-seed white-noise observations are counterexamples, not qualified physical-period detectors",
+  "audit":"Independent rectangular-DTFT shift identities for Hann and derivative on every actual window/channel/line, plus literal scalar sums on selected samples, source/native slices and control identity. Do not fit raw fixtures or evaluation heldouts",
+  "limits":"No precision confidence under interference/drift/noise or physical source attribution. Frequency motion alone cannot distinguish coherent AM sidebands, a slower common period or mic motion. Original phase extractor remains unqualified",
+  "keep":"F3 speech interval rejected; originalA-low listening pending, do not repeat. Moving35/540C-H/voices/one-driver/stereo7.1.4 unchanged; no unchanged55CTest repeat. New phase-extracted real models require originalfailed36/all17/full33/individual14k/originalE gates"
+}
