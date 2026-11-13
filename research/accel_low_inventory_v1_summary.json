@@ -1,0 +1,409 @@
+{
+  "schema": "vsl.accel-low-inventory-freeze/1",
+  "result": "omitted_low_inventory_and_crossing200_censoring_audited_NOT_source_profile",
+  "parent_commit": "9d9aca6fc4f1a2a94c93c19bec09bd47bd48bf64",
+  "native_windows": 48,
+  "real_low_peak_observations": 265,
+  "including_known_peak_observations": 267,
+  "all4_observations_source_stats_and_low_inventories_exact": true,
+  "crossing200_observed_union_with_frozen_upper_peaks": true,
+  "original_floors_and_ranges_separate_and_unchanged": true,
+  "all3_known_null_normalization_and_prominence_failures_retained": true,
+  "independent_periodogram_absolute_power": true,
+  "independent_formulas_from_saved_exact_cells": true,
+  "exact_null_normalized_descriptors_not_physically_precise": true,
+  "original_tolerances_unchanged": true,
+  "maximum_power_error": 1.7763568394002505e-15,
+  "maximum_descriptor_error": 1.0658141036401503e-14,
+  "maximum_peak_error": 0.0,
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "tiles": 12,
+      "first_reference_hz": [
+        39.492939633480404,
+        51.57769328037614,
+        85.77101636133989,
+        97.81092528791771,
+        126.42388578549546,
+        151.0539805573039,
+        179.87649270437552
+      ],
+      "band_fraction_of_full_native_LR": [
+        [
+          0.004015035995773623,
+          0.004791297478553687
+        ],
+        [
+          0.011779853893378808,
+          0.013553847648378494
+        ],
+        [
+          0.09311270043926737,
+          0.10936495856828539
+        ],
+        [
+          0.16310885178085088,
+          0.18080731404921194
+        ],
+        [
+          0.0820707191757416,
+          0.07745626049857453
+        ],
+        [
+          0.049490929366080974,
+          0.040711420745722225
+        ],
+        [
+          0.5824865813956435,
+          0.5661294792926195
+        ],
+        [
+          0.01352659637855542,
+          0.0069086540486350285
+        ],
+        [
+          0.0003731902243973862,
+          0.00024582752857782355
+        ],
+        [
+          3.488089145345392e-05,
+          3.078208609299582e-05
+        ],
+        [
+          6.426279652962332e-07,
+          1.5651665483696566e-07
+        ],
+        [
+          1.7830896235496546e-08,
+          1.5386982360097451e-09
+        ]
+      ],
+      "total_low_peak_observations": 70,
+      "geometric_eligible_counts": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        5
+      ],
+      "graph_observed_nodes": "low original30..200 inventory UNION unchanged frozen200..7000 inventory; separate original floors",
+      "warning": "Descriptive native inventory; no moving/fixed/engine/wind source labels or continuous source inferred."
+    },
+    {
+      "segment": "F3_fifth2",
+      "tiles": 12,
+      "first_reference_hz": [
+        38.1149715133201,
+        60.61374842831301,
+        85.77310680263666,
+        178.7578597895224
+      ],
+      "band_fraction_of_full_native_LR": [
+        [
+          0.0034427878022726412,
+          0.004212725871983428
+        ],
+        [
+          0.008496387458906676,
+          0.010459933801887686
+        ],
+        [
+          0.08743315616665256,
+          0.10588121947094857
+        ],
+        [
+          0.13372153515464197,
+          0.1555657983388956
+        ],
+        [
+          0.0838815825440756,
+          0.08673873208405353
+        ],
+        [
+          0.07664467494447326,
+          0.06868727213456832
+        ],
+        [
+          0.5966032699933892,
+          0.562605654044356
+        ],
+        [
+          0.00937069097346811,
+          0.005556859672276435
+        ],
+        [
+          0.00037086964161290925,
+          0.00025840275865116134
+        ],
+        [
+          3.4349785311961896e-05,
+          3.3146279788935975e-05
+        ],
+        [
+          6.802046544012964e-07,
+          2.5306379509988553e-07
+        ],
+        [
+          1.5330542712754174e-08,
+          2.478797614051399e-09
+        ]
+      ],
+      "total_low_peak_observations": 62,
+      "geometric_eligible_counts": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "graph_observed_nodes": "low original30..200 inventory UNION unchanged frozen200..7000 inventory; separate original floors",
+      "warning": "Descriptive native inventory; no moving/fixed/engine/wind source labels or continuous source inferred."
+    },
+    {
+      "segment": "F3_sixth",
+      "tiles": 24,
+      "first_reference_hz": [
+        30.752415658061615,
+        69.68244771216355,
+        95.19580552521168,
+        141.2091542594053,
+        171.0139945958775
+      ],
+      "band_fraction_of_full_native_LR": [
+        [
+          0.0028240668221648324,
+          0.003452357904663221
+        ],
+        [
+          0.008903115816327665,
+          0.01088626993247586
+        ],
+        [
+          0.08192384047738503,
+          0.09984099891493044
+        ],
+        [
+          0.21474466313225807,
+          0.24173330903584642
+        ],
+        [
+          0.09649910261672351,
+          0.0994386006750488
+        ],
+        [
+          0.16543191814812594,
+          0.16160953774701342
+        ],
+        [
+          0.4210579707114228,
+          0.37771293146275586
+        ],
+        [
+          0.008130592998394356,
+          0.004994870698879584
+        ],
+        [
+          0.0004350328946352235,
+          0.0002871131301240211
+        ],
+        [
+          4.8786178273326314e-05,
+          4.36699804269949e-05
+        ],
+        [
+          9.006164204877299e-07,
+          3.3913352461502964e-07
+        ],
+        [
+          9.587872609397475e-09,
+          1.3843151210359627e-09
+        ]
+      ],
+      "total_low_peak_observations": 133,
+      "geometric_eligible_counts": [
+        0,
+        0,
+        0,
+        3,
+        7
+      ],
+      "graph_observed_nodes": "low original30..200 inventory UNION unchanged frozen200..7000 inventory; separate original floors",
+      "warning": "Descriptive native inventory; no moving/fixed/engine/wind source labels or continuous source inferred."
+    }
+  ],
+  "reference_diagnostics": [
+    {
+      "segment": "F3_fifth1",
+      "references": [
+        {
+          "reference_hz": 39.492939633480404,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 51.57769328037614,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 85.77101636133989,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 97.81092528791771,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 126.42388578549546,
+          "eligible_tiles": [
+            11
+          ],
+          "moving_unique": 1,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 1
+        },
+        {
+          "reference_hz": 151.0539805573039,
+          "eligible_tiles": [
+            9,
+            10,
+            11
+          ],
+          "moving_unique": 3,
+          "fixed_unique": 2,
+          "censored_original_moving_unique": 3
+        },
+        {
+          "reference_hz": 179.87649270437552,
+          "eligible_tiles": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "moving_unique": 5,
+          "fixed_unique": 3,
+          "censored_original_moving_unique": 0
+        }
+      ]
+    },
+    {
+      "segment": "F3_fifth2",
+      "references": [
+        {
+          "reference_hz": 38.1149715133201,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 60.61374842831301,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 85.77310680263666,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 178.7578597895224,
+          "eligible_tiles": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "moving_unique": 5,
+          "fixed_unique": 2,
+          "censored_original_moving_unique": 2
+        }
+      ]
+    },
+    {
+      "segment": "F3_sixth",
+      "references": [
+        {
+          "reference_hz": 30.752415658061615,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 69.68244771216355,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 95.19580552521168,
+          "eligible_tiles": [],
+          "moving_unique": 0,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 0
+        },
+        {
+          "reference_hz": 141.2091542594053,
+          "eligible_tiles": [
+            18,
+            20,
+            21
+          ],
+          "moving_unique": 2,
+          "fixed_unique": 0,
+          "censored_original_moving_unique": 2
+        },
+        {
+          "reference_hz": 171.0139945958775,
+          "eligible_tiles": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            20,
+            21
+          ],
+          "moving_unique": 5,
+          "fixed_unique": 4,
+          "censored_original_moving_unique": 5
+        }
+      ]
+    }
+  ],
+  "old_moving_fixed_classifier_used": false,
+  "source_identity_or_RPM_load_or_common_phase": false,
+  "original_common_phase_qualification_remains_required": true,
+  "both_plots_viewed": true,
+  "new_audio_or_runtime_profile": false,
+  "runtime_or_default_changed": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_tests_repeated": false,
+  "idle_candidate_pending_and_question_not_repeated": true,
+  "next": "Native low candidate joint amplitude/phase fits, fixed+moving neighbours and same-mono noise counterexamples, temporal support and held-window parameter prediction before layered rumble recipe.",
+  "manifest_sha256": "1fa7ae282badd74558b21b59ed830f9a3569d01c772a3b99e1bd2a3db2ed241f",
+  "file_count": 271,
+  "bytes": 50961496
+}
