@@ -1,0 +1,52 @@
+{
+  "schema": "vsl.idle-modulation-placement-freeze/1",
+  "result": "POSTresonance_supported_for_q_tracking_NOT_total_wave_or_timbre",
+  "parent_commit": "84b8980d0f9f92e8c1180b07d2f2ddf07724c48b",
+  "audit": {
+    "result": "all64paired_renders_known_and_crossseed_statistics_verified",
+    "maximum_power_error": 1.687538997430238e-13,
+    "maximum_metric_error": 3.9479530755670567e-13,
+    "seeds": 64,
+    "known_error": 4.440892098500626e-16,
+    "exact_pre_power_error": 1.3322676295501878e-15,
+    "input_report_sha256": "685a8a6e49650e78a9983ecfc9b91f88a136de7ee59a2b55d0b8b41864c2c511",
+    "all_seed_arrays_rerendered": true,
+    "finite_ensemble_NOT_exact_post": true,
+    "runtime_changed": false
+  },
+  "paired_seeds": 64,
+  "source": "F2_tailpipe_frozen_positive_power",
+  "full6s_both3s_1ms_powers": true,
+  "all64_arrays_independently_rerendered": true,
+  "independent_crossseed_estimators_and_all_jackknife_verified": true,
+  "all8_MSE_contrasts_approx_family95_upper_negative": true,
+  "no_seed_selection": true,
+  "mse_relative_reductions": [
+    [
+      0.8947474227164327,
+      0.9397191562137486,
+      0.9357133327915574,
+      0.9479896322623029
+    ],
+    [
+      0.8898792397020592,
+      0.9432440413054511,
+      0.9345635057406166,
+      0.9383832056928154
+    ]
+  ],
+  "pre_exact_coverage_descriptive": 36,
+  "all6_post_correlations_positive_bothblocks": true,
+  "complete_figure_viewed": true,
+  "conditional_random_power_NOT_total_separation_or_fourth_budget": true,
+  "post_is_MC_estimate_NOT_exact_LTV": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "new_WAV": false,
+  "runtime_changed": false,
+  "old61_driving_tests_repeated": false,
+  "next": "Qualify actual POST+main total-power and jointly allocate periodic/innovation fourth budgets; no blind oldkappa add. Existing hearing pending/no duplicate or C promotion. Original commonphase qualification and full goal remain.",
+  "manifest_sha256": "9e911f94076a0283419659b9b2da8ec60b9618ab051f1b438a9fe21962559ffd",
+  "file_count": 34,
+  "bytes": 25227438
+}
