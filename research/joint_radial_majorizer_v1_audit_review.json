@@ -1,0 +1,6 @@
+{
+  "schema": "vsl.joint-radial-majorizer-audit-review/1",
+  "trigger": "audit1 stops at saved step8 on original relative factor-gradient check1e-12. Independent saved-path diagnostic finds absolute norm4.58697e-22 against gradientnorm5.98458e-11, relative7.66464e-12. Original relative gate remains FAILED; preserve audit1/source/report and diagnostic.",
+  "supplement": "Without refitting, add standard floating-point dot-product forward bound. Let a_ij=fl(W_ij*rhs_i), b_ij=fl(J_ij*psi_i); compute sum abs(a+b) and sum(abs(a)+abs(b)). With gamma=(n+4)eps/(1-(n+4)eps), bound each component of W.T rhs+J.T psi by (sumabs(a+b)+gamma*sumabs(a,b))/(1-gamma). This includes actual factor/input arithmetic discrepancy plus product/sum roundoff; do not redefine original relative tolerance or call it passed.",
+  "keep": "All original known recovery and actual-QP gates unchanged. The three QP failures still reject the candidate, regardless of separate forward-bound checks. No nonlinear/QP resolves, truth-guided prefix, repeat fit or runtime promotion. New audit2 must report original factor-relative failures and supplemental result separately."
+}
