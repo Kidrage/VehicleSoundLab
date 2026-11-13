@@ -1,0 +1,7 @@
+{
+  "schema":"vsl.bounded-observed-phase-control-repair/1",
+  "failed_run":"references/analysis/bounded_observed_phase_v1/pair1",
+  "cause":"Control direction=.5 with basis[0,-2,0] reaches zero coordinate increment at ray scale1. Original interior assertion mistakenly used basis*.5 (the endpoint) instead of basis*.25 (ray scale.5). The original endpoint assertion used basis*1 (outside). Generic ray result itself correctly returned limit1 and exclusive boundary",
+  "change":"Only two direct-inequality assertions in checks.py: basis*.25 has positive increments; basis*.5 has zero minimum. No algorithm, target, bound, gate, fit or iteration change. pair1 exact source/failure retained; pair2 reruns same controls before actual direction read",
+  "audit":"Reproduce old failure from exact snapshot; AST comparison must show only these two constant multipliers changed. Validate direct increments at scale0/.5/1 and original ray result. Preserve all executed versions"
+}
