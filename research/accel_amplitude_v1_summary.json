@@ -1,0 +1,217 @@
+{
+  "schema": "vsl.accel-amplitude-freeze/1",
+  "result": "scale_only_amplitude_not_consistently_better",
+  "parent_commit": "b4784422316bcccccf9ce206df484be43724450d",
+  "models": 55,
+  "ordered_pairs": 6,
+  "predictions": 532,
+  "totals": {
+    "compared": 74,
+    "linear_better": 32,
+    "amplitude_pass": {
+      "RMS": 40,
+      "geometric": 51,
+      "log_linear": 49
+    },
+    "both_pass": {
+      "RMS": 39,
+      "geometric": 50,
+      "log_linear": 48
+    }
+  },
+  "pair_summaries": [
+    {
+      "source": "F3_fifth1",
+      "target": "F3_fifth2",
+      "scale_supported": true,
+      "unique_associations": 18,
+      "compared": 13,
+      "status_counts": {
+        "association_absent": 6,
+        "compared": 13,
+        "insufficient_target_range": 3,
+        "insufficient_training": 2
+      },
+      "median_reference_error_db": {
+        "RMS": 2.979020181240005,
+        "geometric": 2.7340054924978783,
+        "log_linear": 2.8351344223873394
+      },
+      "amplitude3dB_pass": {
+        "RMS": 7,
+        "geometric": 9,
+        "log_linear": 7
+      },
+      "both_diagnostics_pass": {
+        "RMS": 6,
+        "geometric": 8,
+        "log_linear": 6
+      },
+      "log_linear_better_than_geometric": 5
+    },
+    {
+      "source": "F3_fifth1",
+      "target": "F3_sixth",
+      "scale_supported": true,
+      "unique_associations": 19,
+      "compared": 14,
+      "status_counts": {
+        "association_absent": 5,
+        "compared": 14,
+        "insufficient_target_range": 2,
+        "insufficient_training": 3
+      },
+      "median_reference_error_db": {
+        "RMS": 2.712098268169409,
+        "geometric": 2.3642917220491895,
+        "log_linear": 2.4612013375574247
+      },
+      "amplitude3dB_pass": {
+        "RMS": 8,
+        "geometric": 11,
+        "log_linear": 10
+      },
+      "both_diagnostics_pass": {
+        "RMS": 8,
+        "geometric": 11,
+        "log_linear": 10
+      },
+      "log_linear_better_than_geometric": 5
+    },
+    {
+      "source": "F3_fifth2",
+      "target": "F3_fifth1",
+      "scale_supported": true,
+      "unique_associations": 18,
+      "compared": 11,
+      "status_counts": {
+        "association_absent": 2,
+        "compared": 11,
+        "insufficient_target_range": 4,
+        "insufficient_training": 3
+      },
+      "median_reference_error_db": {
+        "RMS": 2.6672406791068983,
+        "geometric": 2.5947094229627767,
+        "log_linear": 2.4561878043825836
+      },
+      "amplitude3dB_pass": {
+        "RMS": 6,
+        "geometric": 9,
+        "log_linear": 8
+      },
+      "both_diagnostics_pass": {
+        "RMS": 6,
+        "geometric": 9,
+        "log_linear": 8
+      },
+      "log_linear_better_than_geometric": 3
+    },
+    {
+      "source": "F3_fifth2",
+      "target": "F3_sixth",
+      "scale_supported": true,
+      "unique_associations": 17,
+      "compared": 13,
+      "status_counts": {
+        "association_absent": 3,
+        "compared": 13,
+        "insufficient_target_range": 2,
+        "insufficient_training": 2
+      },
+      "median_reference_error_db": {
+        "RMS": 3.328204364243412,
+        "geometric": 2.144643990128114,
+        "log_linear": 2.2986591388049242
+      },
+      "amplitude3dB_pass": {
+        "RMS": 5,
+        "geometric": 7,
+        "log_linear": 9
+      },
+      "both_diagnostics_pass": {
+        "RMS": 5,
+        "geometric": 7,
+        "log_linear": 9
+      },
+      "log_linear_better_than_geometric": 5
+    },
+    {
+      "source": "F3_sixth",
+      "target": "F3_fifth1",
+      "scale_supported": true,
+      "unique_associations": 19,
+      "compared": 13,
+      "status_counts": {
+        "association_absent": 11,
+        "compared": 13,
+        "insufficient_target_range": 4,
+        "insufficient_training": 2
+      },
+      "median_reference_error_db": {
+        "RMS": 2.536009354921034,
+        "geometric": 2.878480771626384,
+        "log_linear": 2.335841184049279
+      },
+      "amplitude3dB_pass": {
+        "RMS": 9,
+        "geometric": 8,
+        "log_linear": 8
+      },
+      "both_diagnostics_pass": {
+        "RMS": 9,
+        "geometric": 8,
+        "log_linear": 8
+      },
+      "log_linear_better_than_geometric": 7
+    },
+    {
+      "source": "F3_sixth",
+      "target": "F3_fifth2",
+      "scale_supported": true,
+      "unique_associations": 17,
+      "compared": 10,
+      "status_counts": {
+        "association_absent": 13,
+        "compared": 10,
+        "insufficient_target_range": 7
+      },
+      "median_reference_error_db": {
+        "RMS": 3.0391986602939216,
+        "geometric": 2.6066754391328075,
+        "log_linear": 2.4350968489693754
+      },
+      "amplitude3dB_pass": {
+        "RMS": 5,
+        "geometric": 7,
+        "log_linear": 7
+      },
+      "both_diagnostics_pass": {
+        "RMS": 5,
+        "geometric": 7,
+        "log_linear": 7
+      },
+      "log_linear_better_than_geometric": 7
+    }
+  ],
+  "maximum_model_error": 7.105427357601002e-15,
+  "maximum_prediction_error": 8.881784197001252e-15,
+  "maximum_score_error": 1.4155343563970746e-15,
+  "all_excluded_missing_ambiguous_and_out_of_range_retained": true,
+  "models_source_only": true,
+  "allpassages_previously_inspected": true,
+  "observed_target_eligibility_and_whole_source_guide": true,
+  "physical_load_or_RPM_or_source_identified": false,
+  "phase_or_waveform_prediction": false,
+  "original_common_phase_qualification_still_required": true,
+  "profile_or_audio_exported": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_driving_tests_repeated": false,
+  "both_plots_viewed": true,
+  "idle_listening_question_repeated": false,
+  "next": "Omitted LF/HF structure and correspondence/model mismatch before acceleration recipe; no higher-degree or range sweep, invented LF/HF or actual RPM/load mapping.",
+  "manifest_sha256": "771efb05686035d27e8de26ef5cf0ce20df9c71d71f3c43e5ba98c4c3780a3c2",
+  "file_count": 64,
+  "bytes": 6946631
+}

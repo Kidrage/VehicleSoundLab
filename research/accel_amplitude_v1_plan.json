@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.accel-amplitude-transfer-plan/1",
+  "purpose": "Check whether independent F3 acoustic-line amplitudes can be predicted from frequency-scale alone across different passages, separating legacy RMS, geometric-constant and log-linear models",
+  "segments": ["F3_fifth1","F3_fifth2","F3_sixth"],
+  "comparisons": "All6ordered distinct passage pairs. Primary fifth1->fifth2; reverse and sixth are diagnostic challenges, not alternatives to select after seeing errors",
+  "parent": "Frozen accel_chirp_v1 native fits, all48original tiles. Original success/bounds/local eligibility/guide support remain unchanged. No new fitting of audio or selection of windows",
+  "alignment": "Original first native0.25s tiles, unchanged accel_material_v1 whiten/192-oct scale_match settings. Save every score and rejected pair. Associate first-tile reference inventories through original accel_ridges one-to-one graph/radius. Missing/ambiguous stay absent. This is acoustic-coordinate matching, not engine-order identity",
+  "training": "For each source reference, all original guide-supported and locally eligible source-passage rows only. At least3rows and logratio span>=log1.03; x=log(original within-passage acoustic ratio). No target amplitude or target phase in model",
+  "models": "Save RMS constant sqrt(mean(A^2)); geometric constant exp(mean(logA)); log-linear logA=mean(logA)+slope*(x-mean(x)), separate L/R. Slope is centered ordinary LS with no ridge, clipping or degree/threshold search",
+  "prediction": "Target coordinate is log(first-tile cross-passage ratio*original target within-passage ratio). Predict only within source training min/max coordinates. Require>=3eligible target rows inside range and>=50percent of eligible target support; retain every rejected/outside row and its reason",
+  "evaluation": "All three amplitude models on identical eligible/in-domain target rows. Report raw per-window/channel dB errors, fixed<=3dB median diagnostic and source-frequency*scale error<=4Hz without tuning. Also report common/shape decomposition of observed error per target window, strictly as a diagnostic and never feeding model/prediction or audition gain",
+  "known_controls": ["Exact powerlaw L/R amplitudes and constant law", "Changing one target amplitude cannot alter source model", "Same coordinates with different target law fail universal mapping", "Dense26line/removed/adjacent ambiguity association", "Original spectral-scale controls", "Identical noise self-match passes and does not identify an engine"],
+  "limits": "All passages from previously inspected same F3 recording and acoustic guides from whole passages; no pristine/independent recording validation. Eligibility uses observed local target fits. Load, RPM, wind/cabin/microphone gain and physical phase/source not identified. A successful regression does not waive common-phase extraction qualification or prove causality",
+  "synthesis": "No complete-engine audition, C or runtime profile from partial300..2000Hz lines. Do not invent bass/treble or claim acceleration complete. Preserve all outcomes before choosing next source-model change",
+  "runtime_changed": false,
+  "new_download": false,
+  "existing_idle_listening_question_repeated": false
+}
