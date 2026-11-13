@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.bounded-envelope-pair-plan/1",
+  "parent": "bounded_clock_pair_v1/pair2",
+  "scope": "Finite model-pair diagnostic with all positive slow-amplitude controls; not phase recovery or full extractor qualification",
+  "construction": "Use the exact previously constructed plus/minus phase perturbations and constant carrier angles. Release all36x17 absolute positive amplitude controls, with the original relative0.25 envelope cone and original a,b caps",
+  "objective": "Minimize exact raw-sample least-squares difference from the original observed-initial model waveform. Shift variables around the previous feasible pair; no recorded audio, true phase or heldout observations",
+  "solver": "One original-budget QR-lifted convex QP per sign; if original full KKT fails, use the existing finite original active-set primal polish, retaining failures and all original certificate tolerances",
+  "checks": [
+    "Independent small closed-form interior/lower/upper/cap/zero controls before either large pair solve",
+    "Check original a,b/envelope/phase bounds, positive envelopes, monotonic coordinate and unchanged fixed phase/angles after packing",
+    "Check both Gram and raw-design primal/dual stationarity, multiplier signs, complementarity and full observation residual; no certificate based on reduced directions alone",
+    "Keep all612 amplitude columns; no carrier deletion, arbitrary ridge, rank cutoff or window/degree/grid/strength/iteration sweep",
+    "Only after construction, compare finite raw differences with declared synthetic sample sigma as fixed-hypothesis distances under fresh independent noise; not original-data p-values or real coloured-noise confidence",
+    "Fixed carrier angles mean this remains a restricted nuisance diagnostic, not a global lower bound over all732parameters",
+    "Retain failed dense36positive/all17/full33/individual14kHz/original E before phase-extracted real models",
+    "540C-H/voices/moving35/one-driver/stereo7.1.4 unchanged; do not repeat55unchangedCTests; approvedF1F2F3 acquired, originalA-low question pending"
+  ]
+}
