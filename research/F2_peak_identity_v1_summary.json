@@ -1,0 +1,211 @@
+{
+  "schema": "vsl.F2-peak-identity-final/1",
+  "result": "audited_peak_rank_identity_and_omitted37_counterfactual_frozen_not_idle_DNA",
+  "sources": {
+    "tools/observe_F2_peak_identity_v1.py": "063402e837b841247f767b66834d64920b3e43dfc1869a4df715bb5c0b457ed0",
+    "handoff/算法说明.md": "435bc45fc822ca3cc12522aeab318b3c9b3783a7e58c725209a09450db189921",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "research/F2_peak_identity_v1_plan.json": "cc92e478fd5277c5e98b11af0d02b3567eea762164b025e9aab4fcfee60dd849",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/publish_F2_peak_identity_v1.py": "3539ee95d024c00c1e3b91f60f5f896aa7c583f33b7f298edd23282191913939",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "handoff/研究续接.md": "4cf8dc49ced2aa06c2ec89aa976748c5b2cbaae5b71543f4c2135746d06a2978",
+    "research/怠速与加速完成度V1.md": "2ca37ece423e2db19828f26c957dac1ef6172259a8287e668b8bfa1dee5af009",
+    "AGENTS.md": "f2757f2f8b47bd6c144ab6b428b06623cde0224ae42017fe432ba19ebf4d9a3b",
+    "tools/audit_F2_peak_identity_v1.py": "f98971d1cb8bb33e2e1abc8f40b9d028093f7a6b0008e3a6f29c108a09db4625",
+    "handoff/开发留痕.md": "8816c69080aec013d6e70a4029ed9a76d03a1f83e61c69208d5da84438b08508",
+    "research/F2谱峰身份V1.md": "43090cba7ce5fed53a9b846066b72255ee36f2f5cd516730cd91305a22b9cf06",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "tools/package_F2_peak_identity_v1.py": "7f8c0851f74e738b18b7ead5e36c70a3e938e0fdae8440388cef4f408737b614",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+  },
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/F2_peak_identity_v1/observe1/report.json",
+      "sha256": "704ca5f0239e7f9e80bed6d2e521791d49d9d5a62fd2c8d9580dd52239477a7a",
+      "result": "all_peak_correspondence_and_omitted37_counterfactual_observed_not_idle_DNA"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_peak_identity_v1/audit1/report.json",
+      "sha256": "355a626fdd1c0befbcb6d15c954872ac530edec6ac1ea740b10c5f1b398d0c03",
+      "result": "all_graph_edges_ambiguities_and_two_counterfactual_fits_independently_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_peak_identity_v1/review1/report.json",
+      "sha256": "1ec23c3723b3979ed0c83660c1d19f02276433cbdd953293adf4a1bb6b9bc1ec",
+      "result": "discrete_peak_correspondence_and_counterfactual_plotted"
+    },
+    "review2": {
+      "path": "references/analysis/F2_peak_identity_v1/review2/report.json",
+      "sha256": "5a5da930e4d50eb1193a8151aa1ac2ca9ea503b03310df31b2ea9d2a2893eb77",
+      "result": "discrete_peak_correspondence_and_counterfactual_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "source_versions": {
+    "tools/observe_F2_peak_identity_v1.py": {
+      "observe1": "063402e837b841247f767b66834d64920b3e43dfc1869a4df715bb5c0b457ed0"
+    },
+    "research/F2_peak_identity_v1_plan.json": {
+      "observe1": "cc92e478fd5277c5e98b11af0d02b3567eea762164b025e9aab4fcfee60dd849"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "observe1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "observe1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/correspondence.py": {
+      "observe1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a"
+    },
+    "tools/line_motion_v1/identity_controls.py": {
+      "observe1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+      "audit1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "observe1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "observe1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "observe1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/audit_F2_peak_identity_v1.py": {
+      "audit1": "f98971d1cb8bb33e2e1abc8f40b9d028093f7a6b0008e3a6f29c108a09db4625"
+    },
+    "tools/publish_F2_peak_identity_v1.py": {
+      "review1": "c494bbd7cc62f823128f7e19d42576aa30e3d7bcb07c93d9e7d11e4ce6dd8eb5",
+      "review2": "3539ee95d024c00c1e3b91f60f5f896aa7c583f33b7f298edd23282191913939"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_local_chirps_v1": {
+      "path": "baselines/F2_local_chirps_v1/manifest.json",
+      "sha256": "03fade9a47811d1d83993f90a1ff6c937dcbb38e085ec1f911650e4e72ace4ba"
+    },
+    "state_media_v1": {
+      "path": "baselines/state_media_v1/manifest.json",
+      "sha256": "ce8aa1771e4efbefd1cebaa58936b13049c3cadb725069c01909556c0d0d55a3"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "5b4f1b963db175493ffd21c8d1fcc1c7eb0c679331e53faa0da8df90a8522852",
+  "graph_statistics": [
+    {
+      "channel": 0,
+      "unique_components": 184,
+      "ambiguous_components": 115,
+      "discrete_track_count": 344
+    },
+    {
+      "channel": 1,
+      "unique_components": 184,
+      "ambiguous_components": 115,
+      "discrete_track_count": 344
+    }
+  ],
+  "counterfactual": [
+    {
+      "channel": 0,
+      "cost_reduction_percent": 3.925542263300652,
+      "residual37_reduction_percent": 95.93551965823596,
+      "main_bound_flags_before": [
+        false,
+        true,
+        true
+      ],
+      "main_bound_flags_after": [
+        false,
+        true,
+        true
+      ],
+      "added37_bound_flag": false
+    },
+    {
+      "channel": 1,
+      "cost_reduction_percent": 3.925542263300652,
+      "residual37_reduction_percent": 95.93551965823596,
+      "main_bound_flags_before": [
+        false,
+        true,
+        true
+      ],
+      "main_bound_flags_after": [
+        false,
+        true,
+        true
+      ],
+      "added37_bound_flag": false
+    }
+  ],
+  "audit_errors": {
+    "waveform": 8.326672684688674e-17,
+    "cost": 1.0842021724855044e-19,
+    "optimality": 1.600134366074376e-19,
+    "residual_projection": 2.6020852139652106e-18,
+    "initial": 1.3877787807814457e-16
+  },
+  "known_six_line_wave_error": 1.6296721632014848e-14,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figure_visually_checked": true,
+  "all_executed_review_sources_retained": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "actual_fits_resolved_again": false,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_native_peak_failures_neighbor_interference_and18local_chirp_fits_independently_audited",
+  "current_goal_turn": "progress_allpeak_rank_independent_ambiguity_preserving_correspondence_and_two_omittedpeak_real_counterfactual_fits_independently_audited",
+  "next_step": "Known time-varying amplitude versus chirp mismatch qualification before real local envelopes; no blind bounds/windows/degrees/iteration sweeps. Originalfailed36/all17/full33/individual14k/originalE still required before phase-extracted real models.",
+  "limits": [
+    "Graph correspondence does not establish physical component identity or phase continuity",
+    "37Hz has an ambiguous predecessor at9..10s; it must not become one uninterrupted track",
+    "Adding measured37Hz reduces residual but main112/187Hz chirps still touch original bounds",
+    "Selected-window training comparison is exploratory, not heldout or perceptual validation",
+    "Graph tracks are discrete unambiguous local correspondences, not a physical source tracker or phase clock",
+    "All ambiguous links retained; no amplitude-based choice or gap filling",
+    "Actual added37Hz is a measured secondary candidate, not a generated or truth-seeded carrier",
+    "Six-component local counterfactual changes neither original five-component results nor accepted voices"
+  ]
+}
