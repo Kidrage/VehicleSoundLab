@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.accel-upper-temporal/1",
+  "purpose": "After observed old relative floor censors every upper candidate and band-local noise controls produce171..317candidates, inspect upper temporal concentration before choosing any source model. Supplemental observation only, no fitted generator or parameter selection.",
+  "inputs": "Same frozen all48native F3 inputs, concatenated in original order within each complete3s/3s/6s passage; no gaps, retiming, LF/F2/A mixture or new audio download.",
+  "bands_hz": [[4000,8000],[8000,14000]],
+  "filter": "Forward fourth-order Butterworth bandpass at native48000, same filters for every recording/control, discard4800frames each end. Not separation of mechanical/air/road or physical sources.",
+  "features": "Centered variance/skew/excess kurtosis, complete nonoverlap480frame10ms band-energy CV and2x2normalized covariance/correlation. All left-channel features, original stereo data retained; do not interpret source count or engine phase. Continuous filtering precedes trimming and windows.",
+  "surrogates": "All3fixed seeds149921/277139/381611. Rotate each complete-passage Fourier bin by fresh common-LR uniform phase, DC/Nyquist phase0; preserve complete bin magnitudes and cross spectrum to floating precision. No new audio file, profile or timeline is exported. SamePSD phase controls condition on the whole observed passage and are NOT independent recordings or engine classifiers.",
+  "verification": "Known direct binary/sine moments and scale invariance, independently scalar-sum every recorded/control moment and10ms energy matrix; independent SOS-polynomial FFT transfer reconstruction of all bandpassed observations, exact original sample/manifest hashes and all phase-control full-bin identities. Report actual-vs-all3control differences without tuning, significance/confidence or model-adoption gates.",
+  "next": "Choose coherent-line versus correlated filtered-innovation research from both the inventory and temporal evidence; neither positive kurtosis nor relative-floor peaks uniquely identify engine details. Do not reintroduce rejected standalone OSC cloud or blindly modify pending idle candidates.",
+  "runtime_changed": false,
+  "new_audio_or_profile": false
+}

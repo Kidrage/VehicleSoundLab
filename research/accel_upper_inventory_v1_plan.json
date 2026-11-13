@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.accel-upper-inventory/1",
+  "purpose": "Explain all48 F3 current4..7kHz empty inventories before any new source recipe. Census raw maxima, prominence, old relative floor and old-domain censoring; separately observe a declared band-local floor. Not a detector qualification, phase/RPM/load classifier or synthesis profile.",
+  "parent": "Frozen baselines/accel_candidate_prediction_v1 evidence/observe1 all48native NPZ and original inventories; exact samples, no full-media download/reselection/retiming. F3 cabin only, no F2/A transfer mixing.",
+  "sample_rate": 48000,
+  "frames": 12000,
+  "old_domain_hz": [200,7000],
+  "upper_bands_hz": [[4000,8000],[8000,14000]],
+  "peak_prominence_db": 8,
+  "peak_spacing_hz": 6,
+  "floor_db_relative_to_maximum": -42,
+  "census": "One original periodic-Hann native4Hz grid; all whole-spectrum raw local maxima with original distance, no cap. Report every upper raw peak, whole-spectrum prominence, original200..7000 maximum floor, new band-local maximum floor, and old-domain eligibility. Old inventories reconstructed and preserved separately. Record independent reasons; do not imply floor and prominence mutually exclusive. New reference changes architecture explicitly, not unchanged acceptance.",
+  "descriptors": "Absolute band powers/LR cross spectrum, max/median cell contrast, spectral flatness, centroid and band maximum relative to old maximum. These describe mixed recording, not physical sources or probability. No per-recording gains or invented stereo width.",
+  "controls_first": "Known loud300Hz plus weak5132/10012Hz tones with shaped Gaussian background; gain invariance; quiet moving upper line; removed upper line with displaced neighbour; all3fixed same-mono/independent-stereo Gaussian noise seeds; pure-low numerical-tail control and exact silence. Require old floor misses both weak positives and band-local recovers within one4Hz cell, gain invariance, no forced slot on missing target. Noise/numerical-tail peak counts reported as false-source counterexamples, not expected zero or detector proof.",
+  "verification": "Independently periodogram/Parseval all native cell powers, then scalar scanning of saved cells reconstructs raw maxima/prominence/parabolic interpolation and every threshold/censor decision. Saved native diagnostic cells after absolute verification deliberately avoid claims of physically precise log-prominence in numerical nulls. Known source samples independently rebuilt where analytic. Preserve all seeds/failed attempts/exact executed source versions,612C-H67voices/moving35/idle candidates/driver/takes.",
+  "limits": "All48previously inspected and same recording. A new inventory is only candidates, not sustained sources, physical engine HF, source separation or accepted timbre. No old dense moving/fixed classifier because known dense-comb false uncertainty remains. No nonlinear fits, sound export, C/model/UI change, old61CTest or duplicate pending idle question. Original commonphase qualification unwaived.",
+  "new_download": false,
+  "new_audio_or_profile": false,
+  "runtime_changed": false
+}

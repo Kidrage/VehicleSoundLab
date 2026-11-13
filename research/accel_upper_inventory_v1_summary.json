@@ -1,0 +1,60 @@
+{
+  "schema": "vsl.accel-upper-inventory-freeze/1",
+  "result": "all48_upper_census_and12_temporal_observations_audited_NO_sound_promotion",
+  "parent_commit": "a33e7236d8d577049e21e7e48942e7959925a93b",
+  "audit": {
+    "result": "all48_upper_cells_rejections_descriptors_verified",
+    "known": 12,
+    "windows": 48,
+    "peaks": 40248,
+    "maximum_cell_power_error": 2.0816681711721685e-16,
+    "maximum_transform_error": 5.084229945850415e-13,
+    "maximum_Parseval_error": 1.3600232051658168e-15,
+    "maximum_saved_prominence_error": 0.0,
+    "maximum_saved_frequency_error": 0.0,
+    "input_report_sha256": "cf3d23670d3f62d923e5bcd613e9d650c551fa006a4e5667a1dd97eef84602c6",
+    "saved_cell_null_arithmetic_NOT_physical_precision": true,
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "source_identity_or_audio_promotion": false
+  },
+  "known_waveform_audit": {
+    "result": "all12_known_waveforms_and_outcomes_verified",
+    "fixtures": 12,
+    "maximum_sample_error": 2.220446049250313e-16,
+    "input_report_sha256": "cf3d23670d3f62d923e5bcd613e9d650c551fa006a4e5667a1dd97eef84602c6",
+    "local_candidate_counts_not_engine_identity": true,
+    "scope": "Known fixtures only; real all48census audited separately."
+  },
+  "temporal_audit": {
+    "result": "all12_temporal_observations_independently_verified",
+    "observations": 12,
+    "maximum_filter_error": 1.0200174038743626e-15,
+    "maximum_moment_error": 1.4519635493925875e-13,
+    "maximum_phase_spectrum_relative_error": 1.0057327710640516e-15,
+    "input_report_sha256": "18caf836fed7a038e3455b4b400e5c573abae0a04afcb7a4fb3169457706e6dd",
+    "same_recording_not_source_identity_or_new_generator": true
+  },
+  "upper_candidates": [
+    3744,
+    6361
+  ],
+  "original_upper_accepted": 0,
+  "local_floor_is_changed_observation_architecture": true,
+  "noise_and_numerical_tail_counterexamples_preserved": true,
+  "all_phase_controls_retained": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "new_audio_or_profile": false,
+  "runtime_changed": false,
+  "plots_viewed": true,
+  "old61_driving_tests_repeated": false,
+  "source_identity_or_RPM_load_qualified": false,
+  "original_shared_phase_qualification_still_required": true,
+  "timbre_accepted": false,
+  "human_idle_priority": "Existing F2 source-derived excitation and conditioned-detail pages await listening; no duplicate questions or blind promotion.",
+  "next": "Upper persistent lines versus correlated non-Gaussian innovations and recording artifacts, before new acceleration recipe; no standalone OSC-cloud or threshold sweep.",
+  "manifest_sha256": "046a5d848cdbdf50da9ab1c932bce5e2afd8d3cd75dfac3270cb19e8508095d1",
+  "file_count": 188,
+  "bytes": 122162415
+}
