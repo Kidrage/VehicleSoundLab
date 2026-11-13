@@ -1,0 +1,153 @@
+{
+  "schema": "vsl.accel-dominant-transfer-freeze/1",
+  "result": "all6_primary_conditional_transfers_pass_old_diagnostics",
+  "parent_commit": "8c43ca57c6734b58b64696e1f6943740e2387b12",
+  "source_models": 3,
+  "source_training_rows": 35,
+  "source_domain_predictions": 51,
+  "outside_rows_retained": 19,
+  "pairs": [
+    {
+      "source": "F3_fifth1",
+      "target": "F3_fifth2",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 9,
+      "eligible_target_count": 10,
+      "median_absolute_error_db": {
+        "RMS": 1.0016514144902864,
+        "geometric": 0.972938266222463,
+        "log_linear": 1.2314689068694162
+      },
+      "maximum_frequency_error_hz": 1.0384229816355628,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    },
+    {
+      "source": "F3_fifth1",
+      "target": "F3_sixth",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 11,
+      "eligible_target_count": 16,
+      "median_absolute_error_db": {
+        "RMS": 0.44888981306991643,
+        "geometric": 0.4631756857419552,
+        "log_linear": 0.4465000294351803
+      },
+      "maximum_frequency_error_hz": 0.661966535643046,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    },
+    {
+      "source": "F3_fifth2",
+      "target": "F3_fifth1",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 8,
+      "eligible_target_count": 9,
+      "median_absolute_error_db": {
+        "RMS": 0.5098160336018119,
+        "geometric": 0.5098160336018125,
+        "log_linear": 0.5562734755299885
+      },
+      "maximum_frequency_error_hz": 1.141429954024204,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    },
+    {
+      "source": "F3_fifth2",
+      "target": "F3_sixth",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 11,
+      "eligible_target_count": 16,
+      "median_absolute_error_db": {
+        "RMS": 1.0899804489363665,
+        "geometric": 1.005457309383806,
+        "log_linear": 1.0130578973816746
+      },
+      "maximum_frequency_error_hz": 0.7700013023456904,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    },
+    {
+      "source": "F3_sixth",
+      "target": "F3_fifth1",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 6,
+      "eligible_target_count": 9,
+      "median_absolute_error_db": {
+        "RMS": 0.6569225989049878,
+        "geometric": 0.6625212248785862,
+        "log_linear": 0.8318498534516543
+      },
+      "maximum_frequency_error_hz": 0.6782091892206381,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    },
+    {
+      "source": "F3_sixth",
+      "target": "F3_fifth2",
+      "status": "compared",
+      "maps_to_target_primary": true,
+      "within_count": 6,
+      "eligible_target_count": 10,
+      "median_absolute_error_db": {
+        "RMS": 1.4144386787818553,
+        "geometric": 1.5206379406672519,
+        "log_linear": 1.7158033038134697
+      },
+      "maximum_frequency_error_hz": 1.026040157532293,
+      "both_diagnostics_pass": {
+        "RMS": true,
+        "geometric": true,
+        "log_linear": true
+      }
+    }
+  ],
+  "all6_full_inventory_maps_to_target_primary": true,
+  "all6_all3laws_pass_original_diagnostics": true,
+  "loglinear_better_than_geometric_pairs": 1,
+  "maximum_model_error": 4.440892098500626e-16,
+  "maximum_prediction_error": 1.915134717478395e-15,
+  "original_known_controls_and_dominant_missing_adjacent_preserved": true,
+  "parent_input_files_manifest_verified": true,
+  "prior_native_scale_reused": true,
+  "new_alignment_search": false,
+  "target_amplitude_training": false,
+  "target_gain_correction": false,
+  "allpassages_previously_inspected": true,
+  "target_eligibility_and_guide_observed": true,
+  "pristine_holdout": false,
+  "common_phase_RPM_load_or_source_identity": false,
+  "original_common_phase_qualification_required": true,
+  "complete_acceleration": false,
+  "new_audio_or_profile": false,
+  "runtime_or_default_changed": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_tests_repeated": false,
+  "both_plots_viewed": true,
+  "idle_candidate_pending_and_question_not_repeated": true,
+  "next": "Check omitted low-frequency structure and fixed/non-tonal components before a complete layered acceleration recipe; preserve simple amplitude controls and avoid inventing RPM/load laws.",
+  "manifest_sha256": "18e36f4e62cb0fa3da4420749dd3d3b963dd5526a8941022cdf9c06534e725d4",
+  "file_count": 60,
+  "bytes": 6838920
+}
