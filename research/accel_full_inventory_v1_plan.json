@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.accel-full-inventory/1",
+  "reason": "Native coverage exposed a reference-selection error: original300Hz lower cutoff excludes each first-tile strongest detected peak at299.806/297.144/286.932Hz. Retain full already-detected original200..7000Hz inventory, instead of refitting only peaks above300. No peak thresholds or local qualification relaxed.",
+  "segments": ["F3_fifth1","F3_fifth2","F3_sixth"],
+  "reference": "ALL original first-tile inventory frequencies from frozen accel_ridges_v1/observe2, no new peaks/cap/range/line search. This includes native-bin selected candidates whose subbin interpolation may lie just below200Hz. Preserve original first inventory exactly.",
+  "correspondence": "Unchanged original guide ratios/support, same one-to-one degree1 graph/radius. Save every absent/ambiguous. No old moving/fixed classification used to remove refs. Relative acoustic scale only, not engine phase/RPM.",
+  "native_fit": "Same accel_chirp_v1.fit kernel and original frequency radius2Hz/neighbour limits/q+-500Hzs/60eval/tol1e-10/native12000frames/Hann/rank/.8support/-42dB criteria. Only reference inventory changes; old fitted sources/gates/failures remain. Independent f/q per line; separate L/Rcoefficients. No retry of failed windows or source chirplet compensation.",
+  "initial": "Native current peak bin and original centered/one-sided adjacent observed frequency derivative for each unique match, identical recipe to prior. No truth initialization or target amplitudes.",
+  "known_before_real": "Native moving off-grid299.8Hz strongest plus five weaker200..1500Hz lines with alpha.05/s, first-tile inventory inclusion and guide associations. Old reference cutoff explicitly omits strongest; full list includes it. All6native fitted frequencies/amplitudes/support must recover under original constraints. Run original dense26andother chirp controls unchanged too.",
+  "evaluation": "All48windows, original guide/failure flags kept. Compare native source/model/residual/signed-interference powers over prior seven coverage bands, all and eligible-only. The strongest reference can be inspected but every line/window remains in reports. No model/source ratio called explained power or physical-source fraction.",
+  "prediction": "No claim old cross-passage amplitude conclusions transfer to newly included dominant modes. Those need separate source-only prediction before acceleration profile. No new full-engine audition/C/default/driver change solely from fit improvement. Common-phase qualification remains required.",
+  "runtime_changed": false,
+  "new_download": false,
+  "idle_question_repeated": false
+}

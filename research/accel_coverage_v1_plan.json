@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.accel-native-coverage/1",
+  "purpose": "Independently measure original-source coverage even though separate chirplet control failed; never re-enable failed compensated-source analysis",
+  "segments": ["F3_fifth1","F3_fifth2","F3_sixth"],
+  "bands_hz": [[30,150],[150,300],[300,1000],[1000,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "samples": "All48unchanged frozen native12000frame F3 stereo tiles and original local fits. No new fitting, window/line selection, filtering, resampling, gain or audio export",
+  "models": "All original fitted lines versus original eligible-only lines. Both retain same original DC; oscillator basis from original independent f/q and cos/sin. Unsuccessful window has no eligible lines, remains included. Model-source ratio is NOT explained power, because interference can be negative",
+  "power_identity": "Periodic-Hann native source X, model Y and R=X-Y. Save source/model/residual and signed2Re(YconjR) in all seven physical bands and both channels. Identity source=model+residual+interference must hold; no residual classified as physical noise or zeroed negative budget",
+  "controls": "Exact known separated band tones; missing high tone; model1.5times source destructive interference and model power/source>1 counterexample. Native known Parseval and independent complex-source/scalar band sums audit",
+  "report": "Per-tile source band power fractions, model/source and residual/source plus signed cross/source. Aggregate only raw summed powers over original equal-length windows, preserving per-window values, fit/guide failures and eligible counts. Also total line frequency range. No audio/source identity inferred from ratios",
+  "limits": "F3 cabin only, all passages previously inspected, no measured RPM/load/AV calibration, physical combustion/road/wind separation or common engine phase. Earlier phase-extractor gates remain. Failed accel_wideband_v1 compensation gate and exact sources retained; no source chirplet transform run after failure",
+  "runtime_changed": false,
+  "new_download": false,
+  "idle_question_repeated": false
+}

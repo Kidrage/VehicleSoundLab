@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.accel-wideband-observation/1",
+  "purpose": "Measure what frozen native acceleration line fits omit, then test whether known within-window pitch spreading hides upper peaks. Observation only, no new source or common engine clock.",
+  "segments": ["F3_fifth1","F3_fifth2","F3_sixth"],
+  "source": "All48original F3 native12000frame stereo tiles, frozen accel_chirp_v1. Preserve every optimizer failure, guide failure and line eligibility. No new source/window selection/download.",
+  "bands_hz": [[30,150],[150,300],[300,1000],[1000,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "coverage": "Periodic-Hann native FFT band energy of source X, all fitted lines+DC Y, eligible-only lines+sameDC Q, and both residuals. Save signed2Re(Y*conj(R)) so X=Y+R is an exact power identity including cross terms. Remaining power is NOT separated noise; per-band fit power/source power is not explained fraction. No band-energy gain compensation.",
+  "chirplet_coordinate": "For each tile, alpha=(r_next-r_previous)/(0.5*r_current), or one-sided difference at endpoints, using original candidate acoustic scale. tau(t)=t+0.5*alpha*t^2 centered at native tile midpoint. Preserve guide failures and candidate alphas; no smoothing/monotonic path/new interpolation or alpha/range scan. Source does not prove this is engine phase or correct chirp.",
+  "transform": "Direct original-sample Hann quadrature Z(f)=sum x(t)*w(t)*exp(-2pi*i*f*tau(t)); no resampling/zero-padding/PCM/timewarp export.4Hz native frequency step0..8000 inclusive. This is a nonorthogonal observation dictionary, NOT PSD or a Parseval-preserving warp; do not integrate its cells as energy.",
+  "inventory": "Compare BOTH native alpha0 and candidatealpha dictionaries on identical0..8000Hz grid. Original8dBprominence,6Hzspacing,-42dBrelative floor and200..7000Hzinventory. Prominence scans stop at8000, so new alpha0 list is independently saved and not claimed byte-identical to old full-Nyquist inventory. No cap, no source identity from counts. Low30..300Hz report native source coverage only; no invented rumble model.",
+  "known_controls": "Before real data: analytic zero-chirp versus FFT;96independent moving lines orders5..100 at60.613Hz base with alpha.05/s; fixed lines and wrong-sign compensation; global gain; missing moving line; no-engine Gaussian noise. Known positive must recover>=90percent of true high2200..7000Hz lines within one2Hzhalfbin and improve high-line matches versus alpha0; otherwise stop before source analysis. True alpha used only as dictionary contract input, not qualification of an estimator.",
+  "interpretation": "No new native line fit, profile, sound or C adoption from compensated peaks alone. Need original native waveform fit/support then cross-passage prediction before using new peaks. Counts can contain sidelobes/noise/fixed components; alpha!=0 can harm fixed sources. Original common-phase qualification is not waived.",
+  "runtime_changed": false,
+  "pending_idle_listening_question_repeated": false
+}
