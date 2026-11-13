@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.model-score-plan/1",
+  "parent_plan": "research/correlated_observation_v1_plan.json",
+  "metric": "Fixed observation-initialized model-score moments with exact global source-white covariance",
+  "construction": "Use the complete native-bin initial waveform Jacobian J; apply exact raw-sample adjoint A^T J; normalize columns positively; retain every SVD column without cutoff; project raw waveform onto that source-space span",
+  "noise_variance": "Preserve the original native real-row white-noise variance3/window_size; orthonormal source moments account for all time-window overlaps",
+  "maximum_iterations": 20,
+  "policy": [
+    "Only original observed initialization, model derivatives and native observation geometry construct the fixed score basis; no truth, fitted candidate phase, source labels or heldout observations",
+    "Basis remains fixed for the entire20-step fit; keep source36/732parameters/84phase/amplitude/minority equations and original bounds/init/robustscale/controller",
+    "Keep every positive singular value; no ridge, rank truncation, degree/window/grid/strength/iteration sweep",
+    "Score components are real mathematical moments packed into complex storage for the unchanged real_rows interface; they are not microphones, engine banks or spectral carriers",
+    "First independently check multi-column native FFT adjoint, scalar moments, orthonormal covariance, source norm bound and out-of-band energies",
+    "A local initial tangent may miss nonlinear changes; assess full native-bin residual and every original phase/root/power/stereo/support gate after fitting",
+    "Original failed dense36 positive/all17/full33/individual14kHz/original E remain required; no real extraction or C promotion from a smaller score residual alone",
+    "F1/F2/F3 are approved and acquired; A-low original listening pending, no duplicate question; moving35 and540C-H/voices/stereo7.1.4 unchanged"
+  ]
+}
