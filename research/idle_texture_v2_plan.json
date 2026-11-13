@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.idle-texture-study/2",
+  "source": "F2_tailpipe",
+  "training_seconds": [6, 9],
+  "holdout_seconds": [9, 12],
+  "sample_rate": 48000,
+  "analysis_frames": 24000,
+  "analysis_hop": 12000,
+  "bands_hz": [[30,120],[120,400],[400,1200],[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "upper_bands_hz": [[400,1200],[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "peak_prominence_db": 8,
+  "peak_spacing_hz": 6,
+  "peak_floor_db_relative_to_maximum": -24,
+  "maximum_modes_per_band": 16,
+  "tracking_radius_hz": 3,
+  "minimum_observed_fraction": 0.8,
+  "seconds": 12,
+  "seeds": [149921,277139,381611],
+  "baseline": "references/analysis/idle_modal_v1/trial4",
+  "observation": "Inspect approved native F2 training LR difference and supported lines separately in each upper band. The old inventory used one global -42dB floor; its 13 retained modes all lie below487Hz. A line must have unambiguous support in >=80% of fixed 0.5s training windows. Run known quiet-upper-line/missing-line controls first. Do not use holdout to select lines or parameters; do not claim combustion phase, RPM or physical noise separation.",
+  "candidate_boundary": "Only if observed structure supports it, create an isolated source candidate with preserved low modes, source-supported upper structure and rebudgeted fresh resonators. No arbitrary independent HF cloud, periodic FM, PCM loop or added room. Declare any subsequent synthesis recipe before running it; no best-seed selection. Keep C/runtime/voices/defaults/moving35 and old snapshots unchanged.",
+  "validation": "Report all seeds and unchanged-gain dry comparison. Numerical agreement is technical evidence only; listening acceptance remains separate. Preserve exact sources, controls and failed attempts. Existing shared-phase qualification is neither replaced nor waived by this independent-mode study."
+}

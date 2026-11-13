@@ -1,0 +1,45 @@
+{
+  "schema": "vsl.idle-texture-freeze/2",
+  "result": "isolated_source_candidates_verified_pending_listening",
+  "git_parent": "49b36193466c46b0016b2c5b5de556a12f7e4e61",
+  "source": "F2_tailpipe",
+  "train_seconds": [
+    6,
+    9
+  ],
+  "holdout_seconds": [
+    9,
+    12
+  ],
+  "original_OSC_count": 13,
+  "original_OSC_parameters_exact": true,
+  "filter_taps": 8192,
+  "seed_count": 3,
+  "methods": [
+    "fine",
+    "dynamic"
+  ],
+  "same_gain": 1.0,
+  "C_H_unchanged": 569,
+  "runtime_voice_files_unchanged": 67,
+  "C_tests_repeated": false,
+  "shared_phase_qualification": false,
+  "RPM_load_calibration": false,
+  "room": false,
+  "recorded_trajectory": false,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "url": "http://127.0.0.1:8789/references/analysis/idle_texture_v2/review1/index.html",
+  "report_hashes": {
+    "observe1": "0ff22784bf7d00e509ced266519674e54524734984ec91406802cf51d855fde5",
+    "trial1": "a1fd62801c02bf478719f9bdee26703fa0ef76431fec0b6f8adc64ef39f6f207",
+    "audit1": "00bcd5af7b82f279af38154a1e93bba538c33734eee6a0533d7a20086a9d6a50",
+    "review1": "c498f76e7f9842b34d91eefd2455a75ba07fae5f58a783eb47dcca8592b3989c",
+    "check1": "31ca7367bf8f5ffcc4087b9e7958f55e8a2b3d66ee9f7227994c7bde7df1e8d0"
+  },
+  "pending": "Listen to fine spectrum and slow amplitude separately before runtime adoption; fixed-mode beating and actual state/RPM coverage remain unresolved.",
+  "freeze": "baselines/idle_texture_v2",
+  "manifest_sha256": "4e3e1ecc7396ff9f8be5abbc741795561efce72d6af4f855f773de0b864e4eb2",
+  "file_count": 109,
+  "bytes": 174745804
+}
