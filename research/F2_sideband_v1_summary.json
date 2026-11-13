@@ -1,0 +1,470 @@
+{
+  "schema": "vsl.F2-sideband-final/1",
+  "result": "conditional_fixed3Hz_sideband_observations_frozen_NOT_physical_source_or_DNA_classification",
+  "sources": {
+    "handoff/研究续接.md": "bf19b9fc5a67191722f79c65fc14b4cf547b13fb3ca233ee6be0d18ae8ceb701",
+    "tools/observe_F2_sideband_v1.py": "83b0a772e33771929312a9d356b122f5b0a39405f25f28f58bce5e8cd9536cae",
+    "handoff/开发留痕.md": "b1c5923efdadd730b452080d944967e3d82f9ddeb0958f30563f05e870672fe9",
+    "research/怠速与加速完成度V1.md": "37a019efa7b3c63c9834154522c6de295974e4836956ebfee50d86c902194075",
+    "tools/package_F2_sideband_v1.py": "d8c6e539e571e217d9d38595dcd7eb0bfed99a88831f2d6a2cb5dc3a74fa8931",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "research/F2_sideband_subspaces_v1_plan.json": "4fe621ff5bb1b77465b4c3b5f2ef0b06798d3824c4db23efc71de4d0557cfc55",
+    "research/F2_sideband_v1_plan.json": "ab7b2a565c8d39dc89407e000a38b4896b84bf8de26ea000b07b1d4ef78e0a4a",
+    "AGENTS.md": "b3b3fafdcfea9c430bd794443a481d9a7c7205e7d92c131bc7f22505011da20c",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "tools/line_motion_v1/sidebands.py": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+    "tools/audit_F2_sideband_v1.py": "380c286633f4d48eca939655f9d53eea1f308b24f4ed61ab6d5bedaf9ed22f4b",
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "tools/line_motion_v1/envelope_controls.py": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+    "tools/line_motion_v1/sideband_subspace_controls.py": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "tools/publish_F2_sideband_v1.py": "ea39d57bab25f87e9d43d9f7a025bcd123f10bce0c29257fd11f7f53fbb9661b",
+    "tools/line_motion_v1/sideband_controls.py": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/audit_F2_sideband_subspaces_v1.py": "f8616b273ada4de9f7cf93455c0683f249808cfcac0119357f7d903806ef13e0",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+    "tools/observe_F2_sideband_subspaces_v1.py": "d99de62b4cca357f38628cb4f37fc9d0d24971e9882057c4200cac3ae59cac89",
+    "tools/line_motion_v1/sideband_subspaces.py": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+    "handoff/算法说明.md": "325fe87ebb0ab8cf9f4b9e732057f233f60dc774c7d01619600e02adea626638",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/line_motion_v1/local_envelopes.py": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "research/F2边带与相位坐标V1.md": "5c45430afa7c5785d06857bd37064c49a2488bad7f7f187e827aa26b396f8adf"
+  },
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/F2_sideband_v1/observe1/report.json",
+      "sha256": "baa8ae5f8d348c57abb2c9f95c3f0aba2317a93767d45e144324afdce1dea866",
+      "result": "all9_fixed3Hz_sideband_parities_observed_CONDITIONAL_not_engine_source_classification"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_sideband_v1/audit1/report.json",
+      "sha256": "bf7da32ba1eacae7874686bc08edda292d3621c272d21eac57ca8df753774012",
+      "result": "all18_conditional_sideband_projections_independently_QR_audited_not_source_classification"
+    },
+    "subspaces1": {
+      "path": "references/analysis/F2_sideband_v1/subspaces1/report.json",
+      "sha256": "89d2bb026dc0f5433976343a77956d6642058b5ae45b36d08e879da7c4edae62",
+      "result": "all9_equal_dimension_A_Q_conditional_subspaces_observed_not_mechanical_source_classification"
+    },
+    "subspaces_audit1": {
+      "path": "references/analysis/F2_sideband_v1/subspaces_audit1/report.json",
+      "sha256": "e170b29b8d5e6d969e3b56222e934da3166251197541be78033713b3c0eda1b0",
+      "result": "all72_equal_dimension_conditional_subspace_projections_independently_QR_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_sideband_v1/review1/report.json",
+      "sha256": "7eeff3ec8eb85c2473ff06dc9a95a86ac9a7979ee62b06f0b7a834a0d93fc564",
+      "result": "conditional_sidebands_subspaces_and_wrong_coordinate_counterexample_plotted"
+    },
+    "review2": {
+      "path": "references/analysis/F2_sideband_v1/review2/report.json",
+      "sha256": "9016fd3f177cee6a88b270622e7e7a9492c516213e2d2d150c38c6209dc0cab0",
+      "result": "conditional_sidebands_subspaces_and_wrong_coordinate_counterexample_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "source_versions": {
+    "tools/observe_F2_sideband_v1.py": {
+      "observe1": "83b0a772e33771929312a9d356b122f5b0a39405f25f28f58bce5e8cd9536cae"
+    },
+    "research/F2_sideband_v1_plan.json": {
+      "observe1": "ab7b2a565c8d39dc89407e000a38b4896b84bf8de26ea000b07b1d4ef78e0a4a"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "subspaces1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "subspaces_audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "observe1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "observe1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/correspondence.py": {
+      "observe1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a"
+    },
+    "tools/line_motion_v1/envelope_controls.py": {
+      "observe1": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93"
+    },
+    "tools/line_motion_v1/identity_controls.py": {
+      "observe1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "observe1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/line_motion_v1/local_envelopes.py": {
+      "observe1": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "observe1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "observe1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/line_motion_v1/sideband_controls.py": {
+      "observe1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+      "audit1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+      "subspaces1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc"
+    },
+    "tools/line_motion_v1/sidebands.py": {
+      "observe1": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+      "subspaces1": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e"
+    },
+    "tools/audit_F2_sideband_v1.py": {
+      "audit1": "380c286633f4d48eca939655f9d53eea1f308b24f4ed61ab6d5bedaf9ed22f4b"
+    },
+    "tools/observe_F2_sideband_subspaces_v1.py": {
+      "subspaces1": "d99de62b4cca357f38628cb4f37fc9d0d24971e9882057c4200cac3ae59cac89"
+    },
+    "research/F2_sideband_subspaces_v1_plan.json": {
+      "subspaces1": "4fe621ff5bb1b77465b4c3b5f2ef0b06798d3824c4db23efc71de4d0557cfc55"
+    },
+    "tools/line_motion_v1/sideband_subspace_controls.py": {
+      "subspaces1": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+      "subspaces_audit1": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750"
+    },
+    "tools/line_motion_v1/sideband_subspaces.py": {
+      "subspaces1": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64"
+    },
+    "tools/audit_F2_sideband_subspaces_v1.py": {
+      "subspaces_audit1": "f8616b273ada4de9f7cf93455c0683f249808cfcac0119357f7d903806ef13e0"
+    },
+    "tools/publish_F2_sideband_v1.py": {
+      "review1": "24f819d8f9dce6fb15a4cb177d1ecd3bb628ab067755fa587ca8de9b50c287e2",
+      "review2": "ea39d57bab25f87e9d43d9f7a025bcd123f10bce0c29257fd11f7f53fbb9661b"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_local_envelopes_v1": {
+      "path": "baselines/F2_local_envelopes_v1/manifest.json",
+      "sha256": "a5b45ecc6dc61542793a9abdb812e41561b03447c5b0dd6ecb4a6c26e4109fb4"
+    },
+    "F2_peak_identity_v1": {
+      "path": "baselines/F2_peak_identity_v1/manifest.json",
+      "sha256": "b1e18c53ce62ffad109522eb5eac4fda0ac591532c57df1948ab8184cbccf560"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "79d52024af48ebe19b5abff83c76015992a9b354ece846eb955fcf99e11e0086",
+  "counts": {
+    "full_sideband": {
+      "channel_projections": 18,
+      "full_rank_projections": 18
+    },
+    "subspaces": {
+      "projections": 72,
+      "quadrature_lower_training_cost_windows": 9,
+      "windows": 9,
+      "physical_AM_FM_classifications": 0
+    }
+  },
+  "condition_ranges": {
+    "full": [
+      1.520006478500173,
+      5.021463092083317
+    ],
+    "subspaces": [
+      1.4146335348127572,
+      239.0634133811972
+    ]
+  },
+  "audit_errors": {
+    "full": {
+      "waveform": 1.0477729794899915e-15,
+      "coefficients_QR": 6.522560269672795e-16,
+      "cost": 2.168404344971009e-19,
+      "gradient": 1.032279875344518e-18,
+      "singular_values": 2.4980018054066022e-15,
+      "parity": 1.2412670766236366e-16,
+      "baseline_cost": 1.0842021724855044e-19
+    },
+    "subspaces": {
+      "waveform": 6.737665980693919e-15,
+      "coefficients_QR": 1.1379786002407855e-14,
+      "cost": 1.0842021724855044e-19,
+      "gradient": 4.532839775507125e-19,
+      "singular": 4.551914400963142e-15,
+      "joint_equivalence": 6.543376951384516e-15
+    }
+  },
+  "cost_reduction_percent_ranges": {
+    "amplitude": [
+      0.7261360080634383,
+      3.9179462079535488
+    ],
+    "quadrature": [
+      1.4982793114200588,
+      7.7570663104972954
+    ],
+    "joint": [
+      2.413868312097045,
+      9.939790536816783
+    ]
+  },
+  "known_AM_independent_pair_equivalence": 3.885780586188048e-15,
+  "known_true_PM_first_sideband_error": 3.485481234365676e-10,
+  "known_halfbin_error_is_counterexample_only": true,
+  "comparisons": [
+    {
+      "source_seconds": [
+        6.0,
+        7.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 0.9172511862306942,
+          "quadrature_reduction_percent": 1.4982793114200588,
+          "joint_reduction_percent": 2.413868312097045,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 0.9172511862306942,
+          "quadrature_reduction_percent": 1.4982793114200588,
+          "joint_reduction_percent": 2.413868312097045,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        6.5,
+        7.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 1.0608116490865904,
+          "quadrature_reduction_percent": 3.024385917609562,
+          "joint_reduction_percent": 4.063731598329834,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 1.0608116490865904,
+          "quadrature_reduction_percent": 3.024385917609562,
+          "joint_reduction_percent": 4.063731598329834,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        7.0,
+        8.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 2.583961957996328,
+          "quadrature_reduction_percent": 7.439075161860009,
+          "joint_reduction_percent": 9.543973896928915,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 2.583961957996328,
+          "quadrature_reduction_percent": 7.439075161860009,
+          "joint_reduction_percent": 9.543973896928915,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        8.0,
+        9.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 0.7261360080634383,
+          "quadrature_reduction_percent": 2.34981938982024,
+          "joint_reduction_percent": 2.915205257659814,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 0.7261360161840424,
+          "quadrature_reduction_percent": 2.3498194358107405,
+          "joint_reduction_percent": 2.915205307078661,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        8.5,
+        9.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 1.6875627954188954,
+          "quadrature_reduction_percent": 1.8625104915914736,
+          "joint_reduction_percent": 3.635376194923179,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 1.6875627954188954,
+          "quadrature_reduction_percent": 1.8625104915914736,
+          "joint_reduction_percent": 3.635376194923179,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        9.0,
+        10.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 1.1434734155988835,
+          "quadrature_reduction_percent": 2.8919395137644854,
+          "joint_reduction_percent": 3.8908878983358153,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 1.1434734155988835,
+          "quadrature_reduction_percent": 2.8919395137644854,
+          "joint_reduction_percent": 3.8908878983358153,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        10.0,
+        11.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 3.9179462079535488,
+          "quadrature_reduction_percent": 6.1876242593486115,
+          "joint_reduction_percent": 9.939790536816783,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 3.9179462079535488,
+          "quadrature_reduction_percent": 6.1876242593486115,
+          "joint_reduction_percent": 9.939790536816783,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        10.5,
+        11.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 1.1146464628345232,
+          "quadrature_reduction_percent": 2.484550417105358,
+          "joint_reduction_percent": 3.5666372484973508,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 1.1146464628345232,
+          "quadrature_reduction_percent": 2.484550417105358,
+          "joint_reduction_percent": 3.5666372484973508,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        11.0,
+        12.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "amplitude_reduction_percent": 1.811829476393878,
+          "quadrature_reduction_percent": 7.7570663104972954,
+          "joint_reduction_percent": 8.993284122090174,
+          "quadrature_lower_training_cost": true
+        },
+        {
+          "channel": 1,
+          "amplitude_reduction_percent": 1.811829476393878,
+          "quadrature_reduction_percent": 7.7570663104972954,
+          "joint_reduction_percent": 8.993284122090174,
+          "quadrature_lower_training_cost": true
+        }
+      ]
+    }
+  ],
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figures_visually_checked": true,
+  "all_executed_review_sources_retained": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "nonlinear_fit_run": false,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "physical_AM_FM_source_classified": false,
+  "high_frequency_recovered": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_positive_affine_amplitude_hypothesis_all18_real_fits_audited_no_adoption",
+  "current_goal_turn": "progress_known_sideband_contract_nonidentifiability_and_wrongcoordinate_counterexamples_all18plus72_real_linear_projections_independently_audited",
+  "next_step": "Known harmonic-family smooth chirp with no3Hzmod checks whether original flat q+/-2 coordinate truncation creates Q-like residual. Observed phase initialization only; truth assessment/operator contract only; no blind real bounds/rate/budget sweeps. Originalfailed36/all17/full33/individual14k/originalE remain before shared-phase realDNA.",
+  "limits": [
+    "No physical AM/FM source classifier is qualified: paired independent tones can exactly equal AM",
+    "Half-bin coordinate error alone produces apparent AM/quadrature on a known unmodulated tone",
+    "Fixed3Hz coefficients are conditional on the old local phase, including all parent bounds",
+    "Training loss reduction and full rank do not establish out-of-window source recovery or naturalness",
+    "Nine conditional Q-only wins are not nine independent recordings or a physical FM conclusion",
+    "Existing input frequency/chirp errors and parent boundaries can create quadrature-like residuals",
+    "Spaces are not necessarily orthogonal; separate training reductions are not additive source energies",
+    "No high-frequency reconstruction, realtime DNA or subjective timbre acceptance",
+    "Input local phase coordinates remain unqualified and retain all original boundary flags",
+    "Every sideband pair admits AM/quadrature algebra; independent tones can be exactly equivalent",
+    "Fixed3Hz describes one predeclared projection, not all modulation rates or total engine detail",
+    "Training reduction with additional coefficients does not prove physical source recovery or improved timbre"
+  ]
+}
