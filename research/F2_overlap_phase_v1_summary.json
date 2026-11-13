@@ -1,0 +1,344 @@
+{
+  "schema": "vsl.F2-overlap-phase-final/1",
+  "result": "known_precision_failure_repaired_real_local_overlap_disagreement_persists_NOT_shared_phase_DNA",
+  "sources": {
+    "tools/line_motion_v1/local_precision.py": "61915d4c7f2a7b1e6147253e486ea9ce850c0e7ea3dafc26b40e3f0b99c8154f",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/line_motion_v1/envelope_controls.py": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+    "tools/line_motion_v1/sideband_controls.py": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+    "tools/line_motion_v1/chirp_limit_controls.py": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "tools/line_motion_v1/overlap_phase_controls.py": "18d1c0ed7d84da618c428ee4b10a4ff49726981735ad4a89a1eff7d9e44c01d2",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "research/F2_local_precision_v1_plan.json": "eac5c6176013ced515ae071029bf90a4ac08b963ca8ccf083811687dffe4571b",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "tools/line_motion_v1/sidebands.py": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+    "handoff/算法说明.md": "f3bfa8a502935291732819df53814fd3f6bcca7acb0cc28fb6c67adaae06afb8",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "research/F2_overlap_phase_v1_plan.json": "a05785be63b48c2d7589efb14bbe9f4eefaf85aa560dfae44220bf5bacd9b391",
+    "tools/line_motion_v1/sideband_subspace_controls.py": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+    "research/怠速与加速完成度V1.md": "3cc47a42b9b6b85af5c78f20b9163db24b77c9895d4d73654c8d5167c47d093c",
+    "tools/audit_F2_overlap_phase_v1.py": "3a93cf27bbd83abdb1c831673c4a452286c331b4ac5f0cac8fe370f5849a4b7b",
+    "AGENTS.md": "b5b1ac445cef867afb570cbb9cccc656c29465094ee0159771beef9e7bcceef5",
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "tools/package_F2_overlap_phase_v1.py": "889f61dac6fd4afc99afc31b5a5a62ae218f8a77e1077cf68191d999c68391d8",
+    "tools/line_motion_v1/sideband_subspaces.py": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/line_motion_v1/local_precision_controls.py": "7a4f2d5770e6bcc4c339aa53956cc61ae5d525929479bb5c231d48c7b3ec20b2",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/line_motion_v1/local_envelopes.py": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "tools/line_motion_v1/rate_coordinate_controls.py": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+    "tools/publish_F2_overlap_phase_v1.py": "8ce70ddbef1e4bfb39e55285446e61b1f611dd9350a454f61abd05729768db0b",
+    "tools/line_motion_v1/overlap_phase.py": "59ac06e8de0769c53198e8428be3e48cfe930d985201bfb6451bd602f772f128",
+    "research/F2重叠相位与局部精度V1.md": "b0f59d640c70a2b0ff77d75411e8d4cd9b15b9ca177ebb1d3bba880ce3189295",
+    "tools/observe_F2_overlap_phase_v1.py": "9d6b5f620f20bb6a2fcbb76b68703e03cfc438aeeba0c9f8b6c0dd40369bad6e",
+    "tools/line_motion_v1/rate_coordinates.py": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a",
+    "handoff/研究续接.md": "66e5f0c3cbbe22128eb756f77a6a065dab688d42a90acf4c8cb102faf3132fb8",
+    "handoff/开发留痕.md": "6efd8270362a8a7cf5c9b0b200afb354ec60bf48cf53cd264582b0b4718da7af",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+  },
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/F2_overlap_phase_v1/observe1/report.json",
+      "sha256": "dc356e3720ebf0e9b783ebab2706a565c23d72f6e58dd066154f1afb34e6bd2e",
+      "result": "failed"
+    },
+    "observe2": {
+      "path": "references/analysis/F2_overlap_phase_v1/observe2/report.json",
+      "sha256": "08f6fb202213631428a65573dbc51193e08a51d3be1a7a546405b20c7806940c",
+      "result": "all18_once_corrected_fits_and72_overlap_comparisons_NOT_shared_clock_qualification"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_overlap_phase_v1/audit1/report.json",
+      "sha256": "3c1411edfb71f2429e3b6893750ca1285b530b86511e4aba809dc95d2b6366b3",
+      "result": "original_failure_precision_repair_all18_corrections_and72_overlap_comparisons_independently_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_overlap_phase_v1/review1/report.json",
+      "sha256": "a600711d4f63925b716eccdb5a61267b0ecd63ec551268ccd6eb3eab55b3f7ac",
+      "result": "known_precision_repair_and_persistent_real_overlap_disagreement_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "source_versions": {
+    "tools/observe_F2_overlap_phase_v1.py": {
+      "observe1": "d5f40b35dbc4722d12d78e7b09ef698051a27dd5f3c1a3861eb40d291458f4f5",
+      "observe2": "9d6b5f620f20bb6a2fcbb76b68703e03cfc438aeeba0c9f8b6c0dd40369bad6e"
+    },
+    "research/F2_overlap_phase_v1_plan.json": {
+      "observe1": "a05785be63b48c2d7589efb14bbe9f4eefaf85aa560dfae44220bf5bacd9b391",
+      "observe2": "a05785be63b48c2d7589efb14bbe9f4eefaf85aa560dfae44220bf5bacd9b391"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "observe2": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "observe2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "observe2": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "observe1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "observe2": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/chirp_limit_controls.py": {
+      "observe1": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+      "observe2": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "observe1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "observe2": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/correspondence.py": {
+      "observe1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+      "observe2": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a"
+    },
+    "tools/line_motion_v1/envelope_controls.py": {
+      "observe1": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+      "observe2": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93"
+    },
+    "tools/line_motion_v1/identity_controls.py": {
+      "observe1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+      "observe2": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "observe1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+      "observe2": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/line_motion_v1/local_envelopes.py": {
+      "observe1": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+      "observe2": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "observe2": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/overlap_phase.py": {
+      "observe1": "59ac06e8de0769c53198e8428be3e48cfe930d985201bfb6451bd602f772f128",
+      "observe2": "59ac06e8de0769c53198e8428be3e48cfe930d985201bfb6451bd602f772f128"
+    },
+    "tools/line_motion_v1/overlap_phase_controls.py": {
+      "observe1": "18d1c0ed7d84da618c428ee4b10a4ff49726981735ad4a89a1eff7d9e44c01d2",
+      "observe2": "18d1c0ed7d84da618c428ee4b10a4ff49726981735ad4a89a1eff7d9e44c01d2"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "observe1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+      "observe2": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "observe1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "observe2": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/line_motion_v1/rate_coordinate_controls.py": {
+      "observe1": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+      "observe2": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2"
+    },
+    "tools/line_motion_v1/rate_coordinates.py": {
+      "observe1": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a",
+      "observe2": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a"
+    },
+    "tools/line_motion_v1/sideband_controls.py": {
+      "observe1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+      "observe2": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc"
+    },
+    "tools/line_motion_v1/sideband_subspace_controls.py": {
+      "observe1": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+      "observe2": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750"
+    },
+    "tools/line_motion_v1/sideband_subspaces.py": {
+      "observe1": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+      "observe2": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64"
+    },
+    "tools/line_motion_v1/sidebands.py": {
+      "observe1": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+      "observe2": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e"
+    },
+    "research/F2_local_precision_v1_plan.json": {
+      "observe2": "eac5c6176013ced515ae071029bf90a4ac08b963ca8ccf083811687dffe4571b"
+    },
+    "tools/line_motion_v1/local_precision.py": {
+      "observe2": "61915d4c7f2a7b1e6147253e486ea9ce850c0e7ea3dafc26b40e3f0b99c8154f"
+    },
+    "tools/line_motion_v1/local_precision_controls.py": {
+      "observe2": "7a4f2d5770e6bcc4c339aa53956cc61ae5d525929479bb5c231d48c7b3ec20b2",
+      "audit1": "7a4f2d5770e6bcc4c339aa53956cc61ae5d525929479bb5c231d48c7b3ec20b2"
+    },
+    "tools/audit_F2_overlap_phase_v1.py": {
+      "audit1": "3a93cf27bbd83abdb1c831673c4a452286c331b4ac5f0cac8fe370f5849a4b7b"
+    },
+    "tools/publish_F2_overlap_phase_v1.py": {
+      "review1": "8ce70ddbef1e4bfb39e55285446e61b1f611dd9350a454f61abd05729768db0b"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_rate_coordinates_v1": {
+      "path": "baselines/F2_rate_coordinates_v1/manifest.json",
+      "sha256": "b2591b7556fc3a9474de24e17f9b9a1344dcf869be266e98683ec3efeea1c4cc"
+    },
+    "F2_sideband_v1": {
+      "path": "baselines/F2_sideband_v1/manifest.json",
+      "sha256": "2ff72b26f07167a9f8a40ba225f2fda7aeee187f023e612fbb2479385d4ce8f1"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "ba913064f48b6cfdea4bb9019ab34fd0a903194d8fd2da79b92d3a54679a6f95",
+  "counts": {
+    "local_corrections": 18,
+    "accepted_corrections": 18,
+    "remaining_bound_components": 16,
+    "main_bound_components": 0,
+    "overlap_comparisons": 72,
+    "overlap_sample_pairs": 1728000
+  },
+  "audit_errors": {
+    "model": 8.326672684688674e-17,
+    "jacobian": 5.551115123125783e-17,
+    "linear_cost": 1.0842021724855044e-19,
+    "linear_optimality": 7.471360200527508e-19,
+    "nonlinear_cost": 1.0842021724855044e-19,
+    "raw_gradient": 2.9458548590973485e-19,
+    "overlap_wave": 1.0176021807982486e-14,
+    "overlap_metric": 3.4363484280319767e-13
+  },
+  "original_failed_before_real_read": true,
+  "exact_failed_fixture_retained": true,
+  "invalid_no_bound_expectation_replaced_by_known_inclusive_endpoint_flags": true,
+  "original_phase_waveform_frequency_gates_unchanged": true,
+  "truth_used_as_fit_initialization": false,
+  "known_original_waveform_errors": [
+    2.2165281389536772e-10,
+    9.162401823713676e-06
+  ],
+  "known_corrected_waveform_errors": [
+    3.28005475126803e-14,
+    2.385404190903522e-11
+  ],
+  "known_corrected_phase_RMS_cycles": [
+    2.8169191786532115e-15,
+    5.002279374501262e-15,
+    9.77089444167859e-15,
+    1.9933390866957925e-13
+  ],
+  "known_gradient_diagnosis": [
+    {
+      "raw_gradient_infinity": 2.828976956315585e-12,
+      "distance_scaled_optimality": 1.098380324130827e-12,
+      "original_optimality": 1.098380324130827e-12,
+      "expected_true_frequency_Hz": [
+        74.9,
+        112.35,
+        187.25,
+        82.35
+      ],
+      "expected_bound_flags": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "raw_gradient_infinity": 5.917065679307887e-07,
+      "distance_scaled_optimality": 9.535191086159072e-12,
+      "original_optimality": 9.53519108615902e-12,
+      "expected_true_frequency_Hz": [
+        75.5,
+        113.25,
+        188.75,
+        82.25
+      ],
+      "expected_bound_flags": [
+        true,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "actual_cost_reduction_percent_range": [
+    5.440092820663267e-13,
+    3.266165116144748e-10
+  ],
+  "overlap_ranges": {
+    "old": {
+      "wrapped_phase_rms_cycles": [
+        0.02331529275565946,
+        0.12813905025641212
+      ],
+      "frequency_difference_max_Hz": [
+        0.33396873405260075,
+        2.2255105447782513
+      ],
+      "continuous_phase_max_cycles": [
+        0.06507384759566008,
+        0.32583586843635315
+      ]
+    },
+    "new": {
+      "wrapped_phase_rms_cycles": [
+        0.023315310926325716,
+        0.1281390502617599
+      ],
+      "frequency_difference_max_Hz": [
+        0.33396873428209023,
+        2.2255114845493726
+      ],
+      "continuous_phase_max_cycles": [
+        0.06507384766115441,
+        0.3258358684507816
+      ]
+    }
+  },
+  "maximum_phase_RMS_change_cycles": 5.806435281197064e-08,
+  "phase_alignment_applied": false,
+  "independent_heldout_validation": false,
+  "physical_line_identity_verified": false,
+  "real_phase_accuracy_verified": false,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figures_visually_checked": true,
+  "all_executed_failed_and_repaired_sources_retained": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "high_frequency_recovered": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_rate_bound_diagnosis_all18fits_plus72subspaces_audited_frozen_and_pushed",
+  "current_goal_turn": "progress_exact_control_failure_diagnosed_repaired_all18_corrections_and72_overlap_comparisons_independently_audited",
+  "next_step": "Known common nonquadratic trajectory versus independent-neighbor interference controls before fixed real main-line variation consistency observations; do not force a shared clock, add phase degree or sweep. Originalfailed36/all17/full33/individual14k/originalE remain before real shared-phase DNA.",
+  "limits": [
+    "A cost-accepted single linear correction is not a global local-fit convergence certificate",
+    "Persistent real overlap disagreement is diagnostic, not quantified true phase error or physical source identity",
+    "Shared samples are not independent heldouts; no new DNA, high-frequency recovery, RPM or timbre acceptance",
+    "Shared overlap samples are not independent heldout validation",
+    "Same designated main slots are not proven physical source identities",
+    "Agreement is local-model consistency only; disagreement can arise from nonquadratic phase, interference or fit errors",
+    "No phase rotation, offset removal, forced gap or model synthesis was applied"
+  ]
+}
