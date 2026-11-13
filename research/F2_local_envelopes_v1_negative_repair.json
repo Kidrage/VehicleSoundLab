@@ -1,0 +1,9 @@
+{
+  "schema":"vsl.F2-local-envelopes-negative-repair/1",
+  "failed_attempt":"references/analysis/F2_local_envelopes_v1/observe1",
+  "diagnosis":"diagnosis1 replayed the exact saved fixture generator without fits or recording: first four known fixtures have expected observations; only the out-of-model sinusoidal AM fixture has low candidates45,38,42,48,34Hz",
+  "cause":"The original fixture implementation asserted exactly two low peaks even for the deliberately nonaffine six-tone negative example. AM sidebands break that assumed inventory",
+  "repair":"Keep the negative example and every observed candidate, mark inventory unresolved and do not force an assignment or run its six-component fit. Known affine fixtures and all their gates remain unchanged; no threshold, nominal frequency, envelope degree, bound, max evaluation or tolerance changed",
+  "limit":"No accuracy/residual claim is available for that negative fixture. Its nonunique peak inventory is itself retained evidence; it is not counted as a passing affine model control",
+  "provenance":"observe1 exact sources and failure preserved; observe2 uses only explicit unresolved-negative handling. Audit must replay the original failure and new report"
+}

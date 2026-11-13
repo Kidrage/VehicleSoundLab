@@ -1,0 +1,529 @@
+{
+  "schema": "vsl.F2-local-envelopes-final/1",
+  "result": "positive_affine_local_amplitude_candidate_frozen_NOT_adopted_as_idle_DNA",
+  "sources": {
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+    "AGENTS.md": "9ae985740bd53acae6c2165e9921b1a6da2da19dafba4f0b737130a5fbf95fe7",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "research/F2_local_envelopes_v1_negative_repair.json": "2d9492db8c80833c4a00d3911976e91b946c8fd6fa572acd09e4c5a3b9c90bcd",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "research/F2局部幅度包络V1.md": "078e1e9f736d09f2456d1e0f2121ac655c0bc21d486fb4fcd8808bd6f5d649ad",
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "tools/diagnose_F2_envelope_peaks_v1.py": "2c5cf97a7b06aef71efad14c6ed369e3391ab3ce21bca8a38df106eaa583f76f",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/observe_F2_local_envelopes_v1.py": "368dfb07f0b44a183d0a88f7ab403ea373fd3f9228fb222d1cee9d34ead65628",
+    "handoff/算法说明.md": "6fb0d63e052d06b72850c8764937aad74797444f47a1dc96191d21b5bbfa388a",
+    "handoff/研究续接.md": "e88fad9145d6ab77a63df0f3912aa6cb8979115bc216187700b7cec0fa12dc91",
+    "tools/line_motion_v1/local_envelopes.py": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+    "research/怠速与加速完成度V1.md": "6624d7271b6a1e43f33e92b5c56c2ef16589cb79ca23b7be81470847948add3d",
+    "tools/package_F2_local_envelopes_v1.py": "9cb7264f7e1e5438fa90d467ca31f90a6e5886fe907734014254e0afab19d8d0",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "handoff/开发留痕.md": "b11ad823de20752f7fcb0ccdbfd5053feef7415e949e3b3f0b2794eeff14728d",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "research/F2_local_envelopes_v1_plan.json": "c83356c3e6456ef2e147c4366a02738b47af81b6d53b9df212503a4bc8007098",
+    "tools/line_motion_v1/envelope_controls.py": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+    "tools/audit_F2_local_envelopes_v1.py": "d00b152179ca4861a8b24f986e4a535f8880be829afe8ec87cc396724895fa1e",
+    "tools/publish_F2_local_envelopes_v1.py": "de634616aa964a6b2e0ec464d2b06d69d571fb36e4491526546490a4c42a4862",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+  },
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/F2_local_envelopes_v1/observe1/report.json",
+      "sha256": "dad78afc1740476c5522171e91e24d49e8929bd5f5e3375fe011417dd5067fe7",
+      "result": "failed"
+    },
+    "diagnosis1": {
+      "path": "references/analysis/F2_local_envelopes_v1/diagnosis1/report.json",
+      "sha256": "9dc89ff4dcdc87bffc00cf8434dd39d31ec3050b4061d8b86d898810b291b1c5",
+      "result": "original_fixture_peak_count_failure_replayed_without_fit"
+    },
+    "observe2": {
+      "path": "references/analysis/F2_local_envelopes_v1/observe2/report.json",
+      "sha256": "f03a7dc9920510f07778830e5c5196ac147f44b42cda711b278a8c7d8566e069",
+      "result": "fixed9window_positive_affine_envelopes_observed_not_idle_DNA"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_local_envelopes_v1/audit1/report.json",
+      "sha256": "819f4936738234747a9a9f112fab12103fc4c4fc01c958bc8c9c20f32fe3723d",
+      "result": "all18_affine_envelope_local_fits_and_original_negative_failure_independently_audited"
+    },
+    "audit2": {
+      "path": "references/analysis/F2_local_envelopes_v1/audit2/report.json",
+      "sha256": "9a9687e55eb353a9d2855d2afc94e54c2ba320af182482488c6c6a675dde7362",
+      "result": "all18_affine_envelope_local_fits_and_original_negative_failure_independently_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_local_envelopes_v1/review1/report.json",
+      "sha256": "f7d173aca0ed775dd7545da281af4e4de25fc66274cddf13b2caaa8573c556fa",
+      "result": "known_envelopes_and_all9real_limitations_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "source_versions": {
+    "tools/observe_F2_local_envelopes_v1.py": {
+      "observe1": "368dfb07f0b44a183d0a88f7ab403ea373fd3f9228fb222d1cee9d34ead65628",
+      "observe2": "368dfb07f0b44a183d0a88f7ab403ea373fd3f9228fb222d1cee9d34ead65628"
+    },
+    "research/F2_local_envelopes_v1_plan.json": {
+      "observe1": "c83356c3e6456ef2e147c4366a02738b47af81b6d53b9df212503a4bc8007098",
+      "observe2": "c83356c3e6456ef2e147c4366a02738b47af81b6d53b9df212503a4bc8007098"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "observe2": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "diagnosis1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "observe2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "observe2": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "observe1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "observe2": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "observe1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "observe2": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/correspondence.py": {
+      "observe1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+      "observe2": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a"
+    },
+    "tools/line_motion_v1/envelope_controls.py": {
+      "observe1": "797f7b4f9fcf27306adb9bcea6188a9ceab119225cebcd2c313386d746deb6d3",
+      "observe2": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+      "audit1": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+      "audit2": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93"
+    },
+    "tools/line_motion_v1/identity_controls.py": {
+      "observe1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+      "observe2": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "observe1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+      "observe2": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/line_motion_v1/local_envelopes.py": {
+      "observe1": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+      "observe2": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "observe2": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "observe1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+      "observe2": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "observe1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "observe2": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/diagnose_F2_envelope_peaks_v1.py": {
+      "diagnosis1": "2c5cf97a7b06aef71efad14c6ed369e3391ab3ce21bca8a38df106eaa583f76f"
+    },
+    "tools/audit_F2_local_envelopes_v1.py": {
+      "audit1": "9cfd5ce06b721e8882583d10c059bd9351468e72d0aecfba8b43adcac78645fd",
+      "audit2": "d00b152179ca4861a8b24f986e4a535f8880be829afe8ec87cc396724895fa1e"
+    },
+    "tools/publish_F2_local_envelopes_v1.py": {
+      "review1": "de634616aa964a6b2e0ec464d2b06d69d571fb36e4491526546490a4c42a4862"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_peak_identity_v1": {
+      "path": "baselines/F2_peak_identity_v1/manifest.json",
+      "sha256": "b1e18c53ce62ffad109522eb5eac4fda0ac591532c57df1948ab8184cbccf560"
+    },
+    "state_media_v1": {
+      "path": "baselines/state_media_v1/manifest.json",
+      "sha256": "ce8aa1771e4efbefd1cebaa58936b13049c3cadb725069c01909556c0d0d55a3"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "b9697b9ca86e5a0124392ed73134e4007f3d3d588f8b3e282b65d74314f0a9a0",
+  "counts": {
+    "real_channel_fits": 18,
+    "old_main_fq_rows": 5,
+    "new_main_fq_rows": 4,
+    "new_main_fq_and_slope_rows": 4,
+    "new_fq_bound_components": 30,
+    "new_slope_bound_components": 2,
+    "converged_channel_fits": 16,
+    "evaluation_limit_channel_fits": 2,
+    "new_raw_main_fq_rows": 5
+  },
+  "audit_errors": {
+    "waveform": 8.326672684688674e-17,
+    "jacobian": 1.1102230246251565e-16,
+    "finite_difference": 1.962537729549574e-09,
+    "cost": 2.168404344971009e-19,
+    "optimality": 5.709087884482537e-19,
+    "initial": 9.71445146547012e-17
+  },
+  "comparisons": [
+    {
+      "source_seconds": [
+        6.0,
+        7.0
+      ],
+      "old_main_fit_eligible": false,
+      "new_main_fit_eligible": false,
+      "new_main_fit_and_slope_eligible": false,
+      "new_main_raw_fq_inside": false,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.20425415850469086,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        6.5,
+        7.5
+      ],
+      "old_main_fit_eligible": false,
+      "new_main_fit_eligible": false,
+      "new_main_fit_and_slope_eligible": false,
+      "new_main_raw_fq_inside": false,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.09563263471898953,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        7.0,
+        8.0
+      ],
+      "old_main_fit_eligible": true,
+      "new_main_fit_eligible": false,
+      "new_main_fit_and_slope_eligible": false,
+      "new_main_raw_fq_inside": true,
+      "new_channel_success": [
+        false,
+        false
+      ],
+      "left_cost_reduction_percent": 0.37785709594450045,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        8.0,
+        9.0
+      ],
+      "old_main_fit_eligible": false,
+      "new_main_fit_eligible": false,
+      "new_main_fit_and_slope_eligible": false,
+      "new_main_raw_fq_inside": false,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.14877080229098727,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        8.5,
+        9.5
+      ],
+      "old_main_fit_eligible": true,
+      "new_main_fit_eligible": true,
+      "new_main_fit_and_slope_eligible": true,
+      "new_main_raw_fq_inside": true,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.3694258429426167,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        9.0,
+        10.0
+      ],
+      "old_main_fit_eligible": true,
+      "new_main_fit_eligible": true,
+      "new_main_fit_and_slope_eligible": true,
+      "new_main_raw_fq_inside": true,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.04364891038601826,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        10.0,
+        11.0
+      ],
+      "old_main_fit_eligible": true,
+      "new_main_fit_eligible": true,
+      "new_main_fit_and_slope_eligible": true,
+      "new_main_raw_fq_inside": true,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.1116358459073874,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        10.5,
+        11.5
+      ],
+      "old_main_fit_eligible": true,
+      "new_main_fit_eligible": true,
+      "new_main_fit_and_slope_eligible": true,
+      "new_main_raw_fq_inside": true,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.23819860122117342,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    },
+    {
+      "source_seconds": [
+        11.0,
+        12.0
+      ],
+      "old_main_fit_eligible": false,
+      "new_main_fit_eligible": false,
+      "new_main_fit_and_slope_eligible": false,
+      "new_main_raw_fq_inside": false,
+      "new_channel_success": [
+        true,
+        true
+      ],
+      "left_cost_reduction_percent": 0.19618584804355077,
+      "slope_bounds": [
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    }
+  ],
+  "cost_reduction_percent_range": [
+    0.04364891038601826,
+    0.37785709594450045
+  ],
+  "known_cases": [
+    {
+      "id": "six_constant",
+      "gate_applied": true,
+      "passed": true
+    },
+    {
+      "id": "six_affine",
+      "gate_applied": true,
+      "passed": true
+    },
+    {
+      "id": "single_affine",
+      "gate_applied": true,
+      "passed": true
+    },
+    {
+      "id": "neighbor_pair_affine",
+      "gate_applied": true,
+      "passed": true
+    },
+    {
+      "id": "six_sinusoidal_out_of_model",
+      "gate_applied": false,
+      "passed": null
+    }
+  ],
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figure_visually_checked": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "candidate_adopted": false,
+  "actual_fits_resolved_again": false,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_allpeak_correspondence_and_omitted37_counterfactual_audited_frozen_pushed",
+  "current_goal_turn": "progress_known_affine_amplitude_hypothesis_controls_failure_replay_and_all18real_comparisons_independent_audit_show_no_resolution",
+  "next_step": "Qualify complex residual/sideband observations on known AM/FM and independent-neighbor examples before recording interpretation. Do not raise envelope degree/bounds/budget. Originalfailed36/all17/full33/individual14k/originalE remain before real shared-phase DNA.",
+  "limits": [
+    "Positive affine amplitudes do not cover arbitrary AM or missing nearby components",
+    "Out-of-model sinusoidal AM candidate inventory is unresolved; no six-line fit was forced or accepted",
+    "Additional local amplitude parameters can lower training error without identifying real frequency or shared phase",
+    "Fit eligibility includes numerical success: at7..8s raw bounds are inside but max60 evaluations are exhausted in both channels",
+    "Main-frequency bounds and amplitude bounds are separate; neither alone establishes model adequacy or naturalness",
+    "Same local component inventories compare constant versus affine amplitudes, not full source recovery",
+    "One slope bounded to +/-1/s preserves positivity; saturation and unresolved frequencies remain explicit",
+    "Independent local phases do not establish an engine clock or physical speed/load",
+    "Training loss decreases and within-bound flags cannot certify recording completeness or timbre"
+  ]
+}
