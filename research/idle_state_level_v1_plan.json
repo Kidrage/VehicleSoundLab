@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.idle-state-level-plan/1",
+  "motivation": "The first integration render1 passes all contracts but shows a clear RMS drop at full candidate weight. Correct a monitoring-level mismatch before presenting a transition preview",
+  "input": "Frozen render1, same149921seed and8s existing controller trajectory; source timbre profiles remain unchanged",
+  "fit": "First maximal contiguous interval with candidate weight exactly1; use every stereo sample in that complete interval. Fixed source trim=sqrt(mean(disabled_mix^2)/mean(enabled_mix^2))",
+  "check": "Report the unfit second maximal full-weight idle interval; no gain/window/seed search and no adaptive or per-state RMS normalization",
+  "implementation": "Separate generic level_gain0..8 in modal_layer profile. Raw modal/detail/mix stay unchanged. One study configuration header owns80ms transition and the computed fixed trim; no engine-specific value in generic DSP",
+  "limits": "Engineering monitoring trim between F2 LP610 and A Performante contexts, not actual SPL, calibrated RPM/load, physical vehicle identity, new sound acceptance or full driving coverage"
+}

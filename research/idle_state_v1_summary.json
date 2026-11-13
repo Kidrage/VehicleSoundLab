@@ -1,0 +1,106 @@
+{
+  "schema": "vsl.idle-state-freeze/1",
+  "result": "optional_fixed_idle_state_integration_verified_timbre_pending",
+  "parent_commit": "7315015942efdab2c3fa01a3ea9f94dd07a4c89e",
+  "parent_freeze": "baselines/accel_material_v1",
+  "parent_manifest_sha256": "50f52bd9ac0fa9dfe29a147768e8cd967b433f0e78785289c80b7115c3c774f8",
+  "C_H": {
+    "total": 562,
+    "unchanged": 547,
+    "modified": [
+      "modules/atlas_drive/render.c",
+      "modules/atlas_drive/render.h",
+      "modules/atlas_take/assets.c"
+    ],
+    "added": [
+      "experiments/idle_state_v1/checks.c",
+      "experiments/idle_state_v1/kernel_checks.c",
+      "experiments/idle_state_v1/probe.c",
+      "experiments/idle_state_v1/source.c",
+      "experiments/idle_state_v1/source.h",
+      "experiments/idle_state_v1/study.h",
+      "modules/atlas_drive/source.c",
+      "modules/atlas_drive/source.h",
+      "modules/modal_layer/profile.c",
+      "modules/modal_layer/profile.h",
+      "modules/modal_layer/voice.c",
+      "modules/modal_layer/voice.h"
+    ]
+  },
+  "voices_unchanged": 67,
+  "F2_assets_unchanged": {
+    "experiments/modal_idle_v1/F2_fixed_idle.msource": "6b0a0cf10b808eb7904dd4158fd82e128f272075de3f07a5e1b1e35f24bd13c1",
+    "experiments/modal_idle_v1/F2_fixed_idle.rdetail": "ad7f44c2f7087cf549f726e61b9009f0fe980a3ff2e1121b322844511f599ef5"
+  },
+  "CTest_count": 57,
+  "legacy_WAV_byte_exact": 84,
+  "legacy_controller_CSV_byte_exact": 3,
+  "entire_controller_and_envelope_trace_exact": true,
+  "ramp_maximum_error": 5.062616992290714e-14,
+  "added_maximum_FS_error": 2.759527689688568e-08,
+  "level_gain": 2.991413566932603,
+  "fixed_level_fit_and_unfit_check": [
+    {
+      "use": "trim_fit",
+      "frames": [
+        48479,
+        96480
+      ],
+      "seconds": [
+        1.0099791666666667,
+        2.01
+      ],
+      "candidate_RMS": 0.0069990709240274045,
+      "original_RMS": 0.02093711571805909,
+      "old_difference_db": -9.517529179519741,
+      "after_fixed_trim_db": 0.0
+    },
+    {
+      "use": "unfit_monitoring_check",
+      "frames": [
+        212159,
+        288000
+      ],
+      "seconds": [
+        4.419979166666667,
+        6.0
+      ],
+      "candidate_RMS": 0.007044544490757106,
+      "original_RMS": 0.019592306418934217,
+      "old_difference_db": -8.884652962260063,
+      "after_fixed_trim_db": 0.6328762172596786
+    }
+  ],
+  "original_failed_builds_preview_and_container_check_retained": true,
+  "browser_controls_and_muted_playback": true,
+  "browser_layout_visually_reviewed": true,
+  "review_mix_containers_and_all_audio_samples_unchanged": true,
+  "solo_container_difference": "PEAK timestamp only; fmt/data/all other chunks exact",
+  "source_timbre_refitted": false,
+  "timbre_acceptance": false,
+  "original_F2_timbre_question": "pending",
+  "native_UI_or_default_changed": false,
+  "schema8_supports_processor": false,
+  "physical_7_1_4_or_native_device_verified": false,
+  "actual_F2_RPM_calibrated": false,
+  "contexts": "F2 LP610 tailpipe vs A Performante; engineering crossfade, not same-car reconstruction",
+  "reports": {
+    "kernel1": "4878ed1cf6738814289416c1d9a0a31e834db642d6c7b6f2bff44f0490ad48b5",
+    "kernel2": "0f7a48e79b105a8ba7562aab90e17a6ba6acbbb300cdb39dd079e5e0f6b07e8d",
+    "kernel3": "57b374303e6912803dc16069dd9a34bc9173cb50e9592e546f469742b2b8c823",
+    "full1": "9640af36b679e18bbebca3b1a0905aab6061a6bd2bbf6c3db772183e114cd8ee",
+    "render1": "aeb0574eaee0c8d302ec75e58fb778b5e5342717a95ba19435187a4eeb175b4a",
+    "level1": "acac23b7ccc196c612a2feea3d64956199fec2a509d907a5264894d993d0f5e1",
+    "full2": "4cb5fe597509d874eea0ffcef5f450d16ac0dd55eda2a3b5dec4d5a42673839e",
+    "render2": "51c85ed2c8b00aaeefe27c322048cccf2240972be1b88204c548adbbcbcd2d59",
+    "review1": "9afa1602e0b6bf9ee44e8894d8b8246e5fcabe71332b07039daf5fba90345080",
+    "review2": "1355c70fdee52ff16cab4b0e1dc206f8bb91dc72ea4dfd4a2b7d79f781ce7ad3",
+    "preview_check1": "06a11c9d4460631b7fbc694c98893b38df3c6cb2baa6c3f5e653340e95b5310f",
+    "preview_check2": "85544b1ec13c1eb942cd1c602f87f4bcfc75644763f88601609dd06b84ecda2b",
+    "package1": "df1a4bcf91a7fa6cf0a11982b6a3d9bb2e3e442fd85540551983db414501d7a2"
+  },
+  "freeze": "baselines/idle_state_v1",
+  "manifest_sha256": "c17fe3154ba29020b4804bfdb9bb67ff38121e3539cfb146a36ec8164bf0c8fa",
+  "file_count": 4040,
+  "bytes": 380526672
+}

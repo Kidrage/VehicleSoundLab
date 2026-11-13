@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.idle-state-study-plan/1",
+  "purpose": "Opt-in pre-spatial integration study of the frozen fixed-F2 modal candidate; pending timbre feedback, not default voice promotion",
+  "controller": "Existing atlas_drive200Hz driver only; source receives read-only per-sample lifecycle/operating state and existing envelope",
+  "source": "Unchanged F2 fixed idle.msource/.rdetail, ratio1, raw modal/detail gain1; separate fixed monitoring trim from declared follow-up, no inferred F2 RPM clock or retuning",
+  "level_followup": "research/idle_state_level_v1_plan.json; initial unity-trim render1 retained, final fixed trim2.9914135669326032 fitted on its first complete full-weight idle hold",
+  "gate": "enabled AND lifecycle RUNNING AND operating IDLE; outside state both generators still advance and the source returns over3840samples",
+  "transition": "80ms finite position ramp with cubic smoothstep weights; complementary old/new coefficients, fixed common master, no equal-power or per-state loudness normalization",
+  "placement": "Recording-source stems before the one original scene render; events/startup/catch/aux remain separate. Stereo observations remain a bed or explicit mono projection, never cylinder banks",
+  "tests": [
+    "Known two unrelated modal/resonator profiles, sustained parity against independent direct-cosine and original Rdt implementation",
+    "Exact endpoints, repeated gate, mid-ramp reversal, invalid-call transaction and zero-gate advance",
+    "Null/disabled processor byte-identical output and source/controller states to frozen baseline; finite callback boundary and transactional unsupported schema8 take rejection",
+    "Actual startup/idle/free-rev/return/off controller schedule, arbitrary block boundaries, repeated reproducible source state and per-frame telemetry",
+    "Stereo and12channel direct-front contracts, source/controller invariance, no second controller or spatial pass",
+    "Full existing handoff regression suite after shared renderer changes, with old executables and baselines preserved"
+  ],
+  "limits": "F2 LP610 tailpipe and moving35 A Performante are different contexts. Crossfade is engineering plumbing, not a verified single-car acceleration reconstruction. Schema8 does not serialize opaque processor state and must reject the experimental option. No UI/default/native-device or sound acceptance claimed. Shared-phase extractor qualification remains unchanged."
+}

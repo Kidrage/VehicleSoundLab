@@ -11,6 +11,7 @@
 #include "catch_bloom/voice.h"
 #include "drive_resonance/voice.h"
 #include "drive_recipe/voice.h"
+#include "source.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -27,6 +28,7 @@ typedef struct {
     const CbProfile *catch_profile; /* Optional observation colour, no physical-source claim. */
     const DrsBank *resonant_bank; /* Optional local continuous detail; missing anchors stay silent. */
     const DrcBank *recipe_bank; /* Optional coupled DNA withdrawal + independent coherent LF. */
+    const AdSourceProcessor *source_processor; /* Optional exclusive pre-spatial source adapter. */
 } AdConfig;
 
 typedef struct {
@@ -64,6 +66,7 @@ typedef struct {
     float *catch_bloom; /* Coherent CATCH delta L/R before width/master. */
     float *resonant_raw,*resonant; /* Local detail before/after amount and driving envelope. */
     float *coherent_low_raw,*coherent_low; /* Independent calibrated LF, not complementary body tap. */
+    float *source_added; /* Optional processor's added stereo stem, before width/master. */
 } AdCapture;
 typedef struct {
     SaVoice dna;

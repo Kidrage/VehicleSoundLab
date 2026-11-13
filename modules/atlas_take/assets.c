@@ -11,7 +11,7 @@ void at_assets_bind(AtAssets *a,int residual) {
 int at_assets_valid(const AtAssets *a) {
     SaBank *check;const SdProfile *models[SA_MAX_ANCHORS];
     unsigned i,h,c;int ok=0;
-    if(!a||!a->bank.count||a->bank.count>SA_MAX_ANCHORS||a->config.bank!=&a->bank||
+    if(!a||a->config.source_processor||!a->bank.count||a->bank.count>SA_MAX_ANCHORS||a->config.bank!=&a->bank||
         !a->config.seed||a->config.profile<0||a->config.profile>=VSL_PROFILE_COUNT||
         (a->config.channels!=2&&a->config.channels!=12)||!isfinite(a->config.root_per_rpm)||
         a->config.root_per_rpm<=0||a->config.root_per_rpm>.1||
@@ -46,7 +46,9 @@ done:free(check);return ok;
 }
 int at_assets_copy(AtAssets *to,const AdConfig *from) {
     unsigned i;
-    if(!to||!from||!from->bank||!from->bank->count||from->bank->count>SA_MAX_ANCHORS)return 0;
+    /* Opaque experimental source state is not represented by schema8. Reject
+       before mutation, rather than producing a take that replays another sound. */
+    if(!to||!from||from->source_processor||!from->bank||!from->bank->count||from->bank->count>SA_MAX_ANCHORS)return 0;
     memset(to,0,sizeof *to);to->config=*from;to->bank=*from->bank;
     for(i=0;i<from->bank->count;++i){if(!from->bank->profile[i])return 0;to->profile[i]=*from->bank->profile[i];}
     if(from->residual_bank)to->residual=*from->residual_bank;

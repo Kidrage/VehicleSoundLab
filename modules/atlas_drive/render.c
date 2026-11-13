@@ -16,7 +16,7 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     unsigned a;double aux[DA_LAYERS];
     if (!s||!e||!c||!c->bank||!c->bank->count||c->bank->count>SA_MAX_ANCHORS||!ad_control_valid(p,c->channels)||
         c->profile<0||c->profile>=VSL_PROFILE_COUNT||!isfinite(c->root_per_rpm)||
-        c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||
+        c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||!ad_source_valid(c->source_processor)||
         (!c->residual_bank&&p->mix.residual_gain>0)||(!c->startup_profile&&p->mix.startup_gain>0)||(!c->catch_profile&&p->mix.catch_gain>0)||
         (!c->resonant_bank&&p->mix.resonant_gain>0)||
         (!c->recipe_bank&&p->mix.coherent_low_gain>0)||
@@ -72,6 +72,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
     for (n=0;n<frames;++n) {
         double raw[2],body_raw[2],residual_raw[2]={0},residual[2]={0},event,spatial[VSL_MAX_CHANNELS],dry[2],aux[2];
         double observation[2],bed[VSL_MAX_CHANNELS]={0};
+        double added[2]={0};
         double starter[2]={0},starter_bed[VSL_MAX_CHANNELS]={0};
         double catch_delta[2]={0},catch_bed[VSL_MAX_CHANNELS]={0};
         DrsFrame resonance={0};double resonant[2]={0},sampled_phase;
@@ -131,6 +132,23 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             residual[c]*=s->envelope;
             resonant[c]=resonance.output[c]*s->envelope;
             coherent[c]=low.output[c]*s->low_envelope;
+        }
+        if(s->config.source_processor) {
+            AdSourceContext context={&e->drive,s->envelope,s->low_envelope,s->frame};
+            AdSourceFrame f={0};
+            for(c=0;c<2;++c) {
+                f.stereo[AD_SOURCE_DNA][c]=source.dna[c];f.stereo[AD_SOURCE_BODY][c]=source.low[c];
+                f.stereo[AD_SOURCE_RESIDUAL][c]=residual[c];f.stereo[AD_SOURCE_RESONANT][c]=resonant[c];
+                f.stereo[AD_SOURCE_COHERENT_LOW][c]=coherent[c];
+            }
+            if(!ad_source_apply(s->config.source_processor,&context,&f))return 0;
+            for(c=0;c<2;++c) {
+                source.dna[c]=f.stereo[AD_SOURCE_DNA][c];source.low[c]=f.stereo[AD_SOURCE_BODY][c];
+                residual[c]=f.stereo[AD_SOURCE_RESIDUAL][c];resonant[c]=f.stereo[AD_SOURCE_RESONANT][c];
+                coherent[c]=f.stereo[AD_SOURCE_COHERENT_LOW][c];added[c]=f.stereo[AD_SOURCE_ADDED][c];
+            }
+        }
+        for(c=0;c<2;++c) {
             /* Explicit bypass preserves former output at exactly zero amount. */
             dry[c]=(source.dna[c]+event)*s->gain;
             if(residual[c]!=0)dry[c]=(source.dna[c]+residual[c]+event)*s->gain;
@@ -140,9 +158,11 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if(catch_delta[c]!=0)dry[c]+=catch_delta[c]*s->gain;
             if(resonant[c]!=0)dry[c]+=resonant[c]*s->gain;
             if(coherent[c]!=0)dry[c]+=coherent[c]*s->gain;
+            if(added[c]!=0)dry[c]+=added[c]*s->gain;
             observation[c]=source.dna[c]+source.low[c]+residual[c];
             if(resonant[c]!=0)observation[c]+=resonant[c];
             if(coherent[c]!=0)observation[c]+=coherent[c];
+            if(added[c]!=0)observation[c]+=added[c];
         }
         memset(&objects,0,sizeof objects);memset(&residual_objects,0,sizeof residual_objects);
         if(s->config.scene_mode==AD_SCENE_OBJECTS) {
@@ -165,6 +185,11 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 VslObjectFrame detail_objects;separate.dna[0]=resonant[0];separate.dna[1]=resonant[1];
                 ds_route_frame(&separate,s->config.projection,s->config.route,&detail_objects);
                 for(c=0;c<VSL_OBJECTS;++c)if(detail_objects.sample[c]!=0)objects.sample[c]+=detail_objects.sample[c];
+            }
+            if(s->config.source_processor) {
+                VslObjectFrame added_objects;separate.dna[0]=added[0];separate.dna[1]=added[1];
+                ds_route_frame(&separate,s->config.projection,s->config.route,&added_objects);
+                for(c=0;c<VSL_OBJECTS;++c)if(added_objects.sample[c]!=0)objects.sample[c]+=added_objects.sample[c];
             }
         }
         objects.sample[VSL_EVENT]=event;
@@ -200,6 +225,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if (cap->resonant)cap->resonant[2*n+c]=(float)resonant[c];
             if (cap->coherent_low_raw)cap->coherent_low_raw[2*n+c]=(float)low.raw[c];
             if (cap->coherent_low)cap->coherent_low[2*n+c]=(float)coherent[c];
+            if (cap->source_added)cap->source_added[2*n+c]=(float)added[c];
         }
         if(cap->bed)for(c=0;c<s->config.channels;++c)cap->bed[n*s->config.channels+c]=(float)bed[c];
         if (cap->events) cap->events[n]=(float)event;
