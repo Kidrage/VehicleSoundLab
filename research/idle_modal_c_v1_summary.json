@@ -1,0 +1,47 @@
+{
+  "schema": "vsl.idle-modal-c-freeze/1",
+  "result": "isolated_fixed_idle_C_port_verified_pending_timbre",
+  "source_parent": "de30aaa1b2c2c2ee3e13d3d35d78062e2641990d",
+  "parent_manifest_sha256": "7cee67219c0e4a6a7968795a0ea91c9060afee0c678a25984a13888eb09c9ce4",
+  "original_C_H_unchanged": 540,
+  "new_C_H": 10,
+  "indexed_C_H": 550,
+  "original_voices_unchanged": 67,
+  "tests": 2,
+  "maximum_sample_FS_error": 1.4901161193847656e-08,
+  "phase_relations": [
+    {
+      "relation": "f3-f1-f2",
+      "difference_hz": -0.012098638578748933,
+      "phase_drift12s_cycles": -0.1451836629449872,
+      "meaning": "Algebraic candidate property, not measured mechanical order or common clock"
+    },
+    {
+      "relation": "f6-2*f3",
+      "difference_hz": 0.3544299208967914,
+      "phase_drift12s_cycles": 4.2531590507614965,
+      "meaning": "Algebraic candidate property, not measured mechanical order or common clock"
+    }
+  ],
+  "build_entry_command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "E:\\VehicleSoundLab-Git\\Build-Idle-Modal-Study.ps1"
+  ],
+  "build_entry_pass": true,
+  "verification_reports": {
+    "export1": "bc9693b91689012ebad0880dac0a4f1d814b5f0964c5632d1be1aae611735b79",
+    "verify1": "6c3425da71fdd9b87dddf65cf5c74854b3df65c2790442288806ad92af01ed87",
+    "verify2": "71f3eb926a3692880633b7846c2d31e0172363e12d2a715bf6d10c4efe8a8c86"
+  },
+  "native_driver_UI_take_spatial_changed": false,
+  "shared_engine_clock": false,
+  "listening_accepted": false,
+  "source_review": "http://127.0.0.1:8789/references/analysis/idle_modal_v1/review2/index.html",
+  "limitation": "Independent fixed-Hz modes may beat; neither sample parity nor60s numeric phase tests establish engine-synchronous or full-RPM accuracy.",
+  "freeze": "baselines/idle_modal_c_v1",
+  "manifest_sha256": "73b084fa1a1c278f96df9864634a18e4228df951a455f493899bf1c832cd68c9",
+  "file_count": 208,
+  "bytes": 102549291
+}
