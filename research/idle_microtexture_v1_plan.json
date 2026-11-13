@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.idle-microtexture-observation/1",
+  "purpose": "Check whether frozen fixed-idle spectral noise loses short-time concentration or cross-band energy relations. Observation only, no assumed physical combustion or new excitation recipe.",
+  "sample_rate": 48000,
+  "training": "Approved F2 native6..9s, frozen fixed_source_profiles_v1/trial1/F2_tailpipe/training.wav",
+  "check": "F2 same recording9..12s, previously inspected, not pristine or independent",
+  "bands_hz": [[120,400],[400,1200],[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "filter": "scipy Butterworth order4 bandpass SOS, forward causal, discard4800samples from both ends. Identical processing for source and all candidates; no output audio exported",
+  "trim_frames": 4800,
+  "energy_windows_frames": [480,1920],
+  "comparison_frames": 144000,
+  "seeds": [149921,277139,381611],
+  "residual": "Global native least-squares cos/sin/DC subtraction at frozen13frequencies, fit each observed clip independently. This is a diagnostic fixed-modal remainder, NOT separated friction or combustion. Frequency motion and modulation can remain.",
+  "surrogates": "Three full-clip random Fourier phase diagnostics preserve each source's bin magnitudes and L/R relative phase. They are not source profiles, generated engine candidates, or added media. Retain all three, not a selected seed.",
+  "features": "Centered skew/excess kurtosis and crest, nonoverlap10/40ms band-energy CV, maximum-to-mean energy and cross-band Pearson correlation; report finite source and all candidate values, no universal realism thresholds",
+  "controls": "Symmetric binary and sine analytic moments; scale invariance; independent math.fsum moments/energy/correlation; unchanged original WAV hashes and native sample lengths",
+  "runtime_changed": false,
+  "new_download": false,
+  "listening_question": "Existing modal_texture_v1 question remains pending; do not duplicate it"
+}

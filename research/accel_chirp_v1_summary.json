@@ -1,0 +1,115 @@
+{
+  "schema": "vsl.accel-chirp-freeze/1",
+  "result": "native_independent_chirps_checked_fixed_amplitudes_insufficient",
+  "parent_commit": "37d62c9d9f38cfeb28f2a38c427a10d4572c8f18",
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "tiles": 12,
+      "successful": 10,
+      "local_lines": 249,
+      "locally_eligible": 121,
+      "compared": 8,
+      "diagnostic_targets_met": 3
+    },
+    {
+      "segment": "F3_fifth2",
+      "tiles": 12,
+      "successful": 11,
+      "local_lines": 215,
+      "locally_eligible": 109,
+      "compared": 8,
+      "diagnostic_targets_met": 4
+    },
+    {
+      "segment": "F3_sixth",
+      "tiles": 24,
+      "successful": 20,
+      "local_lines": 537,
+      "locally_eligible": 218,
+      "compared": 13,
+      "diagnostic_targets_met": 8
+    }
+  ],
+  "summaries": [
+    {
+      "segment": "F3_fifth1",
+      "compared_lines": 8,
+      "frequency_error_range_hz": [
+        0.8059053275745782,
+        3.7296631134408926
+      ],
+      "median_amplitude_error_range_db": [
+        1.5258474598082508,
+        6.051731263266201
+      ],
+      "frequency_target_met": 8,
+      "amplitude_target_met": 3,
+      "both_targets_met": 3,
+      "optimizer_failed_tiles": [
+        7,
+        10
+      ],
+      "bound_contact_lines": 23
+    },
+    {
+      "segment": "F3_fifth2",
+      "compared_lines": 8,
+      "frequency_error_range_hz": [
+        0.9200593558771288,
+        3.1450636111087533
+      ],
+      "median_amplitude_error_range_db": [
+        1.8885837479639471,
+        7.383166828658469
+      ],
+      "frequency_target_met": 8,
+      "amplitude_target_met": 4,
+      "both_targets_met": 4,
+      "optimizer_failed_tiles": [
+        0
+      ],
+      "bound_contact_lines": 24
+    },
+    {
+      "segment": "F3_sixth",
+      "compared_lines": 13,
+      "frequency_error_range_hz": [
+        0.9063275955732593,
+        5.624222588785642
+      ],
+      "median_amplitude_error_range_db": [
+        1.2775190526927052,
+        5.305271366803367
+      ],
+      "frequency_target_met": 12,
+      "amplitude_target_met": 9,
+      "both_targets_met": 8,
+      "optimizer_failed_tiles": [
+        8,
+        15,
+        19,
+        23
+      ],
+      "bound_contact_lines": 44
+    }
+  ],
+  "audit_windows": 54,
+  "audit_lines": 1105,
+  "conditional_predictions": 148,
+  "waveform_error": 1.6919798895287386e-13,
+  "support_error": 1.2598810883446276e-12,
+  "known_nonlinear_FM_eligibility_limitation": true,
+  "earlier_null_ratio_and_grouping_audit_failures_preserved": true,
+  "source_or_common_phase_or_RPM_identity": false,
+  "pristine_holdout": false,
+  "profile_or_audio_exported": false,
+  "C_H_unchanged": 600,
+  "voices_unchanged": 67,
+  "old61CTest_repeated": false,
+  "plot_visually_reviewed": true,
+  "next": "Model observed amplitude/state changes and omitted LF/HF structure before an acceleration recipe; idle quality is current human priority.",
+  "manifest_sha256": "2c865dc6da741706a5484186c58ee290128fd029694898d0d9277cb631da68ae",
+  "file_count": 112,
+  "bytes": 31736487
+}

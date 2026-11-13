@@ -1,0 +1,125 @@
+{
+  "schema": "vsl.idle-microtexture-freeze/1",
+  "result": "audible_fast_detail_candidates_pending_listening",
+  "parent_commit": "37d62c9d9f38cfeb28f2a38c427a10d4572c8f18",
+  "observations": 17,
+  "renders": 9,
+  "all_seeds_retained": true,
+  "independent_FLOAT_error": 1.4900763511960236e-08,
+  "independent_state_error": 1.1102230246251565e-16,
+  "zero_FLOAT_exact": true,
+  "training_only": true,
+  "data_covariance_positive_without_projection": true,
+  "evidence": {
+    "source_covariance": [
+      [
+        0.04789851298313393,
+        0.01843347079067038,
+        0.00693582783906118,
+        0.002706263515989109
+      ],
+      [
+        0.01843347079067038,
+        0.06417826017548471,
+        0.020157615963401737,
+        0.012584511725423542
+      ],
+      [
+        0.00693582783906118,
+        0.020157615963401737,
+        0.021225312271324865,
+        0.007878430824055623
+      ],
+      [
+        0.002706263515989109,
+        0.012584511725423542,
+        0.007878430824055623,
+        0.015212843121679634
+      ]
+    ],
+    "phase_control_covariance": [
+      [
+        0.0301806218336055,
+        0.0005613716850258025,
+        -0.00020187934142647926,
+        -0.0004864963899991945
+      ],
+      [
+        0.0005613716850258025,
+        0.018044993299398956,
+        0.001556930988837706,
+        -0.00030917318690287305
+      ],
+      [
+        -0.00020187934142647926,
+        0.001556930988837706,
+        0.006368896614308132,
+        0.0004373950618169673
+      ],
+      [
+        -0.0004864963899991945,
+        -0.00030917318690287305,
+        0.0004373950618169673,
+        0.004035545154941369
+      ]
+    ],
+    "excess_lag1": [
+      [
+        0.005487141304633169,
+        -0.0031819837002887872,
+        -0.003202837643369292,
+        -0.004477340508592832
+      ],
+      [
+        -0.004206097938160743,
+        -0.001460495274639582,
+        -0.00609895146928635,
+        -0.005764330766782576
+      ],
+      [
+        -0.0019642202730592215,
+        -0.0026508318590331478,
+        -6.007164106554687e-05,
+        -0.00266824773219146
+      ],
+      [
+        -0.0005148153160044734,
+        -0.0005086350627775262,
+        0.0007843626418553684,
+        0.002150785813475692
+      ]
+    ],
+    "excess_eigenvalues": [
+      0.004955883174114921,
+      0.0061609101624421365,
+      0.011821087521412674,
+      0.06694699079139946
+    ],
+    "raw_alpha": 0.06805772862720291,
+    "windows": 280,
+    "log_amplitude_std": [
+      0.1331085690311801,
+      0.2147865612092287,
+      0.12188689698657823,
+      0.1057227410103345
+    ],
+    "physical_modulation_identified": false
+  },
+  "source_modulation_is_proxy": true,
+  "profile_has_no_source_trajectory": true,
+  "room": false,
+  "short_time_concentration_partly_recovered_not_matched": true,
+  "timbre_acceptance": false,
+  "runtime_changed": false,
+  "C_H_unchanged": 600,
+  "voices_unchanged": 67,
+  "old61CTest_repeated": false,
+  "both_browser_attempts_preserved": true,
+  "browser_muted": true,
+  "screenshots_and_plot_viewed": true,
+  "original_idle_question_repeated": false,
+  "next": "Listen to existing baseline/50/100 contrast for grain versus sand/tremor before C adoption; finite10ms proxy does not establish physical combustion or RPM.",
+  "manifest_sha256": "8134a3196496d96a71b0922046d5cfb04179d8f1ed81a048c82199be2f1aec1a",
+  "file_count": 169,
+  "bytes": 441184831
+}

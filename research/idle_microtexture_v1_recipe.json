@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.idle-fast-detail-recipe/1",
+  "decision": "F2 native1.2..14kHz finite moments and10ms energy concentration exceed Gaussian/same-PSD phase controls and frozen fine-static candidates. Test correlated fresh amplitude on existing spectral resonators only, not new OSC or phase/frequency changes.",
+  "observation": "references/analysis/idle_microtexture_v1/observe1",
+  "training_only": "F2_train; all3F2_train_phase controls. F2_check is reporting/listening only, never model fitting.",
+  "kernel_indices": [2,3,4,5],
+  "energy_window_frames": 480,
+  "statistics": "Centered half-log10ms band power; train covariance minus mean covariance of3same-PSD phase controls. Require strictly PSD without ridge/projection/row scaling; otherwise abort, not relax. Alpha is trace lag1 excess divided by trace covariance excess, clipped0..0.98 explicitly as an engineering proxy.",
+  "generation": "Reuse semidefinite modal_texture envelope states/gains,100Hz hop, variance-normalized cosine interpolation, exp(amount*z-amount^2*diagCov) power correction. Same per-band gain for L/R. Independent fresh modulation, no measured trajectory storage.",
+  "seeds": [149921,277139,381611],
+  "amounts": [0,0.5,1],
+  "seconds": 12,
+  "baseline": "Frozen F2 fine-static profile and unchanged13OSC; no previous core amplitude modulation in this isolated contrast. Identical6spectral filters, innovations and gains before fast modulation across amounts.",
+  "validation": "Known covariance subtraction/PSD rejection, scalar fresh AR/gain recurrence, independent full FFT convolution and complex OSC; zero amount exact frozen fine-static FLOAT. Report output short-time concentration and spectrum without tuning after rendering or selecting seeds.",
+  "limits": "Source-minus-phase-control covariance is a finite recording modulation proxy, not physical combustion separation.10ms energy and smoothing cannot uniquely identify subwindow impulses; interpolation may underfit source concentration.3s and adjacent check not independent evidence; output lognormal gains unbounded, no runtime adoption before hearing.",
+  "runtime_changed": false,
+  "new_download": false
+}
