@@ -1,0 +1,953 @@
+{
+  "schema": "vsl.F2-rate-coordinates-final/1",
+  "result": "known_flat_bound_defect_corrected_local_recording_residual_persists_NOT_shared_phase_DNA",
+  "sources": {
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "research/怠速与加速完成度V1.md": "d150aeb01e324aca90f7d49f9b7fcca3492dee15cea64690387fe858b57cc09f",
+    "tools/line_motion_v1/local_envelopes.py": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+    "tools/line_motion_v1/envelope_controls.py": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+    "research/F2_chirp_limits_v1_plan.json": "7bdbb543a2a1784befb783bc4703316bdd9da6cd56538adb7ba770f0c05561ba",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "handoff/开发留痕.md": "83dd7ba623dd9f55f0d5cc329201cbc13620ea7134be8bca2feb7584f908e9eb",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "tools/package_F2_rate_coordinates_v1.py": "dfa00d863fce24b5632e76eeb9c0175abff9320062bb1dfe1c9f4d4d29f4dd58",
+    "research/F2相对变化率V1.md": "d04206e4634b6c14e6b9d32349f343697479c56fcfb05a73a0561a67722be0cc",
+    "AGENTS.md": "01622509dbb7c3b970c81f736f9ec1145c1adbe7d9f5bc3cd223723ed1dab2b6",
+    "tools/observe_F2_rate_coordinates_v1.py": "6a71183fe7c56d86b4456754269c4385ac6df297c60b745c04cd69ca048de1a5",
+    "handoff/研究续接.md": "41821041f0319c6e24d9e8eead499026a7d67189a4adcb29b2639d195b430652",
+    "tools/line_motion_v1/rate_coordinate_controls.py": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+    "tools/line_motion_v1/chirp_limit_controls.py": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+    "tools/line_motion_v1/sideband_controls.py": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+    "handoff/算法说明.md": "2367d670f587e7d10ab38afb1d5149cd1c7498a9b2a43f120a31991b6a89b3cf",
+    "tools/publish_F2_rate_coordinates_v1.py": "c54185d11557747aa4ada6ecad1d6964fb8233152857b052042f12467eb081d1",
+    "tools/diagnose_F2_chirp_limits_v1.py": "4a261c3aa3119b915742cad6b5e29e6202095c8550375a6c8ba37d4d442eea90",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "tools/line_motion_v1/sideband_subspaces.py": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "research/F2_rate_coordinates_v1_plan.json": "5896e28c233fdcf920c145b5303003345e7b1e981d0d214f303c462cf4f1715f",
+    "tools/line_motion_v1/sidebands.py": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+    "tools/line_motion_v1/sideband_subspace_controls.py": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+    "tools/audit_F2_rate_coordinates_v1.py": "2db7edff20ecd00d52486ae0eb0ad0a90602a6ac2e0a43628a5bfc01463e6b4b",
+    "tools/line_motion_v1/rate_coordinates.py": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a"
+  },
+  "reports": {
+    "diagnosis1": {
+      "path": "references/analysis/F2_rate_coordinates_v1/diagnosis1/report.json",
+      "sha256": "73306293614a1c218bd78ca0c3f4153f8ad9ede866166d3f1cc40c2ad49c2570",
+      "result": "known_smooth_chirp_flat_bound_clipping_observed_no_recording"
+    },
+    "diagnosis2": {
+      "path": "references/analysis/F2_rate_coordinates_v1/diagnosis2/report.json",
+      "sha256": "b72c98c886c89825e488d0d352404275f0b715648d41b45324e97e7bdc7c0630",
+      "result": "known_smooth_chirp_flat_bound_clipping_observed_no_recording"
+    },
+    "observe1": {
+      "path": "references/analysis/F2_rate_coordinates_v1/observe1/report.json",
+      "sha256": "da61c3fd1191277eeb53ea9039a906a91560de9efe568ab38cf197d0a3497f67",
+      "result": "all9_fractional_rate_local_coordinates_observed_not_shared_phase_DNA"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_rate_coordinates_v1/audit1/report.json",
+      "sha256": "fec3a828f1533d1ba5ba5468062d6c88d04c66b5bb1170a28aad6e34fb49d763",
+      "result": "known_flat_clipping_and_all18_rate_fits_plus72_subspaces_independently_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_rate_coordinates_v1/review1/report.json",
+      "sha256": "4be57338b940dd1c868c3d112f12a76097cdc6ea13ab1e363e2cb675dd9477f4",
+      "result": "known_clipping_changed_prior_and_persistent_residual_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "source_versions": {
+    "tools/diagnose_F2_chirp_limits_v1.py": {
+      "diagnosis1": "4fd05866b73c477d2fca73c4154d2d8a3c891d83d3057c7cce4078acf2ff9716",
+      "diagnosis2": "4a261c3aa3119b915742cad6b5e29e6202095c8550375a6c8ba37d4d442eea90"
+    },
+    "research/F2_chirp_limits_v1_plan.json": {
+      "diagnosis1": "7bdbb543a2a1784befb783bc4703316bdd9da6cd56538adb7ba770f0c05561ba",
+      "diagnosis2": "7bdbb543a2a1784befb783bc4703316bdd9da6cd56538adb7ba770f0c05561ba"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "diagnosis1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "diagnosis2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "observe1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "review1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "diagnosis1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "diagnosis2": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "observe1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "diagnosis1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "diagnosis2": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "observe1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/chirp_limit_controls.py": {
+      "diagnosis1": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+      "diagnosis2": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+      "observe1": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "diagnosis1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "diagnosis2": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "observe1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/correspondence.py": {
+      "diagnosis1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+      "diagnosis2": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+      "observe1": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a"
+    },
+    "tools/line_motion_v1/envelope_controls.py": {
+      "diagnosis1": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+      "diagnosis2": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+      "observe1": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93"
+    },
+    "tools/line_motion_v1/identity_controls.py": {
+      "diagnosis1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+      "diagnosis2": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+      "observe1": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "diagnosis1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+      "diagnosis2": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+      "observe1": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/line_motion_v1/local_envelopes.py": {
+      "diagnosis1": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+      "diagnosis2": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+      "observe1": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "diagnosis1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "diagnosis2": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "observe1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "diagnosis1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+      "diagnosis2": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+      "observe1": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "diagnosis1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "diagnosis2": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "observe1": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/line_motion_v1/sideband_controls.py": {
+      "diagnosis1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+      "diagnosis2": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+      "observe1": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc"
+    },
+    "tools/line_motion_v1/sideband_subspace_controls.py": {
+      "diagnosis1": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+      "diagnosis2": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+      "observe1": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750"
+    },
+    "tools/line_motion_v1/sideband_subspaces.py": {
+      "diagnosis1": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+      "diagnosis2": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+      "observe1": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64"
+    },
+    "tools/line_motion_v1/sidebands.py": {
+      "diagnosis1": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+      "diagnosis2": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+      "observe1": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e"
+    },
+    "tools/line_motion_v1/rate_coordinate_controls.py": {
+      "diagnosis2": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+      "observe1": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+      "audit1": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2"
+    },
+    "tools/line_motion_v1/rate_coordinates.py": {
+      "diagnosis2": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a",
+      "observe1": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a"
+    },
+    "tools/observe_F2_rate_coordinates_v1.py": {
+      "observe1": "6a71183fe7c56d86b4456754269c4385ac6df297c60b745c04cd69ca048de1a5"
+    },
+    "research/F2_rate_coordinates_v1_plan.json": {
+      "observe1": "5896e28c233fdcf920c145b5303003345e7b1e981d0d214f303c462cf4f1715f"
+    },
+    "references/segments_v1.json": {
+      "observe1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/audit_F2_rate_coordinates_v1.py": {
+      "audit1": "2db7edff20ecd00d52486ae0eb0ad0a90602a6ac2e0a43628a5bfc01463e6b4b"
+    },
+    "tools/publish_F2_rate_coordinates_v1.py": {
+      "review1": "c54185d11557747aa4ada6ecad1d6964fb8233152857b052042f12467eb081d1"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_sideband_v1": {
+      "path": "baselines/F2_sideband_v1/manifest.json",
+      "sha256": "2ff72b26f07167a9f8a40ba225f2fda7aeee187f023e612fbb2479385d4ce8f1"
+    },
+    "F2_local_envelopes_v1": {
+      "path": "baselines/F2_local_envelopes_v1/manifest.json",
+      "sha256": "a5b45ecc6dc61542793a9abdb812e41561b03447c5b0dd6ecb4a6c26e4109fb4"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "1017bb9f7f7134015ddf439d7adc04b2412c6428270927f3083b02627d89a3fa",
+  "counts": {
+    "channel_fits": 18,
+    "successful_channel_fits": 18,
+    "components": 92,
+    "old_bound_components": 28,
+    "new_bound_components": 16,
+    "old_main_eligible_rows": 5,
+    "new_main_eligible_rows": 9,
+    "new_all_component_eligible_rows": 3,
+    "linear_subspace_projections": 72
+  },
+  "audit_errors": {
+    "waveform": 8.326672684688674e-17,
+    "jacobian": 5.551115123125783e-17,
+    "finite_difference": 2.234515739107934e-09,
+    "cost": 1.0842021724855044e-19,
+    "optimality": 6.719571979271257e-19,
+    "initial": 2.0036056147532122e-16,
+    "subspace_wave": 5.412337245047638e-15,
+    "subspace_QR": 1.199040866595169e-14,
+    "subspace_cost": 1.0842021724855044e-19,
+    "subspace_singular": 4.3298697960381105e-15
+  },
+  "known_old_waveform_errors": [
+    2.4567324398490498e-14,
+    0.11526977362394099,
+    0.1153387754901233
+  ],
+  "known_new_cases": [
+    {
+      "id": "inside_flat_box",
+      "max_frequency_error_Hz": 0.0,
+      "max_chirp_error_Hz_per_s": 2.5979218776228663e-14,
+      "waveform_relative_error": 1.6764552935356856e-14,
+      "passed": true
+    },
+    {
+      "id": "positive_crossing",
+      "max_frequency_error_Hz": 4.973799150320701e-13,
+      "max_chirp_error_Hz_per_s": 4.0277514656850144e-10,
+      "waveform_relative_error": 5.941773438251549e-11,
+      "passed": true
+    },
+    {
+      "id": "negative_crossing",
+      "max_frequency_error_Hz": 3.552713678800501e-13,
+      "max_chirp_error_Hz_per_s": 4.048619217655869e-10,
+      "waveform_relative_error": 5.96517180628446e-11,
+      "passed": true
+    }
+  ],
+  "reference_conversion_bound_error": 4.440892098500626e-16,
+  "engineering_prior": "q_bound=B_ref*nominal_bin/reference_bin; B_ref2Hz/s, first observed main reference",
+  "parameter_count_changed": false,
+  "truth_used_as_phase_fit_initialization": false,
+  "diagnostic_reporting_only_revision": true,
+  "diagnostic_arrays_and_fits_exact": true,
+  "comparisons": [
+    {
+      "source_seconds": [
+        6.0,
+        7.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.9923019059180147,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.2133333333333334,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 1.4982793114200588,
+          "new_Q_reduction_percent": 1.583576857174418,
+          "old_Q_cost_difference": 8.754741801013334e-06,
+          "new_Q_cost_difference": 9.068801472323393e-06
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.9923019059180147,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.2133333333333334,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 1.4982793114200588,
+          "new_Q_reduction_percent": 1.583576857174418,
+          "old_Q_cost_difference": 8.754741801013334e-06,
+          "new_Q_cost_difference": 9.068801472323393e-06
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        6.5,
+        7.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.6541268974790468,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.1866666666666665,
+            1.2,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 3.024385917609562,
+          "new_Q_reduction_percent": 3.2364835384558477,
+          "old_Q_cost_difference": 1.5978084739345358e-05,
+          "new_Q_cost_difference": 1.681578150075679e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.6541268974790468,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.1866666666666665,
+            1.2,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 3.024385917609562,
+          "new_Q_reduction_percent": 3.2364835384558477,
+          "old_Q_cost_difference": 1.5978084739345358e-05,
+          "new_Q_cost_difference": 1.681578150075679e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        7.0,
+        8.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": -6.1950444774083735e-12,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 7.439075161860009,
+          "new_Q_reduction_percent": 7.439075132091411,
+          "old_Q_cost_difference": 4.908368470535774e-05,
+          "new_Q_cost_difference": 4.908368450894454e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": -6.1950444774083735e-12,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 7.439075161860009,
+          "new_Q_reduction_percent": 7.439075132091411,
+          "old_Q_cost_difference": 4.908368470535774e-05,
+          "new_Q_cost_difference": 4.908368450894454e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        8.0,
+        9.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 2.2869179721753063,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 2.34981938982024,
+          "new_Q_reduction_percent": 2.0965708888037837,
+          "old_Q_cost_difference": 1.475949924722845e-05,
+          "new_Q_cost_difference": 1.286765484798081e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            true,
+            true,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 2.2869180194922567,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            0.9866666666666667
+          ],
+          "old_Q_reduction_percent": 2.3498194358107405,
+          "new_Q_reduction_percent": 2.096570930004782,
+          "old_Q_cost_difference": 1.4759499293733568e-05,
+          "new_Q_cost_difference": 1.2867654883319296e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        8.5,
+        9.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.5543122344752192e-13,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 1.8625104915914736,
+          "new_Q_reduction_percent": 1.8625105010176557,
+          "old_Q_cost_difference": 1.2010418681907193e-05,
+          "new_Q_cost_difference": 1.2010418742692012e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 1.5543122344752192e-13,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 1.8625104915914736,
+          "new_Q_reduction_percent": 1.8625105010176557,
+          "old_Q_cost_difference": 1.2010418681907193e-05,
+          "new_Q_cost_difference": 1.2010418742692012e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        9.0,
+        10.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.014778050762653816,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 2.8919395137644854,
+          "new_Q_reduction_percent": 2.876305700566162,
+          "old_Q_cost_difference": 1.6346922117172532e-05,
+          "new_Q_cost_difference": 1.625614802610231e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.014778050762653816,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.986666666666667,
+            4.986666666666666,
+            2.1866666666666665,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 2.8919395137644854,
+          "new_Q_reduction_percent": 2.876305700566162,
+          "old_Q_cost_difference": 1.6346922117172532e-05,
+          "new_Q_cost_difference": 1.625614802610231e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        10.0,
+        11.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.03315204975780084,
+          "reference_Hz": 76.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.0,
+            4.973684210526316,
+            2.1052631578947367,
+            1.0
+          ],
+          "old_Q_reduction_percent": 6.1876242593486115,
+          "new_Q_reduction_percent": 6.191250456509422,
+          "old_Q_cost_difference": 3.8096190639486235e-05,
+          "new_Q_cost_difference": 3.810587947280521e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.03315204975780084,
+          "reference_Hz": 76.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.0,
+            4.973684210526316,
+            2.1052631578947367,
+            1.0
+          ],
+          "old_Q_reduction_percent": 6.1876242593486115,
+          "new_Q_reduction_percent": 6.191250456509422,
+          "old_Q_cost_difference": 3.8096190639486235e-05,
+          "new_Q_cost_difference": 3.810587947280521e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        10.5,
+        11.5
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.019531336604183824,
+          "reference_Hz": 76.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.973684210526316,
+            4.973684210526316,
+            2.1052631578947367,
+            1.0
+          ],
+          "old_Q_reduction_percent": 2.484550417105358,
+          "new_Q_reduction_percent": 2.467488654747829,
+          "old_Q_cost_difference": 1.4754679140989825e-05,
+          "new_Q_cost_difference": 1.4650494656842671e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.019531336604183824,
+          "reference_Hz": 76.0,
+          "limits_Hz_per_s": [
+            2.0,
+            2.973684210526316,
+            4.973684210526316,
+            2.1052631578947367,
+            1.0
+          ],
+          "old_Q_reduction_percent": 2.484550417105358,
+          "new_Q_reduction_percent": 2.467488654747829,
+          "old_Q_cost_difference": 1.4754679140989825e-05,
+          "new_Q_cost_difference": 1.4650494656842671e-05
+        }
+      ]
+    },
+    {
+      "source_seconds": [
+        11.0,
+        12.0
+      ],
+      "channels": [
+        {
+          "channel": 0,
+          "old_at_bound": [
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.08609926135890733,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.16,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 7.7570663104972954,
+          "new_Q_reduction_percent": 7.784327154645299,
+          "old_Q_cost_difference": 5.0074986406353186e-05,
+          "new_Q_cost_difference": 5.020770042120002e-05
+        },
+        {
+          "channel": 1,
+          "old_at_bound": [
+            false,
+            false,
+            true,
+            false,
+            false
+          ],
+          "new_at_bound": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "success": true,
+          "local_cost_reduction_percent": 0.08609926135890733,
+          "reference_Hz": 75.0,
+          "limits_Hz_per_s": [
+            2.0,
+            3.013333333333333,
+            5.013333333333334,
+            2.16,
+            1.0133333333333334
+          ],
+          "old_Q_reduction_percent": 7.7570663104972954,
+          "new_Q_reduction_percent": 7.784327154645299,
+          "old_Q_cost_difference": 5.0074986406353186e-05,
+          "new_Q_cost_difference": 5.020770042120002e-05
+        }
+      ]
+    }
+  ],
+  "real_local_cost_reduction_percent_range": [
+    -6.1950444774083735e-12,
+    2.2869179721753063
+  ],
+  "conditional_Q_ranges": {
+    "old": [
+      1.4982793114200588,
+      7.7570663104972954
+    ],
+    "new": [
+      1.583576857174418,
+      7.784327154645299
+    ]
+  },
+  "main_in_bound_flags_are_changed_prior_NOT_real_accuracy": true,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figures_visually_checked": true,
+  "all_executed_diagnostic_sources_retained": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "real_nonlinear_fits": 18,
+  "audit_real_nonlinear_resolves": 0,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "physical_AM_FM_source_classified": false,
+  "high_frequency_recovered": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_conditional_sideband_contract_counterexamples_and_all18plus72_projections_audited",
+  "current_goal_turn": "progress_known_chirp_clipping_diagnosis_rate_law_all18_fits_plus72_subspaces_independently_audited",
+  "next_step": "Known same-global-trajectory, deliberate phase-offset and nonquadratic controls before original six adjacent overlapping-window complex phase comparisons. No aligning away offsets or forcing gaps. Shared samples are not independent heldouts/common-clock qualification. Keep originalfailed36/all17/full33/individual14k/originalE before shared-phase realDNA.",
+  "limits": [
+    "Nine main-fit rows within the new relative prior do not prove a complete common engine clock or model adequacy",
+    "Some other lines remain at bounds; independent sources and nonquadratic phase remain unresolved",
+    "Conditional Q residuals largely persist, so flat main-line clipping cannot alone explain them",
+    "The engineering prior changes; training cost and boundary counts are not timbre acceptance or measured acceleration",
+    "New relative-rate vector changes the local engineering prior; lower and higher lines can be respectively narrower and wider",
+    "Independent local phases are not a recovered common engine clock or measured RPM",
+    "Conditional sideband changes can follow coordinate changes; not identified mechanical modulation or improved timbre",
+    "All failures, boundary flags and increased costs remain explicit"
+  ]
+}

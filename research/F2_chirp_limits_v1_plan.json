@@ -1,0 +1,11 @@
+{
+  "schema":"vsl.F2-chirp-limits-plan/1",
+  "purpose":"Known-signal diagnostic: determine whether old flat +/-2Hz/s independent chirp bounds create quadrature-like residuals on a smooth harmonic rise with NO added3Hz modulation",
+  "fixtures":"Exactly3predeclared cases: main frequencies75.2/112.8/188Hz with orders2/3/5 of37.6Hz and root chirp+.3,+.6,-.6Hz/s; independent82.3Hz line always chirp-.2. Amplitudes.5/.4/.3/.18, phases.2/.5/.8/.1; centered original1s48k samples",
+  "initialization":"Native peaks in prior75/113/188/82 observation cells only; unchanged original local_chirps.fit_channel with q0, weighted linear amplitude init/f+-.5/q+-2/max60/tolerances. Truth never initializes a phase fit",
+  "operator_counterfactual":"After old fit, evaluate fixed3Hz A/Q/joint observation on its saved coordinates. Separately evaluate the exact analytic coordinate as a KNOWN operator contract only, with no phase estimator initialized/run on truth. Compare base/sideband costs; diagnostic truth is not a replacement estimator",
+  "gates":"Original in-box case frequency error<=.01Hz and waveform relative error<=1e-6; crossing cases must preserve/report old fifth-order q bound and all fit results, not pass as recovered. Exact-coordinate base-wave relative error<=1e-10 and weighted cost<=1e-20. Sideband Q versus A is an observation, not a gate chosen to force one explanation",
+  "recording_policy":"No actual recording read, new real fit, source profile, C or audio in this diagnostic. No bound/window/offset/strength/degree/iteration sweep. Source snapshots, all outputs and independent audit required",
+  "next_if_supported":"If clipping alone creates residuals, derive a dimensionally consistent reference-rate bound before any new real experiment; do not just expand one fitted limit until it passes. Generic shared-phase qualifications remain unchanged",
+  "keep":"540C/H/voices/moving35/sole driver/stereo7.1.4 unchanged; F3speech/F acquired/originalA-low pending persist. Originalfailed36/all17/full33/individual14k/originalE required before real shared-phase DNA; fullgoal incomplete"
+}
