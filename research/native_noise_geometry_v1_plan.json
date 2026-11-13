@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.native-noise-geometry-plan/1",
+  "assumption": "Unit variance independent white noise in the observed real sample channel; geometry only, not real engine-noise calibration",
+  "frequency_check": "Compare exact sample-basis covariance with periodic Hann squared-window coefficients at bin differences0,1,2",
+  "temporal_lags_rule": "one hop, nearest half-window in whole hops, and first nonoverlapping whole hop",
+  "policy": [
+    "Report covariance and energy-variance equivalent degrees of freedom, never call them phase-information rank or calibrated latent uncertainty",
+    "The existing source-noise adjoint remains valid; this diagnostic does not refit, whiten, regularize or select an estimator",
+    "Use original native/coarse observation geometry only, no fixture source phase, heldout identities, or real audio",
+    "Retain original phase gates and failed dense positive/all17/full33/individual14kHz/original E"
+  ]
+}

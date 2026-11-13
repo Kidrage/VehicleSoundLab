@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.native-observation-plan/1",
+  "parent_plan": "research/certified_qp_v1_plan.json",
+  "observation_step_rule": "1/projection_cycles: use every resolvable native FFT bin inside the unchanged observed range",
+  "maximum_iterations": 20,
+  "policy": [
+    "Change observation sampling only: fill interstitial native FFT bins skipped by the previous source-candidate grid",
+    "Source candidate orders, observation frequency endpoints, window/hop/time support, common/minority phase/amplitude equations and original bounds remain unchanged",
+    "No zero padding, source-line addition, regularization, cutoff/window/degree/grid/iteration sweep or true-phase initialization",
+    "Use the exact frozen original observed initialization and original20-step certified-QP trust controller; never use the rejected smoothed candidate",
+    "First verify independent native-bin quadrature, on/off-grid Hann energy, rapid/occluded/local-phase observations and original observation subset identity",
+    "All original phase/root/spectral-heldout/stereo/support gates remain; failed dense positive/all17/full33/individual14kHz/original E remain required",
+    "No real audio/model/C/runtime/media/listening changes"
+  ]
+}

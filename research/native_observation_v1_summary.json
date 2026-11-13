@@ -1,0 +1,387 @@
+{
+  "schema": "vsl.native-observation-publication/1",
+  "result": "native_bin_completion_rejected_phase_gate_exact_noise_correlations_measured",
+  "sources": {
+    "handoff/开发留痕.md": "ada9ad736c97acbc3c6b66227dc70bdb7ef1b70c9cef9a07b3debf88808dfbec",
+    "tools/absolute_amplitude_v1/model.py": "b70511bf98a7e7662c71b0d52836483815b92d8f46900938dbe6563c550442d4",
+    "tools/audit_native_observation_v1.py": "84f54464e8a3aec1db30ad50635dfdf88e2038cf3a3de891bcb81d1ce2cf2c4e",
+    "tools/interior_qp_v1/refine.py": "daf9d075f6e55adb9e6fc75a22e0949993898613d9fc2fdd0b4b8d4794a72933",
+    "tools/joint_trust_v1/quadratic.py": "a445dba8f298aacbba4b0b28db8d0c7a2d17f4695d6400bc84b7515067191c18",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/absolute_amplitude_v1/amplitude.py": "0eea45aacc8f2301fe04c42a033890f4c9fa393035c6f9b1fd54ed34193490ea",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/native_observation_v1/checks.py": "7a62e8aa7fa7913083e432f2aea82ad55f5975d61f345e2689fb41b37f627a9b",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "tools/diagnose_native_noise_geometry_v1.py": "ddc4e7097bff84d2e6d1e0b5ff1d7ba924a851d30611038c045d916f1c02eda2",
+    "research/interior_qp_v1_plan.json": "233cf864724d4bae9f03d924b155914fa89ba5c372a251ff3f77d9a4e6061267",
+    "tools/diagnose_quintic_phase_v1.py": "25a74bda1223b57780ea72e2baaaa8f94fd60f260cb17414c9f80cd12c4a32f6",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/interior_qp_v1/__init__.py": "5fce775f59eb1ca7a378279d8ed2a1ed519ae30da41ea6ef9c6cb63bbd496aa0",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/absolute_amplitude_v1/quadratic.py": "3be08a5f5af7ec4da2f0aa424b581852956c68119493d85069a5805855f22cec",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "research/guard_observation_v1_plan.json": "2b2f311dcb42c1408fb7de502426dde23f774c9a02f8560688063c5344ef31a9",
+    "tools/absolute_amplitude_v1/cone.py": "81d93db648e354d9dae6209e96192d05ed2ddad619d0446e42d6deb4a51a1582",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "tools/positive_band_envelope_v1/basis.py": "883bd6cfa372f7f828a0ecba3d96c39fcadc31664d779fe287305c723bfa490a",
+    "tools/guard_observation_v1/geometry.py": "7659f52bb2e94690b2c1ec779e2a4fe6e8be4b7616bb17d35fbb269a1a95faf4",
+    "tools/native_observation_v1/noise_geometry.py": "5345b6c7f682bc56d65e7fbc06ab5d02882b11a70e26bb8228cae60e90f3d42c",
+    "tools/diagnose_guard_observation_v1.py": "8735173dfbc64ce5169a624f1da6b2527f35607aabe9edf28f3e4ba0eab5401b",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "tools/diagnose_certified_qp_v1.py": "11bb20f513f440f2f1a12e205c25827984f8e2d3b4436cc36ef4e54367054261",
+    "research/joint_trust_precise_v1_plan.json": "ac913fa0cdaf922ba07a51b50f454fca3e736671ee02e7ccf120705607b47c8e",
+    "tools/quintic_phase_v1/__init__.py": "a7978fa785a73677fd9efb40964fdd7c8e762acd7d36adca91fa870eaf852da0",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/quintic_phase_v1/basis.py": "25cdacdbdc7021d3b01e106908bae5bcbeb1bfdc1916dd0e190079b1587ce91f",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "tools/positive_band_envelope_v1/__init__.py": "7b530d49e68cfdfa4a26af916bef0c08fa6f62b4dc0792ad38869581689c936c",
+    "tools/diagnose_absolute_amplitude_v1.py": "cd77317cd6852a1ef83ca1db4d56e926f6bfd6b770f847563e6aeda7ce0a994f",
+    "tools/joint_trust_v1/osqp_backend.py": "a76aae8a7987639f748748ca5f646aef1d4506f71bcb0376f946814b342dc403",
+    "tools/offline_ipm_requirements.txt": "349764303482a554f658768fbaa9d003625697ce97957b4aa06edf4cf345cc1c",
+    "tools/native_observation_v1/geometry.py": "223cd1819bfda1a4c37d7d86c552d3763deb74811ec75cb27406ae881bc93a97",
+    "research/active_qp_v1_plan.json": "179f902642a5550eff98e9a7868c28bea47ccd6807ac3a0ee233645e9966aaba",
+    "tools/positive_band_envelope_v1/fit.py": "1a64de78be1803b92f4b9e40072a3d55774ed19f934b82d9710dc8a895f39045",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/joint_trust_v1/fit.py": "3b0b7e1d0b583d4871dc071b60ce169d0aeedbacfa4b539434155dd0eb94660b",
+    "tools/quintic_phase_v1/initialize.py": "f7a7ce49ecc14df54fc28949930dfb979968c350f6d4d569913bb37578753d9a",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/interior_qp_v1/sqrt_checks.py": "6571eccf38d34b05ea426ebaa66bac890a6069ee2fead62c843f4dc93cf4501a",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "tools/interior_qp_v1/backend.py": "bd74ef3e551cda8fbd64eb68a7acaa224193b6bbc26afe97f1eed625868431ef",
+    "research/certified_qp_v1_plan.json": "d1f6e5c597823b094d3dab81f43c7b1b6277b131dac2e61cbe92fd153c143959",
+    "research/原生频点观测V1.md": "417677ca3979929f31ccef8459f3185b83431a8d6136ae4b7633b59bdecfd075",
+    "tools/positive_band_envelope_v1/model.py": "a7e5d540aa222c0cb1960e19b10f23d49f220430b437c0fcc651b932e1f2fa5e",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "tools/joint_trust_v1/constraints.py": "9521d54ce82f17a312f563b23aa1c101f3ca8c50b4a3ffed933b587e13d7b808",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/interior_qp_v1/active_checks.py": "ad1c79d8a4dad00b59dedd975375daf6606cf2bfa87d346b3c27bd3975daf268",
+    "tools/guard_observation_v1/checks.py": "9c316af35846217a71fe36670827f50e5f2b05ba420ea0486e6bfdc90d43287a",
+    "research/native_observation_v1_plan.json": "4cddde226013101cd111708c64581e8e167ed517835a184123886779983325d1",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "research/native_noise_geometry_v1_plan.json": "9ec45456e0780069615d28f87529e28dd6c045845dac0ad1c54c51890fbb5b43",
+    "handoff/算法说明.md": "e731a73fb15572f0488541511605c50907fd7e001c4608f9690342a7808c88bd",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "tools/interior_qp_v1/active_set.py": "11ac8b6babe9af43a66669aa7274a12e972d9ba9d8ab024855d04b72d9a676a7",
+    "tools/quintic_phase_v1/model.py": "7c82e703549db08b1a3dd49c2aa5154f6593d5c09019c256a32fe287fde8f923",
+    "tools/interior_qp_v1/square_root.py": "fa32ef4c63cf34021bfefa668cff6779abd7d0fab575c2f1b211f1664f7d6077",
+    "tools/package_native_observation_v1.py": "ecf4d6561b72cb6519e143021c9131a266b0b77d3064836535801f039b711531",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "research/refined_qp_v1_plan.json": "89ad3d0728e70b9c4b2f680d82f4d7e5b7eb5a6371b70dca1b3ebfd2d1c7adcc",
+    "tools/joint_trust_v1/checks.py": "032657547705fdfca250ff986bceaafc724d830db0c904c6bda3a19bc2019ca8",
+    "tools/absolute_amplitude_v1/__init__.py": "75f432c7f696ad5b38ed029589090b1876ee9f1c391d1e03d69a7183b4866f98",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/interior_qp_v1/certified.py": "69622bbda34ae8ddc7845be9dfd625a8acfce014f241ea3f28261fcd87e34bf5",
+    "research/quintic_phase_v1_plan.json": "7c6918734600b52a50cd39984a4c5c1a2764feb21e3bf64ef4453bba893d151b",
+    "tools/positive_band_envelope_v1/checks.py": "f74f53b9c094ab80f6897e1dffb323c63ad6df1879cb91613dfaa5c84a3cfb93",
+    "tools/guard_observation_v1/__init__.py": "331f9f1efffaf705808aef8a22faeb3ab3891243502ac7136ae2a94b9e568780",
+    "research/怠速与加速完成度V1.md": "19c23a0562f37e5cdfb8615226d928fb0e84f41cef98c79b4aa466df3200a8ce",
+    "tools/diagnose_positive_band_envelope_v1.py": "66be659f6de5a5964f6e2176aefb37a1a287d568c597caac4b321e7250239e47",
+    "research/sqrt_qp_v1_plan.json": "32d41a6012be997c3bbad49c0da88d1c56329d4ea7507d7af551f03248263473",
+    "tools/audit_interior_qp_v1.py": "012177d2c40a98fa1b08c1348e7219a8131a3e06bc03ab4e7bcda8beb9643530",
+    "AGENTS.md": "ecade65e0eb1e3975fe8577a0f2adc4d8a4ec7a74d64f628dc6342d586892625",
+    "research/positive_band_envelope_v1_plan.json": "d3cca7de7d5f75a749828bc7af298f3de294fe23b082ddbb7603165a3bd834cb",
+    "tools/absolute_amplitude_v1/fit.py": "effe61b872721002fd86461765d2bb8a180e3329180bea2c76e3be45fe11d520",
+    "research/absolute_amplitude_v1_plan.json": "9260dbd680d47e02989dfba77c9e59f5f7746fd55fdc642f8bdd3aee60cac945",
+    "tools/absolute_amplitude_v1/checks.py": "91383f27d9e83540493e4783b369cc13d1c4be0f1010de0dbf67ca7a88e9e7fb",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/interior_qp_v1/checks.py": "14d5de58a868445936642c95d89101afe328afb387287af77974573cc1907bcf",
+    "tools/joint_trust_v1/__init__.py": "2ca1cf0e131a7d14ced48997e6df74e2e0922fc37660e46fa91f2971b16a0472",
+    "tools/quintic_phase_v1/checks.py": "5969c500aa794712352adaca9929e4b4e5361bf56a4f18ba1d19842384df4194",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "tools/diagnose_native_observation_v1.py": "de9bdbe98f4fda43711f3ae8be9872a026f4e476f58ad96e6ad129f37a6d586e",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "tools/offline_qp_requirements.txt": "44920b06170c2b3150f3b1af9df0113e94b773b9ff8ad348c93a6ccd3a6e83df",
+    "tools/native_observation_v1/__init__.py": "59a76e49577bdaa7ce4dd68306bbc7bf041ce3a73135fb8b4aa5d2ec0cdf8781",
+    "handoff/研究续接.md": "461685f7edb56a2d5d71297f599a703421ca33ef97416ab5dc97c7d810963850"
+  },
+  "reports": {
+    "fit1": {
+      "path": "references/analysis/native_observation_v1/fit1/report.json",
+      "sha256": "9e20af22f096863fe0f33298fcb09920435cf8b06d1b6584f8ef3bae7b50b472",
+      "result": "dense_native_observation_rejected"
+    },
+    "audit1": {
+      "path": "references/analysis/native_observation_v1/audit1/report.json",
+      "sha256": "ae33893ea97781802245ffad9514defeecaf62b9ffd93ed24fc6ef1e3fc3c791",
+      "result": "native_geometry_original_QP_certificates_and_full_trace_reconstructed"
+    },
+    "noise1": {
+      "path": "references/analysis/native_observation_v1/noise1/report.json",
+      "sha256": "ab5d598990c0fcba5f2fb2c7d2133c8802a98c298bcba6f6b187de1b71a0b682",
+      "result": "exact_periodic_Hann_frequency_and_overlap_noise_geometry_measured"
+    }
+  },
+  "actual_fit": {
+    "iterations": 20,
+    "accepted_steps": 18,
+    "initial_cost": 4.35138030436711e-06,
+    "final_cost": 1.502370115788211e-07,
+    "normalized_projection_residual": 0.00010582473570982148,
+    "seconds": 119.80843270011246
+  },
+  "assessment": {
+    "point_phase_p95_cycles": 0.000986665310185352,
+    "root_relative_p95": 0.0038834725856617194,
+    "maximum_heldout_power_error_db": 0.019655436447952035,
+    "maximum_heldout_complex_correlation_error": 7.108608222716795e-06,
+    "fitted_separate_carriers": 36,
+    "heldout_supported_carriers": 2,
+    "fitted_carrier_amplitudes": [
+      0.06464405952282798,
+      0.0634893145340154,
+      0.06469852969307861,
+      0.06256761796808288,
+      0.06171101114958792,
+      0.12089615709484958,
+      0.05672961916372656,
+      0.05514374852383358,
+      0.05381595369027849,
+      0.0536425282120972,
+      0.12380339191443022,
+      0.05095168910146034,
+      0.05119289291107401,
+      0.05451258180840794,
+      0.05598823031269456,
+      0.058938464201026976,
+      0.0594924515905083,
+      0.06220745086544616,
+      0.0633405893596203,
+      0.0635487750663692,
+      0.10846079010418984,
+      0.0617189372771717,
+      0.05742429802095864,
+      0.05758768333431091,
+      0.054977557648426684,
+      0.054447879893164075,
+      0.049152709868718836,
+      0.048835942362588564,
+      0.05198571521481829,
+      0.04854607245661258,
+      0.1091728987957729,
+      0.04399048792425995,
+      0.049524516749280385,
+      0.05178473931465041,
+      0.055983854044419266,
+      0.050886265294783274
+    ],
+    "heldout_powers": [
+      [
+        0.0027102942012493516,
+        0.001822702681010377
+      ],
+      [
+        0.0027989441967082875,
+        0.0018813492233326298
+      ]
+    ],
+    "oracle_heldout_powers": [
+      [
+        0.0027189688801573402,
+        0.0018284477706804094
+      ],
+      [
+        0.002811372365910439,
+        0.0018898831899834725
+      ]
+    ],
+    "qualified": false
+  },
+  "QP_certified": 20,
+  "entire_trace_reconstructed": true,
+  "geometry": {
+    "previous_step": 0.2,
+    "native_step": 0.1,
+    "previous_bin_stride": 2,
+    "endpoints_unchanged": true,
+    "source_candidates_unchanged": true,
+    "window_and_hop_unchanged": true,
+    "regularization_added": false,
+    "zero_padding": false,
+    "truth_used": false,
+    "heldout_used": false
+  },
+  "independent_projection_controls": {
+    "passed": true,
+    "geometry": {
+      "previous_step": 0.2,
+      "native_step": 0.1,
+      "previous_bin_stride": 2,
+      "endpoints_unchanged": true,
+      "source_candidates_unchanged": true,
+      "window_and_hop_unchanged": true,
+      "regularization_added": false,
+      "zero_padding": false,
+      "truth_used": false,
+      "heldout_used": false
+    },
+    "on_off_grid_Hann_energy": [
+      {
+        "order": 3.0,
+        "previous_energy": 0.052900000000000016,
+        "native_energy": 0.07935000000000002,
+        "expected_previous_energy": 0.0529,
+        "expected_native_energy": 0.07935
+      },
+      {
+        "order": 3.1,
+        "previous_energy": 0.026450000000000015,
+        "native_energy": 0.07935000000000005,
+        "expected_previous_energy": 0.02645,
+        "expected_native_energy": 0.07935
+      }
+    ],
+    "independent_waveform_projections": [
+      {
+        "id": "rapid_common",
+        "scalar_quadrature_maximum_error": 4.31735419265442e-15,
+        "previous_subset_exact": true,
+        "interstitial_observation_norm": 0.5367281188787358
+      },
+      {
+        "id": "occluded_partial",
+        "scalar_quadrature_maximum_error": 4.31735419265442e-15,
+        "previous_subset_exact": true,
+        "interstitial_observation_norm": 0.5312084194857494
+      },
+      {
+        "id": "local_phase",
+        "scalar_quadrature_maximum_error": 4.297849443289389e-15,
+        "previous_subset_exact": true,
+        "interstitial_observation_norm": 0.5386553419260673
+      }
+    ],
+    "old_bins": 38,
+    "native_bins": 75,
+    "old_real_rows": 9196,
+    "native_real_rows": 18150,
+    "note": "Projection controls only; not rapid/occlusion phase-estimator qualification"
+  },
+  "cross_observation_costs": [
+    {
+      "parameters": "previous",
+      "observation": "previous",
+      "soft_l1_cost": 8.637912784758045e-08,
+      "normalized_residual": 0.0001004062631266973
+    },
+    {
+      "parameters": "previous",
+      "observation": "native",
+      "soft_l1_cost": 1.5901066826232653e-07,
+      "normalized_residual": 0.00010887311312859187
+    },
+    {
+      "parameters": "native",
+      "observation": "previous",
+      "soft_l1_cost": 9.044949845748813e-08,
+      "normalized_residual": 0.00010274417400559223
+    },
+    {
+      "parameters": "native",
+      "observation": "native",
+      "soft_l1_cost": 1.502370115788211e-07,
+      "normalized_residual": 0.00010582473570982148
+    }
+  ],
+  "noise_geometry": [
+    {
+      "id": "previous",
+      "bins": 38,
+      "real_rows_per_window": 76,
+      "exact_Hann_hermitian_covariance_maximum_error": 3.433758092294548e-17,
+      "exact_pseudo_covariance_maximum": 1.4523196745113664e-17,
+      "native_adjacent_complex_noise_correlation": -0.6666666666666666,
+      "native_two_bin_complex_noise_correlation": 0.16666666666666666,
+      "adjacent_selected_bin_correlation": 0.1666666666666668,
+      "unit_source_variance_projection_energy": 0.17812500000000003,
+      "unit_source_variance_Gaussian_energy_variance": 0.0008801269531250003,
+      "energy_variance_equivalent_real_degrees_of_freedom": 72.09986130374479,
+      "temporal_energy_correlations": [
+        {
+          "lag_samples": 32,
+          "overlap_samples": 1248,
+          "white_Gaussian_window_energy_correlation": 0.9922291964828368
+        },
+        {
+          "lag_samples": 640,
+          "overlap_samples": 640,
+          "white_Gaussian_window_energy_correlation": 0.039181692094313464
+        },
+        {
+          "lag_samples": 1280,
+          "overlap_samples": 0,
+          "white_Gaussian_window_energy_correlation": 0.0
+        }
+      ],
+      "source_white_noise_assumed": true,
+      "real_noise_calibrated": false,
+      "phase_information_rank": false,
+      "calibrated_latent_uncertainty": false
+    },
+    {
+      "id": "native",
+      "bins": 75,
+      "real_rows_per_window": 150,
+      "exact_Hann_hermitian_covariance_maximum_error": 6.084331525229285e-17,
+      "exact_pseudo_covariance_maximum": 1.5367045095194387e-17,
+      "native_adjacent_complex_noise_correlation": -0.6666666666666666,
+      "native_two_bin_complex_noise_correlation": 0.16666666666666666,
+      "adjacent_selected_bin_correlation": -0.6666666666666665,
+      "unit_source_variance_projection_energy": 0.3515625000000001,
+      "unit_source_variance_Gaussian_energy_variance": 0.0031823730468750013,
+      "energy_variance_equivalent_real_degrees_of_freedom": 77.67548906789415,
+      "temporal_energy_correlations": [
+        {
+          "lag_samples": 32,
+          "overlap_samples": 1248,
+          "white_Gaussian_window_energy_correlation": 0.992962692249567
+        },
+        {
+          "lag_samples": 640,
+          "overlap_samples": 640,
+          "white_Gaussian_window_energy_correlation": 0.042650338364004975
+        },
+        {
+          "lag_samples": 1280,
+          "overlap_samples": 0,
+          "white_Gaussian_window_energy_correlation": 0.0
+        }
+      ],
+      "source_white_noise_assumed": true,
+      "real_noise_calibrated": false,
+      "phase_information_rank": false,
+      "calibrated_latent_uncertainty": false
+    }
+  ],
+  "frequency_and_overlap_covariance_exact": true,
+  "original17_rerun": false,
+  "full33_replaced": false,
+  "individual14kHz_demonstrated": false,
+  "real_source_permitted": false,
+  "source_audio_read": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "new_media_downloaded": false,
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "previous_goal_turn_classification": "progress_actual_noise_budget_estimator_failure_full_audit_and_freeze",
+  "goal_turn_classification": "progress_actual_native_bin_fit_independent_trace_and_exact_noise_geometry_evidence",
+  "next_step": "Use exact correlated-observation noise geometry in a qualified fitting metric; handle redundant covariance without arbitrary ridge and test omitted/out-of-band signal amplification; preserve fast phase and original failed dense positive/all17/full33/individual14kHz/original E",
+  "limits": [
+    "Native-bin quadrature and Hann-energy controls do not establish rapid/occlusion phase-estimator qualification",
+    "The observation completion preserves source candidates and waveform but changes the statistical weighting; adjacent Hann bins remain correlated",
+    "Original failed dense positive/all17/full33/individual14kHz/original E remain required; no real audio/model/C",
+    "Energy-variance equivalent degrees of freedom are not matrix rank or phase-information count",
+    "White Gaussian source-noise geometry does not calibrate real coloured engine texture",
+    "No inference of an actual corrected phase, qualification or timbre from covariance alone"
+  ]
+}
