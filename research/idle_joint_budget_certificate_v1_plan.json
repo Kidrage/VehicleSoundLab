@@ -1,0 +1,7 @@
+{
+  "schema": "vsl.idle-joint-budget-certificate/1",
+  "purpose": "Posthoc algebraic separation certificate for both rejected fixed-budget family solutions. No new nonlinear fit, target relaxation or audio.",
+  "certificate": "From the saved TRAIN latent matrix choose its minimum-eigenvalue unit vector v. In upper-triangle coordinates g packs v_i^2 on diagonal and2v_i*v_j offdiagonal. Solve u^T*(A/row_scale)=g^T. Every PSD latent C satisfies u^T*y>=0. A negative observed value therefore certifies incompatibility with this exact fixed budget; required normalized ten-coordinate perturbation norm is at least -u^T*y/||u||. This is a lower bound, not nearest feasible model or statistical uncertainty.",
+  "checks": "Verify dual residual, v-norm, Rayleigh identity, saved minimum eigenvalue and negative side; independently recalculate all values. Apply the SAME frozen TRAIN hyperplane to check moments without fitting check. Also verify each known indefinite inverse control. No eigenvalue clipping or gate changes.",
+  "limits": "Conditional on current response kernels, high4inputs, temporal-white sign-symmetric even cumulants and exact finite target moments. Does not reject all joint synthesis/engine laws; finite recording uncertainty not calibrated. A future temporal source model needs recording evidence before changing delay/support. Existing audio/C/default/takes/612C-H67voices preserved."
+}

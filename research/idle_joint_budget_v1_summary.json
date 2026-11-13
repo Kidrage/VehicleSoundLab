@@ -1,0 +1,41 @@
+{
+  "schema": "vsl.idle-joint-budget-freeze/1",
+  "result": "both_fixed_white_joint_budget_families_rejected_NO_sound_promotion",
+  "parent_commit": "94246bae04d295c85eabb2342da3d59a1c1cec2e",
+  "audit": {
+    "result": "both_budget_families_known_controls_tensor_maps_and_certificates_verified",
+    "known_ensembles": 2,
+    "known_inverse_controls": 6,
+    "real_families": 2,
+    "separation_certificates": 4,
+    "maximum_ensemble_error": 1.3322676295501878e-15,
+    "maximum_normalized_operator_error": 1.2710704202173598e-17,
+    "maximum_relative_SVD_solution_error": 1.1602046006372486e-14,
+    "input_report_sha256": "abba1a9c5093c6570979f82e6318a5a61bba01b37d1995d4dbea53a8a6299533",
+    "certificate_report_sha256": "dad49dd245172cfa4598020174e9ee44e9044628ca83abe9a79893f871daafab",
+    "no_sound_or_RPM_source_qualification": true
+  },
+  "both_rank10_both_indefinite": true,
+  "training_only_solve": true,
+  "same_training_dual_violated_by_both_recording_portions": true,
+  "interrupted_auditor_and_exact_source_preserved": true,
+  "source_or_solver_not_rerun": true,
+  "plot_viewed": true,
+  "normalized10_required_change_lower_bounds": {
+    "variance_factors": 0.04973506287158296,
+    "compound_sign_groups": 0.04849402831004023
+  },
+  "lower_bound_NOT_nearest_model_or_statistical_uncertainty": true,
+  "no_event_rate_selected": true,
+  "new_audio_or_profile": false,
+  "runtime_changed": false,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "old61_driving_tests_repeated": false,
+  "original_shared_phase_qualification_still_required": true,
+  "timbre_or_source_RPM_load_qualified": false,
+  "next": "Observe source cross-band lag structure and effective response support with known/samePSD controls, before temporal joint law; no delay/rate/PSD-projection sweep. Existing hearing pending/no duplicate questions.",
+  "manifest_sha256": "aab0422413b90ffe8288674a513f2164d71d1c9cf35b2fc5710dd727752da30e",
+  "file_count": 46,
+  "bytes": 8741243
+}
