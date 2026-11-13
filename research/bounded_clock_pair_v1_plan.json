@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.bounded-clock-pair-plan/1",
+  "scope": "Finite feasible model-pair diagnostic, not a phase estimator or original full qualification",
+  "base": "Original observed initialization in native_observation_v1/fit1/input.npz",
+  "direction": "One sinusoid at the declared minimum source-order gap, projected onto the unchanged quintic phase basis with its zero-origin gauge",
+  "amplitude": "Two times the original median-aligned phase-p95 error gate on the unchanged5..35cycle interior",
+  "signs": [-1, 1],
+  "compensation": "Keep every real positive envelope control fixed; fit all36 cosine plus36 sine constants to the base model raw waveform using thin QR, retaining the original a,b boxes",
+  "noise_evaluation": "Only after construction, compare the finite raw-model difference with the declared synthetic raw-white sigma; report fixed-pair Gaussian distance and binary testing error, not a confidence interval",
+  "policy": [
+    "No truth phase, original audio waveform or heldout observations enter model-pair construction",
+    "Keep original36voices/732parameter model, phase and amplitude bounds, positivity and monotonic coordinate; reject an out-of-box candidate rather than clamp or scan its size",
+    "Zero and known-coefficient controls plus independent least-squares and scalar sample reconstructions precede interpretation",
+    "Do not compare pair difference only with sqrt(N)*sigma and infer ambiguity; raw Gaussian distance uses sigma per sample",
+    "A detectable pair does not rule out other weaker bounded directions; an ambiguous pair does not prove global nonidentifiability",
+    "No singular-value cutoff, ridge, alternative-direction/degree/window/strength/iteration sweep",
+    "Keep failed dense36positive/all17/full33/individual14kHz/original E before any phase-extracted real model",
+    "540C-H/voices/moving35/driving/stereo7.1.4 unchanged; no repeat55CTest; F1/F2/F3 acquired and originalA-low question pending"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.passage-identity-plan/1",
+  "source": "Explicitly approved F3 QUWTsk9crlo, native48kHz stereo decode from state_media_v1/F3_inspect1",
+  "template_audio_seconds": [159, 162],
+  "second_nominal_audio_seconds": [190, 193],
+  "maximum_integer_lag_seconds": 0.75,
+  "construction_basis": "Previously sampled original-PTS video fifth-gear ascents; windows fixed before waveform comparison, not precise RPM/load or calibrated AV boundaries",
+  "method": "Paired-channel normalized cross-correlation chooses one integer lag; then gain/DC residual, three contiguous one-second blocks and fixed3..6/6..14kHz bands use that same lag",
+  "copy_evidence_gates": {"joint_absolute_NCC": 0.98, "minimum_block_absolute_NCC": 0.95, "minimum_high_band_absolute_NCC": 0.9, "maximum_affine_normalized_residual": 0.2},
+  "policy": [
+    "Raw master remains untouched; filtering is a derived measurement only, not cleaning or a new training source",
+    "Independent analytic copy/gain/DC/added-noise and same-spectrum independent-detail controls precede real comparison",
+    "Check scalar dot products and direct gain/DC reconstruction at the selected lag",
+    "Failure to match does not prove independent recordings; exclude conclusions about time warp, nonlinear processing, remixing or small fractional shifts",
+    "No lag/window/band/threshold sweep, new download, model extraction, C/runtime or moving35 change",
+    "Original phase extractor full qualification remains required and is not replaced by source-identity evidence"
+  ]
+}

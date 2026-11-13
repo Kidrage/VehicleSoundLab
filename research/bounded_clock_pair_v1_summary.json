@@ -1,0 +1,554 @@
+{
+  "schema": "vsl.bounded-clock-pair-publication/1",
+  "result": "finite_clock_compensation_and_F3_identity_evidence_published_not_phase_qualification",
+  "sources": {
+    "research/positive_band_envelope_v1_plan.json": "d3cca7de7d5f75a749828bc7af298f3de294fe23b082ddbb7603165a3bd834cb",
+    "tools/quintic_phase_v1/initialize.py": "f7a7ce49ecc14df54fc28949930dfb979968c350f6d4d569913bb37578753d9a",
+    "tools/bounded_clock_pair_v1/__init__.py": "ca7d495a0fa7020951f5cb85d72b30b9e4245d53f9bfe2c4f6bdd63bad3152ef",
+    "tools/joint_trust_v1/fit.py": "3b0b7e1d0b583d4871dc071b60ce169d0aeedbacfa4b539434155dd0eb94660b",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "research/native_observation_v1_plan.json": "4cddde226013101cd111708c64581e8e167ed517835a184123886779983325d1",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/diagnose_positive_band_envelope_v1.py": "66be659f6de5a5964f6e2176aefb37a1a287d568c597caac4b321e7250239e47",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/joint_trust_v1/__init__.py": "2ca1cf0e131a7d14ced48997e6df74e2e0922fc37660e46fa91f2971b16a0472",
+    "research/interior_qp_v1_plan.json": "233cf864724d4bae9f03d924b155914fa89ba5c372a251ff3f77d9a4e6061267",
+    "research/state_media_v1_visual_review.json": "9d1b5efcf39181db42be138ef983edcfa49e51ee207eae5c4e138d20cfc54718",
+    "tools/diagnose_quintic_phase_v1.py": "25a74bda1223b57780ea72e2baaaa8f94fd60f260cb17414c9f80cd12c4a32f6",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "research/certified_qp_v1_plan.json": "d1f6e5c597823b094d3dab81f43c7b1b6277b131dac2e61cbe92fd153c143959",
+    "tools/interior_qp_v1/certified.py": "69622bbda34ae8ddc7845be9dfd625a8acfce014f241ea3f28261fcd87e34bf5",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/interior_qp_v1/checks.py": "14d5de58a868445936642c95d89101afe328afb387287af77974573cc1907bcf",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "tools/native_observation_v1/__init__.py": "59a76e49577bdaa7ce4dd68306bbc7bf041ce3a73135fb8b4aa5d2ec0cdf8781",
+    "tools/audit_bounded_clock_pair_v1.py": "5a730e1148e901d7273ff475560676fc282794cefc8302ea0651c1551de18de2",
+    "tools/interior_qp_v1/refine.py": "daf9d075f6e55adb9e6fc75a22e0949993898613d9fc2fdd0b4b8d4794a72933",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/interior_qp_v1/sqrt_checks.py": "6571eccf38d34b05ea426ebaa66bac890a6069ee2fead62c843f4dc93cf4501a",
+    "research/F3加速音轨复用核查V1.md": "4fe0068758fafafa21f132b8d42a7873de4ef1c62aad9e7609c4e9241fc846bc",
+    "research/F3_passage_identity_v1_plan.json": "0dd182c662e1edb1d3d3b86baa7940e367eaf200a93dbc5517a7a379ee366fa6",
+    "tools/diagnose_absolute_amplitude_v1.py": "cd77317cd6852a1ef83ca1db4d56e926f6bfd6b770f847563e6aeda7ce0a994f",
+    "tools/interior_qp_v1/__init__.py": "5fce775f59eb1ca7a378279d8ed2a1ed519ae30da41ea6ef9c6cb63bbd496aa0",
+    "tools/interior_qp_v1/active_set.py": "11ac8b6babe9af43a66669aa7274a12e972d9ba9d8ab024855d04b72d9a676a7",
+    "research/guard_observation_v1_plan.json": "2b2f311dcb42c1408fb7de502426dde23f774c9a02f8560688063c5344ef31a9",
+    "tools/offline_ipm_requirements.txt": "349764303482a554f658768fbaa9d003625697ce97957b4aa06edf4cf345cc1c",
+    "tools/absolute_amplitude_v1/__init__.py": "75f432c7f696ad5b38ed029589090b1876ee9f1c391d1e03d69a7183b4866f98",
+    "tools/native_observation_v1/checks.py": "7a62e8aa7fa7913083e432f2aea82ad55f5975d61f345e2689fb41b37f627a9b",
+    "tools/absolute_amplitude_v1/model.py": "b70511bf98a7e7662c71b0d52836483815b92d8f46900938dbe6563c550442d4",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/bounded_clock_pair_v1/checks.py": "63efb9b533b11d42e4a479544fa8395b5897cbd45708a35385bda4de6d1ebbd7",
+    "research/sqrt_qp_v1_plan.json": "32d41a6012be997c3bbad49c0da88d1c56329d4ea7507d7af551f03248263473",
+    "tools/quintic_phase_v1/basis.py": "25cdacdbdc7021d3b01e106908bae5bcbeb1bfdc1916dd0e190079b1587ce91f",
+    "tools/interior_qp_v1/backend.py": "bd74ef3e551cda8fbd64eb68a7acaa224193b6bbc26afe97f1eed625868431ef",
+    "AGENTS.md": "150ba512853ec978e7627fa6a497b7a19da8c90d4eb4609a7d0040e9c2fdeffd",
+    "tools/passage_identity_v1/checks.py": "d51c63d1351eb52ba8ceb983f73c28c37050529e4dd8a30fd956381a897bbac7",
+    "research/absolute_amplitude_v1_plan.json": "9260dbd680d47e02989dfba77c9e59f5f7746fd55fdc642f8bdd3aee60cac945",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "tools/quintic_phase_v1/model.py": "7c82e703549db08b1a3dd49c2aa5154f6593d5c09019c256a32fe287fde8f923",
+    "tools/bounded_clock_pair_v1/pair.py": "d34ddec83c21efc25d16fde14d483108a50819696523619ac098bcc7a13b7bde",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "tools/interior_qp_v1/active_checks.py": "ad1c79d8a4dad00b59dedd975375daf6606cf2bfa87d346b3c27bd3975daf268",
+    "handoff/开发留痕.md": "8f45bc2992cc5203f21142f6a4239418249853a55249e2520232daade14648b3",
+    "research/有限相位与声线补偿V1.md": "8366091db19f375fa3a6825c42dbe169fe6ef36f4d1789899a6a614883e07aab",
+    "tools/positive_band_envelope_v1/basis.py": "883bd6cfa372f7f828a0ecba3d96c39fcadc31664d779fe287305c723bfa490a",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/inspect_F3_passage_identity_v1.py": "325c683cdd291a76b9df3667f107c1abc41ec170cd64e72fa72ddee5c4662933",
+    "tools/interior_qp_v1/square_root.py": "fa32ef4c63cf34021bfefa668cff6779abd7d0fab575c2f1b211f1664f7d6077",
+    "tools/native_observation_v1/geometry.py": "223cd1819bfda1a4c37d7d86c552d3763deb74811ec75cb27406ae881bc93a97",
+    "research/approved_state_media_v1_plan.json": "ecb90320ab8fe26b3750aa804e22b55eef499ba0f8dcf599ec57d07095367771",
+    "tools/guard_observation_v1/geometry.py": "7659f52bb2e94690b2c1ec779e2a4fe6e8be4b7616bb17d35fbb269a1a95faf4",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "research/quintic_phase_v1_plan.json": "7c6918734600b52a50cd39984a4c5c1a2764feb21e3bf64ef4453bba893d151b",
+    "tools/absolute_amplitude_v1/checks.py": "91383f27d9e83540493e4783b369cc13d1c4be0f1010de0dbf67ca7a88e9e7fb",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/joint_trust_v1/constraints.py": "9521d54ce82f17a312f563b23aa1c101f3ca8c50b4a3ffed933b587e13d7b808",
+    "tools/package_bounded_clock_pair_v1.py": "147b1ce059657f17ce5347aecf6dc180433e66aff8187b555a84be83d94849ad",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "tools/guard_observation_v1/__init__.py": "331f9f1efffaf705808aef8a22faeb3ab3891243502ac7136ae2a94b9e568780",
+    "tools/quintic_phase_v1/checks.py": "5969c500aa794712352adaca9929e4b4e5361bf56a4f18ba1d19842384df4194",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "tools/positive_band_envelope_v1/__init__.py": "7b530d49e68cfdfa4a26af916bef0c08fa6f62b4dc0792ad38869581689c936c",
+    "tools/offline_qp_requirements.txt": "44920b06170c2b3150f3b1af9df0113e94b773b9ff8ad348c93a6ccd3a6e83df",
+    "research/refined_qp_v1_plan.json": "89ad3d0728e70b9c4b2f680d82f4d7e5b7eb5a6371b70dca1b3ebfd2d1c7adcc",
+    "tools/diagnose_certified_qp_v1.py": "11bb20f513f440f2f1a12e205c25827984f8e2d3b4436cc36ef4e54367054261",
+    "research/joint_trust_precise_v1_plan.json": "ac913fa0cdaf922ba07a51b50f454fca3e736671ee02e7ccf120705607b47c8e",
+    "research/active_qp_v1_plan.json": "179f902642a5550eff98e9a7868c28bea47ccd6807ac3a0ee233645e9966aaba",
+    "tools/absolute_amplitude_v1/quadratic.py": "3be08a5f5af7ec4da2f0aa424b581852956c68119493d85069a5805855f22cec",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "tools/joint_trust_v1/quadratic.py": "a445dba8f298aacbba4b0b28db8d0c7a2d17f4695d6400bc84b7515067191c18",
+    "tools/positive_band_envelope_v1/model.py": "a7e5d540aa222c0cb1960e19b10f23d49f220430b437c0fcc651b932e1f2fa5e",
+    "tools/diagnose_bounded_clock_pair_v1.py": "da68f998710425cab862ed6dd6ec0dc6dd4915b6060b1c7632aa3063a39485b1",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/audit_F3_passage_identity_v1.py": "b22b4535e98e58f1a39205f9e65696206aa557629fdbd7e2355573e13e03d1b6",
+    "tools/diagnose_guard_observation_v1.py": "8735173dfbc64ce5169a624f1da6b2527f35607aabe9edf28f3e4ba0eab5401b",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/absolute_amplitude_v1/amplitude.py": "0eea45aacc8f2301fe04c42a033890f4c9fa393035c6f9b1fd54ed34193490ea",
+    "tools/guard_observation_v1/checks.py": "9c316af35846217a71fe36670827f50e5f2b05ba420ea0486e6bfdc90d43287a",
+    "tools/passage_identity_v1/match.py": "2c12b16fd13909862f98cce9f591036db8955e371782d0eaace08462f7d437d1",
+    "research/怠速与加速完成度V1.md": "5d9458e4df608c1d53b3fbda5dde7f00582a3023b7f92b14d587f0ded7388c39",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "research/F补充素材可用性V1.md": "aa3cdf8e1010507f17683587fb7bcc36d6425dfe04805f19f605516970765d15",
+    "handoff/算法说明.md": "9b3874662e210316a936014335f45f6059d34ac947a0e2b7f7c28aebbf6bbd4f",
+    "tools/absolute_amplitude_v1/cone.py": "81d93db648e354d9dae6209e96192d05ed2ddad619d0446e42d6deb4a51a1582",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "tools/positive_band_envelope_v1/checks.py": "f74f53b9c094ab80f6897e1dffb323c63ad6df1879cb91613dfaa5c84a3cfb93",
+    "tools/joint_trust_v1/osqp_backend.py": "a76aae8a7987639f748748ca5f646aef1d4506f71bcb0376f946814b342dc403",
+    "tools/joint_trust_v1/checks.py": "032657547705fdfca250ff986bceaafc724d830db0c904c6bda3a19bc2019ca8",
+    "tools/positive_band_envelope_v1/fit.py": "1a64de78be1803b92f4b9e40072a3d55774ed19f934b82d9710dc8a895f39045",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "research/bounded_clock_pair_v1_plan.json": "2113809abc72be2c2c35951b9a0925260ccfb71f1681275c35beea2da1639811",
+    "handoff/研究续接.md": "3b93faf93ebb5e5f95ca6e7079eb7f5bba2ab7b81f223c779d0c97cdfb420439",
+    "tools/absolute_amplitude_v1/fit.py": "effe61b872721002fd86461765d2bb8a180e3329180bea2c76e3be45fe11d520",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "tools/quintic_phase_v1/__init__.py": "a7978fa785a73677fd9efb40964fdd7c8e762acd7d36adca91fa870eaf852da0",
+    "tools/diagnose_native_observation_v1.py": "de9bdbe98f4fda43711f3ae8be9872a026f4e476f58ad96e6ad129f37a6d586e",
+    "tools/passage_identity_v1/__init__.py": "947bd0c052eb2714242cb11f3b92d63f6972607c176fe54a9e15494aaa728fae"
+  },
+  "reports": {
+    "pair2": {
+      "path": "references/analysis/bounded_clock_pair_v1/pair2/report.json",
+      "sha256": "1b561169aec361eeb59c8075f789f9d2aa2b02a758f88fcfbfdd2911d4e693ae",
+      "result": "finite_bounded_clock_pairs_measured_not_phase_qualification"
+    },
+    "audit1": {
+      "path": "references/analysis/bounded_clock_pair_v1/audit1/report.json",
+      "sha256": "5f4c288d8db74b22d3cc9229ddf28ea9ceced3de431b0f3eec0020a9ce65106b",
+      "result": "finite_pairs_controls_and_original_serialization_failure_independently_reconstructed"
+    },
+    "F3_match1": {
+      "path": "references/analysis/F3_passage_identity_v1/match1/report.json",
+      "sha256": "4c0f6f9dcd96ef63acabf3a284f965c127f43a9f2b9a29580ef26ae222741e16",
+      "result": "no_direct_integer_shift_copy_established"
+    },
+    "F3_audit1": {
+      "path": "references/analysis/F3_passage_identity_v1/audit1/report.json",
+      "sha256": "32fb49b15fa93662c8d53594663c15aeff331ca357a64aab010864b0d107e800",
+      "result": "F3_source_slices_controls_and_fixed_lag_identity_measurements_reconstructed"
+    }
+  },
+  "pair_construction": {
+    "minimum_observed_gap": 0.2,
+    "median_aligned_phase_p95_target_cycles": 0.0002,
+    "original_phase_gate": 0.0001,
+    "fixed_envelopes": true,
+    "truth_used": false,
+    "heldout_used": false,
+    "recorded_audio_used": false,
+    "source_orders_retained": 36,
+    "nonlinear_estimator_run": false
+  },
+  "pair_controls": {
+    "passed": true,
+    "zero_coefficient_error": 2.220446049250313e-16,
+    "known_coefficient_error": 1.1102230246251565e-16,
+    "zero_certificate": {
+      "method": "thin_QR_and_triangular_solve",
+      "normalized_stationarity": 1.6541298310628756e-15,
+      "absolute_stationarity": 4.4663086253993563e-13,
+      "design_condition": 1.281383475426258,
+      "singular_value_truncation": false
+    },
+    "known_certificate": {
+      "method": "thin_QR_and_triangular_solve",
+      "normalized_stationarity": 1.0998425414900765e-15,
+      "absolute_stationarity": 2.327784039603468e-13,
+      "design_condition": 1.281383475426258,
+      "singular_value_truncation": false
+    },
+    "scalar_waveform_maximum_error": 2.6478819137309983e-14,
+    "independent_lstsq": [
+      {
+        "sign": -1,
+        "independent_lstsq_coefficient_error": 2.498001805406602e-16,
+        "columns": 72
+      },
+      {
+        "sign": 1,
+        "independent_lstsq_coefficient_error": 5.100087019371813e-16,
+        "columns": 72
+      }
+    ],
+    "phase_estimator_qualified": false
+  },
+  "pairs": [
+    {
+      "sign": -1,
+      "original_parameter_violation": 1.1102230246251565e-16,
+      "minimum_coordinate_step": 0.007461703233950345,
+      "minimum_envelope": 0.7917503925033635,
+      "phase_difference_p95_cycles": 0.00020000000000000573,
+      "raw_difference_norm_before": 0.03435830006868013,
+      "raw_difference_norm_after": 0.014509942408273961,
+      "coefficient_certificate": {
+        "method": "thin_QR_and_triangular_solve",
+        "normalized_stationarity": 1.7132822165891154e-15,
+        "absolute_stationarity": 4.625121086902079e-13,
+        "design_condition": 1.2814274859548866,
+        "singular_value_truncation": false
+      },
+      "coefficient_maximum_absolute_change": 0.00028807827407067305,
+      "feasible": true,
+      "known_raw_white_sigma": 0.00025,
+      "fixed_pair_raw_Gaussian_distance": 58.039769633095844,
+      "fixed_pair_Gaussian_KL": 1684.3074295314173,
+      "fixed_pair_equal_prior_log_binary_error": -425.3649611215718,
+      "native_relative_model_difference": 0.0006217132556649701,
+      "difference_to_expected_full_noise_norm": 0.8111304393626896
+    },
+    {
+      "sign": 1,
+      "original_parameter_violation": 1.1102230246251565e-16,
+      "minimum_coordinate_step": 0.007465489200981779,
+      "minimum_envelope": 0.7917503925033635,
+      "phase_difference_p95_cycles": 0.0001999999999999995,
+      "raw_difference_norm_before": 0.034354984589807264,
+      "raw_difference_norm_after": 0.014444825013659377,
+      "coefficient_certificate": {
+        "method": "thin_QR_and_triangular_solve",
+        "normalized_stationarity": 1.1628026075917784e-15,
+        "absolute_stationarity": 3.1402210001686866e-13,
+        "design_condition": 1.281341770433575,
+        "singular_value_truncation": false
+      },
+      "coefficient_maximum_absolute_change": 0.00028806939362031186,
+      "feasible": true,
+      "known_raw_white_sigma": 0.00025,
+      "fixed_pair_raw_Gaussian_distance": 57.77930005463751,
+      "fixed_pair_Gaussian_KL": 1669.223757401917,
+      "fixed_pair_equal_prior_log_binary_error": -421.5895558778863,
+      "native_relative_model_difference": 0.0006188558844947652,
+      "difference_to_expected_full_noise_norm": 0.8074902663407924
+    }
+  ],
+  "pair_audit_exact": true,
+  "independent_Gaussian_checks": [
+    {
+      "sign": -1,
+      "scalar_raw_Gaussian_distance": 58.039769633095844,
+      "norm_implementation_error": 0.0,
+      "log_probability_implementation_error": 0.0
+    },
+    {
+      "sign": 1,
+      "scalar_raw_Gaussian_distance": 57.77930005463751,
+      "norm_implementation_error": 0.0,
+      "log_probability_implementation_error": 0.0
+    }
+  ],
+  "recovered_failure": {
+    "schema": "vsl.recovered-execution-failure/1",
+    "result": "numpy_integer_JSON_serialization_failed",
+    "recovered_metadata": true,
+    "original_report_saved": false,
+    "error": "TypeError: Object of type intc is not JSON serializable",
+    "failure_stage": "final console serialization and finally report serialization",
+    "numeric_artifacts_retained": {
+      "pairs.npz": "8479a549b7477d8169028b4033b7149e03ecbd47779863ecf6f05f09f36a2ff8",
+      "bounded_clock_pairs.png": "d1ad4a6338c5b4bbc1c472bb80e2b19b49a78d03768ce655591d88f61321d3c7"
+    },
+    "original_executed_sources_retained": true,
+    "correction": "Convert independent lstsq rank to native int only; no numeric expression or threshold change",
+    "numerical_reconstruction_required": true
+  },
+  "original_failure_reproduced": {
+    "type": "TypeError",
+    "message": "Object of type intc is not JSON serializable"
+  },
+  "preserved_source_variants": {
+    "tools/bounded_clock_pair_v1/checks.py": {
+      "pair1_sha256": "6aa89f6f00b65db0ffb8e3100adb736cb6cbc70edb968064b5c1f169da475a76",
+      "pair2_sha256": "63efb9b533b11d42e4a479544fa8395b5897cbd45708a35385bda4de6d1ebbd7",
+      "change": "Native integer serialization only; all pair/control arrays independently exact"
+    }
+  },
+  "F3_controls": {
+    "passed": true,
+    "known_copy": {
+      "selected_search_sample": 36817,
+      "integer_lag_samples": 817,
+      "integer_lag_seconds": 0.017020833333333332,
+      "joint_NCC": 0.9986611014835889,
+      "FFT_vs_direct_vs_scalar_maximum_error": 6.106226635438361e-15,
+      "channels": [
+        {
+          "channel": 0,
+          "gain": 0.8000000000000008,
+          "DC_offset": 0.013000000000000003,
+          "normalized_affine_residual": 9.72774512315105e-16,
+          "raw_NCC": 0.9999999999999998
+        },
+        {
+          "channel": 1,
+          "gain": 0.7200000000000003,
+          "DC_offset": -0.020999999999999998,
+          "normalized_affine_residual": 4.807104043473594e-16,
+          "raw_NCC": 0.9999999999999999
+        }
+      ],
+      "maximum_normalized_affine_residual": 9.72774512315105e-16,
+      "contiguous_blocks": [
+        {
+          "first_sample": 0,
+          "samples": 48000,
+          "joint_NCC": 0.9986574338271382
+        },
+        {
+          "first_sample": 48000,
+          "samples": 48000,
+          "joint_NCC": 0.9986625324353245
+        },
+        {
+          "first_sample": 96000,
+          "samples": 48000,
+          "joint_NCC": 0.9986634428398249
+        }
+      ],
+      "fixed_lag_high_bands": [
+        {
+          "band_Hz": [
+            3000,
+            6000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": 0.9986174238516092
+        },
+        {
+          "band_Hz": [
+            6000,
+            14000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": 0.9986177868396507
+        }
+      ],
+      "independent_take_established": false
+    },
+    "known_copy_with_independent_added_noise": {
+      "selected_search_sample": 36817,
+      "integer_lag_samples": 817,
+      "integer_lag_seconds": 0.017020833333333332,
+      "joint_NCC": 0.9978591353521974,
+      "FFT_vs_direct_vs_scalar_maximum_error": 5.995204332975845e-15,
+      "channels": [
+        {
+          "channel": 0,
+          "gain": 0.7999419956505819,
+          "DC_offset": 0.012987515028299023,
+          "normalized_affine_residual": 0.03616311173490971,
+          "raw_NCC": 0.999345900751911
+        },
+        {
+          "channel": 1,
+          "gain": 0.720155906239605,
+          "DC_offset": -0.021009357803598597,
+          "normalized_affine_residual": 0.046077057926007484,
+          "raw_NCC": 0.9989378883258375
+        }
+      ],
+      "maximum_normalized_affine_residual": 0.046077057926007484,
+      "contiguous_blocks": [
+        {
+          "first_sample": 0,
+          "samples": 48000,
+          "joint_NCC": 0.9978579999933113
+        },
+        {
+          "first_sample": 48000,
+          "samples": 48000,
+          "joint_NCC": 0.9978638425702907
+        },
+        {
+          "first_sample": 96000,
+          "samples": 48000,
+          "joint_NCC": 0.9978556317377217
+        }
+      ],
+      "fixed_lag_high_bands": [
+        {
+          "band_Hz": [
+            3000,
+            6000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": 0.9964844159785659
+        },
+        {
+          "band_Hz": [
+            6000,
+            14000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": 0.996464175325185
+        }
+      ],
+      "independent_take_established": false
+    },
+    "same_carriers_independent_detail": {
+      "selected_search_sample": 28800,
+      "integer_lag_samples": -7200,
+      "integer_lag_seconds": -0.15,
+      "joint_NCC": 0.6240398429845715,
+      "FFT_vs_direct_vs_scalar_maximum_error": 8.770761894538737e-15,
+      "channels": [
+        {
+          "channel": 0,
+          "gain": 0.6739022071460572,
+          "DC_offset": 0.00014023933235083388,
+          "normalized_affine_residual": 0.7422368263755686,
+          "raw_NCC": 0.6701376676265284
+        },
+        {
+          "channel": 1,
+          "gain": 0.5629890208581005,
+          "DC_offset": 6.876967011762596e-05,
+          "normalized_affine_residual": 0.8261848897665829,
+          "raw_NCC": 0.5633990840615375
+        }
+      ],
+      "maximum_normalized_affine_residual": 0.8261848897665829,
+      "contiguous_blocks": [
+        {
+          "first_sample": 0,
+          "samples": 48000,
+          "joint_NCC": 0.6256192382229671
+        },
+        {
+          "first_sample": 48000,
+          "samples": 48000,
+          "joint_NCC": 0.6226868391480629
+        },
+        {
+          "first_sample": 96000,
+          "samples": 48000,
+          "joint_NCC": 0.6238247936872822
+        }
+      ],
+      "fixed_lag_high_bands": [
+        {
+          "band_Hz": [
+            3000,
+            6000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": -0.004167163859336428
+        },
+        {
+          "band_Hz": [
+            6000,
+            14000
+          ],
+          "edge_margin_seconds": 0.05,
+          "fixed_lag_joint_NCC": 0.0053239314966407065
+        }
+      ],
+      "independent_take_established": false
+    },
+    "controls_only": true,
+    "no_match_does_not_prove_independence": true
+  },
+  "F3_measurement": {
+    "selected_search_sample": 44842,
+    "integer_lag_samples": 8842,
+    "integer_lag_seconds": 0.18420833333333334,
+    "joint_NCC": 0.4957331840656029,
+    "FFT_vs_direct_vs_scalar_maximum_error": 3.1807889655510735e-14,
+    "channels": [
+      {
+        "channel": 0,
+        "gain": 0.50762335494574,
+        "DC_offset": -0.0006567722746262108,
+        "normalized_affine_residual": 0.8707594160327735,
+        "raw_NCC": 0.4917093037458852
+      },
+      {
+        "channel": 1,
+        "gain": 0.5099084458099359,
+        "DC_offset": -0.00043787312399802997,
+        "normalized_affine_residual": 0.865686441483335,
+        "raw_NCC": 0.5005866408843932
+      }
+    ],
+    "maximum_normalized_affine_residual": 0.8707594160327735,
+    "contiguous_blocks": [
+      {
+        "first_sample": 0,
+        "samples": 48000,
+        "joint_NCC": 0.5339841844341022
+      },
+      {
+        "first_sample": 48000,
+        "samples": 48000,
+        "joint_NCC": 0.47146416052174506
+      },
+      {
+        "first_sample": 96000,
+        "samples": 48000,
+        "joint_NCC": 0.48125075683313007
+      }
+    ],
+    "fixed_lag_high_bands": [
+      {
+        "band_Hz": [
+          3000,
+          6000
+        ],
+        "edge_margin_seconds": 0.05,
+        "fixed_lag_joint_NCC": 0.01805115647646785
+      },
+      {
+        "band_Hz": [
+          6000,
+          14000
+        ],
+        "edge_margin_seconds": 0.05,
+        "fixed_lag_joint_NCC": 0.011226546900878265
+      }
+    ],
+    "independent_take_established": false
+  },
+  "F3_source_master": "references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+  "F3_source_master_sha256": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+  "F3_inspection_report_sha256": "d2a1739883ec91b52df68a8297e6162a60dcbff1753dd5879d330826c872370a",
+  "F3_original_master_unchanged": true,
+  "F3_direct_copy_established": false,
+  "F3_independent_take_established": false,
+  "F3_audit_exact": true,
+  "phase_diagnostic_real_audio_read": false,
+  "approved_F3_source_audio_read": true,
+  "nonlinear_estimator_run": false,
+  "original17_rerun": false,
+  "full33_replaced": false,
+  "individual14kHz_demonstrated": false,
+  "phase_extracted_real_model_permitted": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "C_H": 540,
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "F1_F2_F3": "approved_and_acquired_in_state_media_v1",
+  "A_low_listening": "original_question_pending",
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "previous_goal_turn_classification": "progress_actual_score_geometry_rejection_replay_and_conditioning",
+  "goal_turn_classification": "progress_actual_bounded_finite_pairs_independent_audits_and_approved_F3_waveform_identity_evidence",
+  "next_step": "Original-bound slow-envelope finite compensation with complete certificates; keep failed dense36/all17/full33/individual14kHz/original E. Qualify F source actions and listening quality before actual state fitting; no independent-take or AV claim from direct-copy failure",
+  "limits": [
+    "One predeclared direction and fixed real envelopes; not all nuisance/phase directions",
+    "Raw Gaussian binary distance assumes the stated synthetic independent sample noise and fixed hypotheses",
+    "Neither a confidence interval, a global phase identifiability claim nor real coloured-noise calibration",
+    "No actual recording fit, real model, changed gates or full33/HF qualification",
+    "A match supports shared waveform under this simple time/gain/DC model, not common physical source attribution",
+    "A failed direct match does not prove independent takes or rule out transformed/reedited audio",
+    "No fractional-delay/time-warp/remix search and no listening-quality or calibrated RPM/load conclusion",
+    "Original phase extractor qualification remains failed; no new engine DNA or runtime state map"
+  ],
+  "goal_complete": false
+}
