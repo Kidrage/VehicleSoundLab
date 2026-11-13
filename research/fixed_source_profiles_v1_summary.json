@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.fixed-source-profiles-freeze/1",
+  "result": "generic_F2_exact_A_portability_not_qualified",
+  "git_parent": "98c41ccac8424ec6e66449507bf6c0566f5f9e3b",
+  "parent_freeze": "baselines/idle_texture_v2",
+  "parent_manifest_sha256": "4e3e1ecc7396ff9f8be5abbc741795561efce72d6af4f855f773de0b864e4eb2",
+  "F2_all6_FLOAT_files_exact": true,
+  "A_source_qualified": false,
+  "A_failed_outputs_retained": true,
+  "oracle_scope": "10predeclared samples per file; full F2 identity additionally checked. Not full A sample replay.",
+  "max_selected_sample_error": 2.973720880650177e-08,
+  "C_H_unchanged": 569,
+  "voices_unchanged": 67,
+  "C_tests_repeated": false,
+  "runtime_changed": false,
+  "measured_RPM_load": false,
+  "shared_phase_qualified": false,
+  "timbre_accepted": false,
+  "V2_listening": "Asked once, pending; no new A listening question.",
+  "reports": {
+    "trial1": "daeeb2f0a478f9a321d9183bc5e021c0b103d9ccf17adf54ff057318732bd695",
+    "audit1": "565be211b72c279dedaf64da43b1663c95faece6fa4ad713acda50ed75fb28da",
+    "plot1": "cdc26894094a0f7925f2193a3c081f603479acbd5042d2762d2aade704d2f510"
+  },
+  "next": "Check A low-line variation and identity using known changing/adjacent/missing-line controls; do not raise random LF or relax support.",
+  "freeze": "baselines/fixed_source_profiles_v1",
+  "manifest_sha256": "3802479e167ff8e4b2f35f0b4a981e14df4c97c029f45f951ed770415b14df64",
+  "file_count": 71,
+  "bytes": 64526720
+}

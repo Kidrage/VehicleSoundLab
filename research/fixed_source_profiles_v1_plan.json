@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.fixed-source-profiles/1",
+  "purpose": "Separate source identity and fitting from the autonomous generator. Reuse exactly one independent-OSC/fine-resonator/amplitude kernel for the frozen F2 candidate and a separately fitted approved A low-rev context. This is not a wide-RPM or accepted multi-car engine atlas.",
+  "sources": [
+    {"id":"F2_tailpipe","use":"recording_power","train_seconds":[6,9],"holdout_seconds":[9,12],"modal":"preserve references/analysis/idle_texture_v2/trial1/profile.json exactly","description":"LP-610 tailpipe fixed idle candidate; actual RPM unknown"},
+    {"id":"A_exterior_low_rev","use":"exterior_spectral_observation","train_seconds":[208,210],"holdout_seconds":[210,211],"modal":"same independent-modal fit and0.9 power ceiling as idle_modal_v1, no common phase or inferred RPM","description":"Performante separate exterior low-rev context; not verified warm idle"}
+  ],
+  "recipe": "research/idle_texture_v2_recipe.json, unchanged spectral/envelope settings and three seeds149921/277139/381611",
+  "modal_recipe": "research/idle_modal_v1_plan.json, unchanged fixed0.5s/hop0.25s/global42dB floor/support80%/max64 modes",
+  "controls": "Known source-independent fixtures before reading A; generic F2 generation must reproduce all frozen static/dynamic samples to FLOAT rounding at all3seeds. Frame length independent of ratio; finite ratio and dynamic amount validation. A training only for parameters and support; holdout only after models/allseeds saved. No source interval, threshold, order or seed sweep.",
+  "rendering": "One same generic kernel with profile data; no car name, source ID, state label or filename branching. ratio applies only to OSC frequencies, fixed-Hz resonators stay fixed. Amount scales the autonomous amplitude statistics with corresponding variance correction. No recorded PCM/time sequence/loop/room; no false mechanical source separation or learned RPM/load. Evidence trajectories stored separately.",
+  "stereo_limit": "Current fine texture kernel shares excitation across L/R with per-band gain, retaining independent OSC LR parameters; it is an explicit approximation, not a full stereo spectral-matrix model. Report source L/R and residual correlation. Do not use F1 multi-car or F3 speech; cabin and exterior not pooled.",
+  "scope": "Isolated Python profiles and comparison only. Pending F2 listening determines timbre promotion/C port; no C/default/driver/owned-take/spatial change. Keep569C-H and67runtime voices exact, moving35 and old takes immutable. Original shared-phase qualification remains required for shared-phase DNA."
+}
