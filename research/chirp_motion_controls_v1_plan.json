@@ -1,0 +1,22 @@
+{
+  "schema": "vsl.chirp-motion-controls/1",
+  "purpose": "Separate constant-amplitude/linear-frequency local-model failure from the original cross-window connection rule on the CURRENT native acceleration path. No recording read or runtime promotion.",
+  "sample_rate": 48000,
+  "frames": 12000,
+  "windows": 12,
+  "base_hz": [43.3,65.1,88.7,115.7,137.9,179.3,239.7,299.8,519.3,899.1],
+  "moving": [true,false,true,false,true,true,false,true,true,true],
+  "amplitude_L": [0.04,0.03,0.05,0.02,0.055,0.08,0.03,0.3,0.07,0.03],
+  "phase_radians": [0,0.4,0.8,1.2,1.6,2,2.4,2.8,3.2,3.6],
+  "linear_slope_per_second": 0.05,
+  "right_gain": 0.71,
+  "right_phase_radians": 0.17,
+  "AM": {"depth":0.2,"frequency_hz":0.8,"applies":"all ten components; strictly positive gain"},
+  "FM": {"reference_hz":179.3,"deviation_at_reference_hz":1.2,"modulation_hz":1.6,"applies":"moving components only, frequency deviation scales with component base/reference"},
+  "noise": {"seed":591377,"band_hz":[30,200],"rms":0.1,"right_gain":0.67,"method":"one full3second Gaussian signal, retain ONLY declared native whole-signal rFFT band then RMS normalize; same mono waveform in both channels"},
+  "cases": ["linear_control","am_only","fm_only","am_fm","bandlimited_mono_noise"],
+  "analysis": "Original low30..200 + upper200..7000 native inventories and full current-window union. Observed guide is strongest detected native cell peak frequency divided by first-window strongest; saved full observed inputs. Original neighbour-graph q initialization. Exact profiled chirp solver and original60budget/f2Hz/q500/rank/bound/power/.8support gates unchanged. No truth passed to initialization or solver.",
+  "truth_diagnostic": "Only after each fit, compare every known physical component to nearest fitted line, retain nonunique/missing/rejected results; no accuracy-based fit selection. Separately feed exact instantaneous f and derivative at window midpoints into original connection rule, marked eligible ONLY for diagnostic. This oracle is never an extraction, initialization, real-data identity or confidence estimate. All true components are continuous by construction, so true-path fragmentation proves a limitation of linear prediction, not a missing sound source.",
+  "prerequisite": "First linear_control must recover all10 current-inventory modes in all12windows under old frequency0.06Hz/q0.15Hzs/relativewave1e-5 controls, and10tracks12windows. Store arrays and all rows before assertions. Later cases descriptive, including failures; do not sweep cases, windows, amplitudes, thresholds, seeds, budget or choose best.",
+  "limits": "Synthetic acceleration-path diagnosis only, not real F3 engine/source separation, physical RPM/load, a new oscillator profile or common-phase qualification. Current idle listening remains pending, no repeated question or blind tune/promotion. Preserve612C-H67voices and old binaries/takes/defaults; no old61CTest repeat. Original common-phase extraction qualification remains required."
+}
