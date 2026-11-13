@@ -1,0 +1,6 @@
+{
+  "schema": "vsl.phase-envelope-blocks-control-review/1",
+  "trigger": "fit1 stopped during the analytic diagonal box, BEFORE loading known input. Expected second coordinate -.25 is exactly weakly active: its true bound multiplier is zero. The implementation's additional absolute coordinate assertion1e-7 failed despite original numerical KKT gates passing; identical-control diagnostic replay gave error1.996778754e-6 and normalized complementarity3.98712656e-12.",
+  "repair": "Keep identical analytic fixture, solver/settings and original1e-7 failure. Add a separately justified strong-convexity bound from the saved feasible primal/dual pair: distance <= sqrt(2*(objective_scale*z.slack + norm(physical_stationarity)^2/(2*lambda_min(G)))/lambda_min(G)), plus64eps rounding. Require exact nonnegative dual and slack in this control. No change to any solver threshold or actual known recovery gate. Other fixed analytic controls keep their original coordinate assertions.",
+  "scope": "This changes only the analytic control validator, not the estimator/schedule/fixture/solver. Preserve fit1 exact sources/report and the identical-control diagnostic replay. fit2 is the FIRST and ONLY actual known fit. Audit reconstructs original failure from saved values without resolving. This bound does not rescue original phase/support/final-scale failures."
+}
