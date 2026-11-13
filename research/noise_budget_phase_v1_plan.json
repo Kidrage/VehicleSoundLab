@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.noise-budget-phase-plan/1",
+  "parent_plan": "research/bounded_phase_noise_v1_plan.json",
+  "roughness_derivative": 3,
+  "quadrature_points_per_interval": 3,
+  "noise_energy_multiplier": 1.0,
+  "maximum_iterations": 20,
+  "merit_dual_multiplier": 2.0,
+  "certification": "Original conic KKT, lifted primal equalities and auxiliary stationarity control acceptance; preserve external native status without using it as an additional gate",
+  "policy": [
+    "Minimize integrated squared third derivative of common phase subject to the observed white-noise mean-energy budget, original amplitude/phase bounds and existing scaled trust region",
+    "No fixed phase lowpass cutoff, regularization-strength sweep or truth-driven tuning; all original assessment gates remain",
+    "Use the already observation-selected first-crossing prefix as a verified feasible warm start; no oracle initialization or duplicate zero fit",
+    "Exact degree-five spline roughness uses three-point Gauss-Legendre quadrature on each original knot interval, preserving affine/quadratic phase nullspace and all original common-phase degrees",
+    "Each linearized noise-ball problem is an SOCP, with a thin QR norm-preserving reduction and independent original KKT checks; native status alone is insufficient",
+    "Use a dual-scaled exact-penalty merit and original finite trust-region budget to handle nonlinear noise feasibility; retain rejected and uncertified steps",
+    "The mean white-noise budget is not a confidence interval and real engine coloured noise is uncalibrated",
+    "No real audio/model/C/runtime/audio export/media/listening changes; failed dense positive/all17/full33/individual14kHz/original E remain required"
+  ]
+}
