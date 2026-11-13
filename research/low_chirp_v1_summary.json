@@ -1,0 +1,69 @@
+{
+  "schema": "vsl.low-chirp-freeze/1",
+  "result": "local_known_contract_passes_real_persistence_and_mono_source_detection_NOT_qualified",
+  "git_parent": "34c1e096a27e4a97bd57dae1e6bb87e72d4279ed",
+  "python_version": "3.12.14",
+  "observations": [
+    {
+      "id": "A_exterior_low_rev",
+      "training_seconds": [
+        208,
+        210
+      ],
+      "input_sha256": "04d51dc8a96e2dbc3973e8f392c1e877393c0186949fd7abb6c13e6f501a410d",
+      "windows": 7,
+      "candidates": 129,
+      "eligible": 61,
+      "successful_windows": 5,
+      "moving_tracks": 0,
+      "stationary_tracks": 0,
+      "unresolved_tracks": 58
+    },
+    {
+      "id": "F2_tailpipe",
+      "training_seconds": [
+        6,
+        9
+      ],
+      "input_sha256": "524fa50c12d710fef383d8f72be729c2191e33e34ecfe59fb695ed46ea57c206",
+      "windows": 11,
+      "candidates": 241,
+      "eligible": 86,
+      "successful_windows": 8,
+      "moving_tracks": 0,
+      "stationary_tracks": 0,
+      "unresolved_tracks": 82
+    }
+  ],
+  "longest_tracks": {
+    "A_exterior_low_rev": 2,
+    "F2_tailpipe": 3
+  },
+  "known_moving_and_fixed_tracks": 6,
+  "known_track_windows": 7,
+  "mono_noise_conditional_support": 1,
+  "independent_stereo_noise_support": 0,
+  "source_detector_qualified": false,
+  "real_continuous_source_qualified": false,
+  "audit_windows": 18,
+  "maximum_wave_error": 2.0095036745715333e-14,
+  "maximum_explained_error": 5.551115123125783e-16,
+  "known_fixture_error": 4.411748744104216e-14,
+  "audit1_retained": true,
+  "final_audit": "audit2",
+  "plot_viewed": true,
+  "supplemental_imports": "line_motion __init__/moments unchanged from HEAD, saved with original directly captured dependencies",
+  "holdout_read": false,
+  "shared_phase_fit": false,
+  "model_exported": false,
+  "new_WAV": false,
+  "C_H_unchanged": 569,
+  "voices_unchanged": 67,
+  "C_tests_repeated": false,
+  "runtime_changed": false,
+  "next": "Known nonlinear FM, AM and same-noise stereo distinguish local-model mismatch from persistence/support failures before complex-envelope/finite-coherence observations; retain original shared-phase gates and F2V2 pending listening.",
+  "freeze": "baselines/low_chirp_v1",
+  "manifest_sha256": "787015c55f4ba8b12415698f18b0801256bdab5489bf306322b3eeaef2e31346",
+  "file_count": 78,
+  "bytes": 22672357
+}

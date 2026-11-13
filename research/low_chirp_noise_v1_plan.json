@@ -1,0 +1,8 @@
+{
+  "schema":"vsl.low-chirp-noise-diagnostic/1",
+  "purpose":"Check whether the passed independent-stereo noise fixture covers the effectively mono recording case. No real source or optimizer-setting change.",
+  "fixture":"Use exact saved observe1 known_signals.npz noise_audio left channel unchanged, R=0.67L. Same frozen0.5s sample count, peak selector, bounds,60-evaluation budget and eligibility rules. No seed/amplitude/settings sweep.",
+  "assessment":"Report all candidate fits and eligible count, even nonzero. A nonzero result is an explicit limitation of the current conditional local support rule for effectively mono noise, not a physical-source classifier. Do not modify or hide the original control, rerun real recordings, or promote profiles from this diagnostic. Numerical audit of the mono model alone cannot establish acoustic identity.",
+  "runtime_changed":false,
+  "holdout_read":false
+}
