@@ -1,0 +1,218 @@
+{
+  "schema": "vsl.F2-local-chirps-final/1",
+  "result": "peak_failures_interference_and18local_chirp_fits_frozen_not_idle_DNA",
+  "sources": {
+    "AGENTS.md": "57be13efb005c1a5784c52310af6547af4937f5de68deef65dc3a9a33e158db9",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "tools/observe_F2_native_peaks_v1.py": "6cb530a29b84de598fd033f393367500ba95585399b860048b609d91a166250f",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "research/怠速与加速完成度V1.md": "696d2de81e34e9211938566cfbcf287b9b84b4dd5b231ecfdcaf40f98dc8f01d",
+    "research/F2_native_peaks_v1_absence_repair.json": "d81c76d599b8c483bfe7a9be349f2fd920b7bd3f549bbdee8362cec4a3e6c9b2",
+    "research/F2局部联合频率V1.md": "96f928e0db8f5a19bca1b4b28823e20d7f661414a5919422783ba3349a3c989b",
+    "research/F2_native_peaks_v1_plan.json": "d00430e849e193ef2a5e6ce30faa9338abcfa8cb4e17b9f529399fd55a09bbf2",
+    "handoff/算法说明.md": "94b1dd5bcd479d7b6c79605dae80d9df2b8edcc2f15c673355cc9148ceeee72b",
+    "research/F2_local_chirps_v1_plan.json": "73bab8c283913a13dc030e6458145a9e5b0aa394b14e35527dc078e1428ccb11",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "handoff/开发留痕.md": "07d38ef195266554aba38b3804f8e340757aec38660b992207701764ab3d536c",
+    "handoff/研究续接.md": "249dc2181bf779bc6d4975ad9deb56dfc20c42135e99637957b857d50ab273d9",
+    "tools/audit_F2_local_chirps_v1.py": "ddae5821e6a4c02d8d27f9fbb86660389599bfbd4512a07c62cfdd910128bead",
+    "tools/diagnose_F2_peak_interference_v1.py": "671a3253a1bb55743b7d72d7d14a1ce23f66bcbcfacbe5a4cc8c0c363e63f0ee",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/observe_F2_local_chirps_v1.py": "b5f8e9ba4bbc0e2c4b995dd72310b5d0c6504c593e79c2c9c7b306159bbfc22f",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "tools/package_F2_local_chirps_v1.py": "c024425fa9186e5fac9ad012975ad2c5e3ab3e14fd4a6aa1edff17a2a17fc182",
+    "tools/publish_F2_local_chirps_v1.py": "b9c8c8e415ac8a931f832f5fc6e501bef46621ced3588ea963c92cdeb13c448d"
+  },
+  "reports": {
+    "peak_failure1": {
+      "path": "references/analysis/F2_native_peaks_v1/observe1/report.json",
+      "sha256": "383b48f29618b74af63edead32312a362cc794e746ed7335f6e84fa4a52a0025",
+      "result": "failed"
+    },
+    "peak_failure2": {
+      "path": "references/analysis/F2_native_peaks_v1/observe2/report.json",
+      "sha256": "600635c42e5349f22b23a3a220214d646e5802f680c98d552679066586f1f76b",
+      "result": "failed"
+    },
+    "operator_failure": {
+      "path": "references/analysis/F2_native_peaks_v1/interference1/report.json",
+      "sha256": "8037dba1ea34415559b2c66a1e69992e0198ad425b0422f71d7eb13aaa7885f4",
+      "result": "failed"
+    },
+    "interference": {
+      "path": "references/analysis/F2_native_peaks_v1/interference2/report.json",
+      "sha256": "3c38fa3baa1ff556a4c7ebca10062adf63bbe2bd8f21832af22fc9f4fdc3eb41",
+      "result": "known_neighbor_line_contributions_measured_not_real_frequency_qualification"
+    },
+    "actual": {
+      "path": "references/analysis/F2_local_chirps_v1/observe1/report.json",
+      "sha256": "9c0cc1b430218c3067212c2a9b18841db0aee9ec957bab74d67308b500c113e6",
+      "result": "F2_joint_local_chirp_frequencies_measured_not_common_phase_or_idle_DNA"
+    },
+    "audit": {
+      "path": "references/analysis/F2_local_chirps_v1/audit1/report.json",
+      "sha256": "90fb5234b48cc5fe65bb124e036df9279b62aaa8b7c0558dabcd307b1850267e",
+      "result": "native_peak_failures_and_all18_local_chirp_fits_independently_audited"
+    },
+    "review": {
+      "path": "references/analysis/F2_local_chirps_v1/review1/report.json",
+      "sha256": "7afbd603c97e0a3eca4f89c57fbe21e5037e734b0fddce03425fbb5a6ffd312d",
+      "result": "audited_known_interference_and_real_model_limits_published"
+    }
+  },
+  "real_audio_read": true,
+  "shared_phase_clock_fit": false,
+  "local_independent_phase_nuisance_fit": true,
+  "source_versions": {
+    "tools/observe_F2_native_peaks_v1.py": {
+      "peak_failure1": "fee425b571c2a24d294d0d5a1c5f487cea39df9216180dd094c9ffecf46f7b10",
+      "peak_failure2": "6cb530a29b84de598fd033f393367500ba95585399b860048b609d91a166250f"
+    },
+    "research/F2_native_peaks_v1_plan.json": {
+      "peak_failure1": "d00430e849e193ef2a5e6ce30faa9338abcfa8cb4e17b9f529399fd55a09bbf2",
+      "peak_failure2": "d00430e849e193ef2a5e6ce30faa9338abcfa8cb4e17b9f529399fd55a09bbf2"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "peak_failure1": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "peak_failure2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "actual": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "audit": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "references/segments_v1.json": {
+      "peak_failure1": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "peak_failure2": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "actual": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/line_motion_v1/__init__.py": {
+      "peak_failure1": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "peak_failure2": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "operator_failure": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "interference": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+      "actual": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1"
+    },
+    "tools/line_motion_v1/center.py": {
+      "peak_failure1": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "peak_failure2": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "operator_failure": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "interference": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+      "actual": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf"
+    },
+    "tools/line_motion_v1/controls.py": {
+      "peak_failure1": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "peak_failure2": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "operator_failure": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "interference": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+      "actual": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a"
+    },
+    "tools/line_motion_v1/moments.py": {
+      "peak_failure1": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "peak_failure2": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "operator_failure": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "interference": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+      "actual": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f"
+    },
+    "tools/line_motion_v1/peak_controls.py": {
+      "peak_failure1": "218e53c125ecdaeb940e44d4895fc6456ba4665dc2711aea9bd3e3493736c7de",
+      "peak_failure2": "218e53c125ecdaeb940e44d4895fc6456ba4665dc2711aea9bd3e3493736c7de",
+      "operator_failure": "218e53c125ecdaeb940e44d4895fc6456ba4665dc2711aea9bd3e3493736c7de",
+      "interference": "218e53c125ecdaeb940e44d4895fc6456ba4665dc2711aea9bd3e3493736c7de",
+      "actual": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a"
+    },
+    "tools/line_motion_v1/peaks.py": {
+      "peak_failure1": "345ceb593b63acb8afe8b79a7ca2a80e52cede6b980778679fdbcbf4613b697f",
+      "peak_failure2": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "operator_failure": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "interference": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+      "actual": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165"
+    },
+    "tools/diagnose_F2_peak_interference_v1.py": {
+      "operator_failure": "f0280ff862827b44949f60fd2424d62799d7e9a4fd4941276bea19915bdeeaf9",
+      "interference": "671a3253a1bb55743b7d72d7d14a1ce23f66bcbcfacbe5a4cc8c0c363e63f0ee"
+    },
+    "tools/observe_F2_local_chirps_v1.py": {
+      "actual": "b5f8e9ba4bbc0e2c4b995dd72310b5d0c6504c593e79c2c9c7b306159bbfc22f"
+    },
+    "research/F2_local_chirps_v1_plan.json": {
+      "actual": "73bab8c283913a13dc030e6458145a9e5b0aa394b14e35527dc078e1428ccb11"
+    },
+    "tools/line_motion_v1/local_chirps.py": {
+      "actual": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251"
+    },
+    "tools/audit_F2_local_chirps_v1.py": {
+      "audit": "ddae5821e6a4c02d8d27f9fbb86660389599bfbd4512a07c62cfdd910128bead"
+    },
+    "tools/publish_F2_local_chirps_v1.py": {
+      "review": "b9c8c8e415ac8a931f832f5fc6e501bef46621ced3588ea963c92cdeb13c448d"
+    }
+  },
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "counts": {
+    "observations": 90,
+    "eligible_frequencies": 62,
+    "complete_anchor_rows": 5
+  },
+  "audit_errors": {
+    "native_power_relative": 1.1929244394898024e-14,
+    "waveform": 8.326672684688674e-17,
+    "analytic_jacobian": 5.551115123125783e-17,
+    "finite_difference_jacobian": 2.103325097424502e-09,
+    "cost": 1.0842021724855044e-19,
+    "optimality": 4.100317752813107e-19
+  },
+  "observation_cell_identity_switches": [
+    {
+      "seconds": [
+        6.5,
+        7.5
+      ],
+      "slot": 4,
+      "original_nominal": 37.0,
+      "selected_bin": 45,
+      "interpretation": "37/38Hz observation cell selected a different dominant line; do not call it a heldout37Hz measurement"
+    }
+  ],
+  "known_extended_before_max_Hz": 0.019109381228034295,
+  "known_extended_after_max_Hz": 1.1465886018413585e-09,
+  "figure_visually_checked": true,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "moving35": "held_unchanged",
+  "selected_fundamental": null,
+  "RPM_inferred": false,
+  "phase_extracted_real_model_permitted": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_AM_observation_bias_repaired_and90real_F2_frequency_moments_independently_audited_frozen_pushed",
+  "current_goal_turn": "progress_actual_native_peak_failures_neighbor_component_diagnosis_and_joint_local_chirp_control_repair_18real_fits_and_independent_audit",
+  "next_step": "Validate cross-window component identity and amplitude versus local chirp mismatch before a continuous phase coordinate; no blind bound/window/degree sweeps. Originalfailed36/all17/full33/individual14k/originalE remain before phase-extracted real models.",
+  "limits": [
+    "Five rows within numerical fit bounds do not prove constant amplitude/chirp model adequacy or physical period",
+    "One observation-cell peak changes to45Hz; its numeric slot is not preserved component identity",
+    "All fits are local independent-phase nuisance observations, not an exported Sound DNA model",
+    "Four main-line rows hit local frequency/chirp bounds; no bound expansion or missing-row interpolation",
+    "Independent local phase/amplitude nuisance fits are not a shared engine clock or exported oscillator model",
+    "Local chirp/constant amplitude assumptions can be wrong for real recordings; fit convergence is not confidence or source separation",
+    "Native peak cells/order hypotheses selected from earlier data remain exploratory",
+    "No recorded timeline replay, new synthesized audio, DNA export or runtime/C change"
+  ]
+}

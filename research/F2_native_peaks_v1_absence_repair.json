@@ -1,0 +1,6 @@
+{
+  "attempt":"F2_native_peaks_v1/observe1",
+  "result":"Failed in original single-line missing-carrier control before recording read. A spectral cell without a strict local maximum triggered an assertion",
+  "repair":"Treat absent local peaks as absent observations: empty candidate list, peak_present=false, selected-bin sentinel-1, unsupported/unresolved, non-finite frequency moments represented as JSON null. Do not synthesize a peak at the original nominal or change any cell, window, threshold or bound",
+  "retention":"Original executed source, plan and failed report retained. Next attempt reruns original positive/negative controls unchanged before any recording read"
+}

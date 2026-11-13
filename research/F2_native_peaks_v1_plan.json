@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.F2-native-peaks-plan/1",
+  "purpose":"Observe local peak centers without treating block-mean FFT maxima as per-window frequency bounds. Not a phase clock, physical period/RPM estimator or new DNA model",
+  "parent":"Frozen F2_line_motion_v1: original fixed block-bin+/-0.5 roots resolve3of9 complete anchor rows. Preserve all failures; never rewrite that result",
+  "input":"Same approved F2_tailpipe6..12s,48k stereo FLOAT, same9 original1s periodic Hann windows; no new download/filter/normalization/resampling",
+  "peak_selection":"Each window/channel independently: unpadded native1Hz Hann FFT; use fixed20..250Hz band and Voronoi cells formed by midpoints of the5 original block nominal bins. Select strongest native-bin local maximum per cell; retain all candidates. No cell/window/margin/threshold sweep",
+  "cells":"Cells partition the fixed original20..250Hz observation band; they are exploratory labels defined from earlier F2 peaks, not proof that all peaks inside share one physical source",
+  "refine":"Reuse unchanged local derivative-moment zero solver and +/-0.5Hz bracket centered at the actual selected per-window bin. No expanding bounds or interpolating failures. Preserve original nominal, selected bin, candidates, endpoints, root state and initial moment",
+  "controls":"Original five line_motion controls and original.001/.01Hz gates. New6s shared linear chirp plus independent82Hz reuses all9windows and original amplitudes; per-line max error<=.01Hz. Pure local peaks must select nearest native bin. Single missing carrier remains unsupported. Equal nearby tones and fixed-seed noise are explicit unresolved-source counterexamples, never physical-period acceptance",
+  "audit":"Independent literal Hann DFT in each cell, every candidate and selected bin; rectangular-DTFT identities and separate bisection for every returned root; exact source slices and original/control provenance",
+  "limits":"A local maximum and self-consistent center do not prove one component, uniqueness, frequency confidence or a continuous phase coordinate. Leave-one-out agreement can also occur under modulation; do not force82Hz into engine family",
+  "keep":"C/H540,voices,accepted moving35,one driver,stereo7.1.4 unchanged; no55unchangedCTest repeat. F3 speech rejected, originalA-low pending. New phase-extracted real model still requires originalfailed36/all17/full33/individual14k/originalE gates"
+}

@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.F2-local-chirps-plan/1",
+  "parent":"F2_native_peaks_v1/observe2: original5controls pass, but extended9-window known chirp mixture fails0.01Hz in3windows, all at independent82Hz line. Worst.01910938Hz. Originalfailed attempts unchanged",
+  "mechanism":"Known-component diagnosis shows neighboring75Hz derivative leakage displaces82Hz local center even with correct native peak and accurate root. Factorized rectangular-DTFT identity independently verifies component derivative contributions",
+  "method":"Per1s stereo window, independently fit each channel's observed supported peak components jointly: constant*cos/sin of2pi*(f*t+q*t^2/2), plusDC, centered localtime. Each line has its own frequency and linear chirp; no common phase or harmonic constraint is fitted",
+  "initialization":"Only each window's observed unpadded native FFT peak; q=0; amplitudes/DC from observed weighted linear least squares. Never initialize from known frequency, source trajectory or evaluation heldouts",
+  "bounds":"Each frequency stays within selected nativebin+/-0.5Hz. Each local chirp has|q|<=2Hz/s: endpoint deviation over1s limited to one native bin. These are explicit local-model assumptions, not physical engine limits. No widening or iteration/window/band sweeps",
+  "solve":"One bounded analytic-Jacobian trust-region least_squares call per channel; max60function evaluations, ftol/xtol/gtol1e-11. Report all status, cost, gradient, active bounds. Fit numerical convergence is not model truth or frequency confidence",
+  "controls":"Original five known controls and all9 extended chirp observations at original0.001/0.01Hz errors must pass before real read. Keep unresolved two-tone and noise counterexamples. Original peak-root flags remain initial diagnostics; fitted frequencies use separate eligibility flags",
+  "scope":"Same approvedF2 six seconds/original9windows/5exploratorycells/native48k. Independent per-line local phase coefficients are nuisance fit parameters, not a shared oscillator clock. No phase integration, waveform-profile/model export, RPM or runtime/C change",
+  "audit":"Reconstruct chirps by independent complex exponentials, scalar Jacobian checks and all actual fitted residuals/status/bounds/source slices. Inspect original rejected peak controls and component decomposition; do not promote unchanged generic phase extractor",
+  "keep":"Originalfailed36/all17/full33/individual14k/originalE required before phase-extracted real DNA. Moving35/C-H540/voices/one-driver/stereo7.1.4 unchanged,no55CTest repeat. F3speech excluded/A-low question pending"
+}
