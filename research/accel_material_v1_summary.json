@@ -1,0 +1,59 @@
+{
+  "schema": "vsl.acceleration-material-freeze/1",
+  "result": "source_observations_verified_no_synthesis_adoption",
+  "parent_commit": "a3e71ea65c8f5645183c6e2acfdc2a292acca7d7",
+  "parent_freeze": "baselines/idle_modal_c_v1",
+  "parent_manifest_sha256": "73b084fa1a1c278f96df9864634a18e4228df951a455f493899bf1c832cd68c9",
+  "source_catalog_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "tiles": 12,
+      "supported": 12,
+      "last_ratio": 1.1511892299529827,
+      "last_supported": true
+    },
+    {
+      "segment": "F3_fifth2",
+      "tiles": 12,
+      "supported": 12,
+      "last_ratio": 1.1511892299529827,
+      "last_supported": true
+    },
+    {
+      "segment": "F3_sixth",
+      "tiles": 24,
+      "supported": 19,
+      "last_ratio": 1.1595312216607103,
+      "last_supported": false
+    }
+  ],
+  "audit_maxima": {
+    "cell_power": 2.0816681711721685e-16,
+    "whitened": 1.6008527836675057e-11,
+    "candidate_score": 1.64625257870199e-15,
+    "band_power": 4.163336342344337e-16,
+    "colour_db": 2.169375790117556e-13,
+    "parseval": 4.163336342344337e-16
+  },
+  "first_audit_failure_retained": true,
+  "plot_visually_reviewed": true,
+  "shared_phase_or_RPM": false,
+  "independent_takes": false,
+  "timbre_acceptance": false,
+  "idle_listening": "pending original F2 review2 question",
+  "C_H_unchanged": 550,
+  "voices_unchanged": 67,
+  "runtime_driver_UI_take_spatial_changed": false,
+  "old_CTest_repeated": false,
+  "reports": {
+    "observe1": "708af922a3a5380a9ba5d1b893bba1c62e1018413ace62d19f0d3afe0e393bfc",
+    "audit1": "2aa20bbedddea567254f261dd070c7dba367b3e9a3dbf752d2202340a54bfb1c",
+    "audit2": "b984c2a0778a67218818fea366c163c98b638974f835cd376cf46f688142b5cf",
+    "review1": "2b5c872bccc809db60f069029cc586d2a128b5ee7b4f1c4b14221d27fcb84db4"
+  },
+  "freeze": "baselines/accel_material_v1",
+  "manifest_sha256": "50f52bd9ac0fa9dfe29a147768e8cd967b433f0e78785289c80b7115c3c774f8",
+  "file_count": 40,
+  "bytes": 12017582
+}

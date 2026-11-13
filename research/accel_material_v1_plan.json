@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.acceleration-material-plan/1",
+  "segments": ["F3_fifth1", "F3_fifth2", "F3_sixth"],
+  "tile_seconds": 0.25,
+  "hop_seconds": 0.25,
+  "bands_hz": [[30,150],[150,400],[400,1000],[1000,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "spectral_scale": {
+    "grid_base_hz": 125,
+    "grid_stop_hz": 12000,
+    "bins_per_octave": 192,
+    "comparison_hz": [300,5000],
+    "whitening_sigma_bins": 16,
+    "minimum_shift": -64,
+    "maximum_shift": 96,
+    "other_peak_exclusion_bins": 4,
+    "minimum_score": 0.4,
+    "minimum_peak_margin": 0.025
+  },
+  "scope": "Phase-free relative acoustic spectral-scale and band-colour observations; neither a fundamental/engine clock nor an RPM/load fit",
+  "policies": [
+    "Use all nonoverlapping native 0.25s stereo Hann windows in the existing approved fixed-gear intervals; no new time-window search, audio processing or download",
+    "First window of each interval is its reference; compare every later window independently, with no monotonic path constraint or manual peak selection",
+    "A whitened log-spectrum shift measures a candidate frequency-axis scale only; preserve rejected/ambiguous scores and all candidate scores",
+    "Frequency-axis scaled first-window power is an approximate pitch-only observation model; fit only one global power gain across30..14k per channel, then report every fixed-band residual",
+    "Changing spectral colour, a moving ridge, wind and cabin response remain mixed observations, not identified physical engine sources",
+    "Same-video repeated passages are not independent recording validation; displayed gear evidence does not calibrate RPM or audiovisual latency",
+    "Independent known-tone/scale/gain/colour/silence controls precede source analysis; direct sample energy and scalar score/power calculations audit results",
+    "No new DNA, modal driving profile, audio audition, C/voice/default/UI change; pending F2 idle listening remains pending"
+  ]
+}
