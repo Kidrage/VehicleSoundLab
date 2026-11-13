@@ -1,0 +1,6169 @@
+{
+  "schema": "vsl.candidate-prediction-freeze/1",
+  "result": "KNOWN_controls_pass_conditional_prediction_explicit_adoption_NOT_real_source_promotion",
+  "parent_commit": "c2f75d5a28b4c7608ec73938560baec019991733",
+  "audit": {
+    "result": "all108_full_masked_predictions_adoption_graphs_and_scores_independently_verified",
+    "windows": 108,
+    "native_lines": 924,
+    "raw_lines": 950,
+    "selected_lines": 928,
+    "verification_fits": 46,
+    "verification_lines": 428,
+    "conditional_tests": 26,
+    "prediction_tests": 26,
+    "prediction_supported": 4,
+    "prediction_unknown": 10,
+    "adopted_windows": 4,
+    "maximum_signal_error": 9.693773561636476e-13,
+    "maximum_peak_error": 2.842170943040401e-14,
+    "maximum_waveform_error": 5.426475241376849e-14,
+    "maximum_support_error": 8.881784197001252e-16,
+    "maximum_normal_error": 4.1726586678478096e-16,
+    "maximum_optimality_error": 7.358590735346596e-17,
+    "maximum_verification_waveform_error": 4.867634073590921e-14,
+    "maximum_verification_normal_error": 1.5428908289795524e-16,
+    "maximum_verification_optimality_error": 3.131139458287151e-17,
+    "maximum_verification_cost_error": 9.107298248878237e-18,
+    "maximum_null_cost_error": 1.474514954580286e-17,
+    "maximum_null_gain_error": 4.238487338881214e-11,
+    "prerequisite_failures": [],
+    "cases": [
+      {
+        "case": "cubic_control",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 120,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [
+          9,
+          10,
+          11
+        ],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  2,
+                  10,
+                  11,
+                  12
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 11,
+                "track_ids": [
+                  1,
+                  11
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  2,
+                  10,
+                  12
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.57569921875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.26476953125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.77803515625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.44163671875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.7088828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.60648046875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.82473828125,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "linear_control",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 120,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "am_only",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 120,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  3,
+                  10
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  3,
+                  10
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 9,
+                "track_ids": [
+                  3,
+                  10
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "fm_only",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 119,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 8,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  5,
+                  12
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  8,
+                  10,
+                  13,
+                  15,
+                  17,
+                  19,
+                  20,
+                  22
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  9,
+                  11,
+                  14,
+                  16,
+                  18,
+                  21,
+                  23
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  63,
+                  76
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  64,
+                  70,
+                  77
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  69,
+                  75,
+                  82
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 8,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  5,
+                  12
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  8,
+                  10,
+                  13,
+                  15,
+                  17,
+                  19,
+                  21,
+                  23
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  9,
+                  11,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  24
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 8,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  5,
+                  12
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  8,
+                  10,
+                  13,
+                  15,
+                  17,
+                  19,
+                  20,
+                  22
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  9,
+                  11,
+                  14,
+                  16,
+                  18,
+                  21,
+                  23
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  9,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  10,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  11,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  12,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 6,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  2,
+                  25,
+                  47
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  4,
+                  9,
+                  20,
+                  26,
+                  31,
+                  42,
+                  48,
+                  53
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  5,
+                  10,
+                  21,
+                  27,
+                  32,
+                  43,
+                  49,
+                  54
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  11,
+                  14,
+                  17,
+                  22,
+                  28,
+                  33,
+                  36,
+                  39,
+                  44,
+                  50,
+                  55
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  12,
+                  15,
+                  18,
+                  23,
+                  29,
+                  34,
+                  37,
+                  40,
+                  45,
+                  51,
+                  56
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  13,
+                  16,
+                  19,
+                  24,
+                  30,
+                  35,
+                  38,
+                  41,
+                  46,
+                  52,
+                  57
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "am_fm",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 119,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [
+          3,
+          4,
+          5,
+          8,
+          10
+        ],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 8,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  5,
+                  12
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  8,
+                  10,
+                  13,
+                  15,
+                  17,
+                  19,
+                  20,
+                  22
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  9,
+                  11,
+                  14,
+                  16,
+                  18,
+                  21,
+                  23
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 3,
+            "tracks_atleast5": 0,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  33,
+                  43,
+                  50,
+                  60
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  1,
+                  24,
+                  34,
+                  51,
+                  61
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  25,
+                  35,
+                  44,
+                  52,
+                  62
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  3,
+                  26,
+                  36,
+                  53,
+                  63
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  27,
+                  37,
+                  45,
+                  54,
+                  64
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 7,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  28,
+                  38,
+                  46,
+                  55,
+                  65
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  6,
+                  29,
+                  39,
+                  56,
+                  66
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  30,
+                  40,
+                  47,
+                  57,
+                  67
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  31,
+                  41,
+                  48,
+                  58,
+                  68
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  32,
+                  42,
+                  49,
+                  59,
+                  69
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 3,
+            "tracks_atleast5": 0,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  0,
+                  13,
+                  23,
+                  33,
+                  43
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  1,
+                  14,
+                  24,
+                  34,
+                  44
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  2,
+                  15,
+                  25,
+                  35,
+                  45
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  3,
+                  16,
+                  26,
+                  36,
+                  46
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  4,
+                  17,
+                  27,
+                  37,
+                  47
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 7,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  5,
+                  12,
+                  18,
+                  28,
+                  38,
+                  48
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  6,
+                  19,
+                  29,
+                  39,
+                  49
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  7,
+                  20,
+                  30,
+                  40,
+                  50
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  8,
+                  10,
+                  21,
+                  31,
+                  41,
+                  51
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  9,
+                  11,
+                  22,
+                  32,
+                  42,
+                  52
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  10,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  11,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  12,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  9,
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 8,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 10,
+                "track_ids": [
+                  5,
+                  12
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  8,
+                  10,
+                  13,
+                  15,
+                  17,
+                  19,
+                  20,
+                  22
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  9,
+                  11,
+                  14,
+                  16,
+                  18,
+                  21,
+                  23
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 3,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 2,
+                "track_ids": [
+                  0,
+                  9,
+                  16,
+                  23,
+                  30,
+                  43,
+                  50,
+                  57,
+                  64,
+                  77
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  2,
+                  10,
+                  17,
+                  24,
+                  31,
+                  37,
+                  44,
+                  51,
+                  58,
+                  65,
+                  71,
+                  78
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  4,
+                  11,
+                  18,
+                  25,
+                  32,
+                  38,
+                  45,
+                  52,
+                  59,
+                  66,
+                  72,
+                  79
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  5,
+                  12,
+                  19,
+                  26,
+                  33,
+                  39,
+                  46,
+                  53,
+                  60,
+                  67,
+                  73,
+                  80
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  13,
+                  20,
+                  27,
+                  34,
+                  40,
+                  47,
+                  54,
+                  61,
+                  68,
+                  74,
+                  81
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  14,
+                  21,
+                  28,
+                  35,
+                  41,
+                  48,
+                  55,
+                  62,
+                  69,
+                  75,
+                  82
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  15,
+                  22,
+                  29,
+                  36,
+                  42,
+                  49,
+                  56,
+                  63,
+                  70,
+                  76,
+                  83
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 5,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.84623513154878,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.81896203622117,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  2,
+                  25,
+                  42,
+                  48
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 139.63962643511724,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  4,
+                  9,
+                  20,
+                  26,
+                  31,
+                  43,
+                  49,
+                  54
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 181.56189281955417,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 3,
+                "track_ids": [
+                  5,
+                  10,
+                  21,
+                  27,
+                  32,
+                  44,
+                  50,
+                  55
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 303.5820159916472,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  7,
+                  11,
+                  14,
+                  17,
+                  22,
+                  28,
+                  33,
+                  36,
+                  39,
+                  45,
+                  51,
+                  56
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 525.8510370395677,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  8,
+                  12,
+                  15,
+                  18,
+                  23,
+                  29,
+                  34,
+                  37,
+                  40,
+                  46,
+                  52,
+                  57
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 910.442263435924,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 1,
+                "track_ids": [
+                  13,
+                  16,
+                  19,
+                  24,
+                  30,
+                  35,
+                  38,
+                  41,
+                  47,
+                  53,
+                  58
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "bandlimited_mono_noise",
+        "windows": 12,
+        "successful": 9,
+        "local_lines": 68,
+        "eligible_lines": 5,
+        "selected_failed_windows": [
+          2,
+          6,
+          11
+        ],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [
+          4
+        ],
+        "variants": {
+          "native_old": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_old": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "previous_boundary": {
+            "longest_track": 1,
+            "tracks_atleast5": 0,
+            "components": [],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "occluded_component",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 119,
+        "eligible_lines": 119,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 11,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 11,
+                "longest_correct_contiguous": 6,
+                "track_ids": [
+                  5,
+                  10
+                ]
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "missing_component_neighbor",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 120,
+        "eligible_lines": 120,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [],
+        "augmentation_unknown_windows": [],
+        "variants": {
+          "native_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 12,
+            "tracks_atleast5": 10,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 43.570625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  0
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 65.1,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  1
+                ]
+              },
+              {
+                "component": 2,
+                "first_frequency_hz": 89.254375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  2
+                ]
+              },
+              {
+                "component": 3,
+                "first_frequency_hz": 115.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  3
+                ]
+              },
+              {
+                "component": 4,
+                "first_frequency_hz": 138.761875,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  4
+                ]
+              },
+              {
+                "component": 5,
+                "first_frequency_hz": 180.420625,
+                "scored_nodes": 0,
+                "longest_correct_contiguous": 0,
+                "track_ids": []
+              },
+              {
+                "component": 6,
+                "first_frequency_hz": 239.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  6
+                ]
+              },
+              {
+                "component": 7,
+                "first_frequency_hz": 301.67375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  7
+                ]
+              },
+              {
+                "component": 8,
+                "first_frequency_hz": 522.545625,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  8
+                ]
+              },
+              {
+                "component": 9,
+                "first_frequency_hz": 904.719375,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  9
+                ]
+              },
+              {
+                "component": 10,
+                "first_frequency_hz": 199.7,
+                "scored_nodes": 12,
+                "longest_correct_contiguous": 12,
+                "track_ids": [
+                  5
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      },
+      {
+        "case": "crossing_pair",
+        "windows": 12,
+        "successful": 12,
+        "local_lines": 21,
+        "eligible_lines": 20,
+        "selected_failed_windows": [],
+        "augmented_adopted_windows": [
+          4
+        ],
+        "augmentation_unknown_windows": [
+          7
+        ],
+        "variants": {
+          "native_old": {
+            "longest_track": 4,
+            "tracks_atleast5": 0,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "native_boundary": {
+            "longest_track": 4,
+            "tracks_atleast5": 0,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 8,
+                "longest_correct_contiguous": 4,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_old": {
+            "longest_track": 5,
+            "tracks_atleast5": 2,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "unscreened_boundary": {
+            "longest_track": 5,
+            "tracks_atleast5": 2,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_old": {
+            "longest_track": 5,
+            "tracks_atleast5": 2,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          },
+          "selected_boundary": {
+            "longest_track": 5,
+            "tracks_atleast5": 2,
+            "components": [
+              {
+                "component": 0,
+                "first_frequency_hz": 102.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "component": 1,
+                "first_frequency_hz": 146.0,
+                "scored_nodes": 9,
+                "longest_correct_contiguous": 5,
+                "track_ids": [
+                  1,
+                  4
+                ]
+              }
+            ],
+            "mixed_identity_tracks": [],
+            "unexplained_absent_query_hits": []
+          }
+        }
+      }
+    ],
+    "independent_masked_Jacobian_error": 1.507161760489834e-12,
+    "input_report_sha256": "ae643dd863dcdc01d23c1ea782a36e1d612f0245ce886eda3e96c082a16ca834",
+    "qualification": {
+      "fm_only_all6low_atleast5": true,
+      "am_fm_all6low_atleast5": true,
+      "noise_no_track_atleast5": true,
+      "occluded_component_no_bridge": true,
+      "missing_component_neighbor_no_scored_switch": true,
+      "crossing_pair_no_scored_switch": true,
+      "exact_cubic_prerequisite": true
+    },
+    "qualified_known_controls": true,
+    "conditioned_candidates_not_pristine_holdout": true,
+    "original_common_phase_qualification_not_waived": true,
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "real_source_read": false,
+    "new_audio_or_profile": false
+  },
+  "all_failed_augmented_and_verification_attempts_retained": true,
+  "prior_selection_rule_explicitly_replaced_not_hidden_fallback": true,
+  "native_preservation_not_candidate_absence": true,
+  "whole_window_and_neighbor_conditioned_not_pristine_holdout": true,
+  "check_parameters_never_refitted": true,
+  "unknown_solver_failures_not_absence": true,
+  "original60_per_hypothesis_not_same_total_compute": true,
+  "first_boolean_audit_failure_preserved": true,
+  "plot_viewed": true,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "real_source_read": false,
+  "new_audio_profile_or_runtime": false,
+  "old61_driving_tests_repeated": false,
+  "idle_pending_no_duplicate_blind_tune_or_promotion": true,
+  "original_common_phase_qualification_remains_required": true,
+  "next": "Declare and execute all original48 F3 native windows with cubic native and the same full-hypothesis verification/adoption, retaining all failures and perspectives before any profile/audio.",
+  "manifest_sha256": "545cc5c191276596d96f12b8147d5fe6b0f623c14b5db3e76c1a3000eeba1d2c",
+  "file_count": 477,
+  "bytes": 180553826
+}
