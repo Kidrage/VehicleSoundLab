@@ -1,0 +1,104 @@
+{
+  "schema": "vsl.idle-post-budget-freeze/1",
+  "result": "positive_marginal_reallocation_BUT_all12_cross_gaps_remain",
+  "parent_commit": "3c638e5cb99713bfc8e4e0f6c804bb26c585fc87",
+  "audit": {
+    "result": "all2048_POST_kernels_source_budget_inverse_and64jackknife_verified",
+    "known_error": 4.440892098500626e-16,
+    "maximum_C_error": 5.285485590866834e-19,
+    "maximum_A_error": 2.1325750167382745e-25,
+    "maximum_normalized_budget_error": 1.931061756097669e-15,
+    "kappa_relative_error": 4.984901380566953e-14,
+    "input_report_sha256": "f0a7f5e72cd8fa6201aff1e6ba2e9893d15bd2996da3346e5e3e8a45f1e8c429",
+    "conditional_time_MC_NOT_full_native_window": true,
+    "all_lag_curves_qualified": false,
+    "audio_or_runtime_changed": false
+  },
+  "conditional_innovation_moments_direct": true,
+  "time_MC_origins": 2048,
+  "time_MC_groups": 64,
+  "time_MC_NOT_full_native_grid": true,
+  "all_lag_curves_qualified": false,
+  "analytic_observer_tail_evaluated_floating_NOT_formal_interval": true,
+  "all_full_FIR_retained": true,
+  "complete7term_budget": true,
+  "allocation": {
+    "rank": 4,
+    "singular": [
+      1.010182748236372,
+      1.0006795428210606,
+      0.999318306634974,
+      0.9897141960026913
+    ],
+    "debt": [
+      2.2499112149373827e-09,
+      3.8431568404612073e-10,
+      3.729068356499191e-11,
+      8.324634618287708e-12,
+      1.9677877571587535e-09,
+      1.1011264073706711e-10,
+      1.635142357707281e-11,
+      4.986693573568093e-11,
+      1.5648388364878253e-12,
+      1.2500215842248495e-12
+    ],
+    "coordinate": [
+      0.003801409398590406,
+      0.00993144013895561,
+      0.014519369514260382,
+      0.028074006815966668
+    ],
+    "status": "positive_allocation",
+    "generative": true,
+    "kappa": [
+      99.20684016614142,
+      113.6404759830808,
+      31.25445771178416,
+      11.069862262494029
+    ],
+    "probability": [
+      0.0293522429137167,
+      0.025720059650949666,
+      0.08757984216950385,
+      0.2132217035270549
+    ],
+    "normalized_solve_residual": 2.220446049250313e-16
+  },
+  "kappa_ratio_to_old": [
+    0.7127850349422666,
+    0.6543377134008941,
+    0.6459875949817984,
+    0.7691611624041427
+  ],
+  "all64_leavegroup_allocations_positive": true,
+  "auto_TRAINfit_NOT_validation": true,
+  "new_cross_fraction_of_source": [
+    [
+      0.4673669288431473,
+      0.489414037235287,
+      0.3124379325175253,
+      0.48587491220459816,
+      0.2099132560881344,
+      0.5976922865132462
+    ],
+    [
+      0.7288766377276429,
+      0.3564400490423561,
+      0.20739709757636676,
+      0.41535109161715844,
+      0.1279084365620476,
+      0.2804179604165456
+    ]
+  ],
+  "all12_cross_under_source": true,
+  "both_complete_figures_viewed": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "new_audio_or_profile": false,
+  "runtime_changed": false,
+  "old61_driving_tests_repeated": false,
+  "next": "Actual POST time-varying joint4auto6cross feasibility and full lag verification preserving marginal/mean budgets. No stationaryPRE reuse/commontrigger/envelopecopy/oldkappa add; pending hearing/no duplicate or C promotion. Original commonphase and full goal remain.",
+  "manifest_sha256": "75c86cbabd6f25f55cfa6bbae291145960ed58cc250f9ff8fda4de869576d5e4",
+  "file_count": 40,
+  "bytes": 3013105
+}
