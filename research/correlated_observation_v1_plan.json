@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.correlated-observation-plan/1",
+  "parent_plan": "research/native_observation_v1_plan.json",
+  "metric": "Canonical symmetric inverse square root of the exact same-window periodic-Hann white-noise correlation; retain original marginal variance and global phase origin",
+  "maximum_iterations": 20,
+  "independent_controls": {
+    "tone_orders": [3.0, 3.1, 8.37, 9.13, 10.0, 15.0],
+    "waveforms": ["rapid_common", "occluded_partial", "local_phase"],
+    "window_indices": [0, 60, 120],
+    "checks": ["Exact sample covariance", "Independent real QR projection energy", "Source-norm bound", "Scalar global-time projection", "Adjoint", "Matrix columns", "Original overlapping-window covariance"]
+  },
+  "policy": [
+    "Use all positive eigenvalues without truncation, ridge, pseudo-inverse cutoff or covariance shrinkage",
+    "This is a same-window marginal composite metric: overlapping windows remain correlated, not full joint whitening or calibrated real-engine likelihood",
+    "Inspect absolute omitted/out-of-band energy and norm bounds before actual fitting; do not infer improvement from decorrelation alone",
+    "All source36, waveform equations, parameters732, original bounds, observed initialization, robust scale and20-step certified-QP controller unchanged",
+    "No degree, grid, window, strength, noise multiplier or iteration sweep",
+    "Preserve rapid true phase and failed dense36 positive, original17, full33, individual14kHz and original E gates",
+    "Previous turn made actual approved-media retrieval and109-frame evidence progress; fullgoal remains active",
+    "F1/F2/F3 are now approved and locally acquired; original A-low listening alone remains pending; no duplicate question",
+    "No C, voice, moving35, device, room or spatial-layout change"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.correlated-signal-budget-plan/1",
+  "scope": "Post-fit diagnostic using the original known dense36 fixture only; not real engine separation or a new fit",
+  "components": ["fitted waveform minus exact36 modeled carriers", "negative exact omitted heldout carriers", "negative exact original seeded noise"],
+  "metrics": ["native unweighted", "canonical marginal correlation"],
+  "policy": [
+    "First reconstruct the entire original two-channel fixture including its original gain and random sequence",
+    "Verify raw and observation-domain residual closure and complete quadratic energy including cross terms",
+    "Do not initialize, refit, add heldout carriers, subtract observed noise or change any gate using diagnostic truth",
+    "Component energies and correlations do not identify unique error causes, confidence intervals or unavoidable lower bounds",
+    "Preserve original failed dense36/all17/full33/individual14kHz/original E and accepted C/timbre"
+  ]
+}
