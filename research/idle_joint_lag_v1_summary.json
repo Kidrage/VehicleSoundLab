@@ -1,0 +1,356 @@
+{
+  "schema": "vsl.idle-joint-lag-freeze/1",
+  "result": "all33_lag_observations_audited_NOT_sound_promotion",
+  "parent_commit": "8238d877ec0390cad03a01d1b8cf59149ebea5cb",
+  "audit": {
+    "result": "all33_lag_observations_660curves_and_response_support_verified",
+    "observations": 33,
+    "curves": 660,
+    "known_cases_all81_direct_lags": 2,
+    "source_direct_lags": [
+      0,
+      -48,
+      48,
+      -240,
+      240,
+      -480,
+      480,
+      -960,
+      960,
+      -1920,
+      1920
+    ],
+    "plan_direct_count_typo_preserved": "Plan text13; explicit list11. All11listed points directly verified; every81point curve independently convolved.",
+    "maximum_normalized_curve_error": 2.1884716261411086e-11,
+    "maximum_direct_error": 2.986499936241671e-13,
+    "maximum_filter_error": 1.2802259252708836e-15,
+    "input_report_sha256": "de74b29f0045b9c6b6a15d74c83fda3a1bf739b7f8c6c555d9371378b50fcf9c",
+    "no_source_identity_or_sound_promotion": true
+  },
+  "lag_points": 81,
+  "source_portions": 2,
+  "phase_controls": 6,
+  "generated_blocks": 24,
+  "pair_late_comparisons": [
+    {
+      "bands": [
+        0,
+        1
+      ],
+      "expectation_late": 0.003080500866253021,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.046790913455100495,
+          "controls": [
+            -0.0009948000422282288,
+            -0.006179666191793844,
+            -0.0014078643512031265
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.04196672721802157,
+          "controls": [
+            0.0002778552598854146,
+            0.00432759009492934,
+            0.005189391548317914
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.04223691180961302,
+          "controls": [
+            -0.0033207119658164586,
+            -0.0036149714594044076,
+            -0.002313546260507463
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.038491954504981774,
+          "controls": [
+            0.0012563643585535044,
+            0.0013700858197133283,
+            0.0016950852241919656
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    },
+    {
+      "bands": [
+        0,
+        2
+      ],
+      "expectation_late": 0.00027329500452329375,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.020932211463293552,
+          "controls": [
+            -0.0008273149400616401,
+            0.0025181358879727634,
+            -0.0019358305891705356
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.01944964073546235,
+          "controls": [
+            0.0032506490422890633,
+            0.0015757971552184213,
+            -0.0011130665950568415
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.014544105632887659,
+          "controls": [
+            -0.0016839680611322298,
+            0.002460206285589344,
+            -0.0039137091708595145
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.017201205984774336,
+          "controls": [
+            0.003132753716191501,
+            0.0028374416346101145,
+            -0.0011233551913170743
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    },
+    {
+      "bands": [
+        0,
+        3
+      ],
+      "expectation_late": 2.320295448981403e-07,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.018469112064204065,
+          "controls": [
+            0.0018760883826903127,
+            -0.0016730851483916565,
+            -0.002886550560633972
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.010391285152138737,
+          "controls": [
+            -7.113017995744642e-05,
+            0.004435714029356561,
+            0.0032066679558808314
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.01083015545319176,
+          "controls": [
+            0.0006920617977802253,
+            -0.0012327840735693275,
+            -0.00019342202633516794
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.014099330047461778,
+          "controls": [
+            -0.0006331777559294774,
+            0.0023454955663533947,
+            0.0017836137890357348
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    },
+    {
+      "bands": [
+        1,
+        2
+      ],
+      "expectation_late": 0.002398319024135148,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.032723419020315274,
+          "controls": [
+            0.001380192122760117,
+            0.001398043829630358,
+            0.0020975152246626655
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.061467128498835004,
+          "controls": [
+            -0.00030305279568613167,
+            0.002973715782888448,
+            0.0042625140839419205
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.037520238423033286,
+          "controls": [
+            0.0009532415533868928,
+            0.0008381012776321795,
+            -0.0018045873613869862
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.061564658614103644,
+          "controls": [
+            -0.00048074180486737926,
+            0.00011766003586543846,
+            0.0020438163141014874
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    },
+    {
+      "bands": [
+        1,
+        3
+      ],
+      "expectation_late": 2.5798509669448602e-05,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.020908444479223742,
+          "controls": [
+            0.0014374819218404675,
+            -0.0020480106588894797,
+            0.0007109015417807957
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.04717573382805949,
+          "controls": [
+            0.0011759467722543345,
+            0.002368544597647288,
+            -4.112635124264306e-05
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.02105958280083814,
+          "controls": [
+            0.0002022088744010441,
+            -0.0008786578494954741,
+            7.137799425647033e-06
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.05419198353550844,
+          "controls": [
+            0.0003267699893720027,
+            0.00172372391303865,
+            -0.0007910932829197904
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    },
+    {
+      "bands": [
+        2,
+        3
+      ],
+      "expectation_late": 0.00017863147156416213,
+      "raw": [
+        {
+          "portion": "training",
+          "source": -0.006259224247790203,
+          "controls": [
+            0.0012042098852654405,
+            0.0028540343423892572,
+            -7.974356230346114e-05
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.02513924025235204,
+          "controls": [
+            -0.0015681256879507197,
+            0.0005704882754616528,
+            0.0018807545405790708
+          ],
+          "below_every_samePSD_control": true
+        }
+      ],
+      "local40ms": [
+        {
+          "portion": "training",
+          "source": -0.010834169067058818,
+          "controls": [
+            0.0002625384856140116,
+            0.003280410228246991,
+            -0.0010824005503450918
+          ],
+          "below_every_samePSD_control": true
+        },
+        {
+          "portion": "check",
+          "source": -0.03420701478660814,
+          "controls": [
+            -0.0014537671944508583,
+            0.0006927516139157788,
+            0.0014937154320895007
+          ],
+          "below_every_samePSD_control": true
+        }
+      ]
+    }
+  ],
+  "all6pairs_both_raw_and_local_late_negative_below_controls": true,
+  "all3_complete_plots_viewed": true,
+  "plan_direct_count_typo_preserved": true,
+  "new_audio_or_profile": false,
+  "runtime_changed": false,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "old61_driving_tests_repeated": false,
+  "original_shared_phase_qualification_still_required": true,
+  "timbre_or_RPM_load_or_physical_phase_qualified": false,
+  "next": "Known-qualified source-derived low-mode phase/difference amplitude features with train-only positive-power bounds and cross-portion prediction; no hardcoded27ms/RPM/PM-FM. Existing hearing pending/no repeated question or blind C promotion.",
+  "manifest_sha256": "99942786d7ca53a2b85500e7aa8eab54a09c7fd669e18ea4182622eda656cfd6",
+  "file_count": 73,
+  "bytes": 18347706
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.idle-joint-lag/1",
+  "purpose": "Measure temporal support of the audited F2 cross-band concentration gap before changing white-input models. A complete descriptive lag grid, not a delay/optimizer sweep or physical event detector.",
+  "inputs": "Frozen idle_joint_cumulant_v1: both native3s F2 portions, all6samePSD controls, all3seeds of independent0/100% mixes with all4nonoverlapping3s portions; no amount/seed/window selection. Prior budget failure retained, no refit. Main and effective kernels from frozen architecture. Verify parent and original external input manifests.",
+  "sample_rate": 48000,
+  "lags_frames": {"first": -1920, "last": 1920, "step": 48},
+  "pairs": "All4auto+6upper cross pairs. Positive lag means second named band occurs later. Full linear overlap only, no circular wrap. Recenter on each overlap; divide cumulant by fixed full-window band variances. Lag0 must recover prior Q exactly within numerical precision.",
+  "transforms": "Raw and the SAME previous nonoverlapping40ms perband RMS diagnostic. The transform changes statistics and can introduce boundary structure; not a source separator. Both observe all81lags. All observed quantities retained, no fitted delay or claimed sub-ms resolution.",
+  "descriptors": "Report each curve at0,+/-1,5,10,20,40ms; mean over declared8<=abs(lag)<=20ms for broad association, with every samePSD control and generated window retained. Comparisons are descriptive finite values, not significance or new acceptance thresholds. Do not turn largest peak lag into source timing.",
+  "kernel": "Every4x6effective response: energy centroid and5..95percent interval at native sample resolution. Existing independent full excitation expectation at every lag K_bc(tau)=sum_i kappa_i sum_n h_bi[n]^2*h_ci[n+tau]^2 plus finite original-main cumulant, divided by frozen model variances. Full sign/mixed-input budgets remain rejected separately. No width/shift chosen to improve a fit.",
+  "controls_first": "Known sparse common waveform delayed96samples (+2ms) with independent backgrounds: correct orientation/no wrap/max at declared delay. Common slow amplitude with independent Gaussian carriers is a non-engine broad-correlation counterexample. Verify all81lags against direct centered slice moments, gain/sign invariance and auto reverse symmetry before real data. No perception inferred.",
+  "verification": "Separate scipy linear convolution plus general set-partition fourth cumulant for every saved curve; direct recentered moments at all81known lags and13predeclared source lags (0,+/-1,5,10,20,40ms). Independently verify zero-lag prior matrices, fixed late summaries, input hashes, kernel power/quantiles and existing expectation. Cache NPZ arrays outside loops. Preserve all attempts/exact sources.",
+  "limits": "Previously inspected same near-mono tailpipe recording; wind, microphone, fixed filters, coherent lines and nonstationarity can all participate. Temporal association alone does not identify firings/RPM/load/phase or event rate. Existing hearing pending/no duplicate or blind C adoption. Original commonphase36/all17/full33/individual14k/originalE qualification unwaived.",
+  "new_audio_or_profile": false,
+  "runtime_changed": false
+}
