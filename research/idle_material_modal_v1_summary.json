@@ -1,0 +1,101 @@
+{
+  "schema": "vsl.idle-material-modal-freeze/1",
+  "result": "native_idle_material_and_independent_modal_prototype_pending_listening",
+  "source_git_parent": "31cb92937e1b5b4bd8c048b44c70d653207d103b",
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "approved_source_inventory": [
+    {
+      "id": "A",
+      "raw": "references/raw/A_7aZm1Wkp6QM.webm",
+      "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+      "master": "references/clean/A_decoded_float.wav",
+      "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964"
+    },
+    {
+      "id": "B",
+      "raw": "references/raw/B_local_Tecnica_binaural.mp3",
+      "raw_sha256": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+      "master": "references/clean/B_decoded_float.wav",
+      "master_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f"
+    },
+    {
+      "id": "D",
+      "raw": "references/raw/D_21q_wpc-pVA.mkv",
+      "raw_sha256": "bf61065f5b9b1a2d74d3db0274bb652477e38b173d520b6de68e45c674c4b850",
+      "master": "references/clean/D_decoded_float.wav",
+      "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3"
+    },
+    {
+      "id": "E",
+      "raw": "references/raw/E_GIceP3oLuDQ.mkv",
+      "raw_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
+      "master": "references/clean/E_decoded_float.wav",
+      "master_sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf"
+    },
+    {
+      "id": "F1",
+      "raw": "references/raw/state_media_v1/F1_fetch2/F1_XZCOsnPYre0.mkv",
+      "raw_sha256": "0759cdbc4f75ffc7da7e52ffea0c3494a5f0153687776b53c1a69e714d13e22b",
+      "master": "references/analysis/state_media_v1/F1_inspect1/native_reference.wav",
+      "master_sha256": "1ae81897db09d89b97c64bff584c9b6deb1324c2d3d4f7ff80c206d88f16f7b7"
+    },
+    {
+      "id": "F2",
+      "raw": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "raw_sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f",
+      "master": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "master_sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    },
+    {
+      "id": "F3",
+      "raw": "references/raw/state_media_v1/F3_fetch2/F3_QUWTsk9crlo.mkv",
+      "raw_sha256": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "master": "references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+      "master_sha256": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869"
+    }
+  ],
+  "runtime_invariants": {
+    "C_files_sha256.json": 540,
+    "voice_files_sha256.json": 67
+  },
+  "source_RPM": null,
+  "shared_phase_qualified": false,
+  "runtime_changed": false,
+  "modal_modes": 13,
+  "resonator_bands": 6,
+  "train_seconds": [
+    6,
+    9
+  ],
+  "holdout_seconds": [
+    9,
+    12
+  ],
+  "seed_count": 3,
+  "checks": {
+    "scalar_modal_FS_error": 4.793861640983721e-09,
+    "source_slices_exact": true,
+    "all3_seeds_kept": true,
+    "float_stem_sum_maximum_error": 2.2351741790771484e-08,
+    "maximum_training_band_error_db": 0.4985074989393002,
+    "maximum_holdout_band_error_db": 1.1359445008196831,
+    "AR_unit_variance_maximum_error": 3.1530333899354446e-14
+  },
+  "url": "http://127.0.0.1:8789/references/analysis/idle_modal_v1/review2/index.html",
+  "listening_accepted": false,
+  "retained_failed_runs": [
+    "idle_material_v1/observe1",
+    "idle_modal_v1/trial1",
+    "idle_modal_v1/trial3"
+  ],
+  "retained_intermediate_runs": [
+    "idle_modal_v1/trial2",
+    "idle_modal_v1/audit1",
+    "idle_modal_v1/review1"
+  ],
+  "limitation": "Independent fixed-Hz modes may beat; not common-phase DNA, measured RPM/load, full driving coverage or listening acceptance.",
+  "freeze": "baselines/idle_material_modal_v1",
+  "manifest_sha256": "7cee67219c0e4a6a7968795a0ea91c9060afee0c678a25984a13888eb09c9ce4",
+  "file_count": 226,
+  "bytes": 232584384
+}

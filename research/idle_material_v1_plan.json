@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.idle-material-plan/1",
+  "trigger": "User says 怠速时的声音做的还不够漂亮，可以再去素材里多多提取一下。 Prioritize approved idle material and actual runtime-state evidence; retain accepted moving35.",
+  "sources": [
+    {"id":"F2_tailpipe","use":"fixed_window_spectral_observation","seconds":[6,12],"purpose":"Main LP-610 near-tailpipe idle source, human usable with mild wind; microphone movement and exact RPM remain unknown"},
+    {"id":"A_exterior_low_rev","use":"exterior_spectral_observation","seconds":[208,211],"purpose":"Separate Performante low-rev context; not verified warm idle"},
+    {"id":"A_exterior_blips","use":"exterior_dynamic_observation","seconds":[243.9,247.1],"purpose":"Existing separate A low acoustic target, no new interval search or acceptance claim"},
+    {"id":"E_exterior_stationary_intro_context","use":"exterior_spectral_observation","seconds":[5.2,7.8],"purpose":"Original fixed E low interval, not a new common-phase fit or proof of warm idle"}
+  ],
+  "runtime": "Existing full_recipe_drive_v1/verify1/full_pedals saved schema8 output and stems, first contiguous RUNNING/IDLE at0.93s; one0.5s tile, using matching recorded trace. Do not concatenate unrelated events or call nominal RPM measured source RPM.",
+  "observations": "Native48k stereo FLOAT, fixed nonoverlapping0.5s periodic-Hann tiles, no zero padding, pitch warp, denoising, normalization, peak-picking source fit or window/band sweep. Bands30..120,120..400,400..1200,1200..2200,2200..4000,4000..8000,8000..14000Hz. Store absolute power and within-record total-band fractions separately. Whole-period PSD is not a physical source separation or harmonic/noise allocation. Last partial tile remains unmeasured, not cherry-picked.",
+  "controls": "Before source read verify exact on-grid multi-tone power in every fixed band, scaled stereo power ratios, silence finite zero, and weighted Parseval identity. Independent audit uses explicit DFT sums of every measured FFT bin for analytic fixture and selected real band totals; no inference of source clock or RPM.",
+  "source_inventory": "Review all7 approved source identities and existing state restrictions. F1 multi-car moving-mic scene only; B cabin stationary candidates previously failed full-timbre support; D dyno context not labeled idle; F3 stationary speech is excluded. Never pool cabin/dyno/street/exterior perspectives as one target. No new download or re-selection to bypass failed material gates.",
+  "runtime_contract": "Read actual300harmonic model and trace root; calculate highest main carrier and verify saved LF/detail stems/support are zero over the selected IDLE tile. The highest carrier is not a brick-wall output cutoff because stochastic AM and finite-window leakage create sidebands. Compare observed spectra instead of asserting exact absence.",
+  "scope": "Phase-free material/coverage analysis, not a new shared-phase DNA or audible improvement claim. Original common-phase qualification chain and remaining QP failures retained. Produce source/engineering feature manifest and figure that determine the next idle-specific model, rather than tuning the accepted moving recipe. No C/models/UI/default changes or old55CTest repeat."
+}
