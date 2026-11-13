@@ -1,5 +1,7 @@
 # C 模块与接口
 
+最新[怠速细谱持续C生成V1](../research/怠速细谱持续C生成V1.md)：新增`partitioned_fir/{fft,filter}.*`与`spectral_texture/{profile,voice,io}.*`，区分只读FFT核／卷积历史／新激励／非实时IO。输入参数编译后由bank拥有，voice借用bank；内部256帧激励前取保留原预热位置，外层控制在输出帧应用。完整固定候选可由C生成，但未接驾驶／UI／行程，也不代表外部输入零延迟或整套系统硬实时。4项、全部三种子／三档分轨、控制分块和30秒成本检查通过；591C/H＝579原样＋12新增，67声音文件保持。前轮59项完整驾驶证明沿用，以下保留各历史阶段当时状态。
+
 最新[怠速幅度纹理C核V1](../research/怠速幅度纹理C核V1.md)：`modules/modal_texture/{profile,envelope,voice,io}.*`独立校验／相关正幅度／组合OSC／非实时读取；`modal_source/voice.*`仅增加可选共L/R逐声线增益，NULL保留旧算术。量18ms、0量持续推进，无频率／相位变化或IO分配；参数借用且须保持只读。独立C实验尚未接驾驶／UI／行程，细谱FIR仍Python，不替换任何已认可音色。接口与生命周期见[模块说明](../modules/modal_texture/README.md)，实际核查见本轮summary。
 
 最新[怠速细节提取V2](../research/怠速细节提取V2.md)为独立Python候选，本轮569份C/H字节原样，模块索引不变。新频谱参数与幅度统计尚未接入`modal_source`／`resonant_detail`／`modal_layer`，8192点FIR未认证实时成本；不把离线试听或数值谱形改进当作新C核完成。
