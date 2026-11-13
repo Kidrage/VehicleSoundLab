@@ -1,0 +1,63 @@
+{
+  "schema": "vsl.modal-texture-freeze/1",
+  "result": "isolated_amplitude_candidate_audited_pending_listening",
+  "git_parent": "91c04d3c85434d121e5e9872ab48d29bc719faeb",
+  "parent_profile_manifest_sha256": "3802479e167ff8e4b2f35f0b4a981e14df4c97c029f45f951ed770415b14df64",
+  "old_fine_manifest_sha256": "4e3e1ecc7396ff9f8be5abbc741795561efce72d6af4f855f773de0b864e4eb2",
+  "mono_parent_manifest_sha256": "787015c55f4ba8b12415698f18b0801256bdab5489bf306322b3eeaef2e31346",
+  "sources_used": [
+    "F2_tailpipe"
+  ],
+  "training_seconds": [
+    6,
+    9
+  ],
+  "reference_seconds": [
+    9,
+    12
+  ],
+  "original_modes": 13,
+  "original_mode_parameters_exact": true,
+  "old_fine_zero_FLOAT_exact": true,
+  "seed_count": 3,
+  "amounts": [
+    0,
+    0.5,
+    1
+  ],
+  "all_seeds_retained": true,
+  "render_groups": 9,
+  "independently_audited_known_windows": 33,
+  "independently_audited_source_windows": 141,
+  "nonlinear_FM_exact_tangent_link_longest": 1,
+  "known_FM_amplitude_proxy_log_std": 0.011302653261574414,
+  "magnitude_is_proxy_not_physical_AM": true,
+  "mono_noise_counterexample_retained": true,
+  "source_std_cap": 0.12,
+  "source_alpha": 0.030202408148676477,
+  "expected_squared_gain": 1,
+  "phase_modulation": false,
+  "frequency_modulation": false,
+  "recorded_trajectory": false,
+  "room": false,
+  "maximum_FLOAT_sample_error": 1.4900845668464058e-08,
+  "source_coefficient_error": 5.134898698599272e-16,
+  "common_review_gain": 1,
+  "clips": 19,
+  "browser_combinations": 19,
+  "muted_browser_only": true,
+  "screenshots_viewed": true,
+  "url": "http://127.0.0.1:8789/references/analysis/modal_texture_v1/review1/index.html",
+  "C_H_unchanged": 569,
+  "voices_unchanged": 67,
+  "C_tests_repeated": false,
+  "runtime_changed": false,
+  "timbre_accepted": false,
+  "shared_phase_qualified": false,
+  "actual_RPM_load": false,
+  "next": "Judge core-AM benefit, pumping and weak-line noise before joint detail-AM or generic realtime adoption. Preserve original pending questions/common-phase qualification and complete state/spatial goal.",
+  "freeze": "baselines/modal_texture_v1",
+  "manifest_sha256": "3e3d6454f6f0aad832fa19c27dfc79fa75f7961c2b1ccc16ccf4190bbe970fc5",
+  "file_count": 181,
+  "bytes": 203759143
+}
