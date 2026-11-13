@@ -1,0 +1,51 @@
+{
+  "schema": "vsl.idle-closure-evidence-freeze/1",
+  "result": "two_relative_coordinate_source_evidence_NOT_phase_lock_identification",
+  "parent_commit": "e092e879f38913af4377a49a600555835f500cbe",
+  "audit": {
+    "result": "all8_closure_501lag_curves_and180000_arc_decisions_verified",
+    "max_stats_error": 1.7763568394002505e-14,
+    "max_array_error": 3.268496584496461e-13,
+    "observations": 8,
+    "known": {
+      "max_known_report_error": 4.597017211338539e-15,
+      "all501_direct": true,
+      "independent_short": 0.9995985019881005,
+      "independent_long": 0.10822764997385453
+    },
+    "input_report_sha256": "25b9bcdaba0f683233c2fd7c1c0cde03f3336d37f387116c84c5eb1712480e02",
+    "runtime_changed": false,
+    "longterm_stationary_coupling_identified": false,
+    "audio_generated": false
+  },
+  "extension_audit": {
+    "result": "all8_eta_501lag_curves_and180000_joint_decisions_verified",
+    "max_array_error": 1.0231815394945443e-12,
+    "observations": 8,
+    "input_report_sha256": "25b9bcdaba0f683233c2fd7c1c0cde03f3336d37f387116c84c5eb1712480e02",
+    "extension_report_sha256": "53987c136165f06705672f07e0a9e9c491176345e19dca79e9da85cf4597df41",
+    "runtime_changed": false,
+    "audio_generated": false,
+    "known_integer_and_origin": true
+  },
+  "all16portions_all501lags": true,
+  "all180000_joint_decisions": true,
+  "additional_eta_is_explicit_posthoc_diagnostic": true,
+  "source_check_joint_coverage": 0.9495,
+  "runtime_first12s_joint_coverage": 0.5310833333333334,
+  "runtime180s_joint_coverage": 0.16913333333333333,
+  "independent_short_record_counterexample": true,
+  "phase_observer_known_cases": 6,
+  "longterm_stationary_coupling_identified": false,
+  "all_figures_viewed": true,
+  "empirical_arc_NOT_confidence_region": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "runtime_changed": false,
+  "audio_generated": false,
+  "listening_accepted": false,
+  "next": "Propose explicit two-relative-coordinate statistical texture hypothesis, not hardlock/copiedphase. Known+crossportion/fullwave/longrun before audible candidate; original commonphase qualification and fullgoal remain. Prior hearing pending/no duplicate.",
+  "manifest_sha256": "f454c193a6801ec113303f962d7e946517ff573873fca9fb3a121f52ef0df491",
+  "file_count": 66,
+  "bytes": 136499566
+}
