@@ -1,0 +1,99 @@
+{
+  "schema": "vsl.accel-ridges-freeze/1",
+  "result": "guided_peak_observations_verified_classifier_not_sufficient_for_source_identity",
+  "parent_commit": "e6c0300efbdce6f107bb37d503fc61ed008ceda1",
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "tiles": 12,
+      "reference_peaks": 24,
+      "counts": {
+        "moving": 2,
+        "fixed": 0,
+        "uncertain": 22
+      }
+    },
+    {
+      "segment": "F3_fifth2",
+      "tiles": 12,
+      "reference_peaks": 20,
+      "counts": {
+        "moving": 6,
+        "fixed": 0,
+        "uncertain": 14
+      }
+    },
+    {
+      "segment": "F3_sixth",
+      "tiles": 24,
+      "reference_peaks": 30,
+      "counts": {
+        "moving": 1,
+        "fixed": 0,
+        "uncertain": 29
+      }
+    }
+  ],
+  "plot_summary": [
+    {
+      "segment": "F3_fifth1",
+      "counts": {
+        "moving": 2,
+        "fixed": 0,
+        "uncertain": 22
+      },
+      "raw_moving80": 19,
+      "raw_fixed80": 0,
+      "reference_above2k": 0
+    },
+    {
+      "segment": "F3_fifth2",
+      "counts": {
+        "moving": 6,
+        "fixed": 0,
+        "uncertain": 14
+      },
+      "raw_moving80": 18,
+      "raw_fixed80": 0,
+      "reference_above2k": 0
+    },
+    {
+      "segment": "F3_sixth",
+      "counts": {
+        "moving": 1,
+        "fixed": 0,
+        "uncertain": 29
+      },
+      "raw_moving80": 17,
+      "raw_fixed80": 0,
+      "reference_above2k": 0
+    }
+  ],
+  "native_inventory_count": 144,
+  "assignment_graphs": 288,
+  "classification_count": 339,
+  "maximum_frequency_error_hz": 9.094947017729282e-13,
+  "maximum_prominence_error_db": 2.330753545720654e-08,
+  "dense_comb_limitation": {
+    "known_moving_partials": 26,
+    "raw_moving_support_at_least80": 26,
+    "false_uncertain_despite_moving_support": 18,
+    "interpretation": "Intermittent alternative matches do not identify a persistent fixed component. Original classes retained; not a physical source classifier."
+  },
+  "guide_refitted": false,
+  "original_classes_relaxed": false,
+  "source_or_phase_or_RPM_identity_established": false,
+  "real_source_audio_read": true,
+  "new_audio_or_profile_exported": false,
+  "timbre_acceptance": false,
+  "C_H_unchanged": 600,
+  "voices_unchanged": 67,
+  "old61CTest_repeated": false,
+  "plot_visually_reviewed": true,
+  "pending_idle_question_repeated": false,
+  "next": "Joint native varying-frequency fits with dense-comb/missing/neighbour controls and held-out windows; preserve independent phase and source perspective limits.",
+  "freeze": "baselines/accel_ridges_v1",
+  "manifest_sha256": "34b8ceaac5e3b8a7d6612b73377aab1981ba736cbd2c559dc7b71c9c146e96d3",
+  "file_count": 55,
+  "bytes": 82903405
+}
