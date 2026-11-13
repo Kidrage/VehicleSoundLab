@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.accel-postfit-coverage/1",
+  "purpose": "Postfit descriptive check of the ORIGINAL all48 native cubic results while the already-running model-selection study completes. No change to extraction/selection/fit/thresholds or audio. Preliminary median ratios suggested4k+omission; explicitly posthoc reporting, not an independently chosen predictive model or parameter-selection gate.",
+  "bands_hz": [[30,200],[200,1200],[1200,4000],[4000,7000],[7000,14000]],
+  "measurement": "Original12000frame0.25s native periodic Hann, separate LR one-sided cell power with doubled interior bins, no detrend/normalization/resampling. Compare saved residual and original recording in each band. Compute every48window including optimizer failures; report power ratio and original inventory/fitted/eligible central-frequency counts. Ratio not additive missing-source budget or explained physical-source fraction; can exceed1 because fits and residual interfere.",
+  "verification": "All source/residual samples independently reconstructed by primary auditor. Independently compute every absolute band power using scipy.signal.periodogram density*df. Analytic grid-tone band assignment/known amplitudes and Parseval first; retain every row. No FFTpeak refit or new band-local detector. Descriptive medians include all failed windows, not accepted source parameters.",
+  "next": "If upper bands largely uncovered, inspect original upper-band structure before more low-frequency optimizer work. Empty current inventories not proof of absent tonal/engine components. Do not fill residual with arbitrary OSC/noise or promote current thin model as complete acceleration.",
+  "new_audio_or_profile": false,
+  "runtime_changed": false
+}

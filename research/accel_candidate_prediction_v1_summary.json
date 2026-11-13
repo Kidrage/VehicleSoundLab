@@ -1,0 +1,326 @@
+{
+  "schema": "vsl.accel-candidate-prediction-freeze/1",
+  "result": "all48_F3_observations_audited_NO_source_identity_or_audio_promotion",
+  "parent_commit": "866d2786b40158fcb564db1fab187e2f2853e4e5",
+  "audit": {
+    "result": "all48_F3_native_augmented_masked_predictions_adoption_graphs_verified",
+    "windows": 48,
+    "native_lines": 1942,
+    "raw_lines": 2021,
+    "selected_lines": 1942,
+    "verification_fits": 163,
+    "verification_lines": 8001,
+    "conditional_tests": 134,
+    "prediction_tests": 144,
+    "prediction_supported": 0,
+    "prediction_unknown": 143,
+    "adopted_windows": 0,
+    "maximum_input_error": 0.0,
+    "maximum_peak_error": 4.547473508864641e-13,
+    "maximum_waveform_error": 8.07270916780567e-14,
+    "maximum_support_error": 1.2989609388114332e-14,
+    "maximum_normal_error": 3.421215307750178e-16,
+    "maximum_optimality_error": 5.087449287798779e-17,
+    "maximum_verification_waveform_error": 8.115730310009894e-14,
+    "maximum_verification_normal_error": 2.9085078529639263e-16,
+    "maximum_verification_optimality_error": 1.8795661099572925e-16,
+    "maximum_verification_cost_error": 1.1102230246251565e-16,
+    "maximum_null_cost_error": 2.636779683484747e-16,
+    "maximum_null_gain_error": 1.7208456881689926e-14,
+    "observations": [
+      {
+        "segment": "F3_fifth1",
+        "windows": 12,
+        "native_successful": 3,
+        "augmented_attempts": 3,
+        "selected_successful": 3,
+        "native_lines": 458,
+        "raw_lines": 480,
+        "selected_lines": 458,
+        "selected_eligible": 41,
+        "adopted_windows": [],
+        "unknown_windows": [
+          3,
+          5,
+          8
+        ],
+        "variants": {
+          "profiled_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "profiled_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          }
+        }
+      },
+      {
+        "segment": "F3_fifth2",
+        "windows": 12,
+        "native_successful": 6,
+        "augmented_attempts": 6,
+        "selected_successful": 6,
+        "native_lines": 434,
+        "raw_lines": 475,
+        "selected_lines": 434,
+        "selected_eligible": 71,
+        "adopted_windows": [],
+        "unknown_windows": [
+          1,
+          2,
+          7,
+          8,
+          10
+        ],
+        "variants": {
+          "profiled_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "profiled_boundary": {
+            "longest_low_start_track": 2,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          }
+        }
+      },
+      {
+        "segment": "F3_sixth",
+        "windows": 24,
+        "native_successful": 10,
+        "augmented_attempts": 10,
+        "selected_successful": 10,
+        "native_lines": 1050,
+        "raw_lines": 1066,
+        "selected_lines": 1050,
+        "selected_eligible": 126,
+        "adopted_windows": [],
+        "unknown_windows": [
+          8,
+          10,
+          11,
+          14,
+          15,
+          17,
+          20,
+          21,
+          22,
+          23
+        ],
+        "variants": {
+          "profiled_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "profiled_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "native_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_old": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          },
+          "selected_boundary": {
+            "longest_low_start_track": 1,
+            "low_start_tracks_atleast5": 0,
+            "compared_low_tracks": 0
+          }
+        }
+      }
+    ],
+    "spectral_coverage": {
+      "F3_fifth1": {
+        "median_residual_source_ratio_LR": [
+          [
+            0.22568177065412703,
+            0.23822955333742385
+          ],
+          [
+            0.02864618699965764,
+            0.02457981370972918
+          ],
+          [
+            0.22630440239759764,
+            0.4161806444331054
+          ],
+          [
+            1.0000000009467023,
+            0.9999999996683475
+          ],
+          [
+            0.999999999944404,
+            0.9999999997371665
+          ]
+        ],
+        "maximum_band_power_error": 3.0531133177191805e-16,
+        "maximum_Parseval_error": 2.0816681711721685e-15,
+        "physical_source_separation": false,
+        "all_failed_windows_included": true
+      },
+      "F3_fifth2": {
+        "median_residual_source_ratio_LR": [
+          [
+            0.33521352793275005,
+            0.3529723631835016
+          ],
+          [
+            0.022150447555988412,
+            0.024748778795960186
+          ],
+          [
+            0.33744891898933355,
+            0.3752687730344206
+          ],
+          [
+            1.000000000110567,
+            1.0000000012166848
+          ],
+          [
+            0.9999999996023632,
+            1.0000000001733715
+          ]
+        ],
+        "maximum_band_power_error": 3.3306690738754696e-16,
+        "maximum_Parseval_error": 1.8596235662471372e-15,
+        "physical_source_separation": false,
+        "all_failed_windows_included": true
+      },
+      "F3_sixth": {
+        "median_residual_source_ratio_LR": [
+          [
+            0.3232409712453382,
+            0.31861030582799926
+          ],
+          [
+            0.04430760032692991,
+            0.04380073264926143
+          ],
+          [
+            0.3508369334983744,
+            0.4315527252405921
+          ],
+          [
+            1.0000000002029625,
+            1.0000000005332828
+          ],
+          [
+            1.0000000001845728,
+            1.0000000003140852
+          ]
+        ],
+        "maximum_band_power_error": 3.0531133177191805e-16,
+        "maximum_Parseval_error": 2.0261570199409107e-15,
+        "physical_source_separation": false,
+        "all_failed_windows_included": true
+      }
+    },
+    "coverage_controls": {
+      "analytic_grid_tone_power_error": 7.806255641895632e-18,
+      "maximum_band_power_error": 4.5102810375396984e-17,
+      "maximum_Parseval_error": 1.0061396160665481e-16
+    },
+    "coverage_bands_hz": [
+      [
+        30,
+        200
+      ],
+      [
+        200,
+        1200
+      ],
+      [
+        1200,
+        4000
+      ],
+      [
+        4000,
+        7000
+      ],
+      [
+        7000,
+        14000
+      ]
+    ],
+    "input_report_sha256": "25dea9b8666d2bc7e11be2cc81e67fdb9e4afa8e6342563531b6e9ba0bbe2474",
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "input_candidates_and_neighbor_conditioned_not_pristine_holdout": true,
+    "physical_source_RPM_load_or_common_phase_identified": false,
+    "new_audio_profile_or_runtime": false
+  },
+  "selected_low_start_tracks_atleast5": 0,
+  "all_native_full_masked_deleted_unknown_attempts_retained": true,
+  "no_subset_ranking_or_budget_sweep": true,
+  "same_qualified_algorithm_sources": true,
+  "workers4_and_BLAS2_NOT_realtime_performance_claim": true,
+  "whole_window_neighbor_conditioned_not_pristine_holdout": true,
+  "unknown_not_absence": true,
+  "plots_viewed": true,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "new_audio_profile_or_runtime": false,
+  "old61_driving_tests_repeated": false,
+  "idle_listening_candidates_pending_no_duplicate_or_promotion": true,
+  "original_common_phase_qualification_remains_required": true,
+  "next": "Use all actual failures and the new all48postfit band coverage before the next source model; inspect omitted upper-band structure rather than more low-optimizer sweeps. No arbitrary bass or source identity from local support.",
+  "manifest_sha256": "fd9bc79bf5a4ad05b668340bb42ecf6d5d572fe560d5b8b498e67a0cabd335f4",
+  "file_count": 443,
+  "bytes": 186817721
+}
