@@ -1,0 +1,7 @@
+{
+  "schema": "vsl.observed-score-audit-cancellation/1",
+  "trigger": "audit1 passed initial/native, initial/marginal and final/native, then stopped at the original1e-10 relative-error gate in final/marginal. Preserve its failed report/executed source; do not change the original gate or claim that it passed.",
+  "diagnosis": "Record each original error before asserting, and separately check score cancellation. At identical frozen states, independently projected residual e2 and Jacobian J2 can differ in roundoff from e1,J1; a nearly stationary score J^T psi can have a misleading relative denominator. Measure these differences rather than increasing the gate.",
+  "additional_check": "Radial psi is1-Lipschitz. Therefore ||g2-g1|| <= ||J2-J1||F ||psi1|| + ||J2||F ||e2-e1||, plus dot-product rounding. Use standard gamma_n=n*eps/(1-n*eps), n=number of real observation rows+windows, times the two absolute-product score norms; add20eps ||J2||F ||psi1|| for elementary radial arithmetic. No fitted multiplier or observed-error scaling. Retain original score-relative gate result separately. Original1e-10 pullback/covariance/ratio gates still mandatory.",
+  "keep": "No estimator or QP run, no actual data/parameter/source changes. Both audit versions and actual4-case exact matrices retained. This remains a score-geometry diagnostic, not original phase qualification or new DNA."
+}
