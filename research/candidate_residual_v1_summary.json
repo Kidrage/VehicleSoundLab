@@ -1,0 +1,1034 @@
+{
+  "schema": "vsl.candidate-residual-freeze/1",
+  "result": "PREREQUISITE_FAILED_true_weak_line_false_negative_fixed_native_basis_no_promotion",
+  "parent_commit": "f48e6f01753a9625b8a23a6a26ed211d7df0b98b",
+  "planned_windows": 108,
+  "executed_windows": 12,
+  "remaining_windows_not_executed": 96,
+  "audit": {
+    "result": "all12_prerequisite_screen_false_negative_inputs_raw_accepted_nulls_graphs_scores_verified",
+    "windows": 12,
+    "native_lines": 117,
+    "raw_lines": 119,
+    "screen_tests": 3,
+    "postfit_tests": 2,
+    "maximum_waveform_error": 4.808653475407709e-14,
+    "maximum_support_error": 1.1102230246251565e-16,
+    "maximum_normal_error": 2.0006535095172712e-16,
+    "maximum_optimality_error": 7.525334098675532e-18,
+    "maximum_peak_error": 1.4210854715202004e-14,
+    "maximum_screen_cost_error": 3.9302328752599536e-19,
+    "maximum_screen_gain_error": 4.3298697960381105e-15,
+    "maximum_screen_coefficient_error": 8.049116928532385e-16,
+    "maximum_postfit_cost_error": 4.404571325722362e-19,
+    "maximum_postfit_gain_error": 0.0,
+    "prerequisite_failures": [
+      {
+        "window": 11,
+        "reasons": [
+          "mode_count",
+          "waveform_relative_error"
+        ],
+        "relative_residual": 0.09602431925668241
+      }
+    ],
+    "maximum_signal_error": 8.222311720373909e-13,
+    "screen_gains": [
+      {
+        "window": 9,
+        "gain_LR": [
+          0.9962840450327013,
+          0.9962841473387771
+        ],
+        "passed": true
+      },
+      {
+        "window": 10,
+        "gain_LR": [
+          0.9737217859826991,
+          0.9737202444063513
+        ],
+        "passed": true
+      },
+      {
+        "window": 11,
+        "gain_LR": [
+          0.7925358381052443,
+          0.7925324316028776
+        ],
+        "passed": false
+      }
+    ],
+    "input_report_sha256": "e1715bcb8ba77f7a6efc91857e4a5b0e7d79107a21a2d5496f9d32de1d22e840",
+    "remaining96_executed": false,
+    "qualified": false,
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "real_source_read": false
+  },
+  "independent_model_diagnostic": {
+    "result": "all12_fixed_native_screen_and_frozen_joint_models_independently_reconstructed",
+    "sources": {
+      "tools/diagnose_candidate_residual_v1.py": "ef39f9d3c5e0437b1b3342fa3a1298bf7fa7a242d4ca3c5347c428c0af7d6319",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+      "tools/native_chirp_audit_v1/wave.py": "e0abb06d7dc6b11726694a6d6fe3fa0b84991ec3b2e475fd4564f55a659a46c0"
+    },
+    "parent_files": {
+      "evidence/observe1/cubic_control/raw_fits.json": "a19e6fd945cddadeee890fd2ad820b84a23ff33bc157de12193eeb69571d3f1b",
+      "evidence/observe1/cubic_control/native_00.npz": "39226c0983e5df79cbba2c5f5e03467e3686eb800551d127982bca1ecf35b138",
+      "evidence/observe1/cubic_control/tile_00.npz": "39226c0983e5df79cbba2c5f5e03467e3686eb800551d127982bca1ecf35b138",
+      "evidence/observe1/cubic_control/native_01.npz": "4f81c4f32ee186c97d7ff50b02b758ecda17564c2aee1bd8776e0a86a5b5ea4c",
+      "evidence/observe1/cubic_control/tile_01.npz": "4f81c4f32ee186c97d7ff50b02b758ecda17564c2aee1bd8776e0a86a5b5ea4c",
+      "evidence/observe1/cubic_control/native_02.npz": "07246d0b475913d17918b9c4436af1bbd2040b38a9b4f57472523719124928e8",
+      "evidence/observe1/cubic_control/tile_02.npz": "07246d0b475913d17918b9c4436af1bbd2040b38a9b4f57472523719124928e8",
+      "evidence/observe1/cubic_control/native_03.npz": "b4a73a7b180df2555f7b77b344709d3ede4412beec3ace5c5ecd36e0185bf86d",
+      "evidence/observe1/cubic_control/tile_03.npz": "b4a73a7b180df2555f7b77b344709d3ede4412beec3ace5c5ecd36e0185bf86d",
+      "evidence/observe1/cubic_control/native_04.npz": "1558c5f369b24312aa9994c96a187390035ed9b9addea4f3e95633d0d6c5383c",
+      "evidence/observe1/cubic_control/tile_04.npz": "1558c5f369b24312aa9994c96a187390035ed9b9addea4f3e95633d0d6c5383c",
+      "evidence/observe1/cubic_control/native_05.npz": "7fc376c5c5125866275f0a4f9509f46b0fb0d7139732a1ca42591885f0509587",
+      "evidence/observe1/cubic_control/tile_05.npz": "7fc376c5c5125866275f0a4f9509f46b0fb0d7139732a1ca42591885f0509587",
+      "evidence/observe1/cubic_control/native_06.npz": "21c3cfc28683ccb47208674632fc61934fbd5282d5a4eeeb3a888d209570d3b7",
+      "evidence/observe1/cubic_control/tile_06.npz": "21c3cfc28683ccb47208674632fc61934fbd5282d5a4eeeb3a888d209570d3b7",
+      "evidence/observe1/cubic_control/native_07.npz": "e17a8f7bbe7c6fb0dbfcb49621c9d5485285e98e1471fe3f17d009d4edb55a2c",
+      "evidence/observe1/cubic_control/tile_07.npz": "e17a8f7bbe7c6fb0dbfcb49621c9d5485285e98e1471fe3f17d009d4edb55a2c",
+      "evidence/observe1/cubic_control/native_08.npz": "a720432d740a675a7adf4a83f3c2c0c38aeea5d99935e3425c0de67d47d67486",
+      "evidence/observe1/cubic_control/tile_08.npz": "a720432d740a675a7adf4a83f3c2c0c38aeea5d99935e3425c0de67d47d67486",
+      "evidence/observe1/cubic_control/native_09.npz": "4fe965f582435de7adab33923ad05f6d1aedb83847dc4ad2e8026d926b59fc64",
+      "evidence/observe1/cubic_control/tile_09.npz": "32b33888eb078858661805da769bb19f3ef94f2c5335f1d4f7af2822274ca953",
+      "evidence/observe1/cubic_control/native_10.npz": "e72a290477ca8b0ab54e642c4a1e5563d6614ad3da5b202d8f9c6d7df3954eec",
+      "evidence/observe1/cubic_control/tile_10.npz": "d02aef2fc4ad35c956b773d8e589aea9757193d08d97efcf499eff90aaf3f466",
+      "evidence/observe1/cubic_control/native_11.npz": "03c97b9e1321becb3b47018b64c147f5fd59acad4517c56da1faf9ea9d3dc1ae",
+      "evidence/observe1/cubic_control/tile_11.npz": "470e9c84f7c07b46e4ceb5b1018977fc736f5e50942989caa18fe3cd2b051c04"
+    },
+    "windows": [
+      {
+        "window": 0,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          7.982357004051104e-11,
+          7.983221679469069e-11
+        ],
+        "joint_weighted_relative_LR": [
+          7.982357004051104e-11,
+          7.983221679469069e-11
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 44.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 88.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 140.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 180.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 300.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 524.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 904.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 1,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          6.138888235921793e-10,
+          6.1388905240746e-10
+        ],
+        "joint_weighted_relative_LR": [
+          6.138888235921793e-10,
+          6.1388905240746e-10
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 44.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 92.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 140.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 184.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 304.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 528.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 916.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 2,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          6.08743626204098e-08,
+          6.087437297414172e-08
+        ],
+        "joint_weighted_relative_LR": [
+          6.08743626204098e-08,
+          6.087437297414172e-08
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 44.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 92.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 144.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 184.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 312.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 536.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 928.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 3,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          1.9753103821299304e-10,
+          1.975473347762885e-10
+        ],
+        "joint_weighted_relative_LR": [
+          1.9753103821299304e-10,
+          1.975473347762885e-10
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 44.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 92.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 144.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 188.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 316.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 544.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 944.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 4,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          6.439455804739983e-08,
+          6.439345944144601e-08
+        ],
+        "joint_weighted_relative_LR": [
+          6.439455804739983e-08,
+          6.439345944144601e-08
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 48.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 96.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 148.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 192.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 320.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 552.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 960.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 5,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          8.531486750738241e-09,
+          8.53149437488186e-09
+        ],
+        "joint_weighted_relative_LR": [
+          8.531486750738241e-09,
+          8.53149437488186e-09
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 48.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 96.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 148.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 196.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 324.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 564.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 972.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 6,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          5.211485688883761e-07,
+          5.211486128325923e-07
+        ],
+        "joint_weighted_relative_LR": [
+          5.211485688883761e-07,
+          5.211486128325923e-07
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 48.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 96.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 152.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 196.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 332.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 572.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 988.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 7,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          2.098279489580617e-10,
+          2.0982858848609434e-10
+        ],
+        "joint_weighted_relative_LR": [
+          2.098279489580617e-10,
+          2.0982858848609434e-10
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 48.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 100.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 156.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 200.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 336.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 580.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 1008.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 8,
+        "native_modes": 10,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          8.192658186742216e-10,
+          8.192643929491837e-10
+        ],
+        "joint_weighted_relative_LR": [
+          8.192658186742216e-10,
+          8.192643929491837e-10
+        ],
+        "screen_fixed_weighted_relative_LR": null,
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 48.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 100.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 116.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 156.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 204.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 340.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 592.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          },
+          {
+            "nominal_hz": 1024.0,
+            "frequency_change_hz": 0.0,
+            "rate_change_hzs": 0.0,
+            "curvature_change_hzs2": 0.0
+          }
+        ]
+      },
+      {
+        "window": 9,
+        "native_modes": 9,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          0.059763003452276336,
+          0.059762989137427634
+        ],
+        "joint_weighted_relative_LR": [
+          3.910683347431537e-10,
+          3.910282456332956e-10
+        ],
+        "screen_fixed_weighted_relative_LR": [
+          0.003643071009164869,
+          0.0036430199864850095
+        ],
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 52.0,
+            "frequency_change_hz": -0.0006138066104597328,
+            "rate_change_hzs": -0.018182698915178985,
+            "curvature_change_hzs2": 1.1307089120334854
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.0015750100701552583,
+            "rate_change_hzs": 0.08388883650054339,
+            "curvature_change_hzs2": -1.9262298247156964
+          },
+          {
+            "nominal_hz": 104.0,
+            "frequency_change_hz": -0.06767050635770033,
+            "rate_change_hzs": 2.8670605083454888,
+            "curvature_change_hzs2": 74.02301978382647
+          },
+          {
+            "nominal_hz": 160.0,
+            "frequency_change_hz": 0.0030793608467831746,
+            "rate_change_hzs": -0.013513149935798552,
+            "curvature_change_hzs2": -4.745719803938222
+          },
+          {
+            "nominal_hz": 208.0,
+            "frequency_change_hz": -0.0002677880827377521,
+            "rate_change_hzs": -0.0005381984448025179,
+            "curvature_change_hzs2": 0.401480671565146
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": -0.0001702282361009111,
+            "rate_change_hzs": 0.0007743478535846266,
+            "curvature_change_hzs2": 0.2512285596751928
+          },
+          {
+            "nominal_hz": 348.0,
+            "frequency_change_hz": -6.310968103662162e-06,
+            "rate_change_hzs": 1.3296301652587772e-05,
+            "curvature_change_hzs2": 0.009401025810234387
+          },
+          {
+            "nominal_hz": 604.0,
+            "frequency_change_hz": -1.0266530807712115e-06,
+            "rate_change_hzs": -2.965727419734776e-05,
+            "curvature_change_hzs2": 0.0015151931264938412
+          },
+          {
+            "nominal_hz": 1044.0,
+            "frequency_change_hz": 1.3202923128119437e-06,
+            "rate_change_hzs": -3.6110914436449093e-06,
+            "curvature_change_hzs2": -0.001960705839678667
+          }
+        ]
+      },
+      {
+        "window": 10,
+        "native_modes": 9,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          0.05923270777070722,
+          0.059232807861380285
+        ],
+        "joint_weighted_relative_LR": [
+          3.180578047855902e-08,
+          3.180578163764238e-08
+        ],
+        "screen_fixed_weighted_relative_LR": [
+          0.009601951525546172,
+          0.0096022493899812
+        ],
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 52.0,
+            "frequency_change_hz": -0.007034871600502868,
+            "rate_change_hzs": -0.14267916169205286,
+            "curvature_change_hzs2": 8.672281426277985
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": -0.016113895971216152,
+            "rate_change_hzs": -0.1998520658242032,
+            "curvature_change_hzs2": 21.818113584090607
+          },
+          {
+            "nominal_hz": 104.0,
+            "frequency_change_hz": 0.2204989930085759,
+            "rate_change_hzs": -1.9131800808872743,
+            "curvature_change_hzs2": -396.5395790947302
+          },
+          {
+            "nominal_hz": 164.0,
+            "frequency_change_hz": 0.005486719616442315,
+            "rate_change_hzs": 0.005675848279150131,
+            "curvature_change_hzs2": -8.161918155400187
+          },
+          {
+            "nominal_hz": 212.0,
+            "frequency_change_hz": -3.847793419708978e-05,
+            "rate_change_hzs": -0.005059093806739412,
+            "curvature_change_hzs2": 0.05682041854600328
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": -7.548051149797175e-05,
+            "rate_change_hzs": -0.0031415687589460275,
+            "curvature_change_hzs2": 0.11316368022500513
+          },
+          {
+            "nominal_hz": 356.0,
+            "frequency_change_hz": -8.775981314101955e-06,
+            "rate_change_hzs": -3.762455017763955e-05,
+            "curvature_change_hzs2": 0.012952387902274154
+          },
+          {
+            "nominal_hz": 616.0,
+            "frequency_change_hz": 3.374877451278735e-06,
+            "rate_change_hzs": -1.9095061979612638e-05,
+            "curvature_change_hzs2": -0.004375150105289549
+          },
+          {
+            "nominal_hz": 1064.0,
+            "frequency_change_hz": 1.663198190726689e-06,
+            "rate_change_hzs": 1.0662257011517795e-05,
+            "curvature_change_hzs2": -0.0024709090241117337
+          }
+        ]
+      },
+      {
+        "window": 11,
+        "native_modes": 9,
+        "joint_modes": 10,
+        "native_weighted_relative_LR": [
+          0.053158563334466835,
+          0.05315872819359381
+        ],
+        "joint_weighted_relative_LR": [
+          6.576748311759536e-08,
+          6.576748581218548e-08
+        ],
+        "screen_fixed_weighted_relative_LR": [
+          0.024212786809452245,
+          0.02421306068320046
+        ],
+        "common_native_nonlinear_changes": [
+          {
+            "nominal_hz": 52.0,
+            "frequency_change_hz": 0.011961919768850748,
+            "rate_change_hzs": -0.7354822747261469,
+            "curvature_change_hzs2": -12.284741621712604
+          },
+          {
+            "nominal_hz": 64.0,
+            "frequency_change_hz": 0.06729506230026061,
+            "rate_change_hzs": -0.2979215753092503,
+            "curvature_change_hzs2": -93.21176276683019
+          },
+          {
+            "nominal_hz": 108.0,
+            "frequency_change_hz": -1.1325457649755464,
+            "rate_change_hzs": 7.859972250041327,
+            "curvature_change_hzs2": 1189.8875555561572
+          },
+          {
+            "nominal_hz": 168.0,
+            "frequency_change_hz": -0.0016971335407163224,
+            "rate_change_hzs": 0.09327129064728545,
+            "curvature_change_hzs2": 2.40941211693071
+          },
+          {
+            "nominal_hz": 216.0,
+            "frequency_change_hz": 0.00036823799737817353,
+            "rate_change_hzs": -0.004606020349058326,
+            "curvature_change_hzs2": -0.5512301561698223
+          },
+          {
+            "nominal_hz": 240.0,
+            "frequency_change_hz": -0.00010657867397867449,
+            "rate_change_hzs": 0.0013897522490396769,
+            "curvature_change_hzs2": 0.18579338794987424
+          },
+          {
+            "nominal_hz": 360.0,
+            "frequency_change_hz": -2.0091305827918404e-06,
+            "rate_change_hzs": -5.9415288898634344e-05,
+            "curvature_change_hzs2": 0.0031826684805622563
+          },
+          {
+            "nominal_hz": 628.0,
+            "frequency_change_hz": 1.3860109220331651e-06,
+            "rate_change_hzs": 8.862932882180985e-05,
+            "curvature_change_hzs2": -0.0008009649027087562
+          },
+          {
+            "nominal_hz": 1084.0,
+            "frequency_change_hz": 1.588865870871814e-06,
+            "rate_change_hzs": 4.2859376492287993e-07,
+            "curvature_change_hzs2": -0.002361481801415266
+          }
+        ]
+      }
+    ],
+    "maximum_model_waveform_error": 5.216660436957454e-14,
+    "new_fits": false,
+    "truth_used": false,
+    "real_source_read": false,
+    "input_report_sha256": "e1715bcb8ba77f7a6efc91857e4a5b0e7d79107a21a2d5496f9d32de1d22e840",
+    "audit_report_sha256": "0e81684d7c8fe252205684a6b449a7050673fca579e92c4efcbd215b283ef5cf",
+    "comparison_is_known_prerequisite_only": true,
+    "not_a_new_selection_rule_or_fullqualification": true
+  },
+  "original_failure_threshold_and_exact_sources_preserved": true,
+  "threshold_budget_degree_seed_window_sweep": false,
+  "new_acceptance_is_fixed_nonlinear_global_conditional_linear_gain": true,
+  "statistical_confidence_or_nonlinear_absent_optimum": false,
+  "old_joint_model_used_only_as_diagnostic_not_hidden_fallback": true,
+  "plot_viewed": true,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "real_source_read": false,
+  "new_audio_profile_or_runtime": false,
+  "old61_driving_tests_repeated": false,
+  "idle_pending_no_duplicate_blind_tune_or_promotion": true,
+  "original_common_phase_qualification_remains_required": true,
+  "next": "Declare full present/absent model comparison and independent prediction, preserve optimizer failures as unknown rather than absence; no threshold relaxation or hidden fallback.",
+  "manifest_sha256": "0cf87e51b13b6db0d3f2b43e140de00c1558a3213db17bf5807b0bf67584260f",
+  "file_count": 120,
+  "bytes": 11846278
+}
