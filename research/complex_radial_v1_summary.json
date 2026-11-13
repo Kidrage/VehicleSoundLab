@@ -1,0 +1,473 @@
+{
+  "schema": "vsl.complex-radial-final/1",
+  "result": "rotation_invariant_objective_repaired_original_dense36_phase_STILL_REJECTED",
+  "sources": {
+    "research/怠速与加速完成度V1.md": "9f005380b54d22576eb669b98f2b2227a7be17c1934b77eca9da167c87544c9f",
+    "tools/minority_phase_v1/model.py": "ec2ae2f46e62790bbeb3733533ebebe91b84e213c634325ca19531cb700bd228",
+    "tools/validate_observed_topology_v1.py": "9df1acd12475ffc6d5c5f5c49d047701f97e2e3f4228d3fb8cf2bc5121af197f",
+    "tools/audit_interior_qp_v1.py": "012177d2c40a98fa1b08c1348e7219a8131a3e06bc03ab4e7bcda8beb9643530",
+    "tools/positive_band_envelope_v1/model.py": "a7e5d540aa222c0cb1960e19b10f23d49f220430b437c0fcc651b932e1f2fa5e",
+    "tools/native_observation_v1/checks.py": "7a62e8aa7fa7913083e432f2aea82ad55f5975d61f345e2689fb41b37f627a9b",
+    "tools/positive_band_envelope_v1/fit.py": "1a64de78be1803b92f4b9e40072a3d55774ed19f934b82d9710dc8a895f39045",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/native_observation_v1/noise_geometry.py": "5345b6c7f682bc56d65e7fbc06ab5d02882b11a70e26bb8228cae60e90f3d42c",
+    "tools/joint_trust_v1/checks.py": "032657547705fdfca250ff986bceaafc724d830db0c904c6bda3a19bc2019ca8",
+    "tools/interior_qp_v1/backend.py": "bd74ef3e551cda8fbd64eb68a7acaa224193b6bbc26afe97f1eed625868431ef",
+    "tools/observed_topology_v1/checks.py": "37b7b932f2ffc6a720fb12686308eca46c34892f81b309525fff6bd4201b3902",
+    "handoff/开发留痕.md": "bad9d9939751bd3267e0532ca8795a38024c3e0ed2b79ab5debe27368b3c38d8",
+    "tools/diagnose_absolute_amplitude_v1.py": "cd77317cd6852a1ef83ca1db4d56e926f6bfd6b770f847563e6aeda7ce0a994f",
+    "tools/positive_band_envelope_v1/checks.py": "f74f53b9c094ab80f6897e1dffb323c63ad6df1879cb91613dfaa5c84a3cfb93",
+    "tools/observed_topology_v1/fixtures.py": "06d6b13356ea0b6c4d216c2ec155d3aac82c51219d047b4e017e5c1b96998693",
+    "tools/diagnose_native_observation_v1.py": "de9bdbe98f4fda43711f3ae8be9872a026f4e476f58ad96e6ad129f37a6d586e",
+    "tools/observed_topology_v1/__init__.py": "6a93551f14bfe1345c48985ef059168935c24c51e9299744223498878cda4dc1",
+    "research/native_observation_v1_plan.json": "4cddde226013101cd111708c64581e8e167ed517835a184123886779983325d1",
+    "tools/complex_radial_v1/checks.py": "6a2b50a4aac5d1ff1ae97ddb84a345781febf43a5126a1959b8696da811383ce",
+    "tools/diagnose_certified_qp_v1.py": "11bb20f513f440f2f1a12e205c25827984f8e2d3b4436cc36ef4e54367054261",
+    "tools/interior_qp_v1/square_root.py": "fa32ef4c63cf34021bfefa668cff6779abd7d0fab575c2f1b211f1664f7d6077",
+    "tools/native_observation_v1/__init__.py": "59a76e49577bdaa7ce4dd68306bbc7bf041ce3a73135fb8b4aa5d2ec0cdf8781",
+    "tools/absolute_amplitude_v1/amplitude.py": "0eea45aacc8f2301fe04c42a033890f4c9fa393035c6f9b1fd54ed34193490ea",
+    "tools/fit_complex_radial_v1.py": "0f18173ecedb86009379397fed60792bbf052fa6df8371a3a74f240cfbafbec3",
+    "tools/quintic_phase_v1/initialize.py": "f7a7ce49ecc14df54fc28949930dfb979968c350f6d4d569913bb37578753d9a",
+    "handoff/算法说明.md": "81cd326477d2f056943ece79d6ddd60d8f05455fb9642a6799a77f18e33d577b",
+    "research/sqrt_qp_v1_plan.json": "32d41a6012be997c3bbad49c0da88d1c56329d4ea7507d7af551f03248263473",
+    "tools/aperture_model_v1/checks.py": "0112f57f254a9993e9d64323573cd8093af0e735392bcec6cda6e75c08321c90",
+    "tools/quintic_phase_v1/model.py": "7c82e703549db08b1a3dd49c2aa5154f6593d5c09019c256a32fe287fde8f923",
+    "tools/diagnose_quintic_phase_v1.py": "25a74bda1223b57780ea72e2baaaa8f94fd60f260cb17414c9f80cd12c4a32f6",
+    "tools/aperture_model_v1/fit.py": "a962649000bc730bcecdaf61c74c238753ef6f136b8fcf7eb877ab7d2d7c217f",
+    "tools/positive_band_envelope_v1/basis.py": "883bd6cfa372f7f828a0ecba3d96c39fcadc31664d779fe287305c723bfa490a",
+    "tools/joint_trust_v1/constraints.py": "9521d54ce82f17a312f563b23aa1c101f3ca8c50b4a3ffed933b587e13d7b808",
+    "research/envelope_resolution_v1_plan.json": "5b990d1910edef8dd3a629d7196534a49d4d8eb5b6a275613e010e60e391f19c",
+    "tools/complex_radial_v1/fit.py": "cf451bb5a864a4ead377bda7273c687cdcdde5c2f6b826f7e07ddc360de5f0d2",
+    "tools/guard_observation_v1/__init__.py": "331f9f1efffaf705808aef8a22faeb3ab3891243502ac7136ae2a94b9e568780",
+    "tools/minority_phase_v1/checks.py": "ece1e79dda2b13e80968785c257a5f152a62ac53e463f22838f1d7e91e9ebe46",
+    "tools/joint_trust_v1/fit.py": "3b0b7e1d0b583d4871dc071b60ce169d0aeedbacfa4b539434155dd0eb94660b",
+    "tools/absolute_amplitude_v1/fit.py": "effe61b872721002fd86461765d2bb8a180e3329180bea2c76e3be45fe11d520",
+    "tools/joint_trust_v1/quadratic.py": "a445dba8f298aacbba4b0b28db8d0c7a2d17f4695d6400bc84b7515067191c18",
+    "research/minority_phase_v1_plan.json": "ec40786c4fe2a3327f39439e9e96b36a70deccc699603535be42562a3c7ffb1c",
+    "tools/correlated_observation_v1/__init__.py": "408b69ed231660eface294dea834bf539ba676e489e33f7f8b8def00eeadd36f",
+    "research/复数径向损失V1.md": "d05c4b7271040a2b026f78a52a4db707e052265f52ee841cfa8896cc5de2995f",
+    "AGENTS.md": "e709939864f6598f377441a31fc98171b938eda5203d4e86c5b71ef34e6e72fb",
+    "tools/diagnose_positive_band_envelope_v1.py": "66be659f6de5a5964f6e2176aefb37a1a287d568c597caac4b321e7250239e47",
+    "tools/aperture_model_v1/fixtures.py": "5148199d75bc8e51c3e8e198334b39c2e10970225403e49e032ccb22b6039722",
+    "tools/complex_radial_v1/quadratic.py": "fb4b5ed6d86e9ec38ca4408febfccc8a2f416a6e7832e8cfebca6c1d567ff720",
+    "research/observed_topology_v1_plan.json": "c07158eb87469d1413791ff758a930264666d514878c99354a8caabe05b678b6",
+    "research/guard_observation_v1_plan.json": "2b2f311dcb42c1408fb7de502426dde23f774c9a02f8560688063c5344ef31a9",
+    "tools/envelope_resolution_v1/refine.py": "9402c49b3c8939fa21c3a56ab45e445fdfe55f9335058170d0e627fd9703816c",
+    "research/correlated_observation_v1_plan.json": "5ca6c24e05746305376659aaabca490100120cd16a3a6686ab3b3c821341b6a9",
+    "tools/complex_radial_v1/audit.py": "8220490b1eb654ebb5c6e47f6dd3d0fcdd02b993c9ff42de64d1e1afd7b30260",
+    "tools/quintic_phase_v1/checks.py": "5969c500aa794712352adaca9929e4b4e5361bf56a4f18ba1d19842384df4194",
+    "tools/guard_observation_v1/checks.py": "9c316af35846217a71fe36670827f50e5f2b05ba420ea0486e6bfdc90d43287a",
+    "tools/absolute_amplitude_v1/quadratic.py": "3be08a5f5af7ec4da2f0aa424b581852956c68119493d85069a5805855f22cec",
+    "research/joint_trust_precise_v1_plan.json": "ac913fa0cdaf922ba07a51b50f454fca3e736671ee02e7ccf120705607b47c8e",
+    "tools/native_observation_v1/geometry.py": "223cd1819bfda1a4c37d7d86c552d3763deb74811ec75cb27406ae881bc93a97",
+    "tools/fit_correlated_observation_v1.py": "30f8d248a84d1b9744e73ba931163dfce2aba3fab73e23cf370a9088773ea3ac",
+    "tools/minority_phase_v1/__init__.py": "6e996f51c9105d345729243f6a36ec8c7001c4453f82421cbff52a05f954eabf",
+    "tools/aperture_model_v1/basis.py": "43af77dda90d068896254fd86078a961247923c2680103f0959d7b099426e32e",
+    "research/certified_qp_v1_plan.json": "d1f6e5c597823b094d3dab81f43c7b1b6277b131dac2e61cbe92fd153c143959",
+    "tools/absolute_amplitude_v1/__init__.py": "75f432c7f696ad5b38ed029589090b1876ee9f1c391d1e03d69a7183b4866f98",
+    "tools/joint_trust_v1/__init__.py": "2ca1cf0e131a7d14ced48997e6df74e2e0922fc37660e46fa91f2971b16a0472",
+    "tools/observed_topology_v1/discover.py": "453f8e75a54401decc6137a9042895531b6e7c80fb96c38c289160acdbb69d52",
+    "research/positive_band_envelope_v1_plan.json": "d3cca7de7d5f75a749828bc7af298f3de294fe23b082ddbb7603165a3bd834cb",
+    "tools/complex_radial_v1/__init__.py": "93c20c615c29857bab0e9f1ebb2409d81e9c6990fa650ebbabbb8b40ead42ac9",
+    "handoff/研究续接.md": "0f2e7b2480ff46376b6e8e3d23c985bfea1ffdf851a1f939497b4fbae641d353",
+    "tools/interior_qp_v1/active_set.py": "11ac8b6babe9af43a66669aa7274a12e972d9ba9d8ab024855d04b72d9a676a7",
+    "tools/aperture_model_v1/forward.py": "62a69e24f34a11cecb10dfe0a54db677ecba1cdc14b9893fa28d4b54125075d8",
+    "tools/minority_phase_v1/fixtures.py": "ef7747195025ea8b30e0a8d1010620a8ae2d03e4a3540f5e1dd909e973c72425",
+    "research/interior_qp_v1_plan.json": "233cf864724d4bae9f03d924b155914fa89ba5c372a251ff3f77d9a4e6061267",
+    "tools/diagnose_guard_observation_v1.py": "8735173dfbc64ce5169a624f1da6b2527f35607aabe9edf28f3e4ba0eab5401b",
+    "tools/audit_complex_radial_v1.py": "e865fb0a835068b497eebd470ce6d82374c71f91e7bf1481e24c4fbd0a7234ee",
+    "research/refined_qp_v1_plan.json": "89ad3d0728e70b9c4b2f680d82f4d7e5b7eb5a6371b70dca1b3ebfd2d1c7adcc",
+    "tools/absolute_amplitude_v1/cone.py": "81d93db648e354d9dae6209e96192d05ed2ddad619d0446e42d6deb4a51a1582",
+    "tools/check_complex_radial_v1.py": "2ba9ee5dfb9bab15f0697e34e75c3f6bfe95b1d63c4657c00532ead40b6a1cca",
+    "tools/absolute_amplitude_v1/model.py": "b70511bf98a7e7662c71b0d52836483815b92d8f46900938dbe6563c550442d4",
+    "tools/minority_phase_v1/selection.py": "1151dca2ea2c45cd32f036bb42a6bc071c5db3019f305f9f37e3fc1bd547622e",
+    "tools/positive_band_envelope_v1/__init__.py": "7b530d49e68cfdfa4a26af916bef0c08fa6f62b4dc0792ad38869581689c936c",
+    "tools/diagnose_correlated_observation_v1.py": "6af049e32309099cef21dac370c1e1d17584672cf0a6c97c95ad3d57f8ec0266",
+    "tools/quintic_phase_v1/__init__.py": "a7978fa785a73677fd9efb40964fdd7c8e762acd7d36adca91fa870eaf852da0",
+    "tools/interior_qp_v1/__init__.py": "5fce775f59eb1ca7a378279d8ed2a1ed519ae30da41ea6ef9c6cb63bbd496aa0",
+    "tools/minority_phase_v1/fit.py": "a47809a2ba83746c4fc211b263244fc6aa5ae7042853f71a853bd9a861b76162",
+    "research/quintic_phase_v1_plan.json": "7c6918734600b52a50cd39984a4c5c1a2764feb21e3bf64ef4453bba893d151b",
+    "tools/complex_radial_v1/loss.py": "224c545207bc899075430938681c2ee78df290177538765b4e93b8e91df7a2e5",
+    "tools/observed_topology_v1/inputs.py": "00a72f831d21c333961c53239bc0841b44c0f3d15898759a53ddd4674bff1708",
+    "tools/interior_qp_v1/certified.py": "69622bbda34ae8ddc7845be9dfd625a8acfce014f241ea3f28261fcd87e34bf5",
+    "tools/interior_qp_v1/refine.py": "daf9d075f6e55adb9e6fc75a22e0949993898613d9fc2fdd0b4b8d4794a72933",
+    "tools/envelope_resolution_v1/__init__.py": "0f61eaed0e2ac9fff1c46098deba85e844fac0cc1fbe7fc12d339c1d08627871",
+    "tools/interior_qp_v1/checks.py": "14d5de58a868445936642c95d89101afe328afb387287af77974573cc1907bcf",
+    "tools/offline_ipm_requirements.txt": "349764303482a554f658768fbaa9d003625697ce97957b4aa06edf4cf345cc1c",
+    "tools/joint_trust_v1/osqp_backend.py": "a76aae8a7987639f748748ca5f646aef1d4506f71bcb0376f946814b342dc403",
+    "research/complex_radial_v1_plan.json": "6bfef5215ad09da1301806b13b66df8fceb513ec9475ee0cba92acb7a3b60a19",
+    "tools/guard_observation_v1/geometry.py": "7659f52bb2e94690b2c1ec779e2a4fe6e8be4b7616bb17d35fbb269a1a95faf4",
+    "tools/package_complex_radial_v1.py": "b9e0a8cd7fd3a4c60837b165c1621f6a94e40f41c85ff7a71bdf3a70c2da181d",
+    "tools/observe_topology_v1.py": "11281f42e825f6e11a18b1a653c770bbff63e506aeac0320b0e33173d54a652e",
+    "tools/correlated_observation_v1/marginal.py": "cce5487013518a27f24eb7e011312a6822209412d466a1d8644ff8566724b6b2",
+    "research/active_qp_v1_plan.json": "179f902642a5550eff98e9a7868c28bea47ccd6807ac3a0ee233645e9966aaba",
+    "tools/absolute_amplitude_v1/checks.py": "91383f27d9e83540493e4783b369cc13d1c4be0f1010de0dbf67ca7a88e9e7fb",
+    "tools/interior_qp_v1/active_checks.py": "ad1c79d8a4dad00b59dedd975375daf6606cf2bfa87d346b3c27bd3975daf268",
+    "tools/correlated_observation_v1/checks.py": "1ab18d5f4f4c7807fb2b0676ed78145399ab897257f4012a1156c48f58b9e105",
+    "research/absolute_amplitude_v1_plan.json": "9260dbd680d47e02989dfba77c9e59f5f7746fd55fdc642f8bdd3aee60cac945",
+    "tools/interior_qp_v1/sqrt_checks.py": "6571eccf38d34b05ea426ebaa66bac890a6069ee2fead62c843f4dc93cf4501a",
+    "tools/quintic_phase_v1/basis.py": "25cdacdbdc7021d3b01e106908bae5bcbeb1bfdc1916dd0e190079b1587ce91f",
+    "tools/aperture_model_v1/__init__.py": "2f29cb818f7958143309a3131319413cbf3a35bff4d021f189fcd762666da273",
+    "tools/offline_qp_requirements.txt": "44920b06170c2b3150f3b1af9df0113e94b773b9ff8ad348c93a6ccd3a6e83df",
+    "tools/validate_minority_phase_v1.py": "56e105dae3737b3868fac5c123ca1a48c45e7168ff9c32e70cecf9cd3436f65f",
+    "tools/publish_complex_radial_v1.py": "b0c4b048d8ca8168bf6a92aff97cf83f31e7b89b408a36320b46282667daaf71",
+    "research/aperture_model_v1_plan.json": "d37f658d3f3effef78eec1953e8ce1e1aaa3c1f58c893d2aaa0f77f8b8331b2b"
+  },
+  "reports": {
+    "controls1": {
+      "path": "references/analysis/complex_radial_v1/controls1/report.json",
+      "sha256": "85836167f1dd2bf289a14ff52fc89172bc2a8cd03e20153d009907888f55e88c",
+      "result": "radial_loss_QP_and_observed_derivative_controls_passed"
+    },
+    "fit1": {
+      "path": "references/analysis/complex_radial_v1/fit1/report.json",
+      "sha256": "e3075c1c760a959a729669c2aac1940426234752e99d74e88b97a7fa80f68496",
+      "result": "dense_radial_rejected"
+    },
+    "audit1": {
+      "path": "references/analysis/complex_radial_v1/audit1/report.json",
+      "sha256": "dba489ba990311c3eafe5b25f110c8d4f89983be40bd0ec82d68dd8199e2fec0",
+      "result": "radial_geometry_all_QP_certificates_and_entire_fit_trace_reconstructed"
+    },
+    "review1": {
+      "path": "references/analysis/complex_radial_v1/review1/report.json",
+      "sha256": "32b7882cdb27b6213ccdc6bcc7ceb87b871c969f5f19749a2a4dca303c1c6787",
+      "result": "fixed_dense_phase_and_separate_metric_curves_published"
+    }
+  },
+  "real_audio_read": false,
+  "prior_manifests": {
+    "correlated_observation_v1": {
+      "path": "baselines/correlated_observation_v1/manifest.json",
+      "sha256": "5422e83d425f6b946349b2e4c1b64031f848a19c17c22d9964f5e6f5476d7f11"
+    },
+    "F2_variation_projection_v1": {
+      "path": "baselines/F2_variation_projection_v1/manifest.json",
+      "sha256": "a1cc31cee80a5a9eeed7165b7675ab44d698603a96b7f4cc60f3d1c751b4b010"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "1077d4e12369fd8417a92af62b753122e5a73bb678d32dda1bb97ea4d0156759",
+  "controls": {
+    "passed": true,
+    "rotation_errors": {
+      "cost": 5.293955920339377e-23,
+      "gradient": 2.710505431213761e-20,
+      "hessian": 2.168404344971009e-19,
+      "square_root": 4.163336342344337e-17,
+      "zero_hessian": 0.0
+    },
+    "derivatives": [
+      {
+        "gradient_relative_error": 8.230661130751894e-12,
+        "hessian_relative_error": 2.8104515164320914e-09
+      },
+      {
+        "gradient_relative_error": 4.311323982649428e-10,
+        "hessian_relative_error": 1.3123346045927168e-09
+      },
+      {
+        "gradient_relative_error": 1.148672824427695e-11,
+        "hessian_relative_error": 1.145058574317546e-09
+      }
+    ],
+    "original_scalar_cost_rotation_difference": 1.3560943840394965e-08,
+    "small_QPs": [
+      {
+        "label": "original",
+        "parameters": [
+          -0.499999999999873,
+          0.0,
+          0.0,
+          0.49999999999995864
+        ],
+        "analytic_error": 1.270095140171179e-13,
+        "qp": {
+          "success": true,
+          "native_success": true,
+          "status": "Solved",
+          "status_value": 1,
+          "iterations": 7,
+          "solver_version": "0.11.1",
+          "normalized_dual_stationarity": 1.1102230246251565e-16,
+          "constraint_violation": 0.0,
+          "inequality_dual_sign_violation": 0.0,
+          "maximum_complementarity": 1.3239245106356025e-13,
+          "normalized_duality_gap": 6.821723313615022e-13,
+          "original_objective_dual_stationarity": 9.930136612989092e-17,
+          "objective_scale": 0.8944271909999159,
+          "native_primal_residual": 7.212068870655944e-14,
+          "native_dual_residual": 7.360206729272819e-17,
+          "objective": -0.745392472381471,
+          "solve_seconds": 9.23e-05,
+          "external_hessian_regularization": false,
+          "factor_hessian_relative_error": 0.0,
+          "maximum_lifted_equality_error": 5.551115123125783e-17,
+          "maximum_auxiliary_stationarity": 0.0,
+          "maximum_original_vs_factor_stationarity_difference": 5.5511151231243726e-17,
+          "maximum_projection_iterations": 0,
+          "linear_constraints": 4,
+          "inequality_constraints": 8,
+          "auxiliary_variables": 4,
+          "primal_solution": [
+            -0.499999999999873,
+            0.0,
+            0.0,
+            0.49999999999995864
+          ],
+          "dual_solution": [
+            -0.5929270612816213,
+            0.0,
+            0.0,
+            0.9500000000000041
+          ],
+          "inequality_dual": [
+            2.339930450802791e-14,
+            2.647849021271205e-13,
+            2.647849021271205e-13,
+            0.9500000000000187,
+            0.5929270612816447,
+            2.647849021271205e-13,
+            2.647849021271205e-13,
+            1.4607827414333833e-14
+          ],
+          "auxiliary_solution": [
+            -0.31435835742065393,
+            0.0,
+            0.0,
+            0.15811388300840587
+          ],
+          "equality_dual": [
+            -0.31435835742065393,
+            0.0,
+            0.0,
+            0.15811388300840587
+          ],
+          "active_set_polish": {
+            "attempted": false
+          }
+        }
+      },
+      {
+        "label": "rotated",
+        "parameters": [
+          -0.499999999999873,
+          -1.8013816255682232e-17,
+          -1.0501204912913642e-17,
+          0.49999999999995864
+        ],
+        "analytic_error": 1.270095140171179e-13,
+        "qp": {
+          "success": true,
+          "native_success": true,
+          "status": "Solved",
+          "status_value": 1,
+          "iterations": 7,
+          "solver_version": "0.11.1",
+          "normalized_dual_stationarity": 1.1102230246251565e-16,
+          "constraint_violation": 0.0,
+          "inequality_dual_sign_violation": 0.0,
+          "maximum_complementarity": 1.324009466391711e-13,
+          "normalized_duality_gap": 6.822087525678263e-13,
+          "original_objective_dual_stationarity": 9.930136612989093e-17,
+          "objective_scale": 0.894427190999916,
+          "native_primal_residual": 7.209800165967477e-14,
+          "native_dual_residual": 3.2915885770910075e-17,
+          "objective": -0.7453924723814711,
+          "solve_seconds": 3.68e-05,
+          "external_hessian_regularization": false,
+          "factor_hessian_relative_error": 1.2402731608139159e-16,
+          "maximum_lifted_equality_error": 5.551115123125783e-17,
+          "maximum_auxiliary_stationarity": 7.703719777548943e-33,
+          "maximum_original_vs_factor_stationarity_difference": 5.5511151231243726e-17,
+          "maximum_projection_iterations": 0,
+          "linear_constraints": 4,
+          "inequality_constraints": 8,
+          "auxiliary_variables": 4,
+          "primal_solution": [
+            -0.499999999999873,
+            -1.8013816255682232e-17,
+            -1.0501204912913642e-17,
+            0.49999999999995864
+          ],
+          "dual_solution": [
+            -0.5929270612816212,
+            0.0,
+            0.0,
+            0.9500000000000041
+          ],
+          "inequality_dual": [
+            2.3400806032917102e-14,
+            2.648018932783422e-13,
+            2.648018932783422e-13,
+            0.9500000000000187,
+            0.5929270612816446,
+            2.648018932783422e-13,
+            2.648018932783422e-13,
+            1.4608764793325424e-14
+          ],
+          "auxiliary_solution": [
+            0.31435835742065393,
+            1.273769162944136e-17,
+            -9.337038238616958e-18,
+            0.15811388300840587
+          ],
+          "equality_dual": [
+            0.31435835742065393,
+            1.2737691629441368e-17,
+            -9.337038238616955e-18,
+            0.15811388300840587
+          ],
+          "active_set_polish": {
+            "attempted": false
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "Metric/linear-subproblem controls only; not common-phase estimator qualification"
+    ]
+  },
+  "observed_checks": {
+    "observed_mixed_jacobian_relative_error": 3.8137531117020626e-08,
+    "observed_robust_gradient_relative_error": 1.5795581277747595e-09,
+    "observed_factor_rotation_error": 4.440892098500626e-16,
+    "observed_gradient_rotation_error": 4.85722573273506e-17
+  },
+  "fit_summary": {
+    "iterations": 20,
+    "accepted_steps": 18,
+    "seconds": 90.95495530008338,
+    "initial_cost": 4.4133956186030886e-05,
+    "final_cost": 1.825943599032061e-05,
+    "normalized_projection_residual": 0.001229003801752953,
+    "truth_used": false,
+    "heldout_used": false
+  },
+  "qp_certified": 20,
+  "independent_geometry_max_relative_error": 5.262314357396995e-13,
+  "independent_scale_relative_error": 7.979825513314339e-17,
+  "phase_p95": {
+    "scalar": 0.0002536533085460593,
+    "radial": 0.00026496664372370997
+  },
+  "assessment": {
+    "point_phase_p95_cycles": 0.00026496664372370997,
+    "root_relative_p95": 0.0009655117473837953,
+    "maximum_heldout_power_error_db": 0.02241483248058958,
+    "maximum_heldout_complex_correlation_error": 0.00010573249904127468,
+    "fitted_separate_carriers": 36,
+    "heldout_supported_carriers": 2,
+    "fitted_carrier_amplitudes": [
+      0.06341850309348628,
+      0.06452384524171885,
+      0.06484760571626322,
+      0.06280935108696847,
+      0.0604696614211546,
+      0.12150688483382512,
+      0.0600252687867173,
+      0.0560433907177708,
+      0.054625719616671696,
+      0.052617965053415844,
+      0.12497654109773097,
+      0.05330287654913765,
+      0.052186904203757156,
+      0.05496294521717541,
+      0.05485455482570628,
+      0.06008742909012687,
+      0.06244091570796161,
+      0.06430674782706679,
+      0.06446796543396276,
+      0.06327629329063438,
+      0.10952928229274908,
+      0.062195184128235444,
+      0.05907538880841753,
+      0.05703039301714285,
+      0.05510398433706361,
+      0.054070212430026195,
+      0.05533667174468617,
+      0.05267589307447743,
+      0.05229874827672166,
+      0.04954457440516166,
+      0.11146115922065708,
+      0.05274368831646593,
+      0.048822116297668534,
+      0.05155117994525952,
+      0.04914198085546078,
+      0.056993379445355895
+    ],
+    "heldout_powers": [
+      [
+        0.0027221103862786478,
+        0.0018305257670468017
+      ],
+      [
+        0.0028259199468265933,
+        0.0018993758012282283
+      ]
+    ],
+    "oracle_heldout_powers": [
+      [
+        0.0027189688801573402,
+        0.0018284477706804094
+      ],
+      [
+        0.002811372365910439,
+        0.0018898831899834725
+      ]
+    ],
+    "qualified": false
+  },
+  "cross_objective_costs": [
+    {
+      "parameters": "initial",
+      "scalar_cost": 4.8672477348866175e-05,
+      "radial_cost": 4.413395618604009e-05,
+      "normalized_residual": 0.0025557176922678584
+    },
+    {
+      "parameters": "scalar_fit",
+      "scalar_cost": 1.859531220621961e-05,
+      "radial_cost": 1.8260270399275526e-05,
+      "normalized_residual": 0.0012289904234406117
+    },
+    {
+      "parameters": "radial_fit",
+      "scalar_cost": 1.8596165599381846e-05,
+      "radial_cost": 1.825943599032061e-05,
+      "normalized_residual": 0.001229003801752953
+    }
+  ],
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "plot_sha256": "3674d0cfa29489c2add9fded2a676bd1806cd92377266ae65962a3e67fd9b933",
+  "figures_visually_checked": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "high_frequency_recovered": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "real_shared_phase_DNA_permitted": false,
+  "full_qualification": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_fixed2_3_5_geometry_all12groups24projections72predictions_audited_frozen_pushed",
+  "current_goal_turn": "progress_radial_coordinate_repair_controls_original20step_failure_and_independent_full_trace_audit",
+  "next_step": "Observed-only band-out interference/noise-geometry qualification with independent controls. Original failed36/all17/full33/individual14k/originalE remain required. No truth initialization, heldout fitting, blind bound/strength/degree/window/iteration sweeps; F2g(T) is not a synthesis clock.",
+  "limits": [
+    "This changes complex robust geometry, not the marginal aperture or out-of-band leakage/noise model",
+    "No nonlinear/global convergence claim; original dense/all17/full33/individual14k/originalE remain required",
+    "No real recording, new sound DNA, high-frequency recovery or listening acceptance",
+    "Independent 2x2 block geometry, exact executed helper used for bitwise KKT replay",
+    "No nonlinear or QP re-solves; known truth/heldouts used only for post-fit assessment",
+    "Objective values under different metrics cannot be compared as an improvement",
+    "Cross-window correlation and out-of-band mismatch remain; no real DNA or listening acceptance",
+    "Dashed phase lines show the p95 magnitude threshold, not pointwise acceptance",
+    "Each cost curve is normalized within its own metric; the two vertical scales do not compare quality",
+    "Known synthetic qualification only; no new recording, audio, DNA or C change"
+  ]
+}
