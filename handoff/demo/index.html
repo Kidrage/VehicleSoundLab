@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vehicle Sound Lab · 当前 Demo</title>
+<style>
+  :root { color-scheme: dark; font-family: system-ui, "Microsoft YaHei UI", sans-serif; background: #111514; color: #e6ebe8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  main { max-width: 860px; padding: 44px 24px 56px; margin: auto; }
+  header { margin-bottom: 30px; }
+  .brand { color: #9ead9f; font-size: 13px; letter-spacing: .12em; }
+  h1 { font-size: 30px; margin: 10px 0 12px; font-weight: 650; }
+  h2 { font-size: 19px; margin: 0 0 18px; }
+  p { line-height: 1.8; margin: 10px 0; }
+  .muted, small { color: #acb8b0; }
+  section { border: 1px solid #334039; padding: 24px; border-radius: 14px; margin: 20px 0; background: #19201c; }
+  .choices { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  button { border: 1px solid #46584b; border-radius: 8px; padding: 11px 15px; background: #202b24; color: #dde9df; font: inherit; cursor: pointer; }
+  button[aria-pressed="true"] { background: #bdd4b8; color: #152217; border-color: #bdd4b8; }
+  button:focus-visible, a:focus-visible { outline: 2px solid #bdd4b8; outline-offset: 4px; }
+  audio { width: 100%; margin: 8px 0; }
+  a { color: #c1d9b9; text-underline-offset: 3px; }
+  code { font-family: Consolas, monospace; overflow-wrap: anywhere; font-size: 13px; color: #cfdbd1; }
+  li { line-height: 1.8; margin: 10px 0; padding-left: 3px; }
+  ol { padding-left: 24px; }
+  .note { border-left: 3px solid #93ae8d; padding-left: 14px; }
+  table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+  th, td { border-bottom: 1px solid #334039; padding: 13px 8px; vertical-align: top; line-height: 1.65; }
+  th { font-weight: 550; color: #bacbbd; }
+  th:first-child, td:first-child { width: 29%; }
+  footer { color: #93a397; font-size: 12px; margin-top: 24px; line-height: 1.7; }
+  @media (max-width: 540px) { main { padding: 26px 16px; } section { padding: 18px; } h1 { font-size: 25px; } }
+</style>
+<main>
+  <header>
+    <div class="brand">VEHICLE SOUND LAB</div>
+    <h1>先听音色，再开起来</h1>
+    <p class="muted">当前 V10 Demo：行驶 35% 配方接入同一驾驶器。下面是现有 C 系统的输出，实时操作在本地窗口中进行。</p>
+  </header>
+
+  <section aria-labelledby="listen-title">
+    <h2 id="listen-title">直接试听</h2>
+    <div class="choices" role="group" aria-label="选择片段">
+      <button type="button" data-clip="tone" aria-pressed="true">① 行驶音色 · 8 秒</button>
+      <button type="button" data-clip="drive" aria-pressed="false">② 踏板驾驶 · 16 秒</button>
+    </div>
+    <p id="description" aria-live="polite">目前保留的 35% 配方，固定工作点。先听主声线、低频和连续细节组合后的质感。</p>
+    <audio id="player" controls preload="metadata" src="/references/analysis/resonant_source_v1/verify2/moving_35_C.wav">浏览器不支持音频播放。</audio>
+    <p id="context" class="muted">C 引擎生成；没有额外房间处理。这段用于判断局部音色，不表示全转速范围已完成。</p>
+    <small>两段保留各自原有输出电平，未做试听响度匹配。切换片段会停止播放；请点击播放键。</small>
+    <p id="media-status" class="muted" role="status"></p>
+  </section>
+
+  <section aria-labelledby="operate-title">
+    <h2 id="operate-title">本地窗口：约 3 分钟体验</h2>
+    <p>切回任务栏的 <strong>Vehicle Sound Lab · DNA Drive · Full Recipe</strong> 窗口。若已关闭，双击：</p>
+    <p><code>E:\VehicleSoundLab-Git\Launch-Full-Recipe-Drive-Study.cmd</code></p>
+    <ol>
+      <li><strong>先听台架：</strong>保持“转速台架”、默认 5625 RPM 和房间量 0%，依次点“开始／重新监听”→“点火”。先听稳定音色，再小幅调整转速。</li>
+      <li><strong>比较声层：</strong>分别降低“连续共振细节”和“相干低频”，再恢复到 100%，听每层带来的变化。35% 是已固定的内部替换配方，界面细节 100% 表示完整启用这份配方。</li>
+      <li><strong>体验驾驶：</strong>选择“模拟驾驶”＋“自动挡 · 运动”，缓加油门→松油→制动，观察 RPM，听转速起落与换挡。也可选择空挡或手动 1–7 挡。这里验证控制与状态联动，音色仍需完善。</li>
+      <li><strong>录制回放：</strong>点“录制新行程”，操作油门与刹车；结束后点“停止”→“保存行程”。“载入回放”可重放刚才的控制和声音。</li>
+    </ol>
+    <p><a href="/references/analysis/full_recipe_drive_v1/verify1/full_pedals/detail_schema8.vslrun" download="demo_full_pedals.vslrun">下载现成的 16 秒示例行程</a>，然后在该窗口中“载入回放”。</p>
+    <p class="muted note">默认 5625 是工程转速映射，并非原录音的实测 ECU 读数。当前这份完整细节配方集中在名义约 5400–5850 RPM，约 5060–6190 RPM 渐入／渐出；离开该范围不代表音色已完成标定。</p>
+  </section>
+
+  <section aria-labelledby="coverage-title">
+    <h2 id="coverage-title">现在能体验什么</h2>
+    <table>
+      <thead><tr><th scope="col">内容</th><th scope="col">当前程度</th></tr></thead>
+      <tbody>
+        <tr><td>DNA＋低频＋连续细节</td><td>同一 C 系统持续生成，分层可调；当前保留行驶 35% 配方。</td></tr>
+        <tr><td>油门／刹车／换挡／点火</td><td>控制和状态逻辑可操作。怠速、带载加速、启动和换挡的真实音色尚未全部定稿。</td></tr>
+        <tr><td>进气／机械／排气空气／道路／风</td><td>辅助层可分别调节，目前是实验模板，尚非逐状态实录标定结果。</td></tr>
+        <tr><td>空间／房间／瞬态</td><td>可选实验处理，先保持关闭听干声。当前实时监听为立体声，实际 7.1.4 尚未验收。</td></tr>
+        <tr><td>录制／保存／回放</td><td>保存控制过程和内嵌模型，由 C 引擎重新生成；已有短行程技术验证。</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <footer>整理于 2026-11-13。此页使用既有试听输出，不改变音色模型、算法或监听默认值。</footer>
+</main>
+<script>
+  const clips = {
+    tone: {
+      src: '/references/analysis/resonant_source_v1/verify2/moving_35_C.wav',
+      description: '目前保留的 35% 配方，固定工作点。先听主声线、低频和连续细节组合后的质感。',
+      context: 'C 引擎生成；没有额外房间处理。这段用于判断局部音色，不表示全转速范围已完成。'
+    },
+    drive: {
+      src: '/references/analysis/full_recipe_drive_v1/verify1/full_pedals/recorded.wav',
+      description: '同一 C 系统的踏板驾驶录音。听转速与驾驶状态带来的变化；可下载下方示例行程，在本地窗口回放。',
+      context: '功能演示：局部细节与低频随支持范围进入／退出。它不代表怠速、完整加速或换挡音色已完成。'
+    }
+  };
+  const player = document.getElementById('player');
+  const status = document.getElementById('media-status');
+  document.querySelectorAll('[data-clip]').forEach(button => {
+    button.addEventListener('click', () => {
+      const clip = clips[button.dataset.clip];
+      player.pause();
+      player.src = clip.src;
+      player.load();
+      document.getElementById('description').textContent = clip.description;
+      document.getElementById('context').textContent = clip.context;
+      document.querySelectorAll('[data-clip]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      status.textContent = '';
+    });
+  });
+  player.addEventListener('error', () => {
+    status.textContent = '音频未能载入。请确认本地 8789 端口素材服务仍在运行。';
+  });
+</script>
+</html>

@@ -1,0 +1,56 @@
+{
+  "schema": "vsl.current-demo-guide/1",
+  "date": "2026-11-13",
+  "result": "existing_media_http_bytes_and_waveform_checks_pass",
+  "guide_source": "handoff/demo/index.html",
+  "native_launcher": "Launch-Full-Recipe-Drive-Study.cmd",
+  "native_window_title": "Vehicle Sound Lab · DNA Drive · Full Recipe",
+  "media_newly_rendered": false,
+  "dsp_or_model_changes": false,
+  "verification_scope": "HTTP bytes, source/deployed identity and finite unclipped stereo WAVs; no new browser interaction or subjective listening verification",
+  "limitation": "Retained local moving35 recipe only; true idle, full loaded acceleration and transient timbres remain incomplete. Stereo device only; physical 7.1.4 unverified.",
+  "files": [
+    {
+      "name": "tone",
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\resonant_source_v1\\verify2\\moving_35_C.wav",
+      "url": "http://127.0.0.1:8789/references/analysis/resonant_source_v1/verify2/moving_35_C.wav",
+      "bytes": 3072088,
+      "sha256": "3a1c13de8b84145e4de2f533ada1bbbad5a4b613077172bb26cad3a836c6f24a",
+      "http_content_type": "audio/wav",
+      "seconds": 8.0,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak": 0.536474883556366,
+      "rms": 0.15603152527069322
+    },
+    {
+      "name": "drive",
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\full_recipe_drive_v1\\verify1\\full_pedals\\recorded.wav",
+      "url": "http://127.0.0.1:8789/references/analysis/full_recipe_drive_v1/verify1/full_pedals/recorded.wav",
+      "bytes": 6145064,
+      "sha256": "d897cf5a81e0f0692c1caf671a41d662b5238ee691f2a10f2d1cf6221e206498",
+      "http_content_type": "audio/wav",
+      "seconds": 16.0025625,
+      "sample_rate": 48000,
+      "channels": 2,
+      "peak": 0.23425352573394775,
+      "rms": 0.03933707537027094
+    },
+    {
+      "name": "take",
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\full_recipe_drive_v1\\verify1\\full_pedals\\detail_schema8.vslrun",
+      "url": "http://127.0.0.1:8789/references/analysis/full_recipe_drive_v1/verify1/full_pedals/detail_schema8.vslrun",
+      "bytes": 225820,
+      "sha256": "7a847350d6f9bca7c755585785272d41637d67fbf904719bfcaae63e612164b9",
+      "http_content_type": "application/octet-stream"
+    },
+    {
+      "name": "guide",
+      "path": "E:\\VehicleSoundLab\\research\\current_demo_v1\\index.html",
+      "url": "http://127.0.0.1:8789/research/current_demo_v1/index.html",
+      "bytes": 7993,
+      "sha256": "9de105eb0359be212940f9e5e72e50cc738836b515bc6137ed3c453c8b57a182",
+      "http_content_type": "text/html"
+    }
+  ]
+}

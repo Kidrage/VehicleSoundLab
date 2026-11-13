@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "date": "2026-11-13",
+  "page": "http://127.0.0.1:8789/research/current_demo_v1/index.html",
+  "verbatim": "demo我听了，非常好，继续你没做完的工作吧。",
+  "assessment": "Positive overall feedback on the current demo; retain the existing moving35 recipe and integrated demo.",
+  "scope": "The user did not separately rate each clip, control, state, or spatial mode. Do not extend this feedback to unfinished true idle, full loaded acceleration, startup/shift timbres, or physical 7.1.4.",
+  "next": "Continue unfinished idle and loaded-acceleration work in the same modular generator and driver."
+}
