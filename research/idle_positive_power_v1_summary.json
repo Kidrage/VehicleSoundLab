@@ -1,0 +1,99 @@
+{
+  "schema": "vsl.idle-positive-power-freeze/1",
+  "result": "positive_power_prediction_preserved_NOT_waveform_or_sound_promotion",
+  "parent_commit": "e6a73b6e457aa252d01562fa5d335d7581ebd52e",
+  "audit": {
+    "result": "all8_positive_models32_KKT_fits_and800_lag_curves_verified",
+    "maximum_filter_error_FS": 4.302092519031797e-10,
+    "maximum_filter_relative_RMS_error": 7.818733904497224e-09,
+    "maximum_reference_relative_error": 1.6727319277866123e-14,
+    "maximum_prediction_error": 1.1102230246251565e-15,
+    "maximum_gradient_error": 1.674313419390084e-14,
+    "maximum_hessian_error": 2.6645352591003757e-15,
+    "maximum_KKT_gradient": 5.161228652110031e-10,
+    "maximum_curve_error": 5.3254275989012e-14,
+    "models": 8,
+    "band_fits": 32,
+    "curves": 800,
+    "minimum_hessian_eigenvalue": 0.01061546168300734,
+    "input_report_sha256": "0aa97f015d831bd69c1213023000755960768152b46c71ae5ede01ee11d3af86",
+    "full_resolution_exp_before_average": true,
+    "unchanged_C_H": 612,
+    "unchanged_old_voices": 67,
+    "runtime_changed": false,
+    "waveform_budget_proven": false,
+    "audio_or_runtime_profile_exported": false
+  },
+  "all8models32fits_converged": true,
+  "all4bands_beat_both_native_baselines_and_allcontrols": true,
+  "new_prediction_prerequisite": true,
+  "old_linear_prerequisite_failure_remains": true,
+  "check_improvement_over_positive_native": [
+    0.04207114322130334,
+    0.11298967265319104,
+    0.08754374170876089,
+    0.06036305220402172
+  ],
+  "check_improvement_over_old_native_OLS": [
+    0.04573690283424747,
+    0.11733056440881318,
+    0.09743759241557781,
+    0.06412994034419406
+  ],
+  "global_expanded_power_bounds": {
+    "exponent_lower": [
+      -0.9100723388255262,
+      -1.745131097373333,
+      -0.7917538866464041,
+      -0.7215344022664907
+    ],
+    "exponent_upper": [
+      0.8496578592819725,
+      1.554146343686363,
+      0.7297990763791805,
+      0.6970782733279832
+    ],
+    "power_lower": [
+      0.4024951069571838,
+      0.1746220949681959,
+      0.4530495005886101,
+      0.48600595490464626
+    ],
+    "power_upper": [
+      2.338846500396373,
+      4.731046113458446,
+      2.074663716847946,
+      2.0078776592960446
+    ],
+    "finite_normal_bounds": true
+  },
+  "full_resolution_exp_before_average": true,
+  "all10_curves_both_portions_closer": true,
+  "check_mean_target": [
+    0.9990996651052594,
+    1.208492209625163,
+    1.2085217738315037,
+    1.1688331780189871
+  ],
+  "check_mean_prediction": [
+    0.9990493673238532,
+    0.996719098164419,
+    0.9990332142793114,
+    0.999372480826665
+  ],
+  "sample_total_power_is_NOT_separated_innovation_gain": true,
+  "waveform_budget_proven": false,
+  "first_audit_failed_reference_roundoff_preserved_only_gamma_n_audit_correction": true,
+  "model_and_source_not_rerun": true,
+  "all3_complete_plots_viewed": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "old61_driving_tests_repeated": false,
+  "audio_or_runtime_profile_exported": false,
+  "runtime_changed": false,
+  "original_common_phase_qualification_still_required": true,
+  "next": "Known-qualified actual13OSC+6FIR generated wave variance/time/cumulant budget including main, gain placement and response supports BEFORE new audition/C; existing listening pending/no duplicate/blind promotion.",
+  "manifest_sha256": "7f35b1040b6b68ccf5d0d7150dbea19cfe27f1e04cb4cf280e5ef8cbde4bfb0c",
+  "file_count": 46,
+  "bytes": 37283268
+}
