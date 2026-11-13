@@ -1,0 +1,162 @@
+{
+  "schema": "vsl.phase-patch-freeze/1",
+  "result": "PREREQUISITE_FAILED_original_weak_peak_omission_verified_NO_promotion",
+  "parent_commit": "589b14492650a012fc470fac47227a6f54c395d2",
+  "planned_windows": 108,
+  "executed_windows": 12,
+  "withheld_windows": 96,
+  "real_source_read": false,
+  "exact_executed_source_and_failure_retained": true,
+  "audit": {
+    "result": "failed_prerequisite_all12_native_inputs_fits_boundaries_and_original_gate_failure_verified",
+    "windows": 12,
+    "lines": 117,
+    "maximum_signal_error": 8.222311720373909e-13,
+    "maximum_waveform_error": 4.808653475407709e-14,
+    "maximum_support_error": 1.1102230246251565e-16,
+    "maximum_normal_error": 1.9805336449536994e-16,
+    "maximum_optimality_error": 7.525334098675532e-18,
+    "maximum_peak_error": 1.4210854715202004e-14,
+    "prerequisite_failures": [
+      {
+        "window": 9,
+        "reasons": [
+          "mode_count",
+          "waveform_relative_error"
+        ],
+        "relative_residual": 0.061283946398625756
+      },
+      {
+        "window": 10,
+        "reasons": [
+          "mode_count",
+          "waveform_relative_error"
+        ],
+        "relative_residual": 0.07592432737020442
+      },
+      {
+        "window": 11,
+        "reasons": [
+          "mode_count",
+          "waveform_relative_error"
+        ],
+        "relative_residual": 0.09602431925668241
+      }
+    ],
+    "independent_SVD_Jacobian_error": 1.5596678948399419e-12,
+    "boundary_graph": {
+      "tracks": 13,
+      "edges": 104
+    },
+    "exact_boundary_graph": {
+      "tracks": 10,
+      "edges": 110
+    },
+    "input_report_sha256": "8e9c41539f9544c997af6afe7cf5119b8627e58158e2aab23542419ab5017d44",
+    "first_failed_gate": "mode_count_at_window9",
+    "withheld_cases_run": false,
+    "real_source_read": false,
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "source_or_common_phase_qualification": false
+  },
+  "diagnostic_audit": {
+    "result": "all12_raw_peak_arithmetic_and_truth_projection_omission_diagnostics_verified",
+    "windows": 12,
+    "raw_peaks": 8970,
+    "maximum_power_error": 1.3877787807814457e-17,
+    "maximum_projection_error": 2.4491519923230953e-13,
+    "omitted": [
+      {
+        "window": 0,
+        "components": []
+      },
+      {
+        "window": 1,
+        "components": []
+      },
+      {
+        "window": 2,
+        "components": []
+      },
+      {
+        "window": 3,
+        "components": []
+      },
+      {
+        "window": 4,
+        "components": []
+      },
+      {
+        "window": 5,
+        "components": []
+      },
+      {
+        "window": 6,
+        "components": []
+      },
+      {
+        "window": 7,
+        "components": []
+      },
+      {
+        "window": 8,
+        "components": []
+      },
+      {
+        "window": 9,
+        "components": [
+          3
+        ]
+      },
+      {
+        "window": 10,
+        "components": [
+          3
+        ]
+      },
+      {
+        "window": 11,
+        "components": [
+          3
+        ]
+      }
+    ],
+    "input_report_sha256": "8e9c41539f9544c997af6afe7cf5119b8627e58158e2aab23542419ab5017d44",
+    "diagnostic_report_sha256": "4b9ce69b70fe019213b1cf78a2f2aa751a1e2aac955745c8891f19ffbee272fd",
+    "absolute_power_independent_and_exact_cells_formula_replay": true,
+    "roundoff_null_normalized_values_not_physical": true,
+    "original_prerequisite_still_failed": true,
+    "no_new_estimator_or_optimization": true
+  },
+  "omitted_component": {
+    "index": 3,
+    "hz": 115.7,
+    "windows": [
+      9,
+      10,
+      11
+    ],
+    "prominence_db": [
+      4.141,
+      5.309,
+      null
+    ],
+    "original_limit_db": 8
+  },
+  "posterior_truth_projection_NOT_estimation_or_initialization": true,
+  "new_boundary_noise_crossing_occlusion_qualified": false,
+  "actual_original_gate_failure_not_relaxed": true,
+  "no_threshold_degree_seed_budget_sweep": true,
+  "plot_viewed": true,
+  "new_audio_profile_C_or_runtime": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_tests_repeated": false,
+  "idle_pending_no_duplicate_question_or_blind_tune": true,
+  "original_common_phase_qualification_remains_required": true,
+  "next": "Observed neighbouring-window candidate propagation with existence/absence joint tests and noise/nearline/occlusion controls; no truth slots, threshold relaxation or unconditional gap fill.",
+  "manifest_sha256": "06cf871fe06933858bf42a92c0bc9b911c5b2235747437cea68f1daa5d36bdc5",
+  "file_count": 113,
+  "bytes": 15616727
+}
