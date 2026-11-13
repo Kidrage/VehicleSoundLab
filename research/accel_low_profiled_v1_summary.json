@@ -1,0 +1,191 @@
+{
+  "schema": "vsl.native-low-joint-freeze/1",
+  "result": "all48_fits_audited_NO_qualified_low_track_or_new_sound",
+  "parent_commit": "0e2e0065111480cb689a272c3f860eeab239ac05",
+  "method": "accel_low_profiled_v1",
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "windows": 12,
+      "successful": 8,
+      "local_lines": 458,
+      "eligible_lines": 142,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    },
+    {
+      "segment": "F3_fifth2",
+      "windows": 12,
+      "successful": 8,
+      "local_lines": 434,
+      "eligible_lines": 121,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    },
+    {
+      "segment": "F3_sixth",
+      "windows": 24,
+      "successful": 10,
+      "local_lines": 1050,
+      "eligible_lines": 163,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    }
+  ],
+  "native_source_lines": 1942,
+  "known_and_actual_waveforms": 64,
+  "including_known_fitted_lines": 2073,
+  "audit": {
+    "result": "all_profiled_controls_left_LS_reduced_gradient_64native_waves_tracks_predictions_verified",
+    "waveforms": 64,
+    "lines": 2073,
+    "maximum_waveform_error": 6.200595592531499e-14,
+    "maximum_support_error": 0.0,
+    "maximum_left_normal_equation": 3.2071108852508436e-16,
+    "maximum_reduced_optimality_error": 7.58468323798636e-17,
+    "maximum_phase_arithmetic_error": 2.842170943040401e-14,
+    "summaries": [
+      {
+        "segment": "F3_fifth1",
+        "windows": 12,
+        "successful": 8,
+        "local_lines": 458,
+        "eligible_lines": 142,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "original_successful": 5,
+        "newly_successful": [
+          4,
+          9,
+          10
+        ],
+        "newly_failed": [],
+        "failed_windows": [
+          0,
+          3,
+          5,
+          7
+        ],
+        "lower_cost_windows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          10
+        ],
+        "longest_low_track": 1
+      },
+      {
+        "segment": "F3_fifth2",
+        "windows": 12,
+        "successful": 8,
+        "local_lines": 434,
+        "eligible_lines": 121,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "original_successful": 9,
+        "newly_successful": [],
+        "newly_failed": [
+          3
+        ],
+        "failed_windows": [
+          0,
+          2,
+          3,
+          10
+        ],
+        "lower_cost_windows": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "longest_low_track": 1
+      },
+      {
+        "segment": "F3_sixth",
+        "windows": 24,
+        "successful": 10,
+        "local_lines": 1050,
+        "eligible_lines": 163,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "original_successful": 7,
+        "newly_successful": [
+          11,
+          22,
+          23
+        ],
+        "newly_failed": [],
+        "failed_windows": [
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21
+        ],
+        "lower_cost_windows": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          8,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          20,
+          22,
+          23
+        ],
+        "longest_low_track": 1
+      }
+    ],
+    "independent_SVD_Jacobian_error": 1.2390836105638861e-12,
+    "input_report_sha256": "1308db7dd0f23de7e34fcfb100a08f346de3172d10b5c5aab2fc1c6cb7e70c03",
+    "parent_audit_sha256": "f8d9918c3f54207cca39ef5107c76e9ffe01ec99a0c383bdb9f58e4646d45ed3",
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "optimizer_global_convergence_verified": false,
+    "no_new_audio_or_profile": true
+  },
+  "original_unit_failure_retained": true,
+  "all_failed_windows_retained": true,
+  "original_model_bounds_budget_and_gates_unchanged": true,
+  "low_tracks_atleast5": 0,
+  "both_plots_viewed": true,
+  "no_gap_bridging": true,
+  "common_phase_RPM_load_or_source_identity": false,
+  "original_common_phase_qualification_remains_required": true,
+  "new_audio_or_runtime_profile": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_tests_repeated": false,
+  "idle_candidate_pending_no_duplicate_question_or_blind_tune": true,
+  "next": "Prioritize pending idle sound judgement. Diagnose known AM/nonlinearFM and mono-noise local model/continuity before further low source design; no budget/range/threshold sweeps.",
+  "manifest_sha256": "b02bf2a03fe824fa1702a1cc7f951be46f24900802eeb218bd4a4332b768a7e7",
+  "file_count": 130,
+  "bytes": 36533877
+}

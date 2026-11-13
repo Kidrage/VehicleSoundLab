@@ -1,0 +1,141 @@
+{
+  "schema": "vsl.native-low-joint-freeze/1",
+  "result": "all48_fits_audited_NO_qualified_low_track_or_new_sound",
+  "parent_commit": "0e2e0065111480cb689a272c3f860eeab239ac05",
+  "method": "accel_low_fit_v1",
+  "observations": [
+    {
+      "segment": "F3_fifth1",
+      "windows": 12,
+      "successful": 5,
+      "local_lines": 458,
+      "eligible_lines": 98,
+      "low_start_tracks": 16,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    },
+    {
+      "segment": "F3_fifth2",
+      "windows": 12,
+      "successful": 9,
+      "local_lines": 434,
+      "eligible_lines": 136,
+      "low_start_tracks": 15,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    },
+    {
+      "segment": "F3_sixth",
+      "windows": 24,
+      "successful": 7,
+      "local_lines": 1050,
+      "eligible_lines": 116,
+      "low_start_tracks": 15,
+      "low_tracks_atleast5": 0,
+      "compared_low_tracks": 0
+    }
+  ],
+  "native_source_lines": 1942,
+  "known_and_actual_waveforms": 64,
+  "including_known_fitted_lines": 2073,
+  "audit": {
+    "result": "all_known_and48_native_waves_initials_tracks_phase_reports_predictions_verified",
+    "waveforms": 64,
+    "lines": 2073,
+    "maximum_waveform_error": 6.118716644465394e-14,
+    "maximum_support_error": 0.0,
+    "maximum_phase_arithmetic_error": 1.7763568394002505e-15,
+    "maximum_known_signal_error": 2.220446049250313e-16,
+    "summaries": [
+      {
+        "segment": "F3_fifth1",
+        "windows": 12,
+        "successful": 5,
+        "local_lines": 458,
+        "eligible_lines": 98,
+        "low_start_tracks": 16,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "failed_windows": [
+          0,
+          3,
+          4,
+          5,
+          7,
+          9,
+          10
+        ],
+        "longest_low_track": 1
+      },
+      {
+        "segment": "F3_fifth2",
+        "windows": 12,
+        "successful": 9,
+        "local_lines": 434,
+        "eligible_lines": 136,
+        "low_start_tracks": 15,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "failed_windows": [
+          0,
+          2,
+          10
+        ],
+        "longest_low_track": 1
+      },
+      {
+        "segment": "F3_sixth",
+        "windows": 24,
+        "successful": 7,
+        "local_lines": 1050,
+        "eligible_lines": 116,
+        "low_start_tracks": 15,
+        "low_tracks_atleast5": 0,
+        "compared_low_tracks": 0,
+        "failed_windows": [
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23
+        ],
+        "longest_low_track": 1
+      }
+    ],
+    "input_report_sha256": "a87ac77cf6af3041765ec80942292a521c57098e8dafc5140c8c1fa283859aff",
+    "C_H_unchanged": 612,
+    "old_voices_unchanged": 67,
+    "original_grouping_replayed_after_independent_complex_wave_check": true,
+    "engine_common_phase_RPM_load_or_source_identity": false,
+    "new_audio_or_profile": false
+  },
+  "original_unit_failure_retained": true,
+  "all_failed_windows_retained": true,
+  "original_model_bounds_budget_and_gates_unchanged": true,
+  "low_tracks_atleast5": 0,
+  "both_plots_viewed": true,
+  "no_gap_bridging": true,
+  "common_phase_RPM_load_or_source_identity": false,
+  "original_common_phase_qualification_remains_required": true,
+  "new_audio_or_runtime_profile": false,
+  "C_H_unchanged": 612,
+  "old_voices_unchanged": 67,
+  "old61_tests_repeated": false,
+  "idle_candidate_pending_no_duplicate_question_or_blind_tune": true,
+  "next": "Prioritize pending idle sound judgement. Diagnose known AM/nonlinearFM and mono-noise local model/continuity before further low source design; no budget/range/threshold sweeps.",
+  "manifest_sha256": "6fec578b570b15e1f579d17c8f9f5d3919fa257cbb9950b4260a61a6b9090df7",
+  "file_count": 251,
+  "bytes": 54877492
+}
