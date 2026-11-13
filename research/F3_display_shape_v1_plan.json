@@ -1,0 +1,12 @@
+{
+  "schema":"vsl.F3-display-shape-plan/1",
+  "parent":"F3_display_continuity_v1/inspect2, retain its failed independent5 control0.843<0.90 and all unknown frames",
+  "reason":"Literal mask Dice is sensitive to raster/colour-boundary omissions even when visible digit outline is the same. Test a single native-pixel outline tolerance, without lowering0.90score/0.10margin or changing masks, ROI, image size or templates",
+  "metric":"Mean of observed mask covered by3x3 template dilation and template covered by3x3 observed dilation; exactly one native pixel, no radius sweep. Raw Dice is reported separately",
+  "templates":"Use exact original4/5/6/7 templates from parent; do not add failed probe5 as a template",
+  "new_probe_video_seconds":{"4":188,"5":191,"6":196,"7":167},
+  "controls":"Retain original3 probes as regression observations, independently inspect4 new native probes, reject blank/union4+5/blanking-corrupted outlines; one-pixel shifted outline and independent scalar score checks",
+  "all_frames":"Reclassify exact previously decoded1080 native RGB crops with original PTS; no rescale, inferred/interpolated labels or audio reads. Retain every unknown",
+  "interpretation":"Overlay classification only, not physical gearbox action timing, calibrated AV delay, pedal/load/fueling or independent recording proof",
+  "runtime_changed":false
+}

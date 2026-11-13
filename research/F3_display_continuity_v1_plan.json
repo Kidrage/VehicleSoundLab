@@ -1,0 +1,15 @@
+{
+  "schema":"vsl.F3-display-continuity-plan/1",
+  "source":"Existing approved F3 native muxed video only, no redownload",
+  "windows":[{"id":"first","seconds":[158,164]},{"id":"second","seconds":[189,201]}],
+  "candidate_intervals":[{"id":"F3_fifth1","seconds":[159,162],"displayed_gear":5},{"id":"F3_fifth2","seconds":[190,193],"displayed_gear":5},{"id":"F3_sixth","seconds":[194,200],"displayed_gear":6}],
+  "roi_xyxy":[65,130,240,338],
+  "template_video_seconds":{"4":158,"5":159,"6":163,"7":201},
+  "independent_probe_video_seconds":{"5":190,"6":194,"7":166},
+  "classification":"Fixed orange mask R>150,G>80,B<100,R>1.1G; Dice against original-PTS native templates. Accept only best>=0.90 and best-minus-second>=0.10; otherwise unknown. No threshold/crop sweep or forced interpolation of unknowns",
+  "controls":"Cross-passage probes not used as templates, blank input, and union of two distinct gear masks must reject or be explicitly retained as detector failure; scalar vs vector Dice checks",
+  "coverage":"Decode every frame in both half-open source-PTS intervals. Verify index/PTS spacing against native60Hz timing without claiming source images are unedited or independently recorded",
+  "interpretation":"Displayed overlay continuity only. No physical shift/torque/fueling/RPM or calibrated sound/display timing inferred",
+  "runtime_changed":false,
+  "keep":"Moving35,540C-H,voices,one driver,stereo7.1.4 unchanged; no unchanged55CTest repeat; F3 speech54..56 rejected, originalA-low question pending"
+}

@@ -1,0 +1,399 @@
+{
+  "schema": "vsl.F-state-evidence-publication/1",
+  "result": "F_source_period_relations_and_display_continuity_published_not_new_DNA",
+  "sources": {
+    "research/F2_period_relation_v1_plan.json": "0a8cc9ce052ae2616738e8e1462d8ea283d964fc66b1bfb323b21eed07532a89",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "handoff/开发留痕.md": "d0634782a4f5b2cceec8329ff4e6bb9ec38642f5f1d7c5d931e69e66569fa078",
+    "research/怠速与加速完成度V1.md": "246ff1ab82d7b62af68110bfbda69d1fea96890563c33b729e998158e84631e4",
+    "handoff/研究续接.md": "6075b386129aef25e5d1f4048542958451289335984de6427d111de5c96423e5",
+    "research/F3_display_continuity_v1_plan.json": "5155251db8aa0eaaf49aa24efb4bc85ae4428276cb051e6f373acec26d2e1735",
+    "tools/period_relation_v1/intervals.py": "98bc2606a2e7bd15f2d02e599689f3d7a948dfda7b037affd3fe396c86389dc5",
+    "tools/F3_display_continuity_v1/mask.py": "d548461627d2138010da09621e1fd1e599de2bc6e7dbe3e5ca03ea1c74503ff1",
+    "tools/inspect_F3_display_continuity_v1.py": "4a76589fb01e8459d28f23807f53153a538b837c8b0aa22659ab9a6107026a7d",
+    "tools/period_relation_v1/__init__.py": "dcba3feb284de635fd179e166c15be31664f17b241cd1187c80e94887186b750",
+    "tools/package_F_state_evidence_v1.py": "2b39391b5901164f0a553a64b9a98ca0d3d010a15320d9e3a021202467970343",
+    "research/F怠速与挡位证据V1.md": "d8450dc0edb85cd2f2bc7d72156c0fe0ec0919b4c623a958a528de6e1e7d034b",
+    "research/F3_display_shape_v1_plan.json": "ceb3992e707003b169daf1771aa7c6e6b6d668d8495f6399f5e34dc727ba1c34",
+    "tools/inspect_F3_display_shape_v1.py": "6c55b7114c86bd4e21db40a8502d2e093ff824614bb644b1e63c7d1c600fe23e",
+    "tools/F3_display_continuity_v1/shape.py": "76e936dae451fba07a3016a814b80030d3c0a1faf77498e56a62c2358f4ea335",
+    "tools/observe_F2_period_relation_v1.py": "43762360b55e9bfacb8c28c940e66624811f59a8ee0c5449fa4f42eebb1e3afc",
+    "tools/F3_display_continuity_v1/__init__.py": "8a8b6556c9d0ae8175d8bca14608da82d63752b4f2d38732126bdfc4f74610c3",
+    "tools/period_relation_v1/checks.py": "7bf022ef32fe8a253a759f8d1fec15b0931411fb930c0059528c616c7720077f",
+    "research/F_state_audition_v1_review.json": "edfd6e02796e449619aad78e0f131b4f9eef37a02deb2d5fd88095a7dfd0ee49",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "handoff/算法说明.md": "24cb75eae4a8ca0cd52b79e88a5370fd895fc4b16903083ac1e350a542ef5562",
+    "AGENTS.md": "e1b767d4fdae773a1b69964d763d838abc86faf78e2aabba88b6f9d06852ab52",
+    "tools/audit_F_state_evidence_v1.py": "c6544caaadf432a04352dab89cda65252219eb2b4fb65876d7783accb2293822"
+  },
+  "reports": {
+    "F2": {
+      "path": "references/analysis/F2_period_relation_v1/observe1/report.json",
+      "sha256": "40f551d69dd5028ebaef1cbd6ef8019ccbe2bb14f661d53237ab2b792f9e8990",
+      "result": "F2_native_bin_relations_explored_no_fundamental_or_RPM_identified"
+    },
+    "decode_failure": {
+      "path": "references/analysis/F3_display_continuity_v1/inspect1/report.json",
+      "sha256": "f12f66d22c124611cc786634edcd2fdaf545c9658118e4cbd6eb878b8ca4fc28",
+      "result": "failed"
+    },
+    "rejected_Dice": {
+      "path": "references/analysis/F3_display_continuity_v1/inspect2/report.json",
+      "sha256": "da67ee0f6da637c4d730170c3ddd6a8e81916bf37e8ac6b9f0725ea014f67650",
+      "result": "native_frames_retained_detector_not_qualified"
+    },
+    "shape": {
+      "path": "references/analysis/F3_display_continuity_v1/shape1/report.json",
+      "sha256": "13a2a15b80448d692d16c34fbfa64494b36b608c69dbd5db7429190a0014a85b",
+      "result": "native_outline_evidence_measured"
+    },
+    "audit": {
+      "path": "references/analysis/F_state_evidence_v1/audit2/report.json",
+      "sha256": "35e92fea214b23ad9be116c4ed64a24b90b08a28a5a50cbbf86260a842c4b4e7",
+      "result": "F2_exact_intervals_and_all1080_F3_native_frame_classifications_independently_verified"
+    },
+    "prior_audit": {
+      "path": "references/analysis/F_state_evidence_v1/audit1/report.json",
+      "sha256": "de0f33c5252cb3a7ecf083382a5be5052daa2f642a821c4a1af6fce4abd68e68",
+      "result": "F2_exact_intervals_and_all1080_F3_native_frame_classifications_independently_verified"
+    }
+  },
+  "F2_cases": [
+    {
+      "source_seconds": [
+        6,
+        8
+      ],
+      "all5_observed_peak_bins_Hz": [
+        75.0,
+        112.0,
+        187.0,
+        82.0,
+        37.0
+      ],
+      "first3_exploratory_anchors_Hz": [
+        75.0,
+        112.0,
+        187.0
+      ],
+      "retained_extra_peak_bins_Hz": [
+        82.0,
+        37.0
+      ],
+      "hypotheses": {
+        "bank_pattern": {
+          "anchor_interval_Hz": [
+            37.3,
+            37.5
+          ],
+          "branches": [],
+          "compatible": false
+        },
+        "fifth_grid": {
+          "anchor_interval_Hz": [
+            7.46,
+            7.5
+          ],
+          "branches": [
+            {
+              "base_interval_Hz": [
+                7.46,
+                7.5
+              ],
+              "extra_orders": [
+                11,
+                5
+              ]
+            }
+          ],
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source_seconds": [
+        8,
+        10
+      ],
+      "all5_observed_peak_bins_Hz": [
+        75.0,
+        112.0,
+        188.0,
+        82.0,
+        37.0
+      ],
+      "first3_exploratory_anchors_Hz": [
+        75.0,
+        112.0,
+        188.0
+      ],
+      "retained_extra_peak_bins_Hz": [
+        82.0,
+        37.0
+      ],
+      "hypotheses": {
+        "bank_pattern": {
+          "anchor_interval_Hz": [
+            37.5,
+            37.5
+          ],
+          "branches": [],
+          "compatible": false
+        },
+        "fifth_grid": {
+          "anchor_interval_Hz": [
+            7.5,
+            7.5
+          ],
+          "branches": [
+            {
+              "base_interval_Hz": [
+                7.5,
+                7.5
+              ],
+              "extra_orders": [
+                11,
+                5
+              ]
+            }
+          ],
+          "compatible": true
+        }
+      }
+    },
+    {
+      "source_seconds": [
+        10,
+        12
+      ],
+      "all5_observed_peak_bins_Hz": [
+        76.0,
+        113.0,
+        189.0,
+        81.0,
+        38.0
+      ],
+      "first3_exploratory_anchors_Hz": [
+        76.0,
+        113.0,
+        189.0
+      ],
+      "retained_extra_peak_bins_Hz": [
+        81.0,
+        38.0
+      ],
+      "hypotheses": {
+        "bank_pattern": {
+          "anchor_interval_Hz": [
+            37.75,
+            37.833333333333336
+          ],
+          "branches": [],
+          "compatible": false
+        },
+        "fifth_grid": {
+          "anchor_interval_Hz": [
+            7.55,
+            7.566666666666666
+          ],
+          "branches": [],
+          "compatible": false
+        }
+      }
+    }
+  ],
+  "F2_fundamental_selected": false,
+  "RPM_inferred": false,
+  "F3_display_candidates": [
+    {
+      "id": "F3_fifth1",
+      "seconds": [
+        159,
+        162
+      ],
+      "displayed_gear": 5,
+      "frames": 180,
+      "unknown_frames": 0,
+      "all_frames_match_displayed_gear": true
+    },
+    {
+      "id": "F3_fifth2",
+      "seconds": [
+        190,
+        193
+      ],
+      "displayed_gear": 5,
+      "frames": 180,
+      "unknown_frames": 0,
+      "all_frames_match_displayed_gear": true
+    },
+    {
+      "id": "F3_sixth",
+      "seconds": [
+        194,
+        200
+      ],
+      "displayed_gear": 6,
+      "frames": 360,
+      "unknown_frames": 0,
+      "all_frames_match_displayed_gear": true
+    }
+  ],
+  "F3_full_window_unknowns": {
+    "first": 37,
+    "second": 59
+  },
+  "all1080_classifications_independently_replayed": true,
+  "all7_F2_controls_exact_rational": true,
+  "rejected_Dice_and_intentional_decode_termination_retained": true,
+  "audit1_preserved_audit2_adds_absolute_timing_checks": true,
+  "source_variants": {
+    "tools/observe_F2_period_relation_v1.py": {
+      "F2": "43762360b55e9bfacb8c28c940e66624811f59a8ee0c5449fa4f42eebb1e3afc"
+    },
+    "research/F2_period_relation_v1_plan.json": {
+      "F2": "0a8cc9ce052ae2616738e8e1462d8ea283d964fc66b1bfb323b21eed07532a89"
+    },
+    "references/segments_v1.json": {
+      "F2": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "failed_decode": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "raw_Dice": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5"
+    },
+    "tools/drive_evidence_v1/sources.py": {
+      "F2": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "failed_decode": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "raw_Dice": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+      "outline": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839"
+    },
+    "tools/period_relation_v1/__init__.py": {
+      "F2": "dcba3feb284de635fd179e166c15be31664f17b241cd1187c80e94887186b750"
+    },
+    "tools/period_relation_v1/checks.py": {
+      "F2": "7bf022ef32fe8a253a759f8d1fec15b0931411fb930c0059528c616c7720077f"
+    },
+    "tools/period_relation_v1/intervals.py": {
+      "F2": "98bc2606a2e7bd15f2d02e599689f3d7a948dfda7b037affd3fe396c86389dc5"
+    },
+    "tools/inspect_F3_display_continuity_v1.py": {
+      "failed_decode": "416b6dd275e7fa119625412eabebd47966586e65f4a0727c32018e866eb302fc",
+      "raw_Dice": "4a76589fb01e8459d28f23807f53153a538b837c8b0aa22659ab9a6107026a7d"
+    },
+    "research/F3_display_continuity_v1_plan.json": {
+      "failed_decode": "5155251db8aa0eaaf49aa24efb4bc85ae4428276cb051e6f373acec26d2e1735",
+      "raw_Dice": "5155251db8aa0eaaf49aa24efb4bc85ae4428276cb051e6f373acec26d2e1735",
+      "outline": "5155251db8aa0eaaf49aa24efb4bc85ae4428276cb051e6f373acec26d2e1735"
+    },
+    "tools/F3_display_continuity_v1/__init__.py": {
+      "failed_decode": "8a8b6556c9d0ae8175d8bca14608da82d63752b4f2d38732126bdfc4f74610c3",
+      "raw_Dice": "8a8b6556c9d0ae8175d8bca14608da82d63752b4f2d38732126bdfc4f74610c3"
+    },
+    "tools/F3_display_continuity_v1/mask.py": {
+      "failed_decode": "d548461627d2138010da09621e1fd1e599de2bc6e7dbe3e5ca03ea1c74503ff1",
+      "raw_Dice": "d548461627d2138010da09621e1fd1e599de2bc6e7dbe3e5ca03ea1c74503ff1",
+      "outline": "d548461627d2138010da09621e1fd1e599de2bc6e7dbe3e5ca03ea1c74503ff1"
+    },
+    "tools/inspect_F3_display_shape_v1.py": {
+      "outline": "6c55b7114c86bd4e21db40a8502d2e093ff824614bb644b1e63c7d1c600fe23e"
+    },
+    "research/F3_display_shape_v1_plan.json": {
+      "outline": "ceb3992e707003b169daf1771aa7c6e6b6d668d8495f6399f5e34dc727ba1c34"
+    },
+    "tools/F3_display_continuity_v1/shape.py": {
+      "outline": "76e936dae451fba07a3016a814b80030d3c0a1faf77498e56a62c2358f4ea335"
+    }
+  },
+  "human_review": {
+    "schema": "vsl.F-state-audition-review/1",
+    "date_local": "2026-11-13",
+    "page": "http://127.0.0.1:8789/references/analysis/F_state_audition_v1/review1/index.html",
+    "scope": "Source usability only: clear engine detail versus music/speech/wind/moving-microphone contamination, not synthesized timbre acceptance",
+    "human_listening_result": "received",
+    "human_reply_verbatim": "F3的驻车候选这个音频有明显的说话声，覆盖了车声。其他短音频貌似还挺清晰，只有一些风噪声影响不大",
+    "reply_evidence": "Human reply to call_eba3781381604e9c9264bfb40455829c",
+    "clip_decisions": {
+      "F3_stopped": "Rejected for idle DNA extraction: speech clearly masks engine in54..56s; keep exact source clip as failed evidence",
+      "F2_tailpipe": "Human reports other short clips reasonably clear with some wind; usable for source analysis, not clean physical source separation or timbre acceptance",
+      "F3_fifth1": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+      "F3_fifth2": "Human reports other short clips reasonably clear with some wind; usable for source analysis, independent take not established",
+      "F3_sixth": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+      "F1_context_and_F2_whole": "Not separately rated in this reply; do not extend the short-clip assessment to the complete recordings"
+    },
+    "question_asked_once": true,
+    "audio_quality_accepted": false,
+    "short_clip_source_usability_partially_accepted": true,
+    "F_download_approval": "already_granted_and_media_frozen",
+    "A_low_listening": "different_original_question_pending_do_not_repeat",
+    "moving35": "held_unchanged"
+  },
+  "visuals_reviewed": [
+    "shape1/probe_4/frame.png",
+    "shape1/probe_5/frame.png",
+    "shape1/probe_6/frame.png",
+    "shape1/probe_7/frame.png",
+    "shape1/first_review_1.png",
+    "shape1/first_review_2.png",
+    "shape1/second_review_1.png",
+    "shape1/second_review_2.png"
+  ],
+  "visual_scope": "Four full native probe frames and four paginated boundary/unknown/worst-match sheets; not every frame manually inspected",
+  "media_identities": [
+    {
+      "path": "references/raw/state_media_v1/F1_fetch2/F1_XZCOsnPYre0.mkv",
+      "sha256": "0759cdbc4f75ffc7da7e52ffea0c3494a5f0153687776b53c1a69e714d13e22b"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F1_inspect1/native_reference.wav",
+      "sha256": "1ae81897db09d89b97c64bff584c9b6deb1324c2d3d4f7ff80c206d88f16f7b7"
+    },
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    },
+    {
+      "path": "references/raw/state_media_v1/F3_fetch2/F3_QUWTsk9crlo.mkv",
+      "sha256": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+      "sha256": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869"
+    }
+  ],
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "phase_extractor_qualified": false,
+  "physical_shift_timing_established": false,
+  "AV_delay_calibrated": false,
+  "load_inferred": false,
+  "real_audio_read": false,
+  "existing_recording_observations_read": true,
+  "original_video_read": true,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "moving35": "held_unchanged",
+  "phase_extracted_real_model_permitted": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "original_A_low_listening": "original_question_pending",
+  "F_source_listening": "received_no_duplicate",
+  "next_step": "Cross-validate F2 acoustic period and F3 pitch/display trajectory without physical RPM/AV claims; preserve original failed36/all17/full33/individual14k/originalE gates before any phase-extracted real model. No blind sweeps.",
+  "limits": [
+    "Display evidence limited to specified source intervals; animated unknowns remain outside candidates",
+    "Frequency boxes are exploratory rounding assumptions, not physical frequency confidence or engine/wind separation",
+    "No real phase-extracted DNA, new audio or runtime/C changes",
+    "One-pixel engineering raster tolerance and limited image controls, not a general OCR guarantee",
+    "Every unknown retained; failed controls forbid detector-based continuous display claims",
+    "Overlay timing is not physical shift, calibrated audio timing, RPM, load or fueling",
+    "Hypotheses chosen after viewing prior F2 bins, not independent validation or an automatic peak selector",
+    "Half-bin boxes assume isolated stationary-tone rounding; they are not frequency confidence intervals for drifting mixed recordings",
+    "Smaller subharmonics can always explain integer lines; compatibility does not identify physical engine period",
+    "No clock trajectory, true RPM, physical source attribution, new DNA or changed original extraction gates"
+  ]
+}

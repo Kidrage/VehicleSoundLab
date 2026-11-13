@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.F2-period-relation-plan/1",
+  "purpose":"Test two explicitly exploratory relations of the already published native1Hz spectral maxima, preserving every one of the original five peaks. Not a general period detector, clock fit or RPM estimate",
+  "input":"Exact F2_idle_observation_v1/audit1 display_only_low_band_peaks, source6..12s in three2s blocks; no rereading, filtering or fitting vehicle PCM",
+  "anchor_hypothesis":"First three previously ranked strong peaks are proposed orders2,3,5. This hypothesis was chosen after seeing the F2 spectrum; it is not independent validation of the peak selector",
+  "hypotheses":{"bank_pattern":{"anchor_orders":[2,3,5]},"fifth_grid":{"anchor_orders":[10,15,25]}},
+  "bin_half_width_Hz":0.5,
+  "bin_interpretation":"Literal native-bin boxes under an isolated stationary-tone rounding assumption ONLY, not calibrated confidence, a guarantee under drift/interference/noise or a fundamental-frequency prior",
+  "method":"Intersect anchor frequency boxes divided by proposed orders; enumerate every integer order for each remaining peak compatible with that interval, then intersect all boxes. Never drop the82Hz observation or fill empty intersections",
+  "controls":"Exact algebra: integer harmonics admit smaller subharmonics, missing fundamental stays ambiguous, fifth-only line rejects simple bank pattern, independent line/inconsistent anchors/unrelated frequency lists reject both, rounded-bin boundary remains possible",
+  "audit":"Independent exact Fraction interval/branch arithmetic and source identity; do not turn compatibility into proof of a physical period",
+  "keep":"Original failed36/all17/full33/individual14kHz/originalE remain required before real phase-extracted models. No C/model/runtime/room/audio changes, no55unchangedCTest repeat, moving35 held, F3 stopped speech rejected and originalA-low question pending"
+}
