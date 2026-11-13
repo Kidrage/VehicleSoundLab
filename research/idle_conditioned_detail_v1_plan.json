@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.idle-conditioned-detail/1",
+  "purpose": "Check whether high-band idle energy has a repeatable relation to existing independent low acoustic modes, missing from independent Gaussian detail and slow random gain. This is an amplitude-only proxy, NOT a new common-phase DNA extractor.",
+  "source": "Approved F2 native tailpipe6..9s train;9..12s previously inspected same-recording check. No new download, filtering of audition reference, source timeline export, room or RPM claim.",
+  "modal_indices": [1,2,4],
+  "low_features": "Existing75.04/112.49/187.53Hz modes, independently observed with forward-backward fourth-order Butterworth +/-10Hz then Hilbert unit phasor. No combining as a common engine clock. Trim0.25s each end; no phase gap filling. Each mode contributes cosine and sine only; all3modes jointly, no mode/window/degree search.",
+  "detail_bands_hz": [[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "energy_frames": 48,
+  "trim_frames": 12000,
+  "regression": "Native1ms nonoverlap mean squared forward4th-order bandpass output. Target each band normalized by TRAIN mean. OLS intercept+all6time-averaged phasor features, no ridge/clipping. Separate model for each band; DC and6coefficients only. Each model must have c-sum(hypot(a,b))>0 before it can generate positive square-root gain. Amplitude normalization removes c in the synthetic gain, not a fitted per-seed level.",
+  "checks": "Freeze coefficients before check. Same model and TRAIN normalization on check; compare to training constant with raw squared error. Compare all3independently phase-randomized same-PSD training/check controls without searching phase or delays. Report check errors and correlation; never equate improvement with physical causality or listening acceptance.",
+  "known_controls": "Analytic feature averaging, arbitrary3mode conditional-energy coefficient recovery and out-of-sample prediction, unrelated energy fails transfer, nonpositive envelope explicitly rejected, one-mode phase rotation and amplitude normalization invariance. Phase observer check on separate known off-grid/chirped mixtures; no truth initialization or physical qualification.",
+  "synthesis_gate": "Only if every candidate power law is strictly positive and at least3of4bands improve check MSE against training constant and beat each same-PSD control's corresponding improvement. Otherwise preserve observation and export no candidate. Gate concerns this amplitude experiment, not engine identity; original shared-phase qualification remains required.",
+  "synthesis_if_supported": "All3predeclared seeds149921/277139/381611, amounts0/.5/1,12s. Preserve all13OSC and6spectral filters/innovations. Replace only high4band gain by sqrt(1+amount*sum(a*cos(existing_mode_phase)+b*sin(existing_mode_phase))/c). Existing low-mode phase is the independent OSC's own phase, not a derived crank clock. No source-time envelope, PM/FM or periodic pulse samples. No C/default adoption before listening.",
+  "limits": "Source mix contains microphone/wind/exhaust transfer; normalized Hilbert phasors can follow beating. Adjacent same recording is not independent. Correlation may be nonlinear mixing, finite-window or recording artifacts; known counterexamples retained. All failed attempts and exact executed sources preserved. Pending listening questions are not repeated. Acceleration amplitude work remains separate/unpromoted.",
+  "runtime_changed": false
+}
