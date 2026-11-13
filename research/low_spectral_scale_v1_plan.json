@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.low-spectral-scale/1",
+  "purpose": "Phase-free diagnostic before any replacement extractor: can one frequency-axis scale describe the rejected A training windows consistently across separate bands? Do not infer engine clock or synthesize a new source from this observation.",
+  "input": "references/analysis/fixed_source_profiles_v1/trial1/A_exterior_low_rev/training.wav",
+  "native_frames": 24000,
+  "hop_frames": 12000,
+  "reference_window": 3,
+  "bands_hz": [[30,120],[120,400],[400,1200],[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "spectral_scale": {
+    "grid_base_hz": 125,
+    "grid_stop_hz": 12000,
+    "bins_per_octave": 1536,
+    "comparison_hz": [300,5000],
+    "whitening_sigma_bins": 128,
+    "minimum_shift": -768,
+    "maximum_shift": 1152,
+    "other_peak_exclusion_bins": 32,
+    "minimum_score": 0.4,
+    "minimum_peak_margin": 0.025
+  },
+  "independent_comparison_bands_hz": [[300,1000],[1000,2200],[2200,5000]],
+  "maximum_band_shift_spread_bins": 8,
+  "resolution_reason": "At5000Hz,1536bins/oct gives2.26Hz steps, below half of the old6Hz peak spacing. The old192bins/oct grid has18.1Hz steps there and cannot resolve that spacing. Whitening width128/1536oct and peak-exclusion32/1536oct retain the earlier physical widths16/192 and4/192. Spread8fine bins equals one old192bin, an explicit diagnostic tolerance, not an uncertainty bound. Search covers -0.5..+0.75oct; these settings are declared before dense controls/source scores and will not be swept.",
+  "controls": "Known dense10.613Hz comb up to4776Hz, same native0.5s windows, shifts-512/0/512/1024 fine bins; global gain and smooth colour invariance; silence rejection. A constructed split-spectrum case moves lower and upper harmonic groups in opposite directions and must fail the band-agreement rule. Controls precede source access; retain failure without reading A if any fails.",
+  "real_source_policy": "Use all seven original training windows and the original central reference. Save global and all3band candidate scores. Supported means global plus all3local rules and spread<=8; keep every rejected row and do not assign normalized line identities or frequencies where unsupported. No holdout read, window selection, waveform warp, phase fitting, new audio/profile/C, old59CTest repeat or RPM/load inference."
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "vsl.low-peak-selection-freeze/1",
+  "result": "source_selection_and_layered_scale_limits_verified_no_new_voice",
+  "git_parent": "03f4a147df887427b77772158daf29854b4b1c18",
+  "parent_manifest_sha256": "3802479e167ff8e4b2f35f0b4a981e14df4c97c029f45f951ed770415b14df64",
+  "training_seconds": [
+    208,
+    210
+  ],
+  "holdout_read": false,
+  "anchor_observations": 56,
+  "supported": 30,
+  "absent": 26,
+  "absent_window_counts": {
+    "no_raw_maximum_in_anchor_radius": 8,
+    "raw_maxima_rejected": 18
+  },
+  "rejected_raw_peak_counts": {
+    "prominence": 14,
+    "distance": 5
+  },
+  "known_continuous_chirp_fixed_anchor_support": 0.42857142857142855,
+  "nonreference_whole_scale_supported": 0,
+  "real_whole_scale_NOT_engine_phase": true,
+  "known_tonal_shift": 128,
+  "known_mixed_global_shift": 0,
+  "known_mixed_band_shifts": [
+    128,
+    0,
+    0
+  ],
+  "independently_rebuilt_scores": 69156,
+  "maximum_score_error": 1.8637869025894815e-14,
+  "audit1_parse_failure_retained": true,
+  "intermediate_audits_retained": [
+    "audit2",
+    "audit3"
+  ],
+  "final_audit": "audit4",
+  "algorithm_document": {
+    "result": "current_algorithm_handoff_refreshed",
+    "before_lines": 151,
+    "after_lines": 63,
+    "before_sha256": "603839b2b985d1105cd8e12f7c8dfaecc06098375b8a6f9549dec44de54a42cf",
+    "after_sha256": "7a5e9b1dd87b3bfa06c6dfdec1bf3abc60d48ee6bebbeafa7a810ba4cd88cfdd",
+    "corrections": [
+      "7approved sources rather than old4",
+      "current optional schema9/30 rather than historical8/29",
+      "59latest idle-study tests rather than prior55",
+      "current idle/source experiments and limits, with history moved to existing logs"
+    ]
+  },
+  "new_WAV": false,
+  "new_profile": false,
+  "C_H_unchanged": 569,
+  "voices_unchanged": 67,
+  "runtime_changed": false,
+  "C_tests_repeated": false,
+  "shared_phase_qualified": false,
+  "measured_RPM_load": false,
+  "next": "Validate observed moving-tonal vs fixed-structure selection on known mixtures before real A; keep F2V2 listening pending.",
+  "freeze": "baselines/low_peak_selection_v1",
+  "manifest_sha256": "0a7b775a391505bf6bdbb6aa6f969037f59c05f30f1040e9e07ce6cdc4910dbd",
+  "file_count": 72,
+  "bytes": 23142082
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.low-peak-selection/1",
+  "purpose": "Explain why the original independent-mode selector drops A low lines; distinguish selection stages from movement outside a fixed anchor neighbourhood. No new fit or audio candidate.",
+  "parent": "references/analysis/fixed_source_profiles_v1/trial1/A_exterior_low_rev",
+  "source_training_seconds": [208,210],
+  "holdout_used": false,
+  "settings": "Unchanged research/idle_modal_v1_plan.json: native0.5s periodic Hann, hop0.25s, 6Hz distance,8dB prominence,30..1200Hz inventory,42dB global floor,64max,3Hz fixed-anchor neighbourhood,80% support.",
+  "observations": "Trace every raw local maximum through distance, prominence, band, power floor and top64 stages. Reconstruct the exact final frequencies against old peaks(). For each original30..120Hz central anchor and all7windows record the number of final candidates in3Hz; if absent, list raw candidates there and their first rejection stage, plus nearest raw peak WITHOUT claiming identity. Record strongest native low-band FFT bin separately. Do not interpolate across missing or ambiguous windows.",
+  "controls": "Before reading real source: original off-grid stationary tones; one exact linear chirp75..95Hz over2s with <0.04Hz per-window centre error and original fixed-anchor support failure; a bin-centred missing76Hz line with persistent84Hz neighbour, no substitution into completely absent final windows; explicit artificial spectrum with two resolved local maxima that the spacing stage thins (algorithm-stage control, not acoustic resolution). Keep all fixtures and results; do not change thresholds if a control fails.",
+  "scope": "Native training-only diagnostic; original seven windows and inventory unchanged, no threshold/window/order/seed sweep. Not RPM, combustion phase, physical FM identification, full trajectory tracking or qualified shared-phase DNA. Preserve F2 pending V2 listening, old profiles,569C-H/67voices/runtime/moving35 and all failed A files. No old59CTest repeat."
+}

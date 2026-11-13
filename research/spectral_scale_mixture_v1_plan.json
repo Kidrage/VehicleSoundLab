@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.spectral-scale-mixture-control/1",
+  "purpose": "Interpret the failed whole-recording cross-band scale rule. A known moving tonal layer plus a known fixed spectral layer need not have one common whole-spectrum scale. This is a counterexample, not an actual source separation or a new A fit.",
+  "recipe": "Use unchanged low_spectral_scale_v1 settings and native0.5s stereo samples.",
+  "moving_layer": "orders3..450 *10.613Hz; amplitudes0.07*order^-0.65; phases0.173*order; compare ratio1 versus2^(128/1536). R=0.67L.",
+  "fixed_layer": "Deterministic independent sinusoidal test pattern: f=1107.3+37.137*k for every k>=0 with f<5000Hz, amplitude0.04 per line, phase0.37*k. Same layer in both mixtures, R=0.67L. It is a mathematical fixed spectral layer, not an identified mechanical or room source.",
+  "checks": "Moving layer alone must recover the known128bin shift and pass old band rules. Fixed layer must be sample-identical between mixtures. Mixed whole-recording scale must fail the cross-band rule; preserve all global and band scores, no gain/order/threshold sweep if it does not. Verify linear mixture identities and save component arrays.",
+  "interpretation": "A failed whole-recording scale cannot by itself reject a correctly moving sublayer; a passing whole-scale match also does not establish physical engine phase. Next design tonal-vs-fixed-structure observations on known mixtures before applying a new extractor to A. No real source audio read, new listening candidate, C or runtime change."
+}
