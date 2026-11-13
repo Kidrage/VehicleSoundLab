@@ -1,0 +1,117 @@
+{
+  "schema": "vsl.idle-phase-difference-freeze/1",
+  "result": "predictive_difference_features_but_unsafe_linear_power_NO_sound_promotion",
+  "parent_commit": "eaf9fc4e896e81ddcb9dee704f39a25baf58d9b1",
+  "audit": {
+    "result": "all_nested_features_models_and_800_direct_lag_curves_verified",
+    "maximum_feature_error": 3.3306690738754696e-16,
+    "maximum_coefficient_error": 4.440892098500626e-15,
+    "maximum_assessment_error": 7.993605777301127e-15,
+    "maximum_curve_error": 5.684341886080802e-14,
+    "curves": 800,
+    "observations": 16,
+    "input_report_sha256": "f5967e8328cbe7d2cab359c68225e9558accb02c6e06cb9b837024452083a56a",
+    "failed_attempt_preserved": true,
+    "original_native_model_reproduced": true,
+    "check_used_for_fit": false,
+    "audio_or_runtime_profile_exported": false,
+    "runtime_changed": false,
+    "unchanged_C_H": 612,
+    "unchanged_old_voices": 67
+  },
+  "bound_audit": {
+    "result": "all10_models_full32768point_bounds_independently_verified",
+    "maximum_grid_error": 1.1102230246251565e-16,
+    "known_models": 6,
+    "source_control_models": 4,
+    "input_report_sha256": "f5967e8328cbe7d2cab359c68225e9558accb02c6e06cb9b837024452083a56a",
+    "bound_report_sha256": "fb3d4679ce2d2e9f23faaf83729d64b9bc26a6ebbef2effcab8f1841b5cd063f",
+    "original_gate_unchanged": true,
+    "source_2_to4k_negative_phase_counterexample_verified": true,
+    "audio_or_runtime_profile_exported": false,
+    "runtime_changed": false
+  },
+  "full_grid_models": 10,
+  "source_control_models": 4,
+  "check_incremental_improvement": [
+    0.044578068906414026,
+    0.10841542963573869,
+    0.09039387251686037,
+    0.06137177112697967
+  ],
+  "check_all4_bands_beat_every_samePSD_control": true,
+  "original_synthesis_prerequisite": false,
+  "real_negative_phase_witness": {
+    "grid_size": 32,
+    "points": 32768,
+    "numerical_guard": 1e-10,
+    "grid_minimum": [
+      0.3341228288908834,
+      -0.32116377148250264,
+      0.49243132438158876,
+      0.6005278517877042
+    ],
+    "grid_argmin_indices": [
+      [
+        19,
+        2,
+        27
+      ],
+      [
+        7,
+        25,
+        2
+      ],
+      [
+        6,
+        19,
+        30
+      ],
+      [
+        11,
+        2,
+        21
+      ]
+    ],
+    "curvature_bound": [
+      2.5817444975717145,
+      4.132169892939587,
+      2.158548698901967,
+      1.955624076407953
+    ],
+    "covering_debt": [
+      0.01244179533970802,
+      0.019913516680373777,
+      0.010402354364574493,
+      0.009424431636421994
+    ],
+    "global_lower_bound": [
+      0.3216810334511754,
+      -0.3410772882628764,
+      0.48202896991701427,
+      0.5911034200512821
+    ],
+    "status": [
+      "positive_bound",
+      "negative_counterexample",
+      "positive_bound",
+      "positive_bound"
+    ],
+    "all_bands_positive": false
+  },
+  "all10_curves_both_portions_closer_but_not_recovered": true,
+  "complete_power_covariance_budget_is_NOT_generated_waveform_cumulant": true,
+  "failed_observe1_and_summation_only_correction_preserved": true,
+  "both_plot_attempts_preserved_and_final_complete_viewed": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "old61_driving_tests_repeated": false,
+  "new_audio_or_runtime_profile": false,
+  "runtime_changed": false,
+  "physical_source_or_common_crank_qualified": false,
+  "original_common_phase_qualification_still_required": true,
+  "next": "Declared intrinsically-positive conditional power model; known/TRAIN-only/check/allcontrols and actual filtered waveform budgets before synthesis. Existing hearing pending/no duplicate/blind C promotion.",
+  "manifest_sha256": "73e9cda48f1e7cdeda129c4d4b162db7d90f8a59967180da508b50bdf2c57cbd",
+  "file_count": 72,
+  "bytes": 10712424
+}
