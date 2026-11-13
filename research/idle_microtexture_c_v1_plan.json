@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.idle-fast-detail-c-plan/1",
+  "purpose": "Isolated optional C listening implementation of frozen fast-detail proxy; not a timbre/default/driving promotion while listening remains pending",
+  "source": "baselines/idle_microtexture_v1/evidence/trial1/profile.json and fixed_source_profiles_v1 F2 profile, exact coefficients; no new fitting/media",
+  "module": "spectral_motion/profile,voice composes existing spectral_texture and modal_texture envelopes. Generic0/static or1-based row mappings permit shared band gains; no source/state IDs, new oscillator, phase/RPM clock or room",
+  "zero": "Amount0 must preserve original spectral accumulation exactly and keep all FIR/RNG states advancing. Same-target updates do not restart18ms ramp. Gains apply after internal FIR prefetch at output sample time",
+  "ownership": "NonRT bank/voice allocation and destruction. Spectral coefficients/map/channel gains copied, immutable motion profile borrowed. No audio-thread IO/allocation. Destroy after device thread joins",
+  "validation": "Known unrelated filters/correlated gains/shared map/static bands/invalid calls/profile ownership, all3seeds x0/.5/1 against independently audited frozen Python, block1vs479 sample events byte-exact,30s sustained prefix and actual240frame chunk timing. Do not relax original1e-7FS gate or select seeds",
+  "native_monitor": "Separate fixed-idle source window only: main/detail/grain/level, transport stopped initially, no RPM claims. Reuse win_output. Actual muted device capture compared to offline rendering with same sample controls; UI manual/visual check only if available tool can perform it",
+  "preserve": "All prior600C/H,67voice assets, accepted moving35, legacy binaries/takes/Cdriver/defaults and all executed attempts. No existing61CTest rerun if dependencies unchanged; run new standalone suite and retain inherited module tests",
+  "limits": "Port parity does not approve timbre or prove physical modulation/sharedphase/RPM/7.1.4/fullacceleration. Existing idle review question is not repeated. Source quality feedback remains prerequisite for production adoption"
+}
