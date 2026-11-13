@@ -81,7 +81,7 @@ int main(void) {
     data[104]=7;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[104]=1;rehash(data,size);
     CHECK(!at_take_decode(&loaded,data,size-1)&&loaded.assets==saved);
     data[12]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[12]^=1;rehash(data,size);
-    data[8]=7;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=8;rehash(data,size);
+    data[8]=7;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[8]=9;rehash(data,size);
     CHECK(at_take_decode(&loaded,data,size));saved=loaded.assets;
     data[76]^=1;rehash(data,size);CHECK(!at_take_decode(&loaded,data,size)&&loaded.assets==saved);data[76]^=1;rehash(data,size);
     data2=malloc(size+1);CHECK(data2);memcpy(data2,data,size-8);data2[size-8]=0;rehash(data2,size+1);

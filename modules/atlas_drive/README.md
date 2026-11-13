@@ -46,4 +46,6 @@ DNA使用 `voice.dna_gain`，保留现有工况、负载、启动、换挡切断
 
 `source.h` 在原驾驶包络之后、原空间处理之前提供可选 `AdSourceProcessor`。它接收只读驾驶状态及 DNA／低频／残差／共振／独立 LF 分轨，返回保留后的各层和一个新增双声道分轨。事件、启动、接火和辅助层继续由原代码负责。适配器必须自行在非实时线程初始化，独占其状态，实时不分配／I/O，输出有限数值。
 
-空适配器或本次关闭的怠速适配器保持旧输出逐字节一致；`AdCapture` 的现有后包络分轨反映适配器后的保留量，`source_added` 单独记录新增量，`dna_raw` 等原始观察分轨保持原义。适配器初始化后不得移动，状态不能由多个 render 共享。通用 opaque 状态暂不属于 schema8 行程格式，拥有资产校验会拒绝，不能静默丢掉它。见 [怠速状态衔接](../../research/怠速状态衔接V1.md)。
+空适配器或本次关闭的怠速适配器保持旧输出逐字节一致；`AdCapture` 的现有后包络分轨反映适配器后的保留量，`source_added` 单独记录新增量，`dna_raw` 等原始观察分轨保持原义。适配器初始化后不得移动，状态不能由多个 render 共享。通用opaque状态不属于schema9行程格式，拥有资产校验会拒绝，不能静默丢掉它。见 [怠速状态衔接](../../research/怠速状态衔接V1.md)。
+
+后续增加明确类型的`AdConfig.idle_profile`，与opaque回调互斥。`AdRender`独占`MlState`，由同一只读驾驶状态产生`RUNNING && IDLE` gate，消费`AdMix.idle_mix`，源混合后仍只做一次原空间处理。`idle_raw/idle`捕获新增源的原始／包络后分轨，`idle_weight`是混合权重遥测；没有实际RPM标定。该类型可由`atlas_take`深拷贝，schema9保存全部参数，见[怠速统一驾驶与录放](../../research/怠速统一驾驶与录放V1.md)。

@@ -68,7 +68,7 @@ static int run(const char *root,int pedals,int stereo,int full) {
     CHECK((pedals?stage>=6:stage==3&&active&&inactive)&&audio.ready&&recorded.frames==frames&&healthy(&recorded));
     snprintf(path,sizeof path,"%s/recorded.wav",root);CHECK(vsl_wav_begin_float(&wav,path,48000,2));
     CHECK(vsl_wav_write(&wav,audio.capture,(unsigned)recorded.frames)&&vsl_wav_end(&wav));
-    snprintf(path,sizeof path,"%s/detail_schema8.vslrun",root);CHECK(at_take_save(&audio.take,path)&&at_take_load(&loaded,path));
+    snprintf(path,sizeof path,"%s/detail_schema9.vslrun",root);CHECK(at_take_save(&audio.take,path)&&at_take_load(&loaded,path));
     CHECK(loaded.assets->config.resonant_bank==&loaded.assets->resonant&&loaded.assets->resonant.enabled[0]);
     CHECK(loaded.assets->resonant.kind[0]==(unsigned)(stereo?DRS_STEREO:DRS_RDT));
     if(full)CHECK(loaded.assets->config.recipe_bank==&loaded.assets->recipe&&loaded.assets->recipe.has_low[0]);
@@ -83,7 +83,7 @@ static int run(const char *root,int pedals,int stereo,int full) {
     am_audio_stop(&audio);cancelled=wo_stats(&audio.device);CHECK(healthy(&cancelled)&&cancelled.frames<recorded.frames&&audio.replay_result==2);
     CHECK(drp_inspect(&audio.take,root));
     snprintf(path,sizeof path,"%s/device.json",root);report=vsl_fopen(path,"wb");CHECK(report);
-    fprintf(report,"{\"result\":\"pass\",\"muted\":true,\"schema\":8,\"fields\":29,\"frames\":%llu,\"owned_models_destroyed_before_replay\":true,"
+    fprintf(report,"{\"result\":\"pass\",\"muted\":true,\"schema\":9,\"fields\":30,\"frames\":%llu,\"owned_models_destroyed_before_replay\":true,"
         "\"record_hash\":\"%016llx\",\"play_hash\":\"%016llx\",\"record_queue_empty\":%u,\"play_queue_empty\":%u,"
         "\"record_budget_exceeded\":%u,\"play_budget_exceeded\":%u,\"record_max_ms\":%.9g,\"play_max_ms\":%.9g,"
         "\"active_and_missing_support_observed\":%s,\"pedal_scenario\":%s,\"cancel_frames\":%llu,\"controls\":[",
@@ -95,7 +95,7 @@ static int run(const char *root,int pedals,int stereo,int full) {
         audio.take.events[i].control.drive.throttle,audio.take.events[i].control.drive.brake,audio.take.events[i].control.drive.gear,
         audio.take.events[i].control.drive.ignition,audio.take.events[i].control.mix.resonant_gain,audio.take.events[i].control.mix.coherent_low_gain);
     fprintf(report,"],\"stereo_kernel\":%s,\"full_recipe\":%s}\n",stereo?"true":"false",full?"true":"false");
-    puts("PASS: one-driver local recipe, owned schema8 muted device replay and cancellation");
+    puts("PASS: one-driver local recipe, owned schema9 muted device replay and cancellation");
 done:
     if(wav.file)vsl_wav_end(&wav);if(report&&fclose(report))ok=0;at_take_free(&loaded);
     if(initialized){am_audio_stop(&audio);free(audio.capture);audio.capture=NULL;am_audio_destroy(&audio);}return ok?0:3;

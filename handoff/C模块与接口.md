@@ -1,5 +1,7 @@
 # C 模块与接口
 
+最新[怠速统一驾驶与录放V1](../research/怠速统一驾驶与录放V1.md)：`modal_layer/state.*`在原持续核外增加量平滑，`atlas_drive`内置明确类型的固定怠速配置与独占声源，原控制器状态产生gate。`atlas_take`拥有嵌套OSC／Rdt／过渡参数，schema9／30控制和新增源哈希可自包含录放；generic opaque回调继续拒绝。独立原生入口复用现有UI／设备，默认系统保留；音色未重拟合，新UI人工检查与听评未完成。569C/H＝539旧字节保持＋23适配＋7新增；59项、84旧音轨及短静音设备录放通过。
+
 最新[怠速状态衔接V1](../research/怠速状态衔接V1.md)：`modal_layer/profile.*`校验借用参数，`voice.*`持续推进独立OSC／共振、驾驶包络和有限进出权重；不含车型／RPM时钟。`atlas_drive/source.*`在唯一空间处理之前接收只读驾驶状态和分轨，`experiments/idle_state_v1/source.*`仅以`RUNNING && IDLE`触发F2候选，80ms过渡，固定频率比例1。固定监听电平来自第一完整怠速段，原始音色参数不变。新增12份C/H、适配3份、547份旧字节保持，索引562；57项CTest和84旧WAV回归通过。该实验未接原生UI／默认，schema8明确拒绝无法序列化的适配器；待音色听评，不是全转速模型。以下保留各阶段当时的接口范围。
 
 最新[独立怠速声源C移植V1](../research/独立怠速声源C移植V1.md)：新增`modal_source/profile`／`voice`与独立链接`io`，提供通用独立频率OSC及18ms比例／增益控制；不含车型或RPM时钟。`experiments/modal_idle_v1`只组合冻结F2参数与原零阶周期包络Rdt，输出三分轨，未接驾驶／UI／行程。原540C/H及67运行声音文件保持，10新增、索引550；独立2CTest和原3种子C/Python样本核查通过。独立频率可能拍频，不能当作全转速／共同相位DNA；主构建仍是原55项。

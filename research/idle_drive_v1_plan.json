@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.idle-drive-plan/1",
+  "purpose": "Optional controllable and self-contained fixed-idle branch in the existing driving host, without timbre promotion",
+  "source": "Unchanged F2 independent modal/flat Rdt parameters; ratio1 and previous fixed monitoring trim. No PCM, RPM inference, new room or timbre fit",
+  "state": "One original200Hz driver; RUNNING&&IDLE gate, existing80ms transition; optional idle amount0..1 with18ms control following; sources always advance",
+  "ownership": "Typed immutable MlProfile in AdConfig; owned modal/detail copies in AtAssets and player-owned voice. Opaque source processors remain unsupported and cannot coexist with typed idle",
+  "format": "New schema9/30 controls, full source parameters/seed/transition settings and adopted control frames; idle raw/output included in source hash. Old formats require frozen players",
+  "native": "Separate build-idle-drive-v1 and explicit study launcher, original default executable unchanged; reuse monitor/device/transport/recording and single spatial render",
+  "checks": [
+    "Known direct modal+Rdt versus gated/amount-controlled source, zero advance and invalid input",
+    "Built-in full amount matches frozen idle_state_v1 continuous C source, no new source fitting",
+    "Original84WAV and3driver CSV byte-identical when typed idle is absent",
+    "Deep ownership, encode/decode, external-model destruction, corrupt input rejection, arbitrary chunk controls/replay and2/12source invariants",
+    "Existing57 plus new contracts; optional native muted record/save/load/replay and cancellation if feasible"
+  ],
+  "limits": "Pending F2 source listening and long-term phase/beating; cross-context F2 LP610/A Performante is engineering plumbing. No actual RPM/load or physical7.1.4 acceptance; original shared-phase extraction gates remain required"
+}

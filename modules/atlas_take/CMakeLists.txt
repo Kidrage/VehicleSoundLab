@@ -22,11 +22,13 @@ file(GLOB_RECURSE at_render_files CONFIGURE_DEPENDS
   "${VSL_ROOT}/modules/drive_resonance/*.c" "${VSL_ROOT}/modules/drive_resonance/*.h"
   "${VSL_ROOT}/modules/drive_recipe/*.c" "${VSL_ROOT}/modules/drive_recipe/*.h"
   "${VSL_ROOT}/modules/resonant_source/*.c" "${VSL_ROOT}/modules/resonant_source/*.h"
+  "${VSL_ROOT}/modules/modal_source/*.c" "${VSL_ROOT}/modules/modal_source/*.h"
+  "${VSL_ROOT}/modules/modal_layer/*.c" "${VSL_ROOT}/modules/modal_layer/*.h"
   "${VSL_ROOT}/modules/atlas_drive/*.c" "${VSL_ROOT}/modules/atlas_drive/*.h"
   "${VSL_ROOT}/modules/atlas_monitor/*.c" "${VSL_ROOT}/modules/atlas_monitor/*.h"
   "${VSL_ROOT}/modules/atlas_take/*.c" "${VSL_ROOT}/modules/atlas_take/*.h")
 list(SORT at_render_files)
-set(at_render_identity "atlas-take-player-v8:${CMAKE_C_COMPILER_ID}:${CMAKE_C_COMPILER_VERSION}:${CMAKE_SYSTEM_PROCESSOR}")
+set(at_render_identity "atlas-take-player-v9:${CMAKE_C_COMPILER_ID}:${CMAKE_C_COMPILER_VERSION}:${CMAKE_SYSTEM_PROCESSOR}")
 foreach(source IN LISTS at_render_files)
   set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${source}")
   file(SHA256 "${source}" digest)

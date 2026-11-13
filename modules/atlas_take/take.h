@@ -30,6 +30,8 @@ uint64_t at_hash_samples(uint64_t hash,const float *audio,unsigned samples);
    resonant L/R; coherent LF raw,L/R and output,L/R. All earlier capture pointers
    must be present; NULL optional resonant/LF means zeros. Configured nonzero
    layers must be captured, including LF raw even when its amount is zero.
+   Typed idle appends raw/output stereo only when both capture pointers exist;
+   configured idle must capture both, even when its amount/gate is zero.
    Same source hash for stereo and12channel playback. */
 uint64_t at_hash_sources(uint64_t hash,const AdCapture *capture,unsigned frames);
 const char *at_render_id(void);

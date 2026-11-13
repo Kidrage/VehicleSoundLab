@@ -1,0 +1,141 @@
+{
+  "schema": "vsl.idle-drive-freeze/1",
+  "result": "optional_typed_idle_controls_and_owned_take_verified_timbre_pending",
+  "parent_commit": "57dba3d8af585bdb0eea772bf06b5fd01aa419a8",
+  "parent_freeze": "baselines/idle_state_v1",
+  "parent_manifest_sha256": "c17fe3154ba29020b4804bfdb9bb67ff38121e3539cfb146a36ec8164bf0c8fa",
+  "C_H": {
+    "total": 569,
+    "unchanged": 539,
+    "modified": [
+      "experiments/atlas_monitor_v1/audio.c",
+      "experiments/atlas_monitor_v1/audio.h",
+      "experiments/atlas_monitor_v1/ui.c",
+      "experiments/atlas_take_v1/checks.c",
+      "experiments/catch_drive_v1/checks.c",
+      "experiments/drive_aux_v1/checks.c",
+      "experiments/drive_resonance_v1/checks.c",
+      "experiments/drive_resonance_v1/device.c",
+      "experiments/full_recipe_drive_v1/checks.c",
+      "experiments/startup_detail_host_v1/checks.c",
+      "experiments/stereo_drive_v1/checks.c",
+      "modules/atlas_drive/control.c",
+      "modules/atlas_drive/control.h",
+      "modules/atlas_drive/render.c",
+      "modules/atlas_drive/render.h",
+      "modules/atlas_take/assets.c",
+      "modules/atlas_take/assets.h",
+      "modules/atlas_take/parameters.c",
+      "modules/atlas_take/player.c",
+      "modules/atlas_take/player.h",
+      "modules/atlas_take/take.c",
+      "modules/atlas_take/take.h",
+      "modules/atlas_take_io/codec.c"
+    ],
+    "added": [
+      "experiments/idle_drive_v1/checks.c",
+      "experiments/idle_drive_v1/control_checks.c",
+      "experiments/idle_drive_v1/device.c",
+      "experiments/idle_drive_v1/models.c",
+      "experiments/idle_drive_v1/models.h",
+      "modules/modal_layer/state.c",
+      "modules/modal_layer/state.h"
+    ]
+  },
+  "voices_unchanged": 67,
+  "F2_assets_and_study_unchanged": {
+    "experiments/modal_idle_v1/F2_fixed_idle.msource": "6b0a0cf10b808eb7904dd4158fd82e128f272075de3f07a5e1b1e35f24bd13c1",
+    "experiments/modal_idle_v1/F2_fixed_idle.rdetail": "ad7f44c2f7087cf549f726e61b9009f0fe980a3ff2e1121b322844511f599ef5",
+    "experiments/idle_state_v1/study.h": "94bb546a41d4edfffa0f5af8f305d666efb198f0818f22d55cefcfcdd9de4f4b"
+  },
+  "CTest_count": 59,
+  "legacy_WAV_byte_exact": 84,
+  "legacy_driver_CSV_byte_exact": 3,
+  "typed_full_amount_previous_C_sample_exact": true,
+  "format_schema": 9,
+  "control_fields": 30,
+  "device": {
+    "result": "pass",
+    "schema": 9,
+    "fields": 30,
+    "muted": true,
+    "frames": 384123,
+    "external_models_destroyed": true,
+    "two_twelve_front_and_source_exact": true,
+    "record_hash": "70dddd2d38f2ab6b",
+    "play_hash": "70dddd2d38f2ab6b",
+    "record_queue_empty": 0,
+    "play_queue_empty": 0,
+    "record_budget_exceeded": 0,
+    "play_budget_exceeded": 0,
+    "record_max_ms": 6.3407,
+    "play_max_ms": 5.3112,
+    "cancel_frames": 12800,
+    "controls": [
+      {
+        "frame": 0,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 1
+      },
+      {
+        "frame": 72192,
+        "rpm_input": 850,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 96768,
+        "rpm_input": 2200,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 168448,
+        "rpm_input": 850,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 240128,
+        "rpm_input": 850,
+        "idle_mix": 0,
+        "ignition": 1
+      },
+      {
+        "frame": 288256,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 1
+      },
+      {
+        "frame": 336896,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 0
+      }
+    ],
+    "timbre_accepted": false,
+    "native_UI_visual_or_interaction_verified": false
+  },
+  "failed_first_build_and_package_retained": true,
+  "native_UI_compiled": true,
+  "native_UI_manual_interaction_or_visual_verified": false,
+  "default_executable_replaced": false,
+  "timbre_accepted": false,
+  "source_timbre_refitted": false,
+  "actual_F2_RPM_or_load_calibrated": false,
+  "physical_7_1_4_verified": false,
+  "pending": "Original F2 fixed idle timbre question; new optional UI manual checks; supported RPM/load and same-car acceleration",
+  "reports": {
+    "kernel1": "456ee7725edd8dcd2bef6966a597743f5efaba0353c71992677cf6b7c1e9d8c3",
+    "kernel2": "7f53ab628618746ad26abce3724b246cadfddbbcb05e32d470f951e89ad9fc9c",
+    "full1": "7298dd91a2faf31f12737742312c98f7c45d03bbfff92a9a046caa4b22171c70",
+    "runtime1": "035821f4c8d7d8aa5e25b5225cec90e85a441569ab2b237379094ca8baff6409",
+    "package1": "4979a3624782040775fa4ece4baff99787cb056326c4f7841162c283a78156c2"
+  },
+  "freeze": "baselines/idle_drive_v1",
+  "manifest_sha256": "0464f9c4c8b51caee88a0e740d5c7de2462a5dfdd2f8f34497a2f2a8cbccb13c",
+  "file_count": 2784,
+  "bytes": 117205775
+}

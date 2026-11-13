@@ -16,6 +16,7 @@ typedef struct {
     double catch_gain; /* Optional coherent CATCH LF support, default0. */
     double resonant_gain; /* Optional local continuous resonance detail, default0. */
     double coherent_low_gain; /* Independent measured-phase LF recipe, default0. */
+    double idle_mix; /* Optional typed fixed-idle source replacement0..1, default0. */
 } AdMix;
 typedef struct { AdInput drive; AdMix mix; } AdControl;
 

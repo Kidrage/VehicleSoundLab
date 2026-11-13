@@ -1,4 +1,4 @@
-add_library(modal_layer STATIC profile.c voice.c)
+add_library(modal_layer STATIC profile.c voice.c state.c)
 target_include_directories(modal_layer PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
 target_link_libraries(modal_layer PUBLIC modal_source resonant_detail)
 target_compile_features(modal_layer PUBLIC c_std_11)

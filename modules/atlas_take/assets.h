@@ -10,6 +10,9 @@ typedef struct {
     CbProfile catch_bloom;
     DrsBank resonant;
     DrcBank recipe;
+    MsProfile idle_modal;
+    RdtProfile idle_detail;
+    MlProfile idle;
 } AtAssets;
 /* Owned, immutable render assets. Pointers stay inside this heap object. */
 int at_assets_copy(AtAssets *destination,const AdConfig *source);

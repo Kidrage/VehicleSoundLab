@@ -75,7 +75,7 @@ static int driving_and_take(void) {
         for(unsigned j=0;j<n*2;++j)energy+=resonant[j]*resonant[j];
         sh=at_hash_sources(sh,&capture,n);ah=at_hash_samples(ah,xa+2*at,n*2);CHECK(at_take_commit(&take,n,ah,sh));
     }
-    CHECK(energy>1e-7);at_take_finish(&take);CHECK(at_take_encode(&take,&bytes,&length));CHECK(bytes[8]==8&&bytes[76]==29);
+    CHECK(energy>1e-7);at_take_finish(&take);CHECK(at_take_encode(&take,&bytes,&length));CHECK(bytes[8]==9&&bytes[76]==30);
     CHECK(at_take_decode(&loaded,bytes,length));CHECK(loaded.assets->config.resonant_bank==&loaded.assets->resonant);
     CHECK(loaded.assets->resonant.enabled[0]&&!loaded.assets->resonant.enabled[1]);
     memset(&detail,0,sizeof detail);memset(profile,0,sizeof profile);memset(models,0,sizeof models);memset(&bank,0,sizeof bank);
@@ -90,5 +90,5 @@ int main(void) {
     CHECK(sd_profile_load("voices/exterior_anchors_v1/A Stationary Low.model",models));
     CHECK(sd_profile_load("voices/exterior_anchors_v1/A Stationary Lower Mid.model",models+1));
     CHECK(!kernel());CHECK(!driving_and_take());
-    puts("PASS: local support, missing anchors, one supplied phase, mute clocks, driver zero bypass and owned schema8 2/12 replay");return 0;
+    puts("PASS: local support, missing anchors, one supplied phase, mute clocks, driver zero bypass and owned schema9 2/12 replay");return 0;
 }

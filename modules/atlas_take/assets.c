@@ -21,6 +21,8 @@ int at_assets_valid(const AtAssets *a) {
     if(a->config.catch_profile&&(a->config.catch_profile!=&a->catch_bloom||!cb_profile_valid(&a->catch_bloom)))return 0;
     if(a->config.resonant_bank&&(a->config.resonant_bank!=&a->resonant||!drs_bank_valid(&a->resonant,&a->bank)))return 0;
     if(a->config.recipe_bank&&(a->config.recipe_bank!=&a->recipe||!drc_bank_valid(&a->recipe,&a->bank,a->config.resonant_bank)))return 0;
+    if(a->config.idle_profile&&(a->config.idle_profile!=&a->idle||a->idle.modal!=&a->idle_modal||
+       a->idle.detail!=&a->idle_detail||!ml_profile_valid(&a->idle)))return 0;
     if(a->config.residual_bank) {
         if(a->config.residual_bank!=&a->residual||!ra_bank_valid(&a->residual)||a->residual.count!=a->bank.count)return 0;
         for(i=0;i<a->bank.count;++i)if(fabs(a->residual.root[i]-a->profile[i].base_hz)>1e-8)return 0;
@@ -46,7 +48,7 @@ done:free(check);return ok;
 }
 int at_assets_copy(AtAssets *to,const AdConfig *from) {
     unsigned i;
-    /* Opaque experimental source state is not represented by schema8. Reject
+    /* Opaque experimental source state is not represented by schema9. Reject
        before mutation, rather than producing a take that replays another sound. */
     if(!to||!from||from->source_processor||!from->bank||!from->bank->count||from->bank->count>SA_MAX_ANCHORS)return 0;
     memset(to,0,sizeof *to);to->config=*from;to->bank=*from->bank;
@@ -56,6 +58,11 @@ int at_assets_copy(AtAssets *to,const AdConfig *from) {
     if(from->catch_profile){to->catch_bloom=*from->catch_profile;to->config.catch_profile=&to->catch_bloom;}
     if(from->resonant_bank){to->resonant=*from->resonant_bank;to->config.resonant_bank=&to->resonant;}
     if(from->recipe_bank){to->recipe=*from->recipe_bank;to->config.recipe_bank=&to->recipe;}
+    if(from->idle_profile) {
+        if(!ml_profile_valid(from->idle_profile))return 0;
+        to->idle=*from->idle_profile;to->idle_modal=*to->idle.modal;to->idle_detail=*to->idle.detail;
+        to->idle.modal=&to->idle_modal;to->idle.detail=&to->idle_detail;to->config.idle_profile=&to->idle;
+    }
     at_assets_bind(to,from->residual_bank!=NULL);
     return at_assets_valid(to);
 }

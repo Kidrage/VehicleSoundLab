@@ -12,6 +12,7 @@
 #include "drive_resonance/voice.h"
 #include "drive_recipe/voice.h"
 #include "source.h"
+#include "modal_layer/state.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -29,6 +30,7 @@ typedef struct {
     const DrsBank *resonant_bank; /* Optional local continuous detail; missing anchors stay silent. */
     const DrcBank *recipe_bank; /* Optional coupled DNA withdrawal + independent coherent LF. */
     const AdSourceProcessor *source_processor; /* Optional exclusive pre-spatial source adapter. */
+    const MlProfile *idle_profile; /* Optional typed fixed-idle source; exclusive with opaque processor. */
 } AdConfig;
 
 typedef struct {
@@ -43,6 +45,7 @@ typedef struct {
     unsigned rotating_strikes, fired_strikes;
     double resonant_support,resonant_gain; /* Local engineering support, not measured RPM coverage. */
     double coherent_low_support,coherent_low_gain,coherent_low_envelope;
+    double idle_weight;
 } AdTelemetry;
 typedef struct {
     float *dna_raw; /* Observation stereo, before driving envelope. */
@@ -67,6 +70,7 @@ typedef struct {
     float *resonant_raw,*resonant; /* Local detail before/after amount and driving envelope. */
     float *coherent_low_raw,*coherent_low; /* Independent calibrated LF, not complementary body tap. */
     float *source_added; /* Optional processor's added stereo stem, before width/master. */
+    float *idle_raw,*idle; /* Typed idle before/after gate, amount and envelope; before master. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
@@ -79,6 +83,7 @@ typedef struct {
     CbVoice catch_bloom;
     DrsVoice resonant;
     DrcVoice recipe;
+    MlState idle;
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;

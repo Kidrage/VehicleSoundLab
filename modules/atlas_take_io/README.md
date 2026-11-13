@@ -1,6 +1,6 @@
 # 行程文件 I/O
 
-非实时模块。`at_take_encode/decode`处理内存，`at_take_save/load`处理UTF8路径。当前独立`.vslrun`为schema8／29控制，保存声床模式、可选启动／接火、Rdt／Rvs及稳定证书、独立LF与功率替换参数；旧`.vsltake`是另一协议。schema7匹配播放器和实际设备take在`references/analysis/full_recipe_drive_v1/before1`，更早版本见各自冻结快照。本版本明确拒绝旧格式／旧渲染身份。
+非实时模块。`at_take_encode/decode`处理内存，`at_take_save/load`处理UTF8路径。当前独立`.vslrun`为schema9／30控制，保存声床模式、可选启动／接火、Rdt／Rvs及稳定证书、独立LF与功率替换参数，另完整拥有可选固定怠速的OSC／共振／电平／过渡参数。旧`.vsltake`是另一协议。schema8及更早版本使用各自冻结播放器，本版本明确拒绝旧格式／旧渲染身份。
 
 文件顺序：8字节`VSLRUN\r\n` → u32版本 → 64字节渲染身份 → u32控制字段数 → 配置／DNA／有效相位与查表／可选残差／启动／接火／逐锚点Rdt或Rvs参数与稳定证书／可选完整配方LF模型、校准量、支持界限、编译功率mask → 初始化控制 → 帧数、停止帧、双哈希 → 控制事件 → u64 FNV校验。整数与IEEE754双精度均显式小端，不dump C结构体。
 
