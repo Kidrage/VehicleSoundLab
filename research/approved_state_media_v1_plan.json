@@ -1,0 +1,48 @@
+{
+  "schema": "vsl.approved-state-media-plan/1",
+  "approval_date_local": "2026-11-13",
+  "approval_evidence": "User reply to request_user_input_async call_6cb2b5b2118d4390b64c999e3aae343d: 批准 F1＋F2＋F3",
+  "scope": "Download original encoded audio/video and inspect usability; approval is not acceptance of a timbre or proof of stock exhaust, idle temperature, RPM, load or AV alignment",
+  "sources": [
+    {
+      "id": "F1",
+      "video_id": "XZCOsnPYre0",
+      "url": "https://www.youtube.com/watch?v=XZCOsnPYre0",
+      "title": "The Incredible Idle Sound Of The Lamborghini Huracan",
+      "channel": "[Culture Snap]",
+      "duration": "1:20",
+      "approved": true,
+      "role": "Independent idle candidate; inspect continuous running, microphone movement, edits and perspective before measuring"
+    },
+    {
+      "id": "F2",
+      "video_id": "cMuqS9x-Z1Y",
+      "url": "https://www.youtube.com/watch?v=cMuqS9x-Z1Y",
+      "title": "Lamborghini Huracan LP-610 Idling.",
+      "channel": "MillenialDoc",
+      "duration": "0:15",
+      "approved": true,
+      "role": "Separate LP-610 idle candidate; short duration and different car cannot establish one shared Performante or Tecnica preset"
+    },
+    {
+      "id": "F3",
+      "video_id": "QUWTsk9crlo",
+      "url": "https://www.youtube.com/watch?v=QUWTsk9crlo",
+      "title": "Huracan Tecnica (640hp) 0–280 km/h acceleration",
+      "channel": "Automann-TV",
+      "duration": "4:39",
+      "approved": true,
+      "role": "Separate Tecnica acceleration candidate; inspect readable tachometer, gears, fixed-gear spans and recording perspective"
+    }
+  ],
+  "retrieval": {
+    "format": "bestvideo[height<=1080]+bestaudio/best[height<=1080]",
+    "audio_filtering": false,
+    "normalization": false,
+    "browser_cookies_or_account": false,
+    "preserve_failed_attempts": true
+  },
+  "runtime_or_model_change": false,
+  "moving35": "held_unchanged",
+  "A_low_listening": "original_question_still_pending"
+}

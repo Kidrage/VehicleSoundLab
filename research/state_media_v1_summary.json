@@ -1,0 +1,588 @@
+{
+  "schema": "vsl.state-media-publication/1",
+  "result": "approved_F1_F2_F3_acquired_recording_and_state_evidence_only",
+  "sources": {
+    "tools/inspect_F3_state_frames_v1.py": "a0ee8d8a3523472036edb2253ed7b5d7a9554d637cbdb13420c97c3f112c0eb0",
+    "research/F补充素材可用性V1.md": "fd624d9fc97923b0b4c88072b70ce636a93b51ef1df2e50b46bae4b2176f9707",
+    "handoff/算法说明.md": "0769ed32ac8b70c03b1939822d13d451aa01694441f2b058d6b45139bdc4f87a",
+    "research/怠速与加速完成度V1.md": "b415c69abdae9a38cdf1d2efc88f3180f9a48341036f2225e639d8c073ddff84",
+    "handoff/开发留痕.md": "c7fccb1192819838de64a7a64b2b9b6fc9583211bcdcf3613bc71231fdba1585",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "tools/state_media_v1/measure.py": "b53736389ff0fd84917bd443d3475a275ccc19fdb79cabbf8ee226944b3a5013",
+    "tools/state_media_v1/__init__.py": "7836fa906219c294f1cd0973c331c1f4742c5b55c5c08aced1ea5c7f3eb7e20f",
+    "handoff/研究续接.md": "2241b4706ad4f155fc36eaafc8ae80bb444b6b6a1a33cd715a0f875308d69ebc",
+    "research/approved_state_media_v1_plan.json": "ecb90320ab8fe26b3750aa804e22b55eef499ba0f8dcf599ec57d07095367771",
+    "tools/inspect_approved_state_media_v1.py": "74de40e9805ee7dcd27b1bc6daf3977e8e01caa56799c3a1b55717e5bea27eab",
+    "tools/state_media_v1/frames.py": "08f66ed66381e7c98e904fd97095303c95405d10054e8450a9621594d6c3020a",
+    "tools/fetch_approved_state_media_v1.py": "6ed62fd522fc4d97dbbfad5aeea17f8335209fe769bac701ad82543977033326",
+    "AGENTS.md": "0b44311169399ff9047e490b799998a55127662b8c7de5961315acdd72c1cb47",
+    "research/state_media_v1_visual_review.json": "9d1b5efcf39181db42be138ef983edcfa49e51ee207eae5c4e138d20cfc54718",
+    "tools/package_state_media_v1.py": "aa11efc7c5cf6a83caceaac87164d80aa31c3bf557b082037779f7c32c15fca5"
+  },
+  "reports": {
+    "F1_fetch1": {
+      "path": "references/raw/state_media_v1/F1_fetch1/report.json",
+      "sha256": "7dac85849fe019d4d4056a6da27951d2f60beb903b3af5ac20a3684051d343cc",
+      "result": "retrieval_failed",
+      "executed_fetch_sha256": "a4c1031d43084ce7e0ec0230634bf9e6bf09483d276f4302a60b55fca33c7f67"
+    },
+    "F1_fetch2": {
+      "path": "references/raw/state_media_v1/F1_fetch2/report.json",
+      "sha256": "8ae2424b4d7e4cc8d9e8e30ce138b91ec2374e08876fa4add377c6fbc20928d1",
+      "result": "downloaded_for_usability_inspection",
+      "executed_fetch_sha256": "6ed62fd522fc4d97dbbfad5aeea17f8335209fe769bac701ad82543977033326"
+    },
+    "F2_fetch1": {
+      "path": "references/raw/state_media_v1/F2_fetch1/report.json",
+      "sha256": "52a6587f3d9fbb5d92a3eab591465fb976ab30289a16ea126cb15e76fc9d2694",
+      "result": "downloaded_for_usability_inspection",
+      "executed_fetch_sha256": "a4c1031d43084ce7e0ec0230634bf9e6bf09483d276f4302a60b55fca33c7f67"
+    },
+    "F3_fetch1": {
+      "path": "references/raw/state_media_v1/F3_fetch1/report.json",
+      "sha256": "363e0753b3bd8efb7b1ba2c8447d6308090be2b454c2db934b9aeac02379c9f3",
+      "result": "retrieval_failed",
+      "executed_fetch_sha256": "a4c1031d43084ce7e0ec0230634bf9e6bf09483d276f4302a60b55fca33c7f67"
+    },
+    "F3_fetch2": {
+      "path": "references/raw/state_media_v1/F3_fetch2/report.json",
+      "sha256": "1f2571d77f792e6f9ed4bfb35750f1319d1d4e80274cda1582c7b26cb8043846",
+      "result": "downloaded_for_usability_inspection",
+      "executed_fetch_sha256": "6ed62fd522fc4d97dbbfad5aeea17f8335209fe769bac701ad82543977033326"
+    },
+    "F1_inspect1": {
+      "path": "references/analysis/state_media_v1/F1_inspect1/report.json",
+      "sha256": "78559b082868070ef56fddebd443a30267d3423770640b4ab1e7005451bef499",
+      "result": "raw_recording_measured_and_coarse_video_prepared"
+    },
+    "F2_inspect1": {
+      "path": "references/analysis/state_media_v1/F2_inspect1/report.json",
+      "sha256": "eb29a7eb06309b2df24dbee7495db01dd66af390873e2d95e58a20f4a785ff0f",
+      "result": "raw_recording_measured_and_coarse_video_prepared"
+    },
+    "F3_inspect1": {
+      "path": "references/analysis/state_media_v1/F3_inspect1/report.json",
+      "sha256": "d2a1739883ec91b52df68a8297e6162a60dcbff1753dd5879d330826c872370a",
+      "result": "raw_recording_measured_and_coarse_video_prepared"
+    },
+    "F3_context1": {
+      "path": "references/analysis/state_media_v1/F3_context1/report.json",
+      "sha256": "50dc3c7b8295a341707f66bfcc9099e5edd6149ac4923428a70fe24099d16ed8",
+      "result": "original_PTS_state_frames_prepared"
+    }
+  },
+  "approval": "User reply to request_user_input_async call_6cb2b5b2118d4390b64c999e3aae343d: 批准 F1＋F2＋F3",
+  "total_approved_source_identities": 7,
+  "successful_downloads": 3,
+  "failed_attempts_preserved": 2,
+  "coarse_frames": 44,
+  "detailed_original_PTS_frames": 65,
+  "visual_review_completed": true,
+  "audio_listening_completed": false,
+  "decoded_recordings": {
+    "F1": {
+      "frames": 3858600,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_seconds": 80.3875,
+      "rms_dbfs_LR": [
+        -12.043217631704739,
+        -12.341720653601438
+      ],
+      "decoded_sample_peak_LR": [
+        0.9514939188957214,
+        0.9606296420097351
+      ],
+      "decoded_samples_above_full_scale_LR": [
+        0,
+        0
+      ],
+      "recording_LR_correlation": 0.9350407782477127,
+      "bands_Hz": [
+        [
+          20,
+          80
+        ],
+        [
+          80,
+          250
+        ],
+        [
+          250,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          6000
+        ],
+        [
+          6000,
+          14000
+        ],
+        [
+          14000,
+          20000
+        ]
+      ],
+      "mean_recording_band_dbfs_LR": [
+        [
+          -25.37525444868145,
+          -12.402155127886632,
+          -27.072546840220394,
+          -33.717806847408326,
+          -43.00681018575192,
+          -43.50736324426421,
+          -55.1322420905364
+        ],
+        [
+          -26.01421926256753,
+          -12.692935501194727,
+          -27.074822264690667,
+          -33.50713693060513,
+          -48.042585172068755,
+          -46.0018762964236,
+          -55.222908124752394
+        ]
+      ],
+      "spectral_window_seconds": 1,
+      "spectral_hop_seconds": 0.5,
+      "limits": [
+        "Mixed recording powers, not engine/intake/exhaust/noise source budgets",
+        "Spectral peaks are not RPM measurements or Sound DNA extraction",
+        "Decoded samples above full scale do not prove original ADC clipping",
+        "No denoising, gain normalization, resampling, pitch warp or listening acceptance"
+      ]
+    },
+    "F2": {
+      "frames": 725578,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_seconds": 15.116208333333333,
+      "rms_dbfs_LR": [
+        -21.689151390460818,
+        -21.689153988944764
+      ],
+      "decoded_sample_peak_LR": [
+        0.4248183071613312,
+        0.4248183071613312
+      ],
+      "decoded_samples_above_full_scale_LR": [
+        0,
+        0
+      ],
+      "recording_LR_correlation": 0.9999958050402711,
+      "bands_Hz": [
+        [
+          20,
+          80
+        ],
+        [
+          80,
+          250
+        ],
+        [
+          250,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          6000
+        ],
+        [
+          6000,
+          14000
+        ],
+        [
+          14000,
+          20000
+        ]
+      ],
+      "mean_recording_band_dbfs_LR": [
+        [
+          -26.27500524964987,
+          -24.148892666041817,
+          -31.69985162136974,
+          -40.92979055790192,
+          -47.23506764068872,
+          -53.76913128009236,
+          -66.92197205034181
+        ],
+        [
+          -26.27500526137972,
+          -24.14889265180445,
+          -31.699851634972486,
+          -40.929790556892044,
+          -47.23523010853894,
+          -53.77177343811218,
+          -66.9224537813156
+        ]
+      ],
+      "spectral_window_seconds": 1,
+      "spectral_hop_seconds": 0.5,
+      "limits": [
+        "Mixed recording powers, not engine/intake/exhaust/noise source budgets",
+        "Spectral peaks are not RPM measurements or Sound DNA extraction",
+        "Decoded samples above full scale do not prove original ADC clipping",
+        "No denoising, gain normalization, resampling, pitch warp or listening acceptance"
+      ]
+    },
+    "F3": {
+      "frames": 13376923,
+      "sample_rate": 48000,
+      "channels": 2,
+      "duration_seconds": 278.68589583333335,
+      "rms_dbfs_LR": [
+        -12.51235318910392,
+        -13.169433153887775
+      ],
+      "decoded_sample_peak_LR": [
+        1.1001160144805908,
+        1.0589933395385742
+      ],
+      "decoded_samples_above_full_scale_LR": [
+        3418,
+        373
+      ],
+      "recording_LR_correlation": 0.9657981256258251,
+      "bands_Hz": [
+        [
+          20,
+          80
+        ],
+        [
+          80,
+          250
+        ],
+        [
+          250,
+          1200
+        ],
+        [
+          1200,
+          3000
+        ],
+        [
+          3000,
+          6000
+        ],
+        [
+          6000,
+          14000
+        ],
+        [
+          14000,
+          20000
+        ]
+      ],
+      "mean_recording_band_dbfs_LR": [
+        [
+          -22.720549693719523,
+          -16.19321941344339,
+          -15.959981974166917,
+          -30.09903402283792,
+          -39.331083387024144,
+          -43.65294516546433,
+          -70.83819890721298
+        ],
+        [
+          -22.787144596532713,
+          -16.944425956823057,
+          -16.656634425486708,
+          -31.17915270809408,
+          -40.13710438909783,
+          -47.01279669884846,
+          -76.76929425900528
+        ]
+      ],
+      "spectral_window_seconds": 1,
+      "spectral_hop_seconds": 0.5,
+      "limits": [
+        "Mixed recording powers, not engine/intake/exhaust/noise source budgets",
+        "Spectral peaks are not RPM measurements or Sound DNA extraction",
+        "Decoded samples above full scale do not prove original ADC clipping",
+        "No denoising, gain normalization, resampling, pitch warp or listening acceptance"
+      ]
+    }
+  },
+  "visual_review": {
+    "schema": "vsl.state-media-visual-review/1",
+    "review_date_local": "2026-11-13",
+    "approval": "User explicitly approved F1＋F2＋F3 in call_6cb2b5b2118d4390b64c999e3aae343d",
+    "visual_review_completed": true,
+    "audio_listening_completed": false,
+    "sources": {
+      "F1": {
+        "evidence": "references/analysis/state_media_v1/F1_inspect1/context.jpg",
+        "observations": "Multiple parked sports cars, people, street background and a continuously changing camera viewpoint; later frames approach a yellow Huracan",
+        "decision": "Do not treat the complete recording as a clean, fixed-microphone single-engine idle reference",
+        "trim_stock_exhaust_temperature_RPM": "not established"
+      },
+      "F2": {
+        "evidence": "references/analysis/state_media_v1/F2_inspect1/context.jpg",
+        "observations": "Camera approaches the rear of a grey Huracan and moves close to the exhaust outlets, then changes its framing",
+        "decision": "LP-610 near-tailpipe idle candidate only; evaluate local intervals separately, with camera movement still a confound",
+        "near_tailpipe_candidate_audio_seconds": [
+          6,
+          12
+        ],
+        "whole_recording_LR_correlation": 0.9999958050402711,
+        "stereo_limit": "The decoded channels are nearly identical; this source cannot establish realistic stereo width",
+        "trim_basis": "LP-610 is stated by the uploader title; modifications, warm idle and RPM are not independently established"
+      },
+      "F3": {
+        "coarse_evidence": "references/analysis/state_media_v1/F3_inspect1/context.jpg",
+        "detail_evidence": "references/analysis/state_media_v1/F3_context1/report.json",
+        "stationary": {
+          "sampled_video_seconds": [
+            40,
+            45,
+            50,
+            55,
+            60,
+            65
+          ],
+          "checked_native_frame": "references/analysis/state_media_v1/F3_context1/cabin_stationary_candidate/frame_004.jpg",
+          "observations": "At 55 seconds the native dashboard shows 0 km/h and STRADA, with tachometer needle near the 1 x 1000 RPM mark; central gear display is obstructed by an action camera",
+          "limits": "Coarse visual RPM reading only; continuous idle, warm state, exact RPM and audio alignment are not established"
+        },
+        "motorway1": {
+          "sampled_visible_gear_speed": [
+            [
+              153,
+              2,
+              89
+            ],
+            [
+              154,
+              2,
+              118
+            ],
+            [
+              155,
+              3,
+              134
+            ],
+            [
+              156,
+              3,
+              154
+            ],
+            [
+              157,
+              4,
+              172
+            ],
+            [
+              158,
+              4,
+              188
+            ],
+            [
+              159,
+              5,
+              200
+            ],
+            [
+              160,
+              5,
+              212
+            ],
+            [
+              161,
+              5,
+              224
+            ],
+            [
+              162,
+              5,
+              234
+            ],
+            [
+              163,
+              6,
+              242
+            ],
+            [
+              164,
+              6,
+              250
+            ],
+            [
+              165,
+              6,
+              248
+            ],
+            [
+              166,
+              7,
+              239
+            ],
+            [
+              167,
+              7,
+              229
+            ]
+          ],
+          "columns": [
+            "video_PTS_seconds",
+            "displayed_gear",
+            "displayed_speed_km_h"
+          ],
+          "fifth_gear_ascent_candidate_video_seconds": [
+            159,
+            162
+          ]
+        },
+        "motorway2": {
+          "sampled_visible_gear_speed": [
+            [
+              184,
+              2,
+              84
+            ],
+            [
+              185,
+              2,
+              112
+            ],
+            [
+              186,
+              3,
+              134
+            ],
+            [
+              187,
+              3,
+              154
+            ],
+            [
+              188,
+              4,
+              170
+            ],
+            [
+              189,
+              4,
+              186
+            ],
+            [
+              190,
+              5,
+              199
+            ],
+            [
+              191,
+              5,
+              210
+            ],
+            [
+              192,
+              5,
+              222
+            ],
+            [
+              193,
+              5,
+              233
+            ],
+            [
+              194,
+              6,
+              241
+            ],
+            [
+              195,
+              6,
+              249
+            ],
+            [
+              196,
+              6,
+              256
+            ],
+            [
+              197,
+              6,
+              263
+            ],
+            [
+              198,
+              6,
+              269
+            ],
+            [
+              199,
+              6,
+              276
+            ],
+            [
+              200,
+              6,
+              282
+            ],
+            [
+              201,
+              7,
+              286
+            ]
+          ],
+          "columns": [
+            "video_PTS_seconds",
+            "displayed_gear",
+            "displayed_speed_km_h"
+          ],
+          "fifth_gear_ascent_candidate_video_seconds": [
+            190,
+            193
+          ],
+          "sixth_gear_ascent_candidate_video_seconds": [
+            194,
+            200
+          ]
+        },
+        "decision": "Useful cabin state/shift and repeated fixed-gear-ascent candidates; exterior clips remain separate from cabin audio",
+        "limits": [
+          "Sampled display observations, not exact shift times or verified continuous fixed-gear intervals",
+          "No pedal/torque/fueling or synchronized precise RPM telemetry",
+          "Editorial instrument overlay may be delayed relative to camera or sound",
+          "Separate-looking takes have not been checked for duplicated audio",
+          "No new DNA parameters or runtime mapping inferred from these pictures alone"
+        ]
+      }
+    },
+    "next_steps": [
+      "Qualify the correlated-observation phase metric on the original failed dense positive, original17, full33 and individual14kHz gates, then original E case",
+      "For F2 inspect local near-tailpipe audio; retain camera-distance uncertainty and separate LP-610 identity",
+      "For F3 establish continuous state boundaries and audio/instrument timing before precise RPM-based fitting",
+      "Use the same Sound DNA engine with separate car/perspective/state profiles; do not stretch the moving35 sound into an accepted idle"
+    ],
+    "A_low_listening": "original question remains pending",
+    "moving35": "held unchanged",
+    "idle_acceleration_complete": false
+  },
+  "raw_files_sha256": "654e0be2dea090bb242b589dffadff6f3410f286cfb5551d1041b1470b2e447d",
+  "native_rate_decoding": true,
+  "normalization": false,
+  "denoising": false,
+  "resampling": false,
+  "new_DNA_profiles": 0,
+  "runtime_changed": false,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "existing_Ctests_rerun": false,
+  "moving35": "held_unchanged",
+  "idle_acceleration_complete": false,
+  "vehicle_timbre_accepted": false,
+  "new_phase_estimator_qualified": false,
+  "next_step": "Preserve original phase qualification gates; confirm continuous F3 state boundaries/AV timing and local F2 usability before fitting separate car/perspective/state parameters",
+  "goal_complete": false
+}

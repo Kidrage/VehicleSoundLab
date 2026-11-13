@@ -1,0 +1,62 @@
+{
+  "schema": "vsl.state-media-visual-review/1",
+  "review_date_local": "2026-11-13",
+  "approval": "User explicitly approved F1＋F2＋F3 in call_6cb2b5b2118d4390b64c999e3aae343d",
+  "visual_review_completed": true,
+  "audio_listening_completed": false,
+  "sources": {
+    "F1": {
+      "evidence": "references/analysis/state_media_v1/F1_inspect1/context.jpg",
+      "observations": "Multiple parked sports cars, people, street background and a continuously changing camera viewpoint; later frames approach a yellow Huracan",
+      "decision": "Do not treat the complete recording as a clean, fixed-microphone single-engine idle reference",
+      "trim_stock_exhaust_temperature_RPM": "not established"
+    },
+    "F2": {
+      "evidence": "references/analysis/state_media_v1/F2_inspect1/context.jpg",
+      "observations": "Camera approaches the rear of a grey Huracan and moves close to the exhaust outlets, then changes its framing",
+      "decision": "LP-610 near-tailpipe idle candidate only; evaluate local intervals separately, with camera movement still a confound",
+      "near_tailpipe_candidate_audio_seconds": [6, 12],
+      "whole_recording_LR_correlation": 0.9999958050402711,
+      "stereo_limit": "The decoded channels are nearly identical; this source cannot establish realistic stereo width",
+      "trim_basis": "LP-610 is stated by the uploader title; modifications, warm idle and RPM are not independently established"
+    },
+    "F3": {
+      "coarse_evidence": "references/analysis/state_media_v1/F3_inspect1/context.jpg",
+      "detail_evidence": "references/analysis/state_media_v1/F3_context1/report.json",
+      "stationary": {
+        "sampled_video_seconds": [40, 45, 50, 55, 60, 65],
+        "checked_native_frame": "references/analysis/state_media_v1/F3_context1/cabin_stationary_candidate/frame_004.jpg",
+        "observations": "At 55 seconds the native dashboard shows 0 km/h and STRADA, with tachometer needle near the 1 x 1000 RPM mark; central gear display is obstructed by an action camera",
+        "limits": "Coarse visual RPM reading only; continuous idle, warm state, exact RPM and audio alignment are not established"
+      },
+      "motorway1": {
+        "sampled_visible_gear_speed": [[153, 2, 89], [154, 2, 118], [155, 3, 134], [156, 3, 154], [157, 4, 172], [158, 4, 188], [159, 5, 200], [160, 5, 212], [161, 5, 224], [162, 5, 234], [163, 6, 242], [164, 6, 250], [165, 6, 248], [166, 7, 239], [167, 7, 229]],
+        "columns": ["video_PTS_seconds", "displayed_gear", "displayed_speed_km_h"],
+        "fifth_gear_ascent_candidate_video_seconds": [159, 162]
+      },
+      "motorway2": {
+        "sampled_visible_gear_speed": [[184, 2, 84], [185, 2, 112], [186, 3, 134], [187, 3, 154], [188, 4, 170], [189, 4, 186], [190, 5, 199], [191, 5, 210], [192, 5, 222], [193, 5, 233], [194, 6, 241], [195, 6, 249], [196, 6, 256], [197, 6, 263], [198, 6, 269], [199, 6, 276], [200, 6, 282], [201, 7, 286]],
+        "columns": ["video_PTS_seconds", "displayed_gear", "displayed_speed_km_h"],
+        "fifth_gear_ascent_candidate_video_seconds": [190, 193],
+        "sixth_gear_ascent_candidate_video_seconds": [194, 200]
+      },
+      "decision": "Useful cabin state/shift and repeated fixed-gear-ascent candidates; exterior clips remain separate from cabin audio",
+      "limits": [
+        "Sampled display observations, not exact shift times or verified continuous fixed-gear intervals",
+        "No pedal/torque/fueling or synchronized precise RPM telemetry",
+        "Editorial instrument overlay may be delayed relative to camera or sound",
+        "Separate-looking takes have not been checked for duplicated audio",
+        "No new DNA parameters or runtime mapping inferred from these pictures alone"
+      ]
+    }
+  },
+  "next_steps": [
+    "Qualify the correlated-observation phase metric on the original failed dense positive, original17, full33 and individual14kHz gates, then original E case",
+    "For F2 inspect local near-tailpipe audio; retain camera-distance uncertainty and separate LP-610 identity",
+    "For F3 establish continuous state boundaries and audio/instrument timing before precise RPM-based fitting",
+    "Use the same Sound DNA engine with separate car/perspective/state profiles; do not stretch the moving35 sound into an accepted idle"
+  ],
+  "A_low_listening": "original question remains pending",
+  "moving35": "held unchanged",
+  "idle_acceleration_complete": false
+}
