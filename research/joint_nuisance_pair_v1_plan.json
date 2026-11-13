@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.joint-nuisance-pair-plan/1",
+  "parent": "bounded_envelope_pair_v1/pair1",
+  "purpose": "Construct actual feasible joint constant-carrier-phase and slow-amplitude compensation for the same fixed common-phase pairs; not a global minimum proof or a phase estimator",
+  "variables": "Original36a+36b+36x16relative-envelope coefficients,648 total; all84 common-phase coefficients stay exactly fixed at each parent pair",
+  "objective": "Raw-sample squared difference from original observed-initial model waveform; no recorded audio, true phase, heldout or target-generated initialization",
+  "initialization": "Exact original-bound envelope-compensated parent pair, without replacing any parameter by truth",
+  "iteration": "Original20-step trust budget, initial radius0.1 maximum2 minimum1e-8 acceptance0.1; scales fixed from initial raw Jacobian column norms, capped by original coefficient/envelope half-widths",
+  "subproblems": "All648 raw-Jacobian columns, thin-QR lifted convex QP, original coefficient box and trust box. Original full KKT plus raw gradient certificate; existing finite active-set polish only on a failed original certificate, retain every failed attempt",
+  "controls": [
+    "Independent direct-summation prediction and central-difference derivatives before the actual joint fits",
+    "Known orthogonal linear interior and coefficient-bound controls, plus known bilinear amplitude/phase/envelope control; original1e-7 parameter gate",
+    "After fitting independently reconstruct every full certificate, accepted/rejected candidate, radius and raw cost without resolving the large QPs",
+    "Verify all732 original parameter bounds, positive envelopes, fixed84 common-phase coordinates and monotonic phase; all648 nuisance columns remain",
+    "No carrier deletion, ridge, singular-value cutoff, strength/window/grid/degree/iteration sweep or global nonlinear convergence claim",
+    "Evaluate fixed-pair fresh-independent-white-noise distances only after pair construction; no original-data inference or real-coloured-noise calibration",
+    "Keep failed dense36positive/all17/full33/individual14kHz/original E gates before real phase-extracted models",
+    "540C-H/voices/moving35/one-driver/stereo7.1.4 unchanged; no unchanged55CTest repeat; approvedF1F2F3 already acquired; originalA-low listening pending"
+  ]
+}

@@ -46,6 +46,39 @@
       "video": "references/raw/E_GIceP3oLuDQ.mkv",
       "video_sha256": "75e5d669f879b7f27c5a05d8a4bad8a60f4d74c76bc0d0ebfacbb75d2d50acbf",
       "alignment": "Same muxed media timeline; no independently measured audiovisual offset. Display latency remains unknown."
+    },
+    "F1": {
+      "url": "https://www.youtube.com/watch?v=XZCOsnPYre0",
+      "approval": "User reply to request_user_input_async call_6cb2b5b2118d4390b64c999e3aae343d: 批准 F1＋F2＋F3",
+      "raw": "references/raw/state_media_v1/F1_fetch2/F1_XZCOsnPYre0.mkv",
+      "raw_sha256": "0759cdbc4f75ffc7da7e52ffea0c3494a5f0153687776b53c1a69e714d13e22b",
+      "master": "references/analysis/state_media_v1/F1_inspect1/native_reference.wav",
+      "master_sha256": "1ae81897db09d89b97c64bff584c9b6deb1324c2d3d4f7ff80c206d88f16f7b7",
+      "video": "references/raw/state_media_v1/F1_fetch2/F1_XZCOsnPYre0.mkv",
+      "video_sha256": "0759cdbc4f75ffc7da7e52ffea0c3494a5f0153687776b53c1a69e714d13e22b",
+      "alignment": "Same muxed media timeline; precise audio/video/instrument latency not calibrated"
+    },
+    "F2": {
+      "url": "https://www.youtube.com/watch?v=cMuqS9x-Z1Y",
+      "approval": "User reply to request_user_input_async call_6cb2b5b2118d4390b64c999e3aae343d: 批准 F1＋F2＋F3",
+      "raw": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "raw_sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f",
+      "master": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "master_sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049",
+      "video": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "video_sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f",
+      "alignment": "Same muxed media timeline; precise audio/video/instrument latency not calibrated"
+    },
+    "F3": {
+      "url": "https://www.youtube.com/watch?v=QUWTsk9crlo",
+      "approval": "User reply to request_user_input_async call_6cb2b5b2118d4390b64c999e3aae343d: 批准 F1＋F2＋F3",
+      "raw": "references/raw/state_media_v1/F3_fetch2/F3_QUWTsk9crlo.mkv",
+      "raw_sha256": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "master": "references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+      "master_sha256": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+      "video": "references/raw/state_media_v1/F3_fetch2/F3_QUWTsk9crlo.mkv",
+      "video_sha256": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "alignment": "Same muxed media timeline; precise audio/video/instrument latency not calibrated"
     }
   },
   "segments": {
@@ -471,6 +504,165 @@
         "engine/background/recording-transfer separation"
       ],
       "existing_audition": null
+    },
+    "F1_context": {
+      "source": "F1",
+      "seconds": [
+        0.0,
+        80.3875
+      ],
+      "perspective": "multi-car street / moving microphone",
+      "visual": "多车、街景与机位移动；用于判断污染和发动机声的可辨程度。",
+      "audio_interpretation": "Complete recording not individually rated in the short-clip feedback",
+      "allowed_uses": [
+        "source_usability_review"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F1_context.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
+    },
+    "F2_context": {
+      "source": "F2",
+      "seconds": [
+        0.0,
+        15.116208333333333
+      ],
+      "perspective": "near-tailpipe LP-610",
+      "visual": "LP-610独立车型；近单声道，机位在移动。",
+      "audio_interpretation": "Complete recording not individually rated in the short-clip feedback",
+      "allowed_uses": [
+        "source_usability_review"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F2_context.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
+    },
+    "F2_tailpipe": {
+      "source": "F2",
+      "seconds": [
+        6.0,
+        12.0
+      ],
+      "perspective": "near-tailpipe LP-610",
+      "visual": "按已核对画面选取；准确RPM、冷热与改装情况未确认。",
+      "audio_interpretation": "Human reports other short clips reasonably clear with some wind; usable for source analysis, not clean physical source separation or timbre acceptance",
+      "allowed_uses": [
+        "source_usability_review",
+        "recording_power",
+        "fixed_window_spectral_observation"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F2_tailpipe.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
+    },
+    "F3_stopped": {
+      "source": "F3",
+      "seconds": [
+        54.0,
+        56.0
+      ],
+      "perspective": "cabin Tecnica candidate",
+      "visual": "55秒画面显示0km/h、STRADA；区间连续怠速和音画时差未确认。",
+      "audio_interpretation": "Rejected for idle DNA extraction: speech clearly masks engine in54..56s; keep exact source clip as failed evidence",
+      "allowed_uses": [
+        "source_usability_review"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F3_stopped.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ],
+      "excluded_from_DNA_reason": "User heard speech masking engine in54..56s"
+    },
+    "F3_fifth1": {
+      "source": "F3",
+      "seconds": [
+        159.0,
+        162.0
+      ],
+      "perspective": "cabin Tecnica candidate",
+      "visual": "逐秒画面为200→234km/h；不是实测油门或准确转速轨迹。",
+      "audio_interpretation": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+      "allowed_uses": [
+        "source_usability_review",
+        "recording_power",
+        "fixed_window_spectral_observation",
+        "state_context"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F3_fifth1.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
+    },
+    "F3_fifth2": {
+      "source": "F3",
+      "seconds": [
+        190.0,
+        193.0
+      ],
+      "perspective": "cabin Tecnica candidate",
+      "visual": "逐秒画面为199→233km/h；与第一轮未建立直接平移复制证据，独立录音仍未证明。",
+      "audio_interpretation": "Human reports other short clips reasonably clear with some wind; usable for source analysis, independent take not established",
+      "allowed_uses": [
+        "source_usability_review",
+        "recording_power",
+        "fixed_window_spectral_observation",
+        "state_context"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F3_fifth2.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
+    },
+    "F3_sixth": {
+      "source": "F3",
+      "seconds": [
+        194.0,
+        200.0
+      ],
+      "perspective": "cabin Tecnica candidate",
+      "visual": "逐秒画面为241→282km/h；连续挡位边界与仪表延迟未标定。",
+      "audio_interpretation": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+      "allowed_uses": [
+        "source_usability_review",
+        "recording_power",
+        "fixed_window_spectral_observation",
+        "state_context"
+      ],
+      "existing_audition": "references/analysis/F_state_audition_v1/review1/F3_sixth.wav",
+      "not_established": [
+        "exact RPM / warm idle / stock exhaust",
+        "precise AV or instrument timing",
+        "pedal / torque / fueling / calibrated load",
+        "physical noise-source separation",
+        "accepted synthesis timbre / phase extractor qualification"
+      ]
     }
   },
   "superseded_for_calibration": [

@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.F-state-audition-review/1",
+  "date_local": "2026-11-13",
+  "page": "http://127.0.0.1:8789/references/analysis/F_state_audition_v1/review1/index.html",
+  "scope": "Source usability only: clear engine detail versus music/speech/wind/moving-microphone contamination, not synthesized timbre acceptance",
+  "human_listening_result": "received",
+  "human_reply_verbatim": "F3的驻车候选这个音频有明显的说话声，覆盖了车声。其他短音频貌似还挺清晰，只有一些风噪声影响不大",
+  "reply_evidence": "Human reply to call_eba3781381604e9c9264bfb40455829c",
+  "clip_decisions": {
+    "F3_stopped": "Rejected for idle DNA extraction: speech clearly masks engine in54..56s; keep exact source clip as failed evidence",
+    "F2_tailpipe": "Human reports other short clips reasonably clear with some wind; usable for source analysis, not clean physical source separation or timbre acceptance",
+    "F3_fifth1": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+    "F3_fifth2": "Human reports other short clips reasonably clear with some wind; usable for source analysis, independent take not established",
+    "F3_sixth": "Human reports other short clips reasonably clear with some wind; usable for source analysis, continuous RPM/load/AV not established",
+    "F1_context_and_F2_whole": "Not separately rated in this reply; do not extend the short-clip assessment to the complete recordings"
+  },
+  "question_asked_once": true,
+  "audio_quality_accepted": false,
+  "short_clip_source_usability_partially_accepted": true,
+  "F_download_approval": "already_granted_and_media_frozen",
+  "A_low_listening": "different_original_question_pending_do_not_repeat",
+  "moving35": "held_unchanged"
+}

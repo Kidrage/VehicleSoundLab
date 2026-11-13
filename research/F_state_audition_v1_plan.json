@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.F-state-audition-plan/1",
+  "approval": "F1+F2+F3 explicitly approved by human in call_6cb2b5b2118d4390b64c999e3aae343d; existing frozen native masters only, no redownload",
+  "purpose": "Human usability review of the recordings, not synthesis or timbre acceptance",
+  "selection_basis": "Existing visual review and fixed F3 identity intervals; one new2s context centered on the previously inspected55s stopped frame, not a verified continuous idle boundary",
+  "clips": [
+    {"id":"F1_context", "source":"F1", "seconds":null, "title":"F1 · 整段场景原声", "note":"多车、街景与机位移动；用于判断污染和发动机声的可辨程度。"},
+    {"id":"F2_context", "source":"F2", "seconds":null, "title":"F2 · 整段车尾原声", "note":"LP-610独立车型；近单声道，机位在移动。"},
+    {"id":"F2_tailpipe", "source":"F2", "seconds":[6,12], "title":"F2 · 尾排怠速候选 6–12秒", "note":"按已核对画面选取；准确RPM、冷热与改装情况未确认。"},
+    {"id":"F3_stopped", "source":"F3", "seconds":[54,56], "title":"F3 · 驻车候选 54–56秒", "note":"55秒画面显示0km/h、STRADA；区间连续怠速和音画时差未确认。"},
+    {"id":"F3_fifth1", "source":"F3", "seconds":[159,162], "title":"F3 · 第一轮5挡升速候选 159–162秒", "note":"逐秒画面为200→234km/h；不是实测油门或准确转速轨迹。"},
+    {"id":"F3_fifth2", "source":"F3", "seconds":[190,193], "title":"F3 · 第二轮5挡升速候选 190–193秒", "note":"逐秒画面为199→233km/h；与第一轮未建立直接平移复制证据，独立录音仍未证明。"},
+    {"id":"F3_sixth", "source":"F3", "seconds":[194,200], "title":"F3 · 6挡升速候选 194–200秒", "note":"逐秒画面为241→282km/h；连续挡位边界与仪表延迟未标定。"}
+  ],
+  "audio": "Exact unchanged48kHz stereo FLOAT sample slices; no normalization, filtering, fade, limiting, denoise or resample. Player volume0.5 common to every clip; never per-clip loudness compensation",
+  "review": "Ask separately about music/speech/wind/mic-movement contamination and useful mechanical detail. Do not repeat the pending original A-low listening question",
+  "synthesis_changed": false,
+  "C_changed": false
+}
