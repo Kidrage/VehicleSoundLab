@@ -1,0 +1,54 @@
+{
+  "schema": "vsl.idle-phase-transfer-freeze/1",
+  "result": "sustained_coordinate_distribution_drift_observed",
+  "parent_commit": "7d971871c243dcbd75cc4151b51b2be7d3b5739e",
+  "audit": {
+    "result": "all60_native_blocks_and_both_recorded_phase_portions_verified",
+    "errors": {
+      "mean": 5.022648963404208e-13,
+      "second": 2.255973186038318e-12,
+      "covariance": 1.2255751968837103e-12,
+      "quantiles": 2.3446133923243906e-11,
+      "circular": 9.327115468860114e-12,
+      "resultant": 1.0613732115416497e-13,
+      "feature_mean": 1.6131681494085948e-13
+    },
+    "native_q_error": 3.1810110101559985e-12,
+    "mean1ms_error": 2.0172308268229244e-11,
+    "known": {
+      "constant": true,
+      "analytic_closed": true,
+      "analytic_detuned180s_error": 4.004885569275586e-11,
+      "rotation": true,
+      "chunks": true
+    },
+    "input_report_sha256": "cada4b71a54d7f84fde49bde5b7d642f59ac39a4ba013116a77c7a8f8a331c69",
+    "runtime_changed": false,
+    "audio_generated": false,
+    "source_phase_is_not_free_modal_phase": true,
+    "listening_accepted": false
+  },
+  "all60_native_blocks": true,
+  "seconds": 180,
+  "all180000_1msmeans": true,
+  "source_portions": 2,
+  "detuning_hz": 0.0062496198625154875,
+  "closure_period_seconds": 160.00973211152998,
+  "recorded_closure_resultants": [
+    0.9690663262327232,
+    0.9754664079127006
+  ],
+  "full180s_closure_resultant": 0.10822764996690429,
+  "all_figures_viewed": true,
+  "physical_phase_or_RPM_claim": false,
+  "audio_generated": false,
+  "listening_accepted": false,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "runtime_changed": false,
+  "old61_driving_tests_repeated": false,
+  "next": "Learn recorded closure distribution/dynamics and relationship to detail power before any sustained-coordinate correction. No arbitrary phase lock/frequency change/copied trajectory/gain compensation. Prior audiblecandidate pending; preserve commonphase/fullgoal.",
+  "manifest_sha256": "8aebf19cce4be4b2d14adf0e168dec197c1fd949483ddb1fba20a42dd8773bf8",
+  "file_count": 41,
+  "bytes": 26791952
+}
