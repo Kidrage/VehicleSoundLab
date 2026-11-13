@@ -1,0 +1,64 @@
+{
+  "schema": "vsl.idle-phase-recipe-freeze/1",
+  "result": "optional_joint_spectral_idle_candidate_pending_listening",
+  "parent_commit": "17cb705368463123e69459e8d0fddbb20dd77358",
+  "VAR2_retained_NOT_adopted_reason": "Overly oscillatory phase lag curves; not a hearing result",
+  "both_render_and_audit_reports": {
+    "1": "746fcca49f9c1d3e5b979c8c66cf6ec1959f884a2490c2242ccb285b18850046",
+    "2": "0fa5eb3bb58f0b367a45b3a11575525b4ea6629c600326579d6bfe9021ffef20"
+  },
+  "full_wave_seconds_first_seed": 180,
+  "other2seed_seconds": 24,
+  "seeds": [
+    149921,
+    277139,
+    381611
+  ],
+  "all_wave_samples_finite_unclipped": true,
+  "all_main_and_q_native_samples_independent": true,
+  "independent_audio_FIR_scope": "selected direct dot-product points, not every convolution sample",
+  "all501coordinate_lags": true,
+  "all60longrun_audio_blocks": true,
+  "review_url": "http://127.0.0.1:8789/references/analysis/idle_phase_recipe_v1/review2/index.html",
+  "review_clips": 30,
+  "shared_gain": 1.0,
+  "browser": {
+    "result": "passed",
+    "url": "http://127.0.0.1:8789/references/analysis/idle_phase_recipe_v1/review2/index.html",
+    "metadata_combinations": 30,
+    "one_player": true,
+    "muted_playback": true,
+    "seek_preserved": true,
+    "playing_switch_preserved": true,
+    "javascript_errors": [],
+    "mobile_overflow": false,
+    "scope": "Generated page only; not human listening, native C or device acceptance."
+  },
+  "first_browser_harness_failure_retained": true,
+  "all4research_plots_and_both_UI_sizes_viewed": true,
+  "original3frequencies_hz": [
+    75.03679765988039,
+    112.48553445984204,
+    187.52858173958495
+  ],
+  "new3mean_frequencies_hz": [
+    75.01073267833968,
+    112.51609901750952,
+    187.52683169584918
+  ],
+  "statistical_phase_profile": "research/idle_phase_recipe_v1_profile.json",
+  "source_phase_PCM_trajectory_replayed": false,
+  "actual_crank_RPM_or_longterm_physical_coupling_identified": false,
+  "source_check_and_long_lag_discrepancies_remain": true,
+  "unchanged_C_H": 612,
+  "unchanged_old_voices": 67,
+  "all15original_recipe_buses_samples_and_data_chunks_exact": true,
+  "float_WAV_PEAK_timestamp_only_difference": true,
+  "first_packaging_assertion_preserved": true,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "next": "Judge new offline source-derived idle candidate before C promotion; no duplicate question. Preserve accepted moving35/oldidle/takes. Continue source texture and actual one-clock driving qualification, original commonphase36/all17/full33/individual14k/originalE and full goal remain active.",
+  "manifest_sha256": "9822d4adee017cfd030c5407597254870870c080ace4a5c58305c4656593ed83",
+  "file_count": 229,
+  "bytes": 2373287337
+}
