@@ -1,0 +1,590 @@
+{
+  "schema": "vsl.F2-variation-projection-final/1",
+  "result": "fixed2_3_5_geometry_favored_in_local_disagreements_NOT_physical_common_source_or_clock",
+  "sources": {
+    "tools/line_motion_v1/variation_projection_controls.py": "15c0c045233a0534c5e705db4ff1c59bf5da3ddf779963f06418b4dfd45e8896",
+    "tools/line_motion_v1/center.py": "5ba815665ff26eb1a409911f9afe7c6ac07675ca5118acac22b7fb8c2f2071bf",
+    "tools/line_motion_v1/local_precision.py": "61915d4c7f2a7b1e6147253e486ea9ce850c0e7ea3dafc26b40e3f0b99c8154f",
+    "tools/observe_F2_variation_projection_v1.py": "7a85dc2be037d371e4fa6694f1b2e910d4b14b0a74f271ba43d99a34a8aca1a5",
+    "tools/line_motion_v1/peak_controls.py": "0d43587bb7150bc338fc91376a7f862c114656bafd1dfaf2bc9ca91896cfe04a",
+    "tools/drive_evidence_v1/sources.py": "e20f8492a405d06cf4d6c7b60c49aefb905eafac48179eec3938998625c8b839",
+    "research/F2共同变化投影V1.md": "5994932d8e687fec034580817c65b9e81596a1c8f17f61c713f41e8d81fa9d45",
+    "handoff/研究续接.md": "d93242fe3e1453a04c56e1382b606dd8ad4312ada7536094664a91be419ab190",
+    "tools/line_motion_v1/sideband_subspace_controls.py": "9d9330a40d77ccf52b47f56bb445146c95e878917eda140728ed574176c13750",
+    "tools/line_motion_v1/correspondence.py": "2c2d7ffdd888fbca45d4b40077afae2431f53c21c11c114af8066102440bad3a",
+    "tools/line_motion_v1/controls.py": "a2d992fe6a1dab22ce9913a583ff826aed97d934e39873fc7448824b7887606a",
+    "handoff/算法说明.md": "c282c84e1e2978c4326f8229dba9c27ce24de751985ccd15bd6050a57c6540a3",
+    "tools/line_motion_v1/overlap_phase_controls.py": "18d1c0ed7d84da618c428ee4b10a4ff49726981735ad4a89a1eff7d9e44c01d2",
+    "references/segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "tools/line_motion_v1/sideband_subspaces.py": "c089c9a49e4bf1c95add016b6ec0144a94dc85802b85480b0ebb12c98705bc64",
+    "tools/line_motion_v1/sidebands.py": "50f7e671c4694dfe9493bb386b802fadd3ffdb5f8261ba5ee8f9076647f8c89e",
+    "handoff/开发留痕.md": "a0a4432a3cc0e31b81b17aaf043ee72879d55174795ec91de8271cacb99877ba",
+    "tools/package_F2_variation_projection_v1.py": "56833186e42973ecf3167f6582655e4b91dcaec62ec33cef9ee3ca3aab1d1054",
+    "tools/publish_F2_variation_projection_v1.py": "86999a4eed55e1e3ca613725b84b91beb63f0de6672b6e1e57180172e3e473a9",
+    "tools/line_motion_v1/local_envelopes.py": "524c60256ac703e95c9470e617a03d3107feb61581aea1a666b5fbd7600f27f2",
+    "tools/line_motion_v1/rate_coordinates.py": "c780a53666fffc1077fbcdc3efd3d55ff3e739d492aa2a64856ddf08f03b758a",
+    "research/F2_variation_projection_v1_plan.json": "4b07c390a2e823d8be3a89a6a9262c876b30b17ddf1c0c93d9f8f2989038540a",
+    "tools/line_motion_v1/overlap_phase.py": "59ac06e8de0769c53198e8428be3e48cfe930d985201bfb6451bd602f772f128",
+    "tools/audit_F2_variation_projection_v1.py": "a65694a140a964c27c4f1451fe7f19ca25ab2bdf5c50f55e0b95e726c8da46f4",
+    "tools/line_motion_v1/peaks.py": "e62d7234fe5f96b5688555c74e747d159ae45ad777d9861b61c62e00994a2165",
+    "tools/line_motion_v1/chirp_limit_controls.py": "38b0828271f5e36549bcbcc4a2545a418fcb337c900d5e64b794c8b0a9c1cafb",
+    "tools/line_motion_v1/local_precision_controls.py": "7a4f2d5770e6bcc4c339aa53956cc61ae5d525929479bb5c231d48c7b3ec20b2",
+    "AGENTS.md": "7f46b23f44301f8dcd7fd0bf6134ed995caeb450a888089e1febe4a791d617bb",
+    "tools/line_motion_v1/moments.py": "17bd72816c4c5207dc4902add042069a1643fe2428e9096733b9b1ee9ae4680f",
+    "research/怠速与加速完成度V1.md": "ac1812751d6693b3a0700bdf0d7a033a5041003b5d2a5df839ac2547c65f05ea",
+    "tools/line_motion_v1/__init__.py": "268d63f698aa6718733c919e30238eb20932b5a4dae8209eefaa03cd327f7de1",
+    "tools/line_motion_v1/local_chirps.py": "0a244ba27c9a274ad77ab0b3e1323e24b85043981942a3129f1d6131fbd01251",
+    "tools/line_motion_v1/rate_coordinate_controls.py": "caa006010b660addf3f7149b942dcad9b13a86e47d6eb85d8072816df49f42b2",
+    "tools/line_motion_v1/sideband_controls.py": "0a637da95f890b6ce944bdae909a6e38d88056e6ab0a408b761b6da0b76778fc",
+    "tools/line_motion_v1/identity_controls.py": "52c7d7dc244875c4746169b4acd5b7e6cb88a3f475a5a0aa61c09ed3fe9e842d",
+    "tools/line_motion_v1/envelope_controls.py": "d01384b0f0d4883f9d47f169e8c7a60d11931e02754a51d4ffe73f0d401f9f93",
+    "tools/line_motion_v1/variation_projection.py": "a17e10f857ce9948123127ea9665a3b3fbb12e4a82abee14e88407c7a27eca6d"
+  },
+  "reports": {
+    "observe1": {
+      "path": "references/analysis/F2_variation_projection_v1/observe1/report.json",
+      "sha256": "136a01055a8fd5e6fd68736fd3710f3dc5f9783c9a7f10f37d0fe8059938193a",
+      "result": "all12_frozen_variation_projections_observed_NOT_physical_common_source_classification"
+    },
+    "audit1": {
+      "path": "references/analysis/F2_variation_projection_v1/audit1/report.json",
+      "sha256": "eda9e8df5c4803f51480f681720ff21052b0fcb42c148286dbd389a56f032bf4",
+      "result": "known_sources_and_all12groups24projections72conditional_predictions_independently_audited"
+    },
+    "review1": {
+      "path": "references/analysis/F2_variation_projection_v1/review1/report.json",
+      "sha256": "0ebc5fb2b2c546dc8c616e45740389c8602a70c64fbbf2d9ed3d0d34b7cd6c06",
+      "result": "known_signatures_real_fixed_geometry_and_conditional_errors_plotted"
+    }
+  },
+  "real_audio_read": true,
+  "input_media": [
+    {
+      "path": "references/raw/state_media_v1/F2_fetch1/F2_cMuqS9x-Z1Y.mkv",
+      "sha256": "8d37f9006db3993bc4de83130348513196fb64d153b2626df669cf81fec4603f"
+    },
+    {
+      "path": "references/analysis/state_media_v1/F2_inspect1/native_reference.wav",
+      "sha256": "00482225dd927389569d077d2e7fc395819c7a0a73b36bab1218d124c690c049"
+    }
+  ],
+  "prior_manifests": {
+    "F2_overlap_phase_v1": {
+      "path": "baselines/F2_overlap_phase_v1/manifest.json",
+      "sha256": "f686ed4ecfe402741b46ebcb79939384882f0db9099edfe52c0668d16e558851"
+    },
+    "F2_rate_coordinates_v1": {
+      "path": "baselines/F2_rate_coordinates_v1/manifest.json",
+      "sha256": "b2591b7556fc3a9474de24e17f9b9a1344dcf869be266e98683ec3efeea1c4cc"
+    }
+  },
+  "catalogue_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+  "data_memory_sha256": "69041469c67ffe94f76f86cb679d40716f99ee1a69c4218698074b5e4af05e58",
+  "counts": {
+    "three_line_observations": 12,
+    "rank_one_projections": 24,
+    "conditional_omitted_line_predictions": 72,
+    "native_frequency_differences": 864000
+  },
+  "audit_errors": {
+    "frequency_disagreement": 3.0309088572266774e-14,
+    "projection": 2.375877272697835e-14,
+    "omitted_prediction": 2.5202062658991053e-14,
+    "metric": 4.729372449219227e-10
+  },
+  "known_complex_source_error": 1.679073546867471e-13,
+  "known_scalar_metric_error": 2.3430146711689304e-12,
+  "known_cases": [
+    {
+      "id": "common_cubic",
+      "waveform_relative_errors": [
+        0.02136966227239923,
+        0.02101251647407874
+      ],
+      "bounds": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "observations": {
+        "harmonic_hypothesis": {
+          "vector": [
+            2.0,
+            3.0,
+            5.0
+          ],
+          "raw_disagreement_squared_sum_Hz2": 273.59141439759566,
+          "residual_squared_sum_Hz2": 4.2268683277595606e-07,
+          "residual_squared_fraction": 1.5449564954611042e-09,
+          "per_line_rms_Hz": [
+            0.03463813883066161,
+            0.051960657658611784,
+            0.086602145819829
+          ],
+          "omitted_line_prediction_rms_error_Hz": [
+            4.2394986285199795e-06,
+            1.943227934511908e-06,
+            2.9580272837098084e-06
+          ],
+          "omitted_line_prediction_max_error_Hz": [
+            7.859624639484919e-06,
+            2.0586521303767036e-06,
+            5.77905368659426e-06
+          ],
+          "omitted_line_comparison": "conditional_shared_joint_fit_NOT_independent_heldout",
+          "interpretation": "geometric_description_of_model_disagreement_NOT_physical_source_energy_or_clock"
+        },
+        "equal_Hz": {
+          "vector": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "raw_disagreement_squared_sum_Hz2": 273.59141439759566,
+          "residual_squared_sum_Hz2": 33.60288346972965,
+          "residual_squared_fraction": 0.12282141069272147,
+          "per_line_rms_Hz": [
+            0.03463813883066161,
+            0.051960657658611784,
+            0.086602145819829
+          ],
+          "omitted_line_prediction_rms_error_Hz": [
+            0.03464326324459451,
+            0.00865948508337695,
+            0.043302747662748456
+          ],
+          "omitted_line_prediction_max_error_Hz": [
+            0.060007836169205575,
+            0.015000226497554725,
+            0.07500369511844696
+          ],
+          "omitted_line_comparison": "conditional_shared_joint_fit_NOT_independent_heldout",
+          "interpretation": "geometric_description_of_model_disagreement_NOT_physical_source_energy_or_clock"
+        }
+      },
+      "truth_used_as_fit_initialization": false
+    },
+    {
+      "id": "independent_neighbor",
+      "waveform_relative_errors": [
+        0.11513376328784158,
+        0.10902663998999106
+      ],
+      "bounds": [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "observations": {
+        "harmonic_hypothesis": {
+          "vector": [
+            2.0,
+            3.0,
+            5.0
+          ],
+          "raw_disagreement_squared_sum_Hz2": 14.371843908297564,
+          "residual_squared_sum_Hz2": 12.856980205136004,
+          "residual_squared_fraction": 0.8945950350680503,
+          "per_line_rms_Hz": [
+            0.02447093562795061,
+            1.1745499884878481e-05,
+            1.0238784606608787e-06
+          ],
+          "omitted_line_prediction_rms_error_Hz": [
+            0.02446899703228078,
+            0.005054179942627077,
+            0.01883351872721505
+          ],
+          "omitted_line_prediction_max_error_Hz": [
+            0.04888580452494713,
+            0.01009820753436428,
+            0.03762601003394943
+          ],
+          "omitted_line_comparison": "conditional_shared_joint_fit_NOT_independent_heldout",
+          "interpretation": "geometric_description_of_model_disagreement_NOT_physical_source_energy_or_clock"
+        },
+        "equal_Hz": {
+          "vector": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "raw_disagreement_squared_sum_Hz2": 14.371843908297564,
+          "residual_squared_sum_Hz2": 9.577191826832323,
+          "residual_squared_fraction": 0.66638573922327,
+          "per_line_rms_Hz": [
+            0.02447093562795061,
+            1.1745499884878481e-05,
+            1.0238784606608787e-06
+          ],
+          "omitted_line_prediction_rms_error_Hz": [
+            0.02446578012839559,
+            0.01222667506755968,
+            0.01223910753555375
+          ],
+          "omitted_line_prediction_max_error_Hz": [
+            0.04887958549965457,
+            0.024427873027172753,
+            0.024451712472481818
+          ],
+          "omitted_line_comparison": "conditional_shared_joint_fit_NOT_independent_heldout",
+          "interpretation": "geometric_description_of_model_disagreement_NOT_physical_source_energy_or_clock"
+        }
+      },
+      "truth_used_as_fit_initialization": false
+    }
+  ],
+  "independent_program_identity_error": 1.3711254354120683e-13,
+  "actual_ranges": {
+    "harmonic_hypothesis": {
+      "residual_squared_fraction": [
+        0.006865566906996259,
+        0.04696897520495243
+      ],
+      "conditional_omitted_line_rms_Hz": [
+        0.027693177096090857,
+        0.19217150440710876
+      ]
+    },
+    "equal_Hz": {
+      "residual_squared_fraction": [
+        0.09056791336127862,
+        0.172935992290089
+      ],
+      "conditional_omitted_line_rms_Hz": [
+        0.06068388516403718,
+        0.5944536992465944
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.014170345684325436,
+        "equal_Hz": 0.1361007849548516
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.057814011450232045,
+          0.1887641988122215,
+          0.19217150440710876
+        ],
+        "equal_Hz": [
+          0.45595590185413915,
+          0.23641626284347844,
+          0.5795750448346703
+        ]
+      }
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.014170345684325436,
+        "equal_Hz": 0.1361007849548516
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.057814011450232045,
+          0.1887641988122215,
+          0.19217150440710876
+        ],
+        "equal_Hz": [
+          0.45595590185413915,
+          0.23641626284347844,
+          0.5795750448346703
+        ]
+      }
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.017681355508666882,
+        "equal_Hz": 0.15730266083920147
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.0481647077957682,
+          0.1411617908364898,
+          0.17272880484736755
+        ],
+        "equal_Hz": [
+          0.36958410683677456,
+          0.14866081486930377,
+          0.4250736648854841
+        ]
+      }
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.017681355508666882,
+        "equal_Hz": 0.15730266083920147
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.0481647077957682,
+          0.1411617908364898,
+          0.17272880484736755
+        ],
+        "equal_Hz": [
+          0.36958410683677456,
+          0.14866081486930377,
+          0.4250736648854841
+        ]
+      }
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.006865566906996259,
+        "equal_Hz": 0.0905679142283704
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.06318060782849345,
+          0.09061392630737992,
+          0.14475478661874322
+        ],
+        "equal_Hz": [
+          0.3794628762190736,
+          0.060683885258944706,
+          0.40237156345923925
+        ]
+      }
+    },
+    {
+      "pair": [
+        3,
+        4
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.0068655670715008724,
+        "equal_Hz": 0.09056791336127862
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.0631806083055369,
+          0.0906139273534025,
+          0.1447547896226737
+        ],
+        "equal_Hz": [
+          0.37946287478953566,
+          0.06068388516403718,
+          0.40237156152714504
+        ]
+      }
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.04696897520495243,
+        "equal_Hz": 0.11922839452886473
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.08775540386727765,
+          0.13869157908562066,
+          0.14386157509895406
+        ],
+        "equal_Hz": [
+          0.26595390136955477,
+          0.11510515010255835,
+          0.1704432896845416
+        ]
+      }
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.04696897520495243,
+        "equal_Hz": 0.11922839452886473
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.08775540386727765,
+          0.13869157908562066,
+          0.14386157509895406
+        ],
+        "equal_Hz": [
+          0.26595390136955477,
+          0.11510515010255835,
+          0.1704432896845416
+        ]
+      }
+    },
+    {
+      "pair": [
+        6,
+        7
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.008453204665099193,
+        "equal_Hz": 0.10382601124915079
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.05652861117013877,
+          0.0336736225537573,
+          0.05338069988495823
+        ],
+        "equal_Hz": [
+          0.15840470753473396,
+          0.09525119511425291,
+          0.25297812392368635
+        ]
+      }
+    },
+    {
+      "pair": [
+        6,
+        7
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.008453204665099193,
+        "equal_Hz": 0.10382601124915079
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.05652861117013877,
+          0.0336736225537573,
+          0.05338069988495823
+        ],
+        "equal_Hz": [
+          0.15840470753473396,
+          0.09525119511425291,
+          0.25297812392368635
+        ]
+      }
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "channel": 0,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.008380670048771586,
+        "equal_Hz": 0.172935992290089
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.027693177096090857,
+          0.11301531655569039,
+          0.1801975326071148
+        ],
+        "equal_Hz": [
+          0.3966822453923603,
+          0.19898090074513622,
+          0.5944536992465944
+        ]
+      }
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "channel": 1,
+      "residual_squared_fractions": {
+        "harmonic_hypothesis": 0.008380670048771586,
+        "equal_Hz": 0.172935992290089
+      },
+      "conditional_omitted_line_rms_error_Hz": {
+        "harmonic_hypothesis": [
+          0.027693177096090857,
+          0.11301531655569039,
+          0.1801975326071148
+        ],
+        "equal_Hz": [
+          0.3966822453923603,
+          0.19898090074513622,
+          0.5944536992465944
+        ]
+      }
+    }
+  ],
+  "real_nonlinear_fits": 0,
+  "physical_harmonic_orders_verified": false,
+  "physical_source_classifications": 0,
+  "independent_heldout_validation": false,
+  "shared_phase_clock_fit": false,
+  "phase_extracted_real_model_permitted": false,
+  "current_g_may_drive_synthesis": false,
+  "C_H": 540,
+  "C_hashes_sha256": "835d5a8145c03b99b680d05270f4e409ecff2652ecfb0f7b8be3395521a35023",
+  "voice_hashes_sha256": "06c662425524205ef40dd69172bc9c6fef9a719d463d7be905d095bb3693234c",
+  "figures_visually_checked": true,
+  "existing55CTests_rerun": false,
+  "model_exported": false,
+  "runtime_changed": false,
+  "high_frequency_recovered": false,
+  "RPM_inferred": false,
+  "vehicle_timbre_accepted": false,
+  "idle_acceleration_complete": false,
+  "goal_complete": false,
+  "moving35": "held_unchanged",
+  "original_A_low_listening": "original_question_pending",
+  "previous_goal_turn": "progress_endpoint_precision_repaired_all18corrections72overlaps_audited_frozen_pushed",
+  "current_goal_turn": "progress_known_common_cubic_neighbor_and_identity_counterexamples_all12fixed_geometry_groups_independently_audited",
+  "next_step": "Return original dense36 common-phase extraction failure; continuous representation/observed initialization and band-out/noise geometry. Correlated observation phasep95 .000253653 still fails .0001. Originalfailed36/all17/full33/individual14k/originalE must pass before real sharedphaseDNA; lowband geometry is no substitute and currentg must not drive synthesis.",
+  "limits": [
+    "All6pairs favor the predeclared2/3/5 geometry over equal-Hz; this is a descriptive comparison without physical orders or source identity",
+    "Independent proportional phase programs can produce the same waveform as a shared expression",
+    "Parent fits share samples and nuisance parameters; conditional omitted-line predictions are not independent validation",
+    "No real nonlinear fit, common phase recovery, RPM, new DNA, high-frequency recovery or timbre acceptance",
+    "2/3/5 are a fixed exploratory scaling hypothesis, not verified physical orders or inferred RPM",
+    "Projection residual fractions describe squared model disagreement, not separated source energy",
+    "Conditional omitted-line comparison shares parent joint fits and samples; not independent heldout validation",
+    "Common curvature and independent proportional programs can have the same signature; no physical classifier or clock export"
+  ]
+}
