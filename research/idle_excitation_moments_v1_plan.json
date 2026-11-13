@@ -1,0 +1,21 @@
+{
+  "schema": "vsl.idle-excitation-moments/1",
+  "purpose": "Human asks for better idle extraction. Test subwindow concentration lost by Gaussian spectral excitation, distinct from previous slow/10ms amplitude and conditional-phase candidates. Not a common-phase extractor or physical-source detector.",
+  "training": "Approved F2_tailpipe native6..9s only; use catalogue reader/hash guards.9..12 previously inspected same-recording check is reporting only, not pristine holdout.",
+  "profile": "Frozen fixed_source_profiles_v1/trial1/F2_tailpipe/profile.json; preserve all13OSC and6FIR/gain/LR coefficients, no AM/FM/room/PCM or timeline export.",
+  "sample_rate": 48000,
+  "bands_hz": [[1200,2200],[2200,4000],[4000,8000],[8000,14000]],
+  "kernel_indices": [2,3,4,5],
+  "trim_frames": 4800,
+  "effective_impulse_frames": 65536,
+  "observation": "Fourth-order forward causal Butterworth bandpass, trim0.1s each side; centered variance, skew and fourth cumulant. Three fixed same-PSD phase controls retained. No window/degree/delay or seed search.",
+  "compilation": "Independent unit-variance filter inputs imply output variance=sum h^2 and fourth cumulant=sum(kappa_i*sum h_i^4). Compose every frozen FIR/gain with each observation SOS. All6inputs contribute variance; only high4 may gain positive excess. Subtract deterministic main's fourth cumulant, use TRAIN excess times model-total variance squared. Solve4x4 nonnegative moment system once with relative row normalization. No negative-kurtosis invention, ridge, hidden clipping or rate sweep. Require positive debt in every band, train excess greater than all3phase controls, predicted relative cumulant error<=0.1, negligible effective impulse tail (<1e-12 power). Otherwise no audio candidate.",
+  "excitation": "Independent Bernoulli-gated Gaussian q=B*z/sqrt(p), p=3/(kappa+3), mean0 variance1 excess3/p-3. Fresh events are not timed firings or PCM. Each high input becomes sqrt(1-a)*oldGaussian+sqrt(a)*independentSparseGaussian. Its excess is a^2*kappa. Low2inputs unchanged; a0 must exactly reproduce old FLOAT static output. No additional envelope modulation.",
+  "seeds": [149921,277139,381611],
+  "amounts": [0,0.5,1],
+  "seconds": 12,
+  "verification": "Analytic cumulants for known independent FIR mixtures; independent scalar moment and impulse-convolution checks, separate full FFT audio reconstruction/complexOSC, zero exact oldFLOAT, every seed/amount retained with finite peaks/powers/moments reported. Frequency spectrum equal only in stationary expectation, not finite byte equality. No perceptual pass inferred from metrics.",
+  "limits": "Finite3s mixed recording and near-mono tailpipe LP610, wind/mic contamination; sparse innovations are statistical proxy not identified combustion/friction. No new shared clock/RPM/load/state coverage. Highband fourth moments do not identify transient phase or joint crossband event timing. Gate is for this experiment only. Previous listening pages/candidates remain pending without duplicate questions or promotion. No C/default/driver changes. All failures/exact sources retained.",
+  "runtime_changed": false,
+  "new_download": false
+}
