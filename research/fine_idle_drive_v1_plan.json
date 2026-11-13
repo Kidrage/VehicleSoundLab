@@ -1,0 +1,11 @@
+{
+  "stage": "fine_idle_drive_v1",
+  "purpose": "Optional typed fixed-idle integration of frozen full-C F2 fine-static sound and amplitude statistics; no new timbre acceptance",
+  "source": "Approved F2 tailpipe: 6..9s training, 9..12s reference; real RPM, load and temperature unknown",
+  "unchanged_sound": ["13 independent OSC parameters", "measured amplitude covariance factor", "6 fine-spectrum FIR kernels", "moving35 recipe", "prior fixed-idle voice"],
+  "controls": {"idle_mix": "old/new source replacement weight", "idle_motion": "fresh slow correlated amplitude statistics, finite18ms ramp", "idle_detail": "fine-spectrum layer amount, finite18ms ramp"},
+  "gate": "existing RUNNING && IDLE; 80ms attack/release; fixed source ratio1; one driver and one spatial pass",
+  "take": "schema10/32, owned raw models and controls, strict renderer identity; preserve old frozen players",
+  "validation": ["independent fade/amount oracle and frozen C raw parity", "zero bypass and controller identity", "owned save/decode/replay after external assets cleared", "all legacy contracts and84WAV/3CSV byte comparisons", "short muted actual device record/replay and timing"],
+  "not_claimed": ["accepted idle timbre", "RPM/load range", "physical AM separation or engine-synchronous phase", "multi-engine portability", "hard realtime", "native UI manual/listening or physical7.1.4"]
+}

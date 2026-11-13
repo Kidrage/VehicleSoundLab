@@ -9,6 +9,8 @@ typedef struct {
 /* Transport fades only. The driving controller, source and spatial work remain
    in atlas_drive. Caller owns exclusive engine/bank/model storage. */
 int am_render_init(AmRender *render,VslEngine *engine,const AdConfig *config,const AdControl *control);
+/* Non-RT; zeroed/initialized render only. Dispose before re-init/assets release. */
+void am_render_dispose(AmRender *render);
 int am_render_set(AmRender *render,const AdControl *control);
 int am_render_process(AmRender *render,float *output,unsigned frames,int stop,const AdCapture *capture);
 #endif

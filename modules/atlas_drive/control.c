@@ -13,7 +13,7 @@ int ad_control_valid(const AdControl *c,int channels) {
         unit(p->throttle)&&unit(p->brake)&&unit(m->gain)&&unit(m->detail)&&unit(m->event_gain)&&
         unit(m->width)&&unit(m->room)&&unit(m->perspective)&&unit(m->residual_gain)&&unit(m->body_mix)&&
         unit(m->intake_gain)&&unit(m->mechanical_gain)&&unit(m->air_gain)&&unit(m->road_gain)&&unit(m->wind_gain)&&unit(m->startup_gain)&&unit(m->catch_gain)&&unit(m->resonant_gain)&&unit(m->coherent_low_gain)&&unit(m->idle_mix)&&flag(m->spatial)&&flag(m->propagation)&&
-        (channels!=12||m->spatial);
+        unit(m->idle_motion)&&unit(m->idle_detail)&&(channels!=12||m->spatial);
 }
 void ad_control_apply(VslEngine *e,const AdControl *c) {
     const AdInput *p=&c->drive;

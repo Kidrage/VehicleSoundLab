@@ -94,8 +94,8 @@ static int take_and_routing(void) {
         sh=at_hash_sources(sh,&cap,n);ah=at_hash_samples(ah,reference+2*at,n*2);CHECK(at_take_commit(&t,n,ah,sh));
     }
     CHECK(lp>1e-5&&dp>1e-5);at_take_finish(&t);
-    CHECK(at_fields(&count)&&count==30&&at_take_encode(&t,&bytes,&length));
-    CHECK(bytes[8]==9&&bytes[76]==30&&at_take_decode(&loaded,bytes,length));
+    CHECK(at_fields(&count)&&count==32&&at_take_encode(&t,&bytes,&length));
+    CHECK(bytes[8]==10&&bytes[76]==32&&at_take_decode(&loaded,bytes,length));
     CHECK(loaded.assets->config.recipe_bank==&loaded.assets->recipe&&loaded.assets->config.resonant_bank==&loaded.assets->resonant);
     CHECK(loaded.assets->recipe.low[0].harmonics==7&&loaded.assets->recipe.colour[0].power_reduction==.35);
     CHECK(at_take_encode(&loaded,&again,&length2)&&length==length2&&!memcmp(bytes,again,length));free(again);
@@ -103,7 +103,7 @@ static int take_and_routing(void) {
     /* Restore from exact payload; invalid versions must leave destination owned. */
     CHECK(at_take_decode(&loaded,bytes,length));
     {AtAssets *saved=loaded.assets;bytes[8]=7;rehash(bytes,length);
-        CHECK(!at_take_decode(&loaded,bytes,length)&&loaded.assets==saved);bytes[8]=9;rehash(bytes,length);}
+        CHECK(!at_take_decode(&loaded,bytes,length)&&loaded.assets==saved);bytes[8]=10;rehash(bytes,length);}
     CHECK(at_take_decode(&loaded,bytes,length));
     memset(&models,0,sizeof models);at_take_free(&t);
     CHECK(at_player_init(&player,&eb,&loaded,2));
@@ -117,7 +117,7 @@ static int take_and_routing(void) {
     }
     CHECK(at_player_verified(&player)&&player.source_hash==sh);
     free(bytes);at_take_free(&loaded);
-    printf("PASS: moving35 one driver, independent LF/detail controls and stems; owned schema9/30, 2/12 source/front exact; LF energy %.9g detail %.9g\n",lp,dp);
+    printf("PASS: moving35 one driver, independent LF/detail controls and stems; owned schema10/32, 2/12 source/front exact; LF energy %.9g detail %.9g\n",lp,dp);
     return 0;
 }
 int main(void) {

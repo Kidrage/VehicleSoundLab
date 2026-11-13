@@ -79,13 +79,13 @@ static int owned(void) {
         sh=at_hash_sources(sh,&cap,n);ah=at_hash_samples(ah,reference+2*at,n*2);CHECK(at_take_commit(&t,n,ah,sh));
     }
     CHECK(energy>1e-4);at_take_finish(&t);
-    CHECK(at_fields(&count)&&count==30&&at_take_encode(&t,&bytes,&length));
-    CHECK(bytes[8]==9&&bytes[76]==30&&at_take_decode(&loaded,bytes,length));
+    CHECK(at_fields(&count)&&count==32&&at_take_encode(&t,&bytes,&length));
+    CHECK(bytes[8]==10&&bytes[76]==32&&at_take_decode(&loaded,bytes,length));
     CHECK(loaded.assets->idle.modal==&loaded.assets->idle_modal&&loaded.assets->idle.detail==&loaded.assets->idle_detail);
     CHECK(loaded.assets->idle.level_gain==idle.idle.level_gain&&loaded.assets->idle.attack_frames==3840);
     CHECK(at_take_encode(&loaded,&again,&length2)&&length==length2&&!memcmp(bytes,again,length));free(again);
     saved=loaded.assets;bytes[8]=8;rehash(bytes,length);CHECK(!at_take_decode(&loaded,bytes,length)&&loaded.assets==saved);
-    bytes[8]=9;rehash(bytes,length);CHECK(at_take_decode(&loaded,bytes,length));
+    bytes[8]=10;rehash(bytes,length);CHECK(at_take_decode(&loaded,bytes,length));
     {unsigned char header[8]={0x80,0xbb,0,0,13,0,0,0};size_t found=0;unsigned matches=0;
         for(size_t j=80;j+8<length-8;++j)if(!memcmp(bytes+j,header,8)){found=j;++matches;}
         CHECK(matches==1);saved=loaded.assets;bytes[found+4]=65;rehash(bytes,length);
@@ -104,6 +104,6 @@ static int owned(void) {
             for(unsigned ch=2;ch<12;++ch)CHECK(wide[j*12+ch]==0);}
     }
     CHECK(at_player_verified(&player)&&player.source_hash==sh);
-    free(bytes);at_take_free(&loaded);puts("PASS owned schema9/30, amount events, external source destruction, corrupt/invalid transaction, arbitrary chunks and2/12source exact");return 0;
+    free(bytes);at_take_free(&loaded);puts("PASS owned schema10/32, amount events, external source destruction, corrupt/invalid transaction, arbitrary chunks and2/12source exact");return 0;
 }
 int main(void){CHECK(id_models_load(&idle)&&fr_models_load(&moving));CHECK(!parity());CHECK(!owned());return 0;}

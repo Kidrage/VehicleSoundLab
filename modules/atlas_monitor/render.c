@@ -1,6 +1,7 @@
 #include "render.h"
 #include "rt_numeric/scope.h"
 #include <string.h>
+void am_render_dispose(AmRender *r){if(r)ad_render_dispose(&r->drive);}
 int am_render_init(AmRender *r,VslEngine *e,const AdConfig *c,const AdControl *p) {
     if(!r)return 0;
     memset(r,0,sizeof *r);return ad_render_init(&r->drive,e,c,p);

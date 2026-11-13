@@ -14,6 +14,7 @@
 #include "stereo_resonance_io/profile.h"
 #include "../full_recipe_drive_v1/models.h"
 #include "../idle_drive_v1/models.h"
+#include "../fine_idle_drive_v1/models.h"
 static AmModels models;static SaBank bank;static AmAudio audio;
 static StProfile startup_profile;static int startup_study;
 static CbProfile catch_profile;static int catch_study;
@@ -22,6 +23,7 @@ static int resonant_study;static DrsBank resonant_bank;static RdtProfile resonan
 static RvsProfile stereo_profile;
 static FrModels full_recipe;
 static IdModels idle_models;static int idle_study;
+static FidModels fine_idle_models;static int fine_idle_study;
 static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
@@ -29,7 +31,9 @@ static double *aux_amount(AdControl *c,int index) {
     switch(index) {
     case 0:return &c->mix.intake_gain;case 1:return &c->mix.mechanical_gain;
     case 2:return &c->mix.air_gain;case 3:return &c->mix.road_gain;case 4:return &c->mix.wind_gain;
-    case 5:return idle_study?&c->mix.idle_mix:&c->mix.startup_gain;default:return &c->mix.catch_gain;
+    case 5:return idle_study?&c->mix.idle_mix:&c->mix.startup_gain;
+    case 6:return fine_idle_study?&c->mix.idle_motion:&c->mix.catch_gain;
+    default:return &c->mix.idle_detail;
     }
 }
 
@@ -57,7 +61,7 @@ static void labels(HWND owner) {
     EnableWindow(slider[6],!playing&&(resonant_study?audio.config.resonant_bank!=NULL:audio.config.residual_bank!=NULL));
     SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100));
     if(auxiliary_index==5&&!audio.config.startup_profile&&!idle_study)EnableWindow(slider[8],FALSE);
-    if(auxiliary_index==6&&!audio.config.catch_profile)EnableWindow(slider[8],FALSE);
+    if(auxiliary_index==6&&!audio.config.catch_profile&&!fine_idle_study)EnableWindow(slider[8],FALSE);
     for(i=0;i<2;++i)EnableWindow(slider[i],!playing&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[2],!playing&&c.drive.mode==VSL_BENCH);
     EnableWindow(gear,!playing&&c.drive.mode!=VSL_BENCH);
@@ -150,6 +154,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"风");SendMessageW(auxiliary,CB_SETCURSEL,0,0);
         if(startup_study)SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"启动机械声");
         if(idle_study){SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"怠速声线（候选）");SendMessageW(auxiliary,CB_SETCURSEL,5,0);}
+        if(fine_idle_study){SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"怠速主声线起伏");SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"怠速细谱纹理");}
         if(catch_study){SendMessageW(auxiliary,CB_ADDSTRING,0,(LPARAM)L"接火低频");SendMessageW(auxiliary,CB_SETCURSEL,6,0);}
         item(owner,L"BUTTON",L"空间监听",BS_AUTOCHECKBOX|WS_TABSTOP,30,24,670,210,28);
         item(owner,L"BUTTON",idle_study?L"怠速声线（候选）":L"瞬态层（实验）",BS_AUTOCHECKBOX|WS_TABSTOP,31,276,670,240,28);
@@ -201,7 +206,7 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         }
         if(id==43&&notify==CBN_SELCHANGE) {
             int selected=(int)SendMessageW(auxiliary,CB_GETCURSEL,0,0);
-            if(selected>=0&&selected<(catch_study?7:startup_study||idle_study?6:5))auxiliary_index=selected;
+            if(selected>=0&&selected<(fine_idle_study?8:catch_study?7:startup_study||idle_study?6:5))auxiliary_index=selected;
             labels(owner);return 0;
         }
         break;
@@ -258,6 +263,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         else if(!wcscmp(args[i],L"--stereo-resonant-study"))resonant_study=2;
         else if(!wcscmp(args[i],L"--full-recipe-study"))resonant_study=3;
         else if(!wcscmp(args[i],L"--idle-study")){idle_study=1;resonant_study=3;}
+        else if(!wcscmp(args[i],L"--fine-idle-study")){fine_idle_study=idle_study=1;resonant_study=3;}
         else if(!wcscmp(args[i],L"--ui-check")&&i+1<argc) {
             if(wcslen(args[i+1])>=4096){LocalFree(args);return 2;}wcscpy_s(ui_check_path,4096,args[++i]);
         }
@@ -289,7 +295,8 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         if(resonant_study!=3)config.resonant_bank=&resonant_bank;
         config.residual_bank=NULL;config.scene_mode=AD_SCENE_STEREO_BED;
     }
-    if(idle_study){if(!id_models_load(&idle_models))return 2;config.idle_profile=&idle_models.idle;auxiliary_index=5;}
+    if(fine_idle_study){if(!fid_models_load(&fine_idle_models))return 2;config.fine_idle_profile=&fine_idle_models.idle;auxiliary_index=5;}
+    else if(idle_study){if(!id_models_load(&idle_models))return 2;config.idle_profile=&idle_models.idle;auxiliary_index=5;}
     am_audio_init(&audio,&config);InitCommonControlsEx(&common);
     if(startup_study){AdControl c=am_audio_get(&audio);c.mix.startup_gain=.5;am_audio_control(&audio,&c);}
     if(catch_study) {
@@ -302,10 +309,11 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE previous,PWSTR command,int show
         if(resonant_study==3){c.mix.resonant_gain=1;c.mix.coherent_low_gain=1;}
         c.mix.width=1;am_audio_control(&audio,&c);}
     if(idle_study){AdControl c=am_audio_get(&audio);c.drive.rpm=850;c.drive.load=0;c.mix.idle_mix=1;am_audio_control(&audio,&c);}
+    if(fine_idle_study){AdControl c=am_audio_get(&audio);c.mix.idle_motion=.5;c.mix.idle_detail=1;am_audio_control(&audio,&c);}
     SetProcessDPIAware();klass.lpfnWndProc=procedure;klass.hInstance=instance;klass.lpszClassName=L"VslAtlasMonitor";
     klass.hCursor=LoadCursorW(NULL,IDC_ARROW);klass.hbrBackground=GetSysColorBrush(COLOR_WINDOW);
     if(!RegisterClassW(&klass)){am_audio_destroy(&audio);return 2;}
-    window=CreateWindowW(klass.lpszClassName,idle_study?L"Vehicle Sound Lab · DNA Drive · Idle Candidate":resonant_study==3?L"Vehicle Sound Lab · DNA Drive · Full Recipe":resonant_study==2?L"Vehicle Sound Lab · DNA Drive · Stereo Detail":resonant_study?L"Vehicle Sound Lab · DNA Drive · Resonant Detail":startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
+    window=CreateWindowW(klass.lpszClassName,fine_idle_study?L"Vehicle Sound Lab · DNA Drive · Fine Idle":idle_study?L"Vehicle Sound Lab · DNA Drive · Idle Candidate":resonant_study==3?L"Vehicle Sound Lab · DNA Drive · Full Recipe":resonant_study==2?L"Vehicle Sound Lab · DNA Drive · Stereo Detail":resonant_study?L"Vehicle Sound Lab · DNA Drive · Resonant Detail":startup_detail_study?L"Vehicle Sound Lab · DNA Drive · Startup Detail Study":catch_study?L"Vehicle Sound Lab · DNA Drive · Catch Study":startup_study?L"Vehicle Sound Lab · DNA Drive · Startup Study":config.scene_mode==AD_SCENE_STEREO_BED?L"Vehicle Sound Lab · DNA Drive · Stereo Bed":L"Vehicle Sound Lab · DNA Drive",WS_OVERLAPPED|WS_CAPTION|WS_SYSMENU|WS_MINIMIZEBOX,
         CW_USEDEFAULT,CW_USEDEFAULT,580,936,NULL,NULL,instance,NULL);
     if(!window){am_audio_destroy(&audio);return 2;}
     if(ui_check_path[0]) {

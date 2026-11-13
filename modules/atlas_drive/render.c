@@ -11,16 +11,23 @@ static void amounts(const AdControl *p,double a[DA_LAYERS]) {
     a[DA_INTAKE]=p->mix.intake_gain;a[DA_MECHANICAL]=p->mix.mechanical_gain;
     a[DA_AIR]=p->mix.air_gain;a[DA_ROAD]=p->mix.road_gain;a[DA_WIND]=p->mix.wind_gain;
 }
+int ad_control_supported(const AdConfig *c,const AdControl *p) {
+    return c&&ad_control_valid(p,c->channels)&&
+        (c->residual_bank||p->mix.residual_gain==0)&&(c->startup_profile||p->mix.startup_gain==0)&&
+        (c->catch_profile||p->mix.catch_gain==0)&&(c->resonant_bank||p->mix.resonant_gain==0)&&
+        (c->recipe_bank||p->mix.coherent_low_gain==0)&&
+        (c->idle_profile||c->fine_idle_profile||p->mix.idle_mix==0)&&
+        (c->fine_idle_profile||(p->mix.idle_motion==0&&p->mix.idle_detail==0));
+}
+void ad_render_dispose(AdRender *s){if(s){fi_state_destroy(s->fine_idle);s->fine_idle=NULL;}}
 
 int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p) {
     unsigned a;double aux[DA_LAYERS];
-    if (!s||!e||!c||!c->bank||!c->bank->count||c->bank->count>SA_MAX_ANCHORS||!ad_control_valid(p,c->channels)||
+    if (!s||!e||!c||!c->bank||!c->bank->count||c->bank->count>SA_MAX_ANCHORS||!ad_control_supported(c,p)||
         c->profile<0||c->profile>=VSL_PROFILE_COUNT||!isfinite(c->root_per_rpm)||
         c->root_per_rpm<=0||c->root_per_rpm>.1||!ds_routing_valid(c->projection,c->route)||!ad_source_valid(c->source_processor)||
-        (!c->residual_bank&&p->mix.residual_gain>0)||(!c->startup_profile&&p->mix.startup_gain>0)||(!c->catch_profile&&p->mix.catch_gain>0)||
-        (!c->resonant_bank&&p->mix.resonant_gain>0)||
-        (!c->recipe_bank&&p->mix.coherent_low_gain>0)||
-        (!c->idle_profile&&p->mix.idle_mix>0)||(c->idle_profile&&c->source_processor)||
+        (c->idle_profile&&c->source_processor)||
+        (c->fine_idle_profile&&(c->idle_profile||c->source_processor))||
         (c->scene_mode!=AD_SCENE_OBJECTS&&c->scene_mode!=AD_SCENE_STEREO_BED)) return 0;
     if(c->residual_bank) {
         if(!ra_bank_valid(c->residual_bank)||c->residual_bank->count!=c->bank->count)return 0;
@@ -31,6 +38,7 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     if(c->resonant_bank&&!drs_bank_valid(c->resonant_bank,c->bank))return 0;
     if(c->recipe_bank&&!drc_bank_valid(c->recipe_bank,c->bank,c->resonant_bank))return 0;
     if(c->idle_profile&&!ml_profile_valid(c->idle_profile))return 0;
+    if(c->fine_idle_profile&&!fi_profile_valid(c->fine_idle_profile))return 0;
     memset(s,0,sizeof *s);
     if(!sb_layout_init(&s->bed_layout,(unsigned)c->channels))return 0;
     if(c->startup_profile&&!st_voice_init(&s->startup,c->startup_profile,c->seed^UINT64_C(0xf4c25171),p->mix.startup_gain))return 0;
@@ -50,6 +58,8 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
     ad_control_apply(e,p);
     e->smooth.width=p->mix.width;e->smooth.space=p->mix.room;e->smooth.perspective=p->mix.perspective;
     e->spatial.propagation.mix=p->mix.propagation;
+    if(c->fine_idle_profile&&!(s->fine_idle=fi_state_create(c->fine_idle_profile,c->seed^UINT64_C(48271)^UINT64_C(149921),
+        p->mix.idle_mix,p->mix.idle_motion,p->mix.idle_detail)))return 0;
     s->owner=e;s->config=*c;s->target=*p;
     s->gain=p->mix.gain;s->event_gain=p->mix.event_gain;s->spatial_mix=p->mix.spatial;
     s->follow=1-exp(-1/(.018*48000));
@@ -57,10 +67,7 @@ int ad_render_init(AdRender *s,VslEngine *e,const AdConfig *c,const AdControl *p
 }
 int ad_render_set(AdRender *s,const AdControl *p) {
     double aux[DA_LAYERS];
-    if (!s||!s->owner||!ad_control_valid(p,s->config.channels)||(!s->config.residual_bank&&p->mix.residual_gain>0)||
-        (!s->config.startup_profile&&p->mix.startup_gain>0)||(!s->config.catch_profile&&p->mix.catch_gain>0)||
-        (!s->config.resonant_bank&&p->mix.resonant_gain>0)||(!s->config.recipe_bank&&p->mix.coherent_low_gain>0)||
-        (!s->config.idle_profile&&p->mix.idle_mix>0)) return 0;
+    if (!s||!s->owner||!ad_control_supported(&s->config,p)) return 0;
     if(s->config.resonant_bank&&!drs_voice_set(&s->resonant,p->mix.resonant_gain))return 0;
     if(s->config.recipe_bank&&!drc_voice_set(&s->recipe,p->mix.coherent_low_gain))return 0;
     amounts(p,aux);da_voice_set(&s->auxiliary,aux);
@@ -138,9 +145,14 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             resonant[c]=resonance.output[c]*s->envelope;
             coherent[c]=low.output[c]*s->low_envelope;
         }
-        if(s->config.idle_profile) {
+        if(s->config.idle_profile||s->config.fine_idle_profile) {
             int gate=e->drive.lifecycle==VSL_RUNNING&&e->drive.operating==VSL_IDLE;
-            if(!ml_state_tick(&s->idle,gate,s->target.mix.idle_mix,s->envelope,&idle))return 0;
+            if(s->config.fine_idle_profile) {
+                FiFrame f;
+                if(!fi_state_tick(s->fine_idle,gate,s->target.mix.idle_mix,s->target.mix.idle_motion,s->target.mix.idle_detail,s->envelope,&f))return 0;
+                for(c=0;c<2;++c){idle.modal[c]=f.modal[c];idle.detail[c]=f.detail[c];idle.raw[c]=f.raw[c];idle.output[c]=f.output[c];}
+                idle.weight=f.weight;idle.keep=f.keep;
+            }else if(!ml_state_tick(&s->idle,gate,s->target.mix.idle_mix,s->envelope,&idle))return 0;
             if(idle.weight!=0)for(c=0;c<2;++c) {
                 source.dna[c]*=idle.keep;source.low[c]*=idle.keep;residual[c]*=idle.keep;
                 resonant[c]*=idle.keep;coherent[c]*=idle.keep;added[c]=idle.output[c];
@@ -199,7 +211,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 ds_route_frame(&separate,s->config.projection,s->config.route,&detail_objects);
                 for(c=0;c<VSL_OBJECTS;++c)if(detail_objects.sample[c]!=0)objects.sample[c]+=detail_objects.sample[c];
             }
-            if(s->config.source_processor||s->config.idle_profile) {
+            if(s->config.source_processor||s->config.idle_profile||s->config.fine_idle_profile) {
                 VslObjectFrame added_objects;separate.dna[0]=added[0];separate.dna[1]=added[1];
                 ds_route_frame(&separate,s->config.projection,s->config.route,&added_objects);
                 for(c=0;c<VSL_OBJECTS;++c)if(added_objects.sample[c]!=0)objects.sample[c]+=added_objects.sample[c];
@@ -241,6 +253,8 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if (cap->source_added)cap->source_added[2*n+c]=(float)added[c];
             if (cap->idle_raw)cap->idle_raw[2*n+c]=(float)idle.raw[c];
             if (cap->idle)cap->idle[2*n+c]=(float)idle.output[c];
+            if (cap->idle_modal)cap->idle_modal[2*n+c]=(float)idle.modal[c];
+            if (cap->idle_detail)cap->idle_detail[2*n+c]=(float)idle.detail[c];
         }
         if(cap->bed)for(c=0;c<s->config.channels;++c)cap->bed[n*s->config.channels+c]=(float)bed[c];
         if (cap->events) cap->events[n]=(float)event;

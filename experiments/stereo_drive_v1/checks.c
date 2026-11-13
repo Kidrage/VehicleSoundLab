@@ -102,7 +102,7 @@ static int real_take(void) {
         for(unsigned j=0;j<2*n;++j)power+=(double)resonant[j]*resonant[j];
         sh=at_hash_sources(sh,&cap,n);ah=at_hash_samples(ah,xa+2*at,2*n);CHECK(at_take_commit(&t,n,ah,sh));
     }
-    CHECK(power>1e-8);at_take_finish(&t);CHECK(at_take_encode(&t,&bytes,&length)&&bytes[8]==9&&bytes[76]==30);
+    CHECK(power>1e-8);at_take_finish(&t);CHECK(at_take_encode(&t,&bytes,&length)&&bytes[8]==10&&bytes[76]==32);
     CHECK(at_take_decode(&u,bytes,length));
     memset(model,0,sizeof model);memset(&bank,0,sizeof bank);memset(&detail,0,sizeof detail);memset(&stereo,0,sizeof stereo);
     CHECK(at_player_init(&player,&eb,&u,2));
@@ -117,5 +117,5 @@ static int real_take(void) {
 }
 int main(void) {
     CHECK(!mixed()&&!real_take());
-    puts("PASS: mixed kernels/gaps/transaction/stability, oracle/muted clocks, zero driver and owned stereo schema9 2/12 replay");return 0;
+    puts("PASS: mixed kernels/gaps/transaction/stability, oracle/muted clocks, zero driver and owned stereo schema10 2/12 replay");return 0;
 }

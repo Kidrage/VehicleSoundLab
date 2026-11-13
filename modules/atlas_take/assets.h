@@ -13,6 +13,10 @@ typedef struct {
     MsProfile idle_modal;
     RdtProfile idle_detail;
     MlProfile idle;
+    MsProfile fine_modal;
+    MtProfile fine_motion;
+    SfProfile fine_detail;
+    FiProfile fine_idle;
 } AtAssets;
 /* Owned, immutable render assets. Pointers stay inside this heap object. */
 int at_assets_copy(AtAssets *destination,const AdConfig *source);

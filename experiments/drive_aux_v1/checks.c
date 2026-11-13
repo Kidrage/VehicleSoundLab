@@ -73,7 +73,7 @@ int main(void) {
     CHECK(!scenario(VSL_SCENARIO_SHIFTS,3200,&seen,power));
     CHECK(!scenario(VSL_SCENARIO_LIFT,1200,&seen,power));
     CHECK((seen&63)==63);for(i=0;i<DA_LAYERS;++i)CHECK(power[i]>1e-12);
-    CHECK(ad_render_init(&a,&ea,&config,&initial));fields=at_fields(&count);CHECK(count==30&&!strcmp(fields[26].name,"catch_gain")&&!strcmp(fields[27].name,"resonant_gain"));
+    CHECK(ad_render_init(&a,&ea,&config,&initial));fields=at_fields(&count);CHECK(count==32&&!strcmp(fields[26].name,"catch_gain")&&!strcmp(fields[27].name,"resonant_gain"));
     for(i=20;i<count;++i) {
         double *v;bad=initial;v=(double*)((char*)&bad+fields[i].offset);*v=NAN;
         CHECK(!ad_render_set(&a,&bad)&&at_control_same(&a.target,&initial));*v=1.01;CHECK(!ad_render_set(&a,&bad));

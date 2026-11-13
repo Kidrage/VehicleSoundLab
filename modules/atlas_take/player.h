@@ -16,10 +16,13 @@ typedef struct {
     float resonant[1024];
     float coherent_low_raw[1024],coherent_low[1024];
     float idle_raw[1024],idle[1024];
+    float idle_modal[1024],idle_detail[1024];
 } AtPlayer;
 /* Override layout2/12 for export; source controls are identical,12forces only
    spatial routing. Recorded presentation hash applies to its original layout. */
 int at_player_init(AtPlayer *player,VslEngine *owner,const AtTake *take,int channels);
+/* Non-RT; dispose before re-init or freeing the borrowed take. */
+void at_player_dispose(AtPlayer *player);
 unsigned at_player_process(AtPlayer *player,float *output,unsigned frames,AdTelemetry *telemetry);
 int at_player_complete(const AtPlayer *player);
 int at_player_verified(const AtPlayer *player);

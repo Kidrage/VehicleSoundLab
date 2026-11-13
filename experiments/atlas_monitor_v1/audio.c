@@ -41,7 +41,8 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
         capture.catch_bloom=a->catch_bloom;
         capture.resonant=a->resonant;
         capture.coherent_low_raw=a->coherent_low_raw;capture.coherent_low=a->coherent_low;
-        if(a->render.drive.config.idle_profile){capture.idle_raw=a->idle_raw;capture.idle=a->idle;}
+        if(a->render.drive.config.idle_profile||a->render.drive.config.fine_idle_profile){capture.idle_raw=a->idle_raw;capture.idle=a->idle;}
+        if(a->render.drive.config.fine_idle_profile){capture.idle_modal=a->idle_modal;capture.idle_detail=a->idle_detail;}
     }
     capture.telemetry=telemetry;
     if(!am_render_process(&a->render,pcm,frames,stopping,&capture))return -1;
@@ -67,9 +68,7 @@ void am_audio_init(AmAudio *a,const AdConfig *config) {
 }
 int am_audio_control(AmAudio *a,const AdControl *c) {
     if(am_audio_replaying(a))return 0;
-    if(!ad_control_valid(c,2)||(!a->config.residual_bank&&c->mix.residual_gain>0)||(!a->config.startup_profile&&c->mix.startup_gain>0)||
-       (!a->config.catch_profile&&c->mix.catch_gain>0)||(!a->config.resonant_bank&&c->mix.resonant_gain>0)||
-       (!a->config.recipe_bank&&c->mix.coherent_low_gain>0)||(!a->config.idle_profile&&c->mix.idle_mix>0))return 0;
+    if(!a||!ad_control_supported(&a->config,c))return 0;
     EnterCriticalSection(&a->lock);a->control=*c;++a->generation;LeaveCriticalSection(&a->lock);return 1;
 }
 AdControl am_audio_get(AmAudio *a) {
@@ -108,6 +107,7 @@ int am_audio_replay(AmAudio *a,int muted) {
 int am_audio_replaying(AmAudio *a) {return a->transport==2&&InterlockedCompareExchange(&a->device.running,0,0)!=0;}
 void am_audio_stop(AmAudio *a) {
     wo_stop(&a->device);
+    am_render_dispose(&a->render);at_player_dispose(&a->player);
     if(a->transport==1){at_take_finish(&a->take);a->ready=at_take_valid(&a->take);}
 }
 void am_audio_destroy(AmAudio *a) {am_audio_stop(a);wo_destroy(&a->device);at_take_free(&a->take);DeleteCriticalSection(&a->lock);}

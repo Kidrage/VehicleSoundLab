@@ -1,5 +1,7 @@
 # 新 DNA 驾驶适配器
 
+当前可选细谱怠速使用`AdConfig.fine_idle_profile`、`idle_mix/idle_motion/idle_detail`，复用唯一驾驶器的RUNNING&&IDLE许可和一次空间链。新源拥有堆状态，须在音频线程停止后`ad_render_dispose`，再重建或释放模型；不允许与旧idle_profile或opaque回调并用。参数／录放及固定比例边界见[细谱层](../fine_idle_layer/README.md)、[接入记录](../../research/怠速细谱统一驾驶V1.md)。当前行程schema10／32，以下旧版本描述为历史。
+
 当前可选完整配方：`AdConfig.recipe_bank`通过`drive_recipe`拥有相干LF模型与耦合DNA功率mask，`AdMix.coherent_low_gain`独立控制LF；它消费主DNA实际相位，用独立机体包络，另有raw／最终分轨与支持遥测。细节关闭／越界时恢复原DNA功率，不用互补`body_mix`替代独立LF。`Launch-Full-Recipe-Drive-Study.cmd`已接同一原生／驾驶／schema8行程；540C/H、55项CTest与短实际静音设备录放通过。原行驶35%参数不改，真实怠速／中低转带载未标定。见[完整接入及限制](../../research/行驶完整配方统一驾驶V1.md)。以下保留历史接口说明。
 
 当前可选接火层：`AdConfig.catch_profile`、`AdMix.catch_gain`、`AdCapture.catch_bloom`。同一200Hz驾驶器给出CATCH许可／进度，完整包络后DNA在互补分层前送入固定滤波组，附加量只路由一次FL/FR。`Launch-Catch-Study.cmd`使用同A启动车内DNA和前段，接火量默认0%，新`.vslrun`为schema5／27字段；旧窗口／播放器保留。45项CTest与短设备／录放通过，完整音色／长期／实际7.1.4未验收。见[接口及证据](../../research/接火低频统一驾驶V1.md)。以下保留原接入说明。

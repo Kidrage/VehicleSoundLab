@@ -23,6 +23,9 @@ int at_assets_valid(const AtAssets *a) {
     if(a->config.recipe_bank&&(a->config.recipe_bank!=&a->recipe||!drc_bank_valid(&a->recipe,&a->bank,a->config.resonant_bank)))return 0;
     if(a->config.idle_profile&&(a->config.idle_profile!=&a->idle||a->idle.modal!=&a->idle_modal||
        a->idle.detail!=&a->idle_detail||!ml_profile_valid(&a->idle)))return 0;
+    if(a->config.fine_idle_profile&&(a->config.idle_profile||a->config.fine_idle_profile!=&a->fine_idle||
+       a->fine_idle.modal!=&a->fine_modal||a->fine_idle.motion!=&a->fine_motion||
+       a->fine_idle.detail!=&a->fine_detail||!fi_profile_valid(&a->fine_idle)))return 0;
     if(a->config.residual_bank) {
         if(a->config.residual_bank!=&a->residual||!ra_bank_valid(&a->residual)||a->residual.count!=a->bank.count)return 0;
         for(i=0;i<a->bank.count;++i)if(fabs(a->residual.root[i]-a->profile[i].base_hz)>1e-8)return 0;
@@ -48,9 +51,10 @@ done:free(check);return ok;
 }
 int at_assets_copy(AtAssets *to,const AdConfig *from) {
     unsigned i;
-    /* Opaque experimental source state is not represented by schema9. Reject
+    /* Opaque experimental source state is not represented by schema10. Reject
        before mutation, rather than producing a take that replays another sound. */
-    if(!to||!from||from->source_processor||!from->bank||!from->bank->count||from->bank->count>SA_MAX_ANCHORS)return 0;
+    if(!to||!from||from->source_processor||(from->fine_idle_profile&&from->idle_profile)||
+       !from->bank||!from->bank->count||from->bank->count>SA_MAX_ANCHORS)return 0;
     memset(to,0,sizeof *to);to->config=*from;to->bank=*from->bank;
     for(i=0;i<from->bank->count;++i){if(!from->bank->profile[i])return 0;to->profile[i]=*from->bank->profile[i];}
     if(from->residual_bank)to->residual=*from->residual_bank;
@@ -62,6 +66,13 @@ int at_assets_copy(AtAssets *to,const AdConfig *from) {
         if(!ml_profile_valid(from->idle_profile))return 0;
         to->idle=*from->idle_profile;to->idle_modal=*to->idle.modal;to->idle_detail=*to->idle.detail;
         to->idle.modal=&to->idle_modal;to->idle.detail=&to->idle_detail;to->config.idle_profile=&to->idle;
+    }
+    if(from->fine_idle_profile) {
+        if(from->idle_profile||!fi_profile_valid(from->fine_idle_profile))return 0;
+        to->fine_idle=*from->fine_idle_profile;to->fine_modal=*to->fine_idle.modal;
+        to->fine_motion=*to->fine_idle.motion;to->fine_detail=*to->fine_idle.detail;
+        to->fine_idle.modal=&to->fine_modal;to->fine_idle.motion=&to->fine_motion;
+        to->fine_idle.detail=&to->fine_detail;to->config.fine_idle_profile=&to->fine_idle;
     }
     at_assets_bind(to,from->residual_bank!=NULL);
     return at_assets_valid(to);

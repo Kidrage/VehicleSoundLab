@@ -13,6 +13,7 @@
 #include "drive_recipe/voice.h"
 #include "source.h"
 #include "modal_layer/state.h"
+#include "fine_idle_layer/state.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -31,6 +32,7 @@ typedef struct {
     const DrcBank *recipe_bank; /* Optional coupled DNA withdrawal + independent coherent LF. */
     const AdSourceProcessor *source_processor; /* Optional exclusive pre-spatial source adapter. */
     const MlProfile *idle_profile; /* Optional typed fixed-idle source; exclusive with opaque processor. */
+    const FiProfile *fine_idle_profile; /* Exclusive with old idle/opaque source. */
 } AdConfig;
 
 typedef struct {
@@ -71,6 +73,7 @@ typedef struct {
     float *coherent_low_raw,*coherent_low; /* Independent calibrated LF, not complementary body tap. */
     float *source_added; /* Optional processor's added stereo stem, before width/master. */
     float *idle_raw,*idle; /* Typed idle before/after gate, amount and envelope; before master. */
+    float *idle_modal,*idle_detail; /* Fine-idle controlled core/detail before outer gate. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
@@ -84,6 +87,7 @@ typedef struct {
     DrsVoice resonant;
     DrcVoice recipe;
     MlState idle;
+    FiState *fine_idle; /* Owned allocated state; non-RT dispose before reinitializing. */
     VslEngine *owner; /* Exclusive controller+spatial storage; no legacy render. */
     AdConfig config;
     AdControl target;
@@ -100,6 +104,11 @@ typedef struct {
    Auxiliary intake/mechanical/air/
    road/wind are optional engineering templates, not fitted physical sources. */
 int ad_render_init(AdRender *render,VslEngine *owner,const AdConfig *config,const AdControl *control);
+/* Cheap control/presence check shared by render, UI and owned take validation. */
+int ad_control_supported(const AdConfig *config,const AdControl *control);
+/* Non-RT. Zero-initialized or initialized render only; leaves telemetry/state
+   counters intact, releases owned fine source. Call before init again/free assets. */
+void ad_render_dispose(AdRender *render);
 int ad_render_set(AdRender *render,const AdControl *control);
 int ad_render_process(AdRender *render,float *output,unsigned frames,const AdCapture *capture);
 #endif

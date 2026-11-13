@@ -12,10 +12,7 @@ int at_take_allocate(AtTake *t,unsigned capacity) {
 void at_take_free(AtTake *t) {if(t){free(t->events);free(t->assets);memset(t,0,sizeof *t);}}
 int at_take_begin(AtTake *t,const AdConfig *config,const AdControl *initial) {
     AtAssets *candidate;
-    if(!t||!t->events||!t->assets||!config||!ad_control_valid(initial,config->channels)||
-        (!config->residual_bank&&initial->mix.residual_gain>0)||(!config->startup_profile&&initial->mix.startup_gain>0)||
-        (!config->catch_profile&&initial->mix.catch_gain>0)||(!config->resonant_bank&&initial->mix.resonant_gain>0)||
-        (!config->recipe_bank&&initial->mix.coherent_low_gain>0)||(!config->idle_profile&&initial->mix.idle_mix>0))return 0;
+    if(!t||!t->events||!t->assets||!ad_control_supported(config,initial))return 0;
     candidate=calloc(1,sizeof *candidate);if(!candidate)return 0;
     if(!at_assets_copy(candidate,config)){free(candidate);return 0;}
     free(t->assets);t->assets=candidate;
@@ -23,10 +20,7 @@ int at_take_begin(AtTake *t,const AdConfig *config,const AdControl *initial) {
     t->audio_hash=t->source_hash=AT_HASH_INITIAL;t->overflow=0;return 1;
 }
 int at_take_event(AtTake *t,uint64_t frame,const AdControl *c) {
-    if(!t||!t->assets||!t->events||!ad_control_valid(c,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&c->mix.residual_gain>0)||(!t->assets->config.startup_profile&&c->mix.startup_gain>0)||
-        (!t->assets->config.catch_profile&&c->mix.catch_gain>0)||(!t->assets->config.resonant_bank&&c->mix.resonant_gain>0)||
-        (!t->assets->config.recipe_bank&&c->mix.coherent_low_gain>0)||(!t->assets->config.idle_profile&&c->mix.idle_mix>0)||frame!=t->frames||frame>=AT_MAX_FRAMES)return 0;
+    if(!t||!t->assets||!t->events||!ad_control_supported(&t->assets->config,c)||frame!=t->frames||frame>=AT_MAX_FRAMES)return 0;
     if(t->count&&frame==t->events[t->count-1].frame){t->events[t->count-1].control=*c;return 1;}
     if(t->count&&at_control_same(c,&t->events[t->count-1].control))return 1;
     if(t->count>=t->capacity){t->overflow=1;return 0;}
@@ -46,18 +40,9 @@ int at_take_valid(const AtTake *t) {
     if(!t||!t->events||!t->assets||t->overflow||!t->count||t->count>t->capacity||t->capacity>AT_MAX_EVENTS||
         !t->frames||t->frames>AT_MAX_FRAMES||t->events[0].frame||
         (t->stop_frame!=UINT64_MAX&&t->stop_frame>=t->frames)||!at_assets_valid(t->assets)||
-        !ad_control_valid(&t->initial,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&t->initial.mix.residual_gain>0)||(!t->assets->config.startup_profile&&t->initial.mix.startup_gain>0)||
-        (!t->assets->config.catch_profile&&t->initial.mix.catch_gain>0)||(!t->assets->config.resonant_bank&&t->initial.mix.resonant_gain>0)||
-        (!t->assets->config.recipe_bank&&t->initial.mix.coherent_low_gain>0)||(!t->assets->config.idle_profile&&t->initial.mix.idle_mix>0))return 0;
+        !ad_control_supported(&t->assets->config,&t->initial))return 0;
     for(i=0;i<t->count;++i)if(t->events[i].frame>=t->frames||(i&&t->events[i].frame<=t->events[i-1].frame)||
-        !ad_control_valid(&t->events[i].control,t->assets->config.channels)||
-        (!t->assets->config.residual_bank&&t->events[i].control.mix.residual_gain>0)||
-        (!t->assets->config.startup_profile&&t->events[i].control.mix.startup_gain>0)||
-        (!t->assets->config.catch_profile&&t->events[i].control.mix.catch_gain>0)||
-        (!t->assets->config.resonant_bank&&t->events[i].control.mix.resonant_gain>0)||
-        (!t->assets->config.recipe_bank&&t->events[i].control.mix.coherent_low_gain>0)||
-        (!t->assets->config.idle_profile&&t->events[i].control.mix.idle_mix>0))return 0;
+        !ad_control_supported(&t->assets->config,&t->events[i].control))return 0;
     return 1;
 }
 uint64_t at_hash_samples(uint64_t hash,const float *audio,unsigned samples) {
@@ -80,6 +65,7 @@ uint64_t at_hash_sources(uint64_t hash,const AdCapture *c,unsigned frames) {
             hash=at_hash_samples(hash,c->coherent_low_raw?c->coherent_low_raw+2*n:zero,2);
             hash=at_hash_samples(hash,c->coherent_low?c->coherent_low+2*n:zero,2);}
         if(c->idle_raw&&c->idle){hash=at_hash_samples(hash,c->idle_raw+2*n,2);hash=at_hash_samples(hash,c->idle+2*n,2);}
+        if(c->idle_modal&&c->idle_detail){hash=at_hash_samples(hash,c->idle_modal+2*n,2);hash=at_hash_samples(hash,c->idle_detail+2*n,2);}
     }
     return hash;
 }

@@ -1,0 +1,103 @@
+{
+  "schema": "vsl.fine-idle-drive-freeze/1",
+  "result": "optional_C_fixed_idle_integration_passed_pending_listening",
+  "git_parent": "780b9e08acadd9eb674b61f432a8885e2477284b",
+  "C_H_total": 600,
+  "C_H_added": 9,
+  "C_H_modified": 24,
+  "C_H_unchanged": 567,
+  "voice_files_unchanged": 67,
+  "F2_profiles_and_study_constants_unchanged": true,
+  "tests_distinct_passed": 61,
+  "first_full_test_passed": 59,
+  "corrected_version_fixtures_passed": 2,
+  "unchanged_runtime_sources_between_full_and_fixtures": true,
+  "old_WAV_exact": 84,
+  "old_CSV_exact": 3,
+  "driver_count": 1,
+  "spatial_passes": 1,
+  "source_gate": "RUNNING && IDLE",
+  "source_ratio": 1,
+  "actual_source_RPM_known": false,
+  "take_schema": 10,
+  "fields": 32,
+  "raw_parameters_owned": true,
+  "new_capture_stems": [
+    "idle_modal",
+    "idle_detail"
+  ],
+  "device": {
+    "result": "pass",
+    "schema": 10,
+    "fields": 32,
+    "muted": true,
+    "frames": 384123,
+    "external_models_destroyed": true,
+    "two_twelve_front_and_source_exact": true,
+    "record_hash": "24060d7d761d429c",
+    "play_hash": "24060d7d761d429c",
+    "record_queue_empty": 0,
+    "play_queue_empty": 0,
+    "record_budget_exceeded": 0,
+    "play_budget_exceeded": 0,
+    "record_max_ms": 6.2897,
+    "play_max_ms": 5.3896,
+    "cancel_frames": 13312,
+    "controls": [
+      {
+        "frame": 0,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 1
+      },
+      {
+        "frame": 72704,
+        "rpm_input": 850,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 96768,
+        "rpm_input": 2200,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 168448,
+        "rpm_input": 850,
+        "idle_mix": 0.35,
+        "ignition": 1
+      },
+      {
+        "frame": 240128,
+        "rpm_input": 850,
+        "idle_mix": 0,
+        "ignition": 1
+      },
+      {
+        "frame": 288768,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 1
+      },
+      {
+        "frame": 336384,
+        "rpm_input": 850,
+        "idle_mix": 1,
+        "ignition": 0
+      }
+    ],
+    "timbre_accepted": false,
+    "native_UI_visual_or_interaction_verified": false
+  },
+  "device_block_frames": 512,
+  "device_budget_ms": 10.666666666666666,
+  "new_UI_manual_visual_verified": false,
+  "new_timbre_accepted": false,
+  "old_builds_overwritten": false,
+  "next": "Judge fixed-idle core motion/fine-spectrum quality;then evidence-backed RPM/load range. No new duplicate listening question.",
+  "freeze": "baselines/fine_idle_drive_v1",
+  "manifest_sha256": "04d67788436006614cefe18f365bcfb70a417d84540fe866c9ded07e8c90e0db",
+  "file_count": 3565,
+  "bytes": 114497053
+}

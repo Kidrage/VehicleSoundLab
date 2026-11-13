@@ -1,5 +1,6 @@
 #include "player.h"
 #include <string.h>
+void at_player_dispose(AtPlayer *p){if(p)am_render_dispose(&p->render);}
 int at_player_init(AtPlayer *p,VslEngine *owner,const AtTake *t,int channels) {
     AdControl initial;
     if(!p||!owner||!at_take_valid(t)||(channels!=2&&channels!=12))return 0;
@@ -29,7 +30,8 @@ unsigned at_player_process(AtPlayer *p,float *out,unsigned frames,AdTelemetry *t
         c.catch_bloom=p->catch_bloom;
         c.resonant=p->resonant;
         c.coherent_low_raw=p->coherent_low_raw;c.coherent_low=p->coherent_low;
-        if(p->config.idle_profile){c.idle_raw=p->idle_raw;c.idle=p->idle;}
+        if(p->config.idle_profile||p->config.fine_idle_profile){c.idle_raw=p->idle_raw;c.idle=p->idle;}
+        if(p->config.fine_idle_profile){c.idle_modal=p->idle_modal;c.idle_detail=p->idle_detail;}
         if(telemetry)c.telemetry=telemetry+done;
         if(!am_render_process(&p->render,out+done*p->config.channels,n,at>=t->stop_frame,&c))return done;
         p->source_hash=at_hash_sources(p->source_hash,&c,n);

@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前新增[细谱怠速组合层](../modules/fine_idle_layer/README.md)：`profile`组合只读Ms／Mt／Sf，`state`拥有编译核／历史与外部gate、混合量、主声线起伏、细谱量；create/destroy非实时，tick无分配／IO。`atlas_drive`沿用一个驾驶器／空间链，`AdConfig.fine_idle_profile`与旧怠速／opaque互斥。`AdMix.idle_motion/idle_detail`追加控制，`AdCapture.idle_modal/idle_detail`独立分轨。录放拥有全部原参数，当前schema10／32，旧播放器独立保存。堆状态须通过`ad_render_dispose/am_render_dispose/at_player_dispose`非实时销毁后再重建／释放模型。600份C/H已索引；音色听评及新原生控件人工检查未验收。见[接入记录](../research/怠速细谱统一驾驶V1.md)。以下按历史保留。
+
 最新[怠速细谱持续C生成V1](../research/怠速细谱持续C生成V1.md)：新增`partitioned_fir/{fft,filter}.*`与`spectral_texture/{profile,voice,io}.*`，区分只读FFT核／卷积历史／新激励／非实时IO。输入参数编译后由bank拥有，voice借用bank；内部256帧激励前取保留原预热位置，外层控制在输出帧应用。完整固定候选可由C生成，但未接驾驶／UI／行程，也不代表外部输入零延迟或整套系统硬实时。4项、全部三种子／三档分轨、控制分块和30秒成本检查通过；591C/H＝579原样＋12新增，67声音文件保持。前轮59项完整驾驶证明沿用，以下保留各历史阶段当时状态。
 
 最新[怠速幅度纹理C核V1](../research/怠速幅度纹理C核V1.md)：`modules/modal_texture/{profile,envelope,voice,io}.*`独立校验／相关正幅度／组合OSC／非实时读取；`modal_source/voice.*`仅增加可选共L/R逐声线增益，NULL保留旧算术。量18ms、0量持续推进，无频率／相位变化或IO分配；参数借用且须保持只读。独立C实验尚未接驾驶／UI／行程，细谱FIR仍Python，不替换任何已认可音色。接口与生命周期见[模块说明](../modules/modal_texture/README.md)，实际核查见本轮summary。
