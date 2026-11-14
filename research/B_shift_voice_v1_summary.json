@@ -1,0 +1,330 @@
+{
+  "result": "fixed_B_path_failed_without_local_voice_fit",
+  "git_parent": "3de9e6efa6e84e0e01c814c60c71d9d656438e1d",
+  "protected_C_H": 646,
+  "protected_voice_parameters": 74,
+  "F2_exact": true,
+  "runtime_changed": false,
+  "new_DNA": false,
+  "new_C_render": false,
+  "new_trigger_mapping": false,
+  "new_source_PCM_loop": false,
+  "new_room": false,
+  "manual_hearing": false,
+  "source_seconds": [
+    475,
+    485
+  ],
+  "fixed_centers": [
+    479,
+    483
+  ],
+  "original_PTS_frames": 40,
+  "contact_sheets_viewed": 5,
+  "known_producer_controls_before_source": {
+    "result": "pass",
+    "known_decelerations": [
+      {
+        "center_seconds": 1.5,
+        "phase_cycle_std": 1.0975172340602644e-06,
+        "maximum_LR_phase_error_radians": 1.3649058310249984e-06,
+        "extraction": {
+          "center_seconds": 1.5,
+          "aperture_source_seconds": [
+            1.3436857728768434,
+            1.658294161805331
+          ],
+          "initial": {
+            "source_seconds": [
+              1.3436857728768434,
+              1.658294161805331
+            ],
+            "source_cutoff_hz": 14000.0,
+            "initial_root_hz_range": [
+              56.49702250124382,
+              57.937003197989625
+            ],
+            "adaptive_source_antialias": true,
+            "normalized_cycle_hz": 46.875,
+            "normalized_frames": 18431,
+            "source_min_nyquist_hz": 28926.475520636835,
+            "processing": "One common stereo inverse phase map; source FIR;16x Kaiser interpolation; no gain/compression/highpass/channel folding"
+          },
+          "phase": {
+            "reference_order": 5,
+            "reference_channel": "L observation; same coordinate applied to both original channels",
+            "fitted_phase_range_radians": [
+              -5.312975579106731,
+              -1.884694491554101
+            ],
+            "maximum_observed_phase_step_radians": 0.062565139106316,
+            "source_cutoff_hz": 14000.0,
+            "source_seconds": [
+              1.3782555067868096,
+              1.6185122892475996
+            ],
+            "inferred_root_hz_range": [
+              56.228893844960226,
+              57.31756652458599
+            ],
+            "root_hz_median": 56.77245607602236,
+            "normalized_frames": 13968,
+            "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+            "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+          },
+          "root_hz": 56.77245607602236,
+          "heldout_coherence": {
+            "3": [
+              0.9999999988162159,
+              0.9999999988280139
+            ],
+            "7": [
+              0.9999999977743296,
+              0.999999997767884
+            ]
+          }
+        }
+      },
+      {
+        "center_seconds": 3.5,
+        "phase_cycle_std": 2.3191184786304088e-06,
+        "maximum_LR_phase_error_radians": 5.887506405288789e-06,
+        "extraction": {
+          "center_seconds": 3.5,
+          "aperture_source_seconds": [
+            3.31676145290046,
+            3.685965059051739
+          ],
+          "initial": {
+            "source_seconds": [
+              3.31676145290046,
+              3.685965059051739
+            ],
+            "source_cutoff_hz": 14000.0,
+            "initial_root_hz_range": [
+              48.03714658194972,
+              49.47708359204109
+            ],
+            "adaptive_source_antialias": true,
+            "normalized_cycle_hz": 46.875,
+            "normalized_frames": 18431,
+            "source_min_nyquist_hz": 24595.019049958257,
+            "processing": "One common stereo inverse phase map; source FIR;16x Kaiser interpolation; no gain/compression/highpass/channel folding"
+          },
+          "phase": {
+            "reference_order": 5,
+            "reference_channel": "L observation; same coordinate applied to both original channels",
+            "fitted_phase_range_radians": [
+              -1.8660649728052618,
+              1.562071774211199
+            ],
+            "maximum_observed_phase_step_radians": 0.06261701863770841,
+            "source_cutoff_hz": 14000.0,
+            "source_seconds": [
+              3.357259089180926,
+              3.6391977975398038
+            ],
+            "inferred_root_hz_range": [
+              47.8360216319621,
+              48.92656835848128
+            ],
+            "root_hz_median": 48.37853482294119,
+            "normalized_frames": 13968,
+            "edge_policy": "Discard both unsupported two-cycle margins; never extrapolate phase correction",
+            "warning": "Fitted reference coherence is not validation; inspect separate carrier orders and known controls"
+          },
+          "root_hz": 48.37853482294119,
+          "heldout_coherence": {
+            "3": [
+              0.9999999988577427,
+              0.9999999988656902
+            ],
+            "7": [
+              0.9999999981635007,
+              0.9999999981432081
+            ]
+          }
+        }
+      }
+    ],
+    "rejected_boundaries": [
+      {
+        "center_seconds": 0.19,
+        "reason": "The declared center is outside the observed clock"
+      },
+      {
+        "center_seconds": 0.21,
+        "reason": "The fixed aperture leaves the observed clock"
+      },
+      {
+        "center_seconds": 4.79,
+        "reason": "The fixed aperture leaves the observed clock"
+      },
+      {
+        "center_seconds": 4.81,
+        "reason": "The declared center is outside the observed clock"
+      }
+    ],
+    "scope": "Known finite tests of aperture/correction only, not real-source phase qualification"
+  },
+  "known_producer_family_before_source": {
+    "root_error_hz": 0.00048555412423922917,
+    "rows": 385,
+    "silent_status": "no_anchor_peak",
+    "scope": "Constant known family plus missing-line rejection, not arbitrary dynamic-clock qualification"
+  },
+  "audit": {
+    "result": "passed",
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\fit1\\report.json": "03b99dac07ce6d02ac2fe0f394e10efc7afbd5eb4fd0fcda533b78956ce8253f",
+      "E:\\VehicleSoundLab-Git\\research\\B_shift_voice_v1_plan.json": "5a82680e59e62506a85d740ca14c75c38348ea3d88f2e13c0d74ca6eb9f1e5eb",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\report.json": "2509f0fb2373286b4d102900d7613ce64b16f15b1c0d2e34d4d1eb7c832219d5",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_001.png": "39cc6e731464f8f27f9fefece2167a49e161be2475f12229eff4d4dad4cb3d80",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_002.png": "10544b8083b049874a0ee70d03b6c24e7ab67f92fcfdffbd5360f1dc288f2493",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_003.png": "b72262905641e3e997188df5aadd2828950783cdf4690a28dc988f2580407835",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_004.png": "df89b14baf9943a2e47a00e7d47350e0350c785ce62d8742ff759ebb88d78376",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_005.png": "42a556d399ba26a222378d2106a9a6240020a43effadbb088dce9c66733b1d13",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_006.png": "abfe78c58f1cd569f9abcc7f3ead47ff3beddfa924f608c02bd08529c1cb264f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_007.png": "e81bdb8a33de8e9eff04f326189c0b5efa046d49edb7bb72dba916cf056faa84",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_008.png": "8fed3ded8775f443e5d518e3a28f47333f6f76198163935439fe3c1ce25f1f1d",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_009.png": "4b56695892b4b304fef6bb7f263f3fdd7743679a4433dc5a5793806b88a0c6a1",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_010.png": "648be640689ae968b1a3c8c6262aaebab288995f8b08d9c04b7b38d85456c37e",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_011.png": "b4e4b1e393f077d8df9031c4526b83f3155ccc37f70e5a0c0d1ecf34992d47a9",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_012.png": "b747f55b4bfb62201a8f519151bc39af23062c667df4e03ce8979df77a45f05f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_013.png": "c89ffe4b7b2af66b9c69c0c27f196850d3b3f331bb4e751628d6785fc87ba366",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_014.png": "9b4b0e43ddfaa2ec96b501db326003326fc1aaf2ce5acf1fbfdad5ceb69584f7",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_015.png": "f83cf54259caead8b09beda974e218faacc8c30c04e97326dab3c1081b22b9bb",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_016.png": "7651a2fbbfcc39bab17f72c72e6378894b3783cb08818e8ab09c38665dc21338",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_017.png": "6ebd89711881a0b0fe2255fcc6367b2e758a294d08bf6f3740523a6667e6139b",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_018.png": "05694bd735533f05b6979bf6ef9576c18f63c567a7e07bd03c18583c6d5cec74",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_019.png": "973f5a57a18f31d4a200ee21deb0212f4ee82d0cd0761e1eeec556c397a122b8",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_020.png": "935eb3c0867ba4a6d34042498a62120bcae0a6ee282f0ff13f738f2def3f51bd",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_021.png": "b180a2857fc6b183f70c00be97dec572ab7c4731a5421f4447c2f01ef796baa1",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_022.png": "04e0b21a4f5dcde7cc33e80ddfaa25bca84dd30f79d0c2db562072b865a5fb2f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_023.png": "10ad1588cb6d1cf187b3737a05ab27c3da9a839fdd1e119383eaafb2afe15956",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_024.png": "1935d65b4b5038ed0b5c0db3effca5211732db3e32b385b63f825938bf338168",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_025.png": "f9a849396c63c32e242d46d8ea7fd2d0632fc3780b92256842eeacdee2e5267f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_026.png": "0ae617b994f384d2806db0966af2076d060168a66f6b4082363e2405ec42258a",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_027.png": "3684194879509158b976677aaf30a557a35b6196d6abd22d8fbf98d8d554931d",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_028.png": "a0b85fb2561ef5b88926a4d381ce01d8c112b83202dd3237d1b8dbcf6b889e2a",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_029.png": "c93ee832973c18173ce701778a820afc321f7dd6f472c1daf059931e48d4f105",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_030.png": "1eb240b8062344c20889bfc45db7f8a5b6a13adbc359235e351f05a4254851b9",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_031.png": "fbfbc3ee48c3934390e144a1fe16124d270ae6b5389605b20b3abe5487d1ea01",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_032.png": "c3d0d5dcd6385bff2b5fdd96df581712cbe5b7d7a68264c8c26ad99854cf5287",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_033.png": "84923b33016ca3142fab68da2d36c21a5193b305f27e6c00c640b6868899d73e",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_034.png": "bb2465edbdd51675eaa3794cb6e0f2e9f7c52049b7f1e51c781e61263a1b948a",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_035.png": "6213973ad0293276985d9257f2c58b91f1673ef926647d919900c373b8182671",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_036.png": "d1d21d69980138454ec51573926f28423f015df0117af9906c21f540d43e7df2",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_037.png": "eb5c8816fbc7401e189e1f2eb179542bbceed8cb873d6795133736b28732bbe8",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_038.png": "cbd9fa603b04c24e92746b7ec789d612a3688cf102674e892d90d5c75a7bc685",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_039.png": "1287dda09f782b394d93dd40b68c784ab343b3f8d750cf463e4bebdaf29fb06f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\frames1\\B\\part_0_frame_040.png": "bd389cff16e8c203a4fa928119e3a73264c5ff2b8eaf6c76043d5d378e777e59",
+      "E:\\VehicleSoundLab-Git\\research\\B_shift_voice_v1_annotations.json": "24377a88610250ec510518047ac42341cbd34dc6a0f507c7745defd43122f2ce",
+      "E:\\VehicleSoundLab\\references\\segments_v1.json": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+      "E:\\VehicleSoundLab\\references\\raw\\B_local_Tecnica_binaural.mp3": "f55989a8a4e33d74121796b7f6916a1bc8ded19390ff5569b411e600549853df",
+      "E:\\VehicleSoundLab\\references\\clean\\B_decoded_float.wav": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+      "E:\\VehicleSoundLab\\references\\analysis\\B_shift_voice_v1\\fit1\\observed.npz": "7dfb5ebd796a2248730e423ceba061512ce0c76208fc027d52d8051e23e6f0b4",
+      "E:\\VehicleSoundLab\\baselines\\catalog_decel_v1\\inputs\\C_files_sha256.json": "67057310c5d59a30eb3be15ab6e53db264cee9e56e39bf10d999519bd8654f3f",
+      "E:\\VehicleSoundLab\\baselines\\catalog_decel_v1\\inputs\\voice_files_sha256.json": "ec273d21b1ab7bf351259a929b740ed31a116c6ae292b56f4520d9a1fbd39e89"
+    },
+    "clips": [
+      {
+        "key": "whole",
+        "file": "whole.wav",
+        "source_seconds": [
+          475,
+          485
+        ],
+        "frames": 480000,
+        "sha256": "98fe83d7a3ec56f53b0d67e9ecb9320dc749f3a348b1dbf282632cda395f4836"
+      },
+      {
+        "key": "after",
+        "file": "after.wav",
+        "source_seconds": [
+          478.5,
+          479.5
+        ],
+        "frames": 48000,
+        "sha256": "3ba339225321d749494292085447770178495945369d932d0b22040b86693d76"
+      },
+      {
+        "key": "later",
+        "file": "later.wav",
+        "source_seconds": [
+          482.5,
+          483.5
+        ],
+        "frames": 48000,
+        "sha256": "79d1b08892f19361eb71df6da08ebb9d49d734af176d75b0750a9308a749e8eb"
+      }
+    ],
+    "known_before_source": {
+      "FFT_power_FS2": 0.0,
+      "connected_and_overfast_and_missing_graphs": true
+    },
+    "direct_FFT_maximum_FS2_Hz": 3.469446951953614e-18,
+    "direct_band_maximum_FS2": 1.1102230246251565e-16,
+    "direct_cross_maximum_FS2": 2.7755575615628914e-17,
+    "frames_checked": 1985,
+    "anchor_maximum_scalar_difference": 5.684341886080802e-14,
+    "empty_reference_frames": 0,
+    "reachability": {
+      "connected": false,
+      "first_dead_index": 664,
+      "first_dead_seconds": 478.36
+    },
+    "failure_does_not_prove": "Missing engine sound or impossibility of a local voice; one uninterrupted observed family is unsupported by the declared procedure",
+    "protected_C_H_exact": 646,
+    "protected_voice_parameters_exact": 74,
+    "no_new_model_or_C_render": true,
+    "hearing": false
+  },
+  "failure_frontier": {
+    "last_reachable_seconds": 478.355,
+    "last_reachable_roots_hz": [
+      51.04317394660773
+    ],
+    "first_dead_seconds": 478.36,
+    "next_observed_roots_hz": [
+      42.746959667712886,
+      61.75099547136025,
+      84.73403024576281
+    ],
+    "minimum_required_octaves_per_second": 51.17924550005915,
+    "declared_maximum": 32
+  },
+  "raw_same_gain_clips": 3,
+  "browser": {
+    "result": "passed",
+    "clips": 3,
+    "muted": true,
+    "single_player": true,
+    "source_clock_and_offset_picture": true,
+    "paused_switch": true,
+    "mobile_overflow": false,
+    "hearing": false,
+    "errors": []
+  },
+  "analysis_and_browser_images_viewed": 3,
+  "all_attempts_preserved": [
+    "frames1",
+    "fit1",
+    "audit1",
+    "audit2",
+    "review1",
+    "browser1"
+  ],
+  "interruption": "audit1 exact floating equality across different summation implementations; retained, explicit scalar check in audit2",
+  "original_audio_gates_unchanged": true,
+  "previous_CTests_not_repeated": "No C/model/driver/UI/take change",
+  "decision": "Retain failure; neither fixed endpoint locally fitted. No anchor/window/ref/gate rescue",
+  "scope": "One uninterrupted acoustic family unsupported; not proof of absent engine/local impossibility or physical RPM/load",
+  "idle_and_E_hearing_still_pending": true,
+  "full_goal": "active",
+  "next": "Independent supported state/audio work; no automatic failed-path rescue, idle migration, blind strengths or higher-chaos work",
+  "review_url": "http://127.0.0.1:8789/references/analysis/B_shift_voice_v1/review1/index.html",
+  "manifest_sha256": "7814beda99a1d82624e33b77cc6bb7b24e95f854cbab30d8bff5a38638cea010",
+  "file_count": 166,
+  "bytes": 64024637
+}

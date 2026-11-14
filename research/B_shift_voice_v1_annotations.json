@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.B-shift-local-voice-annotations/1",
+  "date": "2026-11-14",
+  "inspection": "references/analysis/B_shift_voice_v1/frames1",
+  "method": "All five contact sheets, 40 original-PTS pictures, inspected before new waveform reads; no OCR or enhanced instrument readings",
+  "gear_display_brackets_video_seconds": [
+    {"from": 1, "to": 2, "last_old": 476.509367, "first_new": 476.759617},
+    {"from": 2, "to": 1, "last_old": 480.513367, "first_new": 480.763617}
+  ],
+  "fixed_centers": [
+    {"audio_seconds": 479.0, "observation": "Gear2, slowing into corner after upshift"},
+    {"audio_seconds": 483.0, "observation": "After downshift, gear1/cornering; hand occludes parts of cluster near482s, gear1 clear again at483.516367s"}
+  ],
+  "plan_clarification": "Original plan described two positions after an upshift. Dense picture inspection additionally reveals a downshift between them. Preserve both original centers, anchor, path and gates; do not treat them as same-gear repetitions.",
+  "alignment": "Paired-video audio time = local user MP3 time +0.036291667s from earlier audio matches; not calibrated AV/instrument/engine latency",
+  "limits": ["No pedal/load/fueling or exact shift actuator timing", "No engine RPM inferred from acoustic-coordinate root", "This driving observation is independent of the pending F2 idle hearing"]
+}
