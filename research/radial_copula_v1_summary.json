@@ -1,0 +1,409 @@
+{
+  "result": "radial_phase_separation_and_isolated_OSC_candidates_verified",
+  "parent_commit": "3fdb00ea4eaa9cfc9aedf3f8cc6bc86e9a75a8aa",
+  "previous_goal_turn": "Progress: coefficient geometry/C controls and six-source mismatch established. This stage constructs new positive radial/circular models and actual audible OSC candidates.",
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_exact": true,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "known_controls": 7,
+  "known_audit": {
+    "result": "independent_radial_copula_audit_passed",
+    "cases": [
+      {
+        "label": "steady",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "AM_only",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "PM_only",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "AM_PM",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "phase_wrap",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "opposed_stereo_AM",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "zero",
+        "quantiles_ranks_AR_and_generation_verified": true
+      }
+    ],
+    "QMC_cases": 0,
+    "new_waveforms": 7,
+    "max_quadrature_mean_power_relative_error": 3.3881317890171994e-15,
+    "max_normalized_joint_moment_error": 0.0,
+    "max_direct_wave_error_FS": 3.854422697679993e-09,
+    "max_AR_error": 0.0,
+    "unchanged_known_branch_and_helpers_AST_exact": true,
+    "stage": "known",
+    "producer_report_sha256": "240a8be7a74a9787bd8edd5ac513669b6778df98e43a9517ee1c62163a80e87b",
+    "auditor_sha256": "9eaf505f52bfad452c6e40eba5e11e2041361c971cb00e6b5fdebc9a7d294604",
+    "heard": false
+  },
+  "source_models": 6,
+  "QMC_cases": 18,
+  "QMC_draws_per_case": 4096,
+  "distribution_validation": {
+    "CV_error_old_L2": 2.192373879934366,
+    "CV_error_new_L2": 0.20330415742869307,
+    "aggregate_CV_error_reduction": 0.9072675699663145,
+    "maximum_QMC_mean_error_dB": 0.009193188193344573,
+    "source_CV": [
+      0.3156883937626103,
+      0.18171618327743844,
+      0.27351716037758306,
+      0.29423007529092454,
+      0.21614459697614155,
+      0.10204793656320807,
+      0.2169766092631511,
+      0.25483926632187265,
+      0.22933378827531323,
+      0.2251373430918042,
+      0.18817577161806992,
+      0.23127761808092925,
+      0.222154462947973,
+      0.20479497713147318,
+      0.22911894093136695,
+      0.2628931033583415,
+      0.17612825862219414,
+      0.1462031503698376,
+      0.20286732914967331,
+      0.20642230388163074,
+      0.18662051577099537,
+      0.3533914996342115,
+      0.220309219924911,
+      0.2911322346074242,
+      0.35495847258654356,
+      0.22863860780570056,
+      0.19624515876018112,
+      0.29819934994283276,
+      0.3360196762924559,
+      0.16842236855640202,
+      0.22602976627482269,
+      0.13419521462881218,
+      0.15996588800032907,
+      0.15687021797641962,
+      0.1429336853142068,
+      0.3012941396738352,
+      0.29848166267526316,
+      0.15798219622663032,
+      0.3754858743971362,
+      0.3996653935405166,
+      0.2838516135875616,
+      0.2593475264803435,
+      0.22412760428261236,
+      0.3437895745714256,
+      0.20591553673639382,
+      0.29251917984215003,
+      0.18693261268927086,
+      0.15359221261402836
+    ],
+    "old_CV": [
+      0.7386462715265593,
+      0.7038814994606909,
+      0.5739314323839683,
+      0.46230358696817403,
+      0.5183035430016193,
+      0.4592021989167528,
+      0.5120451450448976,
+      0.5271117833531064,
+      0.4938710961404752,
+      0.5527504764048796,
+      0.5436036831841995,
+      0.5848928476519889,
+      0.5636950342427213,
+      0.5420891046707057,
+      0.47899979762306205,
+      0.4937927350079436,
+      0.4702951415883136,
+      0.42275185629900186,
+      0.581471270916005,
+      0.5497438521369172,
+      0.5544043218758354,
+      0.5660462327061254,
+      0.5218720429069493,
+      0.6039289872617196,
+      0.6070996404778534,
+      0.5825496487634576,
+      0.5021837525747236,
+      0.5390445983005082,
+      0.5785463170528028,
+      0.5640856524094867,
+      0.5551823946359206,
+      0.5381169140032255,
+      0.4463230061276955,
+      0.4408198297566632,
+      0.4629535773588536,
+      0.4907375596330448,
+      0.5909456341394601,
+      0.5655468008911342,
+      0.5970819059660953,
+      0.5628028573423458,
+      0.5646702649832037,
+      0.6284371811228021,
+      0.5844136865500742,
+      0.6424714600572239,
+      0.5643457554220523,
+      0.5046780421382656,
+      0.49690448181168123,
+      0.5124699667237654
+    ],
+    "new_CV": [
+      0.30866626342857667,
+      0.20379159469893673,
+      0.26511051320116535,
+      0.2967520889048717,
+      0.25223936161312566,
+      0.24316213253050356,
+      0.20205976339101195,
+      0.23803873530150388,
+      0.2691807315173147,
+      0.2117826516130218,
+      0.20546841028256246,
+      0.2169574296801163,
+      0.24682856189770808,
+      0.20793377892345424,
+      0.23116138243043358,
+      0.22137961609978182,
+      0.20185737916278113,
+      0.1506604576087506,
+      0.19405381403967956,
+      0.21788897907229351,
+      0.2281110773022171,
+      0.3331001221605276,
+      0.21262443678574605,
+      0.2840289568634012,
+      0.36717525453736366,
+      0.23815016910271503,
+      0.23562432551408588,
+      0.29045358161708323,
+      0.3329061969315182,
+      0.21146296777509507,
+      0.2376150690191058,
+      0.15871510094351246,
+      0.15436599126937023,
+      0.1550426223303663,
+      0.16413295181778226,
+      0.28425731014726985,
+      0.2881242614032308,
+      0.17767871743370636,
+      0.325556695059461,
+      0.37322366106964006,
+      0.2606824933416359,
+      0.26375543668189677,
+      0.22498617883015867,
+      0.31259178263369275,
+      0.22171355937676426,
+      0.29972817286388026,
+      0.1736532511419704,
+      0.17175850037714332
+    ]
+  },
+  "real_audit": {
+    "result": "independent_radial_copula_audit_passed",
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "quantiles_ranks_AR_and_generation_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "quantiles_ranks_AR_and_generation_verified": true
+      }
+    ],
+    "QMC_cases": 18,
+    "new_waveforms": 12,
+    "max_quadrature_mean_power_relative_error": 1.1673338542008745e-15,
+    "max_normalized_joint_moment_error": 6.161424488857626e-17,
+    "max_direct_wave_error_FS": 2.9800003908952988e-08,
+    "max_AR_error": 0.0,
+    "stage": "real",
+    "producer_report_sha256": "315ce061bb1cbd919a9693960459174aecfa13ca2a4e168d48a7f2b47685ad63",
+    "auditor_sha256": "9eaf505f52bfad452c6e40eba5e11e2041361c971cb00e6b5fdebc9a7d294604",
+    "heard": false
+  },
+  "new_generated_waveforms": 12,
+  "original_C_baselines": 6,
+  "short_original_references": 2,
+  "review_clips": 20,
+  "block37_1024_PCM_exact": true,
+  "metadata_only_repair_first_audio_PCM_exact": true,
+  "numeric_models_QMC_reused_exact": true,
+  "all_failures_retained": true,
+  "known_branch_helpers_AST_exact": true,
+  "stereo_gap": {
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "fixed": [
+          0.01803920915141314,
+          0.20728641117695215,
+          0.07944555772009244,
+          0.029175835838745324
+        ],
+        "joint": [
+          0.17697274548988864,
+          0.1391947979530672,
+          0.10414626301717864,
+          0.17095682641561094
+        ]
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "fixed": [
+          0.15263581709951457,
+          0.14640979071465635,
+          0.12039413680801778,
+          0.12212928507149519
+        ],
+        "joint": [
+          0.2486322288957568,
+          0.24957994581135498,
+          0.13936223768613132,
+          0.18337142002276452
+        ]
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "fixed": [
+          0.13640079381217451,
+          0.13942737782248948,
+          0.15373473762144496,
+          0.11143868612896704
+        ],
+        "joint": [
+          0.16170061883662595,
+          0.18604672980180437,
+          0.1306058360254332,
+          0.1806638057926062
+        ]
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "fixed": [
+          0.10984066339571948,
+          0.07804101211064807,
+          0.14821666775151598,
+          0.13812297191402784
+        ],
+        "joint": [
+          0.15421354430164083,
+          0.1589742652904088,
+          0.13805966276737738,
+          0.21827464598688492
+        ]
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "fixed": [
+          0.07906031696640821,
+          0.07155952166840211,
+          0.08323619027452857,
+          0.26190786060447446
+        ],
+        "joint": [
+          0.09380384445425309,
+          0.1458952416389809,
+          0.07391741878342319,
+          0.25452374816209006
+        ]
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "fixed": [
+          0.1756024091495254,
+          0.039112783575467526,
+          0.04943978548320498,
+          0.1807083638381969
+        ],
+        "joint": [
+          0.12439871487469693,
+          0.1598424559849836,
+          0.1453895004803528,
+          0.28006709446013334
+        ]
+      }
+    ],
+    "mean_fixed_error": 0.11797359107075345,
+    "mean_joint_error": 0.16744139970556035,
+    "joint_worse_coordinates": 18,
+    "coordinates": 24,
+    "new_spatial_timbre_accepted": false
+  },
+  "marginal_amplitude_fourth_relative_error_range": [
+    -0.07088725014218689,
+    0.0004881212350793529
+  ],
+  "scientific_figures_viewed": 2,
+  "desktop_mobile_screenshots_viewed": true,
+  "browser": {
+    "result": "pass",
+    "metadata_checks": 20,
+    "muted": true,
+    "one_player": true,
+    "all_selections_pause": true,
+    "rapid_selection_latest_wins": true,
+    "seek_and_muted_play_verified": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "source_reference_not_looped": true,
+    "hearing": false
+  },
+  "hearing": {
+    "status": "pending",
+    "review_url": "http://127.0.0.1:8789/references/analysis/radial_copula_v1/review1/index.html",
+    "comparison": "Same bank and generation1: original C DNA versus new amplitude with fixed phases",
+    "new_question_independent_of_older_F2_F3_hearings": true,
+    "phase_variant_spatial_status": "diagnostic only; observed stereo coherence regressed",
+    "defaults_changed": false
+  },
+  "new_phase_branch_adopted": false,
+  "runtime_C_model_default_driver_owned_take_room_changed": false,
+  "unchanged_68CTest_not_repeated": true,
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "old_F2_F3_hearings": "independently pending, no repeat",
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "full_goal": "active",
+  "next": "Test shared phase plus explicit interchannel relative phase coordinates and amplitude association; validate actual complex coherence then time structure. Keep new fixed-phase amplitude hearing independent, no blind phase strength/rank/rho sweeps or default/C promotion.",
+  "manifest_sha256": "08611e8a6d89770bebb8c33b387d4239514d3fba40cce29cc95dca649493db1d",
+  "file_count": 1092,
+  "bytes": 1037907435,
+  "post_archive_metadata_normalization": {
+    "file": "research/radial_copula_v1_listening.json",
+    "reason": "CRLF was reported as whitespace by staged diff check; normalize EOL only before commit",
+    "frozen_archive_sha256": "28deb379722bb1dc7d89263dc0a2691651b0d160b2b36e29008097a4653ecd75",
+    "current_LF_sha256": "b27d6bcd7b2a15368e6c33c6b4020f2b129216b0e09da7123826f66b624d834c",
+    "parsed_JSON_equal": true,
+    "archive_modified": false
+  }
+}

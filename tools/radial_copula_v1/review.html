@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sound DNA · 幅度与相位分离</title>
+<style>body{font:16px/1.65 system-ui,sans-serif;background:#f4f5f6;color:#222;margin:0;padding:20px}main{max-width:800px;margin:auto}h1{font-size:25px}label{display:block}select,audio{width:100%;box-sizing:border-box;margin:8px 0}select{font:inherit;padding:10px;background:white;border:1px solid #aaa;border-radius:6px}p{margin:12px 0}.muted{font-size:14px;color:#555}#status{min-height:3.3em}img{max-width:100%;height:auto}details{margin:22px 0}a{color:#145b9f}</style>
+<main><h1>Sound DNA · 幅度与相位分离</h1>
+<p>先比较“原C DNA”和“新幅度 · 固定相位”，判断细节是否更自然。第三种加入相位变化，供单独对照；它的左右关联仍偏离素材，尚未采用。</p>
+<label for="bank">素材分组</label><select id="bank"></select>
+<label for="clip">试听声音</label><select id="clip"></select>
+<audio controls preload="metadata"></audio><p id="status" aria-live="polite"></p><p id="context" class="muted"></p>
+<p class="muted">选择后暂停，点击播放。合成均为8秒、相同固定音高；统一降低6.02 dB、首尾5 ms淡化，没有逐条响度补偿或空间处理。原声短参考不循环。</p>
+<details><summary>这次改变了什么</summary>
+<p>从素材提取每个分音的幅度分布，再用新生成的相关随机变化驱动OSC。相位单独表示；两种新版本共享完全相同的幅度与随机序列。没有循环播放录音，也没有新增独立高频噪声、混响或扩宽器。</p>
+<p>原声短参考保留原始音高变化；8秒合成保持固定声学根频率，用于比较声线，不是原视频的行驶／转速回放。当前默认和已认可声音没有替换。</p>
+<p>下图检查系数功率和左右／时间统计。统计接近不等于听感已经认可，也不等于分离了真实机械声源。</p>
+<img src="power_CV.png" alt="六个F3声纹的系数高频功率起伏，原观察、旧模型与新幅度分布对照">
+<img src="stereo_time.png" alt="新相位分支的左右关联偏差，以及两组生成的时间关联对照">
+</details></main>
+<script id="data" type="application/json">__DATA__</script><script>
+const data=JSON.parse(document.querySelector('#data').textContent),banks=document.querySelector('#bank'),clips=document.querySelector('#clip'),audio=document.querySelector('audio'),status=document.querySelector('#status'),context=document.querySelector('#context');let token=0,url=null;
+for(const row of data.banks){const o=document.createElement('option');o.value=row.key;o.textContent=row.title;banks.append(o)}
+async function choose(){const turn=++token,row=data.clips.find(v=>v.key===clips.value);audio.pause();audio.removeAttribute('src');delete audio.dataset.clipKey;audio.load();if(url){URL.revokeObjectURL(url);url=null}status.textContent='载入中…';
+ try{const response=await fetch(row.file);if(!response.ok)throw Error(response.status);const blob=await response.blob();if(turn!==token)return;url=URL.createObjectURL(blob);audio.src=url;audio.dataset.clipKey=row.key;audio.load();status.textContent=row.note}
+ catch(error){if(turn===token)status.textContent='载入失败，请刷新重试。'}}
+function refresh(){const previous=data.clips.find(v=>v.key===clips.value),row=data.banks.find(v=>v.key===banks.value),available=data.clips.filter(v=>v.bank_key===row.key);clips.replaceChildren();for(const clip of available){const o=document.createElement('option');o.value=clip.key;o.textContent=clip.title;clips.append(o)}const preferred=previous&&available.find(v=>v.variant===previous.variant&&v.seed===previous.seed);clips.value=(preferred||available[0]).key;context.textContent='合成声学根频率：'+row.root.toFixed(2)+' Hz；未推定真实发动机RPM。';choose()}
+banks.addEventListener('change',refresh);clips.addEventListener('change',choose);banks.value=data.banks[0].key;refresh();
+</script></html>

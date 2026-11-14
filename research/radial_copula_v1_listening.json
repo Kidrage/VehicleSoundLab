@@ -1,0 +1,8 @@
+{
+  "status": "pending",
+  "review_url": "http://127.0.0.1:8789/references/analysis/radial_copula_v1/review1/index.html",
+  "comparison": "Same bank and generation1: original C DNA versus new amplitude with fixed phases",
+  "new_question_independent_of_older_F2_F3_hearings": true,
+  "phase_variant_spatial_status": "diagnostic only; observed stereo coherence regressed",
+  "defaults_changed": false
+}

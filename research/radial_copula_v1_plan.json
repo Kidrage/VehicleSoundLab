@@ -1,0 +1,22 @@
+{
+  "schema":"vsl.radial-copula/1",
+  "parent_commit":"3fdb00e",
+  "previous_goal_turn":"Progress: original-C AM/PM controls and six frozen F3 anchors establish Gaussian phase-to-amplitude leakage and a source power-moment mismatch.",
+  "purpose":"Construct an isolated generic positive-amplitude / circular-phase statistical OSC candidate, preserving marginal distributions and joint stereo dependence without a recorded waveform or coefficient timeline loop.",
+  "inputs":"Only frozen coefficient_geometry_v1 known1 and real1 arrays. Verify parent archive manifest and all input hashes. Original 670C/H82voices/F2 and C index unchanged.",
+  "known_cases":["steady","AM_only","PM_only","AM_PM","phase_wrap","opposed_stereo_AM","zero"],
+  "known_audio_seconds":1,
+  "model":{
+    "components_cap":12,"rho_cap":0.95,
+    "amplitude":"Per-partial/channel sorted magnitude quantiles at (i+0.5)/N; continuous linear inverse CDF with constant tails. One analytic scale preserves original E[A^2] exactly. No time ordering retained in the quantile table.",
+    "phase":"Per-partial/channel circular observations unwrapped across the largest empty angular gap, then a separate continuous phase quantile. Original complex-mean phase retained for the fixed-phase comparison. An unidentifiable gap/mean is reported, not labeled physical crank phase.",
+    "joint":"Tied average ranks -> normal scores, population-standardized active features; joint amplitude+phase L/R PCA up to12 plus independent per-feature diagonal residual. Fit lag1 AR coefficients from score/residual sequences, clipped at original0.95. No mode/strength sweep.",
+    "continuous":"Independent stationary Gaussian factor AR states; normalize each interpolated factor by sqrt((1-u)^2+u^2+2rho*u*(1-u)), so each active feature retains unit Gaussian variance at every interpolation phase. Original update rate4*root, original OSC harmonic count and19.2..21.6k carrier taper. Offline source adapter, not a new driving controller.",
+    "controls":"Amplitude-only uses original fixed mean phases. Joint candidate changes phases using the same jointly-fitted latent vector; amplitudes and random draws are identical between the two candidates. No gain/room/widener/HF cloud."
+  },
+  "stationary_validation":{"Sobol_power":12,"seeds":[1,23117,61927],"features":"Source coefficient-power mean/CV/full signed covariance and per-band complex L/R coherence; also marginal second/fourth moments and original observed lag1 rank statistics. This is conditional training-distribution validation, not held-out independent recordings or physical source separation."},
+  "audio":{"anchors":["F3 Fifth First Mid","F3 Fifth Second Mid"],"seconds":8,"seeds":[1,23117,61927],"variants":["fixed_phase","joint_phase"],"root":"each frozen native acoustic root","rate":48000,"block":1024,"block_identity_second":37,"listening_gain":0.5,"fade_frames":240,"baseline":"Frozen original local_atlas_export / SaVoice one-anchor, same root/duration/seed, original statistical DNA; no room. Original short reference is separate, never looped to8s."},
+  "gates":{"mean_power_relative":2e-12,"zero_amplitude_absolute":1e-30,"unit_feature_variance_absolute":2e-12,"known_PM_relative_amplitude_motion":2e-12,"known_AM_circular_phase_motion_radians":2e-11,"independent_wave_absolute_FS":2e-10,"block_wave_absolute_FS":2e-10,"QMC_mean_power_max_dB":0.1,"QMC_aggregate_CV_error_reduction_min":0.25,"listening_peak_FS":0.95},
+  "failure_policy":"Preserve all attempts. Do not tune quantile smoothness, rank, rho, phase strength, source windows or gates until a desired result. Known/marginal failures stop real/audio. Joint/LR/time mismatches remain reported. Do not call improved moments improved timbre, revive rejected A magnitude assets, promote defaults/C or repeat old F2/F3 listening questions.",
+  "scope":"V6 DNA/BODY/DETAIL/EVENT/AUX, original one driver and separate dry-source/event/spatial interfaces retained. No new C/runtime model/room/owned/take changes or media downloads/push. Future7.1.4 remains an independent source-to-spatial task; full multi-engine/full-state/physical7.1.4 goal active."
+}
