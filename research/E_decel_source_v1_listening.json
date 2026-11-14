@@ -1,10 +1,15 @@
 {
   "schema": "vsl.listening-status/1",
-  "status": "pending",
+  "status": "received_partial_positive",
   "url": "http://127.0.0.1:8789/references/analysis/E_decel_source_v1/review2/index.html",
   "comparison": "Same main DNA, same35% power withdrawal, same common gain: original Rdt detail versus joint-channel Rvs detail. All three random groups retained.",
   "question_requested": true,
   "human_accepted": false,
+  "human_answer": "左右关系有改善，音色仍明显电子",
+  "accepted_scope": "Perceived left/right relationship improved in the joint-channel detail comparison; no complete timbre acceptance.",
+  "remaining_issue": "Electronic timbre remains. Band power and complex coherence agreement are insufficient evidence of mechanical naturalness.",
+  "later_overall_feedback": "这个系统做的还是比较强的，模拟的很像，你先把代码上传一下我来研究下。",
+  "later_feedback_scope": "Overall positive system feedback and explicit code-push request; does not separately accept idle_complex75 or erase the earlier specific electronic-timbre finding.",
   "idle_complex75_status": "Separate original question remains pending; not asked again or migrated",
   "next": "Use actual listening feedback and independent source support before default/state integration. Do not infer timbre approval from spectral or coherence metrics."
 }
