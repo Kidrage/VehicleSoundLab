@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.conditional-phase-feasibility/1",
+  "parent_commit": "4cf3f55",
+  "previous_goal_turn": "Progress: requested ADI V6 bound all unchanged runtime inputs and six offline models, with an explicit separate unported-candidate estimate. It did not improve synthesis. Parent stereo_phase_budget_v1 is now independently archive-verified and committed at e960570.",
+  "purpose": "Construct and qualify a continuous amplitude-product-conditioned relative-phase representation, first testing whether source weighted circular moments are attainable with existing amplitude draws and the unchanged continuous phase quantile marginal.",
+  "source": "All six frozen relative_phase_v1 real1 models/training and original three 4096-draw Sobol seeds. No new media, extraction clock, observation window, orders, rank, rho or fitted source changes.",
+  "amplitude": "Reproduce original QMC amplitudes exactly. Normalize P=AL*AR by its mean. Thirty-two linearly spaced probability quantiles define continuous piecewise-linear hat functions in P. Their actual masses r_i and conditional product means p_i are computed on all12288 original draws; no amplitudes are changed or bins hard-switched.",
+  "phase": "Use the original sorted relative-phase quantile table. Each of its N-1 linear segments and two constant half-cell tails is one cell. Cell probability and integral E[exp(i*delta)|cell] are exact analytic quantities, not a new phase marginal.",
+  "transport": "Nonnegative joint masses w_ij have row sums r_i and column sums q_j. Cross is sum(p_i*m_j*w_ij). A linear program minimizes a nonnegative L-infinity error in real/imaginary target cross, normalized by original generated E[P]. Every result retains primal coupling, equality/inequality duals and positive-bound duals. L-infinity is coordinate dependent; zero feasibility and its Euclidean error bounds are not a physical source diagnosis.",
+  "continuity_probe": "Exactly one fixed1e-4 mixture with independent r*q yields strictly positive conditional cell probabilities, preserving both marginals. This is a numerical decoder/continuity probe, not an audible preset or strength search. At runtime conditional cell CDFs interpolate continuously through the P hats; fresh independent uniform phase is required, not the old amplitude-correlated copula phase draw. Preserve all LP residuals, floor bias and worst inverse-CDF slopes; mathematical continuity is not bounded audible modulation or a validated engine time law.",
+  "known": ["independent", "positive_association", "negative_association", "constant_product_infeasible", "fixed_phase", "complex_target_infeasible", "quarter_turn", "silent_rejected"],
+  "QMC": {"power":12,"seeds":[1,23117,61927]},
+  "hat_knots":32,
+  "positivity_probe":0.0001,
+  "LP": {"method":"highs","primal_feasibility_tolerance":1e-9,"dual_feasibility_tolerance":1e-9},
+  "checks": {"primal_dual_normalized":2e-7,"analytic_phase_moment":2e-12,"hat_partition_and_moment":2e-12,"known_2x2_optimum":2e-9,"continuity_difference_radians":1e-5},
+  "decision": "Keep all1728 harmonic outcomes and all24 band coordinates, including unsupported targets and floor/quantization limits. Report both analytic class optimum and independent universal |C|<=E[P] lower bounds on these finite amplitude draws. Do not label a restricted transport-class failure universal infeasibility or a training improvement timbre acceptance. No bandwise winner preset, no audio yet; next maximum-entropy/slope/time qualification through original observer before rendering.",
+  "scope": "Preserve670C/H,82voices,3F2/Cindex, accepted moving35, original driver/owned/takes/default/room and pending hearings. V6 DNA/BODY/DETAIL/EVENT/AUX remain separate from future physical7.1.4. No repeated unchanged68CTest, downloads or push. Multiple engines/fullstates/Cport/physical7.1.4 remain incomplete."
+}

@@ -1,0 +1,132 @@
+{
+  "result": "conditional_phase_feasibility_frozen",
+  "parent_commit": "4cf3f55b9dd8cd7c188a9998cd9df5cfc3a74689",
+  "previous_goal_turn": "Progress: requested ADI V6 hash-bound estimate, no synthesis change. This turn archive-verified/committed parent and constructs certified continuous conditional-phase class evidence.",
+  "known_controls": 8,
+  "source_models": 6,
+  "harmonics": 1728,
+  "original_QMC_cases": 18,
+  "original_QMC_draws_per_seed": 4096,
+  "mean_band_complex_error": {
+    "parent_pooled": 0.06791331304145833,
+    "LP_class": 0.0018226705195357653,
+    "positive_probe": 0.0018282513107343793
+  },
+  "class_inexact_harmonics": 355,
+  "finite_amplitude_phase_agnostic_gap_harmonics": 153,
+  "all24_band_coordinates_improve": true,
+  "maximum_inverse_uniform_slope_bound": 1118444.3341969722,
+  "maximum_inverse_product_slope_bound": 1579900297.765778,
+  "complete_LP_primal_dual_certificates_retained": true,
+  "training_prediction_not_audio": true,
+  "original_amplitude_and_continuous_phase_marginals_preserved_on_finite_draws": true,
+  "no_claim_of_universal_feasibility_or_bounded_audio_phase_speed": true,
+  "audits": {
+    "known": {
+      "result": "independent_conditional_phase_audit_passed",
+      "harmonics": 7,
+      "cases": [
+        {
+          "label": "independent",
+          "enumerated_optimum": -0.0
+        },
+        {
+          "label": "positive_association",
+          "enumerated_optimum": -0.0
+        },
+        {
+          "label": "negative_association",
+          "enumerated_optimum": -0.0
+        },
+        {
+          "label": "constant_product_infeasible",
+          "enumerated_optimum": 0.2
+        },
+        {
+          "label": "fixed_phase",
+          "enumerated_optimum": 0.0
+        },
+        {
+          "label": "complex_target_infeasible",
+          "enumerated_optimum": 0.7
+        },
+        {
+          "label": "quarter_turn",
+          "enumerated_optimum": 0.0
+        }
+      ],
+      "maximum_primal_dual_error": 1.4409059796375077e-16,
+      "maximum_phase_quadrature_error": 1.6529836499704672e-16,
+      "maximum_decoder_error": 0.0,
+      "maximum_amplitude_normalized_error": 0.0,
+      "known_controls_and_continuity_verified": true,
+      "producer_sha256": "06b2c98589f017444c31728ec82affead73d6d25d2253259affcfd0d5a8aa98c",
+      "auditor_sha256": "832493af2ea7140e998fedf304da9584f99c203f2f56c1f9de3acee83f3a467c"
+    },
+    "real": {
+      "result": "independent_conditional_phase_audit_passed",
+      "harmonics": 1728,
+      "cases": [
+        {
+          "label": "F3 Fifth First Early",
+          "harmonics": 288
+        },
+        {
+          "label": "F3 Fifth First Mid",
+          "harmonics": 288
+        },
+        {
+          "label": "F3 Fifth First Late",
+          "harmonics": 288
+        },
+        {
+          "label": "F3 Fifth Second Early",
+          "harmonics": 288
+        },
+        {
+          "label": "F3 Fifth Second Mid",
+          "harmonics": 288
+        },
+        {
+          "label": "F3 Fifth Second Late",
+          "harmonics": 288
+        }
+      ],
+      "maximum_primal_dual_error": 6.173370703521641e-10,
+      "maximum_phase_quadrature_error": 4.577566798522237e-16,
+      "maximum_decoder_error": 3.1556424140433137e-12,
+      "maximum_amplitude_normalized_error": 5.520025026667807e-14,
+      "all_aggregates_independently_verified": true,
+      "producer_sha256": "65bf37e0c543263fb50a36cb5616edfebc00c35233edcc86297ea4478b3aa39d",
+      "auditor_sha256": "776afc36a63951c90d1d022ff3b824e6f8f31fc8e3ce06f70a4bc628de1939bb"
+    }
+  },
+  "first_CDF_slope_audit_failure_exact_source_retained": true,
+  "repair": {
+    "first_failure": "real_audit1: inverse product-slope comparison at first source/order1",
+    "old_auditor_sha256": "832493af2ea7140e998fedf304da9584f99c203f2f56c1f9de3acee83f3a467c",
+    "new_auditor_sha256": "776afc36a63951c90d1d022ff3b824e6f8f31fc8e3ce06f70a4bc628de1939bb",
+    "explanation": "LP joint/r probabilities differ from literal cumulative-table adjacent differences by1.1102230246251565e-16. At first source/order1 the ideal-probability slope323905.6105327719 differs from actual-CDF323905.61053065007 by6.55e-12 relative. The decoder stores CDFs; the audit now separately bounds probability-to-CDF rounding and checks the actual table slope. No source, LP, decoder, model or numeric gate changes.",
+    "runtime_CDF_representation_verified_without_gate_change": true
+  },
+  "scientific_figures_individually_viewed": 1,
+  "review1_legend_occlusion_retained_review2_layout_only_data_exact": true,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "new_audio": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "parent_and_old_F2_F3_hearings": "independently pending; not repeated",
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "ADI_candidate_budget_claimed": false,
+  "full_goal": "active",
+  "next": "Find maximum-entropy/smooth interior conditional coupling at the same attainable moment, inspect actual slopes and amplitude-joint gaps, then generation through original observer; no sparse-LP audible promotion, blind rank/rho/strength sweep or new driver/spatial coupling. Full engines/states/Cport/physical7.1.4 remain incomplete.",
+  "manifest_sha256": "96417971cf502fc7caa3f472f85d636839c2c2c20f5c4e82bd8a67204ced3b1d",
+  "file_count": 2687,
+  "bytes": 234774655
+}
