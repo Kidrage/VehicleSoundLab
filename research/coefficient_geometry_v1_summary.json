@@ -1,0 +1,160 @@
+{
+  "result": "coefficient_geometry_mechanism_and_source_moments_verified",
+  "parent_commit": "dcf5ac70db8a8872f78f8288567373562fffe389",
+  "previous_goal_turn": "No synthesis progress: MCPS estimate revalidated. This stage establishes a controlled representation mechanism and six-source mismatch, changing the next synthesis action.",
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_exact": true,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "known_controls": 4,
+  "known_C_renders": 12,
+  "known_seeds": 3,
+  "known_576000frame_WAV_exact": true,
+  "known_PM_37_512_WAV_exact": true,
+  "real_anchors": 6,
+  "real_counterfactual_variants": 18,
+  "real_coefficient_rows": 240,
+  "real_DFT_complex_values": 138240,
+  "source_DOUBLE_rebuild_FLOAT_exact": true,
+  "known_audit": {
+    "result": "independent_coefficient_geometry_audit_passed",
+    "cases": [
+      {
+        "label": "steady",
+        "analytic_population_and_polynomial_moments_verified": true
+      },
+      {
+        "label": "AM_only",
+        "analytic_population_and_polynomial_moments_verified": true
+      },
+      {
+        "label": "PM_only",
+        "analytic_population_and_polynomial_moments_verified": true
+      },
+      {
+        "label": "AM_PM",
+        "analytic_population_and_polynomial_moments_verified": true
+      }
+    ],
+    "max_moment_error": 1.7763568394002505e-14,
+    "max_direct_DFT_error": 0.0,
+    "direct_DFT_complex_values": 0,
+    "max_direct_source_rebuild_error_FS": 0.0,
+    "max_C_sparse_error_FS": 7.19381557101606e-09,
+    "C_renders": 12,
+    "max_mean_normalized_moment_error": 2.6551889938420467e-15,
+    "stage": "known",
+    "producer_report_sha256": "02ef0695b8b449c90a6ad5cb5d68eb17d611a3ebcc9cb12a561dd969d03986b9",
+    "auditor_sha256": "bfce95e0d444b1c939159436f168e0aedae84ef00384e8f63f136d60f5a13632",
+    "timbre_or_runtime_replacement_qualified": false
+  },
+  "real_audit": {
+    "result": "independent_coefficient_geometry_audit_passed",
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "variants": 3,
+        "original_DOUBLE_FLOAT_and_all_DFT_verified": true
+      }
+    ],
+    "max_moment_error": 2.371692252312041e-20,
+    "max_direct_DFT_error": 1.9943932818123534e-14,
+    "direct_DFT_complex_values": 138240,
+    "max_direct_source_rebuild_error_FS": 1.3322676295501878e-15,
+    "max_C_sparse_error_FS": 0.0,
+    "C_renders": 0,
+    "max_mean_normalized_moment_error": 1.8295140949020058e-15,
+    "stage": "real",
+    "producer_report_sha256": "1e26fc74460c4d924a09c7c58a4587651696b02cd07ea4b849f22a082845c7ba",
+    "auditor_sha256": "bfce95e0d444b1c939159436f168e0aedae84ef00384e8f63f136d60f5a13632",
+    "timbre_or_runtime_replacement_qualified": false
+  },
+  "observations": {
+    "known_phase_only_population_CV": 0.3250553568164581,
+    "known_phase_only_uniform_interpolation_CV": 0.3405735766490775,
+    "known_phase_only_C_HF_std_dB": [
+      0.4387405947210122,
+      0.4535190266359551
+    ],
+    "F3_observed_CV": [
+      0.10204793656320815,
+      0.39966539354051683
+    ],
+    "F3_population_Gaussian_CV": [
+      0.4175138795337012,
+      0.7352022682382421
+    ],
+    "F3_original_model_uniform_CV": [
+      0.42275185629900186,
+      0.7386462715265593
+    ],
+    "F3_population_Gaussian_to_observed_CV_ratio": [
+      1.4020836658854292,
+      4.46346722467815
+    ],
+    "F3_phase_only_original_model_uniform_CV": [
+      0.37658411436967343,
+      0.7250575122948419
+    ],
+    "F3_amplitude_only_original_model_uniform_CV": [
+      0.15344933464723523,
+      0.37043090173194504
+    ],
+    "F3_uniform_interpolation_vs_checkpoint_absolute_CV_change": [
+      4.0257140524802004e-05,
+      0.00014149706937083284
+    ],
+    "F3_Gaussian_CV_larger_than_observed_coordinates": 48,
+    "coordinates": 48,
+    "physical_phase_contribution_fraction_identified": false,
+    "electronic_timbre_cause_proven": false,
+    "replacement_or_new_hearing": false
+  },
+  "known_near_empty_FFT_log_audit_failure_retained": true,
+  "weak_band_mean_normalized_gate_added": true,
+  "all_attempts_retained": true,
+  "scientific_figures_viewed": 2,
+  "source_counterfactual_is_physical_component": false,
+  "coefficient_power_is_native_waveform_power": false,
+  "electronic_timbre_cause_proven": false,
+  "heard": false,
+  "new_audio_candidate": false,
+  "runtime_DSP_model_default_driver_owned_take_room_changed": false,
+  "unchanged_68CTest_not_repeated": true,
+  "F2_F3_hearings": "independently pending; no repeat or blind strengths",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "full_goal": "active",
+  "next": "Separately qualify positive amplitude and phase representation: known AM/PM no cross-talk, then six-source mean/fourth/stereo/time evidence before offline audio/C adoption. Do not revive rejected A magnitude models, simply delete shared factors or add independent HF noise.",
+  "manifest_sha256": "013d8fac68b897af45ac4f57226d74b7aec185e82c55c24dd3ab10b475c02bf8",
+  "file_count": 1045,
+  "bytes": 79661334
+}

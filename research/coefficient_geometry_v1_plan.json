@@ -1,0 +1,44 @@
+{
+  "schema": "vsl.coefficient-geometry/1",
+  "parent_commit": "dcf5ac7",
+  "previous_goal_turn": "No synthesis progress: ADI MCPS inputs were revalidated, with no DSP/model changes. Resume the declared coefficient-geometry test.",
+  "purpose": "Test whether Gaussian complex-coefficient closure followed by magnitude creates amplitude motion from phase-only observations; quantify, without causal listening claims, on all six frozen F3 fifth anchors.",
+  "known": {
+    "rows": 64, "harmonics": 288, "components_cap": 12, "root_hz": 64,
+    "orders": [64,110,140,190], "amplitudes_L": [0.04,0.035,0.03,0.025],
+    "right_amplitude_ratio": 0.72, "base_phase_L": [0.2,-0.4,0.65,-0.8],
+    "right_phase_offset": 0.3, "AM_depth": 0.25, "PM_radians": 0.5,
+    "AM_sign": [1,-1,-1,1], "PM_sign": [1,1,-1,-1],
+    "cases": ["steady","AM_only","PM_only","AM_PM"],
+    "C_frames": 192000, "C_analysis_first": 48000, "seeds": [1,23117,61927],
+    "C_block": 512, "block_identity_case": "PM_only", "identity_block": 37,
+    "reference": "Exact coefficient populations, not a resampled or window-estimated training waveform. Original factorize/compiler and original C SaVoice only."
+  },
+  "real": {
+    "bank_plan": "research/F3_local_atlas_v1_plan.json",
+    "variants": ["full","phase_only","amplitude_only"],
+    "reconstruction": "Rebuild the original double normalized waveform using saved native FLOAT, original source_seconds coordinates and original cutoff/render_positions; decoded normalized FLOAT must match exactly. No new clock, resampling rule, fit window, source model or render.",
+    "phase_only": "Each harmonic/channel keeps its observed unit complex direction but magnitude is replaced by its original RMS magnitude. This is an explanatory counterfactual, not a physical component or a proposed preset.",
+    "amplitude_only": "Keep observed magnitudes, replace direction by fixed original mean phase (zero when undefined). Counterfactual only.",
+    "closures": ["empirical_population_full_covariance_Gaussian","original_factor_model_checkpoint_Gaussian","original_factor_model_uniform_interpolation_phase_Gaussian"],
+    "full_model": "Use frozen original runtime model; counterfactuals may call original factorize only in analysis memory. No counterfactual asset exported to voices."
+  },
+  "bands_hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "power_definition": "Coefficient-domain Q_b,c = sum_h_in_band |z_h,c|^2/2. This omits finite waveform-window leakage, cross-harmonic beats and phase evolution; never call it measured acoustic power or independently separated noise.",
+  "moment_definition": "Empirical populations use denominator N. Compiler uses N-1. Both retained explicitly. Gaussian quadratic moments are exact for the stated distribution, not predictions of finite-record sampling variability.",
+  "interpolation": "nu_rho(u)=3/(2+rho)*[(1-u)^2+u^2+2rho*u*(1-u)]. Integrate conditional covariance plus covariance of conditional means over uniform u using exact degree4 quadrature. Uniform u is a distributional diagnostic, not exact sampled C fractions or temporal-covariance qualification.",
+  "gates": {
+    "known_rows_absolute": 1e-15,
+    "coefficient_DFT_absolute": 1e-12,
+    "moments_absolute": 2e-15,
+    "moments_relative": 2e-9,
+    "marginal_covariance_absolute": 1e-16,
+    "marginal_covariance_relative": 2e-9,
+    "source_double_rebuild_FLOAT_exact": true,
+    "C_sparse_rounding": "0.5001 float32 ULP + 2e-9 FS",
+    "known_PM_C_each_HF_band_std_min_dB": 0.05,
+    "known_steady_C_each_HF_band_std_max_dB": 0.001
+  },
+  "decision": "A positive PM control proves a representation mechanism only. Real fourth-moment discrepancies must preserve signed differences and distinguish full covariance closure, factor truncation, N-1 and interpolation. Do not infer phase-only contribution fractions, claim the cause of electronic timbre, revive rejected A magnitude models, or promote a runtime replacement from these diagnostics alone.",
+  "preserve": "670C/H82voice/F2/C-index exact; no defaults/driver/owned/take/room/accepted moving35/old hearings changed. No media download, push or repeated unchanged68CTest. Keep V6 layers, one controller and future source/event/spatial separation. Full multi-engine/full-state/physical7.1.4 goal remains active."
+}
