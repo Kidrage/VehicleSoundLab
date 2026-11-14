@@ -9,14 +9,17 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
     AdCapture capture={0};
     if(frames>512)return -1;
     if(a->transport==2) {
-        unsigned n=at_player_process(&a->player,pcm,frames,telemetry),i;
+        unsigned n=at_player_process_layers(&a->player,pcm,frames,telemetry,a->layers),i;
         if(n!=frames)return -1;
+        a->canonical_hash=at_hash_samples(a->canonical_hash,pcm,frames*2);
+        if(!lm_listen_set(&a->listen,am_audio_listen_get(a))||!lm_listen_process(&a->listen,pcm,a->layers,frames))return -1;
         if(stopping||a->cancel_release) {
             InterlockedExchange(&a->replay_result,2);
             for(i=0;i<frames;++i){float gain=(float)(480-a->cancel_release)/480;
                 pcm[2*i]*=gain;pcm[2*i+1]*=gain;if(a->cancel_release<480)++a->cancel_release;}
         }
         EnterCriticalSection(&a->lock);a->control=a->player.current;a->latest=telemetry[frames-1];LeaveCriticalSection(&a->lock);
+        if(a->heard){uint64_t at=a->player.render.frame-frames;if(at+frames>a->capture_frames)return -1;memcpy(a->heard+2*at,pcm,frames*2*sizeof(float));}
         return a->cancel_release==480||at_player_complete(&a->player)?1:0;
     }
     EnterCriticalSection(&a->lock);control=a->control;generation=a->generation;LeaveCriticalSection(&a->lock);
@@ -44,8 +47,9 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
         if(a->render.drive.config.idle_profile||a->render.drive.config.fine_idle_profile){capture.idle_raw=a->idle_raw;capture.idle=a->idle;}
         if(a->render.drive.config.fine_idle_profile){capture.idle_modal=a->idle_modal;capture.idle_detail=a->idle_detail;}
     }
-    capture.telemetry=telemetry;
+    capture.telemetry=telemetry;capture.layers=a->layers;
     if(!am_render_process(&a->render,pcm,frames,stopping,&capture))return -1;
+    a->canonical_hash=at_hash_samples(a->canonical_hash,pcm,frames*2);
     if(a->transport==1)a->source_hash=at_hash_sources(a->source_hash,&capture,frames);
     if(a->capture) {
         uint64_t start=a->render.frame-frames;
@@ -53,17 +57,20 @@ static int process(void *context,float *pcm,unsigned frames,int stopping) {
         memcpy(a->capture+2*start,pcm,frames*2*sizeof(float));
     }
     EnterCriticalSection(&a->lock);a->latest=telemetry[frames-1];LeaveCriticalSection(&a->lock);
+    if(!lm_listen_set(&a->listen,am_audio_listen_get(a))||!lm_listen_process(&a->listen,pcm,a->layers,frames))return -1;
+    if(a->heard){uint64_t at=a->render.frame-frames;if(at+frames>a->capture_frames)return -1;memcpy(a->heard+2*at,pcm,frames*2*sizeof(float));}
     return a->render.release==480?1:0;
 }
 static void submitted(void *context,unsigned frames,uint64_t hash) {
-    AmAudio *a=context;
-    if(a->transport==1&&!at_take_commit(&a->take,frames,hash,a->source_hash))a->take.overflow=1;
+    AmAudio *a=context;(void)hash; /*Device hash describes the heard solo; record full mix. */
+    if(a->transport==1&&!at_take_commit(&a->take,frames,a->canonical_hash,a->source_hash))a->take.overflow=1;
     if(a->transport==2&&at_player_complete(&a->player)&&!a->cancel_release)
-        InterlockedExchange(&a->replay_result,at_player_verified(&a->player)&&hash==a->take.audio_hash?1:-1);
+        InterlockedExchange(&a->replay_result,at_player_verified(&a->player)&&a->canonical_hash==a->take.audio_hash?1:-1);
 }
 void am_audio_init(AmAudio *a,const AdConfig *config) {
     memset(a,0,sizeof *a);InitializeCriticalSection(&a->lock);a->config=*config;
     a->control=am_default_control();wo_init(&a->device,process,a);
+    lm_listen_init(&a->listen,0);
     a->device.submitted=submitted;
 }
 int am_audio_control(AmAudio *a,const AdControl *c) {
@@ -77,6 +84,13 @@ AdControl am_audio_get(AmAudio *a) {
 AdTelemetry am_audio_latest(AmAudio *a) {
     AdTelemetry t;EnterCriticalSection(&a->lock);t=a->latest;LeaveCriticalSection(&a->lock);return t;
 }
+int am_audio_listen_set(AmAudio *a,int selection) {
+    if(!a||!lm_selection_valid(selection))return 0;
+    EnterCriticalSection(&a->lock);a->listen_selection=selection;LeaveCriticalSection(&a->lock);return 1;
+}
+int am_audio_listen_get(AmAudio *a) {
+    int selection;EnterCriticalSection(&a->lock);selection=a->listen_selection;LeaveCriticalSection(&a->lock);return selection;
+}
 int am_audio_start(AmAudio *a,int muted,uint64_t limit) {
     AdControl control;
     am_audio_stop(a);a->transport=0;control=am_audio_get(a);
@@ -84,6 +98,7 @@ int am_audio_start(AmAudio *a,int muted,uint64_t limit) {
        supported by the portable renderer through a separate offline host. */
     if(a->config.channels!=2)return 0;
     if(!am_render_init(&a->render,&a->engine,&a->config,&control))return 0;
+    a->canonical_hash=AT_HASH_INITIAL;lm_listen_init(&a->listen,am_audio_listen_get(a));
     a->adopted=UINT64_MAX;a->stop_frame=UINT64_MAX;a->trace_count=a->trace_overflow=0;
     EnterCriticalSection(&a->lock);memset(&a->latest,0,sizeof a->latest);LeaveCriticalSection(&a->lock);
     return wo_start(&a->device,muted,limit);
@@ -95,12 +110,14 @@ int am_audio_record(AmAudio *a,int muted,uint64_t limit) {
     if(!at_take_begin(&candidate,&a->config,&c)||!am_render_init(&a->render,&a->engine,&candidate.assets->config,&c)){
         at_take_free(&candidate);return 0;}
     at_take_free(&a->take);a->take=candidate;a->ready=0;a->transport=1;a->source_hash=AT_HASH_INITIAL;
+    a->canonical_hash=AT_HASH_INITIAL;lm_listen_init(&a->listen,am_audio_listen_get(a));
     a->adopted=UINT64_MAX;a->stop_frame=UINT64_MAX;a->trace_count=a->trace_overflow=0;
     return wo_start(&a->device,muted,limit?limit:AT_MAX_FRAMES);
 }
 int am_audio_replay(AmAudio *a,int muted) {
     am_audio_stop(a);
     if(!a->ready||!at_player_init(&a->player,&a->engine,&a->take,2))return 0;
+    a->canonical_hash=AT_HASH_INITIAL;lm_listen_init(&a->listen,am_audio_listen_get(a));
     a->transport=2;a->cancel_release=0;InterlockedExchange(&a->replay_result,0);
     return wo_start(&a->device,muted,a->take.frames);
 }

@@ -28,6 +28,7 @@ file(GLOB_RECURSE at_render_files CONFIGURE_DEPENDS
   "${VSL_ROOT}/modules/partitioned_fir/*.c" "${VSL_ROOT}/modules/partitioned_fir/*.h"
   "${VSL_ROOT}/modules/spectral_texture/*.c" "${VSL_ROOT}/modules/spectral_texture/*.h"
   "${VSL_ROOT}/modules/fine_idle_layer/*.c" "${VSL_ROOT}/modules/fine_idle_layer/*.h"
+  "${VSL_ROOT}/modules/layer_monitor/*.c" "${VSL_ROOT}/modules/layer_monitor/*.h"
   "${VSL_ROOT}/modules/atlas_drive/*.c" "${VSL_ROOT}/modules/atlas_drive/*.h"
   "${VSL_ROOT}/modules/atlas_monitor/*.c" "${VSL_ROOT}/modules/atlas_monitor/*.h"
   "${VSL_ROOT}/modules/atlas_take/*.c" "${VSL_ROOT}/modules/atlas_take/*.h")

@@ -1,0 +1,8 @@
+add_library(layer_monitor STATIC split.c listen.c)
+target_include_directories(layer_monitor PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_compile_features(layer_monitor PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(layer_monitor PRIVATE /W4 /we4013 /utf-8)
+else()
+  target_compile_options(layer_monitor PRIVATE -Wall -Wextra -Wpedantic)
+endif()

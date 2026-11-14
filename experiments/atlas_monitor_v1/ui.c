@@ -24,7 +24,7 @@ static RvsProfile stereo_profile;
 static FrModels full_recipe;
 static IdModels idle_models;static int idle_study;
 static FidModels fine_idle_models;static int fine_idle_study;
-static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary;
+static HWND slider[9],label[9],status,telemetry,voice,mode,gear,auxiliary,listen_choice;
 static HFONT font,heading;static int muted,bank_index,auxiliary_index;
 static const int minimum[]={0,0,700,-24,0,0,0,0,0},maximum[]={100,100,8500,0,100,100,100,100,100},initial[]={0,0,1200,-6,70,0,0,0,0};
 static double *aux_amount(AdControl *c,int index) {
@@ -57,6 +57,7 @@ static void labels(HWND owner) {
     swprintf(text,128,L"声层量    %.0f%%",*aux_amount(&c,auxiliary_index)*100);SetWindowTextW(label[8],text);
     SendMessageW(slider[8],TBM_SETPOS,TRUE,(int)(*aux_amount(&c,auxiliary_index)*100));
     EnableWindow(auxiliary,!playing);
+    SendMessageW(listen_choice,CB_SETCURSEL,am_audio_listen_get(&audio),0);
     for(i=0;i<9;++i)EnableWindow(slider[i],!playing);
     EnableWindow(slider[6],!playing&&(resonant_study?audio.config.resonant_bank!=NULL:audio.config.residual_bank!=NULL));
     SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100));
@@ -135,7 +136,11 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)L"自动挡 · 运动");SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)L"空挡 N");
         for(i=1;i<=7;++i){wchar_t text[32];swprintf(text,32,L"手动 %d 挡",i);SendMessageW(gear,CB_ADDSTRING,0,(LPARAM)text);}
         SendMessageW(gear,CB_SETCURSEL,0,0);
-        telemetry=item(owner,L"STATIC",L"0 RPM    0.0 km/h    N",0,60,24,153,510,32);
+        telemetry=item(owner,L"STATIC",L"0 RPM    0.0 km/h    N",0,60,24,153,245,32);
+        listen_choice=item(owner,WC_COMBOBOXW,L"",CBS_DROPDOWNLIST|WS_TABSTOP,44,289,153,245,240);
+        {static const wchar_t *names[]={L"完整混音",L"DNA · 干声",L"低频 · 干声",L"细节 · 干声",L"辅助 · 干声",L"启停／事件 · 干声",L"其他声源 · 干声"};
+            for(i=0;i<LM_SELECTIONS;++i)SendMessageW(listen_choice,CB_ADDSTRING,0,(LPARAM)names[i]);
+            SendMessageW(listen_choice,CB_SETCURSEL,0,0);}
         for(i=0;i<9;++i) {
             int y=194+52*i;
             label[i]=item(owner,L"STATIC",L"",0,70+i,24,y,i==8?240:510,25);
@@ -161,11 +166,11 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
         item(owner,L"BUTTON",L"开始／重新监听",BS_PUSHBUTTON|WS_TABSTOP,10,24,712,204,40);
         item(owner,L"BUTTON",L"点火",BS_PUSHBUTTON|WS_TABSTOP,12,244,712,134,40);
         item(owner,L"BUTTON",L"停止",BS_PUSHBUTTON|WS_TABSTOP,11,394,712,140,40);
-        item(owner,L"BUTTON",L"录制新行程",BS_PUSHBUTTON|WS_TABSTOP,13,24,764,158,36);
+        item(owner,L"BUTTON",L"录制完整行程",BS_PUSHBUTTON|WS_TABSTOP,13,24,764,158,36);
         item(owner,L"BUTTON",L"保存行程",BS_PUSHBUTTON|WS_TABSTOP,14,194,764,158,36);
         item(owner,L"BUTTON",L"载入回放",BS_PUSHBUTTON|WS_TABSTOP,15,364,764,170,36);
         status=item(owner,L"STATIC",L"已停止 · 先开始监听，再点火",0,61,24,813,510,30);
-        item(owner,L"STATIC",idle_study?L"怠速候选可切换 · 转速与负载待标定":resonant_study==3?L"行驶局部配方 · 怠速与加速声纹待完善":resonant_study?L"局部低转细节 · 转速映射待标定":L"声层独立调节 · 音色仍在完善",0,0,24,854,510,27);
+        item(owner,L"STATIC",L"分层只影响监听 · 行程保存完整混音",0,0,24,854,510,27);
         labels(owner);SetTimer(owner,1,40,NULL);return 0;
     }
     case WM_HSCROLL: {
@@ -208,6 +213,9 @@ static LRESULT CALLBACK procedure(HWND owner,UINT message,WPARAM w,LPARAM l) {
             int selected=(int)SendMessageW(auxiliary,CB_GETCURSEL,0,0);
             if(selected>=0&&selected<(fine_idle_study?8:catch_study?7:startup_study||idle_study?6:5))auxiliary_index=selected;
             labels(owner);return 0;
+        }
+        if(id==44&&notify==CBN_SELCHANGE) {
+            am_audio_listen_set(&audio,(int)SendMessageW(listen_choice,CB_GETCURSEL,0,0));return 0;
         }
         break;
     }

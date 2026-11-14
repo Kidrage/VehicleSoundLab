@@ -1,0 +1,78 @@
+{
+  "schema": "vsl.layer-monitor-freeze/1",
+  "result": "dry_monitor_and_canonical_recording_verified",
+  "git_parent": "8edd49ad15ab80a6980475ecfecc2aba266c03cd",
+  "C_H_total": 627,
+  "C_H_modified": 9,
+  "C_H_added": 8,
+  "C_H_old_unchanged": 610,
+  "voices_unchanged": 67,
+  "distinct_CTests": 63,
+  "canonical_old_new_cases": 4,
+  "canonical_old_new_frames": 1536492,
+  "canonical_old_new_pcm_trace_and_hashes_exact": true,
+  "source_and_dry_layers_2_12_exact": true,
+  "max_dry_sum_error": 7.3196133598685265e-09,
+  "monitor_choices": 7,
+  "ramp_frames": 864,
+  "take_schema": 10,
+  "take_fields": 32,
+  "device": {
+    "result": "pass",
+    "muted": true,
+    "frames": 288123,
+    "schema": 10,
+    "fields": 32,
+    "control_events": 4,
+    "owned_models_destroyed": true,
+    "record_solos": 7,
+    "replay_solos": 6,
+    "canonical_portable_pcm_exact": true,
+    "canonical_hash": "cb26208b3a648bfc",
+    "heard_record_hash": "f3774ae72f457d11",
+    "heard_solo_replay_hash": "408df61a089f7cd0",
+    "heard_full_replay_hash": "cb26208b3a648bfc",
+    "queue_empty": [
+      0,
+      0,
+      0
+    ],
+    "over_budget": [
+      0,
+      0,
+      0
+    ],
+    "max_ms": [
+      5.7585,
+      6.168,
+      6.4919
+    ],
+    "cancel_frames": 13312
+  },
+  "UI": {
+    "result": "pass",
+    "checks": 27,
+    "failed_line": 0,
+    "own_program_controls": true,
+    "audio_started": false,
+    "manual_mouse_verified": false
+  },
+  "own_window_png_visually_reviewed": true,
+  "independent_computer_use_unavailable": true,
+  "old_schema10_frozen_player_verified": true,
+  "new_player_rejects_old_identity": true,
+  "first_attempts_preserved": [
+    "old_build1 missing fixture stop_frame",
+    "focused1 Winsock listen identifier collision; concurrent probe fixture edit"
+  ],
+  "timbre_changed": false,
+  "pending_idle_complex75_promoted": false,
+  "new_timbre_accepted": false,
+  "actual_7_1_4_verified": false,
+  "next": "Judge pending material-derived idle rhythm candidate; then independent C transplant if supported, idle transitions and source-evidenced acceleration.",
+  "full_goal": "active",
+  "freeze": "baselines/layer_monitor_v1",
+  "manifest_sha256": "a9aa5e035c5b42a5b6f5f527f10300d6493c2b41f0f678ca750111ad5164324f",
+  "file_count": 5165,
+  "bytes": 208585934
+}

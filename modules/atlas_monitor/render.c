@@ -19,6 +19,7 @@ static int process(AmRender *r,float *out,unsigned frames,int stop,const AdCaptu
             gain*=1-r->release/480.;
         }
         for(c=0;c<r->drive.config.channels;++c)out[n*r->drive.config.channels+c]*=(float)gain;
+        if(capture&&capture->layers)for(c=0;c<LM_SAMPLES;++c)capture->layers[n*LM_SAMPLES+c]*=(float)gain;
         ++r->frame;
     }
     return 1;

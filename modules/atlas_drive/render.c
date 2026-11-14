@@ -1,4 +1,5 @@
 #include "render.h"
+#include "layer_monitor/split.h"
 #include "core/engine.h"
 #include "core/modules.h"
 #include "drive/drive.h"
@@ -188,6 +189,18 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             if(resonant[c]!=0)observation[c]+=resonant[c];
             if(coherent[c]!=0)observation[c]+=coherent[c];
             if(added[c]!=0)observation[c]+=added[c];
+        }
+        if(cap->layers) {
+            LmSources taps={0};
+            for(c=0;c<2;++c) {
+                taps.dna[c]=source.dna[c];taps.body[c]=source.low[c];taps.residual[c]=residual[c];
+                taps.resonant[c]=resonant[c];taps.coherent[c]=coherent[c];taps.aux[c]=aux[c];
+                taps.starter[c]=starter[c];taps.catch_delta[c]=catch_delta[c];taps.added[c]=added[c];
+                taps.idle_modal[c]=idle.modal[c];taps.idle_detail[c]=idle.detail[c];
+            }
+            taps.event=event;taps.gain=s->gain;taps.fine_idle=s->config.fine_idle_profile!=NULL;
+            if(taps.fine_idle)taps.idle_scale=s->envelope*idle.weight*s->config.fine_idle_profile->level_gain;
+            lm_split(&taps,cap->layers+n*LM_SAMPLES);
         }
         memset(&objects,0,sizeof objects);memset(&residual_objects,0,sizeof residual_objects);
         if(s->config.scene_mode==AD_SCENE_OBJECTS) {

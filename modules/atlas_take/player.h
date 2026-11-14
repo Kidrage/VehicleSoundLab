@@ -24,6 +24,8 @@ int at_player_init(AtPlayer *player,VslEngine *owner,const AtTake *take,int chan
 /* Non-RT; dispose before re-init or freeing the borrowed take. */
 void at_player_dispose(AtPlayer *player);
 unsigned at_player_process(AtPlayer *player,float *output,unsigned frames,AdTelemetry *telemetry);
+/* Optional dry stem presentation tap; hashes remain canonical full output. */
+unsigned at_player_process_layers(AtPlayer *player,float *output,unsigned frames,AdTelemetry *telemetry,float *layers);
 int at_player_complete(const AtPlayer *player);
 int at_player_verified(const AtPlayer *player);
 #endif

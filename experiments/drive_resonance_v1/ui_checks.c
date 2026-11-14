@@ -3,6 +3,7 @@
 #include <commctrl.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #define CHECK(x) do{++checks;if(!(x)){line=__LINE__;goto done;}}while(0)
 /* Own-program controls/window only. No external desktop automation. */
 static int capture(HWND w,const wchar_t *path) {
@@ -22,6 +23,19 @@ int am_resonant_ui_check(HWND w,AmAudio *a,const wchar_t *path) {
     CHECK(a->config.resonant_bank&&!a->config.residual_bank&&a->config.scene_mode==AD_SCENE_STEREO_BED);
     CHECK(!a->device.running&&!c.drive.ignition&&c.drive.mode==VSL_BENCH&&c.mix.resonant_gain==(a->config.recipe_bank?1:0)&&c.mix.room==0);
     CHECK(IsWindowEnabled(detail)&&!IsWindowEnabled(GetDlgItem(w,40)));
+    {
+        HWND listen=GetDlgItem(w,44);AdControl before=am_audio_get(a);uint64_t generation=a->generation;
+        CHECK(listen&&IsWindowEnabled(listen)&&SendMessageW(listen,CB_GETCOUNT,0,0)==LM_SELECTIONS);
+        CHECK(SendMessageW(listen,CB_GETCURSEL,0,0)==0&&am_audio_listen_get(a)==0);
+        for(int choice=0;choice<LM_SELECTIONS;++choice) {
+            SendMessageW(listen,CB_SETCURSEL,choice,0);
+            SendMessageW(w,WM_COMMAND,MAKEWPARAM(44,CBN_SELCHANGE),(LPARAM)listen);
+            c=am_audio_get(a);
+            CHECK(am_audio_listen_get(a)==choice&&a->generation==generation&&!memcmp(&c,&before,sizeof c));
+        }
+        SendMessageW(listen,CB_SETCURSEL,0,0);
+        SendMessageW(w,WM_COMMAND,MAKEWPARAM(44,CBN_SELCHANGE),(LPARAM)listen);
+    }
     CHECK(SendMessageW(GetDlgItem(w,40),CB_GETCURSEL,0,0)==0);
     {
         wchar_t text[128];SendMessageW(GetDlgItem(w,40),CB_GETLBTEXT,0,(LPARAM)text);

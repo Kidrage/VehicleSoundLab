@@ -9,7 +9,7 @@ int at_player_init(AtPlayer *p,VslEngine *owner,const AtTake *t,int channels) {
     p->audio_hash=p->source_hash=AT_HASH_INITIAL;
     return am_render_init(&p->render,owner,&p->config,&initial);
 }
-unsigned at_player_process(AtPlayer *p,float *out,unsigned frames,AdTelemetry *telemetry) {
+unsigned at_player_process_layers(AtPlayer *p,float *out,unsigned frames,AdTelemetry *telemetry,float *layers) {
     unsigned done=0;const AtTake *t;
     if(!p||!p->take||(frames&&!out))return 0;t=p->take;
     while(done<frames&&p->render.frame<t->frames){
@@ -33,12 +33,16 @@ unsigned at_player_process(AtPlayer *p,float *out,unsigned frames,AdTelemetry *t
         if(p->config.idle_profile||p->config.fine_idle_profile){c.idle_raw=p->idle_raw;c.idle=p->idle;}
         if(p->config.fine_idle_profile){c.idle_modal=p->idle_modal;c.idle_detail=p->idle_detail;}
         if(telemetry)c.telemetry=telemetry+done;
+        if(layers)c.layers=layers+done*LM_SAMPLES;
         if(!am_render_process(&p->render,out+done*p->config.channels,n,at>=t->stop_frame,&c))return done;
         p->source_hash=at_hash_sources(p->source_hash,&c,n);
         p->audio_hash=at_hash_samples(p->audio_hash,out+done*p->config.channels,n*p->config.channels);
         done+=n;
     }
     return done;
+}
+unsigned at_player_process(AtPlayer *p,float *out,unsigned frames,AdTelemetry *telemetry) {
+    return at_player_process_layers(p,out,frames,telemetry,NULL);
 }
 int at_player_complete(const AtPlayer *p) {return p&&p->take&&p->render.frame==p->take->frames;}
 int at_player_verified(const AtPlayer *p) {

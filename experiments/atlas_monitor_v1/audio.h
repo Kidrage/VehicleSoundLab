@@ -4,6 +4,7 @@
 #include "core/engine.h"
 #include "win_output/device.h"
 #include "atlas_take/player.h"
+#include "layer_monitor/listen.h"
 #define AM_TRACE_CAPACITY 2048
 typedef struct { uint64_t frame;AdControl control; } AmEvent;
 typedef struct {
@@ -17,7 +18,11 @@ typedef struct {
     WoDevice device;
     float *capture;size_t capture_frames;
     AtTake take;AtPlayer player;
-    uint64_t source_hash;
+    uint64_t source_hash,canonical_hash; /*Canonical full recording, before monitoring. */
+    int listen_selection;
+    LmListen listen;
+    float layers[512*LM_SAMPLES];
+    float *heard; /*Optional actual monitored capture, same capture_frames capacity. */
     int transport,ready;
     unsigned cancel_release;
     volatile LONG replay_result; /*0pending,1verified,-1failed,2cancelled. */
@@ -35,6 +40,9 @@ void am_audio_init(AmAudio *audio,const AdConfig *config);
 int am_audio_control(AmAudio *audio,const AdControl *control);
 AdControl am_audio_get(AmAudio *audio);
 AdTelemetry am_audio_latest(AmAudio *audio);
+/* Presentation only; allowed while replaying. Does not append take controls. */
+int am_audio_listen_set(AmAudio *audio,int selection);
+int am_audio_listen_get(AmAudio *audio);
 int am_audio_start(AmAudio *audio,int muted,uint64_t frame_limit);
 int am_audio_record(AmAudio *audio,int muted,uint64_t frame_limit);
 int am_audio_replay(AmAudio *audio,int muted);

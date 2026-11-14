@@ -14,6 +14,7 @@
 #include "source.h"
 #include "modal_layer/state.h"
 #include "fine_idle_layer/state.h"
+#include "layer_monitor/layers.h"
 
 typedef enum { AD_SCENE_OBJECTS, AD_SCENE_STEREO_BED } AdSceneMode;
 
@@ -74,6 +75,7 @@ typedef struct {
     float *source_added; /* Optional processor's added stereo stem, before width/master. */
     float *idle_raw,*idle; /* Typed idle before/after gate, amount and envelope; before master. */
     float *idle_modal,*idle_detail; /* Fine-idle controlled core/detail before outer gate. */
+    float *layers; /*frame-major six dry stereo buses, after master, before transport. */
 } AdCapture;
 typedef struct {
     SaVoice dna;
