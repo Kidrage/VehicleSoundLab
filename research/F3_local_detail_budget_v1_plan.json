@@ -1,0 +1,22 @@
+{
+  "schema": "vsl.local-native-stereo-budget/1",
+  "parent_commit": "0ea497b",
+  "previous_goal_turn": "Progress: two separate frozen local atlases were integrated into the original native driver, owned presets and embedded takes, with source contracts and compatibility verified.",
+  "purpose": "Measure missing broadband power and joint-channel structure at ALL six local fifth-gear anchors, using actual original-time samples, before choosing a detail-generation architecture. Do not tune or promote a candidate from this measurement.",
+  "cases": [
+    {"group":"first","point":"early","parent":"F3_pitch_anchors_v1","case":"F3 Fifth First Early"},
+    {"group":"first","point":"mid","parent":"F3_fifth_voice_v1","case":"F3 Fifth First Mid"},
+    {"group":"first","point":"late","parent":"F3_pitch_anchors_v1","case":"F3 Fifth First Late"},
+    {"group":"second","point":"early","parent":"F3_pitch_anchors_v1","case":"F3 Fifth Second Early"},
+    {"group":"second","point":"mid","parent":"F3_fifth_voice_v1","case":"F3 Fifth Second Mid"},
+    {"group":"second","point":"late","parent":"F3_pitch_anchors_v1","case":"F3 Fifth Second Late"}
+  ],
+  "reference": "Use ceil(first frozen source_seconds) through floor(last source_seconds), inclusive, relative to native.wav's registered start. No phase/clock/window refit, waveform resampling, denoising, normalization or gain. Frozen reference.wav retained as a separate processing-chain diagnostic, not ground-truth physical source.",
+  "C": {"protocol":"vsl.sound-dna-bandlimited-export/1","seconds":8,"seeds":[1,23117,61927],"root":"Each frozen native acoustic root, not RPM", "probe":"baselines/bandlimited_dna_v1/evidence/bin/sound_dna_bandlimited_export.exe","blocks":512,"chunk_start_seconds":[0.5,3.0,6.0],"chunk_frames":"exactly the native aperture sample count","detail":1,"gain":1},
+  "measurement": {"rate":48000,"window_samples":4096,"hop_samples":1024,"fft_samples":8192,"detrend":false,"window":"periodic Hann","cross_convention":"L*conj(R)","bands_hz":[[28,120],[120,400],[400,1200],[1200,3000],[3000,6000],[6000,8000],[8000,10000],[10000,14000]]},
+  "decision": "Save all unmodified Hermitian P_native-P_C matrices, literal eigenvalues, and positive-definiteness for nine equal-duration C chunks and their mean. Positive diagonals alone do not qualify independent additive stereo detail. Report seed/time spread without interpreting it as independent source confidence. Compare band power, signed normalized cross-spectrum, and side/mid power; no waveform null or realism score.",
+  "known_before_source": ["Mono and gain-asymmetric analytic tones", "Quadrature and signed positive-frequency delay", "Positive and indefinite 2x2 debts with equal positive diagonals"],
+  "verification": {"known_matrix_FS2":1e-12,"known_control_phase":1e-10,"independent_all_band_absolute_FS2":1e-17,"independent_all_band_relative":5e-12,"direct_selected_DFT_amplitude":1e-9,"audit_bins":"first/middle/last FFT bin of every band, every window and channel of all saved inputs","independent_method":"SciPy Welch and reversed CSD on all inputs, explicit trigonometric DFT on selected bins, direct M/S spectra and analytic 2x2 eigenvalues"},
+  "limits": ["Short training apertures, not independent recordings or held-out engine states", "Pitch is changing in raw sources and fixed in C; no causal explanation of differences from matrices alone", "Recorded cabin/road/wind/codec content is mixed with the engine", "No universal noise-addition recipe inferred from additive feasibility", "No cyclic law, measured RPM/load, physical source separation or7.1.4 claim"],
+  "preserve": "All667C/H,82voices,protectedF2,accepted moving35,default UI/takes/players and pending F2/F3 hearings; no new C/parameter/DSP change, download, push or unchanged68CTest repeat."
+}
