@@ -1,0 +1,158 @@
+{
+  "schema": "vsl.idle-shape-freeze/1",
+  "result": "small_source_shape_candidate_weak_gain_NOT_adopted",
+  "parent_commit": "8b557c73b3603ff1d1ddb344dadcf9cd5e232dc0",
+  "seeds": [
+    149921,
+    277139,
+    381611
+  ],
+  "amounts": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "seconds_each": 24,
+  "all3frozen_zero_samples_exact": true,
+  "all72windows_observed": true,
+  "all12old_cyclic_curves_exact": true,
+  "all3seeds_allamounts_native_independent_audit": true,
+  "source_and_control_branch_fits": 4,
+  "shape_bounds": {
+    "exponent_lower": [
+      -0.18719582719539718,
+      -0.1862998676699074,
+      -0.39774517039741814,
+      -0.1459406371647254
+    ],
+    "exponent_upper": [
+      0.18728784199924364,
+      0.18611266482472874,
+      0.3977952932772248,
+      0.14585291073323367
+    ],
+    "power_lower": [
+      0.8292813246476044,
+      0.8300246600992468,
+      0.6718332088396776,
+      0.8642090035586809
+    ],
+    "power_upper": [
+      1.2059743651677173,
+      1.2045579640448658,
+      1.4885392847179506,
+      1.1570259894294932
+    ],
+    "finite_normal_bounds": true
+  },
+  "source_branch_comparison": {
+    "train": {
+      "common_band_q_mse": [
+        0.9430028323712644,
+        0.8901412258752817,
+        0.9995591421843186,
+        1.0171777228016732,
+        0.45691845404321846,
+        0.4276142808489347,
+        0.30130779507993355,
+        0.24116432149820777
+      ],
+      "separate_branch_q_mse": [
+        0.9430967815953177,
+        0.8898487867507203,
+        1.0002152548151926,
+        1.0129295945772063,
+        0.4568648085864425,
+        0.42680568790873197,
+        0.301039664138263,
+        0.24103965412400744
+      ],
+      "relative_reduction": [
+        -9.962772202620762e-05,
+        0.00032853115445108383,
+        -0.0006564020108306146,
+        0.0041763873994074,
+        0.00011740706968876857,
+        0.0018909399812313543,
+        0.0008898904908829497,
+        0.0005169395432369495
+      ],
+      "interpretation": "Branch prediction only; not the normalized generated-shape waveform or hearing."
+    },
+    "check": {
+      "common_band_q_mse": [
+        0.8485886105130199,
+        0.8696465532791277,
+        1.5446841969116376,
+        1.8526701739783766,
+        0.7432656846186656,
+        0.6966614813001892,
+        0.7636124331202832,
+        0.5070995097171814
+      ],
+      "separate_branch_q_mse": [
+        0.8485789900820475,
+        0.8687063976000235,
+        1.5619569804062106,
+        1.828493744230854,
+        0.7418610441732805,
+        0.6984127923456971,
+        0.7589611595920044,
+        0.5114678712738842
+      ],
+      "relative_reduction": [
+        1.1336978664622244e-05,
+        0.0010810779109732271,
+        -0.011182080796260596,
+        0.013049505566123942,
+        0.0018898228109451853,
+        -0.002513862316945392,
+        0.006091144311614505,
+        -0.008614406981263034
+      ],
+      "interpretation": "Branch prediction only; not the normalized generated-shape waveform or hearing."
+    }
+  },
+  "cyclic_medians": {
+    "0.0": [
+      0.022506446345435232,
+      0.02657434423379392
+    ],
+    "0.5": [
+      0.022493175725060186,
+      0.02655470326766929
+    ],
+    "1.0": [
+      0.022479601106081458,
+      0.026534993054723073
+    ]
+  },
+  "maximum_peak_FS": 0.3849014665137105,
+  "gain_is_small": true,
+  "perceptual_improvement_unproven": true,
+  "review_url": "http://127.0.0.1:8789/references/analysis/idle_shape_v1/review1/index.html",
+  "review_clips": 20,
+  "common_gain": 1.0,
+  "browser": {
+    "result": "passed",
+    "url": "http://127.0.0.1:8789/references/analysis/idle_shape_v1/review1/index.html",
+    "metadata_combinations": 20,
+    "one_player": true,
+    "muted_playback": true,
+    "playing_switch_preserved": true,
+    "paused_seek_preserved": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "scope": "Generated page only; not human listening, native C or device acceptance."
+  },
+  "statistical_plot_and_desktop_mobile_viewed": true,
+  "existing619C_H_and67voices_exact": true,
+  "runtime_changed": false,
+  "accepted_moving35_changed": false,
+  "recorded_PCM_timeline_replayed": false,
+  "listening_accepted": false,
+  "next": "Do not promote or amplify this weak broad-two-branch AM hypothesis. Old common q already explains most observed branch benefit; separate branch CHECK changes are mixed. New finite page available without duplicate listening question. If continuing waveform-shape study, fit source complex covariance using a positive conditional resonant-kernel factor; no independent HF cloud or endless scalar gain/window sweeps. Preserve pending auditions, original phase qualifications and full goal.",
+  "manifest_sha256": "955bd21fcf35507d883d34cc7a0136ff422e78e92f686dada93b82e2a85535ac",
+  "file_count": 188,
+  "bytes": 1059361911
+}
