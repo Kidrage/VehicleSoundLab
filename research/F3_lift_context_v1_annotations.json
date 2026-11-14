@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.F3-post-ascent-visual/1",
+  "evidence": "references/analysis/F3_lift_context_v1/inspect1/report.json",
+  "all_contact_sheets_viewed": ["board_1.jpg", "board_2.jpg", "board_3.jpg", "board_4.jpg"],
+  "decoded_frames": 25,
+  "scope_seconds": [199.5, 205.5],
+  "columns": ["source_PTS_seconds", "dominant_overlay_gear", "overlay_speed_kmh"],
+  "rows": [
+    [199.5,6,279], [199.75,6,280], [200,6,282], [200.25,6,283],
+    [200.5,6,284], [200.75,7,286], [201,7,286], [201.25,7,282],
+    [201.5,7,277], [201.75,7,272], [202,7,267], [202.25,7,262],
+    [202.5,7,258], [202.75,7,253], [203,null,250], [203.25,6,244],
+    [203.5,6,241], [203.75,6,238], [204,null,null], [204.25,null,null],
+    [204.5,null,null], [204.75,null,null], [205,null,null],
+    [205.25,null,null], [205.5,null,null]
+  ],
+  "transition_brackets": [
+    {"seconds":[200.5,200.75],"observation":"Dominant overlay changes6 to7; needle falls from near8..9 toward7."},
+    {"seconds":[202.75,203.25],"observation":"Dominant7, then mixed/transition6and7 at203, then dominant6; needle rises toward7 while speed falls."}
+  ],
+  "other_observations": "Overlay fades by203.75 and disappears by204. Native cluster and road remain visible; no obvious scene cut in the sampled pictures, but sampling is not proof of continuous unedited audio/video.",
+  "not_established": ["Exact shift or pedal/torque/fuel timing", "Audio-video or cluster latency", "Continuous calibrated RPM", "Whether actual braking or engine braking causes the speed fall"],
+  "new_audio_read": false,
+  "new_audio_fit": false,
+  "next": "Before audio analysis, declare separate fixed observations for pre-upshift, seventh-gear slowing and post-downshift contexts; do not label the whole interval as one overrun timbre. User steered to21569 MCPS estimate after picture inspection; this study stops here for now."
+}

@@ -1,0 +1,663 @@
+{
+  "schema": "vsl.adi21569-cycle-estimate/2",
+  "measured": false,
+  "code_basis": "6125782",
+  "sample_rate": 48000,
+  "assumed_clock_MHz": 1000,
+  "assumptions": {
+    "precision": "FP32 signal/state, sensitive sections separately assessed",
+    "stereo_harmonic_single_anchor_cycles": [
+      12,
+      22
+    ],
+    "stereo_harmonic_two_anchor_cycles": [
+      20,
+      34
+    ],
+    "scalar_filter_MAC_effective_cycles": [
+      0.75,
+      1.4
+    ],
+    "texture_MAC_effective_cycles": [
+      0.75,
+      1.25
+    ],
+    "complex_frequency_MAC_cycles": [
+      2.5,
+      4.5
+    ],
+    "complex_FFT_butterfly_cycles": [
+      3,
+      6
+    ],
+    "texture_observation_root_hz": 70,
+    "scope": "One selected vehicle recipe; no simultaneous sum of all catalog entries",
+    "prerequisites": [
+      "SIMD/vector block kernels and aligned hot state; no audio-thread allocation/IO",
+      "Block/control-rate coefficient preparation with bounded interpolation error",
+      "Replace repeated scalar libm and Box-Muller calls with qualified vector/table methods",
+      "Real-signal FFT optimization; distributed FFT/texture jobs within audio deadlines",
+      "Target SRAM/L2 placement and DMA/cache scheduling validated on the board"
+    ],
+    "preserves_order_counts": true,
+    "changes_need_error_and_listening_acceptance": true
+  },
+  "input_sha256": {
+    "voices/dna_bank_v1/V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "voices/coherent_low_v1/measured_phase.model": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895",
+    "voices/resonant_detail_c_v1/moving_35.rdetail": "0f9c140dab555dea45650941061fd9f8a9d1b976ac9e050aced6bc98bd919b19",
+    "voices/exterior_anchors_v1/A Stationary Low.model": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model": "d1929f7d48ef026c9f1ca721616376b12c5b09970765b4dfea896683558d910d",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+    "voices/exterior_anchors_v1/A Stationary High.model": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail": "fa4f91903eb789cde2cc0f9e1cef8f7ef09e7dbe521af2335512fb4262aeae3b",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail": "04e837953ac2c325062805042e9600904d861ddd32bda801cec26e4d3a4b754a",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail": "570a845119ef5b1f80cdce6f046aa9adae014ebf6ae44942b2a6f3afe8579e89",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail": "fcf4dd40c133db70aaa8fe6964562fb72d6cbc408fe9acb6eaabfdb54131cc21",
+    "experiments/spectral_texture_v1/F2_fine_static.sfir": "82617de84eed708396503262e1432c4a19c8afc5369d68fe3fa796a664ef4419"
+  },
+  "inventory": {
+    "moving": {
+      "tag": "VSL_SUSTAIN_OSC",
+      "rate": 48000,
+      "harmonics": 300,
+      "components": 12
+    },
+    "low": {
+      "tag": "VSL_SOUND_DNA",
+      "rate": 48000,
+      "harmonics": 7,
+      "components": 12
+    },
+    "moving_detail": [
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 0,
+        "hz": [
+          1200.0,
+          1500.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 0,
+        "hz": [
+          1500.0,
+          1900.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          1900.0,
+          2400.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          2400.0,
+          3000.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          3000.0,
+          3800.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          3800.0,
+          4800.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          4800.0,
+          6000.0
+        ]
+      },
+      {
+        "order": 24,
+        "sections": 4,
+        "envelope": 8,
+        "hz": [
+          6000.0,
+          8000.0
+        ]
+      }
+    ],
+    "stationary_DNA": [
+      {
+        "tag": "VSL_SOUND_DNA",
+        "rate": 48000,
+        "harmonics": 288,
+        "components": 12
+      },
+      {
+        "tag": "VSL_SOUND_DNA",
+        "rate": 48000,
+        "harmonics": 288,
+        "components": 12
+      },
+      {
+        "tag": "VSL_SOUND_DNA",
+        "rate": 48000,
+        "harmonics": 288,
+        "components": 12
+      },
+      {
+        "tag": "VSL_SOUND_DNA",
+        "rate": 48000,
+        "harmonics": 288,
+        "components": 12
+      },
+      {
+        "tag": "VSL_SOUND_DNA",
+        "rate": 48000,
+        "harmonics": 288,
+        "components": 12
+      }
+    ],
+    "stationary_detail": [
+      [
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1200.0,
+            1500.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1500.0,
+            1900.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1900.0,
+            2400.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            2400.0,
+            3000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3000.0,
+            3800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3800.0,
+            4800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            4800.0,
+            6000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            6000.0,
+            8000.0
+          ]
+        }
+      ],
+      [
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1200.0,
+            1500.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1500.0,
+            1900.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1900.0,
+            2400.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            2400.0,
+            3000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3000.0,
+            3800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3800.0,
+            4800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            4800.0,
+            6000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            6000.0,
+            8000.0
+          ]
+        }
+      ],
+      [
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1200.0,
+            1500.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1500.0,
+            1900.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1900.0,
+            2400.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            2400.0,
+            3000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3000.0,
+            3800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3800.0,
+            4800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            4800.0,
+            6000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            6000.0,
+            8000.0
+          ]
+        }
+      ],
+      [
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1200.0,
+            1500.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1500.0,
+            1900.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            1900.0,
+            2400.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            2400.0,
+            3000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3000.0,
+            3800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            3800.0,
+            4800.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            4800.0,
+            6000.0
+          ]
+        },
+        {
+          "order": 24,
+          "sections": 4,
+          "envelope": 0,
+          "hz": [
+            6000.0,
+            8000.0
+          ]
+        }
+      ]
+    ],
+    "fine_idle_FIR": [
+      {
+        "taps": 8192,
+        "partitions": 32
+      },
+      {
+        "taps": 8192,
+        "partitions": 32
+      },
+      {
+        "taps": 8192,
+        "partitions": 32
+      },
+      {
+        "taps": 8192,
+        "partitions": 32
+      },
+      {
+        "taps": 8192,
+        "partitions": 32
+      },
+      {
+        "taps": 8192,
+        "partitions": 32
+      }
+    ]
+  },
+  "operation_counts": {
+    "moving_stereo_harmonic_visits_per_s": 14400000,
+    "stationary_stereo_harmonic_visits_per_s": 13824000,
+    "stationary_AR_SOS_MAC_per_s": 67584000,
+    "stationary_texture_MAC_per_s": 25804800,
+    "fine_complex_MAC_per_s": 18432000.0,
+    "fine_FFT_butterflies_per_s": 5184000.0
+  },
+  "cases": {
+    "moving35": {
+      "terms_MCPS": {
+        "DNA": [
+          172.8,
+          316.8
+        ],
+        "DNA_texture": [
+          6,
+          16
+        ],
+        "coherent_low": [
+          4,
+          8
+        ],
+        "resonant_detail_and_excitation": [
+          18,
+          35
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        235.8,
+        435.8
+      ]
+    },
+    "moving35_plus_current_fine_idle": {
+      "terms_MCPS": {
+        "DNA": [
+          172.8,
+          316.8
+        ],
+        "DNA_texture": [
+          6,
+          16
+        ],
+        "coherent_low": [
+          4,
+          8
+        ],
+        "resonant_detail_and_excitation": [
+          18,
+          35
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ],
+        "fine_frequency_products": [
+          46.08,
+          82.944
+        ],
+        "fine_FFTs": [
+          15.552,
+          31.104
+        ],
+        "idle_13_modes_and_amplitude": [
+          8,
+          16
+        ],
+        "fine_block_mix": [
+          2,
+          4
+        ]
+      },
+      "sum_MCPS": [
+        307.432,
+        569.848
+      ]
+    },
+    "stationary_five_anchors_four_detail_banks": {
+      "terms_MCPS": {
+        "DNA": [
+          276.48,
+          470.016
+        ],
+        "five_anchor_texture_projection": [
+          19.3536,
+          32.256
+        ],
+        "texture_random_and_state": [
+          9,
+          18
+        ],
+        "all_32_AR_SOS_filters": [
+          50.688,
+          94.6176
+        ],
+        "detail_excitation_and_mix": [
+          8,
+          16
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        398.52160000000003,
+        690.8896
+      ]
+    }
+  },
+  "rounded_stereo_planning_upper_MCPS": 700,
+  "current_basic_12channel_increment_MCPS": [
+    10,
+    30
+  ],
+  "recommended_algorithm_allocation_MCPS": 800,
+  "guaranteed_WCET": false,
+  "not_included": [
+    "Offline audio/video analysis or fitting",
+    "PC UI/file/network/research capture",
+    "Unimplemented full multichannel IR/HRTF/BRIR",
+    "Multiple simultaneously running engines",
+    "Other vehicle audio products, amplifiers or operating-system workloads"
+  ],
+  "risks": [
+    "No CCES binary/disassembly/hardware counter evidence",
+    "Cycle coefficients are assumptions, not SHARC instruction guarantees",
+    "FP32 precision, approximation error and timbre need target validation",
+    "Memory stalls and aligned texture/FFT bursts can exceed average-rate estimates"
+  ],
+  "next": "Measure max callback cycles on21569 across states/transitions and cache/DMA conditions; divide cycles by audio block duration. No x86 timing conversion.",
+  "script_sha256": "ffcc60e49f4bcb65fd8baa1cf9e9b8e5f3fd0eead6ba87594bb2fb14aaab1998",
+  "source_code_sha256": {
+    "modules/dna_atlas/voice.c": "dbff003493c9fa729856041efd082a8e488eaa15c7c50f7ef8d848484bb3b44c",
+    "modules/sound_dna/texture.c": "cb17bfb003c4ccfb87fe5e3ce5f1cc7ae4c3dc8a3970ec17d1120739769bf746",
+    "modules/drive_resonance/voice.c": "51eaab4cf3655aedc650a6b6adef9244f2bee7aeb1aaec31a9142fbb41d0d817",
+    "modules/resonant_detail/filter.c": "f150766d4dbd9240c89604d571111c67edd978032282588282ede5e7f22cf382",
+    "modules/fine_idle_layer/state.c": "8fbc983b772d8160db569bb990e8940e09c78c27cb009b28cbd5180cd76f6517",
+    "modules/spectral_texture/voice.c": "45fcc47a9ab4d21028bac30d550148e4f2ed9f095183fb07a93045c8fa179646",
+    "modules/partitioned_fir/filter.c": "d2cf4b8490778b063a9d1414c87ecfcc22770b7065c0342b6057ad6494eacc7d",
+    "modules/partitioned_fir/fft.c": "0ecea2e1f408f397eda2584e42f64f20c4a184492d325e9adb9f9c2918ca0003",
+    "src/spatial/scene.c": "7f3e81656f8529a2d10c3f5893223cb6a93b902993d2c328fb013e5ed1a3a8ee"
+  }
+}

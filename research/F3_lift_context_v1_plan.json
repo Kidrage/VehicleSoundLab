@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.F3-lift-context-plan/1",
+  "parent_commit": "41373d3",
+  "previous_goal_turn": "Progress: all 38 outgoing code/documentation commits were pushed, remote HEAD verified, concise current engineering reading entry and actual listening feedback recorded. No new timbre was claimed.",
+  "purpose": "Examine unstudied post-acceleration state/audio context in approved F3 beyond the former 201-second visual boundary. This is independent state evidence, not a new idle improvement.",
+  "prior_visuals_reviewed_before_new_decode": [
+    "references/analysis/state_media_v1/F3_context1/motorway2/context.jpg",
+    "references/analysis/state_media_v1/F3_inspect1/context.jpg",
+    "references/analysis/state_media_v1/F3_context1/motorway2/frame_020.jpg",
+    "references/analysis/state_media_v1/F3_context1/motorway2/frame_021.jpg"
+  ],
+  "observed_prior": "201s overlay7/speed286, 202s overlay7/speed267, 203s overlay6/speed250; overlay has disappeared at204s, native cluster remains. These are sampled display observations, not exact shift/pedal/torque/AV timing.",
+  "picture_inspection": "Decode original PTS199.5..205.5 at0.25s nominal intervals, inspect all boards and necessary native frames before declaring new audio fitting apertures or state labels.",
+  "audio_policy": "No new audio read or fit in this initial inspection plan. After pictures, declare fixed source-time observations and known signal checks before audio analysis. Preserve failed paths; no adaptive anchor/window/threshold sweep.",
+  "preserve": "646C/H,74voice parameters,originalF2,moving35,defaults,driver,takes,oldplayers and original source bytes. No new download, automatic idle migration, arbitrary strength/chaos experiment or further push in this source study.",
+  "listening_state": "F2 idle_complex75 still pending; E stereo received partial spatial improvement with electronic timbre remaining; later system-wide positive feedback does not erase either distinction.",
+  "full_goal": "active; complete states, multiple real engine timbres and physical7.1.4 remain unverified"
+}
