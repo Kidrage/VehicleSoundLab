@@ -1,0 +1,310 @@
+{
+  "schema": "vsl.accel-upper-link-freeze/1",
+  "result": "fixed_band_associations_verified_full_MSC_qualification_not_passed_NO_voice",
+  "parent_commit": "8d5ebcbaefda7c8e139cb0dd4b28ffdfb6f214d4",
+  "previous_goal_turn_progress": "8d5ebcb all source joint covariance/fourth moments, complete native independent audit, figures and exact archive; not a wait-only turn",
+  "all3original_plus9phase_controls": true,
+  "all_native2401bins": true,
+  "all8signed_complex_cross_spectra": true,
+  "known_AM_Gaussian_and_beating_counterexample_before_source": true,
+  "independent_native_features": true,
+  "all_fixed48band_summaries_verified": true,
+  "all_bin_MSC_gate_unpassed": true,
+  "original_all_bin_MSC_gate_unchanged": 2e-08,
+  "failed_audit1": {
+    "result": "failed",
+    "input_sha256": "2ed3c091c4ebf851a9410d774c00ea703abe608a89582219251b7f238e47fd53",
+    "errors": {
+      "known_native_reference": 0.0,
+      "known_native_AM_power": 0.0,
+      "known_two_tone_power": 7.633893517322576e-12,
+      "known_AM_MSC": 6.661338147750939e-16,
+      "known_gain_invariance": 9.992007221626409e-16,
+      "known_permutation": 2.220446049250313e-16,
+      "known_beating_MSC": 7.771561172376096e-16,
+      "known_Gaussian_third": 0.0,
+      "native_reference": 0.0,
+      "native_FFT_Hilbert_power": 9.378348791999613e-18,
+      "native_Hz": 0.0,
+      "all_starts": 0.0,
+      "reference_PSD": 1.8817315440836513e-15,
+      "power_PSD": 1.742479752003779e-15,
+      "signed_complex_CSD": 1.4512209107837187e-15,
+      "every_bin_MSC": 1.4274113476278605e-07
+    },
+    "observations": 0,
+    "windows": 0,
+    "cross_spectra": 0,
+    "band_summaries": 0,
+    "error": "AssertionError(('every_bin_MSC', 1.4274113476278605e-07, 2e-08))"
+  },
+  "complete_audit2": {
+    "result": "native_and_summaries_passed_full_MSC_tolerance_not_passed",
+    "input_sha256": "2ed3c091c4ebf851a9410d774c00ea703abe608a89582219251b7f238e47fd53",
+    "errors": {
+      "known_native_reference": 0.0,
+      "known_native_AM_power": 0.0,
+      "known_two_tone_power": 7.633893517322576e-12,
+      "known_AM_MSC": 6.661338147750939e-16,
+      "known_gain_invariance": 9.992007221626409e-16,
+      "known_permutation": 2.220446049250313e-16,
+      "known_beating_MSC": 7.771561172376096e-16,
+      "known_Gaussian_third": 0.0,
+      "native_reference": 0.0,
+      "native_FFT_Hilbert_power": 1.1885566315872342e-17,
+      "native_Hz": 0.0,
+      "all_starts": 0.0,
+      "reference_PSD": 2.0110459168022495e-15,
+      "power_PSD": 2.2244150074049202e-15,
+      "signed_complex_CSD": 6.1453962625759384e-15,
+      "every_bin_MSC": 2.6107132264363564e-07,
+      "fixed_30_to600Hz_MSC": 2.220446049250313e-16,
+      "all_bin_saved_MSC_algebra": 0.0,
+      "reported_max_MSC": 1.9341750423507165e-12,
+      "all_band_reference_power": 1.660896150897104e-15,
+      "all_band_upper_modulation_power": 1.7098732093500933e-15,
+      "all_band_weighted_MSC": 3.469446951953614e-17
+    },
+    "observations": 12,
+    "windows": 900,
+    "cross_spectra": 96,
+    "band_summaries": 48,
+    "full_MSC_tolerance_failures": [
+      {
+        "segment": "F3_fifth1",
+        "branch": "original",
+        "error": 1.4274113476278605e-07,
+        "gate": 2e-08,
+        "indices": [
+          2392,
+          0,
+          1
+        ],
+        "hz": 23920.0,
+        "original_MSC": 0.019171966156587415,
+        "independent_MSC": 0.019171823415452652,
+        "Pxx": 7.221433978751525e-20,
+        "Pyy": 2.2324811975293004e-34,
+        "relative_Pyy": 2.426220172157664e-21
+      },
+      {
+        "segment": "F3_fifth1",
+        "branch": "phase_149921",
+        "error": 1.222231417324915e-07,
+        "gate": 2e-08,
+        "indices": [
+          2397,
+          0,
+          0
+        ],
+        "hz": 23970.0,
+        "original_MSC": 0.023278363409423967,
+        "independent_MSC": 0.023278241186282234,
+        "Pxx": 4.8454916142711535e-15,
+        "Pyy": 7.847845079245218e-34,
+        "relative_Pyy": 5.943443881482712e-21
+      },
+      {
+        "segment": "F3_fifth1",
+        "branch": "phase_277139",
+        "error": 9.006607374489883e-08,
+        "gate": 2e-08,
+        "indices": [
+          2394,
+          0,
+          1
+        ],
+        "hz": 23940.0,
+        "original_MSC": 0.03538324576730075,
+        "independent_MSC": 0.035383155701227006,
+        "Pxx": 5.316374184154357e-15,
+        "Pyy": 4.946114474908083e-34,
+        "relative_Pyy": 6.440724716583161e-21
+      },
+      {
+        "segment": "F3_fifth1",
+        "branch": "phase_381611",
+        "error": 1.0273369194235826e-07,
+        "gate": 2e-08,
+        "indices": [
+          2397,
+          1,
+          1
+        ],
+        "hz": 23970.0,
+        "original_MSC": 0.022591649959392328,
+        "independent_MSC": 0.02259175269308427,
+        "Pxx": 4.783338807221767e-12,
+        "Pyy": 4.907049037769286e-34,
+        "relative_Pyy": 6.270369146875766e-21
+      },
+      {
+        "segment": "F3_fifth2",
+        "branch": "original",
+        "error": 2.6107132264363564e-07,
+        "gate": 2e-08,
+        "indices": [
+          2396,
+          1,
+          2
+        ],
+        "hz": 23960.0,
+        "original_MSC": 0.04086554428487716,
+        "independent_MSC": 0.040865805356199804,
+        "Pxx": 6.147410595611429e-20,
+        "Pyy": 9.062771550871557e-37,
+        "relative_Pyy": 1.0077165939386552e-21
+      },
+      {
+        "segment": "F3_fifth2",
+        "branch": "phase_149921",
+        "error": 8.424022304720502e-08,
+        "gate": 2e-08,
+        "indices": [
+          2377,
+          1,
+          3
+        ],
+        "hz": 23770.0,
+        "original_MSC": 0.1361745770500487,
+        "independent_MSC": 0.13617449280982566,
+        "Pxx": 8.27564075574377e-11,
+        "Pyy": 2.4238196646246335e-34,
+        "relative_Pyy": 8.825258476968451e-20
+      },
+      {
+        "segment": "F3_fifth2",
+        "branch": "phase_277139",
+        "error": 7.513376178158726e-08,
+        "gate": 2e-08,
+        "indices": [
+          2397,
+          0,
+          1
+        ],
+        "hz": 23970.0,
+        "original_MSC": 0.04377872664050742,
+        "independent_MSC": 0.04377865150674564,
+        "Pxx": 8.946185682575888e-11,
+        "Pyy": 3.7064677297702705e-33,
+        "relative_Pyy": 1.958828505506664e-20
+      },
+      {
+        "segment": "F3_fifth2",
+        "branch": "phase_381611",
+        "error": 9.212444269587894e-08,
+        "gate": 2e-08,
+        "indices": [
+          2392,
+          1,
+          0
+        ],
+        "hz": 23920.0,
+        "original_MSC": 0.02699985965498409,
+        "independent_MSC": 0.026999951779426785,
+        "Pxx": 7.784164121111342e-11,
+        "Pyy": 2.2706029444107974e-33,
+        "relative_Pyy": 9.68357931361308e-21
+      },
+      {
+        "segment": "F3_sixth",
+        "branch": "original",
+        "error": 5.546999219674387e-08,
+        "gate": 2e-08,
+        "indices": [
+          2385,
+          0,
+          1
+        ],
+        "hz": 23850.0,
+        "original_MSC": 0.017941990474105416,
+        "independent_MSC": 0.017942045944097613,
+        "Pxx": 1.1407980022031285e-19,
+        "Pyy": 8.558589548036673e-34,
+        "relative_Pyy": 4.634814503123652e-21
+      },
+      {
+        "segment": "F3_sixth",
+        "branch": "phase_149921",
+        "error": 3.691873706399007e-08,
+        "gate": 2e-08,
+        "indices": [
+          2391,
+          0,
+          1
+        ],
+        "hz": 23910.0,
+        "original_MSC": 0.024265067469775185,
+        "independent_MSC": 0.02426503055103812,
+        "Pxx": 1.3505380787251297e-11,
+        "Pyy": 7.0061995597966935e-34,
+        "relative_Pyy": 4.8019972165018584e-21
+      },
+      {
+        "segment": "F3_sixth",
+        "branch": "phase_277139",
+        "error": 4.6065289995705916e-08,
+        "gate": 2e-08,
+        "indices": [
+          2390,
+          0,
+          0
+        ],
+        "hz": 23900.0,
+        "original_MSC": 0.01708150704671145,
+        "independent_MSC": 0.017081460981421454,
+        "Pxx": 1.3466088633680929e-11,
+        "Pyy": 1.5594476469512598e-33,
+        "relative_Pyy": 6.338454010001675e-21
+      },
+      {
+        "segment": "F3_sixth",
+        "branch": "phase_381611",
+        "error": 4.528652481315676e-08,
+        "gate": 2e-08,
+        "indices": [
+          2390,
+          0,
+          0
+        ],
+        "hz": 23900.0,
+        "original_MSC": 0.01250667714272613,
+        "independent_MSC": 0.012506722429250943,
+        "Pxx": 1.2809263903808094e-11,
+        "Pyy": 1.3523174937116844e-33,
+        "relative_Pyy": 5.6100799204395685e-21
+      }
+    ],
+    "all_native2401bins": true,
+    "all2x4signed_complex_spectra": true,
+    "full_MSC_independent_tolerance_passed": false,
+    "original_full_MSC_gate_unchanged": 2e-08,
+    "fixed_30_to600Hz_summaries_passed": true,
+    "old_phase_stream_PSD_LRCSD_audit": "hash_bound_reuse_not_rerun",
+    "source_detector": false,
+    "new_audio": false
+  },
+  "failure_and_source_arrays_preserved": true,
+  "assessment_groupings_independently_verified": true,
+  "old_phase_PSD_LR_CSD_audit_hash_reused_not_rerun": true,
+  "figures_viewed": true,
+  "uniform_low_driven_upper_AM_justified": false,
+  "cyclic_coupling_absence_proven": false,
+  "source_identity": false,
+  "same_recording_overlapping_windows_not_confidence_intervals": true,
+  "new_audio": false,
+  "new_profile": false,
+  "new_C": false,
+  "new_download": false,
+  "old_CTests_repeated": false,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "pending_idle_listening_unchanged": true,
+  "next": "Do not drive fast upper details with a low-waveform gain from coherence alone. Fixed-frequency association is descriptive and beating can reproduce it. Preserve separate slow colour, joint fast upper innovations and independent components; require qualified cyclic/state evidence before locking to an engine clock. Pending new idle candidate must be heard before any isolated C migration.",
+  "original_common_phase_qualification_unwaived": true,
+  "full_goal_complete": false,
+  "manifest_sha256": "a468b23cbccdbde426c1fcfc7ac2d1ec6193eccd54cffc2a8fefb0e3063c0ff9",
+  "file_count": 45,
+  "bytes": 109313584
+}
