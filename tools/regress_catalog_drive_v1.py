@@ -2,14 +2,17 @@
 import argparse,shutil,subprocess,time
 from pathlib import Path
 from research_archive_v1 import save,load,sha
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out',type=Path,required=True)
+p.add_argument('--build-dir',type=Path);p.add_argument('--count',type=int,default=7)
+p.add_argument('--original-catalog',type=Path);a=p.parse_args()
+assert 1<=a.count<=8
 repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
 old=Path('E:/VehicleSoundLab/baselines/layer_monitor_v1/evidence/bin/VslAtlasTake_render.exe')
-current=repo/'build-catalog-drive-v1/catalog-check'
+current=(a.build_dir or repo/'build-catalog-drive-v1')/'catalog-check'
 shutil.copy2(old,a.out/'old_player.exe');shutil.copy2(__file__,a.out/'regress_catalog_drive_v1.py')
 shutil.copytree(current,a.out/'new_render');r=dict(result='running',commands=[],cases=[])
 try:
-    for k in range(7):
+    for k in range(a.count):
         take=a.out/'new_render'/f'voice_{k}.vslrun';expected=load(current/f'voice_{k}.json');dest=a.out/f'old_voice_{k}.wav'
         argv=list(map(str,[a.out/'old_player.exe',take,dest]));start=time.perf_counter();done=subprocess.run(argv,cwd=repo,capture_output=True,timeout=90)
         log=a.out/f'old_voice_{k}.log';log.write_bytes(done.stdout+done.stderr)
@@ -17,6 +20,8 @@ try:
         assert done.returncode==0,(k,log)
         assert expected['audio_hash'].encode() in done.stdout and expected['source_hash'].encode() in done.stdout
         assert sha(dest)==sha(current/f'voice_{k}.wav'),k
+        if a.original_catalog and k<7:
+            assert sha(current/f'voice_{k}.wav')==sha(a.original_catalog/f'voice_{k}.wav'),('old preset changed',k)
         r['cases'].append(dict(selection=k,frames=expected['frames'],audio_hash=expected['audio_hash'],source_hash=expected['source_hash'],
             render_id=expected['render_id'],wav_sha256=sha(dest),full_old_new_wav_exact=True))
         save(a.out/'report.json',r);print('PASS original player, catalog voice',k,flush=True)

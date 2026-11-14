@@ -36,11 +36,16 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
     swprintf(name,4096,L"%ls.default.bmp",path);CHECK(capture(w,name));
     capture_pcm=calloc((FRAMES+1024)*2,sizeof(float));heard=calloc((FRAMES+1024)*2,sizeof(float));CHECK(capture_pcm&&heard);
     a->capture=capture_pcm;a->heard=heard;a->capture_frames=FRAMES+1024;
-    for(int k=0;k<DC_COUNT;++k) {
+    /* Test the new observation first; retain Hollow as the last recording
+       so the existing cross-profile embedded-replay test still tests SCIFI. */
+    for(int pass=0;pass<DC_COUNT;++pass) {
+        int k=pass==0?DC_STATIONARY5:pass-1;
         choose(w,voices,k);c=am_audio_get(a);
         CHECK(dc_preset_selection(session->preset)==k&&!a->device.running&&!c.drive.ignition&&a->transport==0);
         CHECK(a->config.profile==dc_info(k)->profile&&IsWindowEnabled(voices));
         CHECK(IsWindowEnabled(GetDlgItem(w,26))==(a->config.resonant_bank||a->config.residual_bank));
+        CHECK(IsWindowEnabled(GetDlgItem(w,27))==dc_body_enabled(&a->config));
+        if(k==DC_STATIONARY5){swprintf(name,4096,L"%ls.stationary.bmp",path);CHECK(capture(w,name));}
         for(int j=0;j<DC_AUX_COUNT;++j) {
             choose(w,aux,j);CHECK(IsWindowEnabled(GetDlgItem(w,28))==dc_aux_enabled(&a->config,j));
             if(dc_aux_enabled(&a->config,j)) {
@@ -50,6 +55,12 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
         }
         /* Reload restores the unchanged recipe after checking every binding. */
         choose(w,voices,k);SendMessageW(w,WM_COMMAND,12,0);CHECK(am_audio_get(a).drive.ignition);
+        if(k==DC_STATIONARY5) {
+            choose(w,GetDlgItem(w,41),0);choose(w,GetDlgItem(w,42),1);
+            SendMessageW(GetDlgItem(w,20),TBM_SETPOS,TRUE,37);
+            SendMessageW(w,WM_HSCROLL,TB_THUMBPOSITION,(LPARAM)GetDlgItem(w,20));
+            c=am_audio_get(a);CHECK(c.drive.mode==VSL_PEDALS&&c.drive.gear==0&&!c.drive.automatic&&c.drive.throttle==.37);
+        }
         CHECK(am_audio_listen_set(a,0)&&am_audio_record(a,1,FRAMES));SendMessageW(w,WM_TIMER,1,0);
         CHECK(!IsWindowEnabled(voices)&&IsWindowEnabled(listen_choice)&&!cd_session_commit(session,a,NULL));
         CHECK(!cd_session_commit(session,a,session->preset)&&a->device.running);
@@ -74,8 +85,8 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
 done:
     am_audio_stop(a);a->capture=a->heard=NULL;free(capture_pcm);free(heard);
     report=_wfopen(path,L"wb");if(!report)return 0;
-    fprintf(report,"{\"result\":\"%s\",\"checks\":%u,\"failed_line\":%d,\"muted\":true,\"voices\":7,\"frames_per_record\":%u,"
-        "\"own_program_controls\":true,\"manual_mouse_verified\":false,\"cross_voice_replay_and_live_restore\":%s,\"records\":[",ok?"pass":"fail",checks,line,FRAMES,ok?"true":"false");
+    fprintf(report,"{\"result\":\"%s\",\"checks\":%u,\"failed_line\":%d,\"muted\":true,\"voices\":%d,\"frames_per_record\":%u,"
+        "\"own_program_controls\":true,\"manual_mouse_verified\":false,\"cross_voice_replay_and_live_restore\":%s,\"records\":[",ok?"pass":"fail",checks,line,DC_COUNT,FRAMES,ok?"true":"false");
     for(int k=0;k<DC_COUNT;++k)fprintf(report,"%s{\"selection\":%d,\"hash\":\"%016llx\",\"queue_empty\":%u,\"budget_exceeded\":%u}",k?",":"",k,(unsigned long long)hashes[k],empty[k],budget[k]);
     fputs("]}\n",report);if(fclose(report))ok=0;return ok;
 }

@@ -1,0 +1,8 @@
+{
+  "schema":"vsl.catalog-bridge-plan/1",
+  "previous_turn":"b46bd86 added an actual source-qualified bridge DNA/detail candidate and two driving scene comparisons, archived and committed; this is concrete progress. Worktree clean at start, no live build handle.",
+  "goal":"Make the existing five-anchor stationary candidate operable in the same native C driving host as an optional eighth catalog item. No new synthesis kernel, source fitting, idle candidate promotion or default replacement.",
+  "implementation":"Append an enum/metadata identity while preserving old selections. Reuse existing sbm_models_load in non-RT catalog assembly and deep-copy actual assets. Add capability for the separate body layer: recipe banks without any low profile have no active low knob. UI queries actual embedded/live config, retains current switch/record/replay lifecycle.",
+  "validation":"Typed owned-config checks; eight actual renders, source/stem/driver2-12 equality and irregular replay. Original seven outputs must equal frozen catalog waveforms. All eight new takes must replay through the frozen old player. Own native muted controls test all eight, unavailable low knob, record/menu lock, cross-voice restore and capture new item. One complete required CTest suite after final code, preserved exact sources and all attempts.",
+  "limits":"Eight entries are six V10 observation/recipe contexts and two analytic examples, not eight engines. Existing stationary gaps, no new LF profile, provisional RPM/load mapping, pending hearing and physical7.1.4 limits remain. F2 idle_complex75 stays pending; no duplicate hearing question, strength sweep or automatic high-chaos research. Local commit, full goal active."
+}

@@ -3,8 +3,9 @@ import argparse,shutil,subprocess,time
 from pathlib import Path
 from research_archive_v1 import save,sha
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out',type=Path,required=True)
+p.add_argument('--build-dir',type=Path)
 p.add_argument('--phase',choices=['focused','all','host'],required=True);a=p.parse_args()
-repo=Path(__file__).resolve().parents[1];build=repo/'build-catalog-drive-v1';a.out.mkdir(parents=True,exist_ok=False)
+repo=Path(__file__).resolve().parents[1];build=a.build_dir or repo/'build-catalog-drive-v1';a.out.mkdir(parents=True,exist_ok=False)
 r=dict(result='running',phase=a.phase,sources={},commands=[])
 try:
     names=subprocess.check_output(['git','ls-files','-z'],cwd=repo).decode('utf-8').split('\0')

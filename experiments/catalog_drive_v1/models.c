@@ -3,8 +3,9 @@
 #include "../atlas_monitor_v1/models.h"
 #include "../full_recipe_drive_v1/models.h"
 #include "../fine_idle_drive_v1/models.h"
+#include "../stationary_bridge_v1/models.h"
 #include <stdlib.h>
-typedef struct {FrModels moving;FidModels idle;AmModels other;SaBank bank;StProfile startup;CbProfile catching;SdProfile synthetic;} Inputs;
+typedef struct {FrModels moving;FidModels idle;AmModels other;SaBank bank;StProfile startup;CbProfile catching;SdProfile synthetic;SbmModels stationary;} Inputs;
 DcPreset *cd_models_load(int selection) {
     Inputs *m;DcPreset *p=NULL;AdConfig cfg={0};AdControl c={0};const DcInfo *info=dc_info(selection);
     if(!info)return NULL;m=calloc(1,sizeof *m);if(!m)return NULL;
@@ -30,6 +31,10 @@ DcPreset *cd_models_load(int selection) {
             cfg.root_per_rpm=m->other.profile[0].base_hz/vsl_profile(VSL_V10)->idle_rpm;
             c.drive.rpm=vsl_profile(VSL_V10)->idle_rpm;c.drive.load=0;c.mix.startup_gain=c.mix.catch_gain=.5;
         }
+    }else if(selection==DC_STATIONARY5) {
+        if(!sbm_models_load(&m->stationary))goto done;
+        cfg.bank=&m->stationary.bank;cfg.resonant_bank=&m->stationary.resonance;cfg.recipe_bank=&m->stationary.recipe;
+        c.mix.resonant_gain=1;c.drive.rpm=m->stationary.dna[2].base_hz/cfg.root_per_rpm;
     }else {
         const SdProfile *models[1]={&m->synthetic};
         if(!sd_profile_load(selection==DC_WARM?"voices/dna_bank_v1/Warm Additive.model":"voices/dna_bank_v1/Hollow Spectrum.model",&m->synthetic)||

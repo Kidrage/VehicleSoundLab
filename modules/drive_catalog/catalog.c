@@ -8,7 +8,8 @@ static const DcInfo info[DC_COUNT]={
     {"v10-cabin2","V10 · 高转车内双锚点（实验）","E high-RPM cabin; separate observation from exterior",VSL_V10},
     {"v10-start-settle","V10 · 启动趋稳（实验）","A cabin startup/catch/settle with existing local residual; not hot-idle calibration",VSL_V10},
     {"synthetic-warm","合成 · Warm Additive（工程示例）","Analytic DNA fixture, not a measured engine or user Serum patch",VSL_SCIFI},
-    {"synthetic-hollow","合成 · Hollow Spectrum（工程示例）","Analytic DNA fixture, not a measured engine or user Serum patch",VSL_SCIFI}
+    {"synthetic-hollow","合成 · Hollow Spectrum（工程示例）","Analytic DNA fixture, not a measured engine or user Serum patch",VSL_SCIFI},
+    {"v10-stationary-bridge5","V10 · 驻车中间声线＋共振（试验）","A stationary five acoustic anchors, one qualified bridge; gaps remain, no separate low profile or measured full RPM/load coverage; hearing pending",VSL_V10}
 };
 static const char *aux_names[DC_AUX_COUNT]={"进气","机械","排气空气","道路","风","启动机械声","接火低频","怠速声线（候选）","怠速主声线起伏","怠速细谱纹理"};
 const DcInfo *dc_info(int selection){return selection>=0&&selection<DC_COUNT?info+selection:NULL;}
@@ -34,6 +35,13 @@ int dc_aux_enabled(const AdConfig *c,int layer) {
     }
 }
 const char *dc_aux_name(int layer){return layer>=0&&layer<DC_AUX_COUNT?aux_names[layer]:NULL;}
+int dc_body_enabled(const AdConfig *c) {
+    if(!c)return 0;
+    if(!c->recipe_bank)return 1;
+    if(c->recipe_bank->count>SA_MAX_ANCHORS)return 0;
+    for(unsigned i=0;i<c->recipe_bank->count;++i)if(c->recipe_bank->has_low[i])return 1;
+    return 0;
+}
 double *dc_aux_amount(AdControl *c,int layer) {
     if(!c)return NULL;
     switch(layer){

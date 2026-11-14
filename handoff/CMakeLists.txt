@@ -267,7 +267,8 @@ if(WIN32)
   handoff_monitor(VslLowRumble 4)
 endif()
 
-add_library(catalog_drive_models STATIC "${VSL_ROOT}/experiments/catalog_drive_v1/models.c" "${VSL_ROOT}/experiments/atlas_monitor_v1/models.c")
+add_library(catalog_drive_models STATIC "${VSL_ROOT}/experiments/catalog_drive_v1/models.c" "${VSL_ROOT}/experiments/atlas_monitor_v1/models.c"
+  "${VSL_ROOT}/experiments/stationary_bridge_v1/models.c")
 target_link_libraries(catalog_drive_models PUBLIC drive_catalog full_recipe_models fine_idle_models)
 target_compile_features(catalog_drive_models PUBLIC c_std_11)
 if(MSVC)

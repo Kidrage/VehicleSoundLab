@@ -1,0 +1,101 @@
+{
+  "result": "optional_stationary_voice_in_native_shared_driver",
+  "git_parent": "b46bd866ffb748901630a5985f612ed3c9267f82",
+  "C_H_total": 643,
+  "C_H_changed": 6,
+  "C_H_prior_exact": 637,
+  "C_H_added": 0,
+  "voice_parameters_exact": 72,
+  "DSP_unchanged": true,
+  "presets": 8,
+  "V10_contexts": 6,
+  "analytic_examples": 2,
+  "new_real_engines": 0,
+  "new_source_fitting": false,
+  "new_timbre_accepted": false,
+  "default_selection_changed": false,
+  "pending_idle_changed": false,
+  "low_capability_from_actual_config": true,
+  "native_UI": {
+    "result": "pass",
+    "checks": 244,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 8,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 7,
+        "hash": "4089b72afb8354ca",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "images_visually_reviewed": 4,
+  "manual_mouse_verified": false,
+  "actual_render_frames_per_preset": 192123,
+  "original_seven_WAV_exact": true,
+  "old_player_new_eight_WAV_exact": true,
+  "source_driver_and_dry_stems_2_12_exact": true,
+  "owned_irregular_block_replay_exact": true,
+  "renderer_id_unchanged": true,
+  "distinct_CTests": 65,
+  "take_schema": 10,
+  "take_controls": 32,
+  "isolated_build": "build-catalog-bridge-v1;old live processes were preserved",
+  "failed_attempts_preserved": [
+    "focused1 linker LNK1104: existing live old executable locked; no source/test failure"
+  ],
+  "physical_7_1_4_verified": false,
+  "full_goal": "active",
+  "next": "Source/state acoustic gaps and other engines remain; pending F2 hearing is independent. No automatic higher-chaos work.",
+  "manifest_sha256": "314935c129d46e6a8444bf0ddc13fe6b358f2f970d4872454a6f5f09b53357d5",
+  "file_count": 3856,
+  "bytes": 60607030
+}

@@ -74,6 +74,10 @@ static void labels(HWND owner) {
     SendMessageW(listen_choice,CB_SETCURSEL,am_audio_listen_get(&audio),0);
     for(i=0;i<9;++i)EnableWindow(slider[i],!locked);
     EnableWindow(slider[6],!locked&&(resonant_study?cap->resonant_bank!=NULL:cap->residual_bank!=NULL));
+    if(catalog_mode) {
+        EnableWindow(slider[7],!locked&&dc_body_enabled(cap));
+        if(!dc_body_enabled(cap))SetWindowTextW(label[7],L"低频层 · 未配置");
+    }
     SendMessageW(slider[6],TBM_SETPOS,TRUE,(int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100));
     if(auxiliary_index==5&&!audio.config.startup_profile&&!idle_study)EnableWindow(slider[8],FALSE);
     if(auxiliary_index==6&&!audio.config.catch_profile&&!fine_idle_study)EnableWindow(slider[8],FALSE);
