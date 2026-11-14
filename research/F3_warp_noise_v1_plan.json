@@ -1,0 +1,20 @@
+{
+  "schema":"vsl.F3-frozen-map-noise-control/1",
+  "parent_commit":"168a035",
+  "previous_goal_turn":"Progress: source-specific residual decomposition, one additive stereo candidate with unchanged DNA, independent C/profile/CSD checks and a seven-clip hearing question. No timbre or physical-source promotion.",
+  "purpose":"Determine whether a fixed source-derived resampling map itself can make independently generated stationary noise pass the old descriptive residual-cycle test. No new real-source waveform read, clock estimation, fitting or listening candidate.",
+  "frozen_source":"baselines/F3_lift_voice_v1/evidence/fit2/F3 Sixth Before Upshift/coordinates.npz and extraction.json; immutable source map conditioned on original carrier observation",
+  "measure_plan":"Exact cyclic settings/bands from research/F3_detail_v1_plan.json; do not change filters, trim,4harmonics,256permutations,.01 condition or selected14cycles",
+  "noise_seeds":[1907,23117,61927,8121907],
+  "noise_sigma":0.04,
+  "right_delayed_left_fraction":0.65,
+  "delay_frames":3,
+  "routes":["direct_canonical","same_endpoints_affine_map","actual_frozen_map","known_AM_actual_frozen_map"],
+  "native_context":{"seconds":[199.6,200.5],"rate":48000},
+  "signal_definition":"Gaussian iid L; R=.65*L[n-3]+sqrt(1-.65^2)*independent Gaussian, both scaled. Save the common double native input. First route takes the first14336noise frames unchanged. Affine route uses the same first/last source positions as actual map, linear between. Both mapped routes call unchanged source FIR/16xKaiser/interpolation using the frozen final cutoff. Positive control multiplies native noise by sqrt(1+.8cos(2pi*inverse_frozen_cycle_coordinate)); linearly extend the synthetic control coordinate at its own endpoints only.",
+  "AM_depth":0.8,
+  "known_before_map":"Before loading the frozen source map: 48kHz one-second DC=.12 and stereo997/1703Hz tones(.2/.17FS), resample at14336positions .25+.45u and .25+.45u+.001sin(8piu), cutoff10kHz; compare direct analytic amplitudes. This checks known map transfer, not full phase extraction.",
+  "known_fixture_tolerance_FS":0.0001,
+  "scope":"Conditioned frozen-map transfer only. It does NOT re-estimate carrier phase on noise, requalify complete shared-phase extraction or identify which original sound is mechanical/wind. Null shift result remains descriptive and finite/correlated. Save all routes and seeds, regardless of outcome; no gate/seed/window rescue.",
+  "preserve":"647C/H74voice files,F2,moving35,defaults,UI,driver,takes,all old players and candidate parameters exact. F3 detail and idle_complex75 hearing still independently pending: do not repeat questions, blind strengths, migrate or infer approval. No new download,push,room,OSC layer or runtime candidate. Full goal active."
+}

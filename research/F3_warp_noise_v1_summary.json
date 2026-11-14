@@ -1,0 +1,92 @@
+{
+  "result": "fixed_map_stationary_noise_controls_completed",
+  "git_parent": "6184a838ff6f921ba35b5f9e011cbd80a5a2f59f",
+  "previous_goal_turn": "progress: revised user-requested ADI cost inventory and documented omitted legacy recipes; not timbre acceptance",
+  "controls": {
+    "direct_canonical": {
+      "seeds": 4,
+      "any_support": 0,
+      "high8_14_support": 0
+    },
+    "same_endpoints_affine_map": {
+      "seeds": 4,
+      "any_support": 0,
+      "high8_14_support": 0
+    },
+    "actual_frozen_map": {
+      "seeds": 4,
+      "any_support": 0,
+      "high8_14_support": 0
+    },
+    "known_AM_actual_frozen_map": {
+      "seeds": 4,
+      "any_support": 4,
+      "high8_14_support": 4
+    }
+  },
+  "known_before_map": {
+    "analytic_resampling": [
+      {
+        "map": "affine",
+        "constant_max_FS": 1.0695579781699882e-06,
+        "tone_max_FS": 4.43651825868252e-06
+      },
+      {
+        "map": "smooth",
+        "constant_max_FS": 1.0695579781561104e-06,
+        "tone_max_FS": 4.417479744625585e-06
+      }
+    ],
+    "stationary_native_variance": 0.0016,
+    "stationary_native_cross_at_declared_delay": 0.0010400000000000001
+  },
+  "maximum_independent_errors": {
+    "mapped_FS": 2.220446049250313e-16,
+    "power_FS2": 1.5449880957918438e-18,
+    "score": 5.440092820663267e-15,
+    "null": 5.4817261840867104e-15
+  },
+  "coordinate_plot": {
+    "result": "all_fixed_controls_plotted",
+    "producer_report_sha256": "40729251fefb9c3933561ec94df16f8fdc29a70a0e3ffd691d87c10a2aa1f668",
+    "source_prior_report_sha256": "c69008e7db4bad37f0bdd0c80a4467c193a12b10f576a2c9f85ae33f2742a41a",
+    "plot_sha256": "fdbec101332039a659aaa932d6b29d9498db95e2b39e587ef8364bc409cb1f3e",
+    "map_rate_hz": [
+      66.52795424756428,
+      67.22574580660614
+    ],
+    "affine_rate_hz": 66.84575978758633,
+    "folded_rate_relative_percent": [
+      -0.028688108402308288,
+      0.03362120128940216
+    ],
+    "caution": "Conditional fixed-map noise transfer only; no phase re-estimation, mechanical source qualification or timbre acceptance."
+  },
+  "analysis_images_viewed": 1,
+  "C_H_exact": 647,
+  "voice_files_exact": 74,
+  "F2_exact": true,
+  "no_source_waveform_read": true,
+  "no_clock_reestimation": true,
+  "no_fit_or_runtime_change": true,
+  "physical_source_separation": false,
+  "periodic_modulation_law_qualified": false,
+  "timbre_accepted": false,
+  "new_listening_candidate": false,
+  "F3_detail_hearing": "pending; no repeat question, blind strength or migration",
+  "F2_idle_hearing": "independently pending; unchanged",
+  "E_stereo_feedback": "左右关系有改善，音色仍明显电子",
+  "unchanged_C_tests_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "all_attempts": [
+    "controls1",
+    "audit1",
+    "plot1"
+  ],
+  "full_goal": "active",
+  "next": "Measure high-band power versus frozen cycle coordinate in native time without waveform resampling; do not infer physical cause or implement modulation from this conditional four-seed control.",
+  "manifest_sha256": "5020e7451fbad28c9487b88fc9aa6c049c21956434e0bf22359c205d3222cdf3",
+  "file_count": 76,
+  "bytes": 17151697
+}
