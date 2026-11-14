@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.flame-audio-observation-plan/1",
+  "parent_commit": "166627a",
+  "purpose": "Determine whether approved D's visible exhaust plume context supplies distinguishable acoustic transient evidence for the separate event layer.",
+  "source": "D",
+  "source_seconds": [36,44],
+  "primary_seconds": [38,42],
+  "basis": "Previously inspected original PTS40.040s blue exhaust plume in dyno_tail_v1; caption is not an acoustic or fueling label.",
+  "video_step_seconds": 0.25,
+  "audio_rate": 48000,
+  "bands_hz": [[20,120],[120,500],[500,1500],[1500,3000],[3000,6000],[6000,10000],[10000,16000]],
+  "frame_size": 960,
+  "hop": 240,
+  "candidate_detection": {
+    "bands": [3,4,5],
+    "median_context_frames": 101,
+    "minimum_above_local_median_db": 6,
+    "minimum_bands": 2,
+    "minimum_spacing_seconds": 0.1
+  },
+  "metrics": "Periodic Hann PSD sums, mono-average channel power (no L/R waveform cancellation), raw short-window crest, separate channel spectra and complex cross-power. Candidate excess is a diagnostic, not event separation.",
+  "controls_before_source": "Stationary exact-bin tones should yield no excess candidates; fresh stereo noise with one known short broadband pulse should expose a candidate near that pulse. Independent direct FFT audit and exact sample checks follow.",
+  "review": "One-player raw stereo excerpts with fixed0.5 gain and5ms endpoint fades; no EQ, denoise, stem extraction, gain rescue or physical sound labels.",
+  "decision_policy": "Keep fixed windows and all candidates; do not search for stronger flames or retune thresholds. Do not derive a runtime event timbre, trigger map, RPM or fuel state from visual flame or a numerical peak alone.",
+  "protection": "All646C/H,74voice parameters,F2 and moving35 unchanged. Both pending hearings remain independent. No downloads, push, old tests, idle migration or higher-chaos research; full goal active."
+}

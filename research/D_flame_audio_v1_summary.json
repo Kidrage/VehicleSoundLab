@@ -1,0 +1,81 @@
+{
+  "result": "fixed_D_flame_context_without_qualifying_acoustic_excess",
+  "git_parent": "166627a3ee6800564453d52bf8978ca7db5903db",
+  "protected_C_H": 646,
+  "protected_voice_parameters": 74,
+  "F2_exact": true,
+  "runtime_changed": false,
+  "new_event_timbre": false,
+  "new_trigger_mapping": false,
+  "new_source_PCM_loop": false,
+  "new_room": false,
+  "manual_hearing": false,
+  "source_seconds": [
+    36,
+    44
+  ],
+  "primary_seconds": [
+    38,
+    42
+  ],
+  "known_controls_before_source": {
+    "steady_false_candidates": 0,
+    "pulse_candidates": [
+      1.5
+    ],
+    "pulse_maximum_excess_db": 33.75856683766753
+  },
+  "original_PTS_frames": 35,
+  "contact_sheets_viewed": 5,
+  "observed_frames_step_seconds": "0.233–0.234 (requested0.25 rounded to7 video frames)",
+  "numerical_candidate_count": 0,
+  "maximum_two_band_excess_db": 3.514444830913316,
+  "audit": {
+    "result": "passed",
+    "native_samples_exact": true,
+    "all_four_clips_exact": true,
+    "all1597_frames_checked": 1597,
+    "maximum_band_power_error_FS2": 2.220446049250313e-16,
+    "maximum_cross_power_error_FS2": 1.9478403400799705e-16,
+    "maximum_excess_error_db": 7.144285163462882e-14,
+    "maximum_two_band_excess_db": 3.514444830913318,
+    "fixed_gate_candidates": 0,
+    "original_PTS_frames": 35,
+    "protected_C_H": 646,
+    "protected_voices": 74,
+    "F2_exact": true,
+    "physical_backfire_proven": false
+  },
+  "review_url": "http://127.0.0.1:8789/references/analysis/D_flame_audio_v1/review1/index.html",
+  "raw_same_gain_clips": 4,
+  "browser": {
+    "result": "passed",
+    "clips": 4,
+    "muted": true,
+    "one_player": true,
+    "paused_switch": true,
+    "source_clock_and_picture_checked": true,
+    "mobile_overflow": false,
+    "hearing": false,
+    "errors": []
+  },
+  "analysis_and_browser_images_viewed": 3,
+  "all_attempts_preserved": [
+    "frames1",
+    "audio1",
+    "audit1",
+    "review1",
+    "browser1",
+    "browser2"
+  ],
+  "numerical_failure_attempts": [],
+  "previous_CTests_not_repeated": "No C/model/driver/UI/take change",
+  "decision": "Keep fixed gates and mixed context; no independently qualified acoustic event, do not infer that no pop exists",
+  "scope": "Training/reference observation, not RPM/fuel/load/AV/room/source separation or completed state timbre",
+  "idle_and_E_hearing_still_pending": true,
+  "full_goal": "active",
+  "next": "Inspect independent approved event/state material; no threshold/window rescue, default promotion or automatic higher-chaos work",
+  "manifest_sha256": "47c92a8352e8eaa9c837377f71985d68c1f7d39a8df5b782fafa5e62d0060553",
+  "file_count": 138,
+  "bytes": 61367253
+}

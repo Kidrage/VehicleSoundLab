@@ -1,5 +1,7 @@
 # Vehicle Sound Lab
 
+新增[D台架火焰附近原声核查](http://127.0.0.1:8789/references/analysis/D_flame_audio_v1/review1/index.html)：固定36–44秒、35张原PTS画面与双声道分析；可见火焰不等于可分离回火。预设瞬态条件未检出候选，未据此改C音色或触发。见[证据和限制](research/D台架火焰与爆音证据V1.md)。
+
 新增[减速双声道配方接入](research/减速双声道配方接入V1.md)：统一窗口追加一个可选E车内候选，沿用原驾驶／分层／录放链。九项为七个V10情境＋两个解析示例，未自动绑定收油状态，默认和已认可行驶35%保持。怠速节奏候选仍在[原版／候选／原声页](http://127.0.0.1:8789/references/analysis/idle_complex75_v1/review1/index.html)待听，未替换C默认。
 
 新增[减速声线与双声道细节试听](http://127.0.0.1:8789/references/analysis/E_decel_source_v1/review2/index.html)：从批准E车内减速语境提取一个56.023Hz声线，以原C核持续生成；同一DNA／35%撤出量下比较原细节和左右联合细节。候选尚未接驾驶状态，实时入口保持下述统一窗口。[参数、模块和限制](research/E减速声线与双声道细节V1.md)／[归档摘要](research/E_decel_source_v1_summary.json)。一处后续源窗未通过而排除；新听评与F2怠速听评分别等待，不据频谱／互谱接近宣称音色完成。

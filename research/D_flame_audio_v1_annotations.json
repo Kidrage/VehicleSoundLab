@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.flame-context-annotations/1",
+  "method": "Viewed all35 decoded original-PTS frames on five contact sheets; no enhancement or OCR",
+  "source": "D",
+  "sampled_context_seconds": [36.003,43.944],
+  "observations": [
+    {"description": "Fixed rear-left camera, strapped car inside dyno room; rear wheel blurred across inspected frames"},
+    {"description": "Caption HERE COME THE FLAMES visible from inspected36.703s onward until41.375s; not a sound label"},
+    {"description": "Clearly visible blue plume in multiple sampled frames", "source_seconds": [38.339,39.039,39.974,40.207,41.375,41.609,41.842,42.076,42.543,43.476,43.710,43.944]}
+  ],
+  "not_established": ["Calibrated screen RPM/units", "Pedal/load/injector/ignition-cut state", "Physical cause of flame", "Precise AV latency", "Unedited continuity between every sampled picture", "Isolated acoustic backfire"],
+  "decision": "Keep this as flame/dyno context. Do not use pictures or caption as a runtime acoustic-event trigger map."
+}

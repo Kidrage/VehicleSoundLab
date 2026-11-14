@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D 台架火焰附近 · 原声核查</title>
+<style>body{font:16px/1.65 system-ui,sans-serif;background:#f5f6f7;color:#222;margin:0;padding:20px}main{max-width:820px;margin:auto}h1{font-size:24px;margin:0 0 12px}p{margin:10px 0}select,audio{width:100%;box-sizing:border-box;margin:8px 0}select{font:inherit;padding:9px}img{max-width:100%;height:auto;border-radius:6px}figure{margin:14px 0}figcaption,.muted{font-size:14px;color:#555}details{margin:18px 0}#clock{font-variant-numeric:tabular-nums}a{color:#195fa6}summary{cursor:pointer}</style>
+<main>
+<h1>D 台架火焰附近 · 原声核查</h1>
+<p>这页检查原素材能否提供回火声依据。画面中的蓝色火焰不能直接当作爆音、松油或断油标签。</p>
+<select id="clip" aria-label="原声片段"></select>
+<audio id="audio" controls preload="metadata"></audio>
+<p id="clock"></p>
+<p class="muted">各段均为原双声道，统一 −6.02 dB 和首尾 5 ms 淡化。无降噪、EQ 或逐段响度补偿。切换片段会暂停并回到起点。</p>
+<figure><img id="picture" alt="最近的原视频采样画面"><figcaption id="caption"></figcaption></figure>
+<details><summary>本次检查结果与边界</summary>
+<p>固定 38–42 秒范围，在“1.5–3、3–6、6–10 kHz 中至少两带同时高于局部中值 6 dB”的预设条件下，没有检出候选；整个 36–44 秒最高两带突出量约 3.51 dB。已知短脉冲对照可检出、稳定正弦对照无误检，但这不证明实录中绝无短促爆音。</p>
+<p>尚未得到可独立拟合的回火模板，未改变实时声音、触发规则或默认配方。音画与仪表延时没有独立校准；下方图示是声学观察，不是发动机遥测。低频图使用 20 ms 窗、50 Hz 频率间隔，不能据此分辨精细次声结构。</p>
+<img src="diagnostic.png" alt="原声RMS、频带突出量与频带能量随源时间变化">
+</details>
+</main>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const data=JSON.parse(document.querySelector('#data').textContent),audio=document.querySelector('#audio'),menu=document.querySelector('#clip');
+let current=data.clips[2],shown='';
+for(const row of data.clips){const option=document.createElement('option');option.value=row.key;option.textContent=row.title;menu.append(option)}
+function update(){const seconds=current.source_seconds[0]+(Number.isFinite(audio.currentTime)?audio.currentTime:0);
+ document.querySelector('#clock').textContent=`源时间 ${seconds.toFixed(3)} s ｜当前片段 ${current.source_seconds.join('–')} s`;
+ const frame=data.frames.reduce((a,b)=>Math.abs(a.source_seconds-seconds)<Math.abs(b.source_seconds-seconds)?a:b);
+ if(shown!==frame.file){document.querySelector('#picture').src=frame.file;shown=frame.file}
+ document.querySelector('#caption').textContent=`最近采样画面 PTS ${frame.source_seconds.toFixed(3)} s；音画延迟未校准。`;
+}
+function choose(){audio.pause();current=data.clips.find(r=>r.key===menu.value);audio.src=current.file;audio.load();update()}
+menu.value=current.key;menu.addEventListener('change',choose);audio.addEventListener('timeupdate',update);audio.addEventListener('seeked',update);choose();
+</script></html>
