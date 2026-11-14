@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.native-joint-band-envelope/1",
+  "parent_commit": "49daf7d",
+  "purpose": "Observe complete original-time stereo band envelopes over longer approved contexts. Preserve deterministic trends and cross-band/LR dependence before designing a generative detail law.",
+  "source_segments": ["F3_fifth1", "F3_fifth2"],
+  "use": "fixed_window_spectral_observation",
+  "measurement": {"rate":48000,"window_samples":4096,"hop_samples":1024,"fft_samples":8192,"bands_hz":[[28,120],[120,400],[400,1200],[1200,3000],[3000,6000],[6000,8000],[8000,10000],[10000,14000]],"window":"periodic Hann","cross_convention":"L*conj(R)"},
+  "features": {"log_floor_FS2":1e-20,"order":"band-major, L then R;10log10 channel power","trend":"OLS intercept and linear native time, no audio processing. Residual is descriptive, not certified random detail.","lags_windows":[1,2,4,8,16],"normalization":"population covariance divide by number of windows; lagged product divide by available pairs, retain sign and direction","HF_summary":"bands3..14k; mean normalized per-channel dB trace, same feature covariance and literal eigenvalues; no forced rank, no runtime profile"},
+  "known": {"seconds":3,"carrier_hz":[4100,7000,9000,12000],"amplitude_L":[0.055,0.045,0.035,0.025],"amplitude_R_ratio":0.7,"phase_R":[0.2,-0.4,0.65,-0.8],"cases":["zero","steady","shared_AM4Hz","differential_AM","rising_carriers"],"shared_AM":"1+0.4cos(2pi4t)","differential_AM":"L band b: (1+0.1t)*(1+0.3cos(2pi*(2+b)t+0.2b)); R: (1+0.04t)*(1+0.25sin(2pi*(3+b)t+0.4b))","rising_carriers":"f0 +100t Hz for each carrier; no random AM, all remain inside declared HF bands","analytic_check":"per-HF-band Hann-squared weighted amplitude products and exp(-i phase_R)/2; zero/steady/all deterministic carriers also independently rebuilt"},
+  "gates": {"matrix_absolute_FS2":1e-17,"matrix_relative":5e-11,"DFT_amplitude_absolute":1e-9,"analytic_HF_matrix_absolute_FS2":1e-8,"feature_absolute_dB":1e-8,"statistic_absolute":1e-8},
+  "limits": ["Two contexts from one video, not independent recordings","No physical RPM/load/fueling or continuously calibrated gear from envelopes","Native frequency bands include harmonic motion, wind, microphone and source effects","Linear detrending does not identify stochastic mechanical modulation","No stationarity claim or universal VAR fit from three-second contexts","No additive noise qualification, automatic widening or new strength sweep","No C/model/default/driver/owned/take/room/hearing change or new download/push"],
+  "preserve": "667C/H82voices/F2 protected; accepted moving35 and pending F2/F3 hearings independent; full driving/multiple engine/physical7.1.4 goal remains active"
+}
