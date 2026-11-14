@@ -1,0 +1,7 @@
+{
+  "schema":"vsl.accel-upper-carrier-energy-followup/1",
+  "timing":"Declared after observe1 spectral budgets for all12 cases completed. This is an explicit subsequent compatibility diagnostic, not a preregistered fit or heldout test. No model/target/bounds/gate changes.",
+  "question":"Changing the Gaussian carrier changes its fourth-order Gaussian contribution and hence the previously fitted OU energy covariance. Do fixed Gamma/tau still predict the original energy lag target? Do not assume modular compatibility from mean-PSD matching.",
+  "method":"All12 exact observe1 carrier native signed covariances and frozen accel_upper_am_v1 W/targets/parameters/previous predictions. Replace only normalized carrier squared covariance in the existing exact post-gain fourth-moment observer, preserve all11lags x4x4. Save complete new predictions and costs vs old. No refit, strength scan, original-PCM loop, promotion or new listening question. Independently replay all results in carrier audit.",
+  "limits":"Previously seen source, fixed fitted params not fresh prediction; cost changes are diagnostics not perceptual scores or proof of universal failure/success. Keep sourcePSD/spatial/temporal/state requirements and pending idle hearing intact."
+}

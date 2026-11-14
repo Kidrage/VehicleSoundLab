@@ -1,0 +1,6 @@
+{
+  "schema":"vsl.accel-upper-carrier-summary-fix/1",
+  "timing":"After observe1 and energy1 completed, near-null refilter bins were inspected. Both stereo diagonal powers were negative at roundoff scale in some bins; the old denominator>0 mask incorrectly classified negative*negative as a defined coherence. Original spectra, parameters, sources and reports remain unchanged.",
+  "fix":"Coherence requires BOTH individual powers strictly positive, not merely their product. Invalid bins get undefined mask and do not enter weighted MSC; no power/cross-spectrum value is clipped, no floor or positive offset is added. Preserve signed band power integrations. A new summary pass reads exactly the old saved spectra; no source/carrier/gain/refilter recomputation, refit or gate relaxation.",
+  "known_before_corrected_summaries":"Explicit negative-negative, zero, positive-negative, and valid positive-positive examples; no same-sign-negative coherence allowed. Original summaries retained and superseded only for normalized coherence validity/weight, not raw/native spectral evidence. Independent audit covers corrected summaries and all original spectra."
+}
