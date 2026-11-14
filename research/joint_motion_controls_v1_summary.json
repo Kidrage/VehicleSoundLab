@@ -1,0 +1,1909 @@
+{
+  "result": "motion_and_texture_ablations_verified",
+  "parent_commit": "8d94b66e265b18bb4db29b61ad5b5e99da8b03df",
+  "previous_goal_turn": "Progress: original-driver capture and native joint budget committed8d94b66; current controlled source ablations distinguish motion from statistical texture.",
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_exact": true,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "known_cases": 19,
+  "known_windows": 2603,
+  "known_DFT_complex_values": 124944,
+  "real_cases": 16,
+  "real_windows": 2192,
+  "real_DFT_complex_values": 105216,
+  "known_audit": {
+    "result": "independent_motion_observation_audit_passed",
+    "windows": 2603,
+    "DFT_complex_values": 124944,
+    "max_matrix_error_FS2": 2.4286628561738615e-17,
+    "max_DFT_error": 1.0048596759870772e-11,
+    "max_statistic_error": 4.6351811278100286e-14,
+    "max_known_sparse_wave_error_FS": 9.992007221626409e-16,
+    "max_C_sparse_error_FS": 0.0,
+    "producer_report_sha256": "9c3cf5d43b6c7919cdd8a93284fbfe07a1b1bf3f99559868c19482a333a15936",
+    "auditor_sha256": "f09235e9937b14fb53d19f07d9329ea9ad6d42ab63582940093d0def603e7e25",
+    "stage": "known",
+    "modulation_or_timbre_qualified": false
+  },
+  "real_audit": {
+    "result": "independent_motion_observation_audit_passed",
+    "windows": 2192,
+    "DFT_complex_values": 105216,
+    "max_matrix_error_FS2": 3.330674549425625e-16,
+    "max_DFT_error": 4.0879288116120726e-12,
+    "max_statistic_error": 3.5083047578154947e-14,
+    "max_known_sparse_wave_error_FS": 0.0,
+    "max_C_sparse_error_FS": 2.9798059242303054e-08,
+    "producer_report_sha256": "4210d52fb6e8bdd2ee3710c8fc682c02ad37febb98fcfb181fa905b32a4798f6",
+    "auditor_sha256": "c732e350054371495e75c408dbea4bcc562bcabec959e1818f464b141e71c5bd",
+    "stage": "real",
+    "modulation_or_timbre_qualified": false
+  },
+  "known_C_576000frame_WAV_exact": true,
+  "frozen_C_binary_sha256": "90ce22a9169689121f3d2c41b49ae8994dfcb6f1f043f85c395efa4912990d6f",
+  "real_observations": [
+    {
+      "label": "first_static_mid_detail0_seed1",
+      "group": "first",
+      "trajectory": "static_mid",
+      "detail": 0,
+      "seed": 1,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/static_mid_detail0.trace",
+      "C_files_sha256": {
+        ".wav": "a93bf15bfac387df3956cec86ace2d5594960c2a558c639e33a2e62ca94259a0",
+        ".csv": "803b65fa28981d8d1b743c875d61091c7a2f6765a1b1eff680127979e72dcb15",
+        ".json": "2e3dae5e861b097a56fd6ef075be68943e80c1663e410cf7eb4cc185d8955981"
+      },
+      "arrays_sha256": "daa466906cdec584462f20291ae018bce8c5881534b953e67b3a9cb20b295947",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 7.248556309871479e-07,
+      "HF_std_dB": [
+        [
+          0.00015119401150644933,
+          0.0002760876358508475
+        ],
+        [
+          0.00046363955875197813,
+          0.0005108094076064257
+        ],
+        [
+          0.00013878279657793157,
+          0.0002173379998905175
+        ],
+        [
+          0.0001751319040312656,
+          0.00022959981104315024
+        ]
+      ],
+      "HF_PC1_fraction": 0.6783849851588224,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.043349336998198e-06,
+          -1.8707025440196616e-06
+        ],
+        [
+          -2.3043933103032564e-06,
+          7.324836476156448e-08
+        ],
+        [
+          -2.5685993185816123e-06,
+          -1.2686355695764878e-06
+        ],
+        [
+          8.023788536192969e-06,
+          -1.2092200077827534e-06
+        ]
+      ]
+    },
+    {
+      "label": "first_static_mid_detail1_seed1",
+      "group": "first",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 1,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "61f815bb6dfc22f491d2c043957f22af8f99e233e6ae9b85ef99c7651067e1f3",
+        ".csv": "803b65fa28981d8d1b743c875d61091c7a2f6765a1b1eff680127979e72dcb15",
+        ".json": "364defe01504dc2d41f51ad3033e5a58d3154d3abb7c9b94b23e0e414ba35d57"
+      },
+      "arrays_sha256": "82f55d6ee04902a1979a96ea498518c0a0404655dd145c73e243c8cf679cb9ca",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 15.533120748725977,
+      "HF_std_dB": [
+        [
+          1.3275699236647562,
+          1.221179855632079
+        ],
+        [
+          1.4711437241632186,
+          1.2946471673608217
+        ],
+        [
+          1.4538012848272743,
+          1.535992058919298
+        ],
+        [
+          1.3171552263149557,
+          1.4937589466066954
+        ]
+      ],
+      "HF_PC1_fraction": 0.7556635359762778,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.38356636945625994,
+          0.2352024083061498
+        ],
+        [
+          0.06457333703402798,
+          0.02872782358322801
+        ],
+        [
+          0.20429716170435758,
+          0.1672415477074534
+        ],
+        [
+          -0.001053197035021169,
+          -0.18774319534029463
+        ]
+      ]
+    },
+    {
+      "label": "first_static_mid_detail1_seed23117",
+      "group": "first",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 23117,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "467b960a4dc75d7bec50c51c472910d7bb7132f27613d4464a00e5d1abde6327",
+        ".csv": "803b65fa28981d8d1b743c875d61091c7a2f6765a1b1eff680127979e72dcb15",
+        ".json": "ec6e8f655bb407aa24cb48495650805cb61233ab4444592c6acdd8749412418b"
+      },
+      "arrays_sha256": "8daad0d1c149bceed214db6803fae36b1eef67383cb8f015015323159bb6ed32",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 24.32748459612388,
+      "HF_std_dB": [
+        [
+          1.569979691122257,
+          1.7283960252690271
+        ],
+        [
+          1.8413547037879143,
+          1.783626086750749
+        ],
+        [
+          2.040251202464508,
+          1.832209428597992
+        ],
+        [
+          1.4144442573383704,
+          1.6682678041619567
+        ]
+      ],
+      "HF_PC1_fraction": 0.835881686085903,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.4599516228361938,
+          0.22329851529320457
+        ],
+        [
+          -0.08136628933832471,
+          0.07557710099214443
+        ],
+        [
+          0.2154507174829872,
+          0.3106023276084981
+        ],
+        [
+          0.046908425747293155,
+          0.10729235954274619
+        ]
+      ]
+    },
+    {
+      "label": "first_static_mid_detail1_seed61927",
+      "group": "first",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 61927,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "1e147b13e9278e3c479a3c2ecffcc650dc7da1b5585dc1a395db40c57fb525b6",
+        ".csv": "803b65fa28981d8d1b743c875d61091c7a2f6765a1b1eff680127979e72dcb15",
+        ".json": "1ba687b5b2f768315c06244b74a112af38a7d89eb54936db6914e9c064443390"
+      },
+      "arrays_sha256": "f8d4169117053f45bc10846b8f8803289fec7c651c25c8a22374663cb3efc280",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 28.839180995551295,
+      "HF_std_dB": [
+        [
+          1.785417849911859,
+          2.0681633047733943
+        ],
+        [
+          1.9631855632531987,
+          2.1098306101716
+        ],
+        [
+          2.0504484301043653,
+          1.7907878193624798
+        ],
+        [
+          1.6235523500853,
+          1.738246205291808
+        ]
+      ],
+      "HF_PC1_fraction": 0.8756769449393256,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.3928098222267831,
+          -0.5723221458473954
+        ],
+        [
+          -0.5557881846765313,
+          -0.7088603299157309
+        ],
+        [
+          -0.7743444188363822,
+          -0.5474642820111287
+        ],
+        [
+          -0.5124839841806621,
+          -0.3325860011443477
+        ]
+      ]
+    },
+    {
+      "label": "first_local_rise_detail0_seed1",
+      "group": "first",
+      "trajectory": "local_rise",
+      "detail": 0,
+      "seed": 1,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/local_rise_detail0.trace",
+      "C_files_sha256": {
+        ".wav": "d088d9fcde4610349674eff401b0ccd42752ca8f8bf3a2e280c9aa34f8c14b26",
+        ".csv": "87b885c0851c99afa1273bb85f3309e2228fed9675c31ddf15179c1fbfdcc71d",
+        ".json": "8c0f86b9cdd5f6c3111cc1950ca6a278387411a025278437535bf1fef2923ed8"
+      },
+      "arrays_sha256": "a5be145422fca2edc4e54d1f30ab1b1155af410333e3439971c53bacff82dcd4",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 1.6791953378053954,
+      "HF_std_dB": [
+        [
+          0.5396367994000688,
+          0.3881888647246374
+        ],
+        [
+          0.16809614596360373,
+          0.3021068376785191
+        ],
+        [
+          0.395464604112918,
+          0.3932778519348306
+        ],
+        [
+          0.4969720198585259,
+          0.74815179056899
+        ]
+      ],
+      "HF_PC1_fraction": 0.823426152022435,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          2.576163060999565,
+          3.378524450922906
+        ],
+        [
+          0.6781930297453987,
+          0.7505137384796077
+        ],
+        [
+          0.7364319747853868,
+          0.5326126321710456
+        ],
+        [
+          0.7274910909603449,
+          1.6276750517144405
+        ]
+      ]
+    },
+    {
+      "label": "first_local_rise_detail1_seed1",
+      "group": "first",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 1,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "af11b0b4e0a27f3cc3d040bffbfe944e152e39b9bcb9239d114d8ff6b0cbdc9d",
+        ".csv": "87b885c0851c99afa1273bb85f3309e2228fed9675c31ddf15179c1fbfdcc71d",
+        ".json": "9255361ee8c8973756474ddef63b2d0b55fcac0a2a4171e9d428ff4393cf1681"
+      },
+      "arrays_sha256": "e741360893590a980ebd66229b60c5f4bcbd564a2dcc73c459e85c3e566b6eaf",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 15.39179629607235,
+      "HF_std_dB": [
+        [
+          1.2287696281044833,
+          1.2482343968798277
+        ],
+        [
+          1.4607393113413567,
+          1.2351975432403912
+        ],
+        [
+          1.3827878923079635,
+          1.4688532631418958
+        ],
+        [
+          1.4034435841575283,
+          1.6202079876893054
+        ]
+      ],
+      "HF_PC1_fraction": 0.7868199222620353,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.8491838007715622,
+          2.0695475651607347
+        ],
+        [
+          0.6336466539487605,
+          0.8295235849720121
+        ],
+        [
+          0.6606451350480105,
+          0.9777345745687632
+        ],
+        [
+          1.013369065829419,
+          1.7161330900504934
+        ]
+      ]
+    },
+    {
+      "label": "first_local_rise_detail1_seed23117",
+      "group": "first",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 23117,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "3103066f3762195a779cb58278310ac13deacd0db8e7a68af0c6b9a645c3fdeb",
+        ".csv": "87b885c0851c99afa1273bb85f3309e2228fed9675c31ddf15179c1fbfdcc71d",
+        ".json": "66830f417b052d1647acb9cdda8d326ef551a7aced62114dc5b48f47241aaf25"
+      },
+      "arrays_sha256": "40c922933a4c4e998b53acd4141e5521e9664e5053f9637d13e8437d014e36e4",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 23.2235932224048,
+      "HF_std_dB": [
+        [
+          1.6227375757370386,
+          1.7429072883738455
+        ],
+        [
+          1.7769998171264596,
+          1.7373650818240414
+        ],
+        [
+          2.081432800154907,
+          1.5978746070320502
+        ],
+        [
+          1.442197007983335,
+          1.552715820111868
+        ]
+      ],
+      "HF_PC1_fraction": 0.8705400367337819,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          2.1633194959290774,
+          2.2201035647409326
+        ],
+        [
+          1.0527286911478257,
+          1.3502286112105741
+        ],
+        [
+          1.4638188605608904,
+          1.4038292097848046
+        ],
+        [
+          1.3525492412301112,
+          2.187853360865428
+        ]
+      ]
+    },
+    {
+      "label": "first_local_rise_detail1_seed61927",
+      "group": "first",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 61927,
+      "models": [
+        "first/first_early.model",
+        "first/first_mid.model",
+        "first/first_late.model"
+      ],
+      "trace": "first/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "41a6e894ebf8c1f7e72aa7934aeb9efa09daace859b485141673b28fcea95159",
+        ".csv": "87b885c0851c99afa1273bb85f3309e2228fed9675c31ddf15179c1fbfdcc71d",
+        ".json": "daaee963396ce498a7eebe78d082c596129c51bad488818e8e37d3b02813704f"
+      },
+      "arrays_sha256": "8317087f8c10c3d3e31c5d630d3f69b196b8e01d9496967e64d004fea6b77fc1",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 24.356760321328366,
+      "HF_std_dB": [
+        [
+          1.7083258148719977,
+          1.6486371115971563
+        ],
+        [
+          1.7897013841960903,
+          1.8110296938138128
+        ],
+        [
+          1.8242791161468297,
+          1.7672370430219295
+        ],
+        [
+          1.6872252067986764,
+          1.7145463980513729
+        ]
+      ],
+      "HF_PC1_fraction": 0.8797933567836235,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.6742636736764256,
+          1.8745897578975874
+        ],
+        [
+          0.12178680273981507,
+          0.17462787264881044
+        ],
+        [
+          0.7393352658705044,
+          0.7794321768572487
+        ],
+        [
+          0.9087460568898136,
+          1.288924274880896
+        ]
+      ]
+    },
+    {
+      "label": "second_static_mid_detail0_seed1",
+      "group": "second",
+      "trajectory": "static_mid",
+      "detail": 0,
+      "seed": 1,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/static_mid_detail0.trace",
+      "C_files_sha256": {
+        ".wav": "d51b92cdc7e591d575b522a502c2bf98b48e68a9aad907d422464f57a9c27326",
+        ".csv": "251c6a2d9da60b4fd23370d8d09c35d0b2d472cfc81e8e90d3dcbe7e9527ce6e",
+        ".json": "f849fa1c6b1aae8fefc496d4b15c6a6c52a9065823450764934fb6846ff0a4c7"
+      },
+      "arrays_sha256": "fa51680dd497e145b277fdc7bb51baf9cec82ed3e3b6bc2141053892cf633735",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 9.173545136071313e-07,
+      "HF_std_dB": [
+        [
+          0.00038827670811280505,
+          0.00025574798039133297
+        ],
+        [
+          0.00013593469625247678,
+          0.0002602867017384526
+        ],
+        [
+          0.0006733833049584067,
+          0.0001944023580127673
+        ],
+        [
+          0.00026744948104140095,
+          0.00022846158586486376
+        ]
+      ],
+      "HF_PC1_fraction": 0.6893923390176926,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          3.074978143910767e-06,
+          -4.922910731888472e-06
+        ],
+        [
+          -6.846742425178578e-07,
+          5.045193147354282e-07
+        ],
+        [
+          -1.833310441118928e-05,
+          -1.1209638173709392e-05
+        ],
+        [
+          6.834507343759888e-06,
+          3.139452846187856e-06
+        ]
+      ]
+    },
+    {
+      "label": "second_static_mid_detail1_seed1",
+      "group": "second",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 1,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "794696a3e8b9db5de663b8b89e256bc6f5d3821cfdf9b8cab3c7aecc9a103d6f",
+        ".csv": "251c6a2d9da60b4fd23370d8d09c35d0b2d472cfc81e8e90d3dcbe7e9527ce6e",
+        ".json": "a4a5c29c988d8c1839ac2974aadc31f25b049bf180f0303cf4ba28d68c35665b"
+      },
+      "arrays_sha256": "8ee4b33b05b20a1b82580ccc7d2b83e705145afb6814413bd6964edf7fd982d7",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 22.190493154028786,
+      "HF_std_dB": [
+        [
+          1.1899595512967647,
+          1.1177566630429716
+        ],
+        [
+          1.617176679407509,
+          1.4711371003190292
+        ],
+        [
+          2.0353307808928234,
+          1.8643348482898892
+        ],
+        [
+          1.9089810794272861,
+          1.8663011831871104
+        ]
+      ],
+      "HF_PC1_fraction": 0.8966004589401111,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.11478261185496559,
+          0.21761983038995283
+        ],
+        [
+          0.45730029231145153,
+          0.16197197245094389
+        ],
+        [
+          0.22236610709836818,
+          0.3663006877514053
+        ],
+        [
+          0.4062506960838164,
+          0.20380872383728868
+        ]
+      ]
+    },
+    {
+      "label": "second_static_mid_detail1_seed23117",
+      "group": "second",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 23117,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "7c538d628118d9a337b20196399f1b130ecea69c70c8307d3d23c8233fdf9b6e",
+        ".csv": "251c6a2d9da60b4fd23370d8d09c35d0b2d472cfc81e8e90d3dcbe7e9527ce6e",
+        ".json": "2271e40b56b9e75eaf97fa6aa74bd53b134b6bf006ac375fd1a442d19f966372"
+      },
+      "arrays_sha256": "58c7953f54345d5328b63c3bc38150f1b455b7be2f975fe442acfa62c02fa791",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 21.973563971631094,
+      "HF_std_dB": [
+        [
+          1.3899730797499847,
+          1.457416190729506
+        ],
+        [
+          1.5146340561100162,
+          1.6521627146969968
+        ],
+        [
+          1.802388281626677,
+          1.8115097845309054
+        ],
+        [
+          1.9697548614456297,
+          1.5759484335004863
+        ]
+      ],
+      "HF_PC1_fraction": 0.8670797262374693,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.6527270105469375,
+          0.5277492850924681
+        ],
+        [
+          0.3491830580175725,
+          0.41723622186522097
+        ],
+        [
+          0.6697329694405753,
+          0.5895908774247557
+        ],
+        [
+          0.7980056716612595,
+          0.6889049363302195
+        ]
+      ]
+    },
+    {
+      "label": "second_static_mid_detail1_seed61927",
+      "group": "second",
+      "trajectory": "static_mid",
+      "detail": 1,
+      "seed": 61927,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/static_mid_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "16646ba42907b71a0859eb23ad7e78837679c1fccf371eafc7085b91df71d5db",
+        ".csv": "251c6a2d9da60b4fd23370d8d09c35d0b2d472cfc81e8e90d3dcbe7e9527ce6e",
+        ".json": "fc2fa2a2d66ff9f651f64f93e43a93bf98d60fd06ec4196f8e218fc1e9a904e7"
+      },
+      "arrays_sha256": "d815756dbd8a67079e870577aa805d5fd210ca040a8c36ad45cafe874dc51897",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 33.11049076953631,
+      "HF_std_dB": [
+        [
+          1.7321712819875923,
+          1.7460372615958188
+        ],
+        [
+          1.937266510153727,
+          1.9314054454292824
+        ],
+        [
+          2.3321267791084135,
+          2.1168835045320242
+        ],
+        [
+          2.3058725659245467,
+          2.083516114321615
+        ]
+      ],
+      "HF_PC1_fraction": 0.9063354229501063,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.19671781557493223,
+          -0.008132265664128464
+        ],
+        [
+          -0.10865135576270997,
+          -0.14362117889410816
+        ],
+        [
+          0.3478927208183828,
+          0.19014032947998366
+        ],
+        [
+          0.22237774568021842,
+          0.5289550082166261
+        ]
+      ]
+    },
+    {
+      "label": "second_local_rise_detail0_seed1",
+      "group": "second",
+      "trajectory": "local_rise",
+      "detail": 0,
+      "seed": 1,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/local_rise_detail0.trace",
+      "C_files_sha256": {
+        ".wav": "2d62780984ed0dfc80a98798fd7a361c5f71b146b34e732d8d1955763ad3563d",
+        ".csv": "05bdda913558d6c076558907b027be7ee46d71c01fc8cd465cb708dbb3c0a6a6",
+        ".json": "ff7c671ff18e423d11e4c88aeb3ff9bc16b8b43921681e80f8d50223ad7aade3"
+      },
+      "arrays_sha256": "58fb079ebe8f58ce1e7261caf72d970667256e83acdff3173e6d552d71fb584b",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 1.7630785937534303,
+      "HF_std_dB": [
+        [
+          0.1810270349748345,
+          0.4944263341715619
+        ],
+        [
+          0.3840579612784652,
+          0.31408564993315086
+        ],
+        [
+          0.3523235584210089,
+          0.8575617036122231
+        ],
+        [
+          0.23715637484827498,
+          0.5691335360634661
+        ]
+      ],
+      "HF_PC1_fraction": 0.6344486194982828,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          2.5215656707841174,
+          1.1328183497102506
+        ],
+        [
+          0.7847455923455579,
+          1.442870617462758
+        ],
+        [
+          0.6106698410514952,
+          0.9317820632474115
+        ],
+        [
+          0.7988766930649416,
+          1.4803594986278534
+        ]
+      ]
+    },
+    {
+      "label": "second_local_rise_detail1_seed1",
+      "group": "second",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 1,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "a39f350b437d170b7ba5a099a73c737940ac8843ca4fc17545c4abe5fa382a52",
+        ".csv": "05bdda913558d6c076558907b027be7ee46d71c01fc8cd465cb708dbb3c0a6a6",
+        ".json": "b332fc20ccfc400748b5710561507706f8dcd10770b211a712c044e66dda793c"
+      },
+      "arrays_sha256": "8bff85aadf044c8b77cb1f0bbd19f312c19dc1d4ad4c427036d1ce68bd34d70d",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 22.043112457027,
+      "HF_std_dB": [
+        [
+          1.5775405939376461,
+          1.4920992990684474
+        ],
+        [
+          1.577721615686252,
+          1.6203660844595764
+        ],
+        [
+          1.7766415389787655,
+          1.7213543535697138
+        ],
+        [
+          1.5729489868478859,
+          1.9025355673812716
+        ]
+      ],
+      "HF_PC1_fraction": 0.8596922192781371,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.8694352222032722,
+          1.271297889863888
+        ],
+        [
+          1.3395004244588395,
+          1.5262622851069014
+        ],
+        [
+          0.9553438218393296,
+          1.075994790178495
+        ],
+        [
+          0.848748420168616,
+          1.6003044362129715
+        ]
+      ]
+    },
+    {
+      "label": "second_local_rise_detail1_seed23117",
+      "group": "second",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 23117,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "ddd1f4c04b65e39cadad2469236f7c629e01a15631827250409303a1c8b4671d",
+        ".csv": "05bdda913558d6c076558907b027be7ee46d71c01fc8cd465cb708dbb3c0a6a6",
+        ".json": "dca55430b254596c7a266e6f6779f949a62d2c926974ab44c9aa456d9317a7d5"
+      },
+      "arrays_sha256": "a78d62cd2a94249b125cb118a17fd1f48229652a4495ab5b46a1013c2c5b6c66",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 23.179581851499456,
+      "HF_std_dB": [
+        [
+          1.4908286701731723,
+          1.5266606547726655
+        ],
+        [
+          1.6818275577152633,
+          1.8407125098365809
+        ],
+        [
+          1.806703569496349,
+          1.8667147409805998
+        ],
+        [
+          1.746043513914256,
+          1.6161939334101323
+        ]
+      ],
+      "HF_PC1_fraction": 0.8772445034693638,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.8818592098425995,
+          1.061006124911876
+        ],
+        [
+          1.198573434205076,
+          1.6272280014278173
+        ],
+        [
+          1.0621943871077641,
+          0.7983352093602135
+        ],
+        [
+          0.9013075370609768,
+          1.2316665062121188
+        ]
+      ]
+    },
+    {
+      "label": "second_local_rise_detail1_seed61927",
+      "group": "second",
+      "trajectory": "local_rise",
+      "detail": 1,
+      "seed": 61927,
+      "models": [
+        "second/second_early.model",
+        "second/second_mid.model",
+        "second/second_late.model"
+      ],
+      "trace": "second/local_rise_detail1.trace",
+      "C_files_sha256": {
+        ".wav": "2e6bd0523848c6495550ceff7362435bfdd34c8810360543fad866b59a44cac9",
+        ".csv": "05bdda913558d6c076558907b027be7ee46d71c01fc8cd465cb708dbb3c0a6a6",
+        ".json": "135f5c42a79065672b9f1be9a232ea3acd81e8db5d033dc38a34f92a4f90fbb3"
+      },
+      "arrays_sha256": "3ea5c3bee9ad12aadd82e815e5cc312e54eb010fecf3b4696a663d77eda43f5f",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 26.686193049378144,
+      "HF_std_dB": [
+        [
+          1.7943212580803332,
+          1.6762299625168187
+        ],
+        [
+          1.717664762213278,
+          1.8123907288759515
+        ],
+        [
+          1.9112523608058518,
+          2.053267642622192
+        ],
+        [
+          1.8256567515411148,
+          1.7944104385848931
+        ]
+      ],
+      "HF_PC1_fraction": 0.8837318431670567,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          1.2931780125163683,
+          0.28217693614392825
+        ],
+        [
+          0.5384169864193379,
+          0.9775368997799412
+        ],
+        [
+          1.1866122184339847,
+          0.30912698076801587
+        ],
+        [
+          0.6382636995441007,
+          1.2056290038925683
+        ]
+      ]
+    }
+  ],
+  "known_observations": [
+    {
+      "label": "known_zero",
+      "family": "zero",
+      "motion": "static",
+      "modulation": "none",
+      "arrays_sha256": "45c3d5cf53b9248cf4b3eb77dec9a6dc9c8f4bc4ad64c7d4253f8ab358633dfa",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 6.023663561988004e-26,
+      "HF_std_dB": [
+        [
+          8.677314937516677e-14,
+          8.677314937516677e-14
+        ],
+        [
+          8.677314937516677e-14,
+          8.677314937516677e-14
+        ],
+        [
+          8.677314937516677e-14,
+          8.677314937516677e-14
+        ],
+        [
+          8.677314937516677e-14,
+          8.677314937516677e-14
+        ]
+      ],
+      "HF_PC1_fraction": null,
+      "HF_floor_values": 1096,
+      "HF_slope_dB_per_second": [
+        [
+          1.439850858951198e-14,
+          1.439850858951198e-14
+        ],
+        [
+          1.439850858951198e-14,
+          1.439850858951198e-14
+        ],
+        [
+          1.439850858951198e-14,
+          1.439850858951198e-14
+        ],
+        [
+          1.439850858951198e-14,
+          1.439850858951198e-14
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_static_none",
+      "family": "safe",
+      "motion": "static",
+      "modulation": "none",
+      "arrays_sha256": "a11ac348632be2a74855bbff15e043e49aed8f88b2cbd07bb20e6475a6f792d5",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 2.6403851710304855e-21,
+      "HF_std_dB": [
+        [
+          3.197580901208034e-12,
+          3.240263276241426e-12
+        ],
+        [
+          1.9368001531430207e-11,
+          1.930902747943854e-11
+        ],
+        [
+          3.065910009590665e-11,
+          3.0455518185761057e-11
+        ],
+        [
+          1.4478573852966311e-12,
+          1.4449976214364835e-12
+        ]
+      ],
+      "HF_PC1_fraction": null,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -7.686708022632972e-14,
+          -1.491793428647094e-14
+        ],
+        [
+          3.303265092657142e-13,
+          4.298462600391127e-13
+        ],
+        [
+          2.21828590471905e-12,
+          2.1964694841609355e-12
+        ],
+        [
+          -9.459638813795015e-14,
+          -1.0913052368942942e-13
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_static_common",
+      "family": "safe",
+      "motion": "static",
+      "modulation": "common",
+      "arrays_sha256": "ccdad74bb5dec66cb508bc71d6a3411e3d7593e85ae8727215cb5ca81aed3cf9",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.32307264586165,
+      "HF_std_dB": [
+        [
+          2.432156261578044,
+          2.4321562615781227
+        ],
+        [
+          2.43215626158082,
+          2.4321562615808583
+        ],
+        [
+          2.4321562615779073,
+          2.4321562615785806
+        ],
+        [
+          2.4321562615751584,
+          2.432156261573906
+        ]
+      ],
+      "HF_PC1_fraction": 1.0000000000000004,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.019761160494399785,
+          -0.01976116049436557
+        ],
+        [
+          -0.019761160494287056,
+          -0.019761160494088163
+        ],
+        [
+          -0.01976116049232021,
+          -0.01976116049238979
+        ],
+        [
+          -0.01976116049447004,
+          -0.019761160494643902
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_static_differential",
+      "family": "safe",
+      "motion": "static",
+      "modulation": "differential",
+      "arrays_sha256": "0961c305df6e805a85a8b8563fdb94028c40b74eb77c7f552a9026db27bb83af",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 14.389780901430772,
+      "HF_std_dB": [
+        [
+          1.5300974746239115,
+          1.2175674078208856
+        ],
+        [
+          1.5099281172387513,
+          1.1899957840955082
+        ],
+        [
+          1.4834540964209708,
+          1.1533272367734309
+        ],
+        [
+          1.4481588987849194,
+          1.1145292163949048
+        ]
+      ],
+      "HF_PC1_fraction": 0.18151912443936516,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.017846863236535126,
+          -0.0980936884296456
+        ],
+        [
+          0.02118948407466068,
+          -0.05301892129835122
+        ],
+        [
+          0.030030185594482558,
+          -0.02070983696990061
+        ],
+        [
+          0.02408574356057434,
+          -0.003478310917946715
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_rising_none",
+      "family": "safe",
+      "motion": "rising",
+      "modulation": "none",
+      "arrays_sha256": "3e27f39f04ba6fad8f2a8969a62342bfefe81fee3a2c81b872d04a807289bc3c",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 3.228183918080182e-21,
+      "HF_std_dB": [
+        [
+          3.86277160370677e-12,
+          3.553382757748927e-12
+        ],
+        [
+          1.6971588751516944e-11,
+          1.684806471024742e-11
+        ],
+        [
+          3.595440424858378e-11,
+          3.560067077836854e-11
+        ],
+        [
+          5.653015804551121e-12,
+          6.054811552521077e-12
+        ]
+      ],
+      "HF_PC1_fraction": null,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -4.990889752697134e-13,
+          -7.275014577312338e-13
+        ],
+        [
+          -8.891318716136733e-12,
+          -8.512175357399853e-12
+        ],
+        [
+          8.39128450588181e-12,
+          7.434787218517885e-12
+        ],
+        [
+          1.7576287007734996e-11,
+          1.8253882365815837e-11
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_rising_common",
+      "family": "safe",
+      "motion": "rising",
+      "modulation": "common",
+      "arrays_sha256": "b5c0c2e6a20224694e94655d76e69f0052d704d3218a3862fcc91b080112e22d",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.32307264579997,
+      "HF_std_dB": [
+        [
+          2.432156261578201,
+          2.432156261578346
+        ],
+        [
+          2.4321562615841374,
+          2.432156261584172
+        ],
+        [
+          2.4321562615748764,
+          2.4321562615754777
+        ],
+        [
+          2.4321562615683296,
+          2.432156261567177
+        ]
+      ],
+      "HF_PC1_fraction": 1.0000000000000002,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.019761160494919227,
+          -0.019761160495171026
+        ],
+        [
+          -0.019761160505219963,
+          -0.019761160504780228
+        ],
+        [
+          -0.019761160484446278,
+          -0.01976116048555416
+        ],
+        [
+          -0.01976116047330579,
+          -0.019761160472455557
+        ]
+      ]
+    },
+    {
+      "label": "known_safe_rising_differential",
+      "family": "safe",
+      "motion": "rising",
+      "modulation": "differential",
+      "arrays_sha256": "bbd37f682834efa545c1203d98b549bbd5ab2f70a26df65b1c5f146c661524e8",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 14.389780901392069,
+      "HF_std_dB": [
+        [
+          1.5300974746253142,
+          1.2175674078211662
+        ],
+        [
+          1.5099281172400398,
+          1.1899957840972453
+        ],
+        [
+          1.4834540964162242,
+          1.1533272367706442
+        ],
+        [
+          1.4481588987780836,
+          1.114529216389791
+        ]
+      ],
+      "HF_PC1_fraction": 0.18151912444010082,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.01784686323718165,
+          -0.09809368843042017
+        ],
+        [
+          0.021189484064975648,
+          -0.053018921307801344
+        ],
+        [
+          0.03003018560191076,
+          -0.020709836963952878
+        ],
+        [
+          0.024085743580188546,
+          -0.0034783108981186724
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_static_none",
+      "family": "edge",
+      "motion": "static",
+      "modulation": "none",
+      "arrays_sha256": "7ecf83b7701c177ab6f90605257491c95545c962384cbef26ab541cbb1b2481f",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 1.9184885360118048e-17,
+      "HF_std_dB": [
+        [
+          1.0236755256715267e-09,
+          1.0133175809623615e-09
+        ],
+        [
+          1.6922258499932245e-09,
+          2.5991452127231055e-09
+        ],
+        [
+          1.5445897819124753e-09,
+          1.7036648050626783e-09
+        ],
+        [
+          9.864411774364356e-10,
+          1.108909164550987e-09
+        ]
+      ],
+      "HF_PC1_fraction": null,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -1.9082268502035237e-11,
+          -7.1952332561027694e-12
+        ],
+        [
+          1.2018385612101017e-11,
+          3.1816524067394246e-12
+        ],
+        [
+          2.86957143155564e-11,
+          1.5653182428298984e-11
+        ],
+        [
+          7.918459888419007e-13,
+          2.0814615488171212e-12
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_static_common",
+      "family": "edge",
+      "motion": "static",
+      "modulation": "common",
+      "arrays_sha256": "8c2d51fe15d514efdd64e3cbd9b8844ccdaccb5198f0ad49e88b460b50db843d",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.323073008572564,
+      "HF_std_dB": [
+        [
+          2.432156345333436,
+          2.4321563453352133
+        ],
+        [
+          2.432156222829745,
+          2.4321562228261393
+        ],
+        [
+          2.4321562854519763,
+          2.432156285452324
+        ],
+        [
+          2.4321562299794146,
+          2.432156229980853
+        ]
+      ],
+      "HF_PC1_fraction": 1.0000000000000002,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.01976116119701573,
+          -0.019761161186569624
+        ],
+        [
+          -0.01976116017129896,
+          -0.019761160179337798
+        ],
+        [
+          -0.019761160673451735,
+          -0.019761160683814276
+        ],
+        [
+          -0.019761160245526033,
+          -0.019761160245226513
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_static_differential",
+      "family": "edge",
+      "motion": "static",
+      "modulation": "differential",
+      "arrays_sha256": "4606a0da303fee1c35eea7b08d3b613c22498e4541f2d6460d44a52d03f89ff3",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 14.389780043389482,
+      "HF_std_dB": [
+        [
+          1.5300974866841581,
+          1.2175674287012168
+        ],
+        [
+          1.509928007097379,
+          1.1899957161220682
+        ],
+        [
+          1.4834540495382067,
+          1.1533272289100491
+        ],
+        [
+          1.4481588188921333,
+          1.1145291882317756
+        ]
+      ],
+      "HF_PC1_fraction": 0.1815191114375253,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.017846863395630692,
+          -0.0980936901158438
+        ],
+        [
+          0.021189479309254362,
+          -0.053018925721798504
+        ],
+        [
+          0.03003018431386729,
+          -0.02070983983974756
+        ],
+        [
+          0.024085742303864364,
+          -0.003478312513629477
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_rising_none",
+      "family": "edge",
+      "motion": "rising",
+      "modulation": "none",
+      "arrays_sha256": "2c059656a29dcac9661df8b70cef562ef1cadde5bb7769db99fe3186ad037027",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 0.2964757504671362,
+      "HF_std_dB": [
+        [
+          0.3705127466410161,
+          0.3705127488081556
+        ],
+        [
+          0.06921001741577826,
+          0.06921001843959583
+        ],
+        [
+          0.04896308960527909,
+          0.04896309817657378
+        ],
+        [
+          0.06140657461990373,
+          0.061406582040497246
+        ]
+      ],
+      "HF_PC1_fraction": 0.9278713688531031,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.6617255042411438,
+          -0.6617255040221004
+        ],
+        [
+          -0.015014316125055377,
+          -0.015014318716443693
+        ],
+        [
+          0.01026894772490646,
+          0.010268951660322517
+        ],
+        [
+          -0.012974203611874211,
+          -0.01297420438793196
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_rising_common",
+      "family": "edge",
+      "motion": "rising",
+      "modulation": "common",
+      "arrays_sha256": "94f1a524827944075d39c324573108ece93a672a0e653cef728573ef01fb3218",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.579386558630844,
+      "HF_std_dB": [
+        [
+          2.448312898020917,
+          2.4483128998394452
+        ],
+        [
+          2.439913250455758,
+          2.439913238750794
+        ],
+        [
+          2.4273922347085763,
+          2.4273922468406246
+        ],
+        [
+          2.4392719184866287,
+          2.439271920194865
+        ]
+      ],
+      "HF_PC1_fraction": 0.9952178106148785,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.6815934698578211,
+          -0.6815934697462832
+        ],
+        [
+          -0.034623638355183485,
+          -0.03462364235140759
+        ],
+        [
+          -0.009599389913587036,
+          -0.009599383760951829
+        ],
+        [
+          -0.032598469598921036,
+          -0.032598470537050915
+        ]
+      ]
+    },
+    {
+      "label": "known_edge_rising_differential",
+      "family": "edge",
+      "motion": "rising",
+      "modulation": "differential",
+      "arrays_sha256": "68a625d546724e9116df320f5743e94f970b4031b56203bb679496f439f25bc4",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 11.263721416271704,
+      "HF_std_dB": [
+        [
+          1.5533553210256408,
+          1.2490466780695877
+        ],
+        [
+          1.2612923006592123,
+          0.9899447522254582
+        ],
+        [
+          1.2019828169176847,
+          0.9430770370395782
+        ],
+        [
+          1.2210373515350252,
+          0.9459138306183256
+        ]
+      ],
+      "HF_PC1_fraction": 0.24100447455428622,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.6795074632811131,
+          -0.75981282841381
+        ],
+        [
+          0.0481441683482631,
+          -0.041350340916795444
+        ],
+        [
+          0.08869533742487982,
+          0.015585936869978648
+        ],
+        [
+          0.051484372736296885,
+          0.004155481311491426
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_static_none",
+      "family": "dense",
+      "motion": "static",
+      "modulation": "none",
+      "arrays_sha256": "dccc0da575cc013010ce93118d695a0e9b87ec8c2545f3a11b0e66b9e3130daa",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 2.590039768682112e-05,
+      "HF_std_dB": [
+        [
+          0.0017132584325890664,
+          0.001738684854277779
+        ],
+        [
+          0.0018351536791189845,
+          0.0018267553710764257
+        ],
+        [
+          0.0019213342928941792,
+          0.001937034597152387
+        ],
+        [
+          0.0017005193654616542,
+          0.0017034962247746614
+        ]
+      ],
+      "HF_PC1_fraction": 0.5420701863309364,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          2.8632130405065472e-05,
+          2.8658122177934954e-05
+        ],
+        [
+          -1.0292093505515274e-05,
+          -1.0843267286935074e-05
+        ],
+        [
+          -3.8599747435551346e-05,
+          -3.889143116501345e-05
+        ],
+        [
+          -3.048933269341121e-05,
+          -3.070077268373806e-05
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_static_common",
+      "family": "dense",
+      "motion": "static",
+      "modulation": "common",
+      "arrays_sha256": "0d568e4ae8c3639a1b95aa2d9c6e76c155705de5c5a952f2ab4ff6fb6f5e0b37",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.31957779369645,
+      "HF_std_dB": [
+        [
+          2.4316494011995164,
+          2.4317961954896994
+        ],
+        [
+          2.4320403110639788,
+          2.432013618286044
+        ],
+        [
+          2.4321767272639003,
+          2.4321741552206992
+        ],
+        [
+          2.432331095312998,
+          2.4323500203673762
+        ]
+      ],
+      "HF_PC1_fraction": 0.9999993833171423,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.019731898514723428,
+          -0.01973306932139997
+        ],
+        [
+          -0.01977047660410442,
+          -0.019770752040636563
+        ],
+        [
+          -0.019796058342685437,
+          -0.019796311696192392
+        ],
+        [
+          -0.01978956404443599,
+          -0.019789878780043228
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_static_differential",
+      "family": "dense",
+      "motion": "static",
+      "modulation": "differential",
+      "arrays_sha256": "511c6b31cc110e86731ae31887f8861aab1cbf76d93ec02ec10bc2c23363e34b",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 14.26105248164431,
+      "HF_std_dB": [
+        [
+          1.5299978591723393,
+          1.2174413499181733
+        ],
+        [
+          1.485499227907869,
+          1.167151458808807
+        ],
+        [
+          1.4834540304725774,
+          1.153341076713643
+        ],
+        [
+          1.4479255787509127,
+          1.1143272081421587
+        ]
+      ],
+      "HF_PC1_fraction": 0.1795535001057539,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          -0.017818767113080586,
+          -0.09805663568377011
+        ],
+        [
+          0.02084731537669198,
+          -0.05301735850019471
+        ],
+        [
+          0.029995058526827666,
+          -0.020748550827140663
+        ],
+        [
+          0.024052828446344845,
+          -0.003525354833932737
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_rising_none",
+      "family": "dense",
+      "motion": "rising",
+      "modulation": "none",
+      "arrays_sha256": "2730d1a37958c7154f037d654d79a20de1e27aae8297bd7c1fecd0d8782b0c02",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 0.014866131045974236,
+      "HF_std_dB": [
+        [
+          0.02887877690514834,
+          0.02597400372205593
+        ],
+        [
+          0.03719206912999872,
+          0.04619077418966638
+        ],
+        [
+          0.03593213085740031,
+          0.07649293744845158
+        ],
+        [
+          0.018380354664821196,
+          0.048585346037889846
+        ]
+      ],
+      "HF_PC1_fraction": 0.4373779457647438,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.0778552476622078,
+          0.013604410026090839
+        ],
+        [
+          0.07433930427698175,
+          -0.0008750958849210421
+        ],
+        [
+          0.07366248326042488,
+          0.1001595859142119
+        ],
+        [
+          0.07554832907987134,
+          0.13284970731654716
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_rising_common",
+      "family": "dense",
+      "motion": "rising",
+      "modulation": "common",
+      "arrays_sha256": "47874ba4c2570bed44a642f5c0aef46f3e0b592a1a35b089c3d935175df5ce66",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 47.39895000352018,
+      "HF_std_dB": [
+        [
+          2.432713885599946,
+          2.4333838205309064
+        ],
+        [
+          2.428041371361593,
+          2.4230073094795403
+        ],
+        [
+          2.4435353978427328,
+          2.445960970803106
+        ],
+        [
+          2.4326140046332623,
+          2.4335048400881885
+        ]
+      ],
+      "HF_PC1_fraction": 0.9997265348256987,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.058109829463852604,
+          -0.006168516184713813
+        ],
+        [
+          0.05382785938297807,
+          -0.021335199189255402
+        ],
+        [
+          0.054636469854696994,
+          0.08122343729685011
+        ],
+        [
+          0.05600236139071106,
+          0.11326327367439694
+        ]
+      ]
+    },
+    {
+      "label": "known_dense_rising_differential",
+      "family": "dense",
+      "motion": "rising",
+      "modulation": "differential",
+      "arrays_sha256": "1f2d6b4b18f195a6108a4ed215a46b4f01e9a5a9e529f67dba4b94666ec2eeb6",
+      "windows": 137,
+      "HF_covariance_trace_dB2": 12.695979046016433,
+      "HF_std_dB": [
+        [
+          1.5002190719508228,
+          1.1956125174674292
+        ],
+        [
+          1.3664889544315262,
+          1.0738444897577821
+        ],
+        [
+          1.3541329418254142,
+          1.037081329355281
+        ],
+        [
+          1.3909012353049106,
+          1.0731162496548685
+        ]
+      ],
+      "HF_PC1_fraction": 0.18697024293928408,
+      "HF_floor_values": 0,
+      "HF_slope_dB_per_second": [
+        [
+          0.048454748000783074,
+          -0.08835009093646289
+        ],
+        [
+          0.08649053785295888,
+          -0.04762604858436231
+        ],
+        [
+          0.09141863370386176,
+          0.07903352492560996
+        ],
+        [
+          0.12330141655574235,
+          0.1404398536901001
+        ]
+      ]
+    }
+  ],
+  "paired_budgets": 12,
+  "signed_covariance_interactions_retained": true,
+  "source_only_not_full_driver": true,
+  "source_phase_to_amplitude_hypothesis_unproven": true,
+  "numeric_audit_list_type_failure_retained": true,
+  "figure_category_colour_correction_retained": true,
+  "scientific_figures_viewed": 2,
+  "heard": false,
+  "new_audio_candidate": false,
+  "runtime_preset": false,
+  "runtime_DSP_model_default_driver_owned_take_room_changed": false,
+  "unchanged_68CTest_not_repeated": true,
+  "F2_F3_hearings": "independently pending, no repeat or blind strengths",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "full_goal": "active",
+  "next": "Qualify known amplitude-only/phase-only coefficient moments through original compiler and C magnitude mapping, then examine original F3 magnitudes/phases and stereo dependence before any joint texture replacement. Do not revive rejected A magnitude models or blindly remove common motion.",
+  "manifest_sha256": "7ef138e540c38a5acf9db6eef32e2ff7a01b7bc4fee0a68485fea2e0b7b8f126",
+  "file_count": 1069,
+  "bytes": 129749171
+}
