@@ -4,6 +4,7 @@ from pathlib import Path
 from research_archive_v1 import load, save, sha
 p=argparse.ArgumentParser(description=__doc__)
 for key in ['workspace','out','probe']:p.add_argument('--'+key,type=Path,required=True)
+p.add_argument('--source-dir',type=Path,default=Path('experiments/stationary_recipe_v1'))
 a=p.parse_args();repo=Path(__file__).resolve().parents[1]
 a.out.mkdir(parents=True,exist_ok=False)
 r=dict(result='running',commands=[],cases=[],sources={})
@@ -19,7 +20,7 @@ def run(argv, label):
 
 
 try:
-    for file in (repo/'experiments/stationary_recipe_v1').iterdir():
+    for file in (repo/a.source_dir).iterdir():
         if file.is_file():
             dest=a.out/'exact_sources'/file.relative_to(repo);dest.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(file,dest);r['sources'][file.relative_to(repo).as_posix()]=sha(file)

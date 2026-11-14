@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.stationary-bridge-plan/1",
+  "parent": "stationary_recipe_v1",
+  "source": "A_exterior_blips",
+  "frozen_clock": "baselines/exterior_anchors_v1/evidence/anchors_v2/build.json:paths.fall",
+  "selection": "Two log-spaced acoustic roots between old lower/upper-mid; one between upper-mid/high. Select the nearest existing clock observation, then retain 18 integrated acoustic cycles before the unchanged phase polish. Never widen support or extrapolate the observed clock.",
+  "names": ["A Bridge Mid One", "A Bridge Mid Two", "A Bridge Mid Three"],
+  "initial_cycles": 18,
+  "harmonics": 288,
+  "components": 12,
+  "phase_reference": 5,
+  "heldout_orders": [3, 7],
+  "seconds": 8,
+  "seeds": [8121907, 23117, 61927],
+  "crop_frames": 24000,
+  "replacement_power": 0.35,
+  "transition_hz": [1200, 1900],
+  "output_gain": 0.5,
+  "gates": {"minimum_observations": 32, "heldout_carrier_coherence": 0.8, "C_detail_oracle_FS": 1e-10, "maximum_LR_band_power_error_db": 0.5, "maximum_peak_after_gain": 0.95},
+  "protection": "No old DNA/detail/idle/moving35/default parameters change. New profiles are candidates. No phase-qualification waiver, physical source separation, recorded envelope, room, PCM loop, measured RPM/load or new real engine claim.",
+  "driving": "Same original controller and 0.9/0.96/1.04/1.1 detail support; original four anchors and three new anchors, seven total. Compare previous four-anchor C scenario against seven-anchor original-DNA and detail candidates with actual telemetry and owned take replay. Geometric support is not measured condition coverage.",
+  "known_controls_before_fitting": "Run existing known exterior warp/alias/phase controls; verify their success/source hashes before new source reads. Existing known resonance recurrence/response/power controls before detail fit."
+}

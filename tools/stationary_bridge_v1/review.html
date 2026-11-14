@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>驻车与驾驶 · 中间声线</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f3;color:#203b43;font:16px/1.6 system-ui,sans-serif;padding:22px 14px}
+main{max-width:720px;margin:auto;background:white;border-radius:14px;padding:26px}h1{font-size:24px;margin:0 0 12px}
+p,details{font-size:14px;color:#526971}label{display:block;margin-top:16px}select,audio{width:100%;font:inherit}
+select{padding:10px;border:1px solid #bdc9cf;border-radius:7px;background:white;color:inherit}audio{margin:22px 0 8px}
+output{display:block;padding:12px;background:#edf4f5;border-radius:8px;font-size:14px;min-height:48px}a{color:#1c6176}
+</style>
+<main>
+<h1>驻车与驾驶 · 中间声线</h1>
+<p>新增一档来自同一尾排录音的中间声线。先听固定声线，再比较加入这档声线前后的相同驾驶过程，注意转速经过中段时的音色衔接。</p>
+<label for="scene">场景</label><select id="scene"></select>
+<label for="variant">声音</label><select id="variant"></select>
+<audio id="audio" controls preload="metadata"></audio>
+<output id="state" aria-live="off"></output><p id="note"></p>
+<details><summary>比较边界</summary>
+<p>候选只增加一个声学根频率约41.6 Hz的观测。另两个中间窗的独立谱线一致性不足，已排除；末两组提供它们的录音参考，不能用来判断已完成的合成音色。声学频率未标定实车RPM，补油后的降转短窗也不等于稳态台架点。</p>
+<p>固定参考有“未处理源短窗”和“变速还原参考”两种；后者经过已有共同声学时钟处理。持续合成使用新随机序列，没有循环录音。共振细节替换最多35%高频谐波功率，驱动时只在支持的锚点附近生效；支持量不是实测工况覆盖率。</p>
+<p>全部文件使用同一0.5倍增益和首尾5ms淡化，无逐条响度补偿或新增房间效果。连续场景由同一C驾驶器计算转速、挡位、生命周期和工况；它们不是对素材动作的同步复刻。新增声线也会改变相邻声线之间的过渡。</p>
+</details>
+<p><a href="/references/analysis/stationary_recipe_v1/review2/index.html">上一轮驻车对照</a> · <a href="/references/analysis/idle_complex75_v1/review1/index.html">待听怠速候选</a></p>
+</main>
+<script>
+const data=__DATA__;
+const scene=document.querySelector('#scene'),variant=document.querySelector('#variant');
+const audio=document.querySelector('#audio'),state=document.querySelector('#state'),note=document.querySelector('#note');
+const life=['OFF','READY','CRANK','CATCH','RUNNING','STOPPING'];
+const ops=['怠速','空挡补油','带载加速','巡航','倒拖','换挡切断','换挡恢复','降挡补油'];
+let serial=0;const cache=new Map();
+for(const row of data.scenes)scene.add(new Option(row.title,row.key));
+function selectedScene(){return data.scenes.find(r=>r.key===scene.value)}
+function selected(){return selectedScene().variants.find(r=>r.key===variant.value)}
+function show(){
+ const row=selected();
+ if(row.trace){
+  const rows=data.traces[row.trace],r=rows[Math.min(rows.length-1,Math.floor(audio.currentTime*200))];
+  state.textContent=`${Math.round(r.rpm)} RPM · ${r.gear===0?'N':r.gear+'挡'} · ${life[r.lifecycle]} / ${ops[r.operating]} · 细节支持 ${Math.round(100*r.detail_support)}%`;
+ }else state.textContent=selectedScene().info;
+ note.textContent=row.note;
+}
+async function update(reset=false){
+ const revision=++serial,playing=!audio.paused,at=reset?0:audio.currentTime;audio.pause();
+ const row=selected();
+ try{
+  if(!cache.has(row.file))cache.set(row.file,fetch(row.file).then(r=>{if(!r.ok)throw Error(r.status);return r.blob()}).then(b=>URL.createObjectURL(b)));
+  const url=await cache.get(row.file);if(revision!==serial)return;
+  audio.addEventListener('loadedmetadata',()=>{
+   if(revision!==serial)return;audio.currentTime=Math.min(at,Math.max(0,audio.duration-.01));show();
+   if(playing)audio.play().catch(()=>{});
+  },{once:true});audio.src=url;audio.load();
+ }catch(e){if(revision===serial)state.textContent='音频读取失败，请刷新。'}
+}
+function changeScene(){variant.replaceChildren();for(const row of selectedScene().variants)variant.add(new Option(row.title,row.key));update(true)}
+scene.addEventListener('change',changeScene);variant.addEventListener('change',()=>update());audio.addEventListener('timeupdate',show);
+window.addEventListener('pagehide',()=>{for(const promise of cache.values())promise.then(url=>URL.revokeObjectURL(url))});changeScene();
+</script></html>
