@@ -1,0 +1,14 @@
+{
+  "schema":"vsl.dna-anchor-limits/1",
+  "purpose":"Check the existing actual raw exporter and loader boundary before planning higher-root real-source anchors. Synthetic profiles only; do not weaken current guards.",
+  "harmonics":288,
+  "components":0,
+  "root_formula":"21600/(harmonics*1.1)",
+  "roots":["limit-0.000001","limit+0.000001",90],
+  "samples":480,
+  "seed":23117,
+  "chunk_frames":37,
+  "known_profile":"Only first and last harmonic means nonzero; left amplitudes0.2/0.01, right0.16/0.008, zero stochastic state.",
+  "expected":"First accepts with480finite stereo frames; second and third return2 without creating audio. All current source/assets untouched. Existing raw oscillator has no runtime root-aware taper; do not simply relax its safety check. Atlas audio loop already tapers19.2..21.6k but same loader/bank guard prevents high-root training profiles.",
+  "interpretation":"Code contract diagnostic only, not evidence of actual source root, timbre acceptance, source clipping or production target limits. A future explicit bandlimited profile/render path must retain safe old contract and old takes."
+}

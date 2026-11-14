@@ -1,0 +1,228 @@
+{
+  "result": "literal_rho_calculation_verified_original_alternative_gate_retained",
+  "git_parent": "d95321257ac357db0748dbb10a7b864eaa3eeab9",
+  "previous_goal_turn": "Progress: two fixed local F3 voices/source gates and12C comparisons frozen with unresolved extra quotient audit.",
+  "known_cases": 8,
+  "primitive_cases": 4,
+  "known_harmonic_checks": 64,
+  "source_harmonic_checks": 576,
+  "tamper_rejections": 640,
+  "source_conditional_pairs": 1728,
+  "model_replay_exact": [
+    {
+      "name": "F3 Fifth First Mid",
+      "sha256": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "maximum_literal_error": 2.220446049250313e-16
+    },
+    {
+      "name": "F3 Fifth Second Mid",
+      "sha256": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "maximum_literal_error": 2.220446049250313e-16
+    }
+  ],
+  "independent_fraction_audit": {
+    "result": "independent_fraction_moments_and_conditional_bounds_verified",
+    "sources": {
+      "tools/audit_residual_ratio_numeric_v1.py": "3e36e6df6165ef9b57837645e38aa6dd47d8f6eca77a3aea0928571a9b7e9772",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\report.json": "700c352a685ebbc5495454f25ca82934c7b48bfeb640651114ed588c502a0d3b",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\replay1\\report.json": "78ca773a199db80cef5e743c0e13c90115cc85b424e2bbeb276f5de359c82df4",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components0_scale0.001.npz": "313fb9746ddc6ac1793eeca774949bd25b035464423bcc7aed6ddfdcc7619e4f",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components0_scale1e-06.npz": "4c5c43f4a7a028d63d2e38515c0de2bc0b758f36fad20a299214c898bd4d2a34",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components0_scale1e-09.npz": "e1daff80b997fc5ad398ffb1c453058be17d8cb520b22a3d47a4ac0e5168c8fa",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components0_scale1e-12.npz": "779a4751cc4567564ebf838637a9968fc932723589b49eb1e4baf0e5469454c5",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components3_scale0.001.npz": "d7e00b9c5309ab1dc1341eee1c4f5e753a927e9140ec7946af7ab32943d35d5f",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components3_scale1e-06.npz": "3db5f18821d153ca1834802a603e30e032842e3c957542d7f80e301f9348fefa",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components3_scale1e-09.npz": "6b993ce1f7bd8f069816a1ae6f911f991fabace92237bf16f83ba41a37a032fa",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\controls1\\components3_scale1e-12.npz": "c409086f3765ddcececc0892c72b1a9a57a1e343023b5b705d8e202d0fb18c3e",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\replay1\\F3 Fifth First Mid\\residual_trace.npz": "a31f755e97da1be201a559a92f1540c2730d53a2db043b036fe9fa9d76030f5e",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\replay1\\F3 Fifth First Mid\\replayed.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\replay1\\F3 Fifth Second Mid\\residual_trace.npz": "4dbc51e4b4d8de9181d14ef51efa175d63739a12b3ec872f8ffc7c6c9c350753",
+      "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\replay1\\F3 Fifth Second Mid\\replayed.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\manifest.json": "e6dade5d0b5e34daeefc151006e62692ed7de17d1a62303fb2090718d2fcfcad",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\report.json": "7848d70e7700ba1caa768fd530ce4fa21652608f27463a31c82b426c2a59ba3b",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\audit2\\report.json": "ed3bb3ec9bad0dcb45003f2881b75056b2f19abd84502c07b78d68dfae606a14",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\exact_sources\\research\\F3_fifth_voice_v1_plan.json": "45f06ebe76ff4e7ff7c48d148e859211f35ecd30db4fa297b99c51452fbd5b73",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\native.wav": "be83b3f8fe9a0041978b97b7b1b4a2448991c6c6fdd2011f62c8fd5b12853f25",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\voice.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\native.wav": "ae71c956564368283cb79f37fb40fa8a4a74daf42ec232c91d6182f0769a3af0",
+      "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\voice.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\C_files_sha256.json": "f8a0dd8e096ff851cbd8762744b5bc8f944fc32921f3675eaa6d4aea7e239116",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\voice_files_sha256.json": "861ce901a15b857a34a033e6c687ca4f0e401171af84714c60ae74ae0a3363ec"
+    },
+    "controls": [
+      {
+        "name": "components0_scale0.001",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components0_scale1e-06",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components0_scale1e-09",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components0_scale1e-12",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components3_scale0.001",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components3_scale1e-06",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components3_scale1e-09",
+        "harmonics_checked": 8
+      },
+      {
+        "name": "components3_scale1e-12",
+        "harmonics_checked": 8
+      }
+    ],
+    "source_cases": [
+      {
+        "name": "F3 Fifth First Mid",
+        "exact_harmonics": 288,
+        "maximum_literal_error": 2.220446049250313e-16,
+        "conditional_pairs": 864,
+        "maximum_difference": 2.823504474758094e-06,
+        "maximum_bound": 7.124333012727637e-05
+      },
+      {
+        "name": "F3 Fifth Second Mid",
+        "exact_harmonics": 288,
+        "maximum_literal_error": 2.220446049250313e-16,
+        "conditional_pairs": 864,
+        "maximum_difference": 1.387230214224275e-06,
+        "maximum_bound": 6.615343376013338e-05
+      }
+    ],
+    "known_harmonics": 64,
+    "primitive_cases": 4,
+    "source_harmonics": 576,
+    "source_conditional_pairs": 1728,
+    "original_projection_gate_still_failed": true,
+    "all_original_parameter_audits_passed": false,
+    "independent_SVD": false,
+    "live_profile_promoted": false,
+    "new_audio": false
+  },
+  "independent_SVD": false,
+  "original_alternative_1e9_gate_passed": false,
+  "original_audit_relabelled": false,
+  "conditional_bounds_are_not_universal_forward_error": true,
+  "images_viewed": 1,
+  "new_timbre_audio": false,
+  "synthetic_boundary_waveforms": 1,
+  "synthetic_wave_frames": 480,
+  "duplicate_synthetic_wave_preserved_across_attempts": true,
+  "profile_loading_limit": {
+    "result": "existing_288harmonic_profile_limit_reproduced",
+    "sources": {
+      "tools/check_dna_anchor_limits_v1.py": "ef5c121f05b4e0a6a6f5905178231293dcf1a6c0dde9839afa40b63f28851284",
+      "research/dna_anchor_limits_v1_plan.json": "c9504731f2e88adb07b47382791cd7624d1350ef252af53747739dbbbb240e24",
+      "modules/sound_dna/profile.c": "a4fb7e89cdbc88fb3ba94414c53694e4ee267d6d49dd1088e4fe486a4a2a97f7",
+      "modules/sound_dna/voice.c": "360ed4efd0bf1c0eb3f6e7d28d24c3e6a852ac22e09c7b6b3909105ad882302c",
+      "modules/sound_dna/oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+      "modules/dna_atlas/bank.c": "95e7dfa8c069eaa57b152fe19feb27cd1948f5bdb46096f85b4fcc6f8c87fc7b",
+      "modules/dna_atlas/voice.c": "dbff003493c9fa729856041efd082a8e488eaa15c7c50f7ef8d848484bb3b44c",
+      "experiments/sound_dna_export_v1/probe.c": "bd0a95409f125d52e3aafb3dfc1a0793d60fc86a678afa5cbd2732b0edf65580",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe": "20e4844a943a2a0a696e00e0f0df1d09900841f6d914d8ba2238ac27576bf7f6"
+    },
+    "cases": [
+      {
+        "root_hz": 68.18181718181818,
+        "root_limit_hz": 68.18181818181817,
+        "exit_code": 0,
+        "wave_created": true,
+        "frames": 480,
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_0.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_0.wav",
+          "0.01",
+          "1",
+          "1",
+          "23117",
+          "37"
+        ],
+        "profile_sha256": "ea04c98b20534cd33dad8c5b2bd7e26d07733544b9b9de97bc969bd909645ba2"
+      },
+      {
+        "root_hz": 68.18181918181817,
+        "root_limit_hz": 68.18181818181817,
+        "exit_code": 2,
+        "wave_created": false,
+        "frames": 0,
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_1.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_1.wav",
+          "0.01",
+          "1",
+          "1",
+          "23117",
+          "37"
+        ],
+        "profile_sha256": "80f340a015450604f6043c7ce3a2ca4b92b01431a459ee7d52feed8a4f6bac11"
+      },
+      {
+        "root_hz": 90.0,
+        "root_limit_hz": 68.18181818181817,
+        "exit_code": 2,
+        "wave_created": false,
+        "frames": 0,
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_2.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\residual_ratio_numeric_v1\\limits2\\known_2.wav",
+          "0.01",
+          "1",
+          "1",
+          "23117",
+          "37"
+        ],
+        "profile_sha256": "c1b55a7265f4866239e6f8f002d7d96b98cecb702ab1b12a50593116038a7caf"
+      }
+    ],
+    "root_limit_hz": 68.18181818181817,
+    "only_known_synthetic_profiles": true,
+    "real_source_read": false,
+    "runtime_changed": false,
+    "next": "Explicit bounded profile/renderer support before higher-root real anchors; retain old safe loader and replay contract."
+  },
+  "actual_high_source_root_measured": false,
+  "all_attempts": [
+    "controls1",
+    "replay1",
+    "audit1",
+    "limits1",
+    "limits2"
+  ],
+  "failure_preserved": "limits1 assumed format tag3 instead of existing WAVEFORMATEXTENSIBLE FLOAT GUID; limits2 only corrects RIFF decoding.",
+  "C_H_exact": 650,
+  "voice_files_exact": 76,
+  "F2_exact": true,
+  "runtime_UI_driver_default_takes_unchanged": true,
+  "new_live_profiles": false,
+  "original_67CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "F2_F3_hearings": "Independently pending; no repeated request, blind strengths or default migration",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "full_goal": "active",
+  "next": "Explicit opt-in bandlimited profile/render/atlas interfaces, reusing texture and one controller; preserve old guard/bytes/takes. Known alias/taper/block controls before any higher-root source anchors. Stop tiny-ratio/source-window rescue.",
+  "manifest_sha256": "61d2d6e32993f5bcbacb2a1f5bf7423d5daeb5f0e6982b4984d18d5cf949372c",
+  "file_count": 116,
+  "bytes": 11869482
+}

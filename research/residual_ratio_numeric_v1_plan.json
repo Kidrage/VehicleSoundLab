@@ -1,0 +1,15 @@
+{
+  "schema":"vsl.residual-ratio-numeric/1",
+  "parent_commit":"d953212",
+  "previous_goal_turn":"Progress: two fixed fifth-gear source gates supported;370native observations and12C outputs independently checked and frozen, with original extra ratio audit retained unresolved.",
+  "purpose":"Distinguish actual stored-rho calculation errors from conditioning of an alternative PCA-score reconstruction, using exact binary-rational moment arithmetic before reading frozen source observations.",
+  "known_rows":{"frames":64,"harmonics":8,"seed":23117,"components":[0,3],"residual_scales":[0.001,0.000001,0.000000001,0.000000000001]},
+  "primitive_controls":["zero denominator","below1e-30floor","positive clipping","negative clipping"],
+  "literal_moment_error_gate":5e-15,
+  "original_alternative_ratio_gate":1e-9,
+  "tamper_delta":0.000001,
+  "bound":"For recorded binary64 residual A and alternative B, use exact common-power-of-two integers; epsilon=max abs(A-B), deltaN<=epsilon*(sumabs(A_next)+sumabs(A_prev))+m*epsilon^2 and deltaD<=2*epsilon*sumabs(A_prev)+m*epsilon^2. With d=max(D,floor), bound clipped quotient difference by min(1.9,(deltaN+abs(N/d)*deltaD)/max(floor,D-deltaD)). Exact fractions, not a fitted acceptance threshold.",
+  "real_scope":"Only the two original frozen F3_fifth_voice_v1 fit1 native windows and fixed selection/plan. Replay unchanged extraction and factorization to new evidence; require root and model-file SHA256 exact. Preserve original fit and audits. Exact moments check actual replay residual; alternative-score residual comparison is a posteriori conditioning evidence, not independent source correctness or physical inference.",
+  "prohibited":"No alternate window/anchor/order/gate, rescaled profile, new audio candidate, runtime migration, original1e-9pass relabel, additional original-source fitting search or hidden memory reset. Do not treat a posteriori bound as a universal forward-error guarantee.",
+  "preserve":"650C/H76voices/F2, current live defaults/driver/takes/hearing status. No media download, old67CTest repeat or push. Full driving/multiple-real-engine/physical7.1.4 goal remains active."
+}
