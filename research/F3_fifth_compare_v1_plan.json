@@ -1,0 +1,14 @@
+{
+  "schema":"vsl.local-voice-comparison/1",
+  "basis":"Existing fixed F3_fifth_voice_v1 fit1; both source gates passed; audit1 absolute residual-rho ratio check failed and audit2 retains this unresolved status. No fitted model or extraction changes.",
+  "common_root_hz":64,
+  "reference_resample":[375,512],
+  "render_seconds":8,
+  "seeds":[1,23117,61927],
+  "gain":1,
+  "bands_hz":[[28,120],[120,400],[400,1200],[1200,3000],[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "welch":{"window_samples":2048,"hop_samples":512,"fft_samples":8192,"window":"periodic Hann","cross":"L*conj(R)"},
+  "rho_diagnosis":"Compare original direct trigonometric kernel against modulo1024 argument reduction, same input/mean/PCA projection/formula and original absolute1e-9 gate. Diagnostic only, no repeated tuning, source rescue or profile changes. Save both full arrays and raw gate statuses.",
+  "interpretation":"All four generated-model/reference pairings are descriptive, not pass thresholds or independent training/test sets. Source references about0.21s, generated8s; unequal sample uncertainty and same-video shared processing remain. Mixed-recording residual/HF deficits are not all physical engine detail. No full driving RPM/load coverage or new timbre acceptance.",
+  "preserve":"No runtime/voice/profile/default/UI/driver/take changes; do not add these models to the catalog while the ratio audit remains unresolved. Pending F3detail/F2idle feedback independent. No download or push."
+}

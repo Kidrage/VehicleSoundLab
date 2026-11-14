@@ -1,0 +1,937 @@
+{
+  "result": "two_local_source_gates_supported_full_parameter_audit_unresolved",
+  "git_parent": "e44c682728dc9b8555f8012752cd32c1706291a9",
+  "previous_goal_turn": "Progress: current-source ADI V4 inventory/cycle budget reproduced and committed; no DSP or timbre change.",
+  "plan_predates_MCPS_interruption": true,
+  "cases": [
+    {
+      "case": {
+        "name": "F3 Fifth First Mid",
+        "segment": "F3_fifth1",
+        "use": "fixed_window_spectral_observation",
+        "seconds": [
+          160.0,
+          161.0
+        ],
+        "anchor_seconds": 160.05,
+        "center_seconds": 160.5
+      },
+      "root_hz": 64.8044371988827,
+      "observations": 41,
+      "heldout": {
+        "3": [
+          0.9723000501174979,
+          0.979888703264758
+        ],
+        "7": [
+          0.9876531430082116,
+          0.982159975082858
+        ]
+      }
+    },
+    {
+      "case": {
+        "name": "F3 Fifth Second Mid",
+        "segment": "F3_fifth2",
+        "use": "fixed_window_spectral_observation",
+        "seconds": [
+          191.0,
+          192.0
+        ],
+        "anchor_seconds": 191.05,
+        "center_seconds": 191.5
+      },
+      "root_hz": 64.01486718231718,
+      "observations": 40,
+      "heldout": {
+        "3": [
+          0.9844360047145273,
+          0.9805314881042316
+        ],
+        "7": [
+          0.9882859036414908,
+          0.9581387522279722
+        ]
+      }
+    }
+  ],
+  "acoustic_source_gates_unchanged": true,
+  "source_qualified": 2,
+  "source_excluded": 0,
+  "parameter_audit_passed": false,
+  "residual_rho_absolute_gate": 1e-09,
+  "original_ratio_checks": [
+    {
+      "absolute_gate": 1e-09,
+      "absolute_gate_passed": false,
+      "maximum_error": 2.823502692761437e-06,
+      "order": 229,
+      "residual_sum_squares_at_maximum": 4.933663172108248e-18,
+      "failures": 68,
+      "interpretation": "Ratio audit remains unresolved; covariance and C output checks are separate. No source fit/gate changed."
+    },
+    {
+      "absolute_gate": 1e-09,
+      "absolute_gate_passed": false,
+      "maximum_error": 1.3872329297504038e-06,
+      "order": 229,
+      "residual_sum_squares_at_maximum": 8.746191721810027e-18,
+      "failures": 65,
+      "interpretation": "Ratio audit remains unresolved; covariance and C output checks are separate. No source fit/gate changed."
+    }
+  ],
+  "fixed_numerical_diagnosis": [
+    {
+      "maximum_error": 2.6667510422129226e-09,
+      "worst_order": 243,
+      "denominator_at_worst": 3.804585195941839e-18,
+      "mean_error": 4.184153024056059e-15,
+      "original_1e9_gate_passed": false,
+      "failure_count": 8
+    },
+    {
+      "maximum_error": 4.614586074369598e-09,
+      "worst_order": 229,
+      "denominator_at_worst": 8.746199775820918e-18,
+      "mean_error": 4.275659687413835e-15,
+      "original_1e9_gate_passed": false,
+      "failure_count": 6
+    }
+  ],
+  "direct_audit": {
+    "result": "audit_complete_with_unresolved_residual_rho_ratio",
+    "sources": {
+      "tools/audit_F3_fifth_voice_v1.py": "815b28274e2f369bd170b31f84790c1b57c8e94357f5917511f1b7fcf6ddb9f6",
+      "tools/local_voice_batch_v1/audit_kernels.py": "c2298758b9bd63fd1bcbce0352ae7e8597a46d9d8a59c02ba3d656773a67f86e",
+      "tools/idle_texture_v1/profile.py": "351a5e39563cea393bbe83ab02b5b8d869d3d7a967b8f6a8c4bad550f7d15475",
+      "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\report.json": "7848d70e7700ba1caa768fd530ce4fa21652608f27463a31c82b426c2a59ba3b",
+      "E:\\VehicleSoundLab-Git\\research\\F3_fifth_voice_v1_plan.json": "45f06ebe76ff4e7ff7c48d148e859211f35ecd30db4fa297b99c51452fbd5b73",
+      "E:\\VehicleSoundLab\\references\\segments_v1.json": "3d4190c20278bd989d1c9c099678caa2b66cc5d4cce70e4edf2560245f9094fa",
+      "E:\\VehicleSoundLab\\references\\raw\\state_media_v1\\F3_fetch2\\F3_QUWTsk9crlo.mkv": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "E:\\VehicleSoundLab\\references\\analysis\\state_media_v1\\F3_inspect1\\native_reference.wav": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+      "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe": "20e4844a943a2a0a696e00e0f0df1d09900841f6d914d8ba2238ac27576bf7f6",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\result.json": "000accca4662cedf39a9cd73f1212f2dded13ff63c973e4453f714600c602e26",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\native.wav": "be83b3f8fe9a0041978b97b7b1b4a2448991c6c6fdd2011f62c8fd5b12853f25",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\observed.npz": "d93b4be2c4c35a61056500ddeb627c2f22a4c3975ea8e5645577fa26adddad0e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\coordinates.npz": "5e74c347095dd062fe23e4b2012f5251e9a7ee801838949ec3bac4fc76cd06f3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\normalized.wav": "648209ef9a53601aee0952f2ab70ee241248ae5001a53c5e7739df2953bd1a0c",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\voice.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\DNA_1.wav": "ac22ad627906b04b7ed654758be7c3f0138c9a38702f2533f9c7b33fc65872a3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\DNA_23117.wav": "e57fdee0d5d607e3b0af065ed769d3d104fe34bdfd3b4169ef6e5348336baf27",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\DNA_61927.wav": "b150e3cee2807e7cd2a01034ce20546acd0caa4fcd6840f448cb0c84087c798a",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\result.json": "89a24a191e9e5c64bbd3c79743578313ba018fe33193a692bb68f792c2ed8066",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\native.wav": "ae71c956564368283cb79f37fb40fa8a4a74daf42ec232c91d6182f0769a3af0",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\observed.npz": "5dc640c48bb2ca253572460c4e246951ff3ce7ad3bc9db7a054e28a6fcfa1258",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\coordinates.npz": "6b01dea15ea574b4263f2074d6da8b5033c72fa0eb955f1d4798698f96991617",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\normalized.wav": "23ccdfff554d43dc1c47b941e287db6d8670e7294955f06ff7e21bf0ff95581b",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\voice.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\DNA_1.wav": "6ad79ea4e0b2bd94db32f6af2a0d1867c467733e7193a7f1bbed018989b15379",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\DNA_23117.wav": "fd9f5ad64c20afa22bba4d7841320d67e183b2581b68d6f55913f1d80b3ddea1",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\DNA_61927.wav": "eb8219bfe27e961a1a772f27af23cdccb5da3f2f89f658327cea43bdd739298f",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\C_files_sha256.json": "f8a0dd8e096ff851cbd8762744b5bc8f944fc32921f3675eaa6d4aea7e239116",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\voice_files_sha256.json": "861ce901a15b857a34a033e6c687ca4f0e401171af84714c60ae74ae0a3363ec"
+    },
+    "cases": [
+      {
+        "name": "F3 Fifth First Mid",
+        "frames": 185,
+        "direct_power_error": 3.469446951953614e-18,
+        "direct_band_error": 8.326672684688674e-17,
+        "direct_cross_error": 4.220764384040162e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "direct_carrier_error": 6.661338147750939e-16,
+        "heldout_coherence": {
+          "3": [
+            0.9723000501174985,
+            0.9798887032647583
+          ],
+          "7": [
+            0.9876531430082116,
+            0.9821599750828587
+          ]
+        },
+        "qualified": true,
+        "model_mean_error": 1.010011009930476e-14,
+        "residual_covariance_error": 9.586196118877038e-21,
+        "residual_rho_check": {
+          "absolute_gate": 1e-09,
+          "absolute_gate_passed": false,
+          "maximum_error": 2.823502692761437e-06,
+          "order": 229,
+          "residual_sum_squares_at_maximum": 4.933663172108248e-18,
+          "failures": 68,
+          "interpretation": "Ratio audit remains unresolved; covariance and C output checks are separate. No source fit/gate changed."
+        },
+        "seeded_C_sparse_sample_errors_FS": [
+          2.799156695321159e-08,
+          2.5559486971360457e-08,
+          2.458495018675677e-08
+        ],
+        "three_seeds_distinct": true
+      },
+      {
+        "name": "F3 Fifth Second Mid",
+        "frames": 185,
+        "direct_power_error": 3.469446951953614e-18,
+        "direct_band_error": 8.326672684688674e-17,
+        "direct_cross_error": 4.3885418357208765e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "direct_carrier_error": 6.661338147750939e-16,
+        "heldout_coherence": {
+          "3": [
+            0.9844360047145272,
+            0.9805314881042321
+          ],
+          "7": [
+            0.9882859036414907,
+            0.9581387522279715
+          ]
+        },
+        "qualified": true,
+        "model_mean_error": 1.4640899898756547e-14,
+        "residual_covariance_error": 8.337980574534519e-21,
+        "residual_rho_check": {
+          "absolute_gate": 1e-09,
+          "absolute_gate_passed": false,
+          "maximum_error": 1.3872329297504038e-06,
+          "order": 229,
+          "residual_sum_squares_at_maximum": 8.746191721810027e-18,
+          "failures": 65,
+          "interpretation": "Ratio audit remains unresolved; covariance and C output checks are separate. No source fit/gate changed."
+        },
+        "seeded_C_sparse_sample_errors_FS": [
+          1.4770623002480221e-08,
+          2.2730990756336666e-08,
+          2.2750925809944533e-08
+        ],
+        "three_seeds_distinct": true
+      }
+    ],
+    "known_before_source": {
+      "power_error_FS2": 0.0,
+      "signed_cross": "L*conj(R)",
+      "direct_carrier": true
+    },
+    "residual_rho_absolute_gate_passed": false,
+    "frames_checked": 370,
+    "protected_C_H_exact": 650,
+    "protected_voice_parameters_exact": 76,
+    "source_gates_unchanged": true,
+    "human_hearing": false,
+    "physical_RPM_or_load": false,
+    "runtime_changed": false,
+    "generic_phase_qualification": false
+  },
+  "comparison_verification": {
+    "result": "comparison_outputs_verified_ratio_gate_still_unresolved",
+    "sources": {
+      "tools/verify_F3_fifth_comparison_v1.py": "495a6018608558414b0174e0d1a5139d10b8abb21ffe5bf04f162b7c90eb0c43",
+      "tools/local_voice_batch_v1/audit_kernels.py": "c2298758b9bd63fd1bcbce0352ae7e8597a46d9d8a59c02ba3d656773a67f86e",
+      "tools/idle_texture_v1/profile.py": "351a5e39563cea393bbe83ab02b5b8d869d3d7a967b8f6a8c4bad550f7d15475",
+      "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab-Git\\research\\F3_fifth_compare_v1_plan.json": "e4d9a27970b18d30b69226ca1df53b6a866d7a6a6c6f6beb9057058b0a70a054",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\report.json": "a4d2739f7a1464efbf5afdc490dfb16eba6a94c462e598a62e8ced9ba0a10ebe",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\report.json": "7848d70e7700ba1caa768fd530ce4fa21652608f27463a31c82b426c2a59ba3b",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\audit2\\report.json": "ed3bb3ec9bad0dcb45003f2881b75056b2f19abd84502c07b78d68dfae606a14",
+      "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe": "20e4844a943a2a0a696e00e0f0df1d09900841f6d914d8ba2238ac27576bf7f6",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\voice.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\native.wav": "be83b3f8fe9a0041978b97b7b1b4a2448991c6c6fdd2011f62c8fd5b12853f25",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth First Mid\\coordinates.npz": "5e74c347095dd062fe23e4b2012f5251e9a7ee801838949ec3bac4fc76cd06f3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\voice.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\native.wav": "ae71c956564368283cb79f37fb40fa8a4a74daf42ec232c91d6182f0769a3af0",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\fit1\\F3 Fifth Second Mid\\coordinates.npz": "6b01dea15ea574b4263f2074d6da8b5033c72fa0eb955f1d4798698f96991617",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth First Mid\\reference64.wav": "2c17c3f3eab4db63cda61f951ae200fe5051041baac256c754d382e1d24df6ff",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth First Mid\\DNA64_1.wav": "4206ad0335ee709e91bcd89094c9416a97ce54cbbe5c9735f2df8a82dca106f8",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth First Mid\\DNA64_23117.wav": "68e584be8dbe9a07b95abbc6979aa8310737df7ae37af6a9f9ad969f1d14d3a1",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth First Mid\\DNA64_61927.wav": "e985f68fdd55d0979302f0202e6dab38729608541887db984100f43b38335cf0",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth Second Mid\\reference64.wav": "062f61da1bc790335789b1c632daf8aa83739f7ef18869c44b39905384b231e5",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth Second Mid\\DNA64_1.wav": "e7be820b6c706b40200b6a33f1f876ea7a5362bdfa8e071ecb220b85a3965c37",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth Second Mid\\DNA64_23117.wav": "b0c7be282818bdbc3503fa595dc325f50e4b11f1b3ce769500418d1b6a79a9b1",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_fifth_voice_v1\\compare2\\F3 Fifth Second Mid\\DNA64_61927.wav": "3941b30774d21df2ebbc620cfd0c90dfb0a9990a79921bd9eed3f989af3f69ff",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\C_files_sha256.json": "f8a0dd8e096ff851cbd8762744b5bc8f944fc32921f3675eaa6d4aea7e239116",
+      "E:\\VehicleSoundLab\\baselines\\catalog_F3_v1\\inputs\\voice_files_sha256.json": "861ce901a15b857a34a033e6c687ca4f0e401171af84714c60ae74ae0a3363ec"
+    },
+    "cases": [
+      {
+        "name": "F3 Fifth First Mid",
+        "reference_FLOAT_exact": true,
+        "reference": {
+          "PSD_band_error_FS2": 9.71445146547012e-17,
+          "signed_complex_correlation_error": 2.0761175198787973e-14
+        },
+        "seeds": [
+          {
+            "seed": 1,
+            "sparse_C_error_FS": 2.980153601672697e-08,
+            "PSD_band_error_FS2": 1.249000902703301e-16,
+            "signed_complex_correlation_error": 2.4284369094693584e-15
+          },
+          {
+            "seed": 23117,
+            "sparse_C_error_FS": 2.943411825384601e-08,
+            "PSD_band_error_FS2": 1.1102230246251565e-16,
+            "signed_complex_correlation_error": 3.663059524504075e-15
+          },
+          {
+            "seed": 61927,
+            "sparse_C_error_FS": 2.8101379778711078e-08,
+            "PSD_band_error_FS2": 9.71445146547012e-17,
+            "signed_complex_correlation_error": 1.1102230246251565e-15
+          }
+        ]
+      },
+      {
+        "name": "F3 Fifth Second Mid",
+        "reference_FLOAT_exact": true,
+        "reference": {
+          "PSD_band_error_FS2": 1.942890293094024e-16,
+          "signed_complex_correlation_error": 1.23797821047373e-14
+        },
+        "seeds": [
+          {
+            "seed": 1,
+            "sparse_C_error_FS": 2.689758615836979e-08,
+            "PSD_band_error_FS2": 1.6653345369377348e-16,
+            "signed_complex_correlation_error": 2.532306526238824e-15
+          },
+          {
+            "seed": 23117,
+            "sparse_C_error_FS": 1.698970009123002e-08,
+            "PSD_band_error_FS2": 1.3877787807814457e-16,
+            "signed_complex_correlation_error": 4.574894368686496e-15
+          },
+          {
+            "seed": 61927,
+            "sparse_C_error_FS": 1.2456829956430937e-08,
+            "PSD_band_error_FS2": 1.6653345369377348e-16,
+            "signed_complex_correlation_error": 2.124027046609129e-15
+          }
+        ]
+      }
+    ],
+    "generated_waves": 6,
+    "sparse_samples_per_wave": 14,
+    "cross_context_pairs": 4,
+    "protected_C_H_exact": 650,
+    "protected_voice_parameters_exact": 76,
+    "original_ratio_gate_passed": false,
+    "hearing": false,
+    "live_promoted": false
+  },
+  "source_model_comparison": [
+    {
+      "generated": "F3 Fifth First Mid",
+      "reference": "F3 Fifth First Mid",
+      "band_LR_dB_errors_each_seed": [
+        [
+          [
+            -5.00319691300397,
+            -4.979627139990776
+          ],
+          [
+            -0.3413650495446355,
+            -0.3427526321338118
+          ],
+          [
+            -0.2943259304108835,
+            -0.252296548159755
+          ],
+          [
+            -1.1265375846942498,
+            -1.010604917503085
+          ],
+          [
+            -2.280272180460384,
+            -2.383598604256403
+          ],
+          [
+            -3.5914861216964846,
+            -3.0225929785772627
+          ],
+          [
+            -3.684056498692734,
+            -4.339893834780696
+          ],
+          [
+            -4.2312480888600135,
+            -3.799278787342449
+          ]
+        ],
+        [
+          [
+            -3.8716409379157324,
+            -3.847195562643762
+          ],
+          [
+            -0.3183862095587453,
+            -0.2597429314354519
+          ],
+          [
+            -0.3229121340546721,
+            -0.21320430400467816
+          ],
+          [
+            -0.8092183760206928,
+            -1.110102966186076
+          ],
+          [
+            -2.4372443107814474,
+            -2.182035512036027
+          ],
+          [
+            -2.990268587821637,
+            -2.663560636136034
+          ],
+          [
+            -3.137504126617174,
+            -3.8757874655158524
+          ],
+          [
+            -3.635722348329258,
+            -3.6084692761339627
+          ]
+        ],
+        [
+          [
+            -3.9609600172929813,
+            -3.936039622438895
+          ],
+          [
+            -0.3154806495011264,
+            -0.26202081200303695
+          ],
+          [
+            -0.19644812419908864,
+            -0.07278475880601964
+          ],
+          [
+            -0.7965654523855865,
+            -0.8630905526005321
+          ],
+          [
+            -1.9414767239628303,
+            -1.7584286677105163
+          ],
+          [
+            -3.0474305832332726,
+            -2.35023008763111
+          ],
+          [
+            -3.0477247106475795,
+            -3.76860867571117
+          ],
+          [
+            -3.672948372489557,
+            -3.4505465786625313
+          ]
+        ]
+      ],
+      "band_complex_correlation_errors_each_seed": [
+        [
+          0.015206109198416815,
+          0.014693407449644003,
+          0.016243422723399372,
+          0.11112881079273891,
+          0.1373693325201689,
+          0.10092641377712114,
+          0.0789942962375564,
+          0.08302687445719877
+        ],
+        [
+          0.016264750287534466,
+          0.015386254976606265,
+          0.0178668972900345,
+          0.09500708512277942,
+          0.12790147107691516,
+          0.10127559233915652,
+          0.10732019278705275,
+          0.10167714738750849
+        ],
+        [
+          0.016068107379253918,
+          0.016671714919304283,
+          0.016877907454546006,
+          0.07346312461354285,
+          0.16611679130043858,
+          0.09809126633148134,
+          0.09873203626065859,
+          0.09580630186338462
+        ]
+      ],
+      "mean_absolute_band_LR_error_dB": 2.2793107059286384
+    },
+    {
+      "generated": "F3 Fifth First Mid",
+      "reference": "F3 Fifth Second Mid",
+      "band_LR_dB_errors_each_seed": [
+        [
+          [
+            -3.7659194371747584,
+            -3.678736900041471
+          ],
+          [
+            -3.096532590369348,
+            -2.092300864034072
+          ],
+          [
+            1.4520905313206847,
+            1.3682881893750054
+          ],
+          [
+            -1.783723072668462,
+            -1.0578610521373821
+          ],
+          [
+            -0.8232685470833752,
+            -2.248374011092767
+          ],
+          [
+            -4.339827950945607,
+            -2.6653045635729993
+          ],
+          [
+            -3.5135483771128535,
+            -4.448260487041347
+          ],
+          [
+            -4.282183348192829,
+            -3.913222705242222
+          ]
+        ],
+        [
+          [
+            -2.6343634620865206,
+            -2.5463053226944563
+          ],
+          [
+            -3.073553750383458,
+            -2.0092911633357127
+          ],
+          [
+            1.4235043276768962,
+            1.4073804335300821
+          ],
+          [
+            -1.466403863994905,
+            -1.1573591008203734
+          ],
+          [
+            -0.9802406774044388,
+            -2.0468109188723904
+          ],
+          [
+            -3.73861041707076,
+            -2.3062722211317714
+          ],
+          [
+            -2.9669960050372928,
+            -3.9841541177765025
+          ],
+          [
+            -3.686657607662073,
+            -3.722413194033736
+          ]
+        ],
+        [
+          [
+            -2.7236825414637704,
+            -2.6351493824895895
+          ],
+          [
+            -3.0706481903258394,
+            -2.0115690439032976
+          ],
+          [
+            1.5499683375324795,
+            1.547799978728741
+          ],
+          [
+            -1.4537509403597988,
+            -0.9103466872348289
+          ],
+          [
+            -0.48447309058582133,
+            -1.62320407454688
+          ],
+          [
+            -3.7957724124823953,
+            -1.9929416726268476
+          ],
+          [
+            -2.877216589067699,
+            -3.87697532797182
+          ],
+          [
+            -3.723883631822372,
+            -3.5644904965623043
+          ]
+        ]
+      ],
+      "band_complex_correlation_errors_each_seed": [
+        [
+          0.013901411913228912,
+          0.07471620175495945,
+          0.03142563633025447,
+          0.3319693028878731,
+          0.09516432554879985,
+          0.1811297101020038,
+          0.04579653419231248,
+          0.09063733353900674
+        ],
+        [
+          0.014960572101824025,
+          0.07543898578735045,
+          0.03335522237232987,
+          0.3221917942237127,
+          0.08340502149866381,
+          0.1846659027258219,
+          0.056212809198649266,
+          0.10204253127559439
+        ],
+        [
+          0.014763678481889385,
+          0.07675429994738842,
+          0.037799358628213396,
+          0.29575514559311333,
+          0.13055365938253577,
+          0.17984795433981257,
+          0.06201245936536191,
+          0.09566769568947173
+        ]
+      ],
+      "mean_absolute_band_LR_error_dB": 2.5317006585129382
+    },
+    {
+      "generated": "F3 Fifth Second Mid",
+      "reference": "F3 Fifth First Mid",
+      "band_LR_dB_errors_each_seed": [
+        [
+          [
+            -6.283881908235508,
+            -6.362320500998666
+          ],
+          [
+            2.651010962240117,
+            1.557043538830215
+          ],
+          [
+            -2.11218909935144,
+            -1.9281664351583259
+          ],
+          [
+            0.025096594064605553,
+            -0.6361833063496757
+          ],
+          [
+            -3.9904736693353637,
+            -2.5953642123103937
+          ],
+          [
+            -2.7557929458390045,
+            -4.282180322330729
+          ],
+          [
+            -4.153550405857876,
+            -3.7864086694325785
+          ],
+          [
+            -4.35799041545215,
+            -4.144750767444066
+          ]
+        ],
+        [
+          [
+            -5.813396010748779,
+            -5.881971077170647
+          ],
+          [
+            2.5519151276091874,
+            1.573047168796249
+          ],
+          [
+            -1.9728550365129094,
+            -1.7743285476501656
+          ],
+          [
+            -0.07941425488344914,
+            -1.0039188530248948
+          ],
+          [
+            -3.989429964184523,
+            -2.6994511105944
+          ],
+          [
+            -2.710679350811334,
+            -4.305412489482949
+          ],
+          [
+            -4.350203970649959,
+            -3.6639892931951423
+          ],
+          [
+            -4.542479252807163,
+            -4.452501046951288
+          ]
+        ],
+        [
+          [
+            -5.77204324709361,
+            -5.847602455240127
+          ],
+          [
+            2.6638231662836205,
+            1.6143743828186217
+          ],
+          [
+            -2.167580652772733,
+            -1.9179336594530696
+          ],
+          [
+            -0.0166584536714779,
+            -0.7829287962055267
+          ],
+          [
+            -3.8087482322871757,
+            -2.477257641549376
+          ],
+          [
+            -2.4480967937949223,
+            -4.1378434797087795
+          ],
+          [
+            -3.857459378961792,
+            -3.491827538978985
+          ],
+          [
+            -4.2585288470756,
+            -4.166967209757254
+          ]
+        ]
+      ],
+      "band_complex_correlation_errors_each_seed": [
+        [
+          0.0341390772895648,
+          0.05635703766814268,
+          0.030308880984964082,
+          0.1928490611355147,
+          0.17450105718852887,
+          0.0676695297322059,
+          0.205303629745038,
+          0.13557982683073583
+        ],
+        [
+          0.03497365035206121,
+          0.05725254069143478,
+          0.032185230303651995,
+          0.17154304678857935,
+          0.1720662181224939,
+          0.07871770583480797,
+          0.20766854919467576,
+          0.1044715424087337
+        ],
+        [
+          0.03544479015230634,
+          0.05758388638992899,
+          0.031027794710847826,
+          0.18757449662397344,
+          0.1794714566720846,
+          0.07278408835394343,
+          0.19989272265375255,
+          0.10750249750153276
+        ]
+      ],
+      "mean_absolute_band_LR_error_dB": 3.175355630082425
+    },
+    {
+      "generated": "F3 Fifth Second Mid",
+      "reference": "F3 Fifth Second Mid",
+      "band_LR_dB_errors_each_seed": [
+        [
+          [
+            -5.046604432406296,
+            -5.061430261049361
+          ],
+          [
+            -0.10415657858459647,
+            -0.19250469307004606
+          ],
+          [
+            -0.36577263761987217,
+            -0.30758169762356574
+          ],
+          [
+            -0.6320888939096069,
+            -0.6834394409839721
+          ],
+          [
+            -2.5334700359583544,
+            -2.4601396191467573
+          ],
+          [
+            -3.5041347750881267,
+            -3.924891907326465
+          ],
+          [
+            -3.9830422842779956,
+            -3.8947753216932286
+          ],
+          [
+            -4.408925674784966,
+            -4.258694685343838
+          ]
+        ],
+        [
+          [
+            -4.576118534919567,
+            -4.581080837221341
+          ],
+          [
+            -0.20325241321552584,
+            -0.17650106310401187
+          ],
+          [
+            -0.22643857478134138,
+            -0.15374381011540472
+          ],
+          [
+            -0.7365997428576612,
+            -1.0511749876591916
+          ],
+          [
+            -2.532426330807513,
+            -2.5642265174307646
+          ],
+          [
+            -3.4590211800604562,
+            -3.9481240744786863
+          ],
+          [
+            -4.179695849070079,
+            -3.772355945455792
+          ],
+          [
+            -4.593414512139978,
+            -4.566444964851061
+          ]
+        ],
+        [
+          [
+            -4.534765771264398,
+            -4.546712215290819
+          ],
+          [
+            -0.09134437454109223,
+            -0.1351738490816392
+          ],
+          [
+            -0.42116419104116476,
+            -0.2973489219183092
+          ],
+          [
+            -0.6738439416456901,
+            -0.8301849308398239
+          ],
+          [
+            -2.351744598910167,
+            -2.3420330483857397
+          ],
+          [
+            -3.1964386230440454,
+            -3.7805550647045156
+          ],
+          [
+            -3.6869512573819114,
+            -3.600194191239635
+          ],
+          [
+            -4.309464106408415,
+            -4.280911127657028
+          ]
+        ]
+      ],
+      "band_complex_correlation_errors_each_seed": [
+        [
+          0.03544722525014808,
+          0.0049360120179506245,
+          0.005652444818498416,
+          0.07809502036756534,
+          0.13451392475411325,
+          0.13795060207581203,
+          0.08842153375803638,
+          0.06251295043487491
+        ],
+        [
+          0.036281668019766455,
+          0.003933251189513199,
+          0.011585634121753481,
+          0.07914042927316196,
+          0.1207367690128235,
+          0.12720071385830284,
+          0.09027358175807011,
+          0.06383866202102094
+        ],
+        [
+          0.03675275785217587,
+          0.0036832271572905554,
+          0.006595847638590942,
+          0.07418788522036021,
+          0.13044549968198538,
+          0.14402357606462285,
+          0.08286995912856132,
+          0.05235369558766052
+        ]
+      ],
+      "mean_absolute_band_LR_error_dB": 2.536689635216454
+    }
+  ],
+  "C_H_exact": 650,
+  "voice_files_exact": 76,
+  "F2_exact": true,
+  "C_audio_files": 12,
+  "seconds_per_generated_file": 8,
+  "sampled_oracle_points_per_file": 14,
+  "reused_original_PTS_annotations": 20,
+  "images_viewed": 2,
+  "human_hearing": false,
+  "all_attempts": [
+    "fit1",
+    "audit1",
+    "audit2",
+    "compare1",
+    "compare2",
+    "verify1"
+  ],
+  "failures_preserved": [
+    "audit1 additional absolute residual-rho ratio assertion failed",
+    "audit2 continues other checks but retains unresolved raw ratio gate",
+    "compare1 infinite analytic-tone cross was not exact finite real Hann-band reference before source read"
+  ],
+  "finite_reference_correction": 2.7894008272968645e-14,
+  "original_ideal_reference_discrepancy": 3.8487883514744654e-08,
+  "runtime_UI_driver_default_takes_unchanged": true,
+  "live_profiles_promoted": false,
+  "generic_phase_extractor_qualified": false,
+  "physical_RPM_load": false,
+  "new_listening_acceptance": false,
+  "downloaded": false,
+  "pushed": false,
+  "F2_F3_hearings": "independently pending; no repeated question, strength sweep, or migration",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "old_67CTest_not_repeated": true,
+  "full_goal": "active",
+  "next": "Controlled tiny-residual numerical conditioning before frozen-model verification; independent broader pitch/state evidence, no source/window/gate rescue or near-root wide-RPM claim.",
+  "manifest_sha256": "e6dade5d0b5e34daeefc151006e62692ed7de17d1a62303fb2090718d2fcfcad",
+  "file_count": 861,
+  "bytes": 58697601
+}

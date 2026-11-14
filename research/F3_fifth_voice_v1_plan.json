@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.local-voice-batch/1",
+  "parent_commit": "0246402",
+  "previous_goal_turn": "Progress: F3 additive recipe became operable in the shared native driving/layer/take host;67CTest and487native checks, preserved old output and strict replay verified.",
+  "purpose": "Test the unchanged local Sound DNA extraction on two previously approved/listened fifth-gear ascent observations. Source-supported local timbres are a prerequisite to a continuous cabin acceleration bank, not new menu counts or a full-state claim.",
+  "visual_evidence": "Reuse already viewed F3_display_rpm_v1_annotations.json and its20originalPTS bindings: sampled5at159..162 and190..193. Do not reread pictures or interpolate/calibrate RPM, AV, pedal or load.",
+  "cases": [
+    {"name":"F3 Fifth First Mid", "segment":"F3_fifth1", "use":"fixed_window_spectral_observation", "seconds":[160.0,161.0], "anchor_seconds":160.05, "center_seconds":160.5},
+    {"name":"F3 Fifth Second Mid", "segment":"F3_fifth2", "use":"fixed_window_spectral_observation", "seconds":[191.0,192.0], "anchor_seconds":191.05, "center_seconds":191.5}
+  ],
+  "window_ms":80,
+  "hop":240,
+  "root_bounds_hz":[20,90],
+  "reference_multiple":5,
+  "check_multiples":[2,3,7],
+  "max_octaves_per_second":32,
+  "aperture_cycles":18,
+  "phase_reference":5,
+  "heldout_orders":[3,7],
+  "harmonics":288,
+  "components":12,
+  "seconds":8,
+  "seeds":[1,23117,61927],
+  "gates":{"minimum_observations":32,"heldout_carrier_coherence":0.8,"known_phase_cycle_std":0.002,"output_peak_after_common_gain":0.95},
+  "known_before_real":"Original decreasing aperture/boundary controls; corresponding increasing64exp(.06t) source with observed1.008biased guide, centers1.5/3.5 and same phase/coherence gates; fixed observed-family and silence controls.",
+  "selection":"Exactly one original highest-prominence100..450Hz peak divided by5 per fixed anchor; one80ms family and18cycle correction per case. No alternate interval, anchor, carrier, degree or threshold rescue. Previously failed broad acceleration/chirplet/common-phase studies and excluded post-upshift cases remain failed.",
+  "render":"Only original local gate passes export a model and use existing explicit-seed raw C Sound DNA exporter. Three fixed seeds, unity raw gain, no room/EQ/PCM loop. Local carrier support is not generic phase-extractor qualification or physical source separation.",
+  "evaluation":"Independent native samples/window power and signed cross/path/carriers/reconstructed FLOAT samples/model moments and sparse explicit-seed C checks. Preserve all failures. Same-video passages are not pristine heldouts. Compare raw/model frequency bands descriptively, without calling every deficit engine detail.",
+  "preserve":"650C/H,76voice files,F2,accepted moving35/coherentLF,default,UI,driver,takes and old players exact. F3detail/F2idle independent hearings stay pending; no repeated question or blind tuning. No new media or push; old67CTest not repeated without a C change. Full multi-engine/full-state/physical7.1.4 goal active."
+}
