@@ -1,0 +1,17 @@
+{
+  "schema":"vsl.stereo-phase-budget/1",
+  "parent_commit":"6ceac43",
+  "previous_goal_turn":"Progress: common/relative phase candidates and all generation/review evidence were created, independently verified and archived. Hearing remains independently pending.",
+  "purpose":"Explain the retained five stereo regressions and separate observation-window correlation from physical time structure, without changing or promoting the candidate.",
+  "inputs":"Only frozen relative_phase_v1 source/training/profile/QMC arrays, and the exact original tools/sound_dna/windowed.py observation convention. Verify parent manifest and every consumed file. No source refit or new media.",
+  "stereo_identity":"For each harmonic define P=AL*AR and U=exp(i*(phiL-phiR)). Cross moment E[PU]=E[P]E[U]+Cov(P,U). Decompose model-minus-source coherence into amplitude-product, phase-marginal, association and denominator terms with one source normalization; retain complex signs and cancellations. Further split phase marginal into analytic inverse-CDF interpolation bias and finite QMC discrepancy.",
+  "diagnostic_counterfactual":"One complete population rank-score Gaussian factor scores.T/sqrt(N), no diagonal residual, using the same amplitude and relative-phase quantiles. This reproduces the entire observed score covariance analytically. It diagnoses the 12-factor approximation versus the Gaussian dependence assumption; it is NOT a proposed higher-rank runtime model, a rank sweep, new audio or timbre acceptance.",
+  "known":["equal","phase_only","amplitude_product_only","association_only","denominator_only","signed_cancellation","silent_rejected"],
+  "QMC":{"power":12,"seeds":[1,23117,61927]},
+  "bands_Hz":[[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "window":"Use the unchanged periodic Hann4096, hop256, carrier bin=4*order, global demodulation. Exact real-white-noise band-power covariance includes both complex covariance R and pseudocovariance P across every order pair. Correlation is zero after the16-hop support. Apply finite-row demeaning to the null covariance before descriptive comparison to each source's 39..41 rows; do not call this a fitted physical engine law.",
+  "window_known":"Independent small dense real quadratic forms verify R/P and finite-row demeaning. Original4096/hop256 known white null has no physical slow modulation. Preserve both population and finite-row nulls, source power lag1..8 and source row count.",
+  "checks":{"complex_identity_absolute":2e-12,"analytic_phase_integral_absolute":2e-12,"independent_moments_normalized":2e-10,"full_score_covariance_absolute":2e-12,"dense_window_quadratic_relative":2e-11},
+  "policy":"No rank/rho/phase-strength search, bandwise winner selection, gain fitting, C or runtime parameter/default/controller/owned/take/room changes, unchanged68CTest repeat, downloads or push. No new hearing question; parent phase/amplitude and older F2/F3 hearings stay independent. V6 layers/one driver/future independent spatial layer retained; multi-engine/full-state/physical7.1.4 goal remains active.",
+  "next":"Use signed source evidence to choose a dependence or time representation only after these checks; do not infer subjective electronic-timbre causation, new engine/state coverage or ADI feasibility from training metrics."
+}

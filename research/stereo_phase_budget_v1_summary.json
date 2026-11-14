@@ -1,0 +1,250 @@
+{
+  "result": "stereo_phase_budget_and_observer_window_frozen",
+  "parent_commit": "6ceac43e3cdc57a4b41ecf30d70426a1314218b4",
+  "previous_goal_turn": "Progress: source-derived relative-phase models and paired audio frozen at6ceac43. This turn explains five remaining stereo regressions and qualifies the observation-window null.",
+  "known_controls": 7,
+  "source_models": 6,
+  "QMC_cases": 18,
+  "QMC_draws": 4096,
+  "known_audit": {
+    "result": "independent_stereo_budget_audit_passed",
+    "cases": [
+      {
+        "label": "equal",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "phase_only",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "amplitude_product_only",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "association_only",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "denominator_only",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "signed_cancellation",
+        "signed_identity_verified": true
+      },
+      {
+        "label": "silent_rejected",
+        "signed_identity_verified": true
+      }
+    ],
+    "QMC_cases": 0,
+    "max_phase_integral_error": 0.0,
+    "max_budget_error": 0.0,
+    "max_window_error": 0.0,
+    "dense_real_quadratic_window_null_and_demeaning_verified": true,
+    "producer_sha256": "3622fb491352131e911e9abda6804b5dd4c1bc96601b25bf3a12fa396679833f",
+    "auditor_sha256": "959ba078663bc425c2fdfbaa7e64f349372ce0e001262cbdf78d1d8bce6f4b16"
+  },
+  "real_audit": {
+    "result": "independent_stereo_budget_audit_passed",
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "full_signed_budgets_phase_quadrature_and_window_null_verified": true
+      }
+    ],
+    "QMC_cases": 18,
+    "max_phase_integral_error": 7.791361360319882e-16,
+    "max_budget_error": 5.064917260848194e-16,
+    "max_window_error": 8.881784197001252e-16,
+    "all_report_aggregates_independently_verified": true,
+    "producer_sha256": "d8af3216f71a4f15d4babf47c449849e736c2fc1e3b40ea015a9ee231b3b83cf",
+    "auditor_sha256": "40ceab31e3d9ed3ae9f4e7e97f11fd05fb80ea97cdbabb1a8a208ba1b505af08"
+  },
+  "regression_cases": [
+    {
+      "label": "F3 Fifth First Early",
+      "band": 0,
+      "error": 0.0932409001630189,
+      "fixed_error": 0.01816237967529894,
+      "signed_projection": {
+        "amplitude_product": 0.04279920423859947,
+        "phase_marginal": 0.008911266870670636,
+        "association": 0.9479307489966441,
+        "denominator": 0.0003587798940867256
+      },
+      "absolute_terms": {
+        "amplitude_product": 0.00402722048379489,
+        "phase_marginal": 0.0009393313233011834,
+        "association": 0.08839127896756928,
+        "denominator": 3.400044252311616e-05
+      }
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "band": 3,
+      "error": 0.0517053083323884,
+      "fixed_error": 0.02918459350430411,
+      "signed_projection": {
+        "amplitude_product": 0.005985533878589771,
+        "phase_marginal": 0.0012850861928170026,
+        "association": 0.9914429792402961,
+        "denominator": 0.001286400688298092
+      },
+      "absolute_terms": {
+        "amplitude_product": 0.0005121922169815621,
+        "phase_marginal": 0.0007364540220787406,
+        "association": 0.05127593161888951,
+        "denominator": 6.839864441696207e-05
+      }
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "band": 1,
+      "error": 0.09516470311429585,
+      "fixed_error": 0.07819488492527157,
+      "signed_projection": {
+        "amplitude_product": 0.02613066399463799,
+        "phase_marginal": 0.0008221462365449213,
+        "association": 0.973159720330724,
+        "denominator": -0.0001125305619073574
+      },
+      "absolute_terms": {
+        "amplitude_product": 0.0028922686651024604,
+        "phase_marginal": 0.0010660324209414167,
+        "association": 0.09261137005616428,
+        "denominator": 1.0958189903243027e-05
+      }
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "band": 1,
+      "error": 0.09023032603947755,
+      "fixed_error": 0.039070978345736675,
+      "signed_projection": {
+        "amplitude_product": 0.034170447588464894,
+        "phase_marginal": 0.0052261771848796075,
+        "association": 0.9593476778215695,
+        "denominator": 0.001255697405085448
+      },
+      "absolute_terms": {
+        "amplitude_product": 0.003112650948236128,
+        "phase_marginal": 0.000475919635173286,
+        "association": 0.08656367580065498,
+        "denominator": 0.00011340416758963027
+      }
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "band": 2,
+      "error": 0.06608759681983395,
+      "fixed_error": 0.04955896318081369,
+      "signed_projection": {
+        "amplitude_product": 0.027627653506351452,
+        "phase_marginal": 0.00037985051902309543,
+        "association": 0.9719452609462368,
+        "denominator": 4.723502838810349e-05
+      },
+      "absolute_terms": {
+        "amplitude_product": 0.0018258664374703345,
+        "phase_marginal": 0.0009514907634887194,
+        "association": 0.06424068889682,
+        "denominator": 3.199425043275708e-06
+      }
+    }
+  ],
+  "term_magnitudes": {
+    "amplitude_product": {
+      "mean_absolute": 0.002864071589701709,
+      "maximum_absolute": 0.012991153694073021
+    },
+    "phase_marginal": {
+      "mean_absolute": 0.0006746833796470336,
+      "maximum_absolute": 0.001326798286587034
+    },
+    "association": {
+      "mean_absolute": 0.06542462110712817,
+      "maximum_absolute": 0.09261137005616428
+    },
+    "denominator": {
+      "mean_absolute": 4.7604644191576744e-05,
+      "maximum_absolute": 0.0001761431837424636
+    },
+    "phase_quantile_bias": {
+      "mean_absolute": 0.00023040569951910655,
+      "maximum_absolute": 0.0004777244140434384
+    },
+    "phase_QMC_discrepancy": {
+      "mean_absolute": 0.0006014401472622242,
+      "maximum_absolute": 0.0012692079687183719
+    }
+  },
+  "mean_coherence_error": {
+    "current": 0.06791333209719615,
+    "population_gaussian": 0.06772511334226562
+  },
+  "full_population_counterfactual_improves": 15,
+  "full_population_diagnostic_is_not_new_preset": true,
+  "full_signed_cancellations_preserved": true,
+  "original_observer_binding": {
+    "original_observer_source": "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\source\\tools\\sound_dna\\windowed.py",
+    "original_observer_sha256": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+    "parent_geometry_manifest_sha256": "013d8fac68b897af45ac4f57226d74b7aec185e82c55c24dd3ab10b475c02bf8",
+    "current_observer_exact": true,
+    "convention": "Hann4096/hop256/4*order bins/global demodulation in normalized cycle coordinates",
+    "warning": "White null is defined in normalized coordinates; native recording resampling/filtering is not assumed to preserve white independent samples."
+  },
+  "white_null_finite_curve_is_ratio_of_expected_moments_not_expected_sample_correlation": true,
+  "source_or_engine_time_law_identified": false,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "new_audio": false,
+  "scientific_figures_individually_viewed": 2,
+  "review1_occlusion_and_exact_source_retained": true,
+  "review2_only_layout_title_and_window_PNG_exact": true,
+  "hearing": {
+    "status": "pending",
+    "review_url": "http://127.0.0.1:8789/references/analysis/relative_phase_v1/review1/index.html",
+    "comparison": "Same bank and generation: paired fixed phase versus common/relative phase; identical amplitudes, no room/widener",
+    "question": "左右是否更自然，以及是否增加颤动、模糊或电子感",
+    "parent_amplitude_question": "independently pending; not repeated or overwritten",
+    "old_F2_F3_questions": "independently pending; not repeated",
+    "runtime_adopted": false
+  },
+  "parent_amplitude_and_old_F2_F3_hearings": "independently pending; no repeat or new question",
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "ADI_bound_claimed": false,
+  "full_goal": "active",
+  "next": "Qualify amplitude-conditioned relative phase, including moment feasibility and continuous generation; assess time through the original observer. No blind rank/rho/strength or bandwise winners. Preserve V6 layers, one driver and separate future spatial module; full multi-engine/state/C-port/physical7.1.4 still incomplete.",
+  "manifest_sha256": "b3d4a24b3d96643112688c15ff4504528ae31b09f3e3345639257d47e30e2854",
+  "file_count": 952,
+  "bytes": 32788048
+}
