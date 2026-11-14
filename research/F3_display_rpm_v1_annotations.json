@@ -1,0 +1,38 @@
+{
+  "schema": "vsl.F3-display-rpm-manual/1",
+  "method": "Assistant visually read all four native-size contact sheets in inspect1. The magnified left overlay is the annotated display. Coarse enclosing brackets use major marks only, widened around nearby marks. These are visual annotations, not ECU data, a calibrated measurement interval, continuous coverage or independent human verification.",
+  "columns": ["source_seconds", "displayed_gear", "displayed_speed_kmh", "RPM_lower", "RPM_upper", "visual_note"],
+  "rows": [
+    [158,4,188,6000,7000,"Needle between6 and7; do not infer a stable fourth-gear ratio at this boundary"],
+    [159,5,200,6000,8000,"Near7; widened bracket"],
+    [160,5,212,7000,8000,"Between7 and8"],
+    [161,5,224,7000,9000,"Near8; widened bracket"],
+    [162,5,234,8000,9000,"Between8 and9"],
+    [163,6,242,6000,8000,"Near7 after gear-display change; widened bracket"],
+    [164,6,250,6000,8000,"Near7; widened bracket"],
+    [189,4,186,8000,9000,"Between8 and9"],
+    [190,5,199,6000,8000,"Near7 after gear-display change; widened bracket"],
+    [191,5,210,7000,8000,"Between7 and8"],
+    [192,5,222,7000,9000,"Near8; widened bracket"],
+    [193,5,233,8000,9000,"Between8 and9"],
+    [194,6,241,6000,8000,"Approaching7 after gear-display change; widened bracket"],
+    [195,6,249,6000,8000,"Near7; widened bracket"],
+    [196,6,256,7000,8000,"Between7 and8"],
+    [197,6,263,7000,8000,"Between7 and8"],
+    [198,6,269,7000,9000,"Approaching8; widened bracket"],
+    [199,6,276,7000,9000,"Near8; widened bracket"],
+    [200,6,282,8000,9000,"Between8 and9"],
+    [201,7,286,6000,8000,"Near7 after gear-display change; widened bracket"]
+  ],
+  "observations": [
+    "Both fifth-gear passages show the needle rising from around7 toward8..9, then a lower needle position with displayed sixth gear.",
+    "At158s the overlay still says4 but its needle is already between6 and7. At189s displayed4 instead has the needle between8 and9. Never transfer gear/speed ratios across a display transition without a calibrated time relation.",
+    "The sixteenth through nineteenth samples show continued sixth-gear needle rise. The201s sample shows7 and a lower needle position.",
+    "No idle tachometer is available in these sampled passages. No F3-to-F2 RPM mapping, source clock fit, pedal/load or acoustic synchronization was inferred."
+  ],
+  "physical_RPM_calibrated": false,
+  "audio_video_delay_calibrated": false,
+  "interpolated_RPM_trajectory_exported": false,
+  "manual_reading_independently_verified": false,
+  "runtime_changed": false
+}

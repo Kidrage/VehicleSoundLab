@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.F3-display-rpm-plan/1",
+  "purpose": "Record coarse visible tachometer ranges before attempting any audio-to-RPM mapping; independent work while the current idle audio awaits listening.",
+  "source": "Approved F3; reuse existing native-resolution JPEGs and original PTS from state_media_v1/F3_context1, checking each recorded hash and original muxed-video hash. No new download or media search.",
+  "samples_seconds": {
+    "motorway1": [158,159,160,161,162,163,164],
+    "motorway2": [189,190,191,192,193,194,195,196,197,198,199,200,201]
+  },
+  "crop_xyxy": [0,0,650,430],
+  "display": "Native pixels only; lossless PNG crops from the existing decoded JPEGs, no resize, sharpening, interpolation, thresholding or automatic needle detector. Keep the original full frame alongside each crop.",
+  "annotation": "Assistant visual reading, not independent human telemetry. Record displayed gear and speed plus an enclosing RPM bracket based on the printed major 1000-RPM marks. If a needle is near a mark or visibly transitional use a wider bracket or unknown; no sub-tick precise RPM estimate.",
+  "audit": "Recheck all raw/input hashes, exact PTS against the original extraction log, all crop RGB pixels against the full decoded image, table/frame bindings and all619C-H/67originalvoices. Annotation truth is not established by an image hash or numerical audit.",
+  "interpretation": "Sampled display only, not continuous RPM, physical shift time, engine-order assignment, pedal/load/fuel telemetry or calibrated audiovisual synchronization. Do not interpolate between samples or apply F3 cabin RPM labels to F2 idle or A exterior.",
+  "audio_read": false,
+  "runtime_changed": false,
+  "next": "Use qualified simultaneous display/audio evidence for future constrained pitch study; preserve original phase-extractor qualification gates. Pending idle allocation audition remains the next sound decision, not a C promotion."
+}
