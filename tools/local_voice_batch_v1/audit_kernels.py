@@ -102,7 +102,7 @@ def coordinates(native, start, family, center, plan):
     return positions, cutoff, float(np.median(inferred))
 
 
-def seeded_samples(model, root, seed, indices):
+def seeded_samples(model, root, seed, indices, bandlimited=False):
     # Independent direct trigonometric sum at sparse times; no C recurrence.
     h, k = model['basis'].shape[:2]
     rng = Gaussian(seed)
@@ -125,6 +125,10 @@ def seeded_samples(model, root, seed, indices):
     fraction, rows, selected = 0., [], set(indices)
     mean = model['mean'][:, ::2]+1j*model['mean'][:, 1::2]
     units = np.divide(mean, abs(mean), out=np.ones_like(mean), where=abs(mean) > 1e-15)
+    if bandlimited:
+        frequencies = root*np.arange(1, h+1)
+        position = np.clip((frequencies-19200)/2400, 0, 1)
+        weights = 1-3*position**2+2*position**3
     for n in range(max(indices)+1):
         while fraction >= 1:
             fraction -= 1
@@ -135,6 +139,9 @@ def seeded_samples(model, root, seed, indices):
             value = model['mean']+left+fraction*(right-left)
             magnitudes = np.hypot(value[:, ::2], value[:, 1::2])
             oscillator = np.exp(2j*np.pi*(n*root/48000)*np.arange(1, h+1))
-            rows.append(np.sum(magnitudes*np.real(units*oscillator[:, None]), axis=0))
+            contributions = magnitudes*np.real(units*oscillator[:, None])
+            if bandlimited:
+                contributions *= weights[:, None]
+            rows.append(np.sum(contributions, axis=0))
         fraction += root/12000
     return np.array(rows)

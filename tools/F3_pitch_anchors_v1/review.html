@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tecnica · 五个局部声纹</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;background:#f4f5f6;color:#222;margin:0;padding:20px}
+main{max-width:780px;margin:auto}h1{font-size:25px;margin:10px 0}p{margin:12px 0}
+select,audio{width:100%;box-sizing:border-box;margin:8px 0}select{font:inherit;padding:10px;background:#fff;border:1px solid #aaa;border-radius:6px}
+label{display:block}label.toggle{margin:12px 0}input{margin-right:8px}.muted{font-size:14px;color:#555}
+#status{min-height:3.3em}details{margin:22px 0}img{max-width:100%;height:auto}a{color:#145b9f}
+</style>
+<main><h1>Tecnica · 五个局部声纹</h1>
+<p>先比较原录音、固定音高参考与8秒持续生成。勾选“统一到64 Hz”后，可比较五个观察的音色差异。</p>
+<label for="case">素材观察</label><select id="case"></select>
+<label class="toggle"><input type="checkbox" id="common">统一到64 Hz</label>
+<label for="clip">试听声音</label><select id="clip"></select>
+<audio controls preload="metadata"></audio><p id="status" aria-live="polite"></p>
+<p id="context" class="muted"></p>
+<p class="muted">所有声音统一降低6.02 dB、首尾5 ms淡化，保留相互音量差异。参考片段较短；持续声使用同一套参数和三组新细节序列生成，没有循环原录音。</p>
+<details><summary>素材位置与本轮范围</summary>
+<p>这五个观察来自同一份获批F3录音，位于已核查的两段五挡升速和一段六挡升速内。根频率是声学观察值，实车转速与负载尚未标定。</p>
+<p>生成声只包含主声线。独立低频轰鸣、双声道细节及新增空间处理均未加入本轮对照。原录音仍含车内、道路和录制环境；频谱差额不能全部归为发动机细节。</p>
+<p>“固定音高参考”用来区分升速造成的变化与合成造成的变化；它不是未经处理的原声。统一音高时，仅提供固定参考和持续生成声。</p>
+<img src="comparison.png" alt="五个声学根频率、独立声线检查、同音高频带和左右关系差异">
+</details></main>
+<script id="data" type="application/json">__DATA__</script><script>
+const data=JSON.parse(document.querySelector('#data').textContent),cases=document.querySelector('#case'),clips=document.querySelector('#clip'),common=document.querySelector('#common'),audio=document.querySelector('audio'),status=document.querySelector('#status'),context=document.querySelector('#context');
+let url=null,token=0;
+for(const row of data.cases){const option=document.createElement('option');option.value=row.key;option.textContent=row.title;cases.append(option)}
+async function choose(){
+ const turn=++token,row=data.clips.find(v=>v.key===clips.value);audio.pause();audio.removeAttribute('src');delete audio.dataset.clipKey;audio.load();if(url){URL.revokeObjectURL(url);url=null}status.textContent='载入中…';
+ try{const response=await fetch(row.file);if(!response.ok)throw Error(response.status);const blob=await response.blob();if(turn!==token)return;url=URL.createObjectURL(blob);audio.src=url;audio.dataset.clipKey=row.key;audio.load();status.textContent=row.note}
+ catch(error){if(turn===token)status.textContent='载入失败，请刷新重试。'}
+}
+function refresh(){
+ const prior=data.clips.find(v=>v.key===clips.value),mode=common.checked?'common':'native',row=data.cases.find(v=>v.key===cases.value),available=data.clips.filter(v=>v.case_key===row.key&&v.mode===mode);
+ clips.replaceChildren();for(const clip of available){const option=document.createElement('option');option.value=clip.key;option.textContent=clip.title;clips.append(option)}
+ const preferred=prior&&available.find(v=>v.kind===prior.kind);clips.value=(preferred||available[0]).key;
+ context.textContent=`原录音 ${row.seconds[0]}–${row.seconds[1]} 秒 · 声学根频率 ${row.root_hz.toFixed(2)} Hz · ${common.checked?'当前统一64 Hz':'当前保留各观察的音高'}`;choose();
+}
+cases.addEventListener('change',refresh);common.addEventListener('change',refresh);clips.addEventListener('change',choose);cases.value=data.cases[0].key;refresh();
+</script></html>

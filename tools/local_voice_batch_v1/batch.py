@@ -14,6 +14,7 @@ from research_archive_v1 import save, sha
 from shift_evidence_v1.spectrum import observe
 from sound_dna.windowed import estimate
 from sound_dna.profile import export
+from .render import RAW_PROTOCOL, playback_argument
 
 
 def controls(plan):
@@ -89,8 +90,9 @@ def fit_case(workspace, case, plan, folder, probe, repo):
     ratio = Fraction(46.875 / info['root_hz']).limit_denominator(10000)
     reference = signal.resample_poly(normalized, ratio.numerator, ratio.denominator, axis=0, window=('kaiser', 8.6))
     sf.write(folder / 'reference.wav', reference, 48000, subtype='FLOAT')
+    playback = playback_argument(plan.get('render_protocol', RAW_PROTOCOL), info['root_hz'])
     for seed in plan['seeds']:
-        argv = list(map(str, [probe, folder / 'voice.model', folder / ('DNA_%d.wav' % seed), plan['seconds'], 1, 1, seed, 512]))
+        argv = list(map(str, [probe, folder / 'voice.model', folder / ('DNA_%d.wav' % seed), plan['seconds'], playback, 1, seed, 512]))
         done = subprocess.run(argv, cwd=repo, capture_output=True, timeout=180)
         (folder / ('C_%d.log' % seed)).write_bytes(done.stdout + done.stderr)
         assert done.returncode == 0, (argv, done.returncode)

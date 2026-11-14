@@ -1,0 +1,14 @@
+{
+  "schema":"vsl.F3-pitch-compare/1",
+  "purpose":"Separate observed pitch differences from stored timbre differences before designing a continuous atlas. This is a new comparison after the five fixed cases passed, not an attempt to move their windows above the legacy root limit.",
+  "cases":"All five in F3_pitch_anchors_v1_plan.json, no selection by sound or spectrum",
+  "common_root_hz":64,
+  "seeds":[1,23117,61927],
+  "seconds":8,
+  "render":"Existing bandlimited SaVoice exporter, unity raw, no gain normalization/room/extra HF or LF. Same parameter files, new actual playback root64.",
+  "reference":"Each saved normalized training waveform resampled once with fixed46.875/64 rational factor, common to L/R; short reference remains a training diagnostic and is not source-loop synthesis.",
+  "measurement":{"window_samples":4096,"overlap_samples":3072,"fft_samples":8192,"window":"periodic Hann","detrend":false,"bands_hz":[[28,120],[120,400],[400,1200],[1200,3000],[3000,6000],[6000,8000],[8000,10000],[10000,14000]]},
+  "bounds":"All5x3 common-root C files independently checked at14 fixed sparse samples with the already checked PRNG/direct-sum/taper oracle, per-value0.5001FLOAT ULP+2e-10FS. Reference/C statistics descriptive only, no realism or across-take gates.",
+  "review":"One player, explicit case and native/common-pitch selection; fixed common0.5 file gain and5ms onset/release for listening copies only, no per-clip gain compensation, no autoplay. Existing F2/F3 detail questions stay independently pending; no automatic new approval.",
+  "preserve":"All656C/H,76voice files,F2,live/default/takes unchanged; no new download/push or repeated full C suite."
+}

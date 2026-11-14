@@ -1,0 +1,3275 @@
+{
+  "result": "five_fixed_local_source_models_and_review_frozen",
+  "git_parent": "d06b810ac58c8122dab8db2703bcb9e25bdf9519",
+  "previous_goal_turn": "No synthesis progress: ADI cycle recheck reproduced unchanged inputs and estimates; resume unfinished fixed F3 source study.",
+  "source_cases": [
+    {
+      "name": "F3 Fifth First Early",
+      "seconds": [
+        159.1,
+        159.9
+      ],
+      "root_hz": 61.360802280669525,
+      "observations": 40,
+      "heldout": {
+        "3": [
+          0.9944965795049369,
+          0.9965707900282434
+        ],
+        "7": [
+          0.9914042327483418,
+          0.9891747061917678
+        ]
+      }
+    },
+    {
+      "name": "F3 Fifth First Late",
+      "seconds": [
+        161.15,
+        161.95
+      ],
+      "root_hz": 67.95805686190828,
+      "observations": 40,
+      "heldout": {
+        "3": [
+          0.9866909129052246,
+          0.983250246140912
+        ],
+        "7": [
+          0.9816150635775973,
+          0.99021105814642
+        ]
+      }
+    },
+    {
+      "name": "F3 Fifth Second Early",
+      "seconds": [
+        190.1,
+        190.9
+      ],
+      "root_hz": 60.8194356436631,
+      "observations": 39,
+      "heldout": {
+        "3": [
+          0.9817141910802955,
+          0.9823459911694562
+        ],
+        "7": [
+          0.9466906362531935,
+          0.9481735992121737
+        ]
+      }
+    },
+    {
+      "name": "F3 Fifth Second Late",
+      "seconds": [
+        192.15,
+        192.95
+      ],
+      "root_hz": 67.36432002723924,
+      "observations": 40,
+      "heldout": {
+        "3": [
+          0.9439939352203105,
+          0.9457798650536507
+        ],
+        "7": [
+          0.9962325336138798,
+          0.9953642621824148
+        ]
+      }
+    },
+    {
+      "name": "F3 Sixth Early",
+      "seconds": [
+        194.2,
+        195.0
+      ],
+      "root_hz": 58.233928849616824,
+      "observations": 40,
+      "heldout": {
+        "3": [
+          0.968363478264272,
+          0.9733808279405207
+        ],
+        "7": [
+          0.9984762054725849,
+          0.992730786649793
+        ]
+      }
+    }
+  ],
+  "source_gates_unchanged": true,
+  "source_qualified": 5,
+  "source_excluded": 0,
+  "root_ratio": 1.1669838907383876,
+  "legacy_training_root_boundary_exceeded": false,
+  "independent_native_windows": 725,
+  "independent_inverse_FLOAT_exact": true,
+  "all_model_means_and_marginal_covariances_audited": true,
+  "all_serialized_model_replays_exact": true,
+  "independent_SVD_proof": false,
+  "earlier_absolute_rho_failure_reclassified": false,
+  "new_independent_rho_gate": false,
+  "direct_audit": {
+    "result": "fixed_F3_pitch_anchors_audited",
+    "sources": {
+      "tools/audit_F3_pitch_anchors_v1.py": "63a2ed01619d074067d2a22fc939756243126a4f0b8744c3b88cc9f15493c9e1",
+      "tools/decel_source_v1/aperture.py": "f84eb6199aecd9e1091827c826312f528922bad332c444bec22a7af56499e81e",
+      "tools/exterior_clock_v1/warp.py": "ff95981af6b6f40e0c86abcee5f8d2a782d0225ff7b767f2296b2851220fac4d",
+      "tools/idle_texture_v1/profile.py": "351a5e39563cea393bbe83ab02b5b8d869d3d7a967b8f6a8c4bad550f7d15475",
+      "tools/local_voice_batch_v1/audit_kernels.py": "ebaae90af015853aab244c3b1e57705f7b8e1160a39952a43b904e7343052e61",
+      "tools/local_voice_batch_v1/bandlimited_controls.py": "e290d34fc9bbdc9be2b05e50bf102b5832ca26488c2dd8296bdb220f188d60a5",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+      "tools/sound_dna/profile.py": "9f161c1c611fd227f35df46ae02685e3384e116600614ac34235bfdabb2dc112",
+      "tools/sound_dna/statistics.py": "320a7396b1e14bc3f02fde8a020066e185d56037950b6a6a86f7c0245a765e80",
+      "tools/sound_dna/windowed.py": "e340e8d0e422a02cb094777be16feae8c8f7aead684662142f427932d9c06664",
+      "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\report.json": "5c9a1c4472e86a9f1ca17b3e03b64b5a13712cf6760bdda0ecd7f1e66ab568a1",
+      "E:\\VehicleSoundLab-Git\\research\\F3_pitch_anchors_v1_plan.json": "9feebdd89d8ae48d85987dea22a34660cafbdfc0496a77ca9f765c3fc91f74de",
+      "E:\\VehicleSoundLab\\references\\segments_v1.json": "3d4190c20278bd989d1c9c099678caa2b66cc5d4cce70e4edf2560245f9094fa",
+      "E:\\VehicleSoundLab\\references\\raw\\state_media_v1\\F3_fetch2\\F3_QUWTsk9crlo.mkv": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "E:\\VehicleSoundLab\\references\\analysis\\state_media_v1\\F3_inspect1\\native_reference.wav": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+      "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe": "51121e17d5d3583caa7b6ffa54beb64d9f03b41a55bc87b42ea60e6e47b906b5",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\result.json": "2117d1efe175effd395425b940c98ccfff52488de0e431947f4830372b48c9c2",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\native.wav": "271953894fda1f793d7c2e9e6a832cad0eca91dd55b78ae22bcf77dbcd9b42b4",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\observed.npz": "f8141ed119f39ab429408ed72750959b37852334d1ab2eddb892fdef023949b2",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\coordinates.npz": "91c11cd7716a30cab4d1644dcc1162a9889e4f63bdad78a30a6d8d8377456a1a",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\normalized.wav": "f0b9d2801e7673bf839f0474310eb8fa4166f3ad4fd3170447c5ce625ddf6106",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\voice.model": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\DNA_1.wav": "458939ab71dcf159993d2868b64a43f0bdcaffafd48b9ac725ad6f78c279f13e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\DNA_23117.wav": "a9548146949133fb31a06476167ab35a86e6fe6e737aa117d3c6626bdb8d661d",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\DNA_61927.wav": "aa8f418bf2a65fa3219c084fdc688d0c75547bc160e30e54039f67a5e8a2cbd8",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\result.json": "7a5b4f12acd447b42a5dbaa917530c85cf529295568b0640fd0fcef4059ddaf4",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\native.wav": "b81637dd9aa5e7c61f5520ef298fd0549639ba42eeedac11e33d17fbd2c0bb0b",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\observed.npz": "c53f6b1e81b72e395d508494e191f2f55959e15f3e3d7345e9836e2d5eceade3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\coordinates.npz": "91cca800e48cf5cedd5ca97e84bd0a943e6c1d51716c84c6bb06ca94520f7cc6",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\normalized.wav": "76146ee99cdeb85ee23d556b41d28681011c1f35977cd74bf21f86940382de5d",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\voice.model": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\DNA_1.wav": "ae9f9669809c3631999495c5ed1130b0988c6b70f90f98891920fa27ec5a72ad",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\DNA_23117.wav": "b2dfdebd84a4f75a75fd03692e64e959258f350bb662cdea4e132adf3513055e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\DNA_61927.wav": "cd63136193b8d143787f09154c9ace1490eedf95105ce9f83f0433be12bc1c8e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\result.json": "6c8a8a33d32685c62eba53eb7a1807b0e9df708facc279a5dc3b7a1d48b50d38",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\native.wav": "46805bab46bacee94436a93f6bd5728ad661e5db6137054ba412a3b44c37bd94",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\observed.npz": "ec8fb6e4700b7f672504291354fcd159b5b2b2e15b3dcdc900e4f856e73c154f",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\coordinates.npz": "848866aa452a76059383caaa382642fc9ce6d1325e0684273abd2ac77c8ce24e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\normalized.wav": "06a616192b7ef5a19f7ef82b90b70f565f064547d8fea45634dec507fa7775b4",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\voice.model": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\DNA_1.wav": "109ad4caea06384f29edf6815f6d198847f88bff1c73bca34eac955598147fa3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\DNA_23117.wav": "f5e7b6ef07ca5c1e09c07dbbc7e4292a490c09bd529014cb7d354141a4a5f406",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\DNA_61927.wav": "dc08edf9d27bee3b4b1025738b72f5386fecbc80881e18630bbdce75dca02f20",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\result.json": "2f0296c6bfdd47db929debc1c3c16413826718e954b1bfeb4ce5e66132261d20",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\native.wav": "42fdcb1cce842c29645b53bea5526290021cb6e5afc7d03c8e21823799ca2304",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\observed.npz": "6526d89ddf3593b25e581cd78e1dfd8322fc02adff7b497dabb3aa801f76f326",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\coordinates.npz": "6071d1c6632ecf015ffc3feb2d548f5ca346c6e3da70d9141a9a6d4ac1c8b9b6",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\normalized.wav": "4e1bddca0576e40c5572a0fe2607fc40281a2aa19b85ac4cf0a57566a80ad2a1",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\voice.model": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\DNA_1.wav": "b0fd7672657093f369d14044014e492e62596333e1bf72dcf80da6500b5bb1e1",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\DNA_23117.wav": "2e0c6a6db7f5a8800b6d3f574ffd569811d820749b2bf836d2a5e4caff84b87e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\DNA_61927.wav": "f2dc489c9a7d5c2975df91b8b9600ba83bf5b7b7aa3399f323dc01a7ca8d5864",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\result.json": "fb6b67c910ff5d73a3343a0c45a2c67990a14bf4e86f52698a58cf0bb3ef97f6",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\native.wav": "08cd57087b72ff15d67b7a449dca5f87fe9eba6235213ecfb4677985e7a26cbf",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\observed.npz": "4df03e05776e74692f2d108492f27a8ed5af3d98848898bb30659efac28de6a2",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\coordinates.npz": "764353f9fee67e676293a6b81942c8d87f1937207ee11e7c587d9d0892488c89",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\normalized.wav": "b0c22fccf5bdab91c6c39caed64a576e9f15101322db585dd29c0ba5355fceb8",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\voice.model": "2a550edb41bd2b4abf53f86b9684c1bf52589e0872270932e7e6ce7ca6a10a72",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\DNA_1.wav": "28e36f1599628717b209a44412e7b81c97922acba86be931692e616413d0b7fb",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\DNA_23117.wav": "dffac24bcfed2a40abbd48d02e73424614efd4b470b0b42671428aab0bb1db43",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\DNA_61927.wav": "c43d0261564be1ae26c21108ecef1cfbee7d075e5043eee641162df6745f4cec",
+      "E:\\VehicleSoundLab\\baselines\\bandlimited_dna_v1\\inputs\\C_files_sha256.json": "b33b883c8bc2d6610163f4367788ee5d910ffb8f017767c56b73bdb8afa2d95c",
+      "E:\\VehicleSoundLab\\baselines\\bandlimited_dna_v1\\inputs\\voice_files_sha256.json": "861ce901a15b857a34a033e6c687ca4f0e401171af84714c60ae74ae0a3363ec"
+    },
+    "cases": [
+      {
+        "name": "F3 Fifth First Early",
+        "frames": 145,
+        "direct_power_error_FS2": 3.469446951953614e-18,
+        "direct_band_error_FS2": 1.1102230246251565e-16,
+        "direct_cross_error_FS2": 5.561946577567963e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "heldout_coherence": {
+          "3": [
+            0.9944965795049364,
+            0.996570790028243
+          ],
+          "7": [
+            0.9914042327483418,
+            0.9891747061917684
+          ]
+        },
+        "coherence_error": 5.551115123125783e-16,
+        "qualified": true,
+        "root_hz": 61.360802280669525,
+        "model_mean_error_FS": 1.0084367945657924e-14,
+        "all_harmonic_marginal_covariance_error_FS2": 2.6183482465524932e-17,
+        "serialized_model_replay_exact": true,
+        "replayed_SVD_independent": false,
+        "seeded_C_sparse_checks": [
+          {
+            "maximum_error_FS": 2.63406887412998e-08,
+            "maximum_excess_FS": -2.3685063456257407e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 1
+          },
+          {
+            "maximum_error_FS": 2.833130396950878e-08,
+            "maximum_excess_FS": -2.0907255079951594e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 23117
+          },
+          {
+            "maximum_error_FS": 2.2581285841205556e-08,
+            "maximum_excess_FS": -5.561380382599566e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 61927
+          }
+        ],
+        "legacy_training_root_boundary_exceeded": false
+      },
+      {
+        "name": "F3 Fifth First Late",
+        "frames": 145,
+        "direct_power_error_FS2": 2.6020852139652106e-18,
+        "direct_band_error_FS2": 8.326672684688674e-17,
+        "direct_cross_error_FS2": 2.823925224926892e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "heldout_coherence": {
+          "3": [
+            0.9866909129052251,
+            0.9832502461409124
+          ],
+          "7": [
+            0.9816150635775979,
+            0.9902110581464206
+          ]
+        },
+        "coherence_error": 6.661338147750939e-16,
+        "qualified": true,
+        "root_hz": 67.95805686190828,
+        "model_mean_error_FS": 1.051135347828932e-14,
+        "all_harmonic_marginal_covariance_error_FS2": 2.42861286636753e-17,
+        "serialized_model_replay_exact": true,
+        "replayed_SVD_independent": false,
+        "seeded_C_sparse_checks": [
+          {
+            "maximum_error_FS": 1.8667216661327757e-08,
+            "maximum_excess_FS": -2.657195532216548e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 1
+          },
+          {
+            "maximum_error_FS": 2.3139994143051013e-08,
+            "maximum_excess_FS": -3.6993241898910496e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 23117
+          },
+          {
+            "maximum_error_FS": 2.649287378364562e-08,
+            "maximum_excess_FS": -2.778553894353885e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 61927
+          }
+        ],
+        "legacy_training_root_boundary_exceeded": false
+      },
+      {
+        "name": "F3 Fifth Second Early",
+        "frames": 145,
+        "direct_power_error_FS2": 4.336808689942018e-18,
+        "direct_band_error_FS2": 1.1102230246251565e-16,
+        "direct_cross_error_FS2": 5.551115123125783e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "heldout_coherence": {
+          "3": [
+            0.9817141910802957,
+            0.9823459911694559
+          ],
+          "7": [
+            0.9466906362531932,
+            0.9481735992121736
+          ]
+        },
+        "coherence_error": 3.3306690738754696e-16,
+        "qualified": true,
+        "root_hz": 60.8194356436631,
+        "model_mean_error_FS": 1.209188350171879e-14,
+        "all_harmonic_marginal_covariance_error_FS2": 6.938893903907228e-17,
+        "serialized_model_replay_exact": true,
+        "replayed_SVD_independent": false,
+        "seeded_C_sparse_checks": [
+          {
+            "maximum_error_FS": 2.9515624055953538e-08,
+            "maximum_excess_FS": -4.760260934042691e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 1
+          },
+          {
+            "maximum_error_FS": 2.5009453175073304e-08,
+            "maximum_excess_FS": -2.561970254109312e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 23117
+          },
+          {
+            "maximum_error_FS": 2.857672054545901e-08,
+            "maximum_excess_FS": -5.261348536565123e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 61927
+          }
+        ],
+        "legacy_training_root_boundary_exceeded": false
+      },
+      {
+        "name": "F3 Fifth Second Late",
+        "frames": 145,
+        "direct_power_error_FS2": 3.469446951953614e-18,
+        "direct_band_error_FS2": 9.71445146547012e-17,
+        "direct_cross_error_FS2": 4.163336342344337e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "heldout_coherence": {
+          "3": [
+            0.9439939352203103,
+            0.9457798650536506
+          ],
+          "7": [
+            0.9962325336138799,
+            0.9953642621824146
+          ]
+        },
+        "coherence_error": 2.220446049250313e-16,
+        "qualified": true,
+        "root_hz": 67.36432002723924,
+        "model_mean_error_FS": 1.179853134127519e-14,
+        "all_harmonic_marginal_covariance_error_FS2": 2.0816681711721685e-17,
+        "serialized_model_replay_exact": true,
+        "replayed_SVD_independent": false,
+        "seeded_C_sparse_checks": [
+          {
+            "maximum_error_FS": 1.4615820220775788e-08,
+            "maximum_excess_FS": -4.883212053106358e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 1
+          },
+          {
+            "maximum_error_FS": 2.2806736610370137e-08,
+            "maximum_excess_FS": -3.18460632725359e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 23117
+          },
+          {
+            "maximum_error_FS": 2.8185690226223414e-08,
+            "maximum_excess_FS": -4.792991674438471e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 61927
+          }
+        ],
+        "legacy_training_root_boundary_exceeded": false
+      },
+      {
+        "name": "F3 Sixth Early",
+        "frames": 145,
+        "direct_power_error_FS2": 2.6020852139652106e-18,
+        "direct_band_error_FS2": 1.1102230246251565e-16,
+        "direct_cross_error_FS2": 5.561946577567963e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "inverse_coordinate_error_seconds": 0.0,
+        "normalized_FLOAT_exact": true,
+        "heldout_coherence": {
+          "3": [
+            0.9683634782642715,
+            0.9733808279405213
+          ],
+          "7": [
+            0.9984762054725842,
+            0.9927307866497929
+          ]
+        },
+        "coherence_error": 6.661338147750939e-16,
+        "qualified": true,
+        "root_hz": 58.233928849616824,
+        "model_mean_error_FS": 1.0921339372343595e-14,
+        "all_harmonic_marginal_covariance_error_FS2": 1.6479873021779667e-17,
+        "serialized_model_replay_exact": true,
+        "replayed_SVD_independent": false,
+        "seeded_C_sparse_checks": [
+          {
+            "maximum_error_FS": 1.3070921900393273e-08,
+            "maximum_excess_FS": -2.174099421768049e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 1
+          },
+          {
+            "maximum_error_FS": 2.8688421305211875e-08,
+            "maximum_excess_FS": -3.131375274410206e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 23117
+          },
+          {
+            "maximum_error_FS": 2.864857540085808e-08,
+            "maximum_excess_FS": -2.1469534343101492e-10,
+            "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance",
+            "seed": 61927
+          }
+        ],
+        "legacy_training_root_boundary_exceeded": false
+      }
+    ],
+    "known_before_source": {
+      "power_error_FS2": 0.0,
+      "signed_cross": "L*conj(R)"
+    },
+    "native_frames": 725,
+    "C_H_exact": 656,
+    "voice_parameters_exact": 76,
+    "source_gates_unchanged": true,
+    "all_serialized_replays_exact": true,
+    "earlier_tiny_residual_ratio_failure_reclassified": false,
+    "new_independent_rho_gate_claim": false,
+    "sparse_C_points_per_file": 14,
+    "human_hearing": false,
+    "physical_RPM_or_load": false,
+    "runtime_changed": false
+  },
+  "source_spectrum_comparison": {
+    "result": "five_F3_common_pitch_descriptive_comparisons_complete",
+    "sources": {
+      "tools/compare_F3_pitch_anchors_v1.py": "cdf50fcef4d59c8cd4c4558b89e53f84185e125b74603c87c9e2510da7be74e2",
+      "research/F3_pitch_compare_v1_plan.json": "c15ce342b8ab5c7ee1aa16970479fdb386345cb019d3924df3d431655833c7cc",
+      "tools/local_voice_batch_v1/audit_kernels.py": "ebaae90af015853aab244c3b1e57705f7b8e1160a39952a43b904e7343052e61",
+      "tools/local_voice_batch_v1/bandlimited_controls.py": "e290d34fc9bbdc9be2b05e50bf102b5832ca26488c2dd8296bdb220f188d60a5",
+      "tools/idle_texture_v1/profile.py": "351a5e39563cea393bbe83ab02b5b8d869d3d7a967b8f6a8c4bad550f7d15475",
+      "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe": "51121e17d5d3583caa7b6ffa54beb64d9f03b41a55bc87b42ea60e6e47b906b5",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\voice.model": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\voice.model": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\voice.model": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\voice.model": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\voice.model": "2a550edb41bd2b4abf53f86b9684c1bf52589e0872270932e7e6ce7ca6a10a72"
+    },
+    "cases": [
+      {
+        "name": "F3 Fifth First Early",
+        "native_root_hz": 61.360802280669525,
+        "reference": {
+          "frames": 10500,
+          "bands": [
+            {
+              "hz": [
+                28,
+                120
+              ],
+              "power_LR": [
+                0.03199729981757006,
+                0.03229152777495696
+              ],
+              "signed_correlation": [
+                0.9988637034621661,
+                -0.013712195422353845
+              ]
+            },
+            {
+              "hz": [
+                120,
+                400
+              ],
+              "power_LR": [
+                0.10225885208515953,
+                0.06957870027661639
+              ],
+              "signed_correlation": [
+                0.949780663024905,
+                -0.26489428515780894
+              ]
+            },
+            {
+              "hz": [
+                400,
+                1200
+              ],
+              "power_LR": [
+                0.015904539994201307,
+                0.007150676028891821
+              ],
+              "signed_correlation": [
+                0.7535666334439941,
+                -0.20637881118600146
+              ]
+            },
+            {
+              "hz": [
+                1200,
+                3000
+              ],
+              "power_LR": [
+                0.0008922522124482462,
+                0.00040834864371276717
+              ],
+              "signed_correlation": [
+                0.7338705871723503,
+                -0.3262795938342013
+              ]
+            },
+            {
+              "hz": [
+                3000,
+                6000
+              ],
+              "power_LR": [
+                1.3820710134777338e-05,
+                9.569494710684596e-06
+              ],
+              "signed_correlation": [
+                0.44920043288113404,
+                -0.12605155112906624
+              ]
+            },
+            {
+              "hz": [
+                6000,
+                8000
+              ],
+              "power_LR": [
+                6.13624698956947e-07,
+                3.750794661638397e-07
+              ],
+              "signed_correlation": [
+                0.3270991929094134,
+                -0.017386304146633554
+              ]
+            },
+            {
+              "hz": [
+                8000,
+                10000
+              ],
+              "power_LR": [
+                6.200906603824582e-08,
+                1.995285347638301e-08
+              ],
+              "signed_correlation": [
+                0.08984605146757764,
+                -0.1341450874238283
+              ]
+            },
+            {
+              "hz": [
+                10000,
+                14000
+              ],
+              "power_LR": [
+                1.8689276050608887e-08,
+                2.3799829287708616e-09
+              ],
+              "signed_correlation": [
+                0.371706535003602,
+                -0.022743902599705133
+              ]
+            }
+          ]
+        },
+        "renders": [
+          {
+            "seed": 1,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Early\\DNA64_1.wav",
+              "8",
+              "64",
+              "1",
+              "1",
+              "512"
+            ],
+            "sha256": "4def98c47655d16e014bc67fa35ed913389fffb9fed288b5824460a79cf32374",
+            "oracle": {
+              "maximum_error_FS": 2.718155167613645e-08,
+              "maximum_excess_FS": -3.7573279069704745e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.00802303000150358,
+                    0.00814842630978649
+                  ],
+                  "signed_correlation": [
+                    0.9991686506224134,
+                    0.020149153885396662
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.09628916855078337,
+                    0.06417635157119252
+                  ],
+                  "signed_correlation": [
+                    0.9487817127842061,
+                    -0.2771038303824243
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.015297408594486469,
+                    0.006839594817987401
+                  ],
+                  "signed_correlation": [
+                    0.744110603526284,
+                    -0.2030029908145284
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.000729131619017321,
+                    0.0003382959996732819
+                  ],
+                  "signed_correlation": [
+                    0.7644288665355691,
+                    -0.31663097450339045
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    7.456623679021652e-06,
+                    5.150296943803705e-06
+                  ],
+                  "signed_correlation": [
+                    0.3788947062384863,
+                    -0.019972693957959493
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.71680682957763e-07,
+                    1.622857109251168e-07
+                  ],
+                  "signed_correlation": [
+                    0.28148469802500076,
+                    0.1835691537857676
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.661183475870849e-08,
+                    8.315233510031274e-09
+                  ],
+                  "signed_correlation": [
+                    0.23284095840795332,
+                    -0.11677168587344969
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.681389626314375e-09,
+                    8.96045329703908e-10
+                  ],
+                  "signed_correlation": [
+                    0.34199347528375557,
+                    0.02674225313788838
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 23117,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Early\\DNA64_23117.wav",
+              "8",
+              "64",
+              "1",
+              "23117",
+              "512"
+            ],
+            "sha256": "5bd1684e74925cf48d2a2b090f0c28c3e5afccb55f180e51ddae54b31a6ff822",
+            "oracle": {
+              "maximum_error_FS": 2.9715460869716992e-08,
+              "maximum_excess_FS": -2.9282198245586073e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.010338872183495065,
+                    0.010654524244878503
+                  ],
+                  "signed_correlation": [
+                    0.999316659638918,
+                    0.019940424343024
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.09598557378122267,
+                    0.06558681439302655
+                  ],
+                  "signed_correlation": [
+                    0.9483636920551232,
+                    -0.2801283560654303
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.014833118928242718,
+                    0.00653502035718612
+                  ],
+                  "signed_correlation": [
+                    0.7484663127294526,
+                    -0.1923838638058997
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0007201637303860195,
+                    0.0003347836460750878
+                  ],
+                  "signed_correlation": [
+                    0.7728299796307736,
+                    -0.3226871220906229
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    7.836565150505645e-06,
+                    5.180229656732447e-06
+                  ],
+                  "signed_correlation": [
+                    0.35497405857025616,
+                    -0.06333835343972498
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    3.0206262191734216e-07,
+                    1.8179317865612872e-07
+                  ],
+                  "signed_correlation": [
+                    0.29167219417998264,
+                    0.17852052904262555
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.5772296945503815e-08,
+                    8.167104609300921e-09
+                  ],
+                  "signed_correlation": [
+                    0.2359219089420825,
+                    -0.09541780211036253
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.507758473208106e-09,
+                    9.080050291214262e-10
+                  ],
+                  "signed_correlation": [
+                    0.3461283573343785,
+                    0.03346245886974424
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 61927,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Early\\DNA64_61927.wav",
+              "8",
+              "64",
+              "1",
+              "61927",
+              "512"
+            ],
+            "sha256": "934fbaa2ce727d2ca187f1bd37ee2177004e2a387517d6643041a7e454024455",
+            "oracle": {
+              "maximum_error_FS": 2.3476518729026452e-08,
+              "maximum_excess_FS": -4.1188109615988273e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.009671149560725845,
+                    0.00991774639070249
+                  ],
+                  "signed_correlation": [
+                    0.9993147793291755,
+                    0.02021795312793557
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.09587362191541977,
+                    0.06511422983456089
+                  ],
+                  "signed_correlation": [
+                    0.9486178088429734,
+                    -0.2780993919958775
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.015080964825702614,
+                    0.006671351257859476
+                  ],
+                  "signed_correlation": [
+                    0.748826678277177,
+                    -0.19641759047667054
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0007254722694595861,
+                    0.00033529986181002986
+                  ],
+                  "signed_correlation": [
+                    0.772009292708409,
+                    -0.32177701458411506
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    7.715097206948288e-06,
+                    4.735436045820317e-06
+                  ],
+                  "signed_correlation": [
+                    0.35423034353648764,
+                    -0.06246264369437347
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.7765331133241675e-07,
+                    1.6668187569929765e-07
+                  ],
+                  "signed_correlation": [
+                    0.2840332905654689,
+                    0.19241310648817622
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.4622280251896508e-08,
+                    7.879519791313082e-09
+                  ],
+                  "signed_correlation": [
+                    0.23341276196655578,
+                    -0.09396393335750945
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.240947575713132e-09,
+                    8.816854071676972e-10
+                  ],
+                  "signed_correlation": [
+                    0.3394524342800465,
+                    0.042264863074118586
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "F3 Fifth First Late",
+        "native_root_hz": 67.95805686190828,
+        "reference": {
+          "frames": 10499,
+          "bands": [
+            {
+              "hz": [
+                28,
+                120
+              ],
+              "power_LR": [
+                0.05013918884431902,
+                0.047398871784760675
+              ],
+              "signed_correlation": [
+                0.9987574785277515,
+                0.00646264795763722
+              ]
+            },
+            {
+              "hz": [
+                120,
+                400
+              ],
+              "power_LR": [
+                0.08754022760244298,
+                0.0860138864019288
+              ],
+              "signed_correlation": [
+                0.9892060761694189,
+                -0.08564089788919751
+              ]
+            },
+            {
+              "hz": [
+                400,
+                1200
+              ],
+              "power_LR": [
+                0.010201354511278954,
+                0.004046069480516023
+              ],
+              "signed_correlation": [
+                0.802181066116549,
+                -0.33977567793387004
+              ]
+            },
+            {
+              "hz": [
+                1200,
+                3000
+              ],
+              "power_LR": [
+                0.0014009954087085376,
+                0.0003470495330427928
+              ],
+              "signed_correlation": [
+                0.7439697742802727,
+                -0.3039469610228195
+              ]
+            },
+            {
+              "hz": [
+                3000,
+                6000
+              ],
+              "power_LR": [
+                2.7143135396203907e-05,
+                1.684447288511479e-05
+              ],
+              "signed_correlation": [
+                0.4903856875546914,
+                -0.21127978851216173
+              ]
+            },
+            {
+              "hz": [
+                6000,
+                8000
+              ],
+              "power_LR": [
+                6.164455057735711e-07,
+                3.62716358883418e-07
+              ],
+              "signed_correlation": [
+                0.30297494426163407,
+                -0.016469885445663426
+              ]
+            },
+            {
+              "hz": [
+                8000,
+                10000
+              ],
+              "power_LR": [
+                4.9641379036000355e-08,
+                1.4656627076430031e-08
+              ],
+              "signed_correlation": [
+                0.3022225272339156,
+                -0.01220921954947323
+              ]
+            },
+            {
+              "hz": [
+                10000,
+                14000
+              ],
+              "power_LR": [
+                1.8455865592815063e-08,
+                2.0370322546873354e-09
+              ],
+              "signed_correlation": [
+                0.39952695156376233,
+                -0.05186877975480777
+              ]
+            }
+          ]
+        },
+        "renders": [
+          {
+            "seed": 1,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Late\\DNA64_1.wav",
+              "8",
+              "64",
+              "1",
+              "1",
+              "512"
+            ],
+            "sha256": "73ede7fd8a949b3bf350bcfd052b65859b90450ffee7ddd14e7f9979c879e80a",
+            "oracle": {
+              "maximum_error_FS": 1.3781600138873529e-08,
+              "maximum_excess_FS": -4.930088419450527e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.006770376301738413,
+                    0.006632739651451779
+                  ],
+                  "signed_correlation": [
+                    0.9978885356454873,
+                    0.03701952645431161
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.07992864882067313,
+                    0.07984620717950765
+                  ],
+                  "signed_correlation": [
+                    0.9899773124021801,
+                    -0.08973577223569057
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.009595078949656855,
+                    0.0037236076757890327
+                  ],
+                  "signed_correlation": [
+                    0.8094040954162293,
+                    -0.35524485329300326
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0012022345914388438,
+                    0.0002868238426163929
+                  ],
+                  "signed_correlation": [
+                    0.7788429322094084,
+                    -0.29820183402593897
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.5189145697720286e-05,
+                    9.47330313971194e-06
+                  ],
+                  "signed_correlation": [
+                    0.42873834317719506,
+                    -0.2316227991256659
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.384644023296917e-07,
+                    1.3941805023905205e-07
+                  ],
+                  "signed_correlation": [
+                    0.07746038424789226,
+                    -0.08522845173669114
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    1.7970395475894008e-08,
+                    5.601098227903897e-09
+                  ],
+                  "signed_correlation": [
+                    0.12595293639948235,
+                    0.0027244983048664412
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.025576331047105e-09,
+                    8.215196727453229e-10
+                  ],
+                  "signed_correlation": [
+                    0.22955574683566785,
+                    -0.009366297086362687
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 23117,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Late\\DNA64_23117.wav",
+              "8",
+              "64",
+              "1",
+              "23117",
+              "512"
+            ],
+            "sha256": "a37ec18b292e6cb5a3e20ff71f24bbb677ce7dee574a0b4e60b9a00c87991ccd",
+            "oracle": {
+              "maximum_error_FS": 2.6577962830565127e-08,
+              "maximum_excess_FS": -2.3170053615164463e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.01027960420958429,
+                    0.009918817943522486
+                  ],
+                  "signed_correlation": [
+                    0.9985041511266781,
+                    0.03778700872191291
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.08296981274316394,
+                    0.0818895117017599
+                  ],
+                  "signed_correlation": [
+                    0.9898733782942934,
+                    -0.09203659060909422
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.009765833301438133,
+                    0.003763229562552658
+                  ],
+                  "signed_correlation": [
+                    0.8158495969177424,
+                    -0.3495231233706553
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0013405184287207884,
+                    0.0003143069732160085
+                  ],
+                  "signed_correlation": [
+                    0.7950565819973722,
+                    -0.29191614069653743
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.7284321230234987e-05,
+                    1.0398472541879212e-05
+                  ],
+                  "signed_correlation": [
+                    0.46478532290091634,
+                    -0.24717460759320786
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.3572354705704706e-07,
+                    1.5696751206217114e-07
+                  ],
+                  "signed_correlation": [
+                    0.05288647260081521,
+                    -0.07693566716149927
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    1.943076858391526e-08,
+                    5.672564121121502e-09
+                  ],
+                  "signed_correlation": [
+                    0.12360551533775546,
+                    -0.023004412232763196
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.2930476998467985e-09,
+                    8.311308937487091e-10
+                  ],
+                  "signed_correlation": [
+                    0.25307008722287616,
+                    0.002917434702571088
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 61927,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth First Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth First Late\\DNA64_61927.wav",
+              "8",
+              "64",
+              "1",
+              "61927",
+              "512"
+            ],
+            "sha256": "e56a810de02c7c9945d7a7c152d7b0c1a1b4ccae4e63a47f3bff470eb07ca95b",
+            "oracle": {
+              "maximum_error_FS": 1.4796342040490629e-08,
+              "maximum_excess_FS": -2.8901208771033844e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.010056815646213583,
+                    0.009676060596400788
+                  ],
+                  "signed_correlation": [
+                    0.9983692399778864,
+                    0.037700344386641514
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.08167896877945319,
+                    0.08046599569060094
+                  ],
+                  "signed_correlation": [
+                    0.9894817478757653,
+                    -0.09240397280290902
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.009775370863189975,
+                    0.0038060011905217323
+                  ],
+                  "signed_correlation": [
+                    0.8156783981418912,
+                    -0.35081479220152584
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.001280372581683269,
+                    0.0003066603922688891
+                  ],
+                  "signed_correlation": [
+                    0.7825492915160025,
+                    -0.2899778521935302
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.7812387552028733e-05,
+                    1.077873390055705e-05
+                  ],
+                  "signed_correlation": [
+                    0.44934467612988527,
+                    -0.2358107322722045
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.600554480551283e-07,
+                    1.6098755968620257e-07
+                  ],
+                  "signed_correlation": [
+                    0.05866939606162626,
+                    -0.0700921796028722
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.094169732198531e-08,
+                    6.313829938682012e-09
+                  ],
+                  "signed_correlation": [
+                    0.1252802668303428,
+                    -0.0072333595831528125
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.88340007044911e-09,
+                    9.268691368959422e-10
+                  ],
+                  "signed_correlation": [
+                    0.2448872058659197,
+                    -0.003624208580469313
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "F3 Fifth Second Early",
+        "native_root_hz": 60.8194356436631,
+        "reference": {
+          "frames": 10312,
+          "bands": [
+            {
+              "hz": [
+                28,
+                120
+              ],
+              "power_LR": [
+                0.02640039518647177,
+                0.023889902146312005
+              ],
+              "signed_correlation": [
+                0.9989075777869567,
+                -0.002376185940618482
+              ]
+            },
+            {
+              "hz": [
+                120,
+                400
+              ],
+              "power_LR": [
+                0.1235896576949001,
+                0.07511369678322824
+              ],
+              "signed_correlation": [
+                0.9660727445367444,
+                -0.21584143190546723
+              ]
+            },
+            {
+              "hz": [
+                400,
+                1200
+              ],
+              "power_LR": [
+                0.019598925040285067,
+                0.010090252594364676
+              ],
+              "signed_correlation": [
+                0.6280638322379491,
+                -0.3228170571352761
+              ]
+            },
+            {
+              "hz": [
+                1200,
+                3000
+              ],
+              "power_LR": [
+                0.0005113022096362383,
+                0.00030190063201969143
+              ],
+              "signed_correlation": [
+                0.6237859818775009,
+                -0.20704164989866314
+              ]
+            },
+            {
+              "hz": [
+                3000,
+                6000
+              ],
+              "power_LR": [
+                1.8791319612865583e-05,
+                1.304618911115814e-05
+              ],
+              "signed_correlation": [
+                0.45027170396117705,
+                -0.27819842244541804
+              ]
+            },
+            {
+              "hz": [
+                6000,
+                8000
+              ],
+              "power_LR": [
+                7.25034702231431e-07,
+                3.791135347724436e-07
+              ],
+              "signed_correlation": [
+                0.4051821710187651,
+                0.027996316359771654
+              ]
+            },
+            {
+              "hz": [
+                8000,
+                10000
+              ],
+              "power_LR": [
+                9.242953747202423e-08,
+                3.484227642019162e-08
+              ],
+              "signed_correlation": [
+                0.2305214612003824,
+                -0.10372478342591357
+              ]
+            },
+            {
+              "hz": [
+                10000,
+                14000
+              ],
+              "power_LR": [
+                2.3871729164667033e-08,
+                3.951591713455282e-09
+              ],
+              "signed_correlation": [
+                0.3160455226638222,
+                -0.014460913777634442
+              ]
+            }
+          ]
+        },
+        "renders": [
+          {
+            "seed": 1,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Early\\DNA64_1.wav",
+              "8",
+              "64",
+              "1",
+              "1",
+              "512"
+            ],
+            "sha256": "fda9026059ddf56059042b44731d4b6c51677c512064d5bf97fa656eb743031f",
+            "oracle": {
+              "maximum_error_FS": 2.8848721966845403e-08,
+              "maximum_excess_FS": -5.082539249188443e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.005737398591814899,
+                    0.005439747510295316
+                  ],
+                  "signed_correlation": [
+                    0.9995864163338517,
+                    0.006833278974443934
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.12028199929743248,
+                    0.07235260403873345
+                  ],
+                  "signed_correlation": [
+                    0.9663789326165196,
+                    -0.22090072140642786
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.017502292594765573,
+                    0.008876065689706898
+                  ],
+                  "signed_correlation": [
+                    0.631572798018396,
+                    -0.30215318586330125
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.00031127799059667174,
+                    0.0001955081924632124
+                  ],
+                  "signed_correlation": [
+                    0.6725398289534147,
+                    -0.014772677000019743
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    8.11371199553682e-06,
+                    6.109832137215731e-06
+                  ],
+                  "signed_correlation": [
+                    0.312519893426883,
+                    -0.28638189759360616
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.4978693172139975e-07,
+                    1.29114099530083e-07
+                  ],
+                  "signed_correlation": [
+                    0.34487446327750537,
+                    -0.0648445281868714
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    3.14076818365075e-08,
+                    1.3771297947515022e-08
+                  ],
+                  "signed_correlation": [
+                    0.03637348487487935,
+                    0.07358601956365421
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    7.894391753731967e-09,
+                    1.4607030574531375e-09
+                  ],
+                  "signed_correlation": [
+                    0.2390261701976,
+                    -0.08703799898748485
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 23117,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Early\\DNA64_23117.wav",
+              "8",
+              "64",
+              "1",
+              "23117",
+              "512"
+            ],
+            "sha256": "115d62ceb03158d9a8e32e8435151d7cff6bee6db6a5753d1dbc1b40e60d59cd",
+            "oracle": {
+              "maximum_error_FS": 2.3953496186557288e-08,
+              "maximum_excess_FS": -2.528830002205494e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.004980917202461162,
+                    0.004776159917512715
+                  ],
+                  "signed_correlation": [
+                    0.9995069006252025,
+                    0.006789868120540088
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.12182026478951914,
+                    0.07305067769517289
+                  ],
+                  "signed_correlation": [
+                    0.9657249998174255,
+                    -0.22067135871342242
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.018729461019415958,
+                    0.00932291097154704
+                  ],
+                  "signed_correlation": [
+                    0.6159586115058429,
+                    -0.3189823686023143
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.00038867576956788923,
+                    0.00023825248333039022
+                  ],
+                  "signed_correlation": [
+                    0.6546018243064592,
+                    -0.023346260818796465
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    9.571707228713718e-06,
+                    6.8993777607908545e-06
+                  ],
+                  "signed_correlation": [
+                    0.321047087457436,
+                    -0.28801604628641986
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.7513059164942585e-07,
+                    1.4595175499237746e-07
+                  ],
+                  "signed_correlation": [
+                    0.3627358508001008,
+                    -0.06009410084563867
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    3.3085808202663175e-08,
+                    1.4947729481444328e-08
+                  ],
+                  "signed_correlation": [
+                    0.02273031802764679,
+                    0.0798654609201454
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    8.677145460447359e-09,
+                    1.5247368437714736e-09
+                  ],
+                  "signed_correlation": [
+                    0.23912821608185283,
+                    -0.09182467718250324
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 61927,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Early\\DNA64_61927.wav",
+              "8",
+              "64",
+              "1",
+              "61927",
+              "512"
+            ],
+            "sha256": "2e110205efd55735b261b4d07626938325de1c2a1a1d720d372a06c730ad8be2",
+            "oracle": {
+              "maximum_error_FS": 2.3328956433310566e-08,
+              "maximum_excess_FS": -8.219001172702576e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.005162609211907582,
+                    0.0049302397636693815
+                  ],
+                  "signed_correlation": [
+                    0.9995603894351626,
+                    0.006536270740636018
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.1201873612029257,
+                    0.07179875515408465
+                  ],
+                  "signed_correlation": [
+                    0.966081681758137,
+                    -0.2197952805951779
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.01948250958582199,
+                    0.01001840313588547
+                  ],
+                  "signed_correlation": [
+                    0.6115552734972393,
+                    -0.3320425489308264
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.00041406264400700645,
+                    0.0002631065916213894
+                  ],
+                  "signed_correlation": [
+                    0.6574773462594775,
+                    -0.006416351979371095
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    9.54630751167154e-06,
+                    7.07689202787004e-06
+                  ],
+                  "signed_correlation": [
+                    0.3057454984303468,
+                    -0.300058692219307
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    2.830585743978084e-07,
+                    1.4662247226956206e-07
+                  ],
+                  "signed_correlation": [
+                    0.37631136534280313,
+                    -0.05066519142332885
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    3.459175985240684e-08,
+                    1.4901623704591095e-08
+                  ],
+                  "signed_correlation": [
+                    0.0113681515976085,
+                    0.0688719526489316
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    8.625208317821838e-09,
+                    1.4810247734738338e-09
+                  ],
+                  "signed_correlation": [
+                    0.2166333104181108,
+                    -0.0886791656190107
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "F3 Fifth Second Late",
+        "native_root_hz": 67.36432002723924,
+        "reference": {
+          "frames": 10500,
+          "bands": [
+            {
+              "hz": [
+                28,
+                120
+              ],
+              "power_LR": [
+                0.037108575528322855,
+                0.037102079782406136
+              ],
+              "signed_correlation": [
+                0.9987025918731188,
+                0.001977690896292748
+              ]
+            },
+            {
+              "hz": [
+                120,
+                400
+              ],
+              "power_LR": [
+                0.10847168194181596,
+                0.1036691550239576
+              ],
+              "signed_correlation": [
+                0.9767800196213235,
+                -0.1718022539178443
+              ]
+            },
+            {
+              "hz": [
+                400,
+                1200
+              ],
+              "power_LR": [
+                0.014564315556040068,
+                0.007025778239474843
+              ],
+              "signed_correlation": [
+                0.8165082603458297,
+                -0.41323752453624835
+              ]
+            },
+            {
+              "hz": [
+                1200,
+                3000
+              ],
+              "power_LR": [
+                0.0007942285320126198,
+                0.0004759601795636412
+              ],
+              "signed_correlation": [
+                0.45873343609586953,
+                -0.5593363905124303
+              ]
+            },
+            {
+              "hz": [
+                3000,
+                6000
+              ],
+              "power_LR": [
+                2.923956849414185e-05,
+                1.8308078324386244e-05
+              ],
+              "signed_correlation": [
+                0.3597120212761418,
+                -0.30561800335822015
+              ]
+            },
+            {
+              "hz": [
+                6000,
+                8000
+              ],
+              "power_LR": [
+                7.872852800209564e-07,
+                4.4437705597537747e-07
+              ],
+              "signed_correlation": [
+                0.26601457775498466,
+                0.0708774601769353
+              ]
+            },
+            {
+              "hz": [
+                8000,
+                10000
+              ],
+              "power_LR": [
+                6.415684074465463e-08,
+                1.9902728700603558e-08
+              ],
+              "signed_correlation": [
+                0.4110871260540279,
+                -0.15064321168212624
+              ]
+            },
+            {
+              "hz": [
+                10000,
+                14000
+              ],
+              "power_LR": [
+                2.2172082971302423e-08,
+                3.9467120679293265e-09
+              ],
+              "signed_correlation": [
+                0.42392324254972574,
+                -0.013437437784060534
+              ]
+            }
+          ]
+        },
+        "renders": [
+          {
+            "seed": 1,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Late\\DNA64_1.wav",
+              "8",
+              "64",
+              "1",
+              "1",
+              "512"
+            ],
+            "sha256": "915189825e6adc69f6c56b7a13c8e4db01ea25ab39cacaffc3db6d159fe3bf35",
+            "oracle": {
+              "maximum_error_FS": 1.3984770674824176e-08,
+              "maximum_excess_FS": -2.5334310122333264e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.008208211962221885,
+                    0.008423515095290582
+                  ],
+                  "signed_correlation": [
+                    0.9949804127501681,
+                    0.06713116824149017
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.10431627423933777,
+                    0.10024510766454717
+                  ],
+                  "signed_correlation": [
+                    0.9764091569515646,
+                    -0.17590150890330364
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.013584271948755618,
+                    0.00648378540159576
+                  ],
+                  "signed_correlation": [
+                    0.8128221233310639,
+                    -0.4320755466908338
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0006225644239819024,
+                    0.00039241717047197117
+                  ],
+                  "signed_correlation": [
+                    0.391184005797413,
+                    -0.621429348186791
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.6842037039303237e-05,
+                    9.65389582002894e-06
+                  ],
+                  "signed_correlation": [
+                    0.17136438819998404,
+                    -0.321926342832293
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    3.234077472794594e-07,
+                    1.7951679400883085e-07
+                  ],
+                  "signed_correlation": [
+                    0.2266180510075339,
+                    0.04918332137853677
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.3639487303072674e-08,
+                    7.40891765767875e-09
+                  ],
+                  "signed_correlation": [
+                    0.4365511624546949,
+                    -0.21093311447105723
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    8.352811729641686e-09,
+                    1.444642338627279e-09
+                  ],
+                  "signed_correlation": [
+                    0.25820097208492415,
+                    -0.018109892899733502
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 23117,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Late\\DNA64_23117.wav",
+              "8",
+              "64",
+              "1",
+              "23117",
+              "512"
+            ],
+            "sha256": "a48d4bf895e144621d6f2e9d14dcbfc53f1f3cee0645c3c080ee66cd6c1b369d",
+            "oracle": {
+              "maximum_error_FS": 2.340843230363987e-08,
+              "maximum_excess_FS": -2.032676108751087e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.011470136510812294,
+                    0.011740386923395076
+                  ],
+                  "signed_correlation": [
+                    0.9959075294267866,
+                    0.06744479691265438
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.1049472602554933,
+                    0.10249573142640142
+                  ],
+                  "signed_correlation": [
+                    0.977275501927216,
+                    -0.16962188318407828
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.01366571037325225,
+                    0.006718594692646015
+                  ],
+                  "signed_correlation": [
+                    0.8131100407547979,
+                    -0.4308108988096431
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.00064989815927872,
+                    0.00040773624716909754
+                  ],
+                  "signed_correlation": [
+                    0.3694757956788368,
+                    -0.6372474275106521
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.7562905243214145e-05,
+                    1.056067348365171e-05
+                  ],
+                  "signed_correlation": [
+                    0.15199424716054538,
+                    -0.34100344346035516
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    3.4545007338789086e-07,
+                    1.7066109299743782e-07
+                  ],
+                  "signed_correlation": [
+                    0.21959309412528635,
+                    0.04472136139309174
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.4140104427099274e-08,
+                    7.888964616965811e-09
+                  ],
+                  "signed_correlation": [
+                    0.4011718721912025,
+                    -0.2187327393049985
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    8.58406519671652e-09,
+                    1.5177468048717889e-09
+                  ],
+                  "signed_correlation": [
+                    0.23865387139928215,
+                    -0.029558091750369005
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 61927,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Fifth Second Late\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Fifth Second Late\\DNA64_61927.wav",
+              "8",
+              "64",
+              "1",
+              "61927",
+              "512"
+            ],
+            "sha256": "22bddf2cad4221d19042f7310e5017e5dd39d298a249b58e7ae26b6d45d2541f",
+            "oracle": {
+              "maximum_error_FS": 1.432722229743888e-08,
+              "maximum_excess_FS": -3.1891720515522233e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.011009903099658507,
+                    0.011273247231788715
+                  ],
+                  "signed_correlation": [
+                    0.995596218153712,
+                    0.06883226585367022
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.10389135832487413,
+                    0.10039897258611313
+                  ],
+                  "signed_correlation": [
+                    0.9767378666069344,
+                    -0.17358582608129924
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.013701024178508117,
+                    0.0066800583761127555
+                  ],
+                  "signed_correlation": [
+                    0.8191548721094856,
+                    -0.4285014984025421
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0006226963916597004,
+                    0.0004068057190442248
+                  ],
+                  "signed_correlation": [
+                    0.38153151512655814,
+                    -0.6461089351259637
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.7291193558360706e-05,
+                    9.940439767427387e-06
+                  ],
+                  "signed_correlation": [
+                    0.1629251699260548,
+                    -0.3384007220963374
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    3.0965047758784696e-07,
+                    1.6985798939874507e-07
+                  ],
+                  "signed_correlation": [
+                    0.19427290060479213,
+                    0.05525501168326015
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    2.345155119705887e-08,
+                    7.59963444389883e-09
+                  ],
+                  "signed_correlation": [
+                    0.41844902379251814,
+                    -0.21060533540570298
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    8.456931822919913e-09,
+                    1.5092129125765203e-09
+                  ],
+                  "signed_correlation": [
+                    0.25063461243832813,
+                    -0.020154735967613815
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "F3 Sixth Early",
+        "native_root_hz": 58.233928849616824,
+        "reference": {
+          "frames": 10313,
+          "bands": [
+            {
+              "hz": [
+                28,
+                120
+              ],
+              "power_LR": [
+                0.030588590083501573,
+                0.03050528592266329
+              ],
+              "signed_correlation": [
+                0.9986255677353169,
+                -0.0029108887639600345
+              ]
+            },
+            {
+              "hz": [
+                120,
+                400
+              ],
+              "power_LR": [
+                0.10717430335792485,
+                0.09164426340026101
+              ],
+              "signed_correlation": [
+                0.975794068633917,
+                -0.18054459835258638
+              ]
+            },
+            {
+              "hz": [
+                400,
+                1200
+              ],
+              "power_LR": [
+                0.006988515669319341,
+                0.005933874052280824
+              ],
+              "signed_correlation": [
+                0.4751094327209077,
+                -0.2901449627404744
+              ]
+            },
+            {
+              "hz": [
+                1200,
+                3000
+              ],
+              "power_LR": [
+                0.0011300473057281688,
+                0.000638062043038142
+              ],
+              "signed_correlation": [
+                0.5303010598831159,
+                -0.484904196465442
+              ]
+            },
+            {
+              "hz": [
+                3000,
+                6000
+              ],
+              "power_LR": [
+                3.0191859905043878e-05,
+                1.8830136909391228e-05
+              ],
+              "signed_correlation": [
+                0.3623536668369797,
+                -0.25035240928782876
+              ]
+            },
+            {
+              "hz": [
+                6000,
+                8000
+              ],
+              "power_LR": [
+                1.69960009148597e-06,
+                1.0395053930188822e-06
+              ],
+              "signed_correlation": [
+                0.6129457560814685,
+                0.09160727105642612
+              ]
+            },
+            {
+              "hz": [
+                8000,
+                10000
+              ],
+              "power_LR": [
+                2.645593729590398e-07,
+                1.1805036831832227e-07
+              ],
+              "signed_correlation": [
+                0.4135491799238569,
+                -0.02126602544957659
+              ]
+            },
+            {
+              "hz": [
+                10000,
+                14000
+              ],
+              "power_LR": [
+                4.4815939310167914e-08,
+                1.287661270818079e-08
+              ],
+              "signed_correlation": [
+                0.4864728495264018,
+                -0.01762148900794245
+              ]
+            }
+          ]
+        },
+        "renders": [
+          {
+            "seed": 1,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Sixth Early\\DNA64_1.wav",
+              "8",
+              "64",
+              "1",
+              "1",
+              "512"
+            ],
+            "sha256": "d6a6beca6e0d7f87617ddd9827117f2969071051de9168ab8ed35942795dd4a6",
+            "oracle": {
+              "maximum_error_FS": 2.871742055265969e-08,
+              "maximum_excess_FS": -2.686435403629541e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.008909709302182751,
+                    0.009269967343534496
+                  ],
+                  "signed_correlation": [
+                    0.9984976003825778,
+                    0.032341476973981514
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.09735998891333146,
+                    0.08252552243574353
+                  ],
+                  "signed_correlation": [
+                    0.9757830441594976,
+                    -0.19162950118324762
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.005913172751277698,
+                    0.005198313026411001
+                  ],
+                  "signed_correlation": [
+                    0.44386732775963683,
+                    -0.2945616860746484
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0008469938548940938,
+                    0.0004937688143445766
+                  ],
+                  "signed_correlation": [
+                    0.46593747011227243,
+                    -0.5332988769421378
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.4621086712802272e-05,
+                    8.578280105350318e-06
+                  ],
+                  "signed_correlation": [
+                    0.3158411375297226,
+                    -0.2737988540967359
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    6.40651275869795e-07,
+                    3.9780097329217466e-07
+                  ],
+                  "signed_correlation": [
+                    0.43673603592009713,
+                    0.09844184858653479
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    9.506378945999621e-08,
+                    3.710632269955173e-08
+                  ],
+                  "signed_correlation": [
+                    0.31940685427128074,
+                    -0.2615686589150103
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    1.6119606411744216e-08,
+                    4.597811558915871e-09
+                  ],
+                  "signed_correlation": [
+                    0.4075015623834525,
+                    0.12992459168642437
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 23117,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Sixth Early\\DNA64_23117.wav",
+              "8",
+              "64",
+              "1",
+              "23117",
+              "512"
+            ],
+            "sha256": "5e247d5d851e038c3202b1cad603c05ca718ea420c49ec1cd121ee95b3535db9",
+            "oracle": {
+              "maximum_error_FS": 2.9778128185498076e-08,
+              "maximum_excess_FS": -2.3015466667477653e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.011682420496249929,
+                    0.011983230628892283
+                  ],
+                  "signed_correlation": [
+                    0.9986730434272558,
+                    0.03293605363027175
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.10203170585969276,
+                    0.08762438723351285
+                  ],
+                  "signed_correlation": [
+                    0.9762795344956496,
+                    -0.18551498945488668
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.0063150572590620745,
+                    0.005286137220098818
+                  ],
+                  "signed_correlation": [
+                    0.4505157575284066,
+                    -0.29826637583393756
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0008738426309424971,
+                    0.0005245412451967193
+                  ],
+                  "signed_correlation": [
+                    0.46505135975619943,
+                    -0.5176137619627101
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.520543665487989e-05,
+                    9.209452790695889e-06
+                  ],
+                  "signed_correlation": [
+                    0.3116683122547337,
+                    -0.26801529968756355
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    6.378616569619878e-07,
+                    3.9574183416640164e-07
+                  ],
+                  "signed_correlation": [
+                    0.42751652787862876,
+                    0.09638658799072848
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    1.0775526899520545e-07,
+                    4.031247679548585e-08
+                  ],
+                  "signed_correlation": [
+                    0.3211970968526788,
+                    -0.22784337944521085
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    1.7970834343455187e-08,
+                    4.953585314295412e-09
+                  ],
+                  "signed_correlation": [
+                    0.4112708700629577,
+                    0.13928312655720032
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "seed": 61927,
+            "argv": [
+              "E:\\VehicleSoundLab-Git\\build-bandlimited-dna-v1\\bin\\Release\\sound_dna_bandlimited_export.exe",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\fit1\\F3 Sixth Early\\voice.model",
+              "E:\\VehicleSoundLab\\references\\analysis\\F3_pitch_anchors_v1\\compare1\\F3 Sixth Early\\DNA64_61927.wav",
+              "8",
+              "64",
+              "1",
+              "61927",
+              "512"
+            ],
+            "sha256": "b73a857d0cab06dadd57ea851aa243c6657647e1a2d0d1cf223c0e1f92e2ae1d",
+            "oracle": {
+              "maximum_error_FS": 2.9530013323508797e-08,
+              "maximum_excess_FS": -4.782695286640558e-10,
+              "bound": "0.5001 local FLOAT ULP +2e-10FS double phase/sum allowance"
+            },
+            "spectrum": {
+              "frames": 384000,
+              "bands": [
+                {
+                  "hz": [
+                    28,
+                    120
+                  ],
+                  "power_LR": [
+                    0.010617369893302139,
+                    0.011065049937390234
+                  ],
+                  "signed_correlation": [
+                    0.9986394097653496,
+                    0.0332211392934049
+                  ]
+                },
+                {
+                  "hz": [
+                    120,
+                    400
+                  ],
+                  "power_LR": [
+                    0.10302359608297959,
+                    0.08809018689696525
+                  ],
+                  "signed_correlation": [
+                    0.9760149986091167,
+                    -0.1887124271634737
+                  ]
+                },
+                {
+                  "hz": [
+                    400,
+                    1200
+                  ],
+                  "power_LR": [
+                    0.006114873856501148,
+                    0.005038533296892297
+                  ],
+                  "signed_correlation": [
+                    0.46644959404481456,
+                    -0.26928897896115733
+                  ]
+                },
+                {
+                  "hz": [
+                    1200,
+                    3000
+                  ],
+                  "power_LR": [
+                    0.0008498144908140538,
+                    0.0004883067949334372
+                  ],
+                  "signed_correlation": [
+                    0.47271175088779793,
+                    -0.5262475505137827
+                  ]
+                },
+                {
+                  "hz": [
+                    3000,
+                    6000
+                  ],
+                  "power_LR": [
+                    1.4463530702974056e-05,
+                    8.851131224521147e-06
+                  ],
+                  "signed_correlation": [
+                    0.3093076576483115,
+                    -0.27886095203100975
+                  ]
+                },
+                {
+                  "hz": [
+                    6000,
+                    8000
+                  ],
+                  "power_LR": [
+                    6.565556799639647e-07,
+                    4.155750798842754e-07
+                  ],
+                  "signed_correlation": [
+                    0.4274851789763421,
+                    0.11974690269766727
+                  ]
+                },
+                {
+                  "hz": [
+                    8000,
+                    10000
+                  ],
+                  "power_LR": [
+                    1.0720074477095395e-07,
+                    4.219579096969009e-08
+                  ],
+                  "signed_correlation": [
+                    0.3086276230757596,
+                    -0.24572495417675982
+                  ]
+                },
+                {
+                  "hz": [
+                    10000,
+                    14000
+                  ],
+                  "power_LR": [
+                    1.7287377456455324e-08,
+                    4.985048492511809e-09
+                  ],
+                  "signed_correlation": [
+                    0.40951305153367595,
+                    0.1332103411086112
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "common_root_hz": 64,
+    "band_difference_dB": [
+      [
+        -5.312895399281972,
+        -0.28521054316109445,
+        -0.26417441425378224,
+        -0.8736219557950953,
+        -2.678903602472403,
+        -3.389595909581013,
+        -3.8673270939077815,
+        -4.112572107220978
+      ],
+      [
+        -7.391753874188297,
+        -0.29212580447999836,
+        -0.26348211466400157,
+        -0.5033307367177344,
+        -2.1323820703404905,
+        -3.8879682706699326,
+        -4.02464369979412,
+        -3.8572170730054935
+      ],
+      [
+        -6.864446701224615,
+        -0.13011992134701036,
+        -0.26946862204826655,
+        -1.2637127475205658,
+        -3.028563078847734,
+        -4.304902501356359,
+        -4.1322932901444505,
+        -4.387950502889202
+      ],
+      [
+        -5.543498726741623,
+        -0.13903132190831924,
+        -0.2674639977491575,
+        -0.8621020030856248,
+        -2.450193425226371,
+        -3.957642246656123,
+        -4.239699024437629,
+        -4.205467282967129
+      ],
+      [
+        -4.602212270925888,
+        -0.26905520873753863,
+        -0.5875887723903588,
+        -1.1207805336411014,
+        -3.1858197082975215,
+        -4.161254936815553,
+        -4.398297072379291,
+        -4.211213841131564
+      ]
+    ],
+    "complex_LR_difference": [
+      [
+        0.03381710716175985,
+        0.013601986425298196,
+        0.011152403879972643,
+        0.03636960486506312,
+        0.11611407150191395,
+        0.20640872777344776,
+        0.14774052990622183,
+        0.0639471259039907
+      ],
+      [
+        0.031043728693865652,
+        0.005779529755197994,
+        0.016656911233841207,
+        0.042840571874268804,
+        0.050532267536712486,
+        0.24758865032497715,
+        0.17730231924252746,
+        0.16434544184306055
+      ],
+      [
+        0.009118736951637826,
+        0.00461436781010785,
+        0.009795227165126723,
+        0.19586948665675394,
+        0.13780958897888895,
+        0.09701861380661052,
+        0.2729215781523418,
+        0.11275980021620217
+      ],
+      [
+        0.0659031715004114,
+        0.0012344582369865158,
+        0.017288523728294706,
+        0.10862156884233154,
+        0.19961353751286856,
+        0.05662139074727998,
+        0.06324330468283629,
+        0.17500051613564457
+      ],
+      [
+        0.035743785634191096,
+        0.008077700558364145,
+        0.021676591144501975,
+        0.0745640871134392,
+        0.05519649378739757,
+        0.18284730533262117,
+        0.24395336653161823,
+        0.170197490637707
+      ]
+    ],
+    "source_duration_unequal": true,
+    "realism_gate": false,
+    "acoustic_root_ratio": 1.1669838907383876,
+    "legacy_root_boundary_exceeded": false,
+    "new_recordings_independent": false,
+    "physical_RPM_or_load": false,
+    "hearing": false
+  },
+  "C_audio_files": 30,
+  "seconds_per_generated_file": 8,
+  "sparse_C_points_per_file": 14,
+  "listening_files": 45,
+  "common_listening_gain": 0.5,
+  "fade_frames": 240,
+  "browser": {
+    "result": "passed",
+    "cases": 5,
+    "clips": 45,
+    "single_player": true,
+    "paused_switch": true,
+    "stale_fetch_prevented": true,
+    "muted": true,
+    "hearing": false,
+    "duration_and_seek": true,
+    "mobile_overflow": false,
+    "errors": []
+  },
+  "screenshots_viewed": 3,
+  "comparison_plot_viewed": true,
+  "human_hearing": false,
+  "retained_failure": "legacy1 demanded complete Python WAV identity; legacy2 proves source PCM exact and only RIFF PEAK timestamp changed, without refit",
+  "legacy_profile_coordinates_and_three_C_WAVs_exact": true,
+  "C_H_exact": 656,
+  "voice_parameters_exact": 76,
+  "F2_exact": true,
+  "C_or_live_default_or_driver_or_take_changes": false,
+  "new_timbre_accepted": false,
+  "actual_high_root_recording_validated": false,
+  "independent_recordings": false,
+  "physical_RPM_load": false,
+  "physical_7_1_4": false,
+  "optimized_ADI_port": false,
+  "F2_F3_hearings": "independently pending; no repeated question, blind strengths or migration",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "unchanged_70CTest_not_repeated": true,
+  "new_download": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "Two separate same-context fifth-gear early/mid/late acoustic-root banks, reusing frozen mids and the existing SaVoice/controller; keep sixth separate. Broader states/other engines/high-root-owned-live/physical7.1.4 remain incomplete.",
+  "manifest_sha256": "13e9fa81d272169213ffae2f8c09a08de67fb78fa5be8695cb8e85aa63ed03b7",
+  "file_count": 1116,
+  "bytes": 237835616
+}
