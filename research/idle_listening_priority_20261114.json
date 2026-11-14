@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.listening-priority/1",
+  "date":"2026-11-14",
+  "source":"Direct human reply to existing idle listening-priority question",
+  "question_item_id":"[\"request_user_input_async\",\"call_bd8278b93b1a4c3cb8d2e4f38a81656f\",0]",
+  "question":"怠速目前最影响听感的是哪一项？我会继续核查素材，这个选择会决定下一版优先改哪层。",
+  "human_answer":"节奏太规整，像持续的合成器音符",
+  "scope":"Idle sound priority; no new candidate listening acceptance, no new recording approval and no default promotion.",
+  "engineering_priority":"Compare recording and generated repetition/time structure plus joint main-line amplitude/phase/detail behaviour. Existing short-window variation gap is relevant evidence, not proof of this perceptual cause. First separate same-aperture main/detail budget and omitted75sideband/broadband before assigning new modulation.",
+  "avoid":"Do not equate more random noise, larger AM, faster clock or short-window coefficient playback with more mechanical idle. Do not duplicate the answered priority question or the existing allocation audition question.",
+  "preserve":"Accepted moving35, old voices/recordings/takes and619C-H untouched. Full modular driving/multi-engine/stereo7.1.4 objective remains active.",
+  "received_after_research_archive":"idle_window_transfer_v1/e029eb1; archive remains an exact snapshot of its execution. This later feedback is separately versioned."
+}
