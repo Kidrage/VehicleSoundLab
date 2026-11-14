@@ -1,0 +1,156 @@
+{
+  "schema": "vsl.fir-and-driver-cost-freeze/1",
+  "result": "weak_MAC_trial_retained_production_restored_actual_driver_profiled",
+  "parent_commit": "ddc94b9b0bfa1077f08e3e124ee5a0f32edf6535",
+  "original612C_H_exact": true,
+  "old67voices_exact": true,
+  "new_experimental_C_H": 7,
+  "total_indexed_C_H": 619,
+  "first_packaging_index_count_failure_preserved": true,
+  "historical12missing_index_rows_added": true,
+  "initial_executed_sources_preserved": true,
+  "relocated_optimized_and_scalar_contracts_passed": true,
+  "paired_blocks": 6000,
+  "useful_5percent_threshold_met": false,
+  "production_adopted": false,
+  "driver_cases": [
+    {
+      "case": "idle",
+      "plain_seconds": 4.8068841,
+      "audio_seconds": 12,
+      "max_block_ms": 12.419,
+      "exceedances": 4,
+      "stages": [
+        {
+          "stage": "main_OSC",
+          "calls": 576000,
+          "seconds": 2.1785436
+        },
+        {
+          "stage": "power_shape",
+          "calls": 576000,
+          "seconds": 0.5759325
+        },
+        {
+          "stage": "fixed_idle",
+          "calls": 576000,
+          "seconds": 0.5654026
+        },
+        {
+          "stage": "spatial",
+          "calls": 576000,
+          "seconds": 0.5313025
+        },
+        {
+          "stage": "resonant_detail",
+          "calls": 576000,
+          "seconds": 0.5205293
+        },
+        {
+          "stage": "auxiliary",
+          "calls": 576000,
+          "seconds": 0.2348463
+        },
+        {
+          "stage": "coherent_low",
+          "calls": 576000,
+          "seconds": 0.0734549
+        },
+        {
+          "stage": "body_mix",
+          "calls": 576000,
+          "seconds": 0.0101618
+        },
+        {
+          "stage": "orchestrate",
+          "calls": 2400,
+          "seconds": 0.0009873
+        },
+        {
+          "stage": "drive_step",
+          "calls": 2400,
+          "seconds": 0.0007113
+        },
+        {
+          "stage": "residual",
+          "calls": 0,
+          "seconds": 0
+        }
+      ],
+      "all1152000_float_samples_exact": true
+    },
+    {
+      "case": "drive",
+      "plain_seconds": 4.6903245,
+      "audio_seconds": 12,
+      "max_block_ms": 11.4661,
+      "exceedances": 3,
+      "stages": [
+        {
+          "stage": "main_OSC",
+          "calls": 576000,
+          "seconds": 2.1590126
+        },
+        {
+          "stage": "power_shape",
+          "calls": 576000,
+          "seconds": 0.568475
+        },
+        {
+          "stage": "fixed_idle",
+          "calls": 576000,
+          "seconds": 0.5583685
+        },
+        {
+          "stage": "resonant_detail",
+          "calls": 576000,
+          "seconds": 0.530096
+        },
+        {
+          "stage": "spatial",
+          "calls": 576000,
+          "seconds": 0.523612
+        },
+        {
+          "stage": "auxiliary",
+          "calls": 576000,
+          "seconds": 0.2375628
+        },
+        {
+          "stage": "coherent_low",
+          "calls": 576000,
+          "seconds": 0.0747495
+        },
+        {
+          "stage": "body_mix",
+          "calls": 576000,
+          "seconds": 0.0099415
+        },
+        {
+          "stage": "drive_step",
+          "calls": 2400,
+          "seconds": 0.0029425
+        },
+        {
+          "stage": "orchestrate",
+          "calls": 2400,
+          "seconds": 0.0010118
+        },
+        {
+          "stage": "residual",
+          "calls": 0,
+          "seconds": 0
+        }
+      ],
+      "all1152000_float_samples_exact": true
+    }
+  ],
+  "measurement_overhead_not_subtracted": true,
+  "stage_costs_not_unbiased_plain_fractions": true,
+  "pending_idle_candidate_changed": false,
+  "hard_realtime": false,
+  "next": "Idle source extraction/listening remains the priority. CPU work identifies main OSC as a later target, not a timbre fix; no blind tuning of pending phase candidate or promotion to C/defaults. Full goal remains active.",
+  "manifest_sha256": "d63157e88e88ee960153564ae3eb4f80376e613055172fd3494c51b1dbc61c31",
+  "file_count": 1361,
+  "bytes": 24582465
+}
