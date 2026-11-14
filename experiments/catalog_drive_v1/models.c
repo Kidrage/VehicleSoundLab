@@ -1,12 +1,13 @@
 #include "models.h"
 #include "decel_models.h"
+#include "F3_models.h"
 #include "core/engine.h"
 #include "../atlas_monitor_v1/models.h"
 #include "../full_recipe_drive_v1/models.h"
 #include "../fine_idle_drive_v1/models.h"
 #include "../stationary_bridge_v1/models.h"
 #include <stdlib.h>
-typedef struct {FrModels moving;FidModels idle;AmModels other;SaBank bank;StProfile startup;CbProfile catching;SdProfile synthetic;SbmModels stationary;CdmModels decel;} Inputs;
+typedef struct {FrModels moving;FidModels idle;AmModels other;SaBank bank;StProfile startup;CbProfile catching;SdProfile synthetic;SbmModels stationary;CdmModels decel;F3mModels f3;} Inputs;
 DcPreset *cd_models_load(int selection) {
     Inputs *m;DcPreset *p=NULL;AdConfig cfg={0};AdControl c={0};const DcInfo *info=dc_info(selection);
     if(!info)return NULL;m=calloc(1,sizeof *m);if(!m)return NULL;
@@ -40,6 +41,10 @@ DcPreset *cd_models_load(int selection) {
         if(!cdm_models_load(&m->decel))goto done;
         cfg.bank=&m->decel.bank;cfg.resonant_bank=&m->decel.resonance;cfg.recipe_bank=&m->decel.recipe;
         c.mix.resonant_gain=1;c.drive.rpm=m->decel.dna.base_hz/cfg.root_per_rpm;
+    }else if(selection==DC_F3) {
+        if(!f3m_models_load(&m->f3))goto done;
+        cfg.bank=&m->f3.bank;cfg.resonant_bank=&m->f3.resonance;cfg.recipe_bank=&m->f3.recipe;
+        c.mix.resonant_gain=1;c.drive.rpm=m->f3.dna.base_hz/cfg.root_per_rpm;
     }else {
         const SdProfile *models[1]={&m->synthetic};
         if(!sd_profile_load(selection==DC_WARM?"voices/dna_bank_v1/Warm Additive.model":"voices/dna_bank_v1/Hollow Spectrum.model",&m->synthetic)||

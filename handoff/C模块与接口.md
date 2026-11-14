@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前[F3叠加细节接入](../research/F3叠加细节接入统一窗口V1.md)：新增`experiments/catalog_drive_v1/F3_models.c/.h`非实时装配原参数，`F3_checks.c`独立核对主DNA不变／叠加细节和失效契约。`drive_recipe/bank.c`支持有已验证细节、无撤出／LF的配方，所有生成tick不变；目录追加第十项。统一驾驶器／空间／录放字段复用，默认及原声音参数保持。下面的“未接入”等表述属于各历史阶段。
+
 本次[F3双声道残差细节V1](../research/F3双声道残差细节V1.md)没有C改动：原Sound DNA显式种子宿主＋`stereo_resonance`／IO生成新参数候选。新增通用离线`tools/cyclic_detail_v1/measure.py`负责有限周期分解与残余功率诊断，F3文件编排独立；原647C/H74运行参数与F2保持。十带参数只在研究目录／冻结包，未进入原生目录或默认。
 
 新增离线宿主[`sound_dna_export_v1/probe.c`](../experiments/sound_dna_export_v1/probe.c)：只负责严格解析显式seed／块长、调用原`sd_voice_init/process`和写FLOAT WAV，无设备、驾驶器或DSP新实现。旧`sustain_monitor_v3/probe.c`末参是raw／monitor选择，种子固定48271，不能当seed传入。[F3接口修正与证据](../research/F3后加速局部声线V1.md)。原646C/H保持，新增1份后索引647；74声音参数与F2保持。

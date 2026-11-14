@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.catalog-integration-plan/1",
+  "parent_commit": "b599a04",
+  "purpose": "Expose the already frozen F3 DNA and additive joint-channel detail in the existing driving, layer-monitor and self-contained take host.",
+  "assets": "Exact voice.model from F3_lift_voice_v1 fit2/F3 Sixth Before Upshift and F3_before_upshift.sres from F3_detail_v1 fit1. No refit, gain sweep or PCM timeline.",
+  "recipe": "Zero harmonic withdrawal, no independent low profile, existing .9..1.1 root support for detail. Generic recipe validation accepts a validated enabled detail as an active source even when withdrawal and LF are zero. Reject empty or malformed recipes transactionally.",
+  "entry": "Append DC_F3 as tenth entry, preserving existing indices and default. One existing driving controller and one spatial pass. No automatic state switching from a sampled gear display.",
+  "seeds": "Keep catalog config seed48271. DNA therefore differs from offline DNA seed1; first detail seed remains8121907 by the existing XOR rule. Do not claim byte identity with the offline mixed audition.",
+  "checks": [
+    "Additive recipe zero/full/smoothed detail and inside/edge/outside support: all DNA gains exactly1 and main SaVoice/state identical to the unshaped voice; compare stereo detail with standalone Rvs kernel",
+    "Missing, disabled, malformed and root-mismatched details rejected; no LF source yields silent LF and disabled body UI; all mutations are transactional",
+    "All ten catalog configurations and renders: owned lifetime, one controller, 2/12 driver and dry stems exact, finite output, saved self-contained irregular-block replay",
+    "All nine previous complete WAVs exact, frozen old player replays original old takes, new player replays new ten takes, strict old/new identity crossing rejected",
+    "Full CTest after C edits, native own-window muted selection/control/layer/record/replay/restore checks and visual review"
+  ],
+  "preserve": "Accepted moving35/coherent LF, all74 original voice files, F2 assets and pending idle_complex75 hearing. F3 detail hearing stays pending; optional exposure is not acceptance or default migration.",
+  "scope": "Eight V10 observation/recipe contexts and two analytic examples, not ten engines. F3 is one local acoustic anchor66.78588355389799Hz. Root/RPM map1/120 is engineering, not measured full RPM/load or event calibration. No new room model or physical7.1.4 claim.",
+  "identity": "Generic validator source edit changes strict renderer fingerprint; keep schema10/32 and old frozen players/takes unchanged.",
+  "archive": "Preserve before hashes, exact executed sources and parameters, every failed/successful build and check, original controls and conclusions. Isolated build-catalog-F3-v1; local commit only; full goal active."
+}

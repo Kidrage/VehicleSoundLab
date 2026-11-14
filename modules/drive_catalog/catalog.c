@@ -10,7 +10,8 @@ static const DcInfo info[DC_COUNT]={
     {"synthetic-warm","合成 · Warm Additive（工程示例）","Analytic DNA fixture, not a measured engine or user Serum patch",VSL_SCIFI},
     {"synthetic-hollow","合成 · Hollow Spectrum（工程示例）","Analytic DNA fixture, not a measured engine or user Serum patch",VSL_SCIFI},
     {"v10-stationary-bridge5","V10 · 驻车中间声线＋共振（试验）","A stationary five acoustic anchors, one qualified bridge; gaps remain, no separate low profile or measured full RPM/load coverage; hearing pending",VSL_V10},
-    {"v10-cabin-slowing","V10 · 减速车内声线＋双声道细节（试验）","E cabin slowing observation; one acoustic anchor, local joint-channel detail; no automatic overrun mapping, measured RPM/load or separate LF; hearing pending",VSL_V10}
+    {"v10-cabin-slowing","V10 · 减速车内声线＋双声道细节（试验）","E cabin slowing observation; one acoustic anchor, local joint-channel detail; no automatic overrun mapping, measured RPM/load or separate LF; hearing pending",VSL_V10},
+    {"v10-F3-before-upshift","V10 · F3升挡前声线＋叠加细节（试验）","F3 single pre-upshift acoustic anchor; additive joint-channel detail, zero DNA withdrawal, no independent LF or measured full RPM/load/state coverage; hearing pending",VSL_V10}
 };
 static const char *aux_names[DC_AUX_COUNT]={"进气","机械","排气空气","道路","风","启动机械声","接火低频","怠速声线（候选）","怠速主声线起伏","怠速细谱纹理"};
 const DcInfo *dc_info(int selection){return selection>=0&&selection<DC_COUNT?info+selection:NULL;}

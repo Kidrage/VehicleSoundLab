@@ -28,6 +28,9 @@ int drc_bank_valid(const DrcBank *b,const SaBank *dna,const DrsBank *detail) {
                (detail->kind[a]!=DRS_RDT&&detail->kind[a]!=DRS_STEREO))return 0;
             ++active;
         }
+        /* Additive detail is a complete recipe too: no DNA withdrawal and
+           no independent LF are required. drs_bank_valid checked its kernel. */
+        if(detail&&detail->enabled[a])++active;
         if(b->has_low[a]) {
             if(!rss_profile_valid(b->low+a)||b->low[a].base_hz!=b->root[a])return 0;
             ++active;

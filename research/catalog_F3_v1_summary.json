@@ -1,0 +1,148 @@
+{
+  "result": "optional_F3_additive_stereo_recipe_in_shared_catalog",
+  "git_parent": "b599a04db46ac7f7d01f81fd8f0bf2b0bf43d5f3",
+  "previous_goal_turn": "progress: requested source-bound MCPS recomputation completed; synthesis unchanged and F3 integration remained the next safe action",
+  "C_H_total": 650,
+  "C_H_changed": 6,
+  "C_H_prior_exact": 641,
+  "C_H_added": 3,
+  "original_voice_parameters_exact": 74,
+  "new_parameters_exact_frozen_copies": 2,
+  "total_voice_parameters": 76,
+  "F2_exact": true,
+  "changed_C_H": [
+    "experiments/catalog_drive_v1/contract.c",
+    "experiments/catalog_drive_v1/models.c",
+    "experiments/catalog_drive_v1/ui_checks.c",
+    "modules/drive_catalog/catalog.c",
+    "modules/drive_catalog/catalog.h",
+    "modules/drive_recipe/bank.c"
+  ],
+  "DSP_change": "generic validation accepts active additive detail; no generation tick changes",
+  "presets": 10,
+  "V10_contexts": 8,
+  "analytic_examples": 2,
+  "new_real_engines": 0,
+  "source_refit": false,
+  "new_timbre_accepted": false,
+  "default_selection_changed": false,
+  "pending_idle_migrated": false,
+  "F3_hearing": "independently pending; no repeated question or strength change",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "automatic_state_mapping_added": false,
+  "full_RPM_load_calibration": false,
+  "room_added": false,
+  "config_seed": 48271,
+  "DNA_seed": 48271,
+  "detail_seed": 8121907,
+  "offline_DNA_seed": 1,
+  "offline_mixed_audition_byte_identity_claimed": false,
+  "harmonic_withdrawal": 0,
+  "independent_LF": false,
+  "distinct_CTests": 67,
+  "native_UI": {
+    "result": "pass",
+    "checks": 487,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 10,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "bench_load": {
+      "frames": 240123,
+      "hash": "7d973df17c568741",
+      "queue_empty": 0,
+      "budget_exceeded": 0
+    },
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 7,
+        "hash": "4089b72afb8354ca",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 8,
+        "hash": "68e8ba33fb3206de",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 9,
+        "hash": "6a25f4526ffd1c2a",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "images_visually_reviewed": 7,
+  "manual_mouse_verified": false,
+  "actual_render_frames_per_preset": 192123,
+  "original_nine_WAV_exact": true,
+  "frozen_old_player_old_nine_exact": true,
+  "new_player_new_ten_exact": true,
+  "strict_cross_renderer_rejection": true,
+  "render_id_before": "11ebcfa444c1af7605cc17aa4ac32d3ad48e477c16899937b80bf2dd557c7f01",
+  "render_id_after": "ffaa827e1c325f2f46a9055632856a6975c4d88e81d5b3beb62d4e6daa925497",
+  "source_driver_and_dry_stems_2_12_exact": true,
+  "owned_irregular_block_replay_exact": true,
+  "take_schema": 10,
+  "take_controls": 32,
+  "native_bench_replay_exact": true,
+  "old_live_windows_and_builds_preserved": true,
+  "preparation_failure_preserved": true,
+  "failed_build_test_attempts": [],
+  "downloaded": false,
+  "pushed": false,
+  "hard_realtime_claim": false,
+  "physical_7_1_4_verified": false,
+  "full_goal": "active",
+  "next": "Independent state/RPM/load and additional real-engine evidence plus pending human hearings. Do not reparameterize unsupported F3 cyclic or boundary-limited event timing, blind-tune idle, or treat catalog count as engine coverage.",
+  "manifest_sha256": "3ee27a05e3119c36d0db2f1b70f18f81d3f21c5dc266adfc195d77a9075d67d7",
+  "file_count": 3220,
+  "bytes": 113065999
+}

@@ -33,3 +33,11 @@ mismatched or uncertified detail is rejected transactionally. The optional E
 cabin catalog recipe uses this combination without a separate LF profile.
 This validator change updates the strict renderer fingerprint; it does not
 change tick algorithms, the take schema or previously accepted moving audio.
+
+A validated enabled detail anchor also makes an additive recipe active when
+all harmonic reductions and independent LF flags are zero. This is the F3
+recipe: every harmonic shape is exactly1, the DNA and its state are unchanged,
+and the separate stereo detail uses its existing local support and amount.
+An empty recipe with no detail and no LF remains invalid. Invalid, disabled or
+mismatched detail is never accepted as a substitute. No tick law or take field
+was added; the validator edit changes the strict renderer fingerprint.

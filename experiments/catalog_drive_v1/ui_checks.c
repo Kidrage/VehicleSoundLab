@@ -43,7 +43,7 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
     unsigned checks=0,empty[DC_COUNT]={0},budget[DC_COUNT]={0};uint64_t hashes[DC_COUNT]={0};
     int line=0,ok=0;FILE *report=NULL;wchar_t name[4096];HWND voices=GetDlgItem(w,40),aux=GetDlgItem(w,43),listen_choice=GetDlgItem(w,44);
     AdControl c,live;float *capture_pcm=NULL,*heard=NULL;
-    const int order[]={DC_DECEL,DC_STATIONARY5,DC_FINE_IDLE,DC_MOVING,DC_EXTERIOR,DC_CABIN,DC_SETTLE,DC_WARM,DC_HOLLOW};
+    const int order[]={DC_F3,DC_DECEL,DC_STATIONARY5,DC_FINE_IDLE,DC_MOVING,DC_EXTERIOR,DC_CABIN,DC_SETTLE,DC_WARM,DC_HOLLOW};
     unsigned visited=0,bench_empty=0,bench_budget=0;uint64_t bench_hash=0;
     char utf8[16384];VslWavWriter wav={0};
     CHECK(sizeof order/sizeof *order==DC_COUNT);
@@ -107,6 +107,7 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
         CHECK(IsWindowEnabled(GetDlgItem(w,27))==dc_body_enabled(&a->config));
         if(k==DC_STATIONARY5){swprintf(name,4096,L"%ls.stationary.bmp",path);CHECK(capture(w,name));}
         if(k==DC_DECEL){swprintf(name,4096,L"%ls.decel.bmp",path);CHECK(capture(w,name));}
+        if(k==DC_F3){swprintf(name,4096,L"%ls.F3.bmp",path);CHECK(capture(w,name));}
         for(int j=0;j<DC_AUX_COUNT;++j) {
             choose(w,aux,j);CHECK(IsWindowEnabled(GetDlgItem(w,28))==dc_aux_enabled(&a->config,j));
             if(dc_aux_enabled(&a->config,j)) {
