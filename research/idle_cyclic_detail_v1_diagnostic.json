@@ -1,0 +1,6 @@
+{
+  "schema":"vsl.idle-cyclic-detail-diagnostic/1",
+  "declared_after":"observe1 andaudit1 completed. Raw signed-lag differences include unequal zero-lag phase-conditioned power; do not mislabel the entire gap as missing within-band waveform structure.",
+  "method":"For relation_full only, average ALL12generated curves (3seeds x4windows), one complex factor per band/feature equals sourceTRAIN C(0)/generatedMean C(0). Freeze factors then report full193lag residuals for TRAIN andCHECK. Retain every coefficient, denominator and curve; do not refit CHECK, select seeds, modify audio, or use these factors as a synthesis profile.",
+  "interpretation":"A descriptive zero-lag-matched observer diagnostic, not a valid positive covariance synthesis model, uncertainty test or audible-quality score. Finite noise, source phase estimates, filtering and adjacent-recording changes remain. If residual remains, investigate phase-conditioned spectral shape before increasing HF or AM strength. Existing candidate and pending hearing remain unchanged."
+}
