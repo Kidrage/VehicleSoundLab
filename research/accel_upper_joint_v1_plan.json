@@ -1,0 +1,16 @@
+{
+  "schema":"vsl.accel-upper-joint/1",
+  "purpose":"While the new idle_complex75 audition is pending, advance source-level loaded-acceleration HF structure: distinguish shared fast upper-band energy from local slow-level mixtures and second-order Gaussian correlation. Not a new voice or a detour into low-frequency fitting.",
+  "parent":"Exact12 original/phase-control native audio arrays in frozen accel_upper_inventory_v1/evidence/temporal1. All3 approvedF3 cabin passages, all9 original seeds, no new segments/download or F2/exterior transfer.",
+  "sample_rate":48000,
+  "bands_hz":[[4000,8000],[8000,14000]],
+  "filter":"Original causal fourth-order Butterworth SOS, same complete passage, then100ms edge trim. Expand to both L/R; existing left samples must remain exact. No EQ/normalization/room, no auditory export.",
+  "energy":"Nonoverlap480native-frame10ms mean squares. Original12000frame250ms tile membership, shortened first/last tiles. Full signed4x4 covariance and exact weighted law total=within_tile+between_tile, normalized only for reporting by global means. All48original tile intervals retained, do not choose a best tile or subtract waveform amplitudes to manufacture stationarity.",
+  "joint_fourth":"Full native4x4 cum(x_i,x_i,x_j,x_j) = E(x_i^2 x_j^2)-E(x_i^2)E(x_j^2)-2E(x_i x_j)^2 after centering; retain signs and normalize by variances. Report whole passage and every tile. Correlated Gaussian energy covariance is nonzero, connected fourth is zero; finite recording estimates not exact ensemble guarantees.",
+  "lags":"All signed10ms-step lags-50..50ms of within-tile energy residuals, only pairs within same original tile; report full4x4 tensors/counts, no peak/lag selection or physical delay/RPM inference.",
+  "known_before_source":"Exact9x9 Gaussian quadrature: correlated Gaussian raw squared covariance positive but connected fourth zero; shared Bernoulli-Gaussian scale cross cumulant positive, independent scales cross cumulant zero despite equal marginal kurtoses. Unequal-group total covariance law, negative cross, gain and channel permutation controls. Original samePSD controls preserve complete LR cross spectrum; their processing identity/hashes remain checked.",
+  "verification":"Independent frequency-domain IIR transfer for all12passages/4outputs; independent scalar/vector central moments, weighted group covariances, all48x4tile moments and every signed lag/count. Reconstruct all9phase streams and fullbin PSD/LR CSD. Check619C-H67voices byte identities. Frozen exactversions/failures/plots; no CTests as runtime unchanged.",
+  "limits":"Already-inspected sameF3 not independent recordings or physical source separation. Positive cross cumulants/within-tile energy can arise from road/wind/microphone/codec/speed modulation. Source data can guide one future shared+independent excitation design but cannot by itself name combustion, choose event timing or qualify commonphase/RPM/load. Preserve failed36/all17/full33/individual14k/originalE gates and full driving/multi-engine/stereo7.1.4 goal. No duplicate hearing question or unheard C promotion.",
+  "new_audio":false,
+  "runtime_changed":false
+}

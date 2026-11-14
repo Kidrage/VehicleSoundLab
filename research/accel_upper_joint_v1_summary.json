@@ -1,0 +1,1174 @@
+{
+  "schema": "vsl.accel-upper-joint-freeze/1",
+  "result": "all3_F3_slow_and_fast_joint_upper_structure_measured_NO_audio_promotion",
+  "parent_commit": "f4fd31373589d98fedbfa409986efe4f61ae6959",
+  "previous_goal_turn_progress": "f4fd313 source-derived native complex75 candidate, all audio/observer audits, page and exact freeze; clean worktree verified",
+  "all3original_plus9phase_controls": true,
+  "all48original_tiles_4conditions": true,
+  "native_tile_moments": 192,
+  "correlated_Gaussian_and_shared_independent_scale_controls": true,
+  "all4x4signed_covariances": true,
+  "all11signed_lags": true,
+  "exact_weighted_within_between_partition": true,
+  "independent_frequency_filter_and_scalar_moment_audit": true,
+  "audit": {
+    "result": "passed",
+    "input_sha256": "9958ab09256ad848af52448f9b1d04c116857a3a7802e39bb35b62234cc1aaaa",
+    "errors": {
+      "known_gaussian_input": 1.7763568394002505e-15,
+      "known_weights": 1.6653345369377348e-16,
+      "known_Gaussian_connected": 4.440892098500626e-16,
+      "known_Gaussian_squared_cov": 4.440892098500626e-16,
+      "known_shared_input": 1.7763568394002505e-15,
+      "known_shared_weights": 1.3877787807814457e-16,
+      "known_independent_input": 1.7763568394002505e-15,
+      "known_independent_weights": 1.1102230246251565e-16,
+      "known_shared_cross": 0.0,
+      "known_independent_cross": 0.0,
+      "known_equal_marginal": 0.0,
+      "known_unequal_group_law": 5.551115123125783e-17,
+      "parent_exact_audio": 0.0,
+      "old_left_samples": 0.0,
+      "parent_sos": 0.0,
+      "all4_native_fft_filter": 1.0191500421363742e-15,
+      "whole_mean": 1.432676820941844e-21,
+      "whole_second": 1.6093625997831706e-20,
+      "whole_fourth": 3.618915179919496e-25,
+      "whole_squared_covariance": 4.3943970041879595e-25,
+      "whole_connected": 6.979336418416171e-25,
+      "whole_normalized_connected": 1.5419956977957838e-14,
+      "all192_tile_mean": 1.0164395367051604e-20,
+      "all192_tile_second": 6.776263578034403e-21,
+      "all192_tile_fourth": 1.550963648536927e-25,
+      "all192_tile_squared_covariance": 3.101927297073854e-25,
+      "all192_tile_connected": 5.686866711302065e-25,
+      "all192_tile_normalized_connected": 7.993605777301127e-15,
+      "all_native_10ms_power": 2.541098841762901e-20,
+      "original_tile_tags": 0.0,
+      "group_mean": 5.082197683525802e-21,
+      "group_covariance": 2.1002632740604218e-26,
+      "energy_mean": 1.1858461261560205e-20,
+      "energy_total": 2.8272774843121063e-27,
+      "energy_within": 2.8272774843121063e-27,
+      "energy_between": 2.4233807008389483e-27,
+      "energy_normalized_total": 1.7763568394002505e-15,
+      "energy_normalized_within": 1.609823385706477e-15,
+      "energy_normalized_between": 3.3306690738754696e-16,
+      "energy_identity": 2.0194839173657902e-27,
+      "energy_residual": 2.371692252312041e-20,
+      "all_signed_lagged": 2.6253290925755273e-27,
+      "all_normalized_signed_lagged": 1.609823385706477e-15,
+      "all9_phase_audio": 8.881784197001252e-16,
+      "all9_full_PSD": 6.661338147750939e-16,
+      "all9_full_LR_CSD": 1.0057327710640516e-15
+    },
+    "observations": 12,
+    "tile_moments": 192,
+    "phase_controls": 9,
+    "all4x4_signed_moments_and_covariances": true,
+    "all11signed_lags": true,
+    "independent_source_identity": false,
+    "new_audio": false
+  },
+  "segments": [
+    {
+      "segment": "F3_fifth1",
+      "tiles": 12,
+      "pairs": [
+        {
+          "pair": "crossband_L",
+          "indices": [
+            0,
+            2
+          ],
+          "total": 0.10820218691859537,
+          "within": 0.019125457789069367,
+          "between": 0.08907672912952602,
+          "between_fraction": 0.8232433342270784,
+          "within_fraction": 0.17675666577292173,
+          "whole_connected": 0.31689305168247395,
+          "weighted_tile_connected": 0.28520281027472655,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0019499364258777634,
+                -0.0025771363358865046,
+                0.004738559253029462
+              ],
+              "range": [
+                -0.0025771363358865046,
+                0.004738559253029462
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.0020101634975542974,
+                -0.002950792545342735,
+                0.0046563177916721194
+              ],
+              "range": [
+                -0.002950792545342735,
+                0.0046563177916721194
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -6.02270716765309e-05,
+                0.0003736562094562293,
+                8.224146135734031e-05
+              ],
+              "range": [
+                -6.02270716765309e-05,
+                0.0003736562094562293
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.0010144586852570392,
+            -0.005497109542816021,
+            0.0006101483245165729
+          ],
+          "weighted_tile_connected_controls": [
+            -0.001007095202609823,
+            -0.005738528572591385,
+            0.001268314652834462
+          ]
+        },
+        {
+          "pair": "crossband_R",
+          "indices": [
+            1,
+            3
+          ],
+          "total": 0.13820468427284652,
+          "within": 0.014626553691024162,
+          "between": 0.12357813058182233,
+          "between_fraction": 0.8941674533827801,
+          "within_fraction": 0.10583254661721972,
+          "whole_connected": 0.13186134775914715,
+          "weighted_tile_connected": 0.005786941892923464,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0036535906079734576,
+                0.00011043489746912203,
+                -0.0007080814058882336
+              ],
+              "range": [
+                -0.0007080814058882336,
+                0.0036535906079734576
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.003771319638310516,
+                0.00014936989357364788,
+                -0.0005789817899114534
+              ],
+              "range": [
+                -0.0005789817899114534,
+                0.003771319638310516
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -0.0001177290303370585,
+                -3.8934996104529187e-05,
+                -0.00012909961597678033
+              ],
+              "range": [
+                -0.00012909961597678033,
+                -3.8934996104529187e-05
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.005219687006668356,
+            -0.000615655518524066,
+            -0.00944373806811946
+          ],
+          "weighted_tile_connected_controls": [
+            0.004749800135471614,
+            -0.000803977564050678,
+            -0.009293189218946642
+          ]
+        },
+        {
+          "pair": "low_LR",
+          "indices": [
+            0,
+            1
+          ],
+          "total": 0.1342436727207435,
+          "within": 0.01596057898958471,
+          "between": 0.11828309373115872,
+          "between_fraction": 0.881107402188062,
+          "within_fraction": 0.1188925978119374,
+          "whole_connected": 0.15273389312834362,
+          "weighted_tile_connected": -0.019522088026940693,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.010916565277574466,
+                0.009548974438267377,
+                0.011156090423139661
+              ],
+              "range": [
+                0.009548974438267377,
+                0.011156090423139661
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.010373593625331879,
+                0.009214166271244563,
+                0.011187228867928873
+              ],
+              "range": [
+                0.009214166271244563,
+                0.011187228867928873
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0005429716522425909,
+                0.00033480816702281265,
+                -3.11384447892166e-05
+              ],
+              "range": [
+                -3.11384447892166e-05,
+                0.0005429716522425909
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.01579356893191789,
+            -0.01259799931719372,
+            0.006601126969427002
+          ],
+          "weighted_tile_connected_controls": [
+            -0.017494389747289462,
+            -0.01403244884373961,
+            0.006120099794648625
+          ]
+        },
+        {
+          "pair": "high_LR",
+          "indices": [
+            2,
+            3
+          ],
+          "total": 0.10446322800186529,
+          "within": 0.009896151288858537,
+          "between": 0.09456707671300675,
+          "between_fraction": 0.9052666524082347,
+          "within_fraction": 0.09473334759176531,
+          "whole_connected": 0.1508876374677168,
+          "weighted_tile_connected": 0.03882512859264549,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0010476362534079609,
+                0.0005302208937111635,
+                -0.0003185714136465038
+              ],
+              "range": [
+                -0.0003185714136465038,
+                0.0010476362534079609
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.0007559462050665402,
+                0.00045049142906018194,
+                -0.0003237196875445937
+              ],
+              "range": [
+                -0.0003237196875445937,
+                0.0007559462050665402
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0002916900483414205,
+                7.972946465098197e-05,
+                5.148273898088032e-06
+              ],
+              "range": [
+                5.148273898088032e-06,
+                0.0002916900483414205
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.009195318290954275,
+            -0.008312575856771844,
+            -0.004682362843519426
+          ],
+          "weighted_tile_connected_controls": [
+            -0.010220807536225663,
+            -0.008401829395482188,
+            -0.005565390602316057
+          ]
+        },
+        {
+          "pair": "crossband_LR",
+          "indices": [
+            0,
+            3
+          ],
+          "total": 0.128060245656004,
+          "within": 0.014904956772638658,
+          "between": 0.11315528888336533,
+          "between_fraction": 0.8836098064915757,
+          "within_fraction": 0.1163901935084243,
+          "whole_connected": 0.14888603348737367,
+          "weighted_tile_connected": 0.020926245642805322,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0026194031994164345,
+                0.0012246199607433516,
+                -0.00016786537018702842
+              ],
+              "range": [
+                -0.00016786537018702842,
+                0.0026194031994164345
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.002204462866567208,
+                0.0012370599575683516,
+                -0.00015358852895057352
+              ],
+              "range": [
+                -0.00015358852895057352,
+                0.002204462866567208
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0004149403328492239,
+                -1.2439996825000438e-05,
+                -1.427684123645465e-05
+              ],
+              "range": [
+                -1.427684123645465e-05,
+                0.0004149403328492239
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.009614376911362929,
+            -0.0015443265312530122,
+            -0.006062362027655797
+          ],
+          "weighted_tile_connected_controls": [
+            0.008809112498430286,
+            -0.0015132757457788813,
+            -0.005751277788936513
+          ]
+        },
+        {
+          "pair": "crossband_RL",
+          "indices": [
+            1,
+            2
+          ],
+          "total": 0.10740014372735722,
+          "within": 0.007647047615631493,
+          "between": 0.09975309611172577,
+          "between_fraction": 0.9287985346179423,
+          "within_fraction": 0.07120146538205814,
+          "whole_connected": 0.097351540527582,
+          "weighted_tile_connected": -0.006970613540232623,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                -0.00010755861541856472,
+                0.0013607083513813196,
+                -0.0009171542597686748
+              ],
+              "range": [
+                -0.0009171542597686748,
+                0.0013607083513813196
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                7.872063109493441e-06,
+                0.001447530147640354,
+                -0.0008524418420513601
+              ],
+              "range": [
+                -0.0008524418420513601,
+                0.001447530147640354
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -0.00011543067852805542,
+                -8.682179625903484e-05,
+                -6.471241771731405e-05
+              ],
+              "range": [
+                -0.00011543067852805542,
+                -6.471241771731405e-05
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.007382581373910173,
+            0.008935526366100482,
+            0.0022328900426477
+          ],
+          "weighted_tile_connected_controls": [
+            -0.006770354513726801,
+            0.008999623821396806,
+            0.0021285535119933614
+          ]
+        }
+      ]
+    },
+    {
+      "segment": "F3_fifth2",
+      "tiles": 12,
+      "pairs": [
+        {
+          "pair": "crossband_L",
+          "indices": [
+            0,
+            2
+          ],
+          "total": 0.12956006860702218,
+          "within": 0.05316996463741812,
+          "between": 0.07639010396960406,
+          "between_fraction": 0.5896114813068546,
+          "within_fraction": 0.41038851869314535,
+          "whole_connected": 0.30221036745512453,
+          "weighted_tile_connected": 0.2398104554437665,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0022105922940670055,
+                -0.00037074664626053806,
+                0.0022211000185216917
+              ],
+              "range": [
+                -0.00037074664626053806,
+                0.0022211000185216917
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.001522496131464119,
+                -0.00045611103330066966,
+                0.0020452286900570146
+              ],
+              "range": [
+                -0.00045611103330066966,
+                0.0020452286900570146
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0006880961626028873,
+                8.536438704013179e-05,
+                0.00017587132846467817
+              ],
+              "range": [
+                8.536438704013179e-05,
+                0.0006880961626028873
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.010130471701000489,
+            -0.003210881401667364,
+            -0.001309090350177268
+          ],
+          "weighted_tile_connected_controls": [
+            -0.010898981257557783,
+            -0.0035249063525569883,
+            -0.0015612123674974652
+          ]
+        },
+        {
+          "pair": "crossband_R",
+          "indices": [
+            1,
+            3
+          ],
+          "total": 0.12215935716982064,
+          "within": 0.041605738545546396,
+          "between": 0.08055361862427424,
+          "between_fraction": 0.6594142314640056,
+          "within_fraction": 0.34058576853599437,
+          "whole_connected": 0.13866725796027857,
+          "weighted_tile_connected": 0.04453725692572778,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                -0.0014241682823634173,
+                -0.0012000569261004736,
+                -0.001200800959817737
+              ],
+              "range": [
+                -0.0014241682823634173,
+                -0.0012000569261004736
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                -0.0013365910364107416,
+                -0.0014600962547973938,
+                -0.0011769435153201483
+              ],
+              "range": [
+                -0.0014600962547973938,
+                -0.0011769435153201483
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -8.757724595267658e-05,
+                0.00026003932869691967,
+                -2.3857444497588028e-05
+              ],
+              "range": [
+                -8.757724595267658e-05,
+                0.00026003932869691967
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.011317004500172192,
+            -0.006785164122426286,
+            -0.0008985725287904067
+          ],
+          "weighted_tile_connected_controls": [
+            -0.011281499054062605,
+            -0.007187285904120729,
+            -0.0008517766340405929
+          ]
+        },
+        {
+          "pair": "low_LR",
+          "indices": [
+            0,
+            1
+          ],
+          "total": 0.11618445140247756,
+          "within": 0.027311630193778854,
+          "between": 0.08887282120869876,
+          "between_fraction": 0.7649286985986802,
+          "within_fraction": 0.2350713014013203,
+          "whole_connected": 0.21044296877326582,
+          "weighted_tile_connected": 0.0769428677552101,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.015494425352568921,
+                0.012738471922581046,
+                0.01298374524389441
+              ],
+              "range": [
+                0.012738471922581046,
+                0.015494425352568921
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.014597751424084685,
+                0.012318432548887457,
+                0.012470886134298826
+              ],
+              "range": [
+                0.012318432548887457,
+                0.014597751424084685
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0008966739284842372,
+                0.0004200393736935962,
+                0.0005128591095955833
+              ],
+              "range": [
+                0.0004200393736935962,
+                0.0008966739284842372
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.013300280494782324,
+            0.01587158703995456,
+            0.001033063152525407
+          ],
+          "weighted_tile_connected_controls": [
+            -0.016856789450899416,
+            0.0149371635070028,
+            -0.00206015784580265
+          ]
+        },
+        {
+          "pair": "high_LR",
+          "indices": [
+            2,
+            3
+          ],
+          "total": 0.477340471736448,
+          "within": 0.3786236233555828,
+          "between": 0.09871684838086515,
+          "between_fraction": 0.20680594717174805,
+          "within_fraction": 0.7931940528282518,
+          "whole_connected": 1.3485744710279042,
+          "weighted_tile_connected": 0.5921244020313299,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.015673925969930034,
+                0.014707997556683053,
+                0.014633777875438533
+              ],
+              "range": [
+                0.014633777875438533,
+                0.015673925969930034
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.015085356238853318,
+                0.014481564589720358,
+                0.01398298049082382
+              ],
+              "range": [
+                0.01398298049082382,
+                0.015085356238853318
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0005885697310767171,
+                0.00022643296696269193,
+                0.0006507973846147185
+              ],
+              "range": [
+                0.00022643296696269193,
+                0.0006507973846147185
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.011908655451030451,
+            0.024064249744022503,
+            -0.000536678765512556
+          ],
+          "weighted_tile_connected_controls": [
+            -0.015129091252817533,
+            0.02385015611112909,
+            -0.0028444519765242365
+          ]
+        },
+        {
+          "pair": "crossband_LR",
+          "indices": [
+            0,
+            3
+          ],
+          "total": 0.13981332671157662,
+          "within": 0.05363324457747187,
+          "between": 0.08618008213410477,
+          "between_fraction": 0.6163939029352129,
+          "within_fraction": 0.38360609706478727,
+          "whole_connected": 0.17805821904044616,
+          "weighted_tile_connected": 0.07092992354480035,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.0009244704867156748,
+                2.8195776461944274e-05,
+                0.001931375528987088
+              ],
+              "range": [
+                2.8195776461944274e-05,
+                0.001931375528987088
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.0002235814751408055,
+                -0.00012561868613557232,
+                0.0018370778075689378
+              ],
+              "range": [
+                -0.00012561868613557232,
+                0.0018370778075689378
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0007008890115748692,
+                0.00015381446259751664,
+                9.429772141815112e-05
+              ],
+              "range": [
+                9.429772141815112e-05,
+                0.0007008890115748692
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.009537429282026522,
+            -0.005034661160768647,
+            -0.0032175633050188788
+          ],
+          "weighted_tile_connected_controls": [
+            -0.01044483077579944,
+            -0.005254106557584253,
+            -0.003276572213833998
+          ]
+        },
+        {
+          "pair": "crossband_RL",
+          "indices": [
+            1,
+            2
+          ],
+          "total": 0.09953922191718072,
+          "within": 0.03074008508918105,
+          "between": 0.06879913682799965,
+          "between_fraction": 0.6911761565229269,
+          "within_fraction": 0.308823843477073,
+          "whole_connected": 0.13814270520316277,
+          "weighted_tile_connected": 0.06552627439067972,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                -0.0008175012935785507,
+                -0.00181218026057271,
+                -0.0013613325580347727
+              ],
+              "range": [
+                -0.00181218026057271,
+                -0.0008175012935785507
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                -0.0005484410542383154,
+                -0.0019679671582972288,
+                -0.0012830687618866452
+              ],
+              "range": [
+                -0.0019679671582972288,
+                -0.0005484410542383154
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -0.0002690602393402337,
+                0.00015578689772451955,
+                -7.826379614812702e-05
+              ],
+              "range": [
+                -0.0002690602393402337,
+                0.00015578689772451955
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            -0.008614692198136483,
+            -0.007884236191600344,
+            -0.0005677201926074778
+          ],
+          "weighted_tile_connected_controls": [
+            -0.008578183425186422,
+            -0.008101984562448388,
+            -0.0005678784077293947
+          ]
+        }
+      ]
+    },
+    {
+      "segment": "F3_sixth",
+      "tiles": 24,
+      "pairs": [
+        {
+          "pair": "crossband_L",
+          "indices": [
+            0,
+            2
+          ],
+          "total": 0.05097831937520316,
+          "within": 0.01551956003494555,
+          "between": 0.03545875934025763,
+          "between_fraction": 0.6955654830297417,
+          "within_fraction": 0.3044345169702586,
+          "whole_connected": 0.10294082938817047,
+          "weighted_tile_connected": 0.07109298363388096,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.00038583724110900785,
+                0.0008024601514399884,
+                0.002394761816367634
+              ],
+              "range": [
+                0.00038583724110900785,
+                0.002394761816367634
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.00022667653915478612,
+                0.0007990809034440155,
+                0.0023816711379107867
+              ],
+              "range": [
+                0.00022667653915478612,
+                0.0023816711379107867
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.000159160701954221,
+                3.379247995972065e-06,
+                1.3090678456845824e-05
+              ],
+              "range": [
+                3.379247995972065e-06,
+                0.000159160701954221
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.0012836251497838323,
+            0.0010244504258325481,
+            -0.0022795354076777198
+          ],
+          "weighted_tile_connected_controls": [
+            0.0011461158476217877,
+            0.0006009290101508878,
+            -0.002406619823077086
+          ]
+        },
+        {
+          "pair": "crossband_R",
+          "indices": [
+            1,
+            3
+          ],
+          "total": 0.04818434808072526,
+          "within": 0.013802054397436862,
+          "between": 0.034382293683288406,
+          "between_fraction": 0.7135573075656498,
+          "within_fraction": 0.2864426924343503,
+          "whole_connected": 0.054225357473308436,
+          "weighted_tile_connected": 0.018759448292315205,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                7.642740666046887e-05,
+                0.00197804210006002,
+                0.0016250644441089326
+              ],
+              "range": [
+                7.642740666046887e-05,
+                0.00197804210006002
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                4.8641771094822384e-05,
+                0.002067851730977154,
+                0.0012235959068363953
+              ],
+              "range": [
+                4.8641771094822384e-05,
+                0.002067851730977154
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                2.7785635565647558e-05,
+                -8.980963091713246e-05,
+                0.00040146853727253737
+              ],
+              "range": [
+                -8.980963091713246e-05,
+                0.00040146853727253737
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.007180222774607754,
+            -0.0015743237008362877,
+            -0.00486218369633534
+          ],
+          "weighted_tile_connected_controls": [
+            0.007017931457603571,
+            -0.0015977712320068825,
+            -0.0049508287702784174
+          ]
+        },
+        {
+          "pair": "low_LR",
+          "indices": [
+            0,
+            1
+          ],
+          "total": 0.060190788292676704,
+          "within": 0.02816449579826052,
+          "between": 0.03202629249441622,
+          "between_fraction": 0.5320796321637941,
+          "within_fraction": 0.4679203678362066,
+          "whole_connected": 0.1064509581907158,
+          "weighted_tile_connected": 0.04095014865672401,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.014302763266085625,
+                0.01299016996239504,
+                0.011668088198869378
+              ],
+              "range": [
+                0.011668088198869378,
+                0.014302763266085625
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.013698141808386102,
+                0.012675818987902503,
+                0.01067434850622671
+              ],
+              "range": [
+                0.01067434850622671,
+                0.013698141808386102
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.0006046214576995213,
+                0.00031435097449253747,
+                0.0009937396926426626
+              ],
+              "range": [
+                0.00031435097449253747,
+                0.0009937396926426626
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.0232318324083294,
+            0.0042480825695421645,
+            -0.0002916061248810557
+          ],
+          "weighted_tile_connected_controls": [
+            0.021386682184728657,
+            0.003352434382432072,
+            -0.004197219102203364
+          ]
+        },
+        {
+          "pair": "high_LR",
+          "indices": [
+            2,
+            3
+          ],
+          "total": 0.059351032629718796,
+          "within": 0.020184799691279686,
+          "between": 0.039166232938439134,
+          "between_fraction": 0.6599081970955878,
+          "within_fraction": 0.3400918029044126,
+          "whole_connected": 0.09497226206105251,
+          "weighted_tile_connected": 0.02810754902470887,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.007212739142618886,
+                0.008807803487307862,
+                0.00795934714553349
+              ],
+              "range": [
+                0.007212739142618886,
+                0.008807803487307862
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.007061695221742819,
+                0.00853486527568095,
+                0.007492474779802951
+              ],
+              "range": [
+                0.007061695221742819,
+                0.00853486527568095
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.00015104392087606817,
+                0.0002729382116269163,
+                0.0004668723657305398
+              ],
+              "range": [
+                0.00015104392087606817,
+                0.0004668723657305398
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.0081878349500673,
+            0.007316565550398641,
+            -0.011275772732129546
+          ],
+          "weighted_tile_connected_controls": [
+            0.007603584586141703,
+            0.006217521210038617,
+            -0.012287997549698887
+          ]
+        },
+        {
+          "pair": "crossband_LR",
+          "indices": [
+            0,
+            3
+          ],
+          "total": 0.04835306473494298,
+          "within": 0.014273197420596769,
+          "between": 0.034079867314346236,
+          "between_fraction": 0.7048129731002959,
+          "within_fraction": 0.29518702689970455,
+          "whole_connected": 0.0561432711250431,
+          "weighted_tile_connected": 0.021026823073571316,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                -0.0005184250988294912,
+                0.0006565211617423842,
+                0.0019121856199427537
+              ],
+              "range": [
+                -0.0005184250988294912,
+                0.0019121856199427537
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                -0.0007331072806938974,
+                0.0009728662704119919,
+                0.0016727140614440365
+              ],
+              "range": [
+                -0.0007331072806938974,
+                0.0016727140614440365
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                0.00021468218186440673,
+                -0.0003163451086696073,
+                0.00023947155849871713
+              ],
+              "range": [
+                -0.0003163451086696073,
+                0.00023947155849871713
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.002525381597913328,
+            -0.008104186891686503,
+            0.001992913663513263
+          ],
+          "weighted_tile_connected_controls": [
+            0.002130295062625099,
+            -0.008184246679767566,
+            0.0017180590780194438
+          ]
+        },
+        {
+          "pair": "crossband_RL",
+          "indices": [
+            1,
+            2
+          ],
+          "total": 0.04368898030090199,
+          "within": 0.009525257876926933,
+          "between": 0.03416372242397506,
+          "between_fraction": 0.781975733667323,
+          "within_fraction": 0.21802426633267694,
+          "whole_connected": 0.053444291328394344,
+          "weighted_tile_connected": 0.019082531071702834,
+          "phase_controls": {
+            "normalized_total": {
+              "values": [
+                0.00040641815264442154,
+                -0.00042201032241596665,
+                0.0005398750545936116
+              ],
+              "range": [
+                -0.00042201032241596665,
+                0.0005398750545936116
+              ]
+            },
+            "normalized_within": {
+              "values": [
+                0.0004445562511850815,
+                -0.00040748321449108607,
+                0.0005241281042740915
+              ],
+              "range": [
+                -0.00040748321449108607,
+                0.0005241281042740915
+              ]
+            },
+            "normalized_between": {
+              "values": [
+                -3.8138098540659e-05,
+                -1.4527107924881344e-05,
+                1.5746950319520736e-05
+              ],
+              "range": [
+                -3.8138098540659e-05,
+                1.5746950319520736e-05
+              ]
+            }
+          },
+          "whole_connected_controls": [
+            0.005445045621798727,
+            -0.0040978632758341925,
+            -0.006824007534004014
+          ],
+          "weighted_tile_connected_controls": [
+            0.005376645336010773,
+            -0.004023405698795147,
+            -0.006934386912896494
+          ]
+        }
+      ]
+    }
+  ],
+  "figure_viewed": true,
+  "source_physical_identity": false,
+  "apparent_fast_or_slow_not_proven_mechanical_or_load": true,
+  "not_independent_recordings_or_confidence_intervals": true,
+  "new_audio": false,
+  "new_profile": false,
+  "new_C": false,
+  "new_download": false,
+  "old_CTests_repeated": false,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "pending_idle_listening_unchanged": true,
+  "next": "Use separate slow colour/level control and jointly generated fast multiband/LR innovations when a full acceleration source is justified. Independent clouds miss observed crossband dependence; one uniform amplitude modulator also cannot be assumed sufficient. Retain band-specific components and source separation limits, validate through native filters before a candidate. New idle candidate remains pending, no duplicate question/promotion.",
+  "original_common_phase_qualification_unwaived": true,
+  "full_goal_complete": false,
+  "manifest_sha256": "a308694fd81d3541f2f357e8af1b87c3e78ae8dbb6dc0cc8996f2e8fd2458e61",
+  "file_count": 41,
+  "bytes": 102202077
+}
