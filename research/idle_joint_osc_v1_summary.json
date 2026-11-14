@@ -1,0 +1,53 @@
+{
+  "schema": "vsl.idle-joint-osc-freeze/1",
+  "result": "diagnostic_complete_joint_transfer_failed_NOT_adopted",
+  "parent_commit": "fafad695634a858e1d42097ebaab5fa669419b0c",
+  "four_source_control_fits": true,
+  "source_check": {
+    "joint_relative_distance": 1.0278740573915208,
+    "independent_relative_distance": 0.7702012618669182
+  },
+  "fixed_seeds": [
+    149921,
+    277139,
+    381611
+  ],
+  "seconds_each": 24,
+  "source_recorded_trajectory_replayed": false,
+  "expected_per_carrier_variances_equal": true,
+  "actual_PSD_and_RMS_not_matched": true,
+  "all_moment_and_factor_checks": true,
+  "all_coefficient_nodes_checked": true,
+  "native_waveform_check": "Sampled throughout all seeds, not all native samples",
+  "sample_counts": [
+    4894,
+    4894,
+    4894
+  ],
+  "maximum_sampled_error_FS": 1.8600220599851447e-09,
+  "maximum_peak_FS": 0.39500153734537086,
+  "review_url": "http://127.0.0.1:8789/references/analysis/idle_joint_osc_v1/review1/index.html",
+  "review_clips": 20,
+  "common_gain": 1.0,
+  "browser": {
+    "result": "passed",
+    "url": "http://127.0.0.1:8789/references/analysis/idle_joint_osc_v1/review1/index.html",
+    "metadata_combinations": 20,
+    "muted_playback": true,
+    "playing_switch_preserved": true,
+    "paused_seek_preserved": true,
+    "one_player": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "scope": "Generated diagnostic only; no hearing/C/device acceptance"
+  },
+  "figures_and_screenshots_viewed": true,
+  "existing619C_H_and67voices_exact": true,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "accepted_moving_changed": false,
+  "next": "Keep the full covariance failure. Select repeatable small local structure before another source-derived positive-kernel hypothesis; no CHECK-tuned scalar mixture, automatic C promotion or extra HF/LF power fill. Pending original phase qualifications and whole-system goal remain open.",
+  "manifest_sha256": "b22baf7f7320cc9369a066a89c21bb30756ee312b4d597441230a11bdee498a0",
+  "file_count": 124,
+  "bytes": 1210972292
+}

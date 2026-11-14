@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>怠速 · 关联细节对照</title>
+<style>*{box-sizing:border-box}body{margin:0;padding:28px 16px;background:#edf0f1;color:#1c343b;font:16px/1.65 system-ui,sans-serif}main{max-width:660px;margin:auto;background:#fff;padding:28px;border-radius:14px}h1{font-size:25px;margin:0 0 12px}p{color:#556970;font-size:14px}label{display:block;margin:14px 0 5px}select,audio{width:100%;font:inherit}select{padding:10px;background:white;border:1px solid #bdcacf;border-radius:7px;color:inherit}.row{display:flex;gap:14px}.row>div{flex:1;min-width:0}audio{margin-top:22px}#status{min-height:1.6em}a{color:#175e72}.note{border-left:3px solid #b58d45;padding-left:12px}</style>
+<main><h1>怠速 · 关联细节对照</h1>
+<p>请先暂停其他发声窗口。先比较两种“新细节”：留意机械颗粒、沙声、蜂鸣和周期性合成器感，再与原声比较。</p>
+<label for="mode">声音</label><select id="mode"><option value="independent">新细节 · 频率间独立</option><option value="joint">新细节 · 保留素材关联</option><option value="old">此前离线候选</option><option value="reference_train">原录音 · F2尾排6–9秒</option><option value="reference_check">原录音 · F2尾排9–12秒</option></select>
+<div class="row"><div><label for="bus">监听</label><select id="bus"><option value="mix">完整声音</option><option value="detail">只听细节</option></select></div><div><label for="seed">生成组</label><select id="seed"><option>149921</option><option>277139</option><option>381611</option></select></div></div>
+<audio id="player" controls preload="metadata"></audio><p id="status" role="status">准备中…</p>
+<p>新细节两版使用相同主声线、低频细节、频率位置和每条OSC的方差预算，只改变频率间关联；实际频谱和短时响度可以不同。此前候选使用另一种细节声源，不能把它与新细节的差异全部归因于关联。</p>
+<p>生成声每段24秒，原录音每段3秒。统一增益__GAIN__，没有逐条响度补偿、房间处理或加宽。</p>
+<p class="note">这次是诊断试听：完整关联在另一段录音上的统计检查反而更差，不能称为优化成功，也未替换C Demo。保留它是为了判断哪些变化值得继续、哪些应撤回。</p>
+<p><a href="/research/current_demo_v1/index.html">保留的系统Demo</a> · <a href="/references/analysis/idle_phase_recipe_v1/review2/index.html">此前怠速候选</a></p>
+</main><script>
+const files=__FILES__,player=document.querySelector('#player'),mode=document.querySelector('#mode'),bus=document.querySelector('#bus'),seed=document.querySelector('#seed'),status=document.querySelector('#status'),cache=new Map();let serial=0,wasReference=false;
+async function update(){const revision=++serial,playing=!player.paused;player.pause();const reference=mode.value.startsWith('reference_');const at=reference!==wasReference?0:(player.currentTime||0);wasReference=reference;bus.disabled=seed.disabled=reference;const key=reference?mode.value:mode.value+'_'+seed.value+'_'+bus.value;status.textContent='准备中…';try{const name=files[key];if(!cache.has(name))cache.set(name,fetch(name).then(r=>{if(!r.ok)throw Error(r.status);return r.blob()}).then(b=>URL.createObjectURL(b)));const url=await cache.get(name);if(revision!==serial)return;player.addEventListener('loadedmetadata',()=>{if(revision!==serial)return;player.currentTime=Math.min(at,Math.max(0,player.duration-.05));status.textContent=mode.selectedOptions[0].text+(reference?'':' · '+bus.selectedOptions[0].text);if(playing)player.play().catch(()=>{});},{once:true});player.src=url;player.load();}catch(e){if(revision===serial)status.textContent='读取失败，请刷新。'}}
+for(const e of [mode,bus,seed])e.addEventListener('change',update);window.addEventListener('pagehide',()=>{for(const v of cache.values())v.then(u=>URL.revokeObjectURL(u)).catch(()=>{});});update();
+</script></html>
