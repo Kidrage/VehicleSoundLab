@@ -1,0 +1,67 @@
+{
+  "schema": "vsl.idle-amp-phase-link-freeze/1",
+  "result": "source_relationship_NOT_new_audio_or_C",
+  "parent_commit": "8c5d096447776504486d86df79b54064165cf08f",
+  "all8frozen_source_control_portions": true,
+  "original116windows200ms20ms": true,
+  "source_CHECK_previously_inspected": true,
+  "source_QR_condition": 8.286336449495783,
+  "source_CHECK_total_MSE_reductions": [
+    0.052058364359146014,
+    0.16191567118384664,
+    0.01185384750381413
+  ],
+  "source_CHECK_error_variance_reductions": [
+    0.10545569822452361,
+    0.21211293718479574,
+    -0.09417957079123096
+  ],
+  "source187_fluctuation_error_worse_despite_total_MSE_improvement": true,
+  "all8x51x7x7covariance_independently_audited": true,
+  "all4models_and8predictions_audited": true,
+  "full_existing_phase_streams": [
+    [
+      149921,
+      180,
+      8966
+    ],
+    [
+      277139,
+      24,
+      1166
+    ],
+    [
+      381611,
+      24,
+      1166
+    ]
+  ],
+  "all11298native_windows_and_global_bounds_audited": true,
+  "phase_feature_box_outside_fractions": [
+    [
+      149921,
+      0.1848092795003346
+    ],
+    [
+      277139,
+      0.21355060034305318
+    ],
+    [
+      381611,
+      0.2667238421955403
+    ]
+  ],
+  "both_six_panel_figure_versions_preserved": true,
+  "final_figure_viewed": true,
+  "window_regression_NOT_instantaneous_gain": true,
+  "physical_AM_PM_or_RPM_identified": false,
+  "source_PCM_or_new_audio_or_gain_trajectory_exported": false,
+  "old619C_H_and67voices_exact": true,
+  "accepted_moving35_changed": false,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "next": "Pending idle allocation hearing before C. If continuing source work: known joint-source forward window consistency and power budget before native AM/PM synthesis;75/112 motivate a hypothesis but187 is a counterexample. No blind all-line coupling/AM/pad boost, preserve phase qualifications/full goal.",
+  "manifest_sha256": "ea504d4f11628bbc9cbeca482f47e72beab0326c7c56381b1bc485b943f0c22f",
+  "file_count": 72,
+  "bytes": 8720282
+}

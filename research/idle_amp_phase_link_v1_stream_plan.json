@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.idle-amp-phase-link-stream-extension/1",
+  "declaration": "Explicit extension after the8-portion source experiment found positive CHECK MSE reductions. Do not refit the source model, change the phase stream, create audio or make a C/default candidate.",
+  "inputs": "All original3 frozen spectral-phase streams in idle_phase_recipe_v1/render2: seed149921 full180s,277139 and381611 full24s each. Check report/node hashes and node200Hz model. Reconstruct original natural cubic spline without changing nodes or branches.",
+  "operator": "At original48k sample times form exp(i*psi) and exp(i*eta) from the two spline coordinates. Because M*H=0 and M*RIGHT=I, these equal the existing3-OSC relative circular coordinates, including the original2pi chart lift. Apply EXACT same200ms periodicHann/20ms hop/250ms trim as the source. Full streams, no concatenated3s re-trim or sampling phase choices.",
+  "output": "Apply frozen source TRAIN predictor to observed-window features only. Store every116/8966-style window feature and hypothetical window log magnitude prediction; compare per-target prediction ranges and observed-source TRAIN/CHECK ranges. Report feature-box outside fractions descriptively, never confidence or failure probabilities. Also exact global linear-circular bounds via const+sum(a*cos+b*sin).",
+  "limits": "This does not create a gain envelope: E_window[exp(loggain)] and exp(E_window[loggain]) differ, so a fit of log(window magnitude) cannot be inserted as instantaneous log amplitude. No source waveform reconstruction, cross-moment budget, phase-AM realization or physical coupling is claimed.",
+  "audit": "Independent interpolation using make_interp_spline with natural boundary and real sin/cos/full native Hann integration; all windows, frozen predictor and global bounds. No changes based on extreme predictions or source CHECK.",
+  "next": "Use observed range/association evidence to choose a later window-consistent, power-normalized joint hypothesis only after appropriate hearing direction; preserve independent baseline, original phase qualification chain and full goal."
+}
