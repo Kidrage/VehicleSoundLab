@@ -1,0 +1,6 @@
+{
+  "schema":"vsl.idle75-expected-audit/1",
+  "scope":"Independent assembly of ALL6 sparse operators/all12 native controls; independent signed-FIR covariance and operator-centered expected moments at4fixed coarse points, known terminal points, independent fine known target and all source/control terminal points. Every saved trace cost reconstructed; intermediate trace kernels not all independently evaluated. No optimizer rerun.",
+  "derivative":"One fixed central difference at original known truth[1.4,1.15], step1e-6 on both axes, independent1000Hz expected operator; maximum absolute moment derivative error<1e-6. Fixed audit only; no estimator/grid/gate change.",
+  "gates":"All sparse row coefficients <1e-12, native predicted coefficients<1e-11, independent expected terminal moments<1e-11, centered window covariance minimum eigenvalue>-1e-12. Original fit/control gates remain unchanged."
+}

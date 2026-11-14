@@ -1,0 +1,156 @@
+{
+  "schema": "vsl.idle75-expected-freeze/1",
+  "result": "known_expected_inverse_passed_real_source_recorded",
+  "parent_commit": "79d651685ae7df72dc57805df807926f396e99a7",
+  "conditional_expected75_only_NOT_full_phase_estimator_ensemble": true,
+  "full_signed64tap_covariance_all16interpolation_pairs": true,
+  "exact_window_sample_mean_centering": true,
+  "controls": {
+    "same_grid": 2.220446049250313e-16,
+    "independent_fine_grid": 2.2608914740374075e-09
+  },
+  "native_compression_error": 4.226975192866966e-06,
+  "grid_comparison_relative_error": 3.6755079732885517e-06,
+  "independent_all6operators_all12native_and_terminal_moments": true,
+  "intermediate_trace_kernels_all_independently_replayed": false,
+  "all_trace_costs_independently_checked": true,
+  "source_optimizer_available": true,
+  "source_models": [
+    {
+      "family": "source",
+      "available": true,
+      "parameters": [
+        0.9581454591526347,
+        1.2176505708074556
+      ],
+      "active_mask": [
+        0,
+        0
+      ],
+      "TRAIN_scaled_squared_error": 0.07911377941775086,
+      "CHECK_scaled_squared_error": 1.9016016733863297,
+      "target_std": 0.092477126597743,
+      "prediction_std": 0.08579347860860048,
+      "target_rho": [
+        1.0,
+        0.6616807135186964,
+        0.12011628971416531,
+        0.18234425174957586
+      ],
+      "prediction_rho": [
+        1.0,
+        0.8497186423780622,
+        0.3994517618383524,
+        0.13121793348378455
+      ],
+      "rank": 2,
+      "condition": 21.75476308550537,
+      "nfev": 17
+    },
+    {
+      "family": "phase_149921",
+      "available": false,
+      "parameters": [
+        0.5000000000142548,
+        2.999999999935979
+      ],
+      "active_mask": [
+        -1,
+        1
+      ],
+      "TRAIN_scaled_squared_error": 1.7194029055575522,
+      "CHECK_scaled_squared_error": 7.6504788313041985,
+      "target_std": 0.42937224549074404,
+      "prediction_std": 0.23122761036225775,
+      "target_rho": [
+        1.0,
+        0.9561899644811979,
+        0.8414207073739404,
+        0.5364251424257972
+      ],
+      "prediction_rho": [
+        1.0,
+        0.9070682092240461,
+        0.5383169185287572,
+        0.07382024801861604
+      ],
+      "rank": 2,
+      "condition": 2.9212325823038436,
+      "nfev": 5
+    },
+    {
+      "family": "phase_277139",
+      "available": false,
+      "parameters": [
+        0.5000000000000222,
+        2.9999999999999063
+      ],
+      "active_mask": [
+        -1,
+        1
+      ],
+      "TRAIN_scaled_squared_error": 2.007802594739319,
+      "CHECK_scaled_squared_error": 15.35698034313981,
+      "target_std": 0.5322714564276355,
+      "prediction_std": 0.231227610367511,
+      "target_rho": [
+        1.0,
+        0.9434239942398581,
+        0.8105208307026314,
+        0.5146109319814215
+      ],
+      "prediction_rho": [
+        1.0,
+        0.9070682092270838,
+        0.5383169185400055,
+        0.07382024801814853
+      ],
+      "rank": 2,
+      "condition": 2.921232582282252,
+      "nfev": 5
+    },
+    {
+      "family": "phase_381611",
+      "available": false,
+      "parameters": [
+        0.5000000000000001,
+        2.9999999999999996
+      ],
+      "active_mask": [
+        -1,
+        1
+      ],
+      "TRAIN_scaled_squared_error": 0.7573052757475143,
+      "CHECK_scaled_squared_error": 30.212979560741136,
+      "target_std": 0.2947213878992707,
+      "prediction_std": 0.23122761036751874,
+      "target_rho": [
+        1.0,
+        0.8954563541799685,
+        0.7258372663186797,
+        0.6287315472029915
+      ],
+      "prediction_rho": [
+        1.0,
+        0.9070682092270882,
+        0.5383169185400228,
+        0.07382024801814782
+      ],
+      "rank": 2,
+      "condition": 2.921232582282219,
+      "nfev": 7
+    }
+  ],
+  "source_adoption": "Not adopted: descriptive TRAIN/CHECK temporal mismatch; no new numerical gate or global impossibility claim.",
+  "new_audio": false,
+  "new_C": false,
+  "figure_viewed": true,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "listening_improvement_claimed": false,
+  "next": "Investigate source-derived temporal shape and phase/amplitude conditioning through the observer, retaining source TRAIN/CHECK variation. The current two-parameter local fit has not matched time structure. No clock/strength/start/bounds/grid sweep or blind gain boost. Later source-forward validation must include actual MIX phase estimator; retain independent75 control if rendering. Pending idle allocation hearing remains separate. Existing idle allocation audition pending/no duplicate;187detail separate; original phase qualifications/full driving/multi-engine/stereo7.1.4 goal active.",
+  "manifest_sha256": "6f079d989c33678cbac77159447865381be0ef7576c7101c4adaf5bab8b99261",
+  "file_count": 65,
+  "bytes": 3571275
+}
