@@ -56,9 +56,13 @@ static HWND item(HWND owner,const wchar_t *kind,const wchar_t *text,DWORD style,
 }
 static void labels(HWND owner) {
     AdControl c=am_audio_get(&audio);wchar_t text[128];int i,playing=am_audio_replaying(&audio),locked=playing||(catalog_mode&&audio.transport==2);
+    int bench=c.drive.mode==VSL_BENCH;
     const AdConfig *cap=catalog_mode?catalog_config():&audio.config;catalog_flags();
     swprintf(text,128,L"油门    %.0f%%",c.drive.throttle*100);SetWindowTextW(label[0],text);
-    swprintf(text,128,L"制动    %.0f%%",c.drive.brake*100);SetWindowTextW(label[1],text);
+    swprintf(text,128,bench?L"台架负载    %+.0f%%":L"制动    %.0f%%",(bench?c.drive.load:c.drive.brake)*100);SetWindowTextW(label[1],text);
+    /* Presentation only: mode/timer changes never write the other input. */
+    SendMessageW(slider[1],TBM_SETRANGEMAX,FALSE,bench?200:100);
+    SendMessageW(slider[1],TBM_SETPOS,TRUE,(int)lround(bench?(c.drive.load+1)*100:c.drive.brake*100));
     swprintf(text,128,L"台架转速    %.0f RPM",c.drive.rpm);SetWindowTextW(label[2],text);
     swprintf(text,128,L"输出    %.0f dB",20*log10(fmax(1e-12,c.mix.gain/.5)));SetWindowTextW(label[3],text);
     swprintf(text,128,L"空间宽度    %.0f%%",c.mix.width*100);SetWindowTextW(label[4],text);
@@ -82,7 +86,7 @@ static void labels(HWND owner) {
     if(auxiliary_index==5&&!audio.config.startup_profile&&!idle_study)EnableWindow(slider[8],FALSE);
     if(auxiliary_index==6&&!audio.config.catch_profile&&!fine_idle_study)EnableWindow(slider[8],FALSE);
     if(catalog_mode)EnableWindow(slider[8],!locked&&dc_aux_enabled(cap,auxiliary_index));
-    for(i=0;i<2;++i)EnableWindow(slider[i],!locked&&c.drive.mode!=VSL_BENCH);
+    EnableWindow(slider[0],!locked&&!bench);EnableWindow(slider[1],!locked);
     EnableWindow(slider[2],!locked&&c.drive.mode==VSL_BENCH);
     EnableWindow(gear,!locked&&c.drive.mode!=VSL_BENCH);
     EnableWindow(slider[4],!locked&&c.mix.spatial);EnableWindow(slider[5],!locked&&c.mix.spatial);
@@ -91,7 +95,7 @@ static void labels(HWND owner) {
     EnableWindow(GetDlgItem(owner,12),!locked);EnableWindow(GetDlgItem(owner,30),!locked);EnableWindow(GetDlgItem(owner,31),!locked);
     EnableWindow(GetDlgItem(owner,14),audio.ready||audio.transport==1);
     if(audio.transport==2||catalog_mode) {
-        int values[8]={(int)(c.drive.throttle*100),(int)(c.drive.brake*100),(int)c.drive.rpm,
+        int values[8]={(int)(c.drive.throttle*100),(int)lround(bench?(c.drive.load+1)*100:c.drive.brake*100),(int)c.drive.rpm,
             (int)(20*log10(fmax(1e-12,c.mix.gain/.5))),(int)(c.mix.width*100),(int)(c.mix.room*100),
             (int)((resonant_study?c.mix.resonant_gain:c.mix.residual_gain)*100),
             (int)((resonant_study==3?c.mix.coherent_low_gain:c.mix.body_mix)*100)};
@@ -109,7 +113,7 @@ static void changed(HWND owner,int index) {
     AdControl c=am_audio_get(&audio);
     int value=(int)SendMessageW(slider[index],TBM_GETPOS,0,0);
     if(index==0)c.drive.throttle=value/100.;
-    else if(index==1)c.drive.brake=value/100.;
+    else if(index==1){if(c.drive.mode==VSL_BENCH)c.drive.load=(value-100)/100.;else c.drive.brake=value/100.;}
     else if(index==2)c.drive.rpm=value;
     else if(index==3)c.mix.gain=.5*pow(10,value/20.);
     else if(index==4)c.mix.width=value/100.;

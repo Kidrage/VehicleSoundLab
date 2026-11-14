@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.bench-load-ui-plan/1",
+  "parent_commit": "09fd4db",
+  "previous_turn": "Progress: fixed B source path rejected and independently audited, source/state evidence archived and committed. No idle promotion.",
+  "problem": "Native RPM bench disables both pedal sliders and exposes no load input, although the shared controller and take already support signed load.",
+  "change": "Reuse existing brake slider as signed load only in RPM bench: positions0..200 map to-1..1. Pedal mode retains0..100 brake and its own stored value. Mode changes and timer refresh must never rewrite either stored control.",
+  "protection": "All sound/DSP/driver/space/take algorithms,646 existing C-H except native UI and its owned checks,74voice parameters,F2,moving35,default values,32controls/schema10 and strict renderer identity stay unchanged. Preserve old windows/builds/takes. No pending hearing migration, strength sweep, downloads, push or automatic higher-chaos research.",
+  "verification": [
+    "Every preset: signed endpoints/interior points, stored brake/load isolation, range/label/enabled state and repeated mode/timer changes",
+    "Actual muted native recording with UI load changes, actual adopted events and resulting shared-driver state; own-window snapshots; replay locks signed axis and follows embedded control",
+    "Save and replay that new take with both current and frozen same-identity player, exact complete WAV and source/output hashes",
+    "Existing66CTest and nine reference renders unchanged; no claims of physical load calibration, timbre acceptance or hard realtime"
+  ],
+  "scope": "One existing user control becomes operable in the same system. Positive/negative bench load is an engineering input, not newly measured throttle or shaft torque. Full goal remains active."
+}

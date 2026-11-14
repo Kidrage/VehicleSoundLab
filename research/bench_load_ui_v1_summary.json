@@ -1,0 +1,146 @@
+{
+  "result": "signed_load_input_operable_in_shared_native_bench",
+  "git_parent": "09fd4db1cf1d5683689e59046b64318d34d4afdf",
+  "C_H_total": 646,
+  "C_H_changed": 2,
+  "C_H_prior_exact": 644,
+  "C_H_added": 0,
+  "voice_parameters_exact": 74,
+  "F2_exact": true,
+  "changed_C_H": [
+    "experiments/atlas_monitor_v1/ui.c",
+    "experiments/catalog_drive_v1/ui_checks.c"
+  ],
+  "DSP_or_driver_changed": false,
+  "sound_model_fit": false,
+  "new_timbre_accepted": false,
+  "default_values_changed": false,
+  "mode_switch_changes_other_axis": false,
+  "renderer_identity_unchanged": true,
+  "render_id": "11ebcfa444c1af7605cc17aa4ac32d3ad48e477c16899937b80bf2dd557c7f01",
+  "take_schema": 10,
+  "take_controls": 32,
+  "distinct_CTests": 66,
+  "native_UI": {
+    "result": "pass",
+    "checks": 442,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 9,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "bench_load": {
+      "frames": 240123,
+      "hash": "4b6fc97418b5b119",
+      "queue_empty": 0,
+      "budget_exceeded": 0
+    },
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 7,
+        "hash": "4089b72afb8354ca",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 8,
+        "hash": "68e8ba33fb3206de",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "actual_bench_control_events": [
+    {
+      "frame": 0,
+      "mode": 0,
+      "load": 0.8,
+      "brake": 0
+    },
+    {
+      "frame": 96256,
+      "mode": 0,
+      "load": -0.6,
+      "brake": 0
+    },
+    {
+      "frame": 144384,
+      "mode": 0,
+      "load": 0.25,
+      "brake": 0
+    },
+    {
+      "frame": 192512,
+      "mode": 0,
+      "load": 0,
+      "brake": 0
+    }
+  ],
+  "actual_bench_frames": 240123,
+  "actual_recording_state_checks": [
+    "RUNNING/FREE REV/.8",
+    "RUNNING/OVERRUN/-.6",
+    "FREE REV/.25"
+  ],
+  "original_nine_WAV_exact": true,
+  "new_bench_native_WAV_replayed_exact": true,
+  "frozen_same_identity_player_verified": true,
+  "new_bench_source_hash_2_12_exact": true,
+  "images_visually_reviewed": 6,
+  "manual_mouse_verified": false,
+  "physical_load_calibrated": false,
+  "physical_7_1_4_verified": false,
+  "hard_realtime_claim": false,
+  "failed_attempts": [],
+  "old_live_windows_and_builds_preserved": true,
+  "pending_idle_and_E_hearing": true,
+  "full_goal": "active",
+  "next": "Source-supported state timbre, accepted idle hearing and independent multi-engine/spatial evidence; no automatic strength or higher-chaos work",
+  "manifest_sha256": "85b6417db0bf3a9f37ac42f70d7521880cc908a603c8ef34a3e9ef4fa331eb01",
+  "file_count": 3142,
+  "bytes": 84307914
+}
