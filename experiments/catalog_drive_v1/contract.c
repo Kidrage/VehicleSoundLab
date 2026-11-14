@@ -11,10 +11,16 @@ int main(void) {
         DcPreset *p=cd_models_load(k);const DcInfo *meta=dc_info(k);AdConfig bad;AdControl c;const AdConfig *cfg;
         CHECK(p&&meta&&meta->key[0]&&meta->title[0]&&meta->scope[0]);cfg=dc_preset_config(p);c=dc_preset_initial(p);
         CHECK(cfg&&cfg->profile==meta->profile&&dc_preset_selection(p)==k&&!c.drive.ignition&&ad_control_supported(cfg,&c));
-        CHECK(cfg->bank->count==(k==DC_STATIONARY5?5u:k==DC_EXTERIOR?4u:k==DC_CABIN?2u:1u));
+        CHECK(cfg->bank->count==(k==DC_STATIONARY5?5u:k==DC_EXTERIOR?4u:k==DC_CABIN?2u:k>=DC_F3_FIRST_LOCAL?3u:1u));
         CHECK((cfg->fine_idle_profile!=NULL)==(k==DC_FINE_IDLE));
         CHECK((cfg->recipe_bank!=NULL)==(k<=DC_MOVING||k==DC_STATIONARY5||k==DC_DECEL||k==DC_F3));
         CHECK(dc_body_enabled(cfg)==(k!=DC_STATIONARY5&&k!=DC_DECEL&&k!=DC_F3));
+        if(k==DC_F3_FIRST_LOCAL||k==DC_F3_SECOND_LOCAL) {
+            CHECK(!cfg->residual_bank&&!cfg->resonant_bank&&!cfg->recipe_bank);
+            CHECK(c.drive.rpm==cfg->bank->profile[1]->base_hz/cfg->root_per_rpm);
+            CHECK(c.mix.body_mix==0&&c.mix.room==0&&c.mix.resonant_gain==0&&c.mix.coherent_low_gain==0);
+            CHECK(cfg->bank->profile[0]->base_hz>60&&cfg->bank->profile[2]->base_hz<68);
+        }
         if(k==DC_F3) {
             CHECK(c.mix.resonant_gain==1&&c.mix.coherent_low_gain==0&&cfg->root_per_rpm==1./120&&cfg->seed==48271);
             CHECK(cfg->bank->profile[0]->base_hz>66&&cfg->bank->profile[0]->base_hz<67);

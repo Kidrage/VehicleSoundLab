@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增`experiments/catalog_drive_v1/F3_local_models.c/.h`：两独立局部库的非实时事务加载／拥有权与原SaBank绑定；`F3_local_checks.c`：原拥有者填污释放后的全帧源契约、同驾驶器2／12干声和状态检查。原DNA／驾驶／空间／owned／take C保持，仅5份目录／装配／检查文件修改，总667C/H。见[F3统一驾驶接入](../research/F3局部声纹接入统一驾驶V1.md)。
+
 新增[局部多锚点离线入口](../experiments/local_atlas_v1/README.md)：`assets.*`拥有和事务装载模型，`schedule.*`验证控制事件，`input.h`拒绝整数溢出，`probe.c`仅调用原SaVoice并导出，`checks.c`与`driver_checks.c`分别核对输入事务和原驾驶器2／12源／六干声／状态。原656C/H全保持，新增8份后664；没有新增DSP／驾驶／空间实现或实时协议。两组三锚点连续控制证据见[F3连续局部声纹库V1](../research/F3连续局部声纹库V1.md)。
 
 新增[带限DNA接入](../research/带限DNA接入V1.md)：`sound_dna/profile.*`和`dna_atlas/bank.*`增加明确选用的非实时接口，接受5–1000Hz并校验全部系数；旧接口与生成tick保持。`experiments/bandlimited_dna_v1`分开维护加载、解析渲染、同驾驶器检查、测试参数和原SaVoice导出宿主。656C/H＝646原样＋4非实时修改＋6新增；高锚点owned／UI尚未迁移。

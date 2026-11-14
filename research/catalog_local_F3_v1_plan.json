@@ -1,0 +1,22 @@
+{
+  "schema": "vsl.catalog-local-F3-plan/1",
+  "parent": "36aa1bb",
+  "previous_goal_turn": "MCPS verification confirmed the existing planning envelope, without synthesis-system progress; resume completed local-bank integration.",
+  "scope": "Append two independently named F3 fifth-gear local triplets to the original native catalog, owned presets and embedded takes. Reuse original source, controller, buses and spatial projection.",
+  "source": "baselines/F3_local_atlas_v1/inputs/models/bank{1,2}_anchor{1,2,3}.model",
+  "preserve": ["Original ten catalog indices and default", "Original DSP/controller/owned/take/spatial C sources", "All 76 old voice files and the three protected F2 files", "Old live builds and players", "Two independent local banks; no refit, extra room, LF or HF, engine-state or physical RPM/load inference"],
+  "catalog": {"append": ["F3 fifth first local", "F3 fifth second local"], "align_orders": 32, "seed": 48271, "root_per_rpm": "1/120 provisional", "initial": "middle acoustic anchor; ignition off; bench; gain0.25; detail1; no added layers"},
+  "verification": [
+    "Six parameter copies exactly match the frozen parent manifest",
+    "NonRT loader rejects null/invalid group transactionally; owns/rebinds all three profiles",
+    "Owned preset survives poisoning/releasing original model owner",
+    "At each actual driver clock, direct SaVoice initialized from the frozen bank agrees with captured DNA raw; local low/mid/high branches all visited; 2/12 six dry buses and drive/DNA state agree",
+    "Complete catalog CTest suite, preserving failed attempts if any",
+    "All ten prior WAVs and source hashes unchanged; current render identity unchanged; both old and new players replay old ten and new twelve self-contained takes",
+    "Native muted own-window UI checks all twelve, dynamic local root traversal while recording, isolated stem monitoring, embedded replay and live-preset restore",
+    "Convert and inspect native screenshots; automatic checks do not imply human hearing or physical7.1.4"
+  ],
+  "not_complete": ["Wide physical RPM/load/state coverage", "Other real engines", "Remaining HF/nonharmonic detail and pending human hearings", "Physical7.1.4", "ADI optimized port/WCET"],
+  "download": false,
+  "push": false
+}

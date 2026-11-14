@@ -4,6 +4,7 @@
 #include "atlas_take/parameters.h"
 #include "io/wav.h"
 #include <commctrl.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,7 +44,7 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
     unsigned checks=0,empty[DC_COUNT]={0},budget[DC_COUNT]={0};uint64_t hashes[DC_COUNT]={0};
     int line=0,ok=0;FILE *report=NULL;wchar_t name[4096];HWND voices=GetDlgItem(w,40),aux=GetDlgItem(w,43),listen_choice=GetDlgItem(w,44);
     AdControl c,live;float *capture_pcm=NULL,*heard=NULL;
-    const int order[]={DC_F3,DC_DECEL,DC_STATIONARY5,DC_FINE_IDLE,DC_MOVING,DC_EXTERIOR,DC_CABIN,DC_SETTLE,DC_WARM,DC_HOLLOW};
+    const int order[]={DC_F3_FIRST_LOCAL,DC_F3_SECOND_LOCAL,DC_F3,DC_DECEL,DC_STATIONARY5,DC_FINE_IDLE,DC_MOVING,DC_EXTERIOR,DC_CABIN,DC_SETTLE,DC_WARM,DC_HOLLOW};
     unsigned visited=0,bench_empty=0,bench_budget=0;uint64_t bench_hash=0;
     char utf8[16384];VslWavWriter wav={0};
     CHECK(sizeof order/sizeof *order==DC_COUNT);
@@ -108,6 +109,7 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
         if(k==DC_STATIONARY5){swprintf(name,4096,L"%ls.stationary.bmp",path);CHECK(capture(w,name));}
         if(k==DC_DECEL){swprintf(name,4096,L"%ls.decel.bmp",path);CHECK(capture(w,name));}
         if(k==DC_F3){swprintf(name,4096,L"%ls.F3.bmp",path);CHECK(capture(w,name));}
+        if(k==DC_F3_FIRST_LOCAL||k==DC_F3_SECOND_LOCAL){swprintf(name,4096,L"%ls.local%u.bmp",path,(unsigned)(k-DC_F3_FIRST_LOCAL));CHECK(capture(w,name));}
         for(int j=0;j<DC_AUX_COUNT;++j) {
             choose(w,aux,j);CHECK(IsWindowEnabled(GetDlgItem(w,28))==dc_aux_enabled(&a->config,j));
             if(dc_aux_enabled(&a->config,j)) {
@@ -122,6 +124,39 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
             SendMessageW(GetDlgItem(w,20),TBM_SETPOS,TRUE,37);
             SendMessageW(w,WM_HSCROLL,TB_THUMBPOSITION,(LPARAM)GetDlgItem(w,20));
             c=am_audio_get(a);CHECK(c.drive.mode==VSL_PEDALS&&c.drive.gear==0&&!c.drive.automatic&&c.drive.throttle==.37);
+        }
+        if(k==DC_F3_FIRST_LOCAL||k==DC_F3_SECOND_LOCAL) {
+            unsigned seen=0;const SaBank *bank=a->config.bank;const int anchor_order[]={0,2,1};
+            /* Start takes0.28+0.65s, then bench RPM follows with tau0.10s
+               and DNA with tau0.018s. First measurement at2s, not1.25s.
+               The total recording remains240123 frames and tolerance0.04Hz. */
+            const unsigned probe_frames[]={96000,144000,192000};
+            axis(w,22,(int)lround(bank->profile[0]->base_hz/a->config.root_per_rpm));
+            CHECK(am_audio_listen_set(a,0)&&am_audio_record(a,1,BENCH_FRAMES));
+            for(unsigned j=0;j<3;++j) {
+                int anchor=anchor_order[j];AdTelemetry t;
+                if(j)axis(w,22,(int)lround(bank->profile[anchor]->base_hz/a->config.root_per_rpm));
+                CHECK(wait_frame(a,probe_frames[j]));t=am_audio_latest(a);
+                {FILE *diagnostic;
+                    swprintf(name,4096,L"%ls.local%u.probes.csv",path,(unsigned)(k-DC_F3_FIRST_LOCAL));
+                    diagnostic=_wfopen(name,j?L"ab":L"wb");CHECK(diagnostic);
+                    if(!j)fputs("anchor,source_frame,lifecycle,rpm,root_hz,expected_root_hz,lower,upper\n",diagnostic);
+                    fprintf(diagnostic,"%d,%llu,%d,%.17g,%.17g,%.17g,%u,%u\n",anchor,(unsigned long long)t.frame,t.lifecycle,t.rpm,t.root_hz,bank->profile[anchor]->base_hz,t.lower,t.upper);
+                    CHECK(!fclose(diagnostic));
+                }
+                CHECK(t.lifecycle==VSL_RUNNING&&fabs(t.root_hz-bank->profile[anchor]->base_hz)<.04);
+                seen|=1u<<t.lower;seen|=1u<<t.upper;
+            }
+            CHECK((seen&7)==7&&wait_end(a,6000));am_audio_stop(a);
+            {WoStats s=wo_stats(&a->device);CHECK(s.opened&&!s.error[0]&&s.frames==BENCH_FRAMES&&a->ready);
+                CHECK(a->take.audio_hash==s.output_hash&&s.output_hash==at_hash_samples(AT_HASH_INITIAL,capture_pcm,BENCH_FRAMES*2));}
+            swprintf(name,4096,L"%ls.local%u.vslrun",path,(unsigned)(k-DC_F3_FIRST_LOCAL));
+            CHECK(WideCharToMultiByte(CP_UTF8,0,name,-1,utf8,sizeof utf8,NULL,NULL)>0&&at_take_save(&a->take,utf8));
+            swprintf(name,4096,L"%ls.local%u.wav",path,(unsigned)(k-DC_F3_FIRST_LOCAL));
+            CHECK(WideCharToMultiByte(CP_UTF8,0,name,-1,utf8,sizeof utf8,NULL,NULL)>0);
+            CHECK(vsl_wav_begin_float(&wav,utf8,48000,2)&&vsl_wav_write(&wav,capture_pcm,BENCH_FRAMES)&&vsl_wav_end(&wav));
+            CHECK(am_audio_replay(a,1)&&wait_end(a,6000));am_audio_stop(a);CHECK(a->replay_result==1);
+            choose(w,voices,k);SendMessageW(w,WM_COMMAND,12,0);
         }
         CHECK(am_audio_listen_set(a,0)&&am_audio_record(a,1,FRAMES));SendMessageW(w,WM_TIMER,1,0);
         CHECK(!IsWindowEnabled(voices)&&IsWindowEnabled(listen_choice)&&!cd_session_commit(session,a,NULL));

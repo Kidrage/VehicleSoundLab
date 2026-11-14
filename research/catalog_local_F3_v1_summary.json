@@ -1,0 +1,171 @@
+{
+  "result": "two_optional_local_F3_banks_in_original_native_driver_and_owned_takes",
+  "git_parent": "36aa1bbe1fcbf7a8e5d7d2f435f074f6eb258bdc",
+  "previous_goal_turn": "MCPS check confirmed existing inventory without synthesis progress; now frozen completed local atlas and integrated it into native driver.",
+  "C_H_total": 667,
+  "C_H_prior_exact": 659,
+  "C_H_changed": 5,
+  "C_H_added": 3,
+  "changed_C_H": [
+    "experiments/catalog_drive_v1/contract.c",
+    "experiments/catalog_drive_v1/models.c",
+    "experiments/catalog_drive_v1/ui_checks.c",
+    "modules/drive_catalog/catalog.c",
+    "modules/drive_catalog/catalog.h"
+  ],
+  "original_voices_exact": 76,
+  "frozen_profiles_copied": 6,
+  "total_voice_files": 82,
+  "F2_exact": true,
+  "DSP_controller_take_owned_spatial_C_changed": false,
+  "presets": 12,
+  "V10_contexts": 10,
+  "analytic_examples": 2,
+  "source_refit": false,
+  "new_real_engines": 0,
+  "new_timbre_accepted": false,
+  "default_changed": false,
+  "source_seed": 48271,
+  "align_orders": 32,
+  "root_mapping": "1/120 engineering hypothesis",
+  "separate_local_roots_Hz": [
+    [
+      61.360802280669525,
+      64.8044371988827,
+      67.95805686190828
+    ],
+    [
+      60.8194356436631,
+      64.01486718231718,
+      67.36432002723924
+    ]
+  ],
+  "CTests": 68,
+  "CTest_sources_unchanged_after_pass_except_native_UI_checker": true,
+  "direct_owned_source_frames_per_bank": 240123,
+  "bank_count": 2,
+  "parameter_owner_poison_and_release": true,
+  "whole_direct_source_clock_contract": true,
+  "source_six_dry_buses_and_driver_state_2_12_exact": true,
+  "native_UI": {
+    "result": "pass",
+    "checks": 619,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 12,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "bench_load": {
+      "frames": 240123,
+      "hash": "4b6fc97418b5b119",
+      "queue_empty": 0,
+      "budget_exceeded": 0
+    },
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 7,
+        "hash": "4089b72afb8354ca",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 8,
+        "hash": "68e8ba33fb3206de",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 9,
+        "hash": "6a25f4526ffd1c2a",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 10,
+        "hash": "a9a35a1927f3ccec",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 11,
+        "hash": "b6891a7deec55bab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "native_dynamic_bank_record_frames": 240123,
+  "native_dynamic_banks": 2,
+  "native_local_probe_max_error_Hz": 0.014123169785364098,
+  "old_ten_WAV_and_source_exact": true,
+  "new_twelve_self_contained_replays": true,
+  "both_old_and_new_players_accept_all_same_identity": true,
+  "render_id": "7d790f43bb7653eabd62d6217d15dc33b3df83dc5ebd3eda836080ce3326d4cf",
+  "take_schema": 10,
+  "take_controls": 32,
+  "native_images_viewed": 9,
+  "manual_mouse": false,
+  "hearing": false,
+  "new_HF_LF_or_room": false,
+  "state_RPM_load_calibrated": false,
+  "high_root_owned_support": false,
+  "physical_7_1_4": false,
+  "ADI_target_port": false,
+  "failures_preserved": [
+    "full1 C4013 lround:missing math.h;full2 adds header only",
+    "host1 first local probe at1.25s before bench settling;host2 moves to2s, same0.04Hz gate and240123frames; adds actual probe CSV"
+  ],
+  "pending_hearings": "F2 and F3 independently pending;no repeated questions or blind strength changes",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "Use source-supported independent wider-root/state observations and separate stereo/nonharmonic detail; integrate through same driver. More real engine families and physical7.1.4 remain incomplete.",
+  "manifest_sha256": "5fda557b3d76557950c062f4a37d7d655ed721218ceef663eacb636f16860015",
+  "file_count": 4135,
+  "bytes": 274924593
+}

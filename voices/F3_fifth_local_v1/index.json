@@ -1,0 +1,57 @@
+{
+  "result": "six_frozen_local_profiles_copied_exactly",
+  "parent": "F3_local_atlas_v1",
+  "parent_manifest_sha256": "7037bb4d8675669f1496972a04153ea0b78fb3fc6a4738f0c8e83192e54ca5c1",
+  "original_76_voice_files_exact": true,
+  "source_refit": false,
+  "profiles": [
+    {
+      "path": "voices/F3_fifth_local_v1/first_early.model",
+      "parent_path": "inputs/models/bank1_anchor1.model",
+      "sha256": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e",
+      "group": "first",
+      "point": "early",
+      "root_hz": 61.360802280669525
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/first_mid.model",
+      "parent_path": "inputs/models/bank1_anchor2.model",
+      "sha256": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+      "group": "first",
+      "point": "mid",
+      "root_hz": 64.8044371988827
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/first_late.model",
+      "parent_path": "inputs/models/bank1_anchor3.model",
+      "sha256": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80",
+      "group": "first",
+      "point": "late",
+      "root_hz": 67.95805686190828
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_early.model",
+      "parent_path": "inputs/models/bank2_anchor1.model",
+      "sha256": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843",
+      "group": "second",
+      "point": "early",
+      "root_hz": 60.8194356436631
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_mid.model",
+      "parent_path": "inputs/models/bank2_anchor2.model",
+      "sha256": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+      "group": "second",
+      "point": "mid",
+      "root_hz": 64.01486718231718
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_late.model",
+      "parent_path": "inputs/models/bank2_anchor3.model",
+      "sha256": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c",
+      "group": "second",
+      "point": "late",
+      "root_hz": 67.36432002723924
+    }
+  ]
+}
