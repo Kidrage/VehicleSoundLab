@@ -1,0 +1,84 @@
+{
+  "schema": "vsl.F3-post-ascent-voices/1",
+  "parent_commit": "269deb8",
+  "previous_goal_turn": "Progress: current source dimensions bound to a reproducible21569 cycle-budget estimate with explicit unmeasured cost assumptions. No optimization or timbre promotion was claimed.",
+  "source": "F3_post_ascent_context",
+  "use": "local_acoustic_voice",
+  "source_seconds": [
+    199.5,
+    205.5
+  ],
+  "pictures": "research/F3_lift_context_v1_annotations.json: all25 originalPTS frames/four boards already viewed before this plan. Do not reinterpret sampled gear changes as calibrated pedal/fuel/AV timing.",
+  "cases": [
+    {
+      "name": "F3 Sixth Before Upshift",
+      "seconds": [
+        199.6,
+        200.5
+      ],
+      "anchor_seconds": 199.65,
+      "center_seconds": 200.1
+    },
+    {
+      "name": "F3 Seventh Slowing",
+      "seconds": [
+        201.3,
+        202.3
+      ],
+      "anchor_seconds": 201.35,
+      "center_seconds": 201.8
+    },
+    {
+      "name": "F3 Near Sixth After Downshift",
+      "seconds": [
+        203.3,
+        204.3
+      ],
+      "anchor_seconds": 203.35,
+      "center_seconds": 203.8
+    }
+  ],
+  "case_policy": "Three independently anchored local acoustic observations, declared now before any new waveform read. Do not force one family across actual gear transitions. Last case is a post-display-transition context, not proven continuous sixth gear or synchronized physical overrun.",
+  "anchor_policy": "Reuse fixed highest-prominence observed100..450Hz peak divided by5 as an acoustic coordinate. One declared anchor per case, no alternate time/window/reference/gate rescue.",
+  "window_ms": 80,
+  "hop": 240,
+  "root_bounds_hz": [
+    20,
+    90
+  ],
+  "reference_multiple": 5,
+  "check_multiples": [
+    2,
+    3,
+    7
+  ],
+  "max_octaves_per_second": 32,
+  "aperture_cycles": 18,
+  "phase_reference": 5,
+  "heldout_orders": [
+    3,
+    7
+  ],
+  "harmonics": 288,
+  "components": 12,
+  "seconds": 8,
+  "seeds": [
+    1,
+    23117,
+    61927
+  ],
+  "gates": {
+    "minimum_observations": 32,
+    "heldout_carrier_coherence": 0.8,
+    "known_phase_cycle_std": 0.002,
+    "output_peak_after_common_gain": 0.95
+  },
+  "failure_policy": "Retain all peak/family/aperture failures and original clips. No profile or C audio for an excluded case. Local carrier gates do not qualify the generic failed36/all17/full33/individual14k/originalE phase extractor or establish physical source separation.",
+  "render_policy": "Only qualified main-DNA profiles use the explicit seeded raw Sound DNA offline host, all3 fixed seeds/8s each. No gain/fade/room in raw export. This is isolated main-line inspection, not finished mechanical timbre or physical engine-state calibration.",
+  "preserve": "Original646C/H,74voice parameters,originalF2,moving35,defaults,UI,driver,takes and old players exact; one added offline C export host makes647C/H. Idle_complex75 hearing remains pending independently. E stereo feedback retained. No push/download, idle migration or blind-strength work. Full goal active.",
+  "render_interface_correction": {
+    "prior_attempt": "fit1 retained byte-for-byte",
+    "defect": "Legacy monitor probe last argument is raw/monitor selector, not seed; all calls used fixed SM_SEED=48271",
+    "action": "New isolated raw host requires explicit seed and chunk, verified against legacy raw at48271. Original source windows, anchors, gates and dimensions unchanged."
+  }
+}

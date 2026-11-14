@@ -1,0 +1,787 @@
+{
+  "result": "one_fixed_local_F3_mainline_two_excluded",
+  "git_parent": "269deb89e61792e2c64087db9fb6149a60baffbc",
+  "original_C_H_exact": 646,
+  "new_offline_C_H": 1,
+  "current_index_C_H": 647,
+  "voice_parameters_exact": 74,
+  "F2_exact": true,
+  "runtime_changed": false,
+  "default_changed": false,
+  "new_event_or_state_mapping": false,
+  "new_room": false,
+  "source_seconds": [
+    199.5,
+    205.5
+  ],
+  "original_PTS_frames": 25,
+  "contact_sheets_previously_viewed": 4,
+  "qualified": 1,
+  "excluded": 2,
+  "root_hz": 66.78588355389799,
+  "acoustic_gates_unchanged": true,
+  "physical_RPM_or_load": false,
+  "new_seed_protocol": "vsl.sound-dna-raw-export/1",
+  "corrected_render_interface": {
+    "original_attempt": "fit1",
+    "original_report_sha256": "2555a27b44c21a030f801e197fb2e8425bf4366bc8de1e7ff694c0b7eb00d590",
+    "actual_legacy_seed": 48271,
+    "legacy_argument6": "raw if first character is 1; otherwise monitor output",
+    "original_DNA1_is_fixed_seed_raw": true,
+    "other_two_are_same_fixed_seed_monitor": true,
+    "old_seed_labels_invalid": true,
+    "local_extraction_and_gates_unaffected": true,
+    "raw_audio_sample_parity": true,
+    "attempt_preserved": true
+  },
+  "build_checks": {
+    "result": "passed",
+    "sources": {
+      "tools/build_sound_dna_export_v1.py": "0ca70a7e2e3c7d5585a5e4b360508d0954726f838858b1c8e5a78b6d99964dc0",
+      "experiments/sound_dna_export_v1/probe.c": "bd0a95409f125d52e3aafb3dfc1a0793d60fc86a678afa5cbd2732b0edf65580",
+      "experiments/sound_dna_export_v1/CMakeLists.txt": "acfd44cadd567207baaf0605b0696cbe2e32d2c24f51ae83d8c0177a17e0b646",
+      "src/io/wav.c": "bdf21adcc64635f8862043dd156c18fa270a18f58f173701fe8bb53d25ce3be0",
+      "src/io/wav.h": "0b70d11d0d5586168642e39beb102db1236d0dca96ae28ff3d2a675c6f722406",
+      "src/io/file.c": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8",
+      "src/io/file.h": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477",
+      "modules/sound_dna/CMakeLists.txt": "fac886357de3e4ec2af1f56da2403a325add2545063ade2167da97c669189fc0",
+      "modules/sound_dna/oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+      "modules/sound_dna/oscillator.h": "46897bb43696cbb27ef052f4f50d0a8498492e73942341e11a23c3ff409b6c92",
+      "modules/sound_dna/profile.c": "a4fb7e89cdbc88fb3ba94414c53694e4ee267d6d49dd1088e4fe486a4a2a97f7",
+      "modules/sound_dna/profile.h": "cc748aac70e297eea04ef4075631f37c93204921fcd3085dcb42fa8bfd1f397c",
+      "modules/sound_dna/README.md": "4bb022c80cb82aebb38ea121627240664f4e1edb522f7a00c3c7687d42a70a98",
+      "modules/sound_dna/texture.c": "cb17bfb003c4ccfb87fe5e3ce5f1cc7ae4c3dc8a3970ec17d1120739769bf746",
+      "modules/sound_dna/texture.h": "25311f8a7215188bee05e6aa390bb84801af7fb6fb9596bc6ac0455527fac4f6",
+      "modules/sound_dna/voice.c": "360ed4efd0bf1c0eb3f6e7d28d24c3e6a852ac22e09c7b6b3909105ad882302c",
+      "modules/sound_dna/voice.h": "23dbb55a701471ac6522d9c28c5903eeff755168acad53094eeb0b2f05d492b8"
+    },
+    "commands": [
+      {
+        "argv": [
+          "cmake",
+          "-S",
+          "E:\\VehicleSoundLab-Git\\experiments\\sound_dna_export_v1",
+          "-B",
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1",
+          "-G",
+          "Visual Studio 17 2022",
+          "-A",
+          "x64"
+        ],
+        "exit_code": 0,
+        "log": "configure.log"
+      },
+      {
+        "argv": [
+          "cmake",
+          "--build",
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1",
+          "--config",
+          "Release",
+          "--parallel",
+          "2"
+        ],
+        "exit_code": 0,
+        "log": "compile.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "--describe"
+        ],
+        "exit_code": 0,
+        "log": "protocol.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\legacy_seed48271.wav",
+          "8",
+          "1",
+          "1",
+          "48271",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "legacy_parity.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed1_chunk512.wav",
+          "0.25",
+          "1",
+          "1",
+          "1",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "seed1_chunk512.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed1_chunk37.wav",
+          "0.25",
+          "1",
+          "1",
+          "1",
+          "37"
+        ],
+        "exit_code": 0,
+        "log": "seed1_chunk37.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\static1.wav",
+          "0.25",
+          "1",
+          "0",
+          "1",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "static1.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed23117_chunk512.wav",
+          "0.25",
+          "1",
+          "1",
+          "23117",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "seed23117_chunk512.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed23117_chunk37.wav",
+          "0.25",
+          "1",
+          "1",
+          "23117",
+          "37"
+        ],
+        "exit_code": 0,
+        "log": "seed23117_chunk37.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\static23117.wav",
+          "0.25",
+          "1",
+          "0",
+          "23117",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "static23117.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed61927_chunk512.wav",
+          "0.25",
+          "1",
+          "1",
+          "61927",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "seed61927_chunk512.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\seed61927_chunk37.wav",
+          "0.25",
+          "1",
+          "1",
+          "61927",
+          "37"
+        ],
+        "exit_code": 0,
+        "log": "seed61927_chunk37.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\static61927.wav",
+          "0.25",
+          "1",
+          "0",
+          "61927",
+          "512"
+        ],
+        "exit_code": 0,
+        "log": "static61927.wav.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\invalid0.wav",
+          "0.25",
+          "1",
+          "1",
+          "0",
+          "512"
+        ],
+        "exit_code": 1,
+        "log": "invalid0.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\invalid1.wav",
+          "0.25",
+          "1",
+          "1",
+          "-1",
+          "512"
+        ],
+        "exit_code": 1,
+        "log": "invalid1.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\invalid2.wav",
+          "0.25",
+          "1",
+          "1",
+          "+1",
+          "512"
+        ],
+        "exit_code": 1,
+        "log": "invalid2.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\invalid3.wav",
+          "0.25",
+          "1",
+          "1",
+          "1x",
+          "512"
+        ],
+        "exit_code": 1,
+        "log": "invalid3.log"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab-Git\\build-sound-dna-export-v1\\bin\\Release\\sound_dna_export.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\F3 Sixth Before Upshift\\voice.model",
+          "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\invalid4.wav",
+          "0.25",
+          "1",
+          "1",
+          "18446744073709551616",
+          "512"
+        ],
+        "exit_code": 1,
+        "log": "invalid4.log"
+      }
+    ],
+    "exe_sha256": "20e4844a943a2a0a696e00e0f0df1d09900841f6d914d8ba2238ac27576bf7f6",
+    "model_sha256": "8637d26b37d59f30cfc83e8e848d3a9bfcd913d74609a4ec607c668baa9caedd",
+    "correction": {
+      "original_attempt": "fit1",
+      "original_report_sha256": "2555a27b44c21a030f801e197fb2e8425bf4366bc8de1e7ff694c0b7eb00d590",
+      "actual_legacy_seed": 48271,
+      "legacy_argument6": "raw if first character is 1; otherwise monitor output",
+      "original_DNA1_is_fixed_seed_raw": true,
+      "other_two_are_same_fixed_seed_monitor": true,
+      "old_seed_labels_invalid": true,
+      "local_extraction_and_gates_unaffected": true,
+      "raw_audio_sample_parity": true,
+      "attempt_preserved": true
+    },
+    "same_seed_chunk_exact": true,
+    "three_seeds_distinct": true,
+    "zero_detail_seed_independent": true,
+    "invalid_seed_rejected_before_output": true,
+    "protected_C_H_exact": 646,
+    "protected_voice_parameters_exact": 74,
+    "added_C_H": 1,
+    "runtime_changed": false,
+    "previous_CTests_not_repeated": true
+  },
+  "audit": {
+    "result": "passed",
+    "sources": {
+      "tools/audit_F3_lift_voice_v1.py": "7fdc1848d46724b7051d496568d63c898574cad30fece94f8c40ab17e2f91f97",
+      "tools/idle_texture_v1/profile.py": "351a5e39563cea393bbe83ab02b5b8d869d3d7a967b8f6a8c4bad550f7d15475",
+      "tools/sustain_osc_v1/oracle.py": "d7b903a2791e446eca210766e1067cec1167bd05d0b7e846e101d6d29b4d205f",
+      "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039"
+    },
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\report.json": "c691d8ba2b46cb275a216d9ca3858dcd236aa7b4dd023ff136275190986e8341",
+      "E:\\VehicleSoundLab-Git\\research\\F3_lift_voice_v1_plan.json": "feb7dfbc2c3a60129cc50f0089bfadabe61565522b5e4010dc90a2073aad79e0",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit1\\report.json": "2555a27b44c21a030f801e197fb2e8425bf4366bc8de1e7ff694c0b7eb00d590",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\build1\\report.json": "83020afad3f992524a4bd7e5ee99ac08aa8ca0d132f830065d8ccf616a7cc65b",
+      "E:\\VehicleSoundLab\\references\\segments_v1.json": "3d4190c20278bd989d1c9c099678caa2b66cc5d4cce70e4edf2560245f9094fa",
+      "E:\\VehicleSoundLab\\references\\raw\\state_media_v1\\F3_fetch2\\F3_QUWTsk9crlo.mkv": "18042dee4059965f228d8f40e96454f4977088d27d59500a7970fbd936ab82bf",
+      "E:\\VehicleSoundLab\\references\\analysis\\state_media_v1\\F3_inspect1\\native_reference.wav": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\native_context.wav": "1f6fb07544dfaefbb92a80cf5c7ddf4caef93dd75d76053954373cb593aef753",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\native.wav": "04f136ae3112fb3ae1e615101a814578507a7874971723002499aa866df2d735",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\observed.npz": "ed03debb5f9d6ec98ac7067416a76a56a9a392dc6f81de4a17a7a6cba734d8cc",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\normalized.wav": "0411ff228939dcf763e13e27aa49e427639538ebaf20bd086325d5e9d309240d",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\coordinates.npz": "63ef97cb3277324d995c8c2a6053148a87bc265b61634c54b764a432f80299c7",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\voice.model": "8637d26b37d59f30cfc83e8e848d3a9bfcd913d74609a4ec607c668baa9caedd",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\DNA_1.wav": "d5a63c31c82fdcf7f774bf3694b2b98b4919e860dee8491cd3b22ebdb2d9c28b",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\DNA_23117.wav": "a3aa02e70964397354bab0902b31cd2f562318f2a7fa2ffc0dc844e9576ac5cf",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Sixth Before Upshift\\DNA_61927.wav": "50baad84d67442500e58994bbc031730119de32cdf46630a4c3b4dc14216b6e9",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Seventh Slowing\\native.wav": "0f555d897744be5ab83b5ac5ab8066f7abfd1d4a01990e821e978ff3d7c7ffc3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Seventh Slowing\\observed.npz": "237dd75f2082a1e71cb76a21df6ef0e5971e5b634c819c7d9c7099b1d1dc8a60",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Seventh Slowing\\normalized.wav": "3ff8d343e2e8ef761e56a320243d3d1fa125391822f3da064fa4ee96bacdcaa3",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Seventh Slowing\\coordinates.npz": "66cb6f242f6707ba12889488c59e59f3fe27044dfca7a6bba4ba4ab7ae11e74b",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Near Sixth After Downshift\\native.wav": "9d152bbfc46733183a0c16b0ac165387de1f0ed657834be353a10fbab890a22d",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Near Sixth After Downshift\\observed.npz": "07029d85f5bcb57d136a6b8622ee0c2ee687492a30823789f26a64f8de05ed34",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Near Sixth After Downshift\\normalized.wav": "e3b09fe0b91e2f8d1af446b6aeb840a2aee07d2e7c02d59679b944a95b6cb717",
+      "E:\\VehicleSoundLab\\references\\analysis\\F3_lift_voice_v1\\fit2\\F3 Near Sixth After Downshift\\coordinates.npz": "2cddac6a40d15f5e02d088aa47c6df3113c2fe439b85105e8f665383800a4d93",
+      "E:\\VehicleSoundLab\\baselines\\bench_load_ui_v1\\inputs\\C_files_sha256.json": "3be5651f0742fb5c5b6ea690e853a50484da6165b5e00fb13e0ea9f6c457ab00",
+      "E:\\VehicleSoundLab\\baselines\\bench_load_ui_v1\\inputs\\voice_files_sha256.json": "ec273d21b1ab7bf351259a929b740ed31a116c6ae292b56f4520d9a1fbd39e89"
+    },
+    "cases": [
+      {
+        "name": "F3 Sixth Before Upshift",
+        "frames": 165,
+        "direct_power_error": 1.734723475976807e-18,
+        "direct_band_error": 8.326672684688674e-17,
+        "direct_cross_error": 2.797157557069881e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "normalized_reconstruction_error_FS": 5.7238451534047385e-08,
+        "direct_carrier_error": 2.220446049250313e-16,
+        "heldout_coherence": {
+          "3": [
+            0.8755354468346878,
+            0.856310148043711
+          ],
+          "7": [
+            0.9847343350208722,
+            0.9740510437954419
+          ]
+        },
+        "qualified": true,
+        "model_mean_error": 7.232648200687162e-15,
+        "residual_covariance_error": 1.2705494208814505e-20,
+        "seeded_C_sparse_sample_errors_FS": [
+          2.7628879961660857e-08,
+          2.114141595122021e-08,
+          2.557860312446536e-08
+        ],
+        "three_seeds_distinct": true
+      },
+      {
+        "name": "F3 Seventh Slowing",
+        "frames": 185,
+        "direct_power_error": 1.3010426069826053e-18,
+        "direct_band_error": 8.326672684688674e-17,
+        "direct_cross_error": 4.163562211670007e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "normalized_reconstruction_error_FS": 2.9797773914985726e-08,
+        "direct_carrier_error": 6.661338147750939e-16,
+        "heldout_coherence": {
+          "3": [
+            0.9790868601696091,
+            0.980206598134396
+          ],
+          "7": [
+            0.5524893809203307,
+            0.5113992924807939
+          ]
+        },
+        "qualified": false
+      },
+      {
+        "name": "F3 Near Sixth After Downshift",
+        "frames": 185,
+        "direct_power_error": 2.6020852139652106e-18,
+        "direct_band_error": 8.326672684688674e-17,
+        "direct_cross_error": 2.797157557069881e-17,
+        "path_root_error_hz": 1.4210854715202004e-14,
+        "normalized_reconstruction_error_FS": 2.9782687094304094e-08,
+        "direct_carrier_error": 4.440892098500626e-16,
+        "heldout_coherence": {
+          "3": [
+            0.8296249518104872,
+            0.751695280767482
+          ],
+          "7": [
+            0.926477375668042,
+            0.9096223824729857
+          ]
+        },
+        "qualified": false
+      }
+    ],
+    "known_before_source": {
+      "power_error_FS2": 0.0,
+      "signed_cross": true,
+      "carrier": true
+    },
+    "frames_checked": 535,
+    "protected_C_H_exact": 646,
+    "protected_voice_parameters_exact": 74,
+    "new_offline_C_H": 1,
+    "source_gates_unchanged": true,
+    "original_fit1_preserved": true,
+    "human_hearing": false,
+    "physical_RPM_or_load": false,
+    "runtime_changed": false
+  },
+  "browser": {
+    "result": "passed",
+    "clips": 7,
+    "single_player": true,
+    "paused_switch": true,
+    "muted": true,
+    "hearing": false,
+    "duration_and_seek": true,
+    "mobile_overflow": false,
+    "errors": []
+  },
+  "source_review_url": "http://127.0.0.1:8789/references/analysis/F3_lift_voice_v1/review1/index.html",
+  "audition_clips": 7,
+  "source_and_browser_images_viewed": 3,
+  "all_attempts_preserved": [
+    "context_inspect1",
+    "inputs",
+    "fit1",
+    "build1",
+    "fit2",
+    "audit1",
+    "audit2",
+    "audit3",
+    "review1",
+    "browser1"
+  ],
+  "failed_attempt_reasons": [
+    "fit1 mislabeled legacy output-selector as seed; extraction unaffected",
+    "audit1 finite real-tone opposite-frequency leakage invalidated exact analytic cross reference before source read",
+    "audit2 fixed3e-8FS tolerance failed FLOAT rounding above1FS; audit3 uses exact FLOAT sample equality"
+  ],
+  "spectral_diagnostics": {
+    "bands_hz": [
+      [
+        28,
+        120
+      ],
+      [
+        120,
+        400
+      ],
+      [
+        400,
+        1200
+      ],
+      [
+        1200,
+        3000
+      ],
+      [
+        3000,
+        8000
+      ],
+      [
+        8000,
+        14000
+      ]
+    ],
+    "raw_LR_powers": {
+      "original": [
+        [
+          0.042930184654465915,
+          0.040514701128026076
+        ],
+        [
+          0.07407554381720795,
+          0.07550320580323754
+        ],
+        [
+          0.011150016236907567,
+          0.006774559355219889
+        ],
+        [
+          0.0009280292162450684,
+          0.0005387579186025746
+        ],
+        [
+          4.455218085586098e-05,
+          2.9628350622141985e-05
+        ],
+        [
+          2.477492673989824e-07,
+          8.004649456723412e-08
+        ]
+      ],
+      "reference": [
+        [
+          0.03930605375535766,
+          0.03741521129473177
+        ],
+        [
+          0.08633095090404148,
+          0.08630774999876027
+        ],
+        [
+          0.01112371946440313,
+          0.006990299938037199
+        ],
+        [
+          0.0008728349111878444,
+          0.0005403418160252795
+        ],
+        [
+          4.3907230428927436e-05,
+          2.8165890466670986e-05
+        ],
+        [
+          2.400240132546843e-07,
+          7.855084377379734e-08
+        ]
+      ],
+      "seed1": [
+        [
+          0.007330630225274834,
+          0.007172268802554229
+        ],
+        [
+          0.05701726064728837,
+          0.060052765195902115
+        ],
+        [
+          0.009328442368942945,
+          0.00593385145378551
+        ],
+        [
+          0.0005447772151013452,
+          0.0004014104411782873
+        ],
+        [
+          1.909488275282751e-05,
+          1.187422467101324e-05
+        ],
+        [
+          8.291774383570254e-08,
+          2.903188407394183e-08
+        ]
+      ],
+      "seed23117": [
+        [
+          0.00808548106093925,
+          0.008065263966977154
+        ],
+        [
+          0.06027832506381096,
+          0.06327737564382367
+        ],
+        [
+          0.009617791795737487,
+          0.006132840809088684
+        ],
+        [
+          0.0005848948313026979,
+          0.00040982721294898823
+        ],
+        [
+          2.089496293009812e-05,
+          1.3531498138855072e-05
+        ],
+        [
+          9.374373348340954e-08,
+          3.1689290752085305e-08
+        ]
+      ],
+      "seed61927": [
+        [
+          0.00760412403589103,
+          0.0076253451236166815
+        ],
+        [
+          0.05943046490568323,
+          0.06200265280158723
+        ],
+        [
+          0.009632491441154176,
+          0.006195812702156736
+        ],
+        [
+          0.000591738311583635,
+          0.00042518773773862523
+        ],
+        [
+          2.3197919204331027e-05,
+          1.488765822297146e-05
+        ],
+        [
+          1.0355983797569055e-07,
+          3.596058234563267e-08
+        ]
+      ],
+      "slowing": [
+        [
+          0.05356423135415728,
+          0.04996960842765414
+        ],
+        [
+          0.03934296646722336,
+          0.03509755713017087
+        ],
+        [
+          0.0037008089724622616,
+          0.002140187448976394
+        ],
+        [
+          0.0005353142693790549,
+          0.0002487172666302007
+        ],
+        [
+          3.469094187942273e-05,
+          2.502697313418655e-05
+        ],
+        [
+          2.1290055911180443e-07,
+          8.321061899698692e-08
+        ]
+      ],
+      "after": [
+        [
+          0.0471258962509741,
+          0.044273260868336925
+        ],
+        [
+          0.05350496353477449,
+          0.049029154594183603
+        ],
+        [
+          0.002922062338919739,
+          0.0019140921366395962
+        ],
+        [
+          0.0006206856657594913,
+          0.00026645183104478465
+        ],
+        [
+          3.361791399447146e-05,
+          2.3025186452858802e-05
+        ],
+        [
+          1.855057125026907e-07,
+          6.539956252794444e-08
+        ]
+      ]
+    },
+    "generated_vs_short_fixed_reference_db": {
+      "seed1": [
+        [
+          -7.293181305673925,
+          -7.173916444552501
+        ],
+        [
+          -1.8016017642039368,
+          -1.5751678514232428
+        ],
+        [
+          -0.7644089479433293,
+          -0.7115914062197084
+        ],
+        [
+          -2.04713173364623,
+          -1.2907991323262191
+        ],
+        [
+          -3.6161904758713597,
+          -3.751182241298922
+        ],
+        [
+          -4.616072163973846,
+          -4.3227563345330715
+        ]
+      ],
+      "seed23117": [
+        [
+          -6.8675357958142635,
+          -6.66429616229693
+        ],
+        [
+          -1.560053483368481,
+          -1.348013359104085
+        ],
+        [
+          -0.6317465629419501,
+          -0.5683411894628448
+        ],
+        [
+          -1.738543250744854,
+          -1.2006778544007426
+        ],
+        [
+          -3.2249443863668272,
+          -3.1837760389770144
+        ],
+        [
+          -4.0831244701985785,
+          -3.9423833526667993
+        ]
+      ],
+      "seed61927": [
+        [
+          -7.134102514461206,
+          -6.907886974948104
+        ],
+        [
+          -1.6215739691382038,
+          -1.4363952359889924
+        ],
+        [
+          -0.6251139580574774,
+          -0.5239753007043082
+        ],
+        [
+          -1.6880242040127431,
+          -1.0408784692829711
+        ],
+        [
+          -2.7708701212932225,
+          -2.768970959321299
+        ],
+        [
+          -3.650633306823007,
+          -3.3932413840277786
+        ]
+      ]
+    },
+    "scope": "Descriptive training snapshot, not held-out realism or transient/state coverage. Spectral residual includes environmental/inharmonic sources, not a physical noise allocation."
+  },
+  "new_listening_acceptance": false,
+  "old_CTests_not_repeated": "Original runtime/646C-H unchanged; isolated new offline host built and checked",
+  "idle_complex75_hearing": "independently pending, no migration or blind strengths",
+  "E_stereo_feedback": "左右关系有改善，音色仍明显电子",
+  "full_goal": "active",
+  "next": "Analyze F3 local residual and joint stereo detail from this fixed source; no physical state mapping or moving35 transfer without evidence",
+  "manifest_sha256": "9681f126acd9f37625dfbf741049941cb110dbda101d76ea29cb30753bc10881",
+  "file_count": 262,
+  "bytes": 99953357
+}

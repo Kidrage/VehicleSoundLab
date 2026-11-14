@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增离线宿主[`sound_dna_export_v1/probe.c`](../experiments/sound_dna_export_v1/probe.c)：只负责严格解析显式seed／块长、调用原`sd_voice_init/process`和写FLOAT WAV，无设备、驾驶器或DSP新实现。旧`sustain_monitor_v3/probe.c`末参是raw／monitor选择，种子固定48271，不能当seed传入。[F3接口修正与证据](../research/F3后加速局部声线V1.md)。原646C/H保持，新增1份后索引647；74声音参数与F2保持。
+
 本次[台架负载原生控制V1](../research/台架负载原生控制V1.md)仅修改`atlas_monitor_v1/ui.c`和`catalog_drive_v1/ui_checks.c`。台架将原制动轴绑定至已有`AdInput.load`，驾驶仍绑定`brake`，定时刷新只读；同一控制器／录放/DSP不变。646份C/H中644份原样、74参数与F2保持；渲染器身份和schema10／32不变，新增原生实际负载切换行程／冻结播放器核查。
 
 本次[减速双声道配方接入V1](../research/减速双声道配方接入V1.md)：`drive_recipe/bank.c`允许已验证Rvs与原功率撤出公式组合；新增`catalog_drive_v1/decel_models.*`仅非实时装载冻结参数，`recipe_checks.c`作独立公式／直接声核／损坏拒绝／零量检查。646份C/H索引：6改、637旧字节保持、3增；原72参数保持，新增2份E冻结参数。默认不变，严格DSP身份更新而schema10／32字段不变；旧行程用冻结旧播放器。F2候选仍待听，无自动收油映射。

@@ -663,6 +663,30 @@
         "physical noise-source separation",
         "accepted synthesis timbre / phase extractor qualification"
       ]
+    },
+    "F3_post_ascent_context": {
+      "source": "F3",
+      "seconds": [
+        199.5,
+        205.5
+      ],
+      "perspective": "Tecnica cabin, second motorway passage after ascent",
+      "visual": "25 originalPTS frames199.5..205.5:dominant6to7 bracket200.5..200.75;7to6 display202.75..203.25;overlay gone204. Three distinct contexts, not one calibrated overrun cell.",
+      "audio_interpretation": "New local observations not yet heard or fitted. Approval coversF3; existing prior short acceleration clips judged fairly clear with some wind.",
+      "allowed_uses": [
+        "source_usability_review",
+        "recording_power",
+        "fixed_window_spectral_observation",
+        "state_context",
+        "local_acoustic_voice"
+      ],
+      "not_established": [
+        "exact RPM/pedal/torque/fueling or calibrated load",
+        "precise AV or instrument timing",
+        "continuous physical gear outside sampled display observations",
+        "physical source separation or accepted timbre",
+        "generic shared-phase extractor qualification"
+      ]
     }
   },
   "superseded_for_calibration": [
