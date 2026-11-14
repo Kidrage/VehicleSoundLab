@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.voice-provenance/1",
+  "status": "experimental; human listening pending",
+  "source": "Approved E first Corsa cabin slowing context, fixed52.25s aperture",
+  "frozen_parent": "baselines/E_decel_source_v1",
+  "parent_manifest_sha256": "71ad4c38702ea28a2db8608f7aa9e67ef532253593a88b8720c01f1f54b5f7a8",
+  "files": {
+    "E slowing cabin.model": "Exact copy of evidence/fit2/E Decel Earlier/voice.model; original, not pre-attenuated",
+    "E slowing cabin.sres": "Exact copy of evidence/stereo1/E slowing cabin.sres"
+  },
+  "recipe": {"power_reduction": 0.35, "transition_hz": [1200,1900], "separate_low": false},
+  "scope": "Single acoustic anchor56.02318449591488Hz; engineering1/120Hz-per-RPM mapping, not measured RPM/load, independent source separation or automatic overrun state voice. Cabin/microphone response remains potentially embedded.",
+  "room_added": false,
+  "PCM_timeline": false
+}

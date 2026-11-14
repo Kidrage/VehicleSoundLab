@@ -31,6 +31,9 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
     unsigned checks=0,empty[DC_COUNT]={0},budget[DC_COUNT]={0};uint64_t hashes[DC_COUNT]={0};
     int line=0,ok=0;FILE *report=NULL;wchar_t name[4096];HWND voices=GetDlgItem(w,40),aux=GetDlgItem(w,43),listen_choice=GetDlgItem(w,44);
     AdControl c,live;float *capture_pcm=NULL,*heard=NULL;
+    const int order[]={DC_DECEL,DC_STATIONARY5,DC_FINE_IDLE,DC_MOVING,DC_EXTERIOR,DC_CABIN,DC_SETTLE,DC_WARM,DC_HOLLOW};
+    unsigned visited=0;
+    CHECK(sizeof order/sizeof *order==DC_COUNT);
     CHECK(voices&&aux&&SendMessageW(voices,CB_GETCOUNT,0,0)==DC_COUNT+1&&SendMessageW(aux,CB_GETCOUNT,0,0)==DC_AUX_COUNT);
     CHECK(dc_preset_selection(session->preset)==DC_FINE_IDLE&&!a->device.running&&!am_audio_get(a).drive.ignition);
     swprintf(name,4096,L"%ls.default.bmp",path);CHECK(capture(w,name));
@@ -39,13 +42,14 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
     /* Test the new observation first; retain Hollow as the last recording
        so the existing cross-profile embedded-replay test still tests SCIFI. */
     for(int pass=0;pass<DC_COUNT;++pass) {
-        int k=pass==0?DC_STATIONARY5:pass-1;
+        int k=order[pass];CHECK(k>=0&&k<DC_COUNT&&!(visited&(1u<<k)));visited|=1u<<k;
         choose(w,voices,k);c=am_audio_get(a);
         CHECK(dc_preset_selection(session->preset)==k&&!a->device.running&&!c.drive.ignition&&a->transport==0);
         CHECK(a->config.profile==dc_info(k)->profile&&IsWindowEnabled(voices));
         CHECK(IsWindowEnabled(GetDlgItem(w,26))==(a->config.resonant_bank||a->config.residual_bank));
         CHECK(IsWindowEnabled(GetDlgItem(w,27))==dc_body_enabled(&a->config));
         if(k==DC_STATIONARY5){swprintf(name,4096,L"%ls.stationary.bmp",path);CHECK(capture(w,name));}
+        if(k==DC_DECEL){swprintf(name,4096,L"%ls.decel.bmp",path);CHECK(capture(w,name));}
         for(int j=0;j<DC_AUX_COUNT;++j) {
             choose(w,aux,j);CHECK(IsWindowEnabled(GetDlgItem(w,28))==dc_aux_enabled(&a->config,j));
             if(dc_aux_enabled(&a->config,j)) {
@@ -72,6 +76,7 @@ int cd_ui_check(HWND w,AmAudio *a,CdSession *session,const wchar_t *path) {
         CHECK(a->replay_result==1&&a->canonical_hash==hashes[k]);
         if(k==DC_HOLLOW){SendMessageW(w,WM_TIMER,1,0);swprintf(name,4096,L"%ls.replay.bmp",path);CHECK(capture(w,name));}
     }
+    CHECK(visited==(1u<<DC_COUNT)-1);
     /* Replay a synthetic embedded take while live preset is the V10 fine idle. */
     choose(w,voices,DC_FINE_IDLE);live=am_audio_get(a);cd_session_before_replay(session,a);
     CHECK(a->config.fine_idle_profile&&am_audio_replay(a,1));SendMessageW(w,WM_TIMER,1,0);

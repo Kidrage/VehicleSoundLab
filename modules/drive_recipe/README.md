@@ -17,7 +17,7 @@ envelope are independent. Internal statistics keep advancing while muted.
 
 The new adapter has no runtime allocation, file I/O, room, device or controller.
 `atlas_drive` handles envelopes/mixing/routing; `atlas_take` owns all parameters
-and `atlas_take_io` serializes them in schema8. The native host uses its existing
+and `atlas_take_io` serializes them in schema10. The native host uses its existing
 sliders, record/save/load controls and the same driver.
 
 The retained real recipe is one exterior acoustic anchor at46.875Hz,7 LF
@@ -25,3 +25,11 @@ harmonics, original scale1.6658265329883064 and the unchanged moving_35 detail.
 The .9–1.1 support is an engineering fade, not measured RPM/load coverage.
 No new warm-idle/acceleration or multi-engine timbre acceptance follows from
 the three-seed recipe oracle and synthetic two-anchor reuse checks.
+
+The validator also accepts a validated `DRS_STEREO` joint-channel detail anchor.
+The harmonic withdrawal law is kernel independent; zero detail or no local
+support restores the original DNA for either kind. Missing, disabled, unknown,
+mismatched or uncertified detail is rejected transactionally. The optional E
+cabin catalog recipe uses this combination without a separate LF profile.
+This validator change updates the strict renderer fingerprint; it does not
+change tick algorithms, the take schema or previously accepted moving audio.

@@ -1,5 +1,7 @@
 # Vehicle Sound Lab
 
+新增[减速双声道配方接入](research/减速双声道配方接入V1.md)：统一窗口追加一个可选E车内候选，沿用原驾驶／分层／录放链。九项为七个V10情境＋两个解析示例，未自动绑定收油状态，默认和已认可行驶35%保持。怠速节奏候选仍在[原版／候选／原声页](http://127.0.0.1:8789/references/analysis/idle_complex75_v1/review1/index.html)待听，未替换C默认。
+
 新增[减速声线与双声道细节试听](http://127.0.0.1:8789/references/analysis/E_decel_source_v1/review2/index.html)：从批准E车内减速语境提取一个56.023Hz声线，以原C核持续生成；同一DNA／35%撤出量下比较原细节和左右联合细节。候选尚未接驾驶状态，实时入口保持下述统一窗口。[参数、模块和限制](research/E减速声线与双声道细节V1.md)／[归档摘要](research/E_decel_source_v1_summary.json)。一处后续源窗未通过而排除；新听评与F2怠速听评分别等待，不据频谱／互谱接近宣称音色完成。
 
 新增[驻车声线接入统一窗口](research/驻车声线接入统一窗口V1.md)：运行 `Launch-Voice-Catalog.cmd`，选“V10 · 驻车中间声线＋共振（试验）”，即可用转速台架或模拟驾驶操作原五锚点候选，并分层监听、录制及回放。新项未配置独立低频层，对应滑条禁用；DNA自身低频照常生成。65项CTest、244项原生静音检查通过，原七项输出保持一致；[验证与归档](research/catalog_bridge_v1_summary.json)。音色待听，完整工况与多发动机仍未完成。

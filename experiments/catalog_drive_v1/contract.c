@@ -13,8 +13,13 @@ int main(void) {
         CHECK(cfg&&cfg->profile==meta->profile&&dc_preset_selection(p)==k&&!c.drive.ignition&&ad_control_supported(cfg,&c));
         CHECK(cfg->bank->count==(k==DC_STATIONARY5?5u:k==DC_EXTERIOR?4u:k==DC_CABIN?2u:1u));
         CHECK((cfg->fine_idle_profile!=NULL)==(k==DC_FINE_IDLE));
-        CHECK((cfg->recipe_bank!=NULL)==(k<=DC_MOVING||k==DC_STATIONARY5));
-        CHECK(dc_body_enabled(cfg)==(k!=DC_STATIONARY5));
+        CHECK((cfg->recipe_bank!=NULL)==(k<=DC_MOVING||k==DC_STATIONARY5||k==DC_DECEL));
+        CHECK(dc_body_enabled(cfg)==(k!=DC_STATIONARY5&&k!=DC_DECEL));
+        if(k==DC_DECEL) {
+            CHECK(c.mix.resonant_gain==1&&c.mix.coherent_low_gain==0&&cfg->root_per_rpm==1./120);
+            CHECK(cfg->bank->profile[0]->base_hz>56&&cfg->bank->profile[0]->base_hz<57);
+            CHECK(cfg->resonant_bank->kind[0]==DRS_STEREO&&cfg->recipe_bank->colour[0].power_reduction==.35);
+        }
         if(k==DC_STATIONARY5) {
             CHECK(c.mix.resonant_gain==1&&c.mix.coherent_low_gain==0&&cfg->root_per_rpm==1./120);
             CHECK(cfg->bank->profile[2]->base_hz>41&&cfg->bank->profile[2]->base_hz<42);

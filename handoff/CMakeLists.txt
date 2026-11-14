@@ -268,8 +268,8 @@ if(WIN32)
 endif()
 
 add_library(catalog_drive_models STATIC "${VSL_ROOT}/experiments/catalog_drive_v1/models.c" "${VSL_ROOT}/experiments/atlas_monitor_v1/models.c"
-  "${VSL_ROOT}/experiments/stationary_bridge_v1/models.c")
-target_link_libraries(catalog_drive_models PUBLIC drive_catalog full_recipe_models fine_idle_models)
+  "${VSL_ROOT}/experiments/stationary_bridge_v1/models.c" "${VSL_ROOT}/experiments/catalog_drive_v1/decel_models.c")
+target_link_libraries(catalog_drive_models PUBLIC drive_catalog full_recipe_models fine_idle_models stereo_resonance_io)
 target_compile_features(catalog_drive_models PUBLIC c_std_11)
 if(MSVC)
   target_compile_options(catalog_drive_models PRIVATE /W4 /we4013 /utf-8 /fp:strict)

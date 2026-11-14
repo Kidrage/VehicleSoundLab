@@ -1,5 +1,7 @@
 # C 模块与接口
 
+本次[减速双声道配方接入V1](../research/减速双声道配方接入V1.md)：`drive_recipe/bank.c`允许已验证Rvs与原功率撤出公式组合；新增`catalog_drive_v1/decel_models.*`仅非实时装载冻结参数，`recipe_checks.c`作独立公式／直接声核／损坏拒绝／零量检查。646份C/H索引：6改、637旧字节保持、3增；原72参数保持，新增2份E冻结参数。默认不变，严格DSP身份更新而schema10／32字段不变；旧行程用冻结旧播放器。F2候选仍待听，无自动收油映射。
+
 2026-11-14：[E减速候选](../research/E减速声线与双声道细节V1.md)没有修改或新增C/H。离线`decel_source_v1/aperture.py`复用原共同L/R变速，`run_E_decel_source_v1.py`编排原C OSC／Rdt，`fit_E_decel_stereo_v1.py`复用原双通道VAR参数编译及Rvs C生成。新文件位于独立研究证据／冻结，不自动进入目录、驾驶映射或行程；643原C/H、72原声音参数和F2配方均精确保持。相同主声流／撤出量、独立互谱和稳定证书检查见[摘要](../research/E_decel_source_v1_summary.json)。
 
 2026-11-14：[驻车声线接入统一窗口V1](../research/驻车声线接入统一窗口V1.md)：`catalog.*`追加`DC_STATIONARY5`身份及`dc_body_enabled()`实际能力查询；`catalog_drive_v1/models.c`复用驻车装载器并交给原AtAssets拥有参数；`atlas_monitor_v1/ui.c`按真实配置禁用未配置的独立低频滑条。仍是原驾驶器／DSP／会话与schema10／32。643份C/H仅6份修改、637份原样、无新增，72份参数精确保持；六个V10情境＋两个解析示例。[65项CTest、244项原生控件及回放证据](../research/catalog_bridge_v1_summary.json)已归档，不代表新的音色或其他车型验收。下方计数为各历史阶段当时状态。

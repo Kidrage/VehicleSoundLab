@@ -1,0 +1,110 @@
+{
+  "result": "optional_E_joint_detail_recipe_in_shared_catalog",
+  "git_parent": "0df46d9e2a69b48c226d26b337dba224152bccd8",
+  "C_H_total": 646,
+  "C_H_changed": 6,
+  "C_H_prior_exact": 637,
+  "C_H_added": 3,
+  "original_voice_parameters_exact": 72,
+  "added_parameters_from_frozen_source": 2,
+  "DSP_change": "validator accepts already validated Rvs detail for withdrawal; tick algorithms unchanged",
+  "presets": 9,
+  "V10_contexts": 7,
+  "analytic_examples": 2,
+  "new_real_engines": 0,
+  "new_source_fit": false,
+  "new_timbre_accepted": false,
+  "default_selection_changed": false,
+  "pending_idle_changed": false,
+  "automatic_state_mapping_added": false,
+  "room_added": false,
+  "distinct_CTests": 66,
+  "native_UI": {
+    "result": "pass",
+    "checks": 284,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 9,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 7,
+        "hash": "4089b72afb8354ca",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 8,
+        "hash": "68e8ba33fb3206de",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "images_visually_reviewed": 5,
+  "manual_mouse_verified": false,
+  "actual_render_frames_per_preset": 192123,
+  "original_eight_WAV_exact": true,
+  "old_player_old_eight_WAV_exact": true,
+  "new_player_new_nine_WAV_exact": true,
+  "strict_cross_renderer_rejection": true,
+  "render_id_before": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+  "render_id_after": "11ebcfa444c1af7605cc17aa4ac32d3ad48e477c16899937b80bf2dd557c7f01",
+  "source_driver_and_dry_stems_2_12_exact": true,
+  "owned_irregular_block_replay_exact": true,
+  "take_schema": 10,
+  "take_controls": 32,
+  "old_live_windows_preserved": true,
+  "failed_build_test_attempts": [],
+  "physical_7_1_4_verified": false,
+  "full_goal": "active",
+  "next": "Human idle/joint-detail hearing and independent source/state support. No automatic chaos, strength sweep or pending idle C migration.",
+  "manifest_sha256": "262ce684e20bd5469767d5b55555811b951ef64a9dd7a0a307207f3b7a55cedd",
+  "file_count": 3174,
+  "bytes": 77463297
+}

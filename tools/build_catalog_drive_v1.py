@@ -15,7 +15,7 @@ try:
     shutil.copy2(__file__,a.out/'build_catalog_drive_v1.py')
     commands=[['cmake','-S',repo/'experiments/catalog_drive_v1','-B',build,'-G','Visual Studio 17 2022','-A','x64'],
         ['cmake','--build',build,'--config','Release','--parallel','2']]
-    if a.phase=='focused':commands[-1]+=['--target','catalog_contract_checks','catalog_render_checks','VslAtlasMonitor']
+    if a.phase=='focused':commands[-1]+=['--target','catalog_contract_checks','catalog_render_checks','catalog_recipe_checks','VslAtlasMonitor']
     if a.phase=='host':
         commands[-1]+=['--target','VslAtlasMonitor']
         commands+=[[build/'bin/Release/VslAtlasMonitor.exe','--catalog','--muted','--ui-check',a.out/'ui.json']]

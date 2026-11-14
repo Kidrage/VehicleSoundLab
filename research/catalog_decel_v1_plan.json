@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.catalog-integration-plan/1",
+  "parent_commit": "0df46d9",
+  "purpose": "Complete optional E cabin candidate access through the existing native driving host; this is integration, not a timbre improvement or measured overrun mapping.",
+  "assets": "Exact original voice.model and E slowing cabin.sres from frozen E_decel_source_v1; 35% power withdrawal, 1200–1900Hz transition; no separate LF.",
+  "change": "Allow validated DRS_STEREO as well as DRS_RDT detail anchors in the generic recipe validator. No changes to tick, filters, random streams, driver, spatial or take schema.",
+  "entry": "Append ninth experimental choice, preserve old indices/default and owned non-RT assets; no automatic engine-state selection.",
+  "checks": [
+    "independent analytic withdrawal oracle at zero/full/smoothed amount and inside/edge/outside root support, malformed/missing detail rejection and transactional failure",
+    "C joint-detail stream versus standalone kernel, advancing muted/out-of-support clocks",
+    "all nine same-controller renders, 2/12 source/driver/dry stems, owned save/load irregular-block exact replay",
+    "all eight old WAV bytes unchanged; frozen old player replays old takes; old/new identity crossing rejected without weakening validation",
+    "full CTest suite after final C edits; muted native own-window selection, unavailable LF, recording/replay and live restore"
+  ],
+  "identity": "Core validator edit changes strict renderer fingerprint. Keep old players/takes; schema10/32 fields remain. Never impersonate the old renderer.",
+  "idle": "idle_complex75_v1 listening remains pending; do not repeat questions, vary strength or migrate it. Keep existing F2/default/moving35 exact.",
+  "scope": "Seven V10 observation/recipe contexts plus two analytic examples, not nine engines. Acoustic root/RPM convention is not measured RPM. Hearing, independent state support and physical7.1.4 remain unverified.",
+  "archive": "Keep before files, exact executed sources, original parameters, all build/test attempts and results under catalog_decel_v1; local commit only. Full goal active."
+}

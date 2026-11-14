@@ -24,7 +24,8 @@ int drc_bank_valid(const DrcBank *b,const SaBank *dna,const DrsBank *detail) {
         if(!dna->profile[a]||b->root[a]!=dna->profile[a]->base_hz||b->has_low[a]>1||
            !isfinite(b->scale[a])||b->scale[a]<0||b->scale[a]>4||!colour_valid(b->colour+a))return 0;
         if(b->colour[a].power_reduction>0) {
-            if(!detail||!detail->enabled[a]||detail->kind[a]!=DRS_RDT)return 0;
+            if(!detail||!detail->enabled[a]||
+               (detail->kind[a]!=DRS_RDT&&detail->kind[a]!=DRS_STEREO))return 0;
             ++active;
         }
         if(b->has_low[a]) {
