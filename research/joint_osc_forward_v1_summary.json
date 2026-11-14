@@ -1,0 +1,51 @@
+{
+  "schema": "vsl.joint-osc-forward-freeze/1",
+  "result": "known_input_forward_inverse_NOT_real_source_or_C_voice",
+  "parent_commit": "b07f3bddaac4827344976b07a60535c1b63760f5",
+  "missing_threadpoolctl_import_failure_preserved": true,
+  "no_math_or_gate_relaxation": true,
+  "full_covariance_all240fractions_and_stationary_prehistory_checked": true,
+  "all3six_second_native_streams_and10known_diagnostic_waveforms_audited": true,
+  "all19known_phase_and19measured_phase_portions_checked": true,
+  "independent_QR_factorizations": 3016,
+  "known_input_parameters": [
+    0.6499999999985759,
+    -0.5499999999999966
+  ],
+  "maximum_parameter_error": 1.4240830736866883e-12,
+  "known_input_Jacobian_condition": 1.6586833270768209,
+  "known_input_fit_evaluations": 7,
+  "maximum_predicted_CHECK_window_log_error": 4.871658632055187e-13,
+  "measured_noAM_original_gates_passed": true,
+  "Gaussian9power5quadrature_all13x13_and_Hann_power_checked": true,
+  "maximum_independent_QR_coefficient_error_FS": 1.0924272429209466e-15,
+  "maximum_quadrature_complex_moment_error": 1.2234657731369225e-13,
+  "realized_over_expected_power_range": [
+    0.9335155916199205,
+    1.0119963356904447
+  ],
+  "first_seed_naive_window_errors": {
+    "exp_mean_log": [
+      0.009641148062717875,
+      0.004809334714702684,
+      0.00757874905407796
+    ],
+    "mean_gain": [
+      0.0001643403224977913,
+      0.00011525257524214183,
+      3.195363849628485e-05
+    ]
+  },
+  "gain_E_square_normalization_NOT_exact_per_take_whole_wave_RMS": true,
+  "figure_viewed": true,
+  "known_latent_inputs_supplied": true,
+  "real_engine_hidden_excitation_recovered": false,
+  "new_source_voice_or_audition": false,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "next": "Source-constrained joint statistics with forward observation and latent uncertainty;75/112 first,187counterexample. Pending idle hearing before C voice adoption. No all-line coupling/blind AM, preserve original phase qualifications/full driving/multi-engine/7.1.4 goal.",
+  "manifest_sha256": "0224ef02a0f6ffbf9f8c0342f6d53ff3f69c762616a4cf4479a565de10551876",
+  "file_count": 55,
+  "bytes": 297632864
+}
