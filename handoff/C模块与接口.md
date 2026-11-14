@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[带限DNA接入](../research/带限DNA接入V1.md)：`sound_dna/profile.*`和`dna_atlas/bank.*`增加明确选用的非实时接口，接受5–1000Hz并校验全部系数；旧接口与生成tick保持。`experiments/bandlimited_dna_v1`分开维护加载、解析渲染、同驾驶器检查、测试参数和原SaVoice导出宿主。656C/H＝646原样＋4非实时修改＋6新增；高锚点owned／UI尚未迁移。
+
 当前[F3叠加细节接入](../research/F3叠加细节接入统一窗口V1.md)：新增`experiments/catalog_drive_v1/F3_models.c/.h`非实时装配原参数，`F3_checks.c`独立核对主DNA不变／叠加细节和失效契约。`drive_recipe/bank.c`支持有已验证细节、无撤出／LF的配方，所有生成tick不变；目录追加第十项。统一驾驶器／空间／录放字段复用，默认及原声音参数保持。下面的“未接入”等表述属于各历史阶段。
 
 本次[F3双声道残差细节V1](../research/F3双声道残差细节V1.md)没有C改动：原Sound DNA显式种子宿主＋`stereo_resonance`／IO生成新参数候选。新增通用离线`tools/cyclic_detail_v1/measure.py`负责有限周期分解与残余功率诊断，F3文件编排独立；原647C/H74运行参数与F2保持。十带参数只在研究目录／冻结包，未进入原生目录或默认。

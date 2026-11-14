@@ -19,5 +19,9 @@ typedef struct {
    align_orders=0 preserves original origins; 1..32 fits adjacent low orders.
    This aligns an arbitrary cycle origin, not physical engine banks or timing. */
 int sa_bank_init(SaBank *bank, const SdProfile *const *profiles, unsigned count, unsigned align_orders);
+/* Explicit opt-in: same full validation/alignment, base5..1000Hz, without
+   legacy H*base*1.1 guard. Use only with SaVoice's actual-root19.2..21.6kHz
+   carrier taper; this does not enable high-root owned presets/take loading. */
+int sa_bank_init_bandlimited(SaBank *bank, const SdProfile *const *profiles, unsigned count, unsigned align_orders);
 double sa_bank_sine(const SaBank *bank, double radians);
 #endif

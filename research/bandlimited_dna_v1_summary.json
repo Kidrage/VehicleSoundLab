@@ -1,0 +1,93 @@
+{
+  "result": "opt_in_high_root_profile_and_atlas_loading_verified",
+  "git_parent": "cdc3dadab9cc90a9b3d441f242312c1651d66991",
+  "previous_goal_turn": "No synthesis progress: MCPS recheck only confirmed unchanged inputs/costs. Identified high-root loader work resumed.",
+  "C_H_total": 656,
+  "C_H_prior_exact": 646,
+  "C_H_changed": 4,
+  "C_H_added": 6,
+  "changed_C_H": [
+    "modules/dna_atlas/bank.c",
+    "modules/dna_atlas/bank.h",
+    "modules/sound_dna/profile.c",
+    "modules/sound_dna/profile.h"
+  ],
+  "added_C_H": [
+    "experiments/bandlimited_dna_v1/drive_checks.c",
+    "experiments/bandlimited_dna_v1/load_checks.c",
+    "experiments/bandlimited_dna_v1/probe.c",
+    "experiments/bandlimited_dna_v1/render_checks.c",
+    "experiments/bandlimited_dna_v1/test_models.c",
+    "experiments/bandlimited_dna_v1/test_models.h"
+  ],
+  "voices_exact": 76,
+  "F2_exact": true,
+  "original_guard_retained": true,
+  "opt_in_base_hz": [
+    5,
+    1000
+  ],
+  "max_harmonics": 320,
+  "actual_root_renderer": "existing SaVoice carrier taper19200..21600Hz; no DSP tick changes",
+  "legacy_layouts_unchanged": true,
+  "high_root_direct_driver_2_12_exact": true,
+  "stochastic_sideband_brickwall_claim": false,
+  "measured_source_RPM_claim": false,
+  "focused_checks": 3,
+  "complete_CTests": 70,
+  "inherited_CTests": 67,
+  "analytic_exports": [
+    {
+      "name": "masked",
+      "frames": 48000,
+      "error_FS": 0.0,
+      "folded_22080_amplitude_FS": 0.0,
+      "sha256": "4e013ac8b5c95a5adb0d5f299f8e4dac7dc20a3a055b3273c2bdd99e97481197"
+    },
+    {
+      "name": "mixed",
+      "frames": 48000,
+      "error_FS": 7.486190334304865e-09,
+      "folded_22080_amplitude_FS": 1.0798086024992686e-10,
+      "sha256": "39e0fe2fe613aeea5a054ccb3411de41f15c3500265d7d3d9f7175cc179a9095"
+    },
+    {
+      "name": "max_root",
+      "frames": 48000,
+      "error_FS": 6.9407684044620055e-09,
+      "folded_22080_amplitude_FS": null,
+      "sha256": "2080c2e3396ce226fb880f8d288522ce53aab94f1070a48ff6b1d5f0bf449f85"
+    }
+  ],
+  "block_37_512_exact": true,
+  "invalid_before_output": 8,
+  "legacy_raw_WAV_exact": true,
+  "old_compatible_bank_and_state_exact": true,
+  "ten_catalog_WAV_exact": true,
+  "ten_old_and_new_owned_replays_exact": true,
+  "strict_cross_identity_rejections": 4,
+  "old_render_id": "ffaa827e1c325f2f46a9055632856a6975c4d88e81d5b3beb62d4e6daa925497",
+  "new_render_id": "7d790f43bb7653eabd62d6217d15dc33b3df83dc5ebd3eda836080ce3326d4cf",
+  "take_schema": 10,
+  "take_controls": 32,
+  "high_root_owned_support": false,
+  "high_root_UI_added": false,
+  "live_default_changed": false,
+  "new_source_refit": false,
+  "new_timbre_acceptance": false,
+  "room_added": false,
+  "F2_and_F3_hearings": "independently pending; no repeated question, strength changes or migration",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "physical_7_1_4_verified": false,
+  "hard_realtime_claim": false,
+  "optimized_ADI_port": false,
+  "failed_executed_tests": [],
+  "existing_build_warning": "C4127 catalog_drive_v1/ui_checks.c constant condition; unchanged",
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "Independent higher-root evidence in approved media, then existing extraction checks; versioned owned/live integration still needed. No failed-window/gate rescue or extrapolation-as-coverage.",
+  "manifest_sha256": "28a139f6e8a24415dd64a52f39c1b827fec10ad7651d5323cc5f950a3090b661",
+  "file_count": 2474,
+  "bytes": 73533262
+}

@@ -11,4 +11,9 @@ typedef struct {
 /* Transactional, non-real-time load. SOUND_DNA1 stores an independent base Hz.
    Legacy SUSTAIN_OSC1 imports with rate/window Hz. Rendering fixes mean phase. */
 int sd_profile_load(const char *utf8_path,SdProfile *profile);
+/* Explicit opt-in for dna_atlas/SaVoice's actual-root carrier taper only.
+   Non-RT, transactional; base5..1000Hz, all coefficients/orders retained and
+   validated. Legacy SdVoice/SdOscillator still reject unsafe profiles.
+   This loader alone does not make an arbitrary renderer bandlimited. */
+int sd_profile_load_bandlimited(const char *utf8_path,SdProfile *profile);
 #endif

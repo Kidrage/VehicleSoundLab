@@ -1,5 +1,14 @@
 # sound DNA C11 module · V1
 
+Explicit higher-root loading is available as `sd_profile_load_bandlimited`.
+It retains all parsing/numeric checks and all stored orders, with base5..1000Hz,
+but omits the legacy highest-order-at1.1x check. Use these profiles with
+`sa_bank_init_bandlimited` and the existing `dna_atlas/SaVoice` carrier taper.
+`sd_profile_load` and `SdVoice` retain their original safety guard and output;
+the raw `SdOscillator` has no actual-root taper. This is an opt-in loading path,
+not an automatic change to presets, owned takes or accepted timbres.
+See [engineering checks](../../research/带限DNA接入V1.md).
+
 This module generates the procedural DNA voice. It does not contain a vehicle,
 cylinder/firing geometry, PAD, noise, room, speaker layout or audio-device backend.
 Recording-derived profiles still contain their original mixed acoustic transfer;

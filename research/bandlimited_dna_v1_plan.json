@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.bandlimited-dna-plan/1",
+  "purpose": "Load higher-root measured anchors through explicit opt-in APIs and the existing actual-root-aware atlas renderer, before reading any new real-source anchor.",
+  "previous_goal_turn": "No synthesis progress: the requested MCPS recheck confirmed unchanged inputs and costs; it did not expand timbre or driving coverage. Resume the independently identified loader limitation.",
+  "legacy_contract": "sd_profile_load, sd_voice_init and sa_bank_init retain H*base*1.1<=21600 and their existing rendering behavior; old sources, binaries and takes remain preserved.",
+  "new_contract": "sd_profile_load_bandlimited and sa_bank_init_bandlimited validate all coefficients and base5..1000Hz, preserve all harmonic metadata, and are used only with the existing SaVoice 19.2..21.6kHz carrier taper. No duplicate oscillator or new DSP tick.",
+  "build": "New experiments/bandlimited_dna_v1 and build-bandlimited-dna-v1, inheriting the complete67-test catalog suite.",
+  "checks": [
+    "Legacy boundary acceptance and high-root rejection unchanged; new profile/bank accept90Hz288orders and1000Hz, reject outside5..1000.",
+    "Transactional loader/bank failures for malformed headers, NaN/Inf, out-of-bounds mean/basis/rho/root, truncation, trailing data, unsorted/mismatched banks, invalid/null arguments. Parse inaudible orders too.",
+    "Analytic stereo complex tones below taper/in taper/at cutoff/above Nyquist; 90Hz order288 must not fold to22080Hz. Bounds declared before execution: static/sweep1e-9FS, stereo preserved, masked-only exact zero.",
+    "Smoothed root sweep across both taper edges: direct phase reference, no phase/RNG resets; full-state and output block-size invariance; zero gain/detail still advances statistics.",
+    "Old-compatible legacy and opt-in banks/render/state identical; direct two-anchor high-root driving uses existing controller with 2/12 source/stem invariance. Engineering map is not measured RPM.",
+    "Explicit-root raw unity-stereo offline exporter rejects invalid roots and legacy misuse before output creation; FLOAT WAV checked independently,37/512-frame blocks identical.",
+    "All inherited67 CTests plus new checks; all ten catalog WAVs unchanged against frozen catalog_F3_v1, new identity required for new takes and strict rejection across renderer identities. Old player replays old takes."
+  ],
+  "non_goals": [
+    "No real-source refit, new audio download, listening promotion, default migration, live high-root preset or high-root owned take support in this step.",
+    "Carrier taper is not a mathematical brickwall guarantee for stochastic modulation sidebands.",
+    "No full RPM/load coverage, multiple real-engine proof, physical7.1.4 or target21569 real-time claim."
+  ],
+  "after": "With the loading path proven, identify independent higher-root evidence in approved source media; do not call extrapolation coverage or rescue failed clocks/windows/gates."
+}
