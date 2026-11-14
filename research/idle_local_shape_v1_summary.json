@@ -1,0 +1,159 @@
+{
+  "schema": "vsl.idle-local-shape-freeze/1",
+  "result": "small_source_local_shape_audio_NOT_adopted",
+  "parent_commit": "93786f01429797370d34a93884b32e2626a7b5fb",
+  "four_source_control_fits": true,
+  "all16models_converged": true,
+  "source_CHECK_improvements": [
+    1.7116889705504956,
+    1.344166182570905,
+    -0.1325997305624771,
+    -0.3158248811887754
+  ],
+  "selected_bands": [
+    0,
+    1
+  ],
+  "selection_uses_previously_inspected_CHECK": true,
+  "seeds": [
+    149921,
+    277139,
+    381611
+  ],
+  "amounts": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "seconds_each": 24,
+  "source_recorded_trajectory_replayed": false,
+  "all_native_audio_independently_checked": true,
+  "maximum_waveform_error_FS": 2.230452961216045e-08,
+  "maximum_branch_error_FS": 2.6020852139652106e-17,
+  "maximum_Gram_variance_error": 8.881784197001252e-16,
+  "zero_frozen_errors_FS": [
+    0.0,
+    1.862645149230957e-09,
+    0.0
+  ],
+  "maximum_peak_FS": 0.3849014665137105,
+  "contrasts": [
+    {
+      "seed": 149921,
+      "amount": "0.5",
+      "difference_RMS_FS": 0.000354175266960442,
+      "difference_relative_mix_dB": -48.69809610016177,
+      "difference_relative_detail_dB": -42.04268439955808
+    },
+    {
+      "seed": 149921,
+      "amount": "1.0",
+      "difference_RMS_FS": 0.0007062458420347811,
+      "difference_relative_mix_dB": -42.703342619468856,
+      "difference_relative_detail_dB": -36.04793091886516
+    },
+    {
+      "seed": 277139,
+      "amount": "0.5",
+      "difference_RMS_FS": 0.0003499056956035206,
+      "difference_relative_mix_dB": -48.82327444053636,
+      "difference_relative_detail_dB": -42.111450432646194
+    },
+    {
+      "seed": 277139,
+      "amount": "1.0",
+      "difference_RMS_FS": 0.0006982597908640598,
+      "difference_relative_mix_dB": -42.82195399606708,
+      "difference_relative_detail_dB": -36.11012998817693
+    },
+    {
+      "seed": 381611,
+      "amount": "0.5",
+      "difference_RMS_FS": 0.00035669883516311485,
+      "difference_relative_mix_dB": -48.64697968322226,
+      "difference_relative_detail_dB": -41.99289681269728
+    },
+    {
+      "seed": 381611,
+      "amount": "1.0",
+      "difference_RMS_FS": 0.0007116756683311816,
+      "difference_relative_mix_dB": -42.64737114794346,
+      "difference_relative_detail_dB": -35.99328827741847
+    }
+  ],
+  "whole_mix_change_is_small": true,
+  "core_followup_clue": {
+    "schema": "vsl.idle-core-amplitude-diagnostic/1",
+    "result": "source_followup_clue_NOT_synthesis_profile",
+    "input": "E:\\VehicleSoundLab\\baselines\\modal_texture_v1\\evidence\\trial1\\source_observations.npz",
+    "input_sha256": "df05b9665dc77eefb55d364fb8de1855f1f657387ec8f01ac6824c45eca56c98",
+    "model_input_sha256": "7fd799e309b300752c8221e6c512fd72cb917f0488949629507bc1ae8fc3296a",
+    "selected_indices": [
+      1,
+      2,
+      4
+    ],
+    "selected_frequencies_hz": [
+      75.03679765988039,
+      112.48553445984204,
+      187.52858173958495
+    ],
+    "raw_uncapped_log_std": [
+      0.09499134392960103,
+      0.10030185484087936,
+      0.12330227240705004
+    ],
+    "raw_uncapped_covariance": [
+      [
+        0.009023355421551749,
+        0.004912404849354378,
+        0.0013786719086340473
+      ],
+      [
+        0.004912404849354378,
+        0.010060462084520836,
+        0.004075968923345275
+      ],
+      [
+        0.0013786719086340473,
+        0.004075968923345275,
+        0.015203450380742374
+      ]
+    ],
+    "observation_frames": 9600,
+    "observation_hop": 960,
+    "lag_frames": 9600,
+    "raw_uncapped_trace_correlation": -0.20119676135532263,
+    "recorded_amplitude_trajectory_exported": false,
+    "check_used": false,
+    "new_audio_generated": false,
+    "runtime_changed": false,
+    "limits": "Posthoc reuse of old fixed-frequency weighted-projection TRAIN magnitudes; FM and window leakage confound apparent AM. Not physical combustion AM, an identified time law or a reason to transplant into the new phase model.",
+    "next": "Observe main amplitudes using the actual low acoustic phasors, with known no-AM nonlinear-FM and AM controls; check another source portion before designing a fresh correlated generator. Do not clip this negative correlation to zero or copy the old measured amplitude trajectory."
+  },
+  "core_clue_is_NOT_new_AM_recipe": true,
+  "review_url": "http://127.0.0.1:8789/references/analysis/idle_local_shape_v1/review1/index.html",
+  "review_clips": 20,
+  "common_gain": 1.0,
+  "browser": {
+    "result": "passed",
+    "url": "http://127.0.0.1:8789/references/analysis/idle_local_shape_v1/review1/index.html",
+    "metadata_combinations": 20,
+    "one_player": true,
+    "muted_playback": true,
+    "playing_switch_preserved": true,
+    "paused_seek_preserved": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "scope": "Generated page only; not human listening, native C or device acceptance."
+  },
+  "figures_and_screenshots_viewed": true,
+  "existing619C_H_and67voices_exact": true,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "accepted_moving_changed": false,
+  "next": "Do not amplify this weak shape result. Phase-aware core magnitude observation with known no-AM nonlinear-FM/known-AM controls before source TRAIN/CHECK and any fresh amplitude generator; old fixed-frequency magnitude mixes AM/FM. Preserve original common-phase qualifications, pending auditions and full-system goal.",
+  "manifest_sha256": "cb1cfe8c24fbba11e8f4cccd6833f33197a38c339f3a564c0e3ea45641958301",
+  "file_count": 126,
+  "bytes": 2021015416
+}
