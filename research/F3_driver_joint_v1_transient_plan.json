@@ -1,0 +1,8 @@
+{
+  "schema":"vsl.original-PTS-transient-context/1",
+  "source":"Approved F3 original video; no download",
+  "time_windows_seconds":[[190.625,190.641],[190.75,190.766],[190.875,190.891],[191.125,191.141]],
+  "selection":"One native video frame in each fixed16ms interval; retain integer PTS with original1/1000 timebase. copyts with input seek190.5, no fps resampling or OCR.",
+  "purpose":"Context around the previously observed second-fifth high-band short peak. Human inspect gear display/scene continuity; cannot identify acoustic causality or calibrate AV delay.",
+  "policy":"Keep original audio and peak unchanged. No transient removal, new phase fit or event envelope compiled from visual proximity. Reuse prior191s annotation rather than repeat existing contact sheets."
+}

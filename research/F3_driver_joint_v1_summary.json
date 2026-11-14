@@ -1,0 +1,304 @@
+{
+  "result": "existing_one_driver_joint_budgets_verified",
+  "parent_commit": "0bb9259d28fc4273cf3853966494a058ef34b677",
+  "previous_goal_turn": "No synthesis progress: unchanged ADI inputs and cost model rechecked; resumed current C capture and source evidence.",
+  "prior_C_H_exact": 667,
+  "new_offline_C_H": 3,
+  "total_C_H": 670,
+  "voice_parameters_exact": 82,
+  "F2_exact": true,
+  "real_cases": 9,
+  "known_cases": 2,
+  "separate_signed_controls": 3,
+  "real_windows": 1233,
+  "real_DFT_complex_values": 295920,
+  "known_windows": 274,
+  "known_DFT_complex_values": 65760,
+  "max_matrix_error_FS2": 2.498338192516919e-16,
+  "max_DFT_error": 4.196351508603242e-12,
+  "max_statistic_error": 6.161737786669619e-14,
+  "protocol1_and_protocol2_all_attempts_kept": true,
+  "original_outputs_layers_CSV_takes_exact": true,
+  "render_id": "7d790f43bb7653eabd62d6217d15dc33b3df83dc5ebd3eda836080ce3326d4cf",
+  "raw_pre_envelope_verified": true,
+  "packaging_prefix_vs_full_identity_failure_retained": true,
+  "BENCH_operating": "FREE_REV; command gear5 is not physical fifth-gear reconstruction",
+  "local_observations": [
+    {
+      "label": "voice10_seed1",
+      "selection": 10,
+      "seed": 1,
+      "native_HF_PC1_fraction": 0.4538773625690945,
+      "raw_HF_PC1_fraction": 0.8614332003201632,
+      "canonical_HF_PC1_fraction": 0.8614329397343604,
+      "normalized_HF_color_C_minus_source_dB": [
+        -2.8516627013264397,
+        -3.8877658994495334,
+        -4.023524286703726,
+        -4.55920873785594
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -14.594368604009453,
+        -0.36805342395424273,
+        -0.26500666098913217,
+        -0.0007080235814204538,
+        0.2622681730557806,
+        0.5035137361282567,
+        0.63783005201575,
+        1.540598773062284
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 5.143043846356221e-08,
+      "synchronized_reconstruction": false
+    },
+    {
+      "label": "voice10_seed23117",
+      "selection": 10,
+      "seed": 23117,
+      "native_HF_PC1_fraction": 0.4538773625690945,
+      "raw_HF_PC1_fraction": 0.8036286542850247,
+      "canonical_HF_PC1_fraction": 0.8036295253607887,
+      "normalized_HF_color_C_minus_source_dB": [
+        -2.788351920391875,
+        -3.6847154629123153,
+        -4.230231857142805,
+        -4.611086189950555
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -12.092837409562563,
+        -1.0996383805114822,
+        -0.2024244476325521,
+        -0.04750825682570891,
+        0.2835040524508521,
+        0.4971748721718885,
+        0.602251706962776,
+        1.4401304367100898
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 5.8612775410971096e-08,
+      "synchronized_reconstruction": false
+    },
+    {
+      "label": "voice10_seed61927",
+      "selection": 10,
+      "seed": 61927,
+      "native_HF_PC1_fraction": 0.4538773625690945,
+      "raw_HF_PC1_fraction": 0.8700511451322018,
+      "canonical_HF_PC1_fraction": 0.8700510155113519,
+      "normalized_HF_color_C_minus_source_dB": [
+        -1.638595111188181,
+        -2.915744551613301,
+        -3.423004223711949,
+        -3.922189406787311
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -19.715562726096476,
+        -1.027266178648448,
+        -0.17431577286901911,
+        0.13679172028030628,
+        0.1948399842868595,
+        0.4194548718856609,
+        0.7063947094887588,
+        1.6234098188194788
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 5.2151609253314746e-08,
+      "synchronized_reconstruction": false
+    },
+    {
+      "label": "voice11_seed1",
+      "selection": 11,
+      "seed": 1,
+      "native_HF_PC1_fraction": 0.7356576956797896,
+      "raw_HF_PC1_fraction": 0.8791909494934816,
+      "canonical_HF_PC1_fraction": 0.8791905604713459,
+      "normalized_HF_color_C_minus_source_dB": [
+        -4.620369560645329,
+        -5.5435928946447675,
+        -5.840044821526476,
+        -7.05694939637182
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -4.3953739781706345,
+        -0.17992266280515548,
+        0.10901367141161193,
+        0.19075513816007206,
+        0.3612007375474169,
+        0.7896133722712578,
+        1.1356223695605925,
+        5.275733124382649
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 5.235191813390827e-08,
+      "synchronized_reconstruction": false
+    },
+    {
+      "label": "voice11_seed23117",
+      "selection": 11,
+      "seed": 23117,
+      "native_HF_PC1_fraction": 0.7356576956797896,
+      "raw_HF_PC1_fraction": 0.8750573292201737,
+      "canonical_HF_PC1_fraction": 0.8750572011850083,
+      "normalized_HF_color_C_minus_source_dB": [
+        -3.4277542887132455,
+        -4.9706259408063715,
+        -5.612969147650944,
+        -6.847958902407683
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -6.632766952065722,
+        -0.0983662723208493,
+        -0.004782368187876639,
+        0.15748265385784446,
+        0.2183371675076539,
+        0.5776049503189293,
+        1.0528485307945008,
+        6.300989075164017
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 7.432932791484603e-08,
+      "synchronized_reconstruction": false
+    },
+    {
+      "label": "voice11_seed61927",
+      "selection": 11,
+      "seed": 61927,
+      "native_HF_PC1_fraction": 0.7356576956797896,
+      "raw_HF_PC1_fraction": 0.8818875163229285,
+      "canonical_HF_PC1_fraction": 0.881887910216001,
+      "normalized_HF_color_C_minus_source_dB": [
+        -3.786111132752467,
+        -4.646492853433223,
+        -5.162676314192055,
+        -6.361838517148982
+      ],
+      "HF_covariance_difference_eigenvalues_dB2": [
+        -10.008304232337773,
+        -0.3300365547568797,
+        0.05517541081235123,
+        0.125166673480028,
+        0.27464738623103796,
+        0.6037640889412743,
+        1.1131437991027728,
+        5.156333359568637
+      ],
+      "envelope_minmax": [
+        0.7632800000000478,
+        0.7632800012106441
+      ],
+      "envelope_log_range_dB": 1.377621052596637e-08,
+      "raw_enveloped_DNA_difference_FS": 5.221718368808581e-08,
+      "synchronized_reconstruction": false
+    }
+  ],
+  "separate_preupshift": [
+    {
+      "label": "voice9_seed1",
+      "mean_HF_DNA_fraction": [
+        0.4205257852382559,
+        0.3377628523711397,
+        0.3502506563503132,
+        0.37635055545024476
+      ],
+      "mean_HF_other_fraction": [
+        0.5708598899111358,
+        0.6622451891354652,
+        0.6523511649466955,
+        0.6298996513112776
+      ],
+      "mean_HF_signed_cross_fraction": [
+        0.008614331100720025,
+        -7.993977142671872e-06,
+        -0.0026020563589730333,
+        -0.006250365505358605
+      ],
+      "raw_HF_PC1_fraction": 0.8004137736687735,
+      "canonical_HF_PC1_fraction": 0.5543202526205765
+    },
+    {
+      "label": "voice9_seed23117",
+      "mean_HF_DNA_fraction": [
+        0.42407085135622596,
+        0.3458006001354689,
+        0.36420435832957065,
+        0.39514284580857034
+      ],
+      "mean_HF_other_fraction": [
+        0.5727935316121944,
+        0.6527157643119074,
+        0.630551137730971,
+        0.615384841323493
+      ],
+      "mean_HF_signed_cross_fraction": [
+        0.0031356191355722046,
+        0.001483632222388743,
+        0.0052444239163074065,
+        -0.010527731996066995
+      ],
+      "raw_HF_PC1_fraction": 0.821384479785771,
+      "canonical_HF_PC1_fraction": 0.5789105723273632
+    },
+    {
+      "label": "voice9_seed61927",
+      "mean_HF_DNA_fraction": [
+        0.5131955170341255,
+        0.43286295881270037,
+        0.44112793687769053,
+        0.4621950924433155
+      ],
+      "mean_HF_other_fraction": [
+        0.4995572792400533,
+        0.583923219676937,
+        0.5666438361241914,
+        0.5397448747527985
+      ],
+      "mean_HF_signed_cross_fraction": [
+        -0.012752788231912497,
+        -0.01678613099093721,
+        -0.007771847936962532,
+        -0.0019401315296997113
+      ],
+      "raw_HF_PC1_fraction": 0.8946548338068734,
+      "canonical_HF_PC1_fraction": 0.7674469857795458
+    }
+  ],
+  "source_peak_and_all_negative_covariance_directions_retained": true,
+  "original_PTS_frames_viewed": 4,
+  "scientific_figures_viewed": 2,
+  "additional_modulation_qualified": false,
+  "runtime_preset": false,
+  "synchronized_source_reconstruction": false,
+  "physical_source_separation": false,
+  "runtime_DSP_model_default_driver_owned_take_room_changed": false,
+  "unchanged_68CTest_not_repeated": true,
+  "F2_F3_hearings": "independently pending, no repeat or strength sweep",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "full_goal": "active",
+  "next": "Known common/differential modulation and changing-root controls to distinguish trajectory effects; jointly reallocate existing DNA variation and missing stereo HF detail, no independent-noise or source-envelope transplant.",
+  "manifest_sha256": "4d9f61c31aecf155da477492ce98f35ca870e54582df2b412d92bcc3a7b4c732",
+  "file_count": 2845,
+  "bytes": 909473095
+}

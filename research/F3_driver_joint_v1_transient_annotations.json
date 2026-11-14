@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.original-PTS-transient-manual/1",
+  "method": "Assistant visually inspected transient1/context.png, containing all four original-PTS frames. Display readings are manual observations, not ECU measurements or independent human verification.",
+  "board_sha256": "3701168d70b36ec6f23d1784701354ed1791065c30390ba1012c8753dd22b877",
+  "columns": ["source_seconds", "displayed_gear", "displayed_speed_kmh", "visible_context"],
+  "rows": [
+    [190.633, 5, 206, "Continuous motorway cabin view; same truck ahead"],
+    [190.750, 5, 208, "Continuous scene; both hands remain on steering wheel"],
+    [190.883, 5, 209, "Continuous scene; geometric graphics visible near lower-left edge"],
+    [191.133, 5, 212, "Continuous scene; additional geometric graphics visible near lower-left edge"]
+  ],
+  "prior_191s_annotation_reused": "research/F3_display_rpm_v1_annotations.json: gear5, speed210, coarse RPM7000..8000 bracket; no new calibrated RPM reading",
+  "conclusion": "No displayed gear change or scene cut is visible in these four frames. Geometric video graphics do not establish the cause of the acoustic peak. Retain the complete original audio, peak and observation window.",
+  "audio_video_delay_calibrated": false,
+  "physical_acoustic_event_identified": false,
+  "runtime_event_envelope_exported": false,
+  "independently_human_verified": false
+}

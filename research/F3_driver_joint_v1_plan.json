@@ -1,0 +1,16 @@
+{
+  "schema":"vsl.one-driver-joint-envelope-budget/1",
+  "parent_commit":"0bb9259",
+  "previous_goal_turn":"Progress: two native three-second stereo observations independently measured and frozen; no synthesis law promoted.",
+  "purpose":"Capture existing catalog DNA and detail THROUGH the original single driver and owned take before designing additional HF modulation.",
+  "C_adapter":"experiments/joint_capture_v1; session records/replays the original modules only; probe handles CLI. New offline adapter, no existing C/H or voice changes.",
+  "known_before_real":{"catalog_selections":[5,6],"seeds":[23117],"checks":"Canonical output/source hashes, all six buses37/512 block exact,2/12 dry bus and telemetry exact, external voice directory absent during export; invalid CLI and overwrite refusal."},
+  "recipes":[{"selection":10,"source_context":"F3_fifth1","name":"first_local","detail_layer":false},{"selection":11,"source_context":"F3_fifth2","name":"second_local","detail_layer":false},{"selection":9,"source_context":"F3_preupshift_SEPARATE","name":"preupshift_detail","detail_layer":true}],
+  "seeds":[1,23117,61927],
+  "trace":{"sample_rate":48000,"total_frames":240000,"warmup_frames":96000,"analysis_frames":144000,"control_hop":240,"drive":"Original BENCH lifecycle and200Hz driver, load0.8,gear5,no automatic shift/backfire,event gain0,master1,width1,room0,spatial0. Hold lowest acoustic anchor for2s then linearly sweep target to highest over3s. Single-anchor recipe holds its native root.","limits":"Source-supported local root range, engineering trajectory ONLY. Driver RPM/voice followers remain active; no attempt to reproduce measured original RPM/load/timing."},
+  "measurement":"Reuse frozen F3_joint_envelopes_v1 plan and modules for8band native stereo matrices, logs,affine trend,covariance,lags. Source comparison is diagnostic across different trajectories, not synchronized reconstruction or a qualified additive deficit.",
+  "matrix_budget":"For DNA D and other dry buses A, save canonical output spectrum, spectrum of sum of saved float bus taps, P_D, P_A and signed D/A cross. Check P_tap_sum=P_D+P_A+X+X^H at every window/band. Float taps round independently: retain canonical output separately and bound waveform rounding difference rather than assert tap sum is bitwise canonical. Keep negative covariance differences and all source/C variation; do not clip into independent stochastic innovation.",
+  "transient":"Inspect native second-context maximum10..14k window and existing191s visual annotation. Do not remove it, change source window or claim physical combustion/event origin without evidence.",
+  "gates":{"bus_sum_absolute_FS":1e-6,"matrix_absolute_FS2":1e-16,"matrix_relative":5e-10,"independent_DFT_absolute":1e-9,"independent_statistics_absolute":1e-8},
+  "preserve":"667priorC/H82voices andF2 exact; add offline C adapter only and update index. Default/live/driver/owned schema/takes/room/acceptedmoving35/pendingF2F3hearing unchanged. No new media,push,blindstrength,unqualified modulation or physical7.1.4 claim. Full goal active."
+}
