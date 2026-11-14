@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.listening-status/1",
+  "status": "pending",
+  "url": "http://127.0.0.1:8789/references/analysis/E_decel_source_v1/review2/index.html",
+  "comparison": "Same main DNA, same35% power withdrawal, same common gain: original Rdt detail versus joint-channel Rvs detail. All three random groups retained.",
+  "question_requested": true,
+  "human_accepted": false,
+  "idle_complex75_status": "Separate original question remains pending; not asked again or migrated",
+  "next": "Use actual listening feedback and independent source support before default/state integration. Do not infer timbre approval from spectral or coherence metrics."
+}

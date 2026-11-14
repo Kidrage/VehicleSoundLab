@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.decel-stereo-extension/1",
+  "trigger": "After the original fixed-center run/audit, the Rdt variant matched band powers but its maximum complex-coherence error was 0.7447728310167. This extension is declared after that finding, not retroactive pre-fit qualification.",
+  "source": "Use only the retained E Decel Earlier profile/reference from E_decel_source_v1/fit2; no new source window, phase correction or DNA fitting.",
+  "fixed_main": "Keep the exact original and withdraw35 C outputs; same35% power withdrawal, 1200..1900Hz transition. Compare mono-correlated Rdt versus joint-channel Rvs with the SAME main signal.",
+  "kernel": {"order": 24, "spectral_smoothing_hz": 50, "covariance_ridge": 0.0001, "max_pole_radius": 0.9998, "taper_fraction": 0.1, "postfilter_order": 4, "fft_frames": 65536},
+  "bands_hz": [[1200, 1500], [1500, 1900], [1900, 2400], [2400, 3000], [3000, 3800], [3800, 4800], [4800, 6000], [6000, 8000]],
+  "seeds": [8121907, 23117, 61927],
+  "statistics_seconds": 32,
+  "audition_seconds": 8,
+  "gates": {"known_predictor_FS": 1e-11, "known_signed_density_FS2_per_Hz": 1e-18, "C_theory_power_db": 0.75, "C_theory_complex_coherence": 0.08, "peak_after_common_gain": 0.95},
+  "policy": "Fit once with the existing generic VAR/power-matrix kernels. Preserve and skip any indefinite additive covariance debt, never clip it or increase withdrawal to rescue it. NNLS fits real/imag cross spectra and two diagonal powers. Known signed-delay/predictor controls precede fitting. Keep failures, all seeds and the mono-correlated alternative. No new C, room, recorded timeline, native/default/take/state mapping or hearing acceptance. Recorded-channel statistics do not identify physical source objects or 7.1.4 channels."
+}

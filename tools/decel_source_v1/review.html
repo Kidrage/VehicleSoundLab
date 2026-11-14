@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>减速声线 · 双声道细节</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f3;color:#203b43;font:16px/1.6 system-ui,sans-serif;padding:22px 14px}
+main{max-width:720px;margin:auto;background:white;border-radius:14px;padding:26px}h1{font-size:24px;margin:0 0 12px}
+p,details{font-size:14px;color:#526971}label{display:block;margin-top:16px}select,audio{width:100%;font:inherit}
+select{padding:10px;border:1px solid #bdc9cf;border-radius:7px;background:white;color:inherit}audio{margin:22px 0 8px}
+output{display:block;padding:12px;background:#edf4f5;border-radius:8px;font-size:14px;min-height:48px}a{color:#1c6176}
+</style>
+<main>
+<h1>减速声线 · 双声道细节</h1>
+<p>先比较“新声线＋原细节”与“新声线＋双声道细节”，留意高频质感及左右关系。主声线与替换量相同，只有细节生成方法不同；再听原声参考。请先暂停其他发声窗口。</p>
+<label for="scene">场景</label><select id="scene"></select>
+<label for="variant">声音</label><select id="variant"></select>
+<audio id="audio" controls preload="metadata"></audio>
+<output id="state" aria-live="off"></output><p id="note"></p>
+<details><summary>比较说明</summary>
+<p>新声线来自原素材 52.25 秒附近的短窗。合成持续 8 秒，未循环该短窗；三个细节生成组全部保留。原声短参考经共同音高处理，只播放一次。另提供未处理减速上下文。</p>
+<p>旧车内声线取自同一视频的另一段高转加速，移调至相同声学音高；两段录音条件未证实完全相同。本页统一 0.5 倍增益与首尾 5ms 淡化，没有逐条响度匹配、增亮、压缩或新增房间效果。</p>
+<p>双声道细节由左右联合统计驱动，没有另加扩宽器或混响。录音中的座舱与话筒传递仍可能进入参数，不能直接分离成真实车辆声源或推导环绕声。</p>
+<p>视频确认了三挡与显示速度下降，但没有同步踏板、负载或真实 RPM 数据。这里是新增音色候选，尚未接入驾驶状态；54 秒附近的另一窗未通过检查，仅提供原声，不提供合成候选。怠速候选继续独立保留。</p>
+</details>
+<p><a href="/references/analysis/idle_complex75_v1/review1/index.html">怠速候选</a> · <a href="/references/analysis/stationary_bridge_v1/review2/index.html">驻车候选</a></p>
+</main>
+<script>
+const data=__DATA__;
+const scene=document.querySelector('#scene'),variant=document.querySelector('#variant');
+const audio=document.querySelector('#audio'),state=document.querySelector('#state'),note=document.querySelector('#note');
+let serial=0;const cache=new Map();
+for(const row of data.scenes)scene.add(new Option(row.title,row.key));
+function selectedScene(){return data.scenes.find(r=>r.key===scene.value)}
+function selected(){return selectedScene().variants.find(r=>r.key===variant.value)}
+function show(){state.textContent=selectedScene().info;note.textContent=selected().note}
+async function update(reset=false){
+ const revision=++serial,playing=!audio.paused,at=reset?0:audio.currentTime;audio.pause();
+ const row=selected();
+ try{
+  if(!cache.has(row.file))cache.set(row.file,fetch(row.file).then(r=>{if(!r.ok)throw Error(r.status);return r.blob()}).then(b=>URL.createObjectURL(b)));
+  const url=await cache.get(row.file);if(revision!==serial)return;
+  audio.addEventListener('loadedmetadata',()=>{
+   if(revision!==serial)return;audio.currentTime=Math.min(at,Math.max(0,audio.duration-.01));show();
+   if(playing)audio.play().catch(()=>{});
+  },{once:true});audio.src=url;audio.load();
+ }catch(e){if(revision===serial)state.textContent='音频读取失败，请刷新。'}
+}
+function changeScene(){variant.replaceChildren();for(const row of selectedScene().variants)variant.add(new Option(row.title,row.key));update(true)}
+scene.addEventListener('change',changeScene);variant.addEventListener('change',()=>update());audio.addEventListener('timeupdate',show);
+window.addEventListener('pagehide',()=>{for(const promise of cache.values())promise.then(url=>URL.revokeObjectURL(url))});changeScene();
+</script></html>

@@ -1,0 +1,78 @@
+{
+  "result": "one_local_E_slowing_voice_and_joint_stereo_detail_candidates",
+  "git_parent": "cd199173b3ddd33f4078c871a07194635e64cd52",
+  "C_H_exact": 643,
+  "voice_parameters_exact": 72,
+  "F2_original_exact": true,
+  "new_C_H": 0,
+  "source": "approved E first Corsa cabin slowing context",
+  "fixed_time_centers": [
+    52.25,
+    54
+  ],
+  "qualified": 1,
+  "excluded": 1,
+  "root_hz": 56.02318449591488,
+  "mono_detail_maximum_complex_coherence_difference": 0.7447728310167,
+  "stereo_detail_maximum_complex_coherence_differences": [
+    0.09796907133242513,
+    0.09268478406712215,
+    0.09306505894484778
+  ],
+  "stereo_detail_maximum_power_error_db": [
+    0.14923940493536803,
+    0.2094102412055768,
+    0.18712826099146931
+  ],
+  "joint_detail_C_seconds_per_seed": 32,
+  "all_three_seeds_retained": true,
+  "same_main_and_withdrawal": true,
+  "known_checks_before_respective_fits": true,
+  "independent_native_samples_apertures_carriers_PSD_CSD_certificates": true,
+  "browser_combinations": 17,
+  "final_browser_muted": true,
+  "final_images_reviewed": 4,
+  "original_video_contact_sheets_reviewed": 3,
+  "previous65CTest_not_rerun": "No C/runtime/default change; existing suite remains separate evidence",
+  "preserved_failure": "fit1 entire registry document hash changed; exact E source/sample/context fields are unchanged; fit2 retains both registry identities",
+  "all_attempts_preserved": [
+    "fit1",
+    "fit2",
+    "audit1",
+    "review1",
+    "browser1",
+    "stereo1",
+    "audit2",
+    "review2",
+    "browser2"
+  ],
+  "listening": {
+    "schema": "vsl.listening-status/1",
+    "status": "pending",
+    "url": "http://127.0.0.1:8789/references/analysis/E_decel_source_v1/review2/index.html",
+    "comparison": "Same main DNA, same35% power withdrawal, same common gain: original Rdt detail versus joint-channel Rvs detail. All three random groups retained.",
+    "question_requested": true,
+    "human_accepted": false,
+    "idle_complex75_status": "Separate original question remains pending; not asked again or migrated",
+    "next": "Use actual listening feedback and independent source support before default/state integration. Do not infer timbre approval from spectral or coherence metrics."
+  },
+  "not_established": [
+    "physical/source separation",
+    "exact RPM/load/pedal or fuel cut",
+    "complete clock qualification",
+    "independent deceleration recording validation",
+    "full-state driving timbre",
+    "new real engine",
+    "native/device/performance validation for this candidate",
+    "physical7.1.4"
+  ],
+  "driver_mapping": false,
+  "native_default_changed": false,
+  "room_added": false,
+  "PCM_timeline": false,
+  "full_goal": "active",
+  "next": "Judge new candidate hearing and independent source/state support; idle question remains independent. No automatic strength/clock-gate/chaos sweep.",
+  "manifest_sha256": "71ad4c38702ea28a2db8608f7aa9e67ef532253593a88b8720c01f1f54b5f7a8",
+  "file_count": 939,
+  "bytes": 329130004
+}

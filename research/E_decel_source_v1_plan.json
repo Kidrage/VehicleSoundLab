@@ -1,0 +1,29 @@
+{
+  "schema": "vsl.decel-source-plan/1",
+  "parent_commit": "cd19917",
+  "previous_turn": "Progress: optional stationary voice integrated into the native shared driver, verified, frozen and locally committed. Idle listening remains pending; this independent source study does not replace it.",
+  "source": "E_corsa_first_context",
+  "use": "cabin_dynamic_observation",
+  "clock_parent": "baselines/shift_repeat_v1/evidence/exploration1/report.json",
+  "clock_selection": {"start": 48, "anchor_root": 45},
+  "visual_scope_seconds": [51.5, 55],
+  "cases": [
+    {"name": "E Decel Earlier", "center_seconds": 52.25},
+    {"name": "E Decel Later", "center_seconds": 54.0}
+  ],
+  "aperture_cycles": 18,
+  "phase_reference": 5,
+  "heldout_orders": [3, 7],
+  "harmonics": 288,
+  "components": 12,
+  "seconds": 8,
+  "seeds": [8121907, 23117, 61927],
+  "crop_frames": 24000,
+  "replacement_power": 0.35,
+  "transition_hz": [1200, 1900],
+  "output_gain": 0.5,
+  "gates": {"minimum_observations": 32, "heldout_carrier_coherence": 0.8, "C_detail_oracle_FS": 1e-10, "maximum_LR_band_power_error_db": 0.5, "maximum_peak_after_gain": 0.95, "known_phase_cycle_std": 0.002},
+  "source_policy": "Two fixed source-time centers in the visually observed third-gear slowing context, declared before new waveform reads. Same 18-cycle aperture, fifth-line correction and third/seventh heldout checks as the prior stationary bridge. Save and exclude failures individually; no time/aperture/reference/gate search.",
+  "scope": "Conditional cabin acoustic timbres only. A/V latency, pedal, torque, fuel cut and measured RPM are unknown. Do not mix this first passage with second-passage acceleration, exterior A, F2 idle or physical source identities.",
+  "protection": "643 existing C/H and 72 voice parameters remain exact. No default/UI/driver/take change, idle candidate migration, PCM timeline or room. No new downloads, push or automatic higher-chaos research. Full driving, multi-engine and physical 7.1.4 goal remains active."
+}
