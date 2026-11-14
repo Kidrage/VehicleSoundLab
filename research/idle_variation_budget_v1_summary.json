@@ -1,0 +1,79 @@
+{
+  "schema": "vsl.idle-variation-budget-freeze/1",
+  "result": "actual_bus_variation_located_not_new_voice",
+  "parent_commit": "6124b37d7921dc5d7d4f5466ff9b089abe34dd57",
+  "previous_goal_turn_progress": "6124b37 froze real native conditional mean inverse and rejected3boundarysource; clean verified before this stage",
+  "source_control_cases": 8,
+  "actual_generated_blocks": 72,
+  "phase_bases_per_block": 2,
+  "known_case": 1,
+  "total_cases": 153,
+  "actual_main_mix_FLOAT_takes_reused_not_regenerated": true,
+  "all51signed6x6covariance_budgets": true,
+  "signed_cross_and_above100percent_marginals_preserved": true,
+  "no_log_variance_additivity": true,
+  "all153cases_independent_QR_factorizations": 17748,
+  "maximum_QR_coefficient_error_FS": 1.3952880318042824e-14,
+  "maximum_procedural_phasor_error": 3.638081684564798e-12,
+  "maximum_measured_phasor_error": 0.0,
+  "initial_NumPy_FFT_unit_phase_gate_failure_preserved": true,
+  "auditor_uses_manual_Hilbert_with_SciPyFFT_backend_no_gate_change": true,
+  "old_NumPy_FFT_difference_diagnosis": {
+    "maximum_phase_difference": 3.47265123378506e-11,
+    "frequency_hz": 187.52858173958495,
+    "sample": 143958,
+    "analytic_amplitude_at_maximum": 4.327902739614298e-07,
+    "maximum_complex_analytic_difference": 1.156034093559725e-16
+  },
+  "fullAM_measured_pooled_real_std": [
+    0.06915713415912653,
+    0.09697821779866851,
+    0.13586644060035882
+  ],
+  "fullAM_measured_real_rho100ms": [
+    0.4093643664503784,
+    0.08551397218188327,
+    0.16433826269294882
+  ],
+  "fullAM_measured_main_detail_cross_variance_ratios": [
+    [
+      0.9978482906457349,
+      0.5091638558145827,
+      0.24519548051941778
+    ],
+    [
+      0.0008190385865388624,
+      0.5139972061504788,
+      0.7537743491017231
+    ],
+    [
+      0.0013326707677261032,
+      -0.023161061965061232,
+      0.001030170378858672
+    ]
+  ],
+  "pooled_within_block_statistics_NOT_confidence_or_native_innovation_parameters": true,
+  "source_physical_main_detail_separation": false,
+  "both_figures_viewed": true,
+  "new_audio_or_model": false,
+  "original_assessment1_kept_coordinate_diagnosis_explicitly_subsequent": true,
+  "known_vs_measured_quadrature_gap_and_artificial_cancellation_retained": true,
+  "fullAM_known_imag_std": [
+    0.002121784091588259,
+    0.07024565083721276,
+    0.11920754819234054
+  ],
+  "fullAM_measured_imag_std": [
+    0.002192159135225672,
+    0.003524275679397071,
+    0.007092698961042423
+  ],
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "listening_improvement_claimed": false,
+  "next": "Fit75variation time structure with forward observer separately;187 excess mostly detail, not uniform AM. Put measured phase estimator in forward comparison: low observed quadrature is NOT low native phase noise. Preserve signed cross, no direct observed-to-latent covariance mapping/physical separation. No arbitrary pad/noise or rejected mean-only voice; hearing/latest idle audition and full goal remain open.",
+  "manifest_sha256": "b8ae6dad65822a85564175e9e574eea6875d247e54d3126ed12b2d2e0e38469e",
+  "file_count": 198,
+  "bytes": 23870728
+}

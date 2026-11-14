@@ -1,0 +1,7 @@
+{
+  "schema":"vsl.idle-variation-coordinate-diagnosis/1",
+  "timing":"Explicit post-assessment1 visualization extension, no primary observation or fit repeated. Original all6D/51lag budgets already retained and independently QR audited.",
+  "finding":"Known-vs-measured phase leaves real75/112/187 variation close but changes quadrature substantially: fullAM imaginary112 about.07025vs.003524,187 about.11921vs.007093. Measured phase is extracted from MIX and therefore moves apparent variation into main and opposite-signed detail. Do not report small observed quadrature as small true phase excitation.",
+  "action":"Keep first assessment/executed source/figure; assessment2 labels first chart explicitly REAL and adds second figure with imaginary std in both bases plus absolute signed112imag variance budgets. Same153fixed cases, no parameter fit/gain/candidate selection/C/audio. Preserve full0..5channels and signed cross rather than hiding large ratios or imposing physical source separation.",
+  "next":"Main timing and detail need separate amplitude work, with the estimator itself in the forward comparison for phase/quadrature. Do not map observed covariance directly to native innovations or treat the measured phase basis as true crank phase."
+}
