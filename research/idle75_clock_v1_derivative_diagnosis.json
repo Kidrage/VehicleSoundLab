@@ -1,0 +1,6 @@
+{
+  "schema":"vsl.idle75-clock-derivative-diagnosis/1",
+  "timing":"Declared after fit1 first native derivative assertion failed, before any known inverse/source fit. Preserve fit1 exact source and failure. No fitted parameter or audio exists yet.",
+  "hypothesis":"Four-point Catmull-Rom interpolation is C1 but not C2 across node boundaries. A central clock difference of1e-6 crosses nodes at clock1, so a first-derivative comparison can have O(step) truncation at those seams even when the analytic derivative is correct.",
+  "check":"Reproduce the original first seed149921 and144000native points from failed row.json. Same1e-6 step, compare original central and second-order forward/backward differences staying on the side with more fractional-node room. Report full errors, worst node fraction, and preserve arrays. Gate remains1e-6; do not alter row math/source data/parameter bounds or source solver to pass. If branch-preserving difference fails, inspect analytic derivative before inverse."
+}

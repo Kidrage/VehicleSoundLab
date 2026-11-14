@@ -1,0 +1,7 @@
+{
+  "schema":"vsl.idle75-clock-known-inverse-diagnosis/1",
+  "timing":"Declared after fit2 known target[1.4,1.15] returned[1.1208531935943755,1.0082165400172582],success=true,rank2,condition4.446 but parametererror.2791468 and nonzero cost. Original control correctly stopped before all source fits; no candidate/profile or audible output exists.",
+  "scope":"Independently verify complete FIR white/nodes, arbitrary scalar covariance normalization, native gain/analytic derivatives, exact QR window response, all13known inverse trace costs/moments/Jacobian/final parameter assertions. Keep fit1 original central-C1 seam derivative failure and fit2 corrected same-step/same-gate numerical validation.",
+  "fixed_diagnostic":"No new optimization/start/bounds/seed/count/iterations. Evaluate21equally spaced points on the line from returned known parameters to declared truth, lambda0..1. This is an explicit known-control cost diagnostic, not a source fit or family search. Check known truth has original zero residual and finite-trace derivative matches independent implementation. Preserve all points, not only a favorable one.",
+  "decision":"Do not rescue a failed known inverse by truth initialization/multistart/wider bounds or quietly proceed on real source. Finite3seed3s sample-clock moments can have implementation-consistent local structure; next fit ensemble expected statistics and use stochastic takes for validation, or provide another independently qualified inverse. Full source/driver/multi-engine/spatial goal remains active."
+}

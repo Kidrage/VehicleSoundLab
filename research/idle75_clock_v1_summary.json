@@ -1,0 +1,38 @@
+{
+  "schema": "vsl.idle75-clock-freeze/1",
+  "result": "known_inverse_FAILED_NO_source_fit_or_audio",
+  "parent_commit": "1ecfee47c89a3b40be587d8d2a767bae76a32181",
+  "previous_goal_turn_progress": "1ecfee4 actual153case layer budget identified75slow/187detail and phase-estimator confound; clean verified",
+  "source_derived64tap3input_row_arbitrary_clock_marginal_variance_checked": true,
+  "native_positive_gain_E_square_one_NOT_take_RMS": true,
+  "independent75_missing_old_cross_coupling_explicit": true,
+  "original_central_difference_seam_failure_preserved": true,
+  "diagnosis_same_step_same_gate": true,
+  "independent348QR_all_native_nodes_trace_moments_costs_Jacobian_checked": true,
+  "independent_known_returned_parameters": [
+    1.1208531935943755,
+    1.0082165400172582
+  ],
+  "known_truth": [
+    1.4,
+    1.15
+  ],
+  "known_maximum_parameter_error": 0.2791468064056244,
+  "known_returned_cost": 0.0006062455515117838,
+  "known_truth_cost": 7.469284435437937e-29,
+  "optimizer_success_NOT_method_qualification": true,
+  "original_known_recovery_gate_NOT_relaxed": true,
+  "all21fixed_line_diagnostic_points_preserved": true,
+  "no_new_start_bounds_seeds_iterations": true,
+  "source_models_fitted": 0,
+  "new_audio": false,
+  "figure_viewed": true,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "listening_improvement_claimed": false,
+  "next": "Qualify expected-ensemble moment fitting through original observation; retain short stochastic takes for validation. Do not rescue this inverse with true start/more seeds/bounds/iterations or present solver success as sound acceptance. Preserve phase estimator in source-forward comparison,187detail separate, pending idle hearing/original phase qualifications/full driving/multi-engine/7.1.4 goal active.",
+  "manifest_sha256": "1136020efcef0c25f2741ff85d35123da2637c5c2292196eda8d5e79b4268233",
+  "file_count": 59,
+  "bytes": 83654819
+}
