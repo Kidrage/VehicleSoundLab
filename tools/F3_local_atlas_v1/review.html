@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tecnica · 连续三锚点</title>
+<style>body{font:16px/1.65 system-ui,sans-serif;background:#f4f5f6;color:#222;margin:0;padding:20px}main{max-width:780px;margin:auto}h1{font-size:25px}label{display:block}select,audio{width:100%;box-sizing:border-box;margin:8px 0}select{font:inherit;padding:10px;background:white;border:1px solid #aaa;border-radius:6px}p{margin:12px 0}.muted{font-size:14px;color:#555}#status{min-height:3.3em}img{max-width:100%;height:auto}details{margin:22px 0}a{color:#145b9f}</style>
+<main><h1>Tecnica · 连续三锚点</h1>
+<p>比较“三锚点随音高过渡”和“只用中点声纹变调”。两种声音采用同一条12秒升降轨迹和相同细节序列。</p>
+<label for="bank">素材分组</label><select id="bank"></select>
+<label for="clip">试听声音</label><select id="clip"></select>
+<audio controls preload="metadata"></audio><p id="status" aria-live="polite"></p><p id="context" class="muted"></p>
+<p class="muted">每次选择后暂停，点击播放即可。全部声音统一降低6.02 dB、首尾5 ms淡化，保留音量差异。本轮只听主声线，没有新增低频、细节或空间层。</p>
+<details><summary>轨迹与素材范围</summary>
+<p>0–1秒保持较低音高，1–4秒升高，4–5秒保持；5–8秒降回低点，8–9秒保持；9–11秒再次升高，11–12秒保持。中间锚点随轨迹自动经过。</p>
+<p>每组前／中／后三点来自同一次五挡升速。两次升速分别建库，未混入六挡素材。12秒轨迹用于检查连续控制，不是原视频的实测转速过程。</p>
+<p>三锚点使用同一个持续声源，按音高插值声纹幅度与平均左右相位，没有循环录音。周期起点对齐也会影响与单中点版的差异；本页用于比较连续听感。</p>
+<p><a href="../../F3_pitch_anchors_v1/review1/index.html">查看此前五点原录音与固定音高参考</a></p>
+<img src="diagnostic.png" alt="两组局部库的连续根频率轨迹及相对单中点的左右功率变化">
+</details></main>
+<script id="data" type="application/json">__DATA__</script><script>
+const data=JSON.parse(document.querySelector('#data').textContent),banks=document.querySelector('#bank'),clips=document.querySelector('#clip'),audio=document.querySelector('audio'),status=document.querySelector('#status'),context=document.querySelector('#context');let token=0,url=null;
+for(const row of data.banks){const o=document.createElement('option');o.value=row.key;o.textContent=row.title;banks.append(o)}
+async function choose(){const turn=++token,row=data.clips.find(v=>v.key===clips.value);audio.pause();audio.removeAttribute('src');delete audio.dataset.clipKey;audio.load();if(url){URL.revokeObjectURL(url);url=null}status.textContent='载入中…';
+ try{const response=await fetch(row.file);if(!response.ok)throw Error(response.status);const blob=await response.blob();if(turn!==token)return;url=URL.createObjectURL(blob);audio.src=url;audio.dataset.clipKey=row.key;audio.load();status.textContent=row.note}
+ catch(error){if(turn===token)status.textContent='载入失败，请刷新重试。'}}
+function refresh(){const previous=data.clips.find(v=>v.key===clips.value),row=data.banks.find(v=>v.key===banks.value),available=data.clips.filter(v=>v.bank_key===row.key);clips.replaceChildren();for(const clip of available){const o=document.createElement('option');o.value=clip.key;o.textContent=clip.title;clips.append(o)}const preferred=previous&&available.find(v=>v.variant===previous.variant&&v.seed===previous.seed);clips.value=(preferred||available[0]).key;context.textContent='三个声学根频率：'+row.roots.map(v=>v.toFixed(2)+' Hz').join(' ／ ');choose()}
+banks.addEventListener('change',refresh);clips.addEventListener('change',choose);banks.value=data.banks[0].key;refresh();
+</script></html>

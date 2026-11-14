@@ -1,0 +1,21 @@
+{
+  "schema":"vsl.local-atlas-study/1",
+  "parent_commit":"722ce4f",
+  "previous_goal_turn":"Progress: five fixed source observations were extracted, audited, compared, reviewed and frozen; no live timbre promotion.",
+  "purpose":"Turn the two approved F3 fifth-gear early/frozen-mid/late triplets into TWO SEPARATE continuously controllable local banks using unchanged SaBank/SaVoice and the same driving controller. Sixth remains separate. No source refit or new window.",
+  "banks":[
+    {"name":"F3 Fifth First","cases":[["F3_pitch_anchors_v1","fit1","F3 Fifth First Early"],["F3_fifth_voice_v1","fit1","F3 Fifth First Mid"],["F3_pitch_anchors_v1","fit1","F3 Fifth First Late"]]},
+    {"name":"F3 Fifth Second","cases":[["F3_pitch_anchors_v1","fit1","F3 Fifth Second Early"],["F3_fifth_voice_v1","fit1","F3 Fifth Second Mid"],["F3_pitch_anchors_v1","fit1","F3 Fifth Second Late"]]}
+  ],
+  "alignment_orders":32,
+  "trace":{"sample_rate":48000,"frames":576000,"event_hop":240,"knots_seconds":[0,1,4,5,8,9,11,12],"knots_position":[0,0,1,1,0,0,1,1],"position":"Piecewise linear low-to-high root across the whole triplet; source-supported endpoints, two crossings of middle and return. Engineering audition, NOT measured vehicle RPM trajectory.","detail":1,"gain":1},
+  "seeds":[1,23117,61927],
+  "baseline":"Same trace with only frozen mid anchor, same seed/detail/gain and SaVoice. Alignment changes arbitrary cycle origins in triplet, so no waveform-null/realism inference.",
+  "known_before_source":"Three deterministic analytic stereo profiles, same 32-order alignment and trace at low60/mid64/high68Hz; independent closed-form phase/magnitude/taper waveform; invalid manifest/trace/seed/block and overwrite refusal; transactional input rejection. Known original driver2/12 source/layers/voice state equality before real bank render.",
+  "verification":"Fixed sparse points including every actual middle crossing+neighbors and fixed boundaries; independent per-anchor PRNG/state, root follower and direct trigonometric/LUT sums; independent Fourier derivative extrema verify alignment score without assuming C offsets optimal. Full37/512 block identity for first seed each bank; driver2/12 raw+six dry buses+drive/DNA state exact for known and both source banks. All original656C/H76voices/F2 exact; new offline adapters indexed separately; no shared code edit so no unchanged70CTest repeat.",
+  "gates":{"analytic_wave_error_FS":3e-7,"alignment_score_gap":1e-10,"sparse_C_quantization":"0.5001FLOAT ULP+2e-9FS","peak_after_common_listening_gain":0.95},
+  "failure_policy":"Retain all attempts. No phase alignment-order/seed/strength/window sweep, no refit or source rescue. A failure must be explained and resolved as an implementation/numerical error or reported unresolved, never silently gate-relaxed.",
+  "listening":"One player, one common .5 gain and5ms fade only; triplet and mid-only same trace. No new repeated listening question or automatic pending-hearing promotion.",
+  "bounds":"Local58..68Hz observations are below old loading guard. This does not complete highroot owned/live support or physicalRPM/load/state calibration. Separate DNA/LF/stereo detail/events/spatial and one driver; no sample loop, room, HF cloud or multichannel acceptance.",
+  "preserve":"Live/default/catalog/takes/accepted moving35/F2 and independent pending F2/F3 detail hearings unchanged. No new media, push or ADI performance claim. Full multi-engine/full-state/physical7.1.4 goal active."
+}

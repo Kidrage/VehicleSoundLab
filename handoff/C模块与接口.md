@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增[局部多锚点离线入口](../experiments/local_atlas_v1/README.md)：`assets.*`拥有和事务装载模型，`schedule.*`验证控制事件，`input.h`拒绝整数溢出，`probe.c`仅调用原SaVoice并导出，`checks.c`与`driver_checks.c`分别核对输入事务和原驾驶器2／12源／六干声／状态。原656C/H全保持，新增8份后664；没有新增DSP／驾驶／空间实现或实时协议。两组三锚点连续控制证据见[F3连续局部声纹库V1](../research/F3连续局部声纹库V1.md)。
+
 新增[带限DNA接入](../research/带限DNA接入V1.md)：`sound_dna/profile.*`和`dna_atlas/bank.*`增加明确选用的非实时接口，接受5–1000Hz并校验全部系数；旧接口与生成tick保持。`experiments/bandlimited_dna_v1`分开维护加载、解析渲染、同驾驶器检查、测试参数和原SaVoice导出宿主。656C/H＝646原样＋4非实时修改＋6新增；高锚点owned／UI尚未迁移。
 
 当前[F3叠加细节接入](../research/F3叠加细节接入统一窗口V1.md)：新增`experiments/catalog_drive_v1/F3_models.c/.h`非实时装配原参数，`F3_checks.c`独立核对主DNA不变／叠加细节和失效契约。`drive_recipe/bank.c`支持有已验证细节、无撤出／LF的配方，所有生成tick不变；目录追加第十项。统一驾驶器／空间／录放字段复用，默认及原声音参数保持。下面的“未接入”等表述属于各历史阶段。
