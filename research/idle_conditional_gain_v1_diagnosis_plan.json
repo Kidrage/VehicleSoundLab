@@ -1,0 +1,7 @@
+{
+  "schema":"vsl.idle-conditional-gain-fixed-diagnosis/1",
+  "timing":"Declared after run2: source conditional fit successful numerically but unavailable because3slopes reach-.5; all3samePSD fits available, most CHECK effects negative. No source CHECK metric was computed by run2.",
+  "purpose":"Describe the rejected SOURCE solution and why mean-only gain is insufficient. Fixed source constant/conditional parameters only, original TRAIN and already-inspected CHECK. No reoptimization, widened bounds, new feature/model/delay or listening candidate.",
+  "outputs":"Both source portions exact mean wave/projection, native/interior gain ranges, complex MSE bias/variance and real/imag MSE, log-magnitude errors, all51signed residual covariances; keep availability=false. Report that positive mean-one amplitude innovation covariance is still unknown, not filled with arbitrary noise or zero in a real voice.",
+  "audit":"Independently QR allsource windows and gain/wave/metric/trace. Together with6known and6control portions this gives14x116=1624QR factorizations. Keep original failed row_stack execution, all run2 records, old619C-H67voices and pending audition. This diagnosis does not rescue or promote the model."
+}

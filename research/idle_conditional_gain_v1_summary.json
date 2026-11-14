@@ -1,0 +1,41 @@
+{
+  "schema": "vsl.idle-conditional-gain-freeze/1",
+  "result": "source_conditional_mean_REJECTED_not_new_voice",
+  "parent_commit": "6e0643fdc3fbc4143e1fd4ad7673968b2e408289",
+  "previous_goal_turn_progress": "6e0643f qualified and froze known joint OSC forward/inverse/power; clean verified before source inverse work",
+  "original_NumPy_row_stack_API_failure_preserved": true,
+  "repair_only_vstack_no_model_or_gate_change": true,
+  "known10parameter_error": 3.013671256990591e-11,
+  "known_Jacobian_condition": 106.0540269980806,
+  "all4TRAIN_models_frozen_before_CHECK": true,
+  "source_conditional_available": false,
+  "source_active_slopes": 3,
+  "source_CHECK_fixed_diagnosis_only": true,
+  "source_CHECK_complex_MSE_reduction": [
+    0.05971928826224371,
+    0.13754408064093027,
+    0.0002701367192953219
+  ],
+  "source_CHECK_complex_error_variance_reduction": [
+    0.12827049198661655,
+    0.20726412974254216,
+    0.0002700192553309888
+  ],
+  "independent_QR_factorizations": 1624,
+  "all14portions_native_gains_mean_waves_and_window_coefficients_checked": true,
+  "maximum_independent_QR_coefficient_error_FS": 3.0531756895082026e-16,
+  "maximum_mean_waveform_error_FS": 4.603262215852055e-14,
+  "all_trace_costs_and_residual_signed_covariances_checked": true,
+  "hidden_innovation_mean_identity_only_NOT_variance_or_likelihood": true,
+  "complete_source_joint_model_identified": false,
+  "figure_viewed": true,
+  "new_source_voice_or_audition": false,
+  "listening_improvement_claimed": false,
+  "old619C_H_and67voices_exact": true,
+  "moving35_changed": false,
+  "runtime_changed": false,
+  "next": "Source residual innovation variance/time structure through same forward observer with main/residual power. Do not widen bound or synthesize a mean-only voice;187counterexample independent. Pending idle audition before C; original phase qualifications/full driving/multi-engine/7.1.4 goal active.",
+  "manifest_sha256": "f0ee14dff585514f740bdc8882f55c28efbea4f10f98d4c40fdd277b2b1e8745",
+  "file_count": 62,
+  "bytes": 134687372
+}
