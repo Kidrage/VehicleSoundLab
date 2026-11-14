@@ -1,0 +1,108 @@
+{
+  "schema": "vsl.idle-phase-amplitude-and-residual-freeze/1",
+  "result": "source_based_idle_candidates_NOT_adopted",
+  "parent_commit": "f793f6663914ace861ce62eeba5cf40b0c5e15d3",
+  "observer_independent_QR_cases": 13,
+  "observer_windows_each": 116,
+  "source_train_only_fit": true,
+  "source_CHECK_already_inspected": true,
+  "source_main_log_std": [
+    0.09217540176469749,
+    0.08761413167765196,
+    0.10195273375045683
+  ],
+  "signed_amplitude_covariance_preserved_without_zero_clamp": true,
+  "first_render_failed_channel_index_preserved": true,
+  "finite_candidate_seeds": [
+    149921,
+    277139,
+    381611
+  ],
+  "seconds_each": 24,
+  "amplitude_candidate_maximum_wave_error_FS": 1.49009625194374e-08,
+  "baseline_frozen_errors_FS": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "isolated_main_mix_diagnostic_cases": 24,
+  "residual_source_projection_not_physical_separation": true,
+  "only_two_low_filter_shapes_recompiled": true,
+  "old_gains_and_innovations_preserved": true,
+  "residual_maximum_wave_error_FS": 1.4901091360819407e-08,
+  "source_observer_results": [
+    {
+      "condition": "0.0",
+      "label": "Previous idle",
+      "median_of_seed_medians": [
+        0.004912075287397856,
+        0.21685893427390643,
+        0.24787488911244898
+      ],
+      "minimum": [
+        0.004790909752911831,
+        0.19189516338452017,
+        0.24540006839690154
+      ],
+      "maximum": [
+        0.004969343077050002,
+        0.22347831706639681,
+        0.2561338914163801
+      ]
+    },
+    {
+      "condition": "0.5",
+      "label": "New low residual",
+      "median_of_seed_medians": [
+        0.0025309857333937254,
+        0.09674349362436618,
+        0.16876628529718152
+      ],
+      "minimum": [
+        0.002336134158678796,
+        0.08636331545744359,
+        0.15718354780100874
+      ],
+      "maximum": [
+        0.002702032528786073,
+        0.09805046618076874,
+        0.17291016593868547
+      ]
+    },
+    {
+      "condition": "1.0",
+      "label": "New residual + AM50%",
+      "median_of_seed_medians": [
+        0.035274826485748104,
+        0.10426054542144395,
+        0.16728345754697801
+      ],
+      "minimum": [
+        0.031966307831937255,
+        0.09214759418625679,
+        0.16482428436723456
+      ],
+      "maximum": [
+        0.03759597605170584,
+        0.11201803299926447,
+        0.1686094353862696
+      ]
+    }
+  ],
+  "lower_112Hz_fluctuation_closer_187Hz_excess_and75Hz_deficit_remain": true,
+  "all619C_H_and67voices_exact": true,
+  "review_url": "http://127.0.0.1:8789/references/analysis/idle_phase_amplitude_v1/residual_review1/index.html",
+  "separate_amplitude_url": "http://127.0.0.1:8789/references/analysis/idle_phase_amplitude_v1/review1/index.html",
+  "each_review_clips": 20,
+  "common_gain": 1.0,
+  "both_browsers_passed": true,
+  "figures_and_screenshots_viewed": true,
+  "runtime_changed": false,
+  "listening_accepted": false,
+  "accepted_moving_changed": false,
+  "original_phase_qualifications_and_full_goal_open": true,
+  "next": "Listen to separated residual before C promotion; joint core AM/PM and residual power allocation, not arbitrary AM strength or notch sweep; retain all earlier pending reviews.",
+  "manifest_sha256": "322329c9ee3b097fb72f49de201f2e3667993888232a8ab08b4a186d965c4851",
+  "file_count": 204,
+  "bytes": 842454711
+}
