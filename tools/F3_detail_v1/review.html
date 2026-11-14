@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tecnica · 主声线与细节层</title>
+<style>body{font:16px/1.65 system-ui,sans-serif;background:#f4f5f6;color:#222;margin:0;padding:20px}main{max-width:760px;margin:auto}h1{font-size:25px}select,audio{width:100%;box-sizing:border-box;margin:10px 0}select{font:inherit;padding:10px;background:white;border:1px solid #bbb;border-radius:6px}.muted{font-size:14px;color:#555}img{max-width:100%;height:auto}details{margin-top:24px}</style>
+<main><h1>Tecnica · 主声线与细节层</h1>
+<p>比较“仅主声线”和“主声线＋细节”，再听细节独奏及原声参考。三次生成保持相同主声线，只改变新增细节的随机序列。</p>
+<select id="clip" aria-label="试听片段"></select><audio controls preload="metadata"></audio><p id="status" aria-live="polite"></p>
+<p class="muted">双声道干声，统一降低6.02 dB并作首尾5 ms淡化。切换后暂停，便于手动比较；无逐条响度补偿。</p>
+<details><summary>这版补充了什么</summary>
+<p>细节层来自同一局部素材的统计残差，用新的连续激励通过双声道共振滤波器生成。主声线保持原样，没有新增混响或扩宽；原声包含车内、道路与风噪，统计残差还不能独立标成机械摩擦声。</p>
+<p>当前补充1.2–14 kHz的平均频谱与左右关系。8–14 kHz观察到的周期性起伏尚未建模，低频及完整驾驶工况也未在本轮补齐。原声片段较短，持续生成声各8秒。</p>
+<img src="diagnostic.png" alt="生成声与短参考的频带差异及残余周期性检查"></details></main>
+<script id="data" type="application/json">__DATA__</script><script>
+const data=JSON.parse(document.querySelector('#data').textContent),menu=document.querySelector('#clip'),audio=document.querySelector('audio'),status=document.querySelector('#status');let url=null,token=0;
+for(const row of data.clips){const option=document.createElement('option');option.value=row.key;option.textContent=row.title;menu.append(option)}
+async function choose(){const turn=++token,row=data.clips.find(v=>v.key===menu.value);audio.pause();audio.removeAttribute('src');audio.load();if(url){URL.revokeObjectURL(url);url=null}status.textContent='载入中…';try{const response=await fetch(row.file);if(!response.ok)throw Error(response.status);const blob=await response.blob();if(turn!==token)return;url=URL.createObjectURL(blob);audio.src=url;audio.load();status.textContent=row.note}catch(error){if(turn===token)status.textContent='载入失败，请刷新重试。'}}
+menu.addEventListener('change',choose);menu.value=data.clips[0].key;choose();
+</script></html>

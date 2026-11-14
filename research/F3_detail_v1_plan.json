@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.F3-local-detail/1",
+  "parent_commit": "45c461a",
+  "previous_goal_turn": "Progress: fixed three F3 observations, qualified one local DNA and retained two failures; corrected seed/output-selector confusion with a new isolated raw C host, independently audited535frames and preserved the complete evidence.",
+  "source": "Only the frozen F3 Sixth Before Upshift normalized/reference/model in baselines/F3_lift_voice_v1/evidence/fit2. No new window, anchor, shared phase correction or rejected-case rescue.",
+  "bands_hz": [[1200,1500],[1500,1900],[1900,2400],[2400,3000],[3000,3800],[3800,4800],[4800,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "cyclic": {"cycle_frames":1024,"trim_cycles":2,"harmonics":4,"permutations":256,"seed":6143,"familywise_p":0.01,"minimum_energy_FS2":1e-12,"filter_order":4},
+  "diagnostic_policy": "Remove the exact complete-cycle ensemble mean from the retained normalized stereo signal, preserve both coherent and residual components, and measure band power/shared-phase relationships separately. This is an acoustic statistical decomposition, not physical mechanical/wind/cabin source separation. Cyclic residual power tests use alternating train/heldout cycles and a max-over-bands phase-shift null; no fitted periodic envelope will be promoted merely from training correlation.",
+  "candidate_policy": "If positive Hermitian reference-minus-unchanged-DNA power debts exist, compile one additive joint-channel residual-color candidate using the existing Rvs kernel, with no DNA withdrawal, EQ, room or extra OSC. Skip indefinite debts without clipping eigenvalues or changing DNA to rescue them. Color comes from the measured incoherent residual, not the full tonal reference. Stationary Rvs does not claim to reproduce any detected cyclic modulation.",
+  "kernel": {"order":24,"spectral_smoothing_hz":50,"covariance_ridge":0.0001,"max_pole_radius":0.9998,"taper_fraction":0.1,"postfilter_order":4,"fft_frames":65536},
+  "DNA_seed":1,
+  "detail_seeds":[8121907,23117,61927],
+  "statistics_seconds":32,
+  "audition_seconds":8,
+  "gates":{"known_predictor_FS":1e-11,"known_signed_density_FS2_per_Hz":1e-18,"C_theory_power_db":0.75,"C_theory_complex_coherence":0.08,"peak_after_common_gain":0.95},
+  "preserve":"All647C/H,74voices,F2,moving35,current defaults/UI/driver/takes/old players; no new download or push. Pending idle_complex75 remains independent; no migration, blind strengths or chaos sweeps. E spatial benefit/electronic timbre feedback retained. Full goal remains active."
+}
