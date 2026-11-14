@@ -1,5 +1,7 @@
 # C 模块与接口
 
+当前新增[drive_catalog](../modules/drive_catalog/README.md)：`catalog.*`负责目录身份、拥有深拷贝AtAssets、初始控制与实际声层能力，create/destroy非实时；`catalog_drive_v1/models.*`只装载原参数，`session.*`只管理原生切换／返回实时生命周期。生成与录放仍调用原接口；七项是五个V10情境＋两个解析示例，不是七款实车。637C/H已索引：仅旧UI一份修改、626旧字节保持、10新增，67voice及怠速参数不变。原生菜单在录制和活动回放时锁定，分层单听仍可调。见[统一目录与证据](../research/统一音色目录V1.md)。
+
 当前新增[分层监听](../modules/layer_monitor/README.md)：`layers.h`定义六条干声L/R总线；`split.*`观察已有状态包络／声源并施加一次master；`listen.*`在完整输出与单听之间作18ms淡化。`AdCapture.layers`为可选帧主序`[6][L,R]`，`atlas_monitor`加同一transport淡化；`at_player_process_layers`支持正常回放同时导出。原生UI选择不改驾驶控制或schema10／32字段，录制在监听前保留完整音频哈希，设备哈希描述实际单听。627份C/H已索引，本轮9改／8增、610旧字节保持，67voice不改。见[接入与验证](../research/驾驶分层监听V1.md)。后续历史中的计数及无此接口说明以本段为准。
 
 当前新增[细谱怠速组合层](../modules/fine_idle_layer/README.md)：`profile`组合只读Ms／Mt／Sf，`state`拥有编译核／历史与外部gate、混合量、主声线起伏、细谱量；create/destroy非实时，tick无分配／IO。`atlas_drive`沿用一个驾驶器／空间链，`AdConfig.fine_idle_profile`与旧怠速／opaque互斥。`AdMix.idle_motion/idle_detail`追加控制，`AdCapture.idle_modal/idle_detail`独立分轨。录放拥有全部原参数，当前schema10／32，旧播放器独立保存。堆状态须通过`ad_render_dispose/am_render_dispose/at_player_dispose`非实时销毁后再重建／释放模型。600份C/H已索引；音色听评及新原生控件人工检查未验收。见[接入记录](../research/怠速细谱统一驾驶V1.md)。以下按历史保留。

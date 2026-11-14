@@ -1,0 +1,93 @@
+{
+  "schema": "vsl.drive-catalog-freeze/1",
+  "result": "unified_owned_presets_and_existing_renderer_verified",
+  "git_parent": "7d4c38abdacfa50e1f53fc2cfe59785b1bcab0fe",
+  "C_H_total": 637,
+  "C_H_modified": 1,
+  "C_H_added": 10,
+  "C_H_old_unchanged": 626,
+  "voices_unchanged": 67,
+  "DSP_C_unchanged": true,
+  "presets": 7,
+  "V10_contexts": 5,
+  "analytic_examples": 2,
+  "distinct_real_engines_fitted_this_turn": 0,
+  "distinct_CTests": 65,
+  "actual_render_frames_per_preset": 192123,
+  "old_new_full_WAV_exact": 7,
+  "source_driver_and_dry_stems_2_12_exact": true,
+  "owned_irregular_block_replay_exact": true,
+  "renderer_identity_unchanged": true,
+  "take_schema": 10,
+  "take_fields": 32,
+  "UI": {
+    "result": "pass",
+    "checks": 207,
+    "failed_line": 0,
+    "muted": true,
+    "voices": 7,
+    "frames_per_record": 64123,
+    "own_program_controls": true,
+    "manual_mouse_verified": false,
+    "cross_voice_replay_and_live_restore": true,
+    "records": [
+      {
+        "selection": 0,
+        "hash": "119e2819ab3553d0",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 1,
+        "hash": "c5906e6bd38166b3",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 2,
+        "hash": "b626196f4a74c5bc",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 3,
+        "hash": "fdc70b16afca56fe",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 4,
+        "hash": "eda32ac9dcb458bb",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 5,
+        "hash": "6b0d3e30d34cc0ab",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      },
+      {
+        "selection": 6,
+        "hash": "e74e472ee6266b5f",
+        "queue_empty": 0,
+        "budget_exceeded": 0
+      }
+    ]
+  },
+  "UI_three_images_visually_reviewed": true,
+  "manual_mouse_verified": false,
+  "pending_idle_complex75_promoted": false,
+  "new_timbre_accepted": false,
+  "physical_7_1_4_verified": false,
+  "attempts_preserved": [
+    "host1 recorded voice menu lock failure",
+    "host2 corrected capability/menu/owned replay and live restore passed"
+  ],
+  "next": "Continue source-evidenced idle/acceleration timbres and state transitions;pending idle hearing remains independent. No automatic high-chaos continuation.",
+  "full_goal": "active",
+  "freeze": "baselines/drive_catalog_v1",
+  "manifest_sha256": "c5393120acbebca5034bc0e8a240093a15f1e02701e8907c7d4cb3a8ac649e98",
+  "file_count": 3791,
+  "bytes": 54967708
+}
