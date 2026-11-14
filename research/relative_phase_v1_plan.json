@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.relative-phase/1",
+  "parent_commit": "1cf5039",
+  "previous_goal_turn": "No synthesis progress: the requested ADI recheck reproduced the existing C budget and distinguished the unported audio-rate copula candidate. Resume the recorded phase-coordinate limitation.",
+  "purpose": "Test symmetric common phase and explicit L-minus-R relative phase as coordinates of the same source-derived statistical OSC system, before any runtime or spatial adoption.",
+  "source": "Only the six frozen coefficient rows in radial_copula_v1 real2. Preserve all observations, roots, amplitude quantiles and model orders; no window/clock/source refit or new media.",
+  "coordinates": "Delta=arg(zL*conj(zR)), unwrapped at its largest empty circular gap. Common=arg(zL*exp(-i*Delta/2)), independently unwrapped at its largest gap. Reconstruct phiL=Common+Delta/2 and phiR=Common-Delta/2. Neither coordinate is a physical cylinder-bank or crank-phase identification.",
+  "model": "Same tied normal ranks, population-standardized features, 12-factor PCA plus independent diagonal residual, AR1 with the original .95 cap, analytic amplitude E[A^2] preservation and variance-correct continuous interpolation as radial_copula_v1. Change coordinates only; do not scan rank, rho or strengths.",
+  "known": ["identical_stereo", "fixed_relative", "common_PM", "relative_PM", "opposed_AM", "wrap", "rotated", "swapped", "silence"],
+  "known_rows": 64,
+  "QMC": {"power":12,"seeds":[1,23117,61927]},
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "checks": {"source_coordinate_roundtrip_FS":2e-12,"phase_identity_radians":2e-12,"mean_power_relative":2e-12,"independent_moments_normalized":2e-10,"QMC_mean_power_dB":0.1},
+  "real_decision": "Keep every result. Compare complex stereo coherence to BOTH the original fixed-phase amplitude candidate and absolute-phase copula using the frozen 3-seed averages, all24 band coordinates and mean absolute error. Also report coefficient-power CV, full signed covariance and phase-moment/amplitude-association errors; a mean gain does not erase individual regressions. Do not promote runtime or timbre from numeric success.",
+  "scope": "One source adapter within DNA/BODY/DETAIL/EVENT/AUX, original single driver and independent future7.1.4 spatial layer. No original C/H, runtime voices/defaults/driver/owned/takes/room changes, repeated old tests, downloads or push. Parent listening question remains independently pending.",
+  "next": "If the representation improves real stereo evidence, test its generated time law and an isolated audible adapter; otherwise diagnose the retained amplitude/relative-phase association before another model. No random widening or blind strength sweep."
+}

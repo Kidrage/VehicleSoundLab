@@ -1,0 +1,300 @@
+{
+  "result": "relative_phase_coordinates_audio_and_evidence_frozen",
+  "parent_commit": "1cf503997c660bfe4e2d8276b1fc682363aca163",
+  "previous_goal_turn": "No synthesis progress: ADI estimate recheck. This turn fixes the identified stereo phase representation and generates paired audible candidates.",
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "known_controls": 9,
+  "known_audit": {
+    "result": "independent_relative_phase_audit_passed",
+    "cases": [
+      {
+        "label": "identical_stereo",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "fixed_relative",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "common_PM",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "relative_PM",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "opposed_AM",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "wrap",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "rotated",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "swapped",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "silence",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      }
+    ],
+    "QMC_cases": 0,
+    "maximum_roundtrip_FS": 1.8094421531119201e-16,
+    "maximum_power_relative_error": 0.0,
+    "maximum_covariance_normalized_error": 0.0,
+    "maximum_phase_budget_error": 0.0,
+    "producer_sha256": "2fa3446d71d86a38d4b55e1a68ab990bdc53ae9ea05d1393052e22575241ab6b",
+    "auditor_sha256": "dfa503d8b7dbb2e0d2555b5a636042a6f3f157de2f6e037c5270593248403f9d",
+    "phase_budget_not_physical_source_separation": true
+  },
+  "source_models": 6,
+  "QMC_cases": 18,
+  "QMC_draws": 4096,
+  "real_audit": {
+    "result": "independent_relative_phase_audit_passed",
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "source_coordinates_quantiles_ranks_AR_and_moments_verified": true
+      }
+    ],
+    "QMC_cases": 18,
+    "maximum_roundtrip_FS": 6.342923343242401e-16,
+    "maximum_power_relative_error": 1.899159212234814e-15,
+    "maximum_covariance_normalized_error": 1.8405482193175183e-16,
+    "maximum_phase_budget_error": 5.978733960281817e-16,
+    "all_JSON_descriptors_and_aggregate_decision_recomputed": true,
+    "producer_sha256": "317c0cea080fc1d58c59d8cfd2cae72f089700acc527f76378107f886af03a9d",
+    "auditor_sha256": "bccd4d2d96dbd8864c8ebca505cbc158db10867380d771a590506fbadf8e9455",
+    "phase_budget_not_physical_source_separation": true
+  },
+  "stereo_comparison": {
+    "mean_absolute_complex_error": {
+      "old_fixed": 0.11797359107075343,
+      "old_absolute": 0.16744139970556038,
+      "relative": 0.06791333209719617,
+      "new_fixed": 0.11796521516953695
+    },
+    "per_coordinate_errors": {
+      "old_fixed": [
+        0.018039209151413136,
+        0.20728641117695215,
+        0.07944555772009244,
+        0.02917583583874532,
+        0.13640079381217451,
+        0.13942737782248948,
+        0.15373473762144496,
+        0.11143868612896703,
+        0.0790603169664082,
+        0.07155952166840211,
+        0.08323619027452857,
+        0.2619078606044744,
+        0.15263581709951457,
+        0.14640979071465637,
+        0.12039413680801778,
+        0.12212928507149519,
+        0.10984066339571948,
+        0.07804101211064807,
+        0.14821666775151598,
+        0.13812297191402784,
+        0.1756024091495254,
+        0.03911278357546753,
+        0.04943978548320498,
+        0.1807083638381969
+      ],
+      "old_absolute": [
+        0.17697274548988867,
+        0.1391947979530672,
+        0.10414626301717865,
+        0.17095682641561094,
+        0.16170061883662595,
+        0.18604672980180437,
+        0.1306058360254332,
+        0.1806638057926062,
+        0.09380384445425309,
+        0.1458952416389809,
+        0.07391741878342319,
+        0.25452374816209006,
+        0.2486322288957568,
+        0.249579945811355,
+        0.13936223768613132,
+        0.1833714200227645,
+        0.15421354430164086,
+        0.15897426529040884,
+        0.13805966276737736,
+        0.21827464598688495,
+        0.12439871487469692,
+        0.1598424559849836,
+        0.1453895004803528,
+        0.2800670944601334
+      ],
+      "relative": [
+        0.09324090016301895,
+        0.05574649589850448,
+        0.07089412497151273,
+        0.05170530833238845,
+        0.056427693432206515,
+        0.04154564404155636,
+        0.052605339867652194,
+        0.07507496092615079,
+        0.04384926512856416,
+        0.054173498366030456,
+        0.04567270577096745,
+        0.07142627437827799,
+        0.0816025655981932,
+        0.08951696094200444,
+        0.05708650513667478,
+        0.08959618163434212,
+        0.0691184007681528,
+        0.09516470311429583,
+        0.05008255446510663,
+        0.09844283304825559,
+        0.04040113083757398,
+        0.09023032603947778,
+        0.0660875968198339,
+        0.09022800065196658
+      ],
+      "new_fixed": [
+        0.01816237967529905,
+        0.20724399357548093,
+        0.07951028428001598,
+        0.02918459350430411,
+        0.13640850089925644,
+        0.13961721216929224,
+        0.15383072870302444,
+        0.1114699680855901,
+        0.07914337530439683,
+        0.07159669155596746,
+        0.08321054372384236,
+        0.2618393468497194,
+        0.15250398093634981,
+        0.1459827698135616,
+        0.12025646305778526,
+        0.12212504204831576,
+        0.10981678700028255,
+        0.07819488492527157,
+        0.14806142485680754,
+        0.13796562485301003,
+        0.1756602791136767,
+        0.03907097834573665,
+        0.049558963180813695,
+        0.18075034761108646
+      ]
+    },
+    "relative_better_than_old_fixed": 19,
+    "relative_better_than_old_absolute": 24,
+    "coordinates": 24
+  },
+  "CV_error_L2": {
+    "old_radial": 0.20330415742869307,
+    "relative_phase": 0.20345630296599002
+  },
+  "new_paired_waves": 12,
+  "same_amplitudes_in_each_pair": true,
+  "block37_1024_both_variants_PCM_exact": true,
+  "audio_audit": {
+    "result": "independent_relative_phase_audio_audit_passed",
+    "cases": [
+      {
+        "label": "F3 Fifth First Mid",
+        "state_time_and_scalar_OSC_verified": true
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "state_time_and_scalar_OSC_verified": true
+      }
+    ],
+    "new_waves": 12,
+    "maximum_sparse_wave_error_FS": 2.9784834043589115e-08,
+    "maximum_endpoint_moments_relative_error": 1.7393118041138143e-15,
+    "producer_sha256": "64be290751d438c4b5b7b062607c96aaa50b45e7cad3b319180d6594f49ff36d",
+    "auditor_sha256": "188991d283aa0d8dd8ef1867dc82ed3eb2d2e26e9a13ad49e886df3290a9d7fc",
+    "heard": false
+  },
+  "actual_wave_audit": {
+    "result": "relative_phase_review_wave_metrics_verified",
+    "wave_checks": 20,
+    "max_complex_coherence_error": 1.4112720844714507e-14,
+    "known_controls": 2,
+    "producer_sha256": "43c07e8f932255110f64c34afdb3a3dc331509a5c8796428b32527676a4df1f1",
+    "auditor_sha256": "bd575d0ef85aa0b0eb2f3905e0633de3ba5e7e1cbc31d48821f39a7e212f9ed9",
+    "mean_actual_wave_error": {
+      "original": 0.1527611151412756,
+      "fixed_phase": 0.15602890271975478,
+      "relative_phase": 0.09425589445793892
+    },
+    "relative_improves_vs_paired_fixed": 8,
+    "coordinates": 8,
+    "not_matched_replay": true,
+    "heard": false
+  },
+  "browser": {
+    "result": "pass",
+    "metadata_checks": 20,
+    "muted": true,
+    "one_player": true,
+    "all_selections_pause": true,
+    "rapid_selection_latest_wins": true,
+    "seek_and_muted_play_verified": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "source_reference_not_looped": true,
+    "hearing": false
+  },
+  "scientific_figures_individually_viewed": 2,
+  "desktop_mobile_individually_viewed": true,
+  "all_failures_and_exact_executed_sources_preserved": true,
+  "hearing": {
+    "status": "pending",
+    "review_url": "http://127.0.0.1:8789/references/analysis/relative_phase_v1/review1/index.html",
+    "comparison": "Same bank and generation: paired fixed phase versus common/relative phase; identical amplitudes, no room/widener",
+    "question": "左右是否更自然，以及是否增加颤动、模糊或电子感",
+    "parent_amplitude_question": "independently pending; not repeated or overwritten",
+    "old_F2_F3_questions": "independently pending; not repeated",
+    "runtime_adopted": false
+  },
+  "parent_amplitude_and_old_F2_F3_hearings": "independently pending; not repeated",
+  "E_feedback": "左右关系有改善，音色仍明显电子",
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "ADI_target_or_CPU_bound_verified": false,
+  "new_spatial_timbre_accepted": false,
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "full_goal": "active",
+  "next": "Listen for wobble/blur; inspect relative-phase moments and amplitude-product association at five fixed-phase regressions, then time/window law. No strength/rank/rho sweep or unqualified lowrate replacement. Future C port through the original single driver requires numeric/CPU/hearing validation.",
+  "manifest_sha256": "ce3b88b75005c8b7037d56b857c9420accc8f7870bbcccc531b2b691946a555b",
+  "file_count": 1032,
+  "bytes": 147513869
+}

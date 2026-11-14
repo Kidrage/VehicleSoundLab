@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.relative-phase-audio/1",
+  "decision_evidence": "relative_phase_v1/real1 and real_audit1: all6 original models/18QMC audited, mean complex-coherence error .1674414 absolute-phase -> .0679133 relative-phase; all24 improve versus absolute,19/24 versus fixed. Amplitude CV essentially unchanged (.203304 -> .203456 L2).",
+  "anchors": ["F3 Fifth First Mid", "F3 Fifth Second Mid"],
+  "seconds":8,"rate":48000,"seeds":[1,23117,61927],"block":1024,"identity_block":37,
+  "variants":["fixed_phase","relative_phase"],
+  "pair_contract":"One shared amplitude/latent evaluation, written to both variants. Only phase differs; same native root, original288orders and19.2..21.6k taper. Fresh Gaussian innovations, no original chronology loop.",
+  "review":"Original frozen C for the same root/seed, new pair and raw short reference. Common gain.5 and5ms fade, no per-clip normalization, room or widening. First priority is paired fixed-versus-relative phase; old parent amplitude hearing remains independently pending.",
+  "checks":"Independent AR filtering, sparse scalar inverseCDF and directOSC at FLOAT halfULP+2e-10FS, first anchor/seed both variants block37/1024 exact. Endpoint power lag1 and actual waveform stereo spectral statistics retained, not adopted from static QMC. One player, muted browser and scientific figure inspection before publication.",
+  "runtime":"No C/default/driver/owned/take/room/spatial changes. Audio-rate Python projection is not covered by the old21569 budget. Multiple engines/full calibrated states/physical7.1.4 remain incomplete."
+}

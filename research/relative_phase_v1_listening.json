@@ -1,0 +1,9 @@
+{
+  "status": "pending",
+  "review_url": "http://127.0.0.1:8789/references/analysis/relative_phase_v1/review1/index.html",
+  "comparison": "Same bank and generation: paired fixed phase versus common/relative phase; identical amplitudes, no room/widener",
+  "question": "左右是否更自然，以及是否增加颤动、模糊或电子感",
+  "parent_amplitude_question": "independently pending; not repeated or overwritten",
+  "old_F2_F3_questions": "independently pending; not repeated",
+  "runtime_adopted": false
+}
