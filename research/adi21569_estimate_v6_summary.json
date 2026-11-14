@@ -1,0 +1,357 @@
+{
+  "schema": "vsl.adi21569-cycle-estimate/6",
+  "code_basis": "6ceac43e3cdc57a4b41ecf30d70426a1314218b4",
+  "measured": false,
+  "guaranteed_WCET": false,
+  "optimized_target_port_implemented": false,
+  "input_sha256": {
+    "E:\\VehicleSoundLab-Git\\research\\adi21569_estimate_v5_summary.json": "7dcd575fb8ab0597d485f2d18ac6fb85a7fe55aedd507d2044de995c03fb15df",
+    "E:\\VehicleSoundLab-Git\\research\\adi21569_estimate_v4_summary.json": "41d26c6d46c5190732191a7adb7b9e9890cbfba2bf68c0ea79de6351eeba970b",
+    "E:\\VehicleSoundLab-Git\\research\\adi21569_estimate_v3_summary.json": "e0afb081c24c28046284afb3acfe54e97192a2330c6cbd0a029a47cf8edae9bf",
+    "E:\\VehicleSoundLab-Git\\research\\adi21569_estimate_v2_summary.json": "b5b1a160d39e5bdbe8dea42f6a989f08336fdfc218d321c1ff2a4af5d6f33767",
+    "E:\\VehicleSoundLab-Git\\voices\\dna_bank_v1\\V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "E:\\VehicleSoundLab-Git\\voices\\coherent_low_v1\\measured_phase.model": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895",
+    "E:\\VehicleSoundLab-Git\\voices\\resonant_detail_c_v1\\moving_35.rdetail": "0f9c140dab555dea45650941061fd9f8a9d1b976ac9e050aced6bc98bd919b19",
+    "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Low.model": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+    "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Lower Mid.model": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+    "E:\\VehicleSoundLab-Git\\voices\\stationary_bridge_v1\\A Bridge Mid Two.model": "d1929f7d48ef026c9f1ca721616376b12c5b09970765b4dfea896683558d910d",
+    "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary Upper Mid.model": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+    "E:\\VehicleSoundLab-Git\\voices\\exterior_anchors_v1\\A Stationary High.model": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+    "E:\\VehicleSoundLab-Git\\voices\\stationary_recipe_v1\\A Stationary Lower Mid.rdetail": "fa4f91903eb789cde2cc0f9e1cef8f7ef09e7dbe521af2335512fb4262aeae3b",
+    "E:\\VehicleSoundLab-Git\\voices\\stationary_bridge_v1\\A Bridge Mid Two.rdetail": "04e837953ac2c325062805042e9600904d861ddd32bda801cec26e4d3a4b754a",
+    "E:\\VehicleSoundLab-Git\\voices\\stationary_recipe_v1\\A Stationary Upper Mid.rdetail": "570a845119ef5b1f80cdce6f046aa9adae014ebf6ae44942b2a6f3afe8579e89",
+    "E:\\VehicleSoundLab-Git\\voices\\stationary_recipe_v1\\A Stationary High.rdetail": "fcf4dd40c133db70aaa8fe6964562fb72d6cbc408fe9acb6eaabfdb54131cc21",
+    "E:\\VehicleSoundLab-Git\\experiments\\spectral_texture_v1\\F2_fine_static.sfir": "82617de84eed708396503262e1432c4a19c8afc5369d68fe3fa796a664ef4419",
+    "E:\\VehicleSoundLab-Git\\voices\\cabin_anchors_v1\\E Cabin Lower.model": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+    "E:\\VehicleSoundLab-Git\\voices\\cabin_anchors_v1\\E Cabin Upper.model": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\A Stationary High.residual": "0fc39668a9f95f58d4abd62f286a969e4812cd2d311e09f22c36057a25f4763c",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\A Stationary Low.residual": "986589d8e7c5f76f44e4a3ed954e023c44ff8422c30dbd805196d8270f6769df",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\A Stationary Lower Mid.residual": "bf835b14c8e9807b091df0cfa2db68c000e899536592f720c97678653d47e31e",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\A Stationary Upper Mid.residual": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\E Cabin Lower.residual": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f",
+    "E:\\VehicleSoundLab-Git\\voices\\residual_atlas_v1\\E Cabin Upper.residual": "90f3c5037bde0548f3c75c89f48f9a00f2b42c0e3a1a7dc1296c63e785164c8c",
+    "E:\\VehicleSoundLab-Git\\voices\\startup_settle_v1\\A start cabin settle.model": "d5dbe07bb4f9cc0f324a21d52ea7c26d9907c166184dc98e41a03cbcf847af23",
+    "E:\\VehicleSoundLab-Git\\voices\\startup_detail_v1\\A startup settling detail.residual": "c2e38e4fdd8eabf20b3b09b2ba81ca53b4874b1be5fe972cc67f58ec2aa346b9",
+    "E:\\VehicleSoundLab-Git\\experiments\\catalog_drive_v1\\models.c": "e2ff561d99e986cf593c6cb539226e9d811c8748df69f836ad21dc95e329d362",
+    "E:\\VehicleSoundLab-Git\\experiments\\catalog_drive_v1\\decel_models.c": "d5717fc1eefa4605848f23416125df18dfaba5900d607e2fbb2d24a53bb603fe",
+    "E:\\VehicleSoundLab-Git\\modules\\residual_atlas\\voice.c": "16777fe2722c26349aa4e66d9a502f820bae639fbcba66b1e04c7e09bd1f37fd",
+    "E:\\VehicleSoundLab-Git\\modules\\sound_residual\\oscillator.c": "6d8f476b29cd921497b5d3b3553a0ea45f2146c68e584baa3888ff88c90b6910",
+    "E:\\VehicleSoundLab-Git\\modules\\dna_atlas\\voice.c": "dbff003493c9fa729856041efd082a8e488eaa15c7c50f7ef8d848484bb3b44c",
+    "E:\\VehicleSoundLab-Git\\modules\\sound_dna\\texture.c": "cb17bfb003c4ccfb87fe5e3ce5f1cc7ae4c3dc8a3970ec17d1120739769bf746",
+    "E:\\VehicleSoundLab-Git\\modules\\atlas_drive\\control.c": "b20319ff29e65f1e133b4811341625dd03aaf58986ca82d4396c50df9ec106b6",
+    "E:\\VehicleSoundLab-Git\\src\\drive\\drive.c": "bd63c13658b76e356071f934306947bd13bd7b986f2de4f8cfc657fb65cdfa2e",
+    "E:\\VehicleSoundLab-Git\\src\\core\\profiles.c": "4d3757794e8084fe8fadcfb23acda4dc2f02010f357adfc70375d9864670eb62",
+    "E:\\VehicleSoundLab-Git\\voices\\E_decel_source_v1\\E slowing cabin.model": "91e9f33dc1ce722bd13aab365376b2f4f1d4567b03f1975811085f077c9885bf",
+    "E:\\VehicleSoundLab-Git\\voices\\E_decel_source_v1\\E slowing cabin.sres": "0e3638655ee901e12ac154b1afbd9e611448e2120f340defcde683c86bce9b84",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_before_upshift_v1\\F3 before upshift.model": "8637d26b37d59f30cfc83e8e848d3a9bfcd913d74609a4ec607c668baa9caedd",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_before_upshift_v1\\F3 before upshift.sres": "1490a594f69543e661a4b5912fbc051112b4f175cbf5e3aa6ba5eb5e468992ba",
+    "E:\\VehicleSoundLab-Git\\experiments\\catalog_drive_v1\\F3_models.c": "45a684817b28b0f67ed707bbb83116965062da5917c111ad511682cebb074700",
+    "E:\\VehicleSoundLab-Git\\modules\\stereo_resonance\\voice.c": "dc7e5eabe424a0745f4c02203eaf285703653593133317a195088ef92876fa63",
+    "E:\\VehicleSoundLab-Git\\modules\\resonant_detail\\excitation.c": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991",
+    "E:\\VehicleSoundLab-Git\\modules\\resonant_detail\\filter.c": "f150766d4dbd9240c89604d571111c67edd978032282588282ede5e7f22cf382",
+    "E:\\VehicleSoundLab-Git\\modules\\drive_resonance\\voice.c": "51eaab4cf3655aedc650a6b6adef9244f2bee7aeb1aaec31a9142fbb41d0d817",
+    "E:\\VehicleSoundLab-Git\\modules\\drive_recipe\\voice.c": "fad317aefdcc811c625688648fe7e6e79686784c80f342d0db1780cc1a8c0f3e",
+    "E:\\VehicleSoundLab-Git\\modules\\drive_recipe\\shape.c": "2d994b99683159cdda7333cd5ee4ef952061e890026d62dc73ad1e4452d1224e",
+    "E:\\VehicleSoundLab-Git\\modules\\drive_recipe\\bank.c": "25618e4da6014f3fd9021bbc9ed3072a55d79ad50638807b9b45d4c82868dc30",
+    "E:\\VehicleSoundLab-Git\\modules\\atlas_drive\\render.c": "78205076e4492891efb70ec2c55134d98a8f01e4cd8dfef9c6dd0e243ee7eba6",
+    "E:\\VehicleSoundLab-Git\\modules\\sound_dna\\oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+    "E:\\VehicleSoundLab-Git\\modules\\dna_atlas\\voice.h": "0db24eb0593262bda7c6ed1a5c388ce20ad77d1f6249487a35a7443b02accd45",
+    "E:\\VehicleSoundLab-Git\\modules\\dna_atlas\\bank.c": "60226230b6d68e2dff47855dc9c41700c0c97f3bfc1469a149c5835ae5f4dcc9",
+    "E:\\VehicleSoundLab-Git\\modules\\dna_atlas\\bank.h": "f7e471f894838adda26b7d6534be96dec1761a68a467e3050a2ee265f95691bf",
+    "E:\\VehicleSoundLab-Git\\modules\\sound_dna\\texture.h": "25311f8a7215188bee05e6aa390bb84801af7fb6fb9596bc6ac0455527fac4f6",
+    "E:\\VehicleSoundLab-Git\\modules\\sound_dna\\profile.c": "91aee4dcfedbcd4bd551f97fe8768576fd844ac9ce69252fdc291f8b2352c707",
+    "E:\\VehicleSoundLab-Git\\experiments\\catalog_drive_v1\\F3_local_models.c": "d9979eca76ced63e31c8a82304f234c2a4fdd41c121867e9d9fefb55e1b2efbb",
+    "E:\\VehicleSoundLab-Git\\experiments\\catalog_drive_v1\\F3_local_models.h": "09fbf6187b390eca83ab20dec8bd6dbc4296577b2069979cc93914b595e4e56e",
+    "E:\\VehicleSoundLab-Git\\modules\\drive_catalog\\catalog.c": "243c1f787fb20069c155693410f203baa6c7c265ed5f5d0879608a11c77f4fe0",
+    "E:\\VehicleSoundLab-Git\\tools\\estimate_adi21569_v5.py": "eeca667b6f06579bc37c83a01b3c7a4aa2ce83f44a96f22f303ca3af57433b4f",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\index.json": "2693b1c9e9938a4201c5b1ac4c2bdc5f8398d842250ea0448c655724eb333841",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\first_early.model": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\first_mid.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\first_late.model": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\second_early.model": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\second_mid.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+    "E:\\VehicleSoundLab-Git\\voices\\F3_fifth_local_v1\\second_late.model": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c",
+    "E:\\VehicleSoundLab-Git\\tools\\estimate_adi21569_v6.py": "624c11559dd5f7f78795ffcbbfc599c921b39f8ac36dbc996d88e95d7940ddd6",
+    "E:\\VehicleSoundLab-Git\\tools\\relative_phase_v1\\render.py": "e79157155711d9a7d5aed9a52ad1d5826d5ede35ecbd5096bfbdef82b1163586",
+    "E:\\VehicleSoundLab-Git\\tools\\relative_phase_v1\\coordinates.py": "fd41ff9bc9d345e6681f6872653d59c43c5289565a67dcf4c269c1660c5d46d0",
+    "E:\\VehicleSoundLab-Git\\tools\\relative_phase_v1\\profile.py": "1c0ad0bc09a16b854abb97caf019d157e65ac7586014a6cd7109371d41c92020",
+    "E:\\VehicleSoundLab-Git\\tools\\radial_copula_v1\\latent.py": "1aead3d49669ec6bcff2d4dbb641b03b54fa2d13913c800999c619d995fdb375",
+    "E:\\VehicleSoundLab-Git\\tools\\radial_copula_v1\\quantiles.py": "ad016d7a2282423b6c4f13983600581eaaa0bb433c7804f249c506746b74f94d",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\report.json": "317c0cea080fc1d58c59d8cfd2cae72f089700acc527f76378107f886af03a9d",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth First Early\\profile.npz": "1705b804151e5e2b91ebda6dde14ab5d1f50909a40642276ddc4fe3bd72946a8",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth First Late\\profile.npz": "abeb381f23843135da2576e0bede8aae01bb60b7288a2808fab30be0122468f1",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth First Mid\\profile.npz": "91b324653838f935cc43ff13e03e01f6d8bd3ad906e0751b45ada068cccbba29",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth Second Early\\profile.npz": "f911086e84c404caa274bc770c0ffa4ff03fc68ef8556f47ae680b0d2c461a48",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth Second Late\\profile.npz": "5e27cc2c45cb8631b9ae99f4a5b081b8f5eabd6d08892d9d02f51b33be14989d",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth Second Mid\\profile.npz": "e6aa32d4023772e3c7f414d20dcd952ac712f78642007ac30dae8ea83979867b"
+  },
+  "existing_V5_inventory_exact": true,
+  "current_C_cases_MCPS": {
+    "moving35": [
+      236.94285714285715,
+      438.84761904761905
+    ],
+    "moving35_plus_current_fine_idle": [
+      308.5748571428571,
+      572.8956190476191
+    ],
+    "stationary_five_anchors_four_detail_banks": [
+      403.92228571428575,
+      700.4621714285714
+    ],
+    "legacy_exterior_four": [
+      441.78742857142856,
+      784.4868571428572
+    ],
+    "legacy_cabin_two": [
+      428.2857142857143,
+      760.5554285714286
+    ],
+    "legacy_start_settle": [
+      380.43830225518377,
+      734.7761611762652
+    ],
+    "E_decel_stereo": [
+      267.688,
+      497.75199999999995
+    ],
+    "F3_additive_stereo": [
+      280.072,
+      522.328
+    ],
+    "F3_fifth_first_local_triplet": [
+      339.272,
+      587.976
+    ],
+    "F3_fifth_second_local_triplet": [
+      339.272,
+      587.976
+    ]
+  },
+  "current_C_largest_recipe": "legacy_exterior_four",
+  "current_C_largest_estimated_upper_MCPS": 784.4868571428572,
+  "current_C_planning_upper_MCPS": 800,
+  "current_C_allocation_MCPS": 900,
+  "research_candidate_profiles": [
+    {
+      "name": "F3 Fifth First Early",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 40,
+      "numeric_profile_FP32_bytes": 255792,
+      "distinct_factor_rho": 10,
+      "distinct_residual_rho": 1152
+    },
+    {
+      "name": "F3 Fifth First Late",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 40,
+      "numeric_profile_FP32_bytes": 255792,
+      "distinct_factor_rho": 10,
+      "distinct_residual_rho": 1152
+    },
+    {
+      "name": "F3 Fifth First Mid",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 41,
+      "numeric_profile_FP32_bytes": 260400,
+      "distinct_factor_rho": 9,
+      "distinct_residual_rho": 1150
+    },
+    {
+      "name": "F3 Fifth Second Early",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 39,
+      "numeric_profile_FP32_bytes": 251184,
+      "distinct_factor_rho": 10,
+      "distinct_residual_rho": 1152
+    },
+    {
+      "name": "F3 Fifth Second Late",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 40,
+      "numeric_profile_FP32_bytes": 255792,
+      "distinct_factor_rho": 9,
+      "distinct_residual_rho": 1152
+    },
+    {
+      "name": "F3 Fifth Second Mid",
+      "harmonics": 288,
+      "channels": 2,
+      "features": 1152,
+      "components": 12,
+      "quantile_rows": 40,
+      "numeric_profile_FP32_bytes": 255792,
+      "distinct_factor_rho": 10,
+      "distinct_residual_rho": 1152
+    }
+  ],
+  "research_candidate_scope": "One fixed-anchor source, one variant, 48k stereo; not integrated full driving recipe",
+  "research_candidate_assumed_cycle_costs": {
+    "projection_MAC": [
+      0.75,
+      1.25
+    ],
+    "residual_interpolation_variance_and_add_per_feature": [
+      4,
+      8
+    ],
+    "fused_normal_CDF_quantile_per_feature": [
+      6,
+      12
+    ],
+    "shared_factor_interpolation_variance_per_factor": [
+      8,
+      16
+    ],
+    "fixed_phase_stereo_partial": [
+      12,
+      22
+    ],
+    "varying_phase_stereo_partial": [
+      20,
+      34
+    ],
+    "Gaussian_output_and_AR_state": [
+      12,
+      30
+    ],
+    "controller_mix_events_basic_stereo_MCPS": [
+      35,
+      60
+    ]
+  },
+  "research_candidate_cases": {
+    "amplitude_only_fixed_phase": {
+      "counts": {
+        "projection_scalar_MAC_per_second": 331776000,
+        "nonlinear_feature_evaluations_per_second": 27648000,
+        "shared_factor_evaluations_per_second": 576000,
+        "stereo_partial_evaluations_per_second": 13824000,
+        "Gaussian_and_AR_outputs_per_second": 388000.0
+      },
+      "terms_MCPS": {
+        "projection": [
+          248.832,
+          414.72
+        ],
+        "residual_interpolation_variance_and_add": [
+          110.592,
+          221.184
+        ],
+        "fused_normal_CDF_quantile": [
+          165.888,
+          331.776
+        ],
+        "shared_factor_interpolation_variance": [
+          4.608,
+          9.216
+        ],
+        "stereo_OSC_and_sum": [
+          165.888,
+          304.128
+        ],
+        "Gaussian_and_AR_state": [
+          4.656,
+          11.64
+        ],
+        "controller_mix_events_basic_stereo": [
+          35,
+          60
+        ]
+      },
+      "sum_MCPS": [
+        735.464,
+        1352.664
+      ]
+    },
+    "amplitude_and_relative_phase": {
+      "counts": {
+        "projection_scalar_MAC_per_second": 663552000,
+        "nonlinear_feature_evaluations_per_second": 55296000,
+        "shared_factor_evaluations_per_second": 576000,
+        "stereo_partial_evaluations_per_second": 13824000,
+        "Gaussian_and_AR_outputs_per_second": 388000.0
+      },
+      "terms_MCPS": {
+        "projection": [
+          497.664,
+          829.44
+        ],
+        "residual_interpolation_variance_and_add": [
+          221.184,
+          442.368
+        ],
+        "fused_normal_CDF_quantile": [
+          331.776,
+          663.552
+        ],
+        "shared_factor_interpolation_variance": [
+          4.608,
+          9.216
+        ],
+        "stereo_OSC_and_sum": [
+          276.48,
+          470.016
+        ],
+        "Gaussian_and_AR_state": [
+          4.656,
+          11.64
+        ],
+        "controller_mix_events_basic_stereo": [
+          35,
+          60
+        ]
+      },
+      "sum_MCPS": [
+        1371.368,
+        2486.232
+      ]
+    }
+  },
+  "research_candidate_extra_LF_resonant_IR_layers_counted": false,
+  "assumed_clock_MHz": 1000,
+  "sample_rate": 48000,
+  "endpoint_update_rate_Hz": 333.3333333333333,
+  "basic_12channel_increment_MCPS": [
+    10,
+    30
+  ],
+  "qualifications": [
+    "All costs are unmeasured planning scenarios, not maximum-cycle guarantees or an established optimum.",
+    "Current C and research candidates are alternatives; do not add entire recipes together.",
+    "Full 288 partials and 12 components counted; no lower modulation rate/order or altered time law credited.",
+    "Fixed-phase estimate prunes unused phase projection/mapping only; keeps full endpoint RNG/AR advancement.",
+    "Common-factor normalization precedes projection; distinct rhos prevent a single shared postprojection normalization.",
+    "Fused CDF/quantile, variance, phase/OSC lookup kernels require target numeric and listening qualification.",
+    "Candidate costs include basic controller/event/mix allowance, but no separate LF, resonant detail, IR or wide-RPM atlas.",
+    "Candidate is an offline Python experiment; no C port, full state coverage or listening acceptance is implied.",
+    "Conditional relative-phase model is not implemented or estimated here.",
+    "Profile FP32 byte counts exclude runtime state, code, stack, extra LUTs, other banks and buffers.",
+    "Memory placement and cache/DMA contention can exceed the assumed effective cycle costs.",
+    "Full-bank audio counts and maximum endpoint update counts form a conservative combined planning envelope.",
+    "No PC execution time converted into SHARC cycles; no FFT/FIR accelerator benefit assumed."
+  ],
+  "exclusions": [
+    "Offline audio/video analysis or fitting",
+    "PC UI/file/network/research capture",
+    "Unimplemented full multichannel IR/HRTF/BRIR",
+    "Multiple simultaneously running engines",
+    "Other vehicle audio products, amplifiers or operating-system workloads"
+  ],
+  "next": "Target FP32/SIMD kernel prototypes and CCES counters; measure longest block including updates and memory contention."
+}
