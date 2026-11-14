@@ -1,0 +1,6 @@
+{
+  "schema":"vsl.accel-observer-projection-display/1",
+  "timing":"Declared after viewing assessment1 figures, before rendering assessment2.",
+  "problem":"Three decimal places display some small positive upper-bound ratios as0.000, which can be mistaken for exact zero.",
+  "change":"Only use three significant digits for heatmap text instead of three fixed decimal places. Keep all numerical metrics, colour scales, source models, arrays, cases, probability rules and first figure identical. Preserve assessment1 and its exact executed source."
+}
