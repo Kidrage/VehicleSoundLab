@@ -1,0 +1,577 @@
+{
+  "schema": "vsl.adi21569-cycle-estimate/5",
+  "code_basis": "0ea497b638b4cc904f8d96fa85f8684a70baa082",
+  "measured": false,
+  "guaranteed_WCET": false,
+  "optimized_target_port_implemented": false,
+  "sample_rate": 48000,
+  "assumed_core_clock_MHz": 1000,
+  "scope": "One selected current catalog recipe at a time; stereo; 12 entries are alternatives",
+  "inherited_hot_path_and_parameter_hashes_exact": true,
+  "inherited_nonRT_source_changes": {
+    "experiments/catalog_drive_v1/models.c": {
+      "previous": "38ee23e912ca363db3b65adfe9434938bcc55c8b750165065b4557fc401c7ded",
+      "current": "e2ff561d99e986cf593c6cb539226e9d811c8748df69f836ad21dc95e329d362"
+    }
+  },
+  "input_sha256": {
+    "research/adi21569_estimate_v4_summary.json": "41d26c6d46c5190732191a7adb7b9e9890cbfba2bf68c0ea79de6351eeba970b",
+    "research/adi21569_estimate_v3_summary.json": "e0afb081c24c28046284afb3acfe54e97192a2330c6cbd0a029a47cf8edae9bf",
+    "research/adi21569_estimate_v2_summary.json": "b5b1a160d39e5bdbe8dea42f6a989f08336fdfc218d321c1ff2a4af5d6f33767",
+    "voices/dna_bank_v1/V10 Exterior.model": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7",
+    "voices/coherent_low_v1/measured_phase.model": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895",
+    "voices/resonant_detail_c_v1/moving_35.rdetail": "0f9c140dab555dea45650941061fd9f8a9d1b976ac9e050aced6bc98bd919b19",
+    "voices/exterior_anchors_v1/A Stationary Low.model": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model": "d1929f7d48ef026c9f1ca721616376b12c5b09970765b4dfea896683558d910d",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+    "voices/exterior_anchors_v1/A Stationary High.model": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail": "fa4f91903eb789cde2cc0f9e1cef8f7ef09e7dbe521af2335512fb4262aeae3b",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail": "04e837953ac2c325062805042e9600904d861ddd32bda801cec26e4d3a4b754a",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail": "570a845119ef5b1f80cdce6f046aa9adae014ebf6ae44942b2a6f3afe8579e89",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail": "fcf4dd40c133db70aaa8fe6964562fb72d6cbc408fe9acb6eaabfdb54131cc21",
+    "experiments/spectral_texture_v1/F2_fine_static.sfir": "82617de84eed708396503262e1432c4a19c8afc5369d68fe3fa796a664ef4419",
+    "voices/cabin_anchors_v1/E Cabin Lower.model": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+    "voices/cabin_anchors_v1/E Cabin Upper.model": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3",
+    "voices/residual_atlas_v1/A Stationary High.residual": "0fc39668a9f95f58d4abd62f286a969e4812cd2d311e09f22c36057a25f4763c",
+    "voices/residual_atlas_v1/A Stationary Low.residual": "986589d8e7c5f76f44e4a3ed954e023c44ff8422c30dbd805196d8270f6769df",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual": "bf835b14c8e9807b091df0cfa2db68c000e899536592f720c97678653d47e31e",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+    "voices/residual_atlas_v1/E Cabin Lower.residual": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f",
+    "voices/residual_atlas_v1/E Cabin Upper.residual": "90f3c5037bde0548f3c75c89f48f9a00f2b42c0e3a1a7dc1296c63e785164c8c",
+    "voices/startup_settle_v1/A start cabin settle.model": "d5dbe07bb4f9cc0f324a21d52ea7c26d9907c166184dc98e41a03cbcf847af23",
+    "voices/startup_detail_v1/A startup settling detail.residual": "c2e38e4fdd8eabf20b3b09b2ba81ca53b4874b1be5fe972cc67f58ec2aa346b9",
+    "experiments/catalog_drive_v1/models.c": "e2ff561d99e986cf593c6cb539226e9d811c8748df69f836ad21dc95e329d362",
+    "experiments/catalog_drive_v1/decel_models.c": "d5717fc1eefa4605848f23416125df18dfaba5900d607e2fbb2d24a53bb603fe",
+    "modules/residual_atlas/voice.c": "16777fe2722c26349aa4e66d9a502f820bae639fbcba66b1e04c7e09bd1f37fd",
+    "modules/sound_residual/oscillator.c": "6d8f476b29cd921497b5d3b3553a0ea45f2146c68e584baa3888ff88c90b6910",
+    "modules/dna_atlas/voice.c": "dbff003493c9fa729856041efd082a8e488eaa15c7c50f7ef8d848484bb3b44c",
+    "modules/sound_dna/texture.c": "cb17bfb003c4ccfb87fe5e3ce5f1cc7ae4c3dc8a3970ec17d1120739769bf746",
+    "modules/atlas_drive/control.c": "b20319ff29e65f1e133b4811341625dd03aaf58986ca82d4396c50df9ec106b6",
+    "src/drive/drive.c": "bd63c13658b76e356071f934306947bd13bd7b986f2de4f8cfc657fb65cdfa2e",
+    "src/core/profiles.c": "4d3757794e8084fe8fadcfb23acda4dc2f02010f357adfc70375d9864670eb62",
+    "voices/E_decel_source_v1/E slowing cabin.model": "91e9f33dc1ce722bd13aab365376b2f4f1d4567b03f1975811085f077c9885bf",
+    "voices/E_decel_source_v1/E slowing cabin.sres": "0e3638655ee901e12ac154b1afbd9e611448e2120f340defcde683c86bce9b84",
+    "voices/F3_before_upshift_v1/F3 before upshift.model": "8637d26b37d59f30cfc83e8e848d3a9bfcd913d74609a4ec607c668baa9caedd",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres": "1490a594f69543e661a4b5912fbc051112b4f175cbf5e3aa6ba5eb5e468992ba",
+    "experiments/catalog_drive_v1/F3_models.c": "45a684817b28b0f67ed707bbb83116965062da5917c111ad511682cebb074700",
+    "modules/stereo_resonance/voice.c": "dc7e5eabe424a0745f4c02203eaf285703653593133317a195088ef92876fa63",
+    "modules/resonant_detail/excitation.c": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991",
+    "modules/resonant_detail/filter.c": "f150766d4dbd9240c89604d571111c67edd978032282588282ede5e7f22cf382",
+    "modules/drive_resonance/voice.c": "51eaab4cf3655aedc650a6b6adef9244f2bee7aeb1aaec31a9142fbb41d0d817",
+    "modules/drive_recipe/voice.c": "fad317aefdcc811c625688648fe7e6e79686784c80f342d0db1780cc1a8c0f3e",
+    "modules/drive_recipe/shape.c": "2d994b99683159cdda7333cd5ee4ef952061e890026d62dc73ad1e4452d1224e",
+    "modules/drive_recipe/bank.c": "25618e4da6014f3fd9021bbc9ed3072a55d79ad50638807b9b45d4c82868dc30",
+    "modules/atlas_drive/render.c": "78205076e4492891efb70ec2c55134d98a8f01e4cd8dfef9c6dd0e243ee7eba6",
+    "modules/sound_dna/oscillator.c": "5282497f5f22a60de31e6485979c5f6b9d1423e6057bf6cacdff34c43c4de0c0",
+    "modules/dna_atlas/voice.h": "0db24eb0593262bda7c6ed1a5c388ce20ad77d1f6249487a35a7443b02accd45",
+    "modules/dna_atlas/bank.c": "60226230b6d68e2dff47855dc9c41700c0c97f3bfc1469a149c5835ae5f4dcc9",
+    "modules/dna_atlas/bank.h": "f7e471f894838adda26b7d6534be96dec1761a68a467e3050a2ee265f95691bf",
+    "modules/sound_dna/texture.h": "25311f8a7215188bee05e6aa390bb84801af7fb6fb9596bc6ac0455527fac4f6",
+    "modules/sound_dna/profile.c": "91aee4dcfedbcd4bd551f97fe8768576fd844ac9ce69252fdc291f8b2352c707",
+    "experiments/catalog_drive_v1/F3_local_models.c": "d9979eca76ced63e31c8a82304f234c2a4fdd41c121867e9d9fefb55e1b2efbb",
+    "experiments/catalog_drive_v1/F3_local_models.h": "09fbf6187b390eca83ab20dec8bd6dbc4296577b2069979cc93914b595e4e56e",
+    "modules/drive_catalog/catalog.c": "243c1f787fb20069c155693410f203baa6c7c265ed5f5d0879608a11c77f4fe0",
+    "tools/estimate_adi21569_v5.py": "eeca667b6f06579bc37c83a01b3c7a4aa2ce83f44a96f22f303ca3af57433b4f",
+    "voices/F3_fifth_local_v1/index.json": "2693b1c9e9938a4201c5b1ac4c2bdc5f8398d842250ea0448c655724eb333841",
+    "voices/F3_fifth_local_v1/first_early.model": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e",
+    "voices/F3_fifth_local_v1/first_mid.model": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333",
+    "voices/F3_fifth_local_v1/first_late.model": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80",
+    "voices/F3_fifth_local_v1/second_early.model": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843",
+    "voices/F3_fifth_local_v1/second_mid.model": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672",
+    "voices/F3_fifth_local_v1/second_late.model": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c"
+  },
+  "assumptions": {
+    "inherited_from_V4": true,
+    "preserves_model_orders": true,
+    "root_max_hz": 83.33333333333333,
+    "bench_RPM_max": 10000,
+    "root_per_rpm_is_engineering_hypothesis": true,
+    "full_harmonic_bank_counted": true,
+    "no_batch_rng_saving_credited": true,
+    "optimized_costs": {
+      "two_anchor_stereo_harmonic": [
+        20,
+        34
+      ],
+      "projection_MAC": [
+        0.75,
+        1.25
+      ],
+      "normal_output_and_state": [
+        12,
+        30
+      ],
+      "auxiliary_events_basic_stereo_space": [
+        30,
+        50
+      ],
+      "controller_mix": [
+        5,
+        10
+      ]
+    }
+  },
+  "inventory": {
+    "F3_fifth_first_local_triplet": {
+      "profiles": [
+        {
+          "path": "voices/F3_fifth_local_v1/first_early.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 61.360802280669525
+        },
+        {
+          "path": "voices/F3_fifth_local_v1/first_mid.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 64.8044371988827
+        },
+        {
+          "path": "voices/F3_fifth_local_v1/first_late.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 67.95805686190828
+        }
+      ],
+      "counts": {
+        "stereo_harmonic_visits_per_second": 13824000,
+        "all_three_projection_MAC_per_second": 18432000.0,
+        "conservative_all_three_normal_state_outputs_per_second": 1164000.0
+      },
+      "audio_neighbors_max": 2,
+      "texture_states": 3,
+      "separate_residual_or_resonant_or_low_layer": false
+    },
+    "F3_fifth_second_local_triplet": {
+      "profiles": [
+        {
+          "path": "voices/F3_fifth_local_v1/second_early.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 60.8194356436631
+        },
+        {
+          "path": "voices/F3_fifth_local_v1/second_mid.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 64.01486718231718
+        },
+        {
+          "path": "voices/F3_fifth_local_v1/second_late.model",
+          "harmonics": 288,
+          "components": 12,
+          "base_hz": 67.36432002723924
+        }
+      ],
+      "counts": {
+        "stereo_harmonic_visits_per_second": 13824000,
+        "all_three_projection_MAC_per_second": 18432000.0,
+        "conservative_all_three_normal_state_outputs_per_second": 1164000.0
+      },
+      "audio_neighbors_max": 2,
+      "texture_states": 3,
+      "separate_residual_or_resonant_or_low_layer": false
+    }
+  },
+  "cases": {
+    "moving35": {
+      "terms_MCPS": {
+        "DNA": [
+          172.8,
+          316.8
+        ],
+        "DNA_texture": [
+          7.142857142857142,
+          19.047619047619047
+        ],
+        "coherent_low": [
+          4,
+          8
+        ],
+        "resonant_detail_and_excitation": [
+          18,
+          35
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        236.94285714285715,
+        438.84761904761905
+      ]
+    },
+    "moving35_plus_current_fine_idle": {
+      "terms_MCPS": {
+        "DNA": [
+          172.8,
+          316.8
+        ],
+        "DNA_texture": [
+          7.142857142857142,
+          19.047619047619047
+        ],
+        "coherent_low": [
+          4,
+          8
+        ],
+        "resonant_detail_and_excitation": [
+          18,
+          35
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ],
+        "fine_frequency_products": [
+          46.08,
+          82.944
+        ],
+        "fine_FFTs": [
+          15.552,
+          31.104
+        ],
+        "idle_13_modes_and_amplitude": [
+          8,
+          16
+        ],
+        "fine_block_mix": [
+          2,
+          4
+        ]
+      },
+      "sum_MCPS": [
+        308.5748571428571,
+        572.8956190476191
+      ]
+    },
+    "stationary_five_anchors_four_detail_banks": {
+      "terms_MCPS": {
+        "DNA": [
+          276.48,
+          470.016
+        ],
+        "five_anchor_texture_projection": [
+          23.04,
+          38.4
+        ],
+        "texture_random_and_state": [
+          10.714285714285714,
+          21.428571428571427
+        ],
+        "all_32_AR_SOS_filters": [
+          50.688,
+          94.6176
+        ],
+        "detail_excitation_and_mix": [
+          8,
+          16
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        403.92228571428575,
+        700.4621714285714
+      ]
+    },
+    "legacy_exterior_four": {
+      "terms_MCPS": {
+        "two_anchor_DNA": [
+          276.48,
+          470.016
+        ],
+        "all_anchor_texture_projection": [
+          18.432,
+          30.72
+        ],
+        "texture_random_and_state": [
+          8.571428571428571,
+          17.142857142857142
+        ],
+        "residual_OSC_cloud": [
+          98.304,
+          196.608
+        ],
+        "residual_covariance_and_renormalization": [
+          5,
+          10
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        441.78742857142856,
+        784.4868571428572
+      ]
+    },
+    "legacy_cabin_two": {
+      "terms_MCPS": {
+        "two_anchor_DNA": [
+          276.48,
+          470.016
+        ],
+        "all_anchor_texture_projection": [
+          9.216,
+          15.36
+        ],
+        "texture_random_and_state": [
+          4.285714285714286,
+          8.571428571428571
+        ],
+        "residual_OSC_cloud": [
+          98.304,
+          196.608
+        ],
+        "residual_covariance_and_renormalization": [
+          5,
+          10
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        428.2857142857143,
+        760.5554285714286
+      ]
+    },
+    "legacy_start_settle": {
+      "terms_MCPS": {
+        "single_anchor_DNA": [
+          147.456,
+          270.336
+        ],
+        "texture_projection": [
+          20.145113354033104,
+          33.57518892338851
+        ],
+        "texture_random_and_state": [
+          20.381188901150683,
+          50.9529722528767
+        ],
+        "residual_OSC_cloud": [
+          147.456,
+          294.912
+        ],
+        "residual_covariance_and_renormalization": [
+          5,
+          10
+        ],
+        "startup_and_catch_layers": [
+          5,
+          15
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        380.43830225518377,
+        734.7761611762652
+      ]
+    },
+    "E_decel_stereo": {
+      "terms_MCPS": {
+        "single_anchor_DNA": [
+          165.888,
+          304.128
+        ],
+        "texture_projection": [
+          4.608,
+          7.68
+        ],
+        "texture_random_and_state": [
+          4.656,
+          11.64
+        ],
+        "stereo_VAR_innovation_SOS": [
+          40.32,
+          75.264
+        ],
+        "detail_excitation": [
+          9.216,
+          23.04
+        ],
+        "detail_support_shape_mix": [
+          8,
+          16
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        267.688,
+        497.75199999999995
+      ]
+    },
+    "F3_additive_stereo": {
+      "terms_MCPS": {
+        "single_anchor_DNA": [
+          165.888,
+          304.128
+        ],
+        "texture_projection": [
+          4.608,
+          7.68
+        ],
+        "texture_random_and_state": [
+          4.656,
+          11.64
+        ],
+        "stereo_VAR_innovation_SOS": [
+          50.4,
+          94.08
+        ],
+        "detail_excitation": [
+          11.52,
+          28.8
+        ],
+        "detail_support_shape_mix": [
+          8,
+          16
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        280.072,
+        522.328
+      ]
+    },
+    "F3_fifth_first_local_triplet": {
+      "terms_MCPS": {
+        "two_neighbor_DNA": [
+          276.48,
+          470.016
+        ],
+        "all_three_texture_projection": [
+          13.824,
+          23.04
+        ],
+        "all_three_texture_random_and_state": [
+          13.968,
+          34.92
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        339.272,
+        587.976
+      ]
+    },
+    "F3_fifth_second_local_triplet": {
+      "terms_MCPS": {
+        "two_neighbor_DNA": [
+          276.48,
+          470.016
+        ],
+        "all_three_texture_projection": [
+          13.824,
+          23.04
+        ],
+        "all_three_texture_random_and_state": [
+          13.968,
+          34.92
+        ],
+        "auxiliary_events_basic_stereo_space": [
+          30,
+          50
+        ],
+        "controller_mix": [
+          5,
+          10
+        ]
+      },
+      "sum_MCPS": [
+        339.272,
+        587.976
+      ]
+    }
+  },
+  "largest_estimated_recipe": "legacy_exterior_four",
+  "largest_estimated_upper_MCPS": 784.4868571428572,
+  "rounded_catalog_stereo_planning_upper_MCPS": 800,
+  "recommended_algorithm_allocation_MCPS": 900,
+  "basic_12channel_increment_MCPS": [
+    10,
+    30
+  ],
+  "block_budget": {
+    "frames": 240,
+    "seconds": 0.005,
+    "core_cycles_at_assumed_clock": 5000000,
+    "cycles_at_800_MCPS": 4000000,
+    "cycles_at_900_MCPS": 4500000
+  },
+  "exclusions": [
+    "Offline audio/video analysis or fitting",
+    "PC UI/file/network/research capture",
+    "Unimplemented full multichannel IR/HRTF/BRIR",
+    "Multiple simultaneously running engines",
+    "Other vehicle audio products, amplifiers or operating-system workloads"
+  ],
+  "qualifications": [
+    "Same model orders; target FP32/SIMD/block kernels and SRAM/DMA scheduling assumed, not implemented.",
+    "MAC counts are not MCPS; coefficients include assumed scheduling/loading cost, not measured instructions.",
+    "No per-callback worst-case guarantee: FFT/statistical bursts must be measured and scheduled.",
+    "All model banks continue where current runtime does; no silent gate or unqualified order reduction credited.",
+    "Warmup/certificate/model IO are non-RT; no new timbre acceptance or target numeric equivalence implied.",
+    "New triplets have no separate resonant/residual/low runtime layer.",
+    "All three statistical states count, even outside acoustic support.",
+    "Paired extreme-rate full-bank and update counts are a planning envelope, not per-block WCET.",
+    "12 catalog entries are observation/recipe alternatives, not 12 distinct engines or simultaneous voices."
+  ],
+  "next": "CCES optimized target port, numeric/listening qualification, then max callback cycles across state/anchor/FFT/cache/DMA scenarios."
+}
