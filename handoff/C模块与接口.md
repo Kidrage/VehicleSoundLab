@@ -1,5 +1,7 @@
 # C 模块与接口
 
+新增驻车候选宿主：`experiments/stationary_recipe_v1/models.{h,c}`非实时装载原四DNA与三个新rdetail，低锚点留空；`probe.c`调用原踏板场景与atlas_monitor／take接口，导出实际轨迹、六层干声和自包含行程。没有增加DSP、控制器或协议字段；640C/H中原637份精确保持。[参数／验证边界](../research/驻车共振细节与驾驶V1.md)。
+
 当前新增[drive_catalog](../modules/drive_catalog/README.md)：`catalog.*`负责目录身份、拥有深拷贝AtAssets、初始控制与实际声层能力，create/destroy非实时；`catalog_drive_v1/models.*`只装载原参数，`session.*`只管理原生切换／返回实时生命周期。生成与录放仍调用原接口；七项是五个V10情境＋两个解析示例，不是七款实车。637C/H已索引：仅旧UI一份修改、626旧字节保持、10新增，67voice及怠速参数不变。原生菜单在录制和活动回放时锁定，分层单听仍可调。见[统一目录与证据](../research/统一音色目录V1.md)。
 
 当前新增[分层监听](../modules/layer_monitor/README.md)：`layers.h`定义六条干声L/R总线；`split.*`观察已有状态包络／声源并施加一次master；`listen.*`在完整输出与单听之间作18ms淡化。`AdCapture.layers`为可选帧主序`[6][L,R]`，`atlas_monitor`加同一transport淡化；`at_player_process_layers`支持正常回放同时导出。原生UI选择不改驾驶控制或schema10／32字段，录制在监听前保留完整音频哈希，设备哈希描述实际单听。627份C/H已索引，本轮9改／8增、610旧字节保持，67voice不改。见[接入与验证](../research/驾驶分层监听V1.md)。后续历史中的计数及无此接口说明以本段为准。

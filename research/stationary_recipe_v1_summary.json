@@ -1,0 +1,601 @@
+{
+  "result": "three_stationary_fits_and_same_controller_audio_candidate",
+  "C_H": 640,
+  "prior_C_H_exact": 637,
+  "added_C_H": 3,
+  "prior_voice_files_exact": 67,
+  "new_detail_profiles": 3,
+  "raw_recordings_fitted": 1,
+  "new_real_engines": 0,
+  "stationary_root_hz": [
+    31.52219356431996,
+    47.39127187830898,
+    60.83004535315176
+  ],
+  "maximum_LR_band_errors_db": [
+    0.32801922693767,
+    0.27164676649888636,
+    0.3257792242972532
+  ],
+  "C_Python_detail_identical": true,
+  "low_anchor_not_promoted": true,
+  "old65CTests_not_repeated": true,
+  "actual_driving": {
+    "result": "passed",
+    "commands": [
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_0_2_240",
+          "0",
+          "neutral",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 4.170058199902996,
+        "log": "neutral_0_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_0_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_0_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 3.8086073000449687,
+        "log": "neutral_0_2_240_replay.log",
+        "sha256": "0c93b36682b8257b2be6e251e71f54cc7e8521500913c8278048732a16b71fd0"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_1_2_240",
+          "1",
+          "neutral",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 5.778431599959731,
+        "log": "neutral_1_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_1_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_1_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 5.293194100027904,
+        "log": "neutral_1_2_240_replay.log",
+        "sha256": "302b6ba9d571fbdd2d8c8e72c4d5c9014691077072c002c2845b6365b3317709"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_240",
+          "2",
+          "neutral",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 5.731527999974787,
+        "log": "neutral_2_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 5.27588180010207,
+        "log": "neutral_2_2_240_replay.log",
+        "sha256": "055fa844485db48431a223aa483b7293ab974a57bcec9758db90096578a44d64"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_12_240",
+          "2",
+          "neutral",
+          "12",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 6.271264899987727,
+        "log": "neutral_2_12_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_12_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_12_240_replayed.wav",
+          "--channels",
+          "12"
+        ],
+        "exit_code": 0,
+        "seconds": 5.873377799987793,
+        "log": "neutral_2_12_240_replay.log",
+        "sha256": "b75b0f730084fff3a06ab25e3a076d01482af3a377b8fc98d70f3d3c3817bc10"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_37",
+          "2",
+          "neutral",
+          "2",
+          "37"
+        ],
+        "exit_code": 0,
+        "seconds": 5.726857399800792,
+        "log": "neutral_2_2_37.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_37.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\neutral_2_2_37_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 5.418584400089458,
+        "log": "neutral_2_2_37_replay.log",
+        "sha256": "055fa844485db48431a223aa483b7293ab974a57bcec9758db90096578a44d64"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_0_2_240",
+          "0",
+          "shifts",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 6.970588800031692,
+        "log": "shifts_0_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_0_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_0_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 6.458462000126019,
+        "log": "shifts_0_2_240_replay.log",
+        "sha256": "752bf39714d2fc908f07629c77c80f2970f808af2b54f3ee82be1297c33d8ad8"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_1_2_240",
+          "1",
+          "shifts",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 8.947204299969599,
+        "log": "shifts_1_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_1_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_1_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 8.66005939990282,
+        "log": "shifts_1_2_240_replay.log",
+        "sha256": "3052f2764d856e04e4adc0c74ce664f490b8f67aef6a107a381433c673f4aa54"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_240",
+          "2",
+          "shifts",
+          "2",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 8.797487100120634,
+        "log": "shifts_2_2_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_240_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 8.598698500078171,
+        "log": "shifts_2_2_240_replay.log",
+        "sha256": "e9c42f102e30e435b80b858bc400f62f1b2791995b9aa5694d7bd8587d188ea6"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_12_240",
+          "2",
+          "shifts",
+          "12",
+          "240"
+        ],
+        "exit_code": 0,
+        "seconds": 9.758176199859008,
+        "log": "shifts_2_12_240.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_12_240.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_12_240_replayed.wav",
+          "--channels",
+          "12"
+        ],
+        "exit_code": 0,
+        "seconds": 9.187051499960944,
+        "log": "shifts_2_12_240_replay.log",
+        "sha256": "4f35c775addee0221a571330915ec7268257183e683529eb4719abe3c19f7fb1"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\probe.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_37",
+          "2",
+          "shifts",
+          "2",
+          "37"
+        ],
+        "exit_code": 0,
+        "seconds": 9.692274200031534,
+        "log": "shifts_2_2_37.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\old_player.exe",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_37.vslrun",
+          "E:\\VehicleSoundLab\\references\\analysis\\stationary_recipe_v1\\drive2\\shifts_2_2_37_replayed.wav",
+          "--channels",
+          "2"
+        ],
+        "exit_code": 0,
+        "seconds": 8.58776789996773,
+        "log": "shifts_2_2_37_replay.log",
+        "sha256": "e9c42f102e30e435b80b858bc400f62f1b2791995b9aa5694d7bd8587d188ea6"
+      }
+    ],
+    "cases": [
+      {
+        "result": "pass",
+        "frames": 576000,
+        "variant": 0,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "f15187ea6b88f206",
+        "source_hash": "a38c63883988ca20",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 0,
+        "peak": 0.18288554251194,
+        "state_frames": [
+          233520,
+          154560,
+          0,
+          0,
+          177120,
+          6240,
+          4560,
+          0
+        ],
+        "label": "neutral_0_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "77083a0c1e44f4036bcdf96c251575660cbd9faa6a4b81f355b160b7c1774805"
+      },
+      {
+        "result": "pass",
+        "frames": 576000,
+        "variant": 1,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "f15187ea6b88f206",
+        "source_hash": "e210d8d6011237a0",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 101635,
+        "peak": 0.18288554251194,
+        "state_frames": [
+          233520,
+          154560,
+          0,
+          0,
+          177120,
+          6240,
+          4560,
+          0
+        ],
+        "label": "neutral_1_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "77083a0c1e44f4036bcdf96c251575660cbd9faa6a4b81f355b160b7c1774805"
+      },
+      {
+        "result": "pass",
+        "frames": 576000,
+        "variant": 2,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "f1425cc65247d11f",
+        "source_hash": "1dcc47c209365cf3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 101635,
+        "peak": 0.18429893255233765,
+        "state_frames": [
+          233520,
+          154560,
+          0,
+          0,
+          177120,
+          6240,
+          4560,
+          0
+        ],
+        "label": "neutral_2_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "1c4158472c86f87eadb69213813d9be381295328bdd6f688975d1f0f0eaa6fc1"
+      },
+      {
+        "result": "pass",
+        "frames": 576000,
+        "variant": 2,
+        "channels": 12,
+        "block": 240,
+        "audio_hash": "b9f35bf0b56c6bff",
+        "source_hash": "1dcc47c209365cf3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 101635,
+        "peak": 0.18429893255233765,
+        "state_frames": [
+          233520,
+          154560,
+          0,
+          0,
+          177120,
+          6240,
+          4560,
+          0
+        ],
+        "label": "neutral_2_12_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "06750715466291dcc0c48deb216556d5ebc958ce5c0e01b4b078b5ec7d195499"
+      },
+      {
+        "result": "pass",
+        "frames": 576000,
+        "variant": 2,
+        "channels": 2,
+        "block": 37,
+        "audio_hash": "f1425cc65247d11f",
+        "source_hash": "1dcc47c209365cf3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 101635,
+        "peak": 0.18429893255233765,
+        "state_frames": [
+          233520,
+          154560,
+          0,
+          0,
+          177120,
+          6240,
+          4560,
+          0
+        ],
+        "label": "neutral_2_2_37",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "1c4158472c86f87eadb69213813d9be381295328bdd6f688975d1f0f0eaa6fc1"
+      },
+      {
+        "result": "pass",
+        "frames": 768000,
+        "variant": 0,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "ae8bb2ecd1a29267",
+        "source_hash": "d50a0de233f640f7",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 0,
+        "peak": 0.2992660701274872,
+        "state_frames": [
+          292800,
+          0,
+          223920,
+          61920,
+          140160,
+          27600,
+          13680,
+          7920
+        ],
+        "label": "shifts_0_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "52ba1d420e412753b9f32b2d3f0048455f340aa374e3008522392787d84682e9"
+      },
+      {
+        "result": "pass",
+        "frames": 768000,
+        "variant": 1,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "ae8bb2ecd1a29267",
+        "source_hash": "87a1062583fbf977",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 282937,
+        "peak": 0.2992660701274872,
+        "state_frames": [
+          292800,
+          0,
+          223920,
+          61920,
+          140160,
+          27600,
+          13680,
+          7920
+        ],
+        "label": "shifts_1_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "52ba1d420e412753b9f32b2d3f0048455f340aa374e3008522392787d84682e9"
+      },
+      {
+        "result": "pass",
+        "frames": 768000,
+        "variant": 2,
+        "channels": 2,
+        "block": 240,
+        "audio_hash": "e4d81b8b81e6c53c",
+        "source_hash": "0fb1d4062997e9e3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 282937,
+        "peak": 0.29975736141204834,
+        "state_frames": [
+          292800,
+          0,
+          223920,
+          61920,
+          140160,
+          27600,
+          13680,
+          7920
+        ],
+        "label": "shifts_2_2_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "27eed121728e58a8270055e4fe6a50a536fafac0ec9387195811a3a7af6abc5a"
+      },
+      {
+        "result": "pass",
+        "frames": 768000,
+        "variant": 2,
+        "channels": 12,
+        "block": 240,
+        "audio_hash": "cbb0a71f63631d5c",
+        "source_hash": "0fb1d4062997e9e3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 282937,
+        "peak": 0.29975736141204834,
+        "state_frames": [
+          292800,
+          0,
+          223920,
+          61920,
+          140160,
+          27600,
+          13680,
+          7920
+        ],
+        "label": "shifts_2_12_240",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "7341f0c3268440b74c8c564815ec32a9236ce159f673b7acd6272eca9e649b3e"
+      },
+      {
+        "result": "pass",
+        "frames": 768000,
+        "variant": 2,
+        "channels": 2,
+        "block": 37,
+        "audio_hash": "e4d81b8b81e6c53c",
+        "source_hash": "0fb1d4062997e9e3",
+        "render_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+        "detail_supported_frames": 282937,
+        "peak": 0.29975736141204834,
+        "state_frames": [
+          292800,
+          0,
+          223920,
+          61920,
+          140160,
+          27600,
+          13680,
+          7920
+        ],
+        "label": "shifts_2_2_37",
+        "whole_old_player_WAV_exact": true,
+        "WAV_sha256": "27eed121728e58a8270055e4fe6a50a536fafac0ec9387195811a3a7af6abc5a"
+      }
+    ],
+    "sources": {
+      "experiments/stationary_recipe_v1/CMakeLists.txt": "f85d029c9a0b3d74b87a611f89faf83c04015bc9e45273dcd9f60f2af235f0a1",
+      "experiments/stationary_recipe_v1/models.c": "ef565d1e5abfd6a1f9da87469cab09be7aaa5db2e4a79409aa763462c5f5cb6e",
+      "experiments/stationary_recipe_v1/models.h": "e97f050bcb0b48872db28efbf19087aae5072087f8549b1a60c005c5192739f9",
+      "experiments/stationary_recipe_v1/probe.c": "cd2d18c8cf32c5284a86708d2993a39c5e4006d8c79c019f202a35d4a7a260bd"
+    },
+    "zero_full_WAV_exact": true,
+    "chunk_full_WAV_exact": true,
+    "driver_unchanged": true,
+    "detail_and_dry_layers_2_12_exact": true,
+    "source_hash_2_12_exact": true,
+    "old_player_owned_replays": 10,
+    "human_accepted": false,
+    "native_device_tested": false,
+    "actual_12_speakers_tested": false
+  },
+  "browser": {
+    "result": "passed",
+    "combinations": 30,
+    "defaults_stopped": true,
+    "single_player": true,
+    "muted_playback": true,
+    "playing_switch_and_seek": true,
+    "actual_telemetry_display_checked": true,
+    "mobile_overflow": false,
+    "javascript_errors": [],
+    "scope": "Own generated browser page only; no human hearing or native device acceptance."
+  },
+  "figures_and_desktop_mobile_screenshots_viewed": true,
+  "review_URL": "http://127.0.0.1:8789/references/analysis/stationary_recipe_v1/review2/index.html",
+  "renderer_identity_unchanged": true,
+  "renderer_id": "ac51d5ddbad3414b389ed58ce55188f35eee5aa0829860207e5dfed3dfc9bff3",
+  "schema": 10,
+  "control_fields": 32,
+  "native_UI_default_changed": false,
+  "native_device_newly_verified": false,
+  "human_accepted": false,
+  "pending_F2_idle_changed": false,
+  "moving35_changed": false,
+  "actual_7_1_4_verified": false,
+  "failures_preserved": [
+    "fit1 missing probe warmup",
+    "build1 missing engine function declaration",
+    "drive1 missing12channel replay argument",
+    "review1 support text correction after old checks passed"
+  ],
+  "next": "Hear stationary candidate; fill source-supported anchor/condition gaps. F2 idle candidate still pending. Do not infer full engine/state/space qualification from these renders.",
+  "full_goal": "active",
+  "git_parent": "7085bbefe6df88e94c3741d1620b2167f6bc04ba",
+  "manifest_sha256": "37d801c3efc4fe4ba7b855f82d49dbcc5fbc8d30a818d9890c3956b576000d6f",
+  "file_count": 1183,
+  "bytes": 1560234976
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.stationary-recipe-plan/1",
+  "source": "A",
+  "source_segment": "A_exterior_blips",
+  "anchors": ["A Stationary Low", "A Stationary Lower Mid", "A Stationary Upper Mid", "A Stationary High"],
+  "replacement_power": 0.35,
+  "transition_hz": [1200, 1900],
+  "sample_rate": 48000,
+  "seconds": 8,
+  "crop_frames": 24000,
+  "detail_seeds": [8121907, 23117, 61927],
+  "output_gain": 0.5,
+  "periodic_envelopes": false,
+  "source_reference": "Reuse manifest-bound restored-root references and original DNA; no new phase fit. Four separate same-camera stationary spectra, never moving A/E/F2 coefficients.",
+  "budget": "Eight-band nonnegative gain fit to the power debt after 35% withdrawal. Negative debt is reported, never resolved by boosting or altering coherent low rows. Original residual cloud disabled in candidate.",
+  "gates": {"C_detail_oracle_FS": 1e-10, "C_DNA_difference_FS": 2e-7, "peak_after_common_gain": 0.95},
+  "scope": "Optional stationary-context audio candidate using existing synthesis kernels. Four acoustic anchors are not four engines or measured RPM/load calibration. Flat new-excitation envelope; no moving-context periodic law, room, PCM or recorded envelope timeline. Does not modify pending F2 idle_complex75 or accepted moving35. Fit and hear before considering a default."
+}
