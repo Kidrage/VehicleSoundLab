@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.observer-inverse-plan/1",
+  "parent_commit": "bcee686",
+  "previous_goal_turn": "Progress: quantile54/162 waveform and publication evidence, independent archives and finite-Hann forward/adjoint7known, committed0091c27+bcee686.",
+  "known_first": "Verify equivalent polyphase FFT operator on frozen7controls plus full288; independently verify three regularized LSMR solves against explicit scalarOSC/directDFT dense systems before actual source fitting.",
+  "orders": 288,
+  "node_support": "ceil((frames-1)/256) intervals uniformly cover the original integer sample span, rounded to integer positions. No tiny one-sample final interval. All positions recorded.",
+  "objective": "J(q)=||F(s*q)/s-y/s||^2 + 0.001||D2 q||^2 + 0.000001||q||^2; D2 uses actual node distances and reference_step256.",
+  "scale": "Per-order joint-channel source coefficient RMS, floored at maximum_order_RMS*1e-6; all orders retained, floor counts reported.",
+  "regularization_scope": "One declared diagnostic regularization, no sweep or source-specific winner selection. Positive ridge identifies this inference solution, not the physical latent trajectory.",
+  "solver": {"atol":1e-11,"btol":1e-11,"conlim":1e12,"maxiter":4000,"relative_stationarity_gate":2e-7},
+  "preconditioner": "After all6 original4000-iteration attempts fail convergence, preserve them and use an independently dense-qualified invertible right map: Cholesky whitening of the SAME alpha*D2.T*D2+beta*I and exact column normalization from Fourier hat responses. Same objective/scales/nodes/gate; stricter LSMR atol/btol1e-13 only. Save right maps and compare original-space stationarity.",
+  "refinement": "After all6 preconditioned4000-iteration attempts also fail, keep them intact. Known-first six dense controls (three RHS, zero/nonzero starts) qualify correction minimization ||A(x0+Pdu)-b|| using the identical saved invertible P. All6 actual sources get at most three4000-iteration correction stages; save every stage, stop only on unchanged original convergence formula, retain final failures. Same objective/regularization/node support/scales; no reduced order/rank/cadence or source-specific sweep.",
+  "sources": "All6 original frozen F3 sources from one V10/two ascents, conditional_phase_time_v1 and coefficient_geometry_v1 archives. Verify identical reconstructed double waveform and native/warp arrays; no refit of clocks.",
+  "comparators": ["interpolate_original_observed_coefficients_at_window_centers", "regularized_forward_inverse"],
+  "observer": "Original Hann4096/hop256/global demod; all288 coefficients and six bands [0,3k),[3k,6k),[6k,8k),[8k,10k),[10k,14k),[14k,21.6k). Preserve full signed six-carrier-group12x12Grams, Parseval and all three contiguous row partitions.",
+  "validation_scope": "In-sample inverse diagnostic. No held-out/generalization or sustained-generation claim. Reconstructed trajectories themselves are not a deployable source and will not be offered as a new sound candidate.",
+  "not_yet": "Source-statistical parameter fitting, sustained sample-free rendering, native48k aliasing, target cost, C and human acceptance remain separate gates.",
+  "product_scope": "One driver, V6 DNA/BODY/DETAIL/EVENT/AUX, independent future spatial renderer. Full multi-engine/state/physical7.1.4 goal active."
+}

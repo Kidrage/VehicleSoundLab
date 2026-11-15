@@ -1,0 +1,3130 @@
+{
+  "result": "observer_inverse_frozen",
+  "source_models": 6,
+  "engines": 1,
+  "published_rows": 24,
+  "all18_final_solver_records_retained": true,
+  "all_correction_checkpoints_retained": true,
+  "all_source_native_warp_arrays_preserved": true,
+  "historical_executed_sources": [
+    {
+      "attempt": "real1",
+      "file": "research/observer_inverse_v1_plan.json",
+      "executed_sha256": "5768ac74b6c95e75fffcfcb7fd2b8e82267341fd6a3a7f4b884c973045531ee9",
+      "current_sha256": "30235a54089fab9c36197862e63ae0480f97d05f0f7f519e99aceaccd77302d0"
+    },
+    {
+      "attempt": "real1",
+      "file": "tools/run_observer_inverse_real_v1.py",
+      "executed_sha256": "7f07008444e7153302db27a0d9fb608a181a1f51390fc79789535d09b99481a8",
+      "current_sha256": "e6129bd6f5c6120c5d33f97929deacfadfb764d4d5ecdf7bd5ac569463d0d5a8"
+    },
+    {
+      "attempt": "real2",
+      "file": "research/observer_inverse_v1_plan.json",
+      "executed_sha256": "5011c9f1e8793c8b2db0dac5b87441ea41c9add7921a05f45de95f0de9bc5075",
+      "current_sha256": "30235a54089fab9c36197862e63ae0480f97d05f0f7f519e99aceaccd77302d0"
+    }
+  ],
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\report.json": "inputs/upstream/observer_forward_known_v1/evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\constant.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/constant.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\amplitude_ramp.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/amplitude_ramp.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\complex_rotation.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/complex_rotation.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\neighbor_and_image_leakage.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/neighbor_and_image_leakage.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\asymmetric_silent_right.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/asymmetric_silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\adjoint.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/adjoint.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_forward_known_v1\\evidence\\known1\\underdetermined_null.npz": "inputs/upstream/observer_forward_known_v1/evidence/known1/underdetermined_null.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known_audit1\\report.json": "evidence/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\constant.npz": "evidence/known1/constant.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\amplitude_ramp.npz": "evidence/known1/amplitude_ramp.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\complex_rotation.npz": "evidence/known1/complex_rotation.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\neighbor_and_image_leakage.npz": "evidence/known1/neighbor_and_image_leakage.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\asymmetric_silent_right.npz": "evidence/known1/asymmetric_silent_right.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\adjoint.npz": "evidence/known1/adjoint.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\underdetermined_null.npz": "evidence/known1/underdetermined_null.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\full288.npz": "evidence/known1/full288.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\dense_system.npz": "evidence/known1/dense_system.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\solve_constant.npz": "evidence/known1/solve_constant.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\solve_amplitude_ramp.npz": "evidence/known1/solve_amplitude_ramp.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\known1\\solve_neighbor_and_image_leakage.npz": "evidence/known1/solve_neighbor_and_image_leakage.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\report.json": "inputs/upstream/conditional_phase_time_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\report.json": "inputs/upstream/coefficient_geometry_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth First Early\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth First Early\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth First Mid\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth First Mid\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth First Late\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth First Late\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth Second Early\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth Second Early\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth Second Mid\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth Second Mid\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\conditional_phase_time_v1\\evidence\\real1\\F3 Fifth Second Late\\source.npz": "inputs/upstream/conditional_phase_time_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\F3 Fifth Second Late\\source.npz": "inputs/upstream/coefficient_geometry_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\refinement_known1\\report.json": "evidence/refinement_known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\refinement_known_audit1\\report.json": "evidence/refinement_known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\report.json": "evidence/real2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Early\\source.npz": "evidence/real2/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Early\\scale.npz": "evidence/real2/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Early\\precondition.npz": "evidence/real2/F3 Fifth First Early/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Early\\inverse.npz": "evidence/real2/F3 Fifth First Early/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Early\\interpolated_observations.npz": "evidence/real2/F3 Fifth First Early/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Mid\\source.npz": "evidence/real2/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Mid\\scale.npz": "evidence/real2/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Mid\\precondition.npz": "evidence/real2/F3 Fifth First Mid/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Mid\\inverse.npz": "evidence/real2/F3 Fifth First Mid/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Mid\\interpolated_observations.npz": "evidence/real2/F3 Fifth First Mid/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Late\\source.npz": "evidence/real2/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Late\\scale.npz": "evidence/real2/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Late\\precondition.npz": "evidence/real2/F3 Fifth First Late/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Late\\inverse.npz": "evidence/real2/F3 Fifth First Late/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth First Late\\interpolated_observations.npz": "evidence/real2/F3 Fifth First Late/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Early\\source.npz": "evidence/real2/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Early\\scale.npz": "evidence/real2/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Early\\precondition.npz": "evidence/real2/F3 Fifth Second Early/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Early\\inverse.npz": "evidence/real2/F3 Fifth Second Early/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Early\\interpolated_observations.npz": "evidence/real2/F3 Fifth Second Early/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Mid\\source.npz": "evidence/real2/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Mid\\scale.npz": "evidence/real2/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Mid\\precondition.npz": "evidence/real2/F3 Fifth Second Mid/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Mid\\inverse.npz": "evidence/real2/F3 Fifth Second Mid/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Mid\\interpolated_observations.npz": "evidence/real2/F3 Fifth Second Mid/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Late\\source.npz": "evidence/real2/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Late\\scale.npz": "evidence/real2/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Late\\precondition.npz": "evidence/real2/F3 Fifth Second Late/precondition.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Late\\inverse.npz": "evidence/real2/F3 Fifth Second Late/inverse.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2\\F3 Fifth Second Late\\interpolated_observations.npz": "evidence/real2/F3 Fifth Second Late/interpolated_observations.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real1\\report.json": "evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real3\\report.json": "evidence/real3/report.json"
+  },
+  "known_and_real_audits": {
+    "known_audit1": {
+      "result": "independent_observer_inverse_known_passed",
+      "cases": [
+        "constant",
+        "amplitude_ramp",
+        "complex_rotation",
+        "neighbor_and_image_leakage",
+        "asymmetric_silent_right",
+        "adjoint",
+        "underdetermined_null",
+        "full288"
+      ],
+      "solves": [
+        {
+          "name": "constant",
+          "relative_solution_error": 8.298195800186159e-10,
+          "stationarity": 3.7110490444494616e-13
+        },
+        {
+          "name": "amplitude_ramp",
+          "relative_solution_error": 1.1569876396666197e-09,
+          "stationarity": 3.9625206146808525e-13
+        },
+        {
+          "name": "neighbor_and_image_leakage",
+          "relative_solution_error": 3.097023866673741e-09,
+          "stationarity": 7.116890673342538e-13
+        }
+      ],
+      "maximum_wave_error": 2.128158760328347e-14,
+      "maximum_DFT_error": 2.6304265940060355e-15,
+      "maximum_adjoint_error": 5.677402144108643e-13,
+      "material_read": false,
+      "producer_sha256": "4607f33589f902dfb179d636135584161ab12e32f5a920153776ab4e615d2ae2",
+      "auditor_sha256": "ea4e69a099d34677d3c72ec5a7f45df7fad52c3b188def1894445d8cf5419e98",
+      "oracle_sha256": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+      "no_material_inverse_qualified": true
+    },
+    "precondition_known_audit1": {
+      "result": "independent_observer_inverse_precondition_known_passed",
+      "cases": [
+        {
+          "name": "constant",
+          "relative_solution_error": 1.541854670357629e-10,
+          "relative_stationarity": 1.9627557058368972e-14
+        },
+        {
+          "name": "amplitude_ramp",
+          "relative_solution_error": 1.780804976753005e-10,
+          "relative_stationarity": 3.168747055150355e-14
+        },
+        {
+          "name": "neighbor_and_image_leakage",
+          "relative_solution_error": 2.1652839468886127e-10,
+          "relative_stationarity": 5.398582817419344e-14
+        }
+      ],
+      "material_read": false,
+      "time_whitening_error": 6.077360836798107e-13,
+      "maximum_column_norm_error": 2.220446049250313e-15,
+      "invertible_right_map_and_same_objective_verified": true,
+      "producer_sha256": "453ea745ec4e2ee9063754c8bf634072a160639798d6087d1876316f16bf2233",
+      "auditor_sha256": "6f26b9f9162e798de406a584acb33018850f72cf170b1f86d938e1cc4c2837e7"
+    },
+    "batched_known_audit1": {
+      "result": "independent_observer_inverse_known_passed",
+      "cases": [
+        "constant",
+        "amplitude_ramp",
+        "complex_rotation",
+        "neighbor_and_image_leakage",
+        "asymmetric_silent_right",
+        "adjoint",
+        "underdetermined_null",
+        "full288"
+      ],
+      "solves": [
+        {
+          "name": "constant",
+          "relative_solution_error": 1.5419039597523608e-10,
+          "stationarity": 1.9713561539730533e-14
+        },
+        {
+          "name": "amplitude_ramp",
+          "relative_solution_error": 1.780882012544415e-10,
+          "stationarity": 3.1593184525423995e-14
+        },
+        {
+          "name": "neighbor_and_image_leakage",
+          "relative_solution_error": 2.1649612211907464e-10,
+          "stationarity": 5.395168460069887e-14
+        }
+      ],
+      "maximum_wave_error": 2.128158760328347e-14,
+      "maximum_DFT_error": 2.6304265940060355e-15,
+      "maximum_adjoint_error": 5.941557156060258e-13,
+      "material_read": false,
+      "producer_sha256": "1169242c501370559561104c504b804d9dfcd9be9aaf24c440eab27ce3b718f9",
+      "auditor_sha256": "ea4e69a099d34677d3c72ec5a7f45df7fad52c3b188def1894445d8cf5419e98",
+      "oracle_sha256": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+      "no_material_inverse_qualified": true
+    },
+    "refinement_known_audit1": {
+      "result": "independent_observer_inverse_refinement_known_passed",
+      "cases": [
+        {
+          "name": "constant_zero",
+          "relative_solution_error": 1.5419039597523608e-10,
+          "relative_stationarity": 1.9713561539730533e-14
+        },
+        {
+          "name": "constant_nonzero",
+          "relative_solution_error": 1.6604123244009303e-10,
+          "relative_stationarity": 2.544868652964145e-14
+        },
+        {
+          "name": "amplitude_ramp_zero",
+          "relative_solution_error": 1.780882012544415e-10,
+          "relative_stationarity": 3.1593184525423995e-14
+        },
+        {
+          "name": "amplitude_ramp_nonzero",
+          "relative_solution_error": 1.7025312533154432e-10,
+          "relative_stationarity": 2.8921699962072566e-14
+        },
+        {
+          "name": "neighbor_and_image_leakage_zero",
+          "relative_solution_error": 2.1649612211907464e-10,
+          "relative_stationarity": 5.395168460069887e-14
+        },
+        {
+          "name": "neighbor_and_image_leakage_nonzero",
+          "relative_solution_error": 1.5501004362618376e-10,
+          "relative_stationarity": 4.548272420342277e-14
+        }
+      ],
+      "material_read": false,
+      "producer_sha256": "2f1f49348d5b5d1d725f44b890d48b7053f682a6529cb2368de52b2e7f5c0c19",
+      "auditor_sha256": "abdffbdf75c23fe0e2c209eca83a991da3413091ca326bcef23071865a54462b"
+    },
+    "original_real_audit1": {
+      "result": "independent_observer_inverse_original_passed",
+      "cases": [
+        "F3 Fifth First Early",
+        "F3 Fifth First Mid",
+        "F3 Fifth First Late",
+        "F3 Fifth Second Early",
+        "F3 Fifth Second Mid",
+        "F3 Fifth Second Late"
+      ],
+      "captures": 12,
+      "Gram_matrices": 5760,
+      "maximum_wave_error": 6.783462680459706e-14,
+      "maximum_Gram_scaled_error": 5.202755071696896e-12,
+      "historical_sources_different_from_current": [
+        "research/observer_inverse_v1_plan.json",
+        "tools/run_observer_inverse_real_v1.py"
+      ],
+      "all_converged": false,
+      "producer_sha256": "d3b58ad2751c9b757d56b594c5a22dc047e97496acb03aef5bc71db7e844e8d5",
+      "auditor_sha256": "8af559f1b90293011aa8c5403aea625a10c83ac40337bddf907dd974cfb029a3",
+      "oracles_sha256": {
+        "tools/observer_inverse_v1/audit_oracle.py": "765089fbb0725f7a0cb2523ab2d633d0e0be062ebda458471182901cb2a82d2c",
+        "tools/observer_forward_v1/audit_oracle.py": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+        "tools/circular_phase_lift_v1/audit_oracle.py": "99ae4b3948e332639939500d4ca3acd0b7d23484d7236b3bd8bb2dead1bf30f2"
+      }
+    },
+    "real_audit1": {
+      "result": "independent_observer_inverse_real_passed",
+      "pid": 19196,
+      "cases": [
+        {
+          "label": "F3 Fifth First Early",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1115.2755492214085,
+              "relative_stationarity": 0.8953042775656229,
+              "conservative_ridge_solution_distance_bound": 971583956.6248595
+            },
+            "inverse": {
+              "objective": 1.8494723418980277,
+              "relative_stationarity": 4.136497689523193e-06,
+              "conservative_ridge_solution_distance_bound": 4488.926158919147
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth First Mid",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1019.2957855908345,
+              "relative_stationarity": 1.5766727809136376,
+              "conservative_ridge_solution_distance_bound": 1116768462.8333976
+            },
+            "inverse": {
+              "objective": 1.7220360241368564,
+              "relative_stationarity": 7.254480890426362e-06,
+              "conservative_ridge_solution_distance_bound": 5138.400035016188
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth First Late",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1021.6992877533227,
+              "relative_stationarity": 4.029688468810717,
+              "conservative_ridge_solution_distance_bound": 1720981187.4181259
+            },
+            "inverse": {
+              "objective": 1.5792273374671935,
+              "relative_stationarity": 2.3834025778550568e-05,
+              "conservative_ridge_solution_distance_bound": 10178.928297509263
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Early",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1166.7112895990836,
+              "relative_stationarity": 0.7826006595129029,
+              "conservative_ridge_solution_distance_bound": 871183878.2003307
+            },
+            "inverse": {
+              "objective": 2.1583083156380583,
+              "relative_stationarity": 3.0854530624098734e-06,
+              "conservative_ridge_solution_distance_bound": 3434.6980573570586
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Mid",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1035.2533253015579,
+              "relative_stationarity": 1.4402834582010682,
+              "conservative_ridge_solution_distance_bound": 974334048.8072256
+            },
+            "inverse": {
+              "objective": 2.0113151873124,
+              "relative_stationarity": 6.696297687008197e-06,
+              "conservative_ridge_solution_distance_bound": 4529.963043212515
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Late",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 974.4295515572276,
+              "relative_stationarity": 2.065193973750493,
+              "conservative_ridge_solution_distance_bound": 1177874098.6186938
+            },
+            "inverse": {
+              "objective": 1.6162425426150717,
+              "relative_stationarity": 1.032666496746646e-05,
+              "conservative_ridge_solution_distance_bound": 5889.766939520103
+            }
+          },
+          "solve_converged": false
+        }
+      ],
+      "captures": 12,
+      "band_Gram_matrices": 5760,
+      "maximum_wave_error": 7.197020757132577e-14,
+      "maximum_observer_error": 3.1172366705291434e-14,
+      "maximum_Gram_scaled_error": 7.2335098571866226e-12,
+      "maximum_stats_error": 7.0267680563063095e-12,
+      "all_converged": false,
+      "producer_sha256": "b1c1c7dd71bf649dc2b6bd22f92dbf4028d9f4380d27cf2eb8ed15815e067f2f",
+      "auditor_sha256": "9cac2fc88456b26224a9963c6c55594630437d877e3a1b696b2ef03771f925c7",
+      "oracles_sha256": {
+        "tools/observer_inverse_v1/audit_oracle.py": "765089fbb0725f7a0cb2523ab2d633d0e0be062ebda458471182901cb2a82d2c",
+        "tools/observer_forward_v1/audit_oracle.py": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+        "tools/circular_phase_lift_v1/audit_oracle.py": "99ae4b3948e332639939500d4ca3acd0b7d23484d7236b3bd8bb2dead1bf30f2"
+      },
+      "not_stochastic_source_or_timbre_qualification": true
+    },
+    "real_audit2": {
+      "result": "independent_observer_inverse_real_passed",
+      "pid": 128420,
+      "cases": [
+        {
+          "label": "F3 Fifth First Early",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1115.2755492214085,
+              "relative_stationarity": 0.8953042775656229,
+              "conservative_ridge_solution_distance_bound": 971583956.6248595
+            },
+            "inverse": {
+              "objective": 1.848055203880683,
+              "relative_stationarity": 3.552377996659594e-08,
+              "conservative_ridge_solution_distance_bound": 38.55039628321938
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth First Mid",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1019.2957855908345,
+              "relative_stationarity": 1.5766727809136376,
+              "conservative_ridge_solution_distance_bound": 1116768462.8333976
+            },
+            "inverse": {
+              "objective": 1.7200696834915459,
+              "relative_stationarity": 1.1425574181221313e-07,
+              "conservative_ridge_solution_distance_bound": 80.92814862927729
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth First Late",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1021.6992877533227,
+              "relative_stationarity": 4.029688468810717,
+              "conservative_ridge_solution_distance_bound": 1720981187.4181259
+            },
+            "inverse": {
+              "objective": 1.5743790983564585,
+              "relative_stationarity": 3.3457290674688323e-07,
+              "conservative_ridge_solution_distance_bound": 142.88788892435628
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Early",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1166.7112895990836,
+              "relative_stationarity": 0.7826006595129029,
+              "conservative_ridge_solution_distance_bound": 871183878.2003307
+            },
+            "inverse": {
+              "objective": 2.157449679412134,
+              "relative_stationarity": 2.2700252100843017e-08,
+              "conservative_ridge_solution_distance_bound": 25.26971249122947
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Mid",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 1035.2533253015579,
+              "relative_stationarity": 1.4402834582010682,
+              "conservative_ridge_solution_distance_bound": 974334048.8072256
+            },
+            "inverse": {
+              "objective": 2.010481486063591,
+              "relative_stationarity": 8.36582397329114e-09,
+              "conservative_ridge_solution_distance_bound": 5.659377046297637
+            }
+          },
+          "solve_converged": false
+        },
+        {
+          "label": "F3 Fifth Second Late",
+          "variants": {
+            "interpolated_observations": {
+              "objective": 974.4295515572276,
+              "relative_stationarity": 2.065193973750493,
+              "conservative_ridge_solution_distance_bound": 1177874098.6186938
+            },
+            "inverse": {
+              "objective": 1.6146089840550066,
+              "relative_stationarity": 1.468602443742709e-07,
+              "conservative_ridge_solution_distance_bound": 83.76108015225326
+            }
+          },
+          "solve_converged": false
+        }
+      ],
+      "captures": 12,
+      "band_Gram_matrices": 5760,
+      "maximum_wave_error": 6.983302824892235e-14,
+      "maximum_observer_error": 3.119431056823734e-14,
+      "maximum_Gram_scaled_error": 5.413526305167887e-12,
+      "maximum_stats_error": 7.0267680563063095e-12,
+      "all_converged": false,
+      "producer_sha256": "e0f0028f4497a325c2a5423162cae276b57985928fedf09b3cfdda319f8ab824",
+      "auditor_sha256": "9cac2fc88456b26224a9963c6c55594630437d877e3a1b696b2ef03771f925c7",
+      "oracles_sha256": {
+        "tools/observer_inverse_v1/audit_oracle.py": "765089fbb0725f7a0cb2523ab2d633d0e0be062ebda458471182901cb2a82d2c",
+        "tools/observer_forward_v1/audit_oracle.py": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+        "tools/circular_phase_lift_v1/audit_oracle.py": "99ae4b3948e332639939500d4ca3acd0b7d23484d7236b3bd8bb2dead1bf30f2"
+      },
+      "not_stochastic_source_or_timbre_qualification": true
+    },
+    "visibility_audit1": {
+      "result": "independent_observer_inverse_visibility_passed",
+      "cases": [
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Early",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Mid",
+          "trailing_unobserved": 2
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Late",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Early",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Mid",
+          "trailing_unobserved": 0
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Late",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Early",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Mid",
+          "trailing_unobserved": 2
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Late",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Early",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Mid",
+          "trailing_unobserved": 0
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Late",
+          "trailing_unobserved": 255
+        }
+      ],
+      "maximum_coverage_error": 0.0,
+      "maximum_budget_relative_error": 3.487675578347771e-16,
+      "known_controls": 3,
+      "producer_sha256": "567639119df84c4504a1a2c436290549023c36a137cca9daf2626f7ae5a2dca2",
+      "auditor_sha256": "fc6eee119b6624a0ac41f18d803543762783a8e538dae457dfb96394306f1919"
+    },
+    "visibility_audit2": {
+      "result": "independent_observer_inverse_visibility_passed",
+      "cases": [
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Early",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Mid",
+          "trailing_unobserved": 2
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth First Late",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Early",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Mid",
+          "trailing_unobserved": 0
+        },
+        {
+          "attempt": "real1",
+          "label": "F3 Fifth Second Late",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Early",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Mid",
+          "trailing_unobserved": 2
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth First Late",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Early",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Mid",
+          "trailing_unobserved": 0
+        },
+        {
+          "attempt": "real2",
+          "label": "F3 Fifth Second Late",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth First Early",
+          "trailing_unobserved": 255
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth First Mid",
+          "trailing_unobserved": 2
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth First Late",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth Second Early",
+          "trailing_unobserved": 254
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth Second Mid",
+          "trailing_unobserved": 0
+        },
+        {
+          "attempt": "real3",
+          "label": "F3 Fifth Second Late",
+          "trailing_unobserved": 255
+        }
+      ],
+      "maximum_coverage_error": 0.0,
+      "maximum_budget_relative_error": 3.764804301957583e-16,
+      "known_controls": 3,
+      "producer_sha256": "c098181c2f183ab92595e259cc5018cb0dafde9c91d32ea83aaadbdb26eb3a0b",
+      "auditor_sha256": "fc6eee119b6624a0ac41f18d803543762783a8e538dae457dfb96394306f1919"
+    }
+  },
+  "weakband_audit": {
+    "result": "independent_observer_inverse_weakbands_passed",
+    "cases": [
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Early",
+        "file": "source.npz",
+        "sha256": "8c70ae48736e88d545e4babbb89d052dbe514e8186cffd9829abf79b792d2238",
+        "line": {
+          "channel_mean_power": [
+            0.12262506184869792,
+            0.0819243830381313,
+            6.510553796008575e-06,
+            3.97828804785314e-06,
+            2.4746469004587767e-07,
+            1.1912377182016361e-07,
+            1.6147417724166573e-08,
+            4.305837900851631e-09,
+            5.738285252494773e-09,
+            5.339626586150318e-10,
+            2.7204134860029385e-12,
+            1.5328638070847512e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.250041210153345e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15251308149217901,
+            0.11128456683662043,
+            1.1902490549740206e-05,
+            7.704228394513401e-06,
+            5.590929355624073e-07,
+            3.0890045132966174e-07,
+            4.072151682542666e-08,
+            1.0403805905217032e-08,
+            1.4847128064169785e-08,
+            1.5205969501520105e-09,
+            9.107648563668033e-12,
+            3.4856618386257736e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.2854838447445053e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "c442b3983fa90c6fe70551622a3e444e0ec4c4216d320af6c039014c2ab93bb6",
+        "line": {
+          "channel_mean_power": [
+            0.11837536789349941,
+            0.07781440205447157,
+            5.417749307524622e-06,
+            3.1744052386949094e-06,
+            1.9044267345547893e-07,
+            9.266885223192949e-08,
+            1.2199312315929392e-08,
+            3.4073508790465697e-09,
+            4.372174765854681e-09,
+            3.8854823947718467e-10,
+            2.1983828321800224e-12,
+            1.2702125350615127e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.0730378774444903e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12237723340949455,
+            0.08167439526744731,
+            6.3755355372301565e-06,
+            3.897136114951873e-06,
+            2.428158548272137e-07,
+            1.1783790083774799e-07,
+            1.614901149134741e-08,
+            4.285242506546992e-09,
+            5.687990008488096e-09,
+            5.229015238898655e-10,
+            3.5007789805463205e-12,
+            1.877176241256003e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5339260326098888e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Early",
+        "file": "inverse.npz",
+        "sha256": "cc670596477c63777214c3cb1448ac6b0373ef1aba33daa62d7e6a784c9a20a0",
+        "line": {
+          "channel_mean_power": [
+            0.12260759922734259,
+            0.08191078723057386,
+            6.509076050332744e-06,
+            3.977089102312134e-06,
+            2.4736391113556954e-07,
+            1.1906236499715853e-07,
+            1.613958846187395e-08,
+            4.303999821036608e-09,
+            5.735172842726375e-09,
+            5.336463023005311e-10,
+            2.7185228887730613e-12,
+            1.5322879776747287e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.2497495973585744e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14952483227416388,
+            0.10782031090216634,
+            1.120376870956678e-05,
+            7.271389647139486e-06,
+            5.2875812889429e-07,
+            2.7855751312302545e-07,
+            3.579109043282035e-08,
+            9.293128923785687e-09,
+            1.3178723768476565e-08,
+            1.3271007738414425e-09,
+            8.247601312139459e-12,
+            3.238562670639106e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1659028947786965e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Mid",
+        "file": "source.npz",
+        "sha256": "0027d650bb99b43cf4577817c5a05bb9552b5e86dfdc0e847458dd42f52ed119",
+        "line": {
+          "channel_mean_power": [
+            0.09745034956409222,
+            0.08776016487083368,
+            1.1467861067631221e-05,
+            6.904356479650968e-06,
+            2.549441610624071e-07,
+            2.1416023177387159e-07,
+            2.4198500767363867e-08,
+            6.947111921378598e-09,
+            9.4322820266984e-09,
+            1.1652397040075512e-09,
+            1.7627998194126442e-12,
+            9.529297948698636e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.778618538901496e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12621413630519282,
+            0.11444093601028704,
+            1.8775212175514858e-05,
+            1.131261492376156e-05,
+            5.679187660389522e-07,
+            4.0187873821381195e-07,
+            5.410421539398687e-08,
+            1.761104873107849e-08,
+            2.2373441139365447e-08,
+            2.762577382132389e-09,
+            8.597542791626824e-12,
+            4.583858240740956e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.631810488848041e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "82077bc8cda35ecea63171cde4e5fa550937df8575377463600e9b2fcdf4ba64",
+        "line": {
+          "channel_mean_power": [
+            0.09384898307907355,
+            0.08434811782086897,
+            1.0017519392565241e-05,
+            6.0144160969307015e-06,
+            1.9618927289161038e-07,
+            1.7697388174742955e-07,
+            1.8514909381356658e-08,
+            5.226496966901611e-09,
+            7.281024898978889e-09,
+            9.130945457328268e-10,
+            1.2919029224553609e-12,
+            7.052119116576944e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 7.514326618366339e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.0970767520457459,
+            0.0873874124638476,
+            1.1366975013759964e-05,
+            6.8565465457284256e-06,
+            2.509444286224427e-07,
+            2.11258050306465e-07,
+            2.3839280217128147e-08,
+            6.881842070307876e-09,
+            9.27739620248365e-09,
+            1.1466922032700505e-09,
+            2.4128866249260306e-12,
+            1.1927898182699336e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.228707999735972e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Mid",
+        "file": "inverse.npz",
+        "sha256": "19ee84ce2914e59a0bcd645e536df113ed323e6655989980ff119e3cde5dc8f2",
+        "line": {
+          "channel_mean_power": [
+            0.09744183250362107,
+            0.08775204487581828,
+            1.146632813884415e-05,
+            6.903461629529874e-06,
+            2.5488433730908944e-07,
+            2.1412745202851448e-07,
+            2.419159691364734e-08,
+            6.944954543822845e-09,
+            9.429537200579138e-09,
+            1.1648791648989331e-09,
+            1.7617637028310627e-12,
+            9.523751413882623e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.773781105285255e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.11942443446000968,
+            0.10801363391936242,
+            1.8059458154603822e-05,
+            1.088431465310251e-05,
+            5.301741037763875e-07,
+            3.792699970402241e-07,
+            4.9920929508171105e-08,
+            1.5886401636162592e-08,
+            2.050001879265398e-08,
+            2.518353180679611e-09,
+            6.071201120673113e-12,
+            2.986135458563151e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.5004392711301342e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Late",
+        "file": "source.npz",
+        "sha256": "1cdc6e9fdd565f060212839fa51d24b24baa6aa2236f48ec53a21f925d2fda55",
+        "line": {
+          "channel_mean_power": [
+            0.10032200157309094,
+            0.09287452749527736,
+            1.7046067915446378e-05,
+            1.214937819691811e-05,
+            3.490651202664023e-07,
+            2.1592794832470812e-07,
+            3.138019279602044e-08,
+            9.060793260152117e-09,
+            9.772897923030235e-09,
+            1.6304106151314083e-09,
+            1.309665621961553e-13,
+            2.90222890248806e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.892913674946569e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15133762371933232,
+            0.14025072567279379,
+            2.915046242305064e-05,
+            2.0189782510466417e-05,
+            8.821177092747489e-07,
+            5.158240977003261e-07,
+            7.734053856620378e-08,
+            2.1993952292086126e-08,
+            2.6355756543764788e-08,
+            4.285182704033027e-09,
+            5.56956114384756e-12,
+            2.5977196680374025e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.7165061827950203e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "12191a98e35b17aef32262238f9561ab4d25c63272752c27323383909d0fcf0a",
+        "line": {
+          "channel_mean_power": [
+            0.09504881613896318,
+            0.08800886599699842,
+            1.465373739663819e-05,
+            1.047232429531198e-05,
+            2.656170442535239e-07,
+            1.6912049694764164e-07,
+            2.3555454496300606e-08,
+            6.753717000439381e-09,
+            7.311804059570032e-09,
+            1.2284101301595698e-09,
+            1.99630941908593e-13,
+            1.4325962216092959e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5072215307919384e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.09991041715307178,
+            0.0925340837825706,
+            1.722228830746427e-05,
+            1.2259007082748527e-05,
+            3.47001458588371e-07,
+            2.1496244427605422e-07,
+            3.102937988655789e-08,
+            8.974560907578647e-09,
+            9.778962369169216e-09,
+            1.6387841309144808e-09,
+            1.2078100894390777e-12,
+            5.778108045130637e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.783288879955384e-12
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth First Late",
+        "file": "inverse.npz",
+        "sha256": "ec9485b1efbd4d4bb6ae40af0e027ef7704709ffcbc17068d1a82fdf26936946",
+        "line": {
+          "channel_mean_power": [
+            0.10030488899024506,
+            0.09285682605085557,
+            1.7043026749295564e-05,
+            1.2147247790664441e-05,
+            3.488954553884168e-07,
+            2.1584131064910694e-07,
+            3.136719289815604e-08,
+            9.056544119758807e-09,
+            9.768548430044912e-09,
+            1.6296284922121425e-09,
+            1.3086339110785933e-13,
+            2.900509484121249e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.8916930304397545e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14301440964462822,
+            0.13228224797433064,
+            2.761017069055486e-05,
+            1.9442576399343478e-05,
+            8.166873944423699e-07,
+            4.809938802460698e-07,
+            6.937193001520235e-08,
+            2.007424127915091e-08,
+            2.401303912756988e-08,
+            4.007974477870561e-09,
+            2.3942000247672275e-12,
+            2.2504833700404664e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.573606027275586e-12
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Early",
+        "file": "source.npz",
+        "sha256": "f54de1ed01e77752e7969938756aa22f6e9a1c10a6e73f7153f75e5665174daa",
+        "line": {
+          "channel_mean_power": [
+            0.14480219346658363,
+            0.08775860423584166,
+            6.248636878702087e-06,
+            5.1426747841731665e-06,
+            2.2163121006070198e-07,
+            1.1234966264005347e-07,
+            1.8423843596527803e-08,
+            6.978873118681945e-09,
+            6.42342307247653e-09,
+            9.300490362223861e-10,
+            3.244532564365512e-12,
+            8.404775756213649e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.804315221338992e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1715280396196728,
+            0.11061175169335322,
+            1.42698069855479e-05,
+            1.0402497697603431e-05,
+            6.12849330843171e-07,
+            2.965233103934836e-07,
+            4.9268245220013814e-08,
+            1.7475873452079754e-08,
+            1.7948336008423386e-08,
+            2.4988915187875265e-09,
+            1.1609003092162849e-11,
+            2.8232203274290602e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.6459235083015903e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "a7c2bcb42b0f3949666832f0995e37ec9624c96712580534323033d681e16f59",
+        "line": {
+          "channel_mean_power": [
+            0.1411328722821435,
+            0.0846206766645683,
+            4.821627316701813e-06,
+            4.10479324516678e-06,
+            1.650794223724031e-07,
+            8.390471342240112e-08,
+            1.3870721132070224e-08,
+            5.16848710826989e-09,
+            4.82085377316142e-09,
+            6.924930233415954e-10,
+            2.6506997028734532e-12,
+            6.454303647309758e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.573210721883943e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14465592171052516,
+            0.0876387511654866,
+            6.235924222980103e-06,
+            5.1504406314614605e-06,
+            2.1996519847496714e-07,
+            1.1127817712309442e-07,
+            1.8216373984287353e-08,
+            6.9171943244732815e-09,
+            6.360959227696805e-09,
+            9.282798262611214e-10,
+            3.96348637119978e-12,
+            1.1111108446650958e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.681060211890734e-12
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Early",
+        "file": "inverse.npz",
+        "sha256": "dac9896e437f738838bc9401e720f8fd2480ca6b86726dfa0a9b2b008716f85f",
+        "line": {
+          "channel_mean_power": [
+            0.14479140092997683,
+            0.08775070742782323,
+            6.246794295057097e-06,
+            5.141444036217749e-06,
+            2.2153982338083364e-07,
+            1.1230579130469224e-07,
+            1.841597226121838e-08,
+            6.97619298960111e-09,
+            6.420622276716337e-09,
+            9.296498752142651e-10,
+            3.2415355276686553e-12,
+            8.400268063546638e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.80163463409621e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16218323510908444,
+            0.10225244342296189,
+            1.3084862788630634e-05,
+            9.817075181330841e-06,
+            5.400740198357531e-07,
+            2.673562102820133e-07,
+            4.471112217029707e-08,
+            1.613124026860905e-08,
+            1.5783128580873008e-08,
+            2.2661934306599315e-09,
+            9.6352463651734e-12,
+            2.4004065321705733e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.4800583614922097e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Mid",
+        "file": "source.npz",
+        "sha256": "4bfa125f381d0fb7c81fbaeb042603a3114a82425e4cff81c6056c0881160aae",
+        "line": {
+          "channel_mean_power": [
+            0.16401049208101043,
+            0.1198104179482187,
+            7.094104111243113e-06,
+            5.854593782925488e-06,
+            2.719558753093557e-07,
+            1.311048990337618e-07,
+            1.9642936111239658e-08,
+            6.329066033329164e-09,
+            7.352164289163637e-09,
+            8.858204164899288e-10,
+            1.3444884235469285e-11,
+            1.578613824486398e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.625078276740163e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.19147696777228174,
+            0.14510551634514313,
+            1.2604137600384083e-05,
+            1.02629364879046e-05,
+            6.097297542420518e-07,
+            3.3254880479588036e-07,
+            4.7283501613379986e-08,
+            1.472031929948663e-08,
+            1.8516945940987776e-08,
+            2.4106474050489923e-09,
+            3.72345806645034e-11,
+            5.7024021392234765e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.9781138721630406e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "92f7f08d01aec939e9f3013d52c147e2d54e83b5c09cbd677ca3313afe95b804",
+        "line": {
+          "channel_mean_power": [
+            0.159823416701702,
+            0.11595363373864676,
+            6.123812163512458e-06,
+            5.113743677145764e-06,
+            2.1127403728949174e-07,
+            9.894841022323504e-08,
+            1.464347754675869e-08,
+            4.7608854119710375e-09,
+            5.790172859138489e-09,
+            6.557859092448535e-10,
+            7.646013220754453e-12,
+            1.1238628304469898e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.031903419663418e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16380240437997312,
+            0.1196395772997707,
+            7.0442173472949315e-06,
+            5.678860308272086e-06,
+            2.7090849439396013e-07,
+            1.3027292399156856e-07,
+            1.8811088080586083e-08,
+            6.056113484162085e-09,
+            7.44961854041107e-09,
+            9.042472322570873e-10,
+            1.2924066752921853e-11,
+            1.903811116903006e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.1622607886064526e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Mid",
+        "file": "inverse.npz",
+        "sha256": "ace6b0e1fb6f17dacbf1e47391bf4d307e685efd78619a90e23e644f8d67ad6c",
+        "line": {
+          "channel_mean_power": [
+            0.16400114856617742,
+            0.11980244348983438,
+            7.092447282412736e-06,
+            5.853413504387148e-06,
+            2.718571261485361e-07,
+            1.3104568619207803e-07,
+            1.9633166291765423e-08,
+            6.326028639088211e-09,
+            7.3475534247967065e-09,
+            8.853184026674231e-10,
+            1.343927392425314e-11,
+            1.5773846326138435e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.618131619226681e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1850340881816765,
+            0.13919300638538484,
+            1.1975426304168569e-05,
+            9.524782781889781e-06,
+            5.750931210646642e-07,
+            3.0481027143869776e-07,
+            4.4067985455899966e-08,
+            1.3964242048503189e-08,
+            1.741101664646217e-08,
+            2.211230157338382e-09,
+            3.4891316820649575e-11,
+            4.771587556711972e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.5787613534361132e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Late",
+        "file": "source.npz",
+        "sha256": "c26eb73294da2138bb572f6b395e70893e2626c75db5630dcb44bca2db5e1360",
+        "line": {
+          "channel_mean_power": [
+            0.12782861381104926,
+            0.1168277193005773,
+            1.9202269234577083e-05,
+            1.0326004988657232e-05,
+            4.4648809610132155e-07,
+            2.800231440698343e-07,
+            3.1550211024564854e-08,
+            1.3570036148941054e-08,
+            1.0795874539507249e-08,
+            2.3030173273268923e-09,
+            4.839174432887938e-12,
+            2.7091453803103087e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1193575519131033e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.161933479867735,
+            0.14926711339525658,
+            3.315353635183185e-05,
+            1.9591481741931773e-05,
+            1.1820311522922749e-06,
+            7.214612368075174e-07,
+            8.194102317011287e-08,
+            3.510179381339091e-08,
+            2.911384342361408e-08,
+            6.4001360512785935e-09,
+            1.1575781960036155e-11,
+            5.236399373850976e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.233673097205096e-11
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "cd2aa1c48e5df6554dd0dd5ff08b08e0c774356206c18a3caf9ed1c464f8dcc8",
+        "line": {
+          "channel_mean_power": [
+            0.12391400262991685,
+            0.1130807712665498,
+            1.6134132294516154e-05,
+            8.384178282319014e-06,
+            3.4273394314317907e-07,
+            2.1345236263587037e-07,
+            2.2484753808182156e-08,
+            1.032093639162403e-08,
+            7.975874809602304e-09,
+            1.6536472157292723e-09,
+            3.5042241701628463e-12,
+            2.5819791409976413e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.0836863358445562e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1276184428840988,
+            0.11660278055729892,
+            1.920880787943295e-05,
+            1.0330208057956412e-05,
+            4.484129134775529e-07,
+            2.831167844177646e-07,
+            3.00321782461899e-08,
+            1.329256746582302e-08,
+            1.0773929631924492e-08,
+            2.289728284828693e-09,
+            3.754964703160073e-12,
+            5.73174673905919e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.491315369099652e-12
+        }
+      },
+      {
+        "study": "real1",
+        "label": "F3 Fifth Second Late",
+        "file": "inverse.npz",
+        "sha256": "a83ce33ab0ccd978eed855eb2db4a9f0ea700b41adb9f834e1b48ad9cbcce229",
+        "line": {
+          "channel_mean_power": [
+            0.1278282480894482,
+            0.11682777446985382,
+            1.9197524642335312e-05,
+            1.0322993867804343e-05,
+            4.4628630360224253e-07,
+            2.7989395976991993e-07,
+            3.153144157783052e-08,
+            1.3562387824629068e-08,
+            1.0789979793550431e-08,
+            2.301702509134717e-09,
+            4.838988950634746e-12,
+            2.7087524908379e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1190562581616876e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1539278793889571,
+            0.1415045447815736,
+            3.2219254561783454e-05,
+            1.835863328935595e-05,
+            1.0690956678792644e-06,
+            6.606156746540108e-07,
+            7.50941467208316e-08,
+            3.2388981747182034e-08,
+            2.6742836040265823e-08,
+            5.880632878614647e-09,
+            5.949318395923912e-12,
+            4.2330351759194496e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.750012013888064e-12
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Early",
+        "file": "source.npz",
+        "sha256": "8c70ae48736e88d545e4babbb89d052dbe514e8186cffd9829abf79b792d2238",
+        "line": {
+          "channel_mean_power": [
+            0.12262506184869792,
+            0.0819243830381313,
+            6.510553796008575e-06,
+            3.97828804785314e-06,
+            2.4746469004587767e-07,
+            1.1912377182016361e-07,
+            1.6147417724166573e-08,
+            4.305837900851631e-09,
+            5.738285252494773e-09,
+            5.339626586150318e-10,
+            2.7204134860029385e-12,
+            1.5328638070847512e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.250041210153345e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15251308149217901,
+            0.11128456683662043,
+            1.1902490549740206e-05,
+            7.704228394513401e-06,
+            5.590929355624073e-07,
+            3.0890045132966174e-07,
+            4.072151682542666e-08,
+            1.0403805905217032e-08,
+            1.4847128064169785e-08,
+            1.5205969501520105e-09,
+            9.107648563668033e-12,
+            3.4856618386257736e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.2854838447445053e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "c442b3983fa90c6fe70551622a3e444e0ec4c4216d320af6c039014c2ab93bb6",
+        "line": {
+          "channel_mean_power": [
+            0.11837536789349941,
+            0.07781440205447157,
+            5.417749307524622e-06,
+            3.1744052386949094e-06,
+            1.9044267345547893e-07,
+            9.266885223192949e-08,
+            1.2199312315929392e-08,
+            3.4073508790465697e-09,
+            4.372174765854681e-09,
+            3.8854823947718467e-10,
+            2.1983828321800224e-12,
+            1.2702125350615127e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.0730378774444903e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12237723340949455,
+            0.08167439526744731,
+            6.3755355372301565e-06,
+            3.897136114951873e-06,
+            2.428158548272137e-07,
+            1.1783790083774799e-07,
+            1.614901149134741e-08,
+            4.285242506546992e-09,
+            5.687990008488096e-09,
+            5.229015238898655e-10,
+            3.5007789805463205e-12,
+            1.877176241256003e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5339260326098888e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Early",
+        "file": "inverse.npz",
+        "sha256": "b04781db58b511447acb33effdad181ad1a9eaa39cff2ceef277e48c7aa9e70e",
+        "line": {
+          "channel_mean_power": [
+            0.12261877585607706,
+            0.08191827676531271,
+            6.509857381259079e-06,
+            3.977830103415981e-06,
+            2.474212116159838e-07,
+            1.1909675221827484e-07,
+            1.614447444556304e-08,
+            4.305068645445029e-09,
+            5.737070305579548e-09,
+            5.338294013817586e-10,
+            2.7199139997129103e-12,
+            1.5326700947415178e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.249947313566789e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14749837224191986,
+            0.10608332066281694,
+            1.1056631518763514e-05,
+            7.2048729510305026e-06,
+            5.243375618061586e-07,
+            2.760395066921038e-07,
+            3.5110056497943207e-08,
+            9.201795351222802e-09,
+            1.296239987207123e-08,
+            1.3053784349747681e-09,
+            8.244593051080654e-12,
+            3.2042592724181107e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.172403141617479e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Mid",
+        "file": "source.npz",
+        "sha256": "0027d650bb99b43cf4577817c5a05bb9552b5e86dfdc0e847458dd42f52ed119",
+        "line": {
+          "channel_mean_power": [
+            0.09745034956409222,
+            0.08776016487083368,
+            1.1467861067631221e-05,
+            6.904356479650968e-06,
+            2.549441610624071e-07,
+            2.1416023177387159e-07,
+            2.4198500767363867e-08,
+            6.947111921378598e-09,
+            9.4322820266984e-09,
+            1.1652397040075512e-09,
+            1.7627998194126442e-12,
+            9.529297948698636e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.778618538901496e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12621413630519282,
+            0.11444093601028704,
+            1.8775212175514858e-05,
+            1.131261492376156e-05,
+            5.679187660389522e-07,
+            4.0187873821381195e-07,
+            5.410421539398687e-08,
+            1.761104873107849e-08,
+            2.2373441139365447e-08,
+            2.762577382132389e-09,
+            8.597542791626824e-12,
+            4.583858240740956e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.631810488848041e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "82077bc8cda35ecea63171cde4e5fa550937df8575377463600e9b2fcdf4ba64",
+        "line": {
+          "channel_mean_power": [
+            0.09384898307907355,
+            0.08434811782086897,
+            1.0017519392565241e-05,
+            6.0144160969307015e-06,
+            1.9618927289161038e-07,
+            1.7697388174742955e-07,
+            1.8514909381356658e-08,
+            5.226496966901611e-09,
+            7.281024898978889e-09,
+            9.130945457328268e-10,
+            1.2919029224553609e-12,
+            7.052119116576944e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 7.514326618366339e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.0970767520457459,
+            0.0873874124638476,
+            1.1366975013759964e-05,
+            6.8565465457284256e-06,
+            2.509444286224427e-07,
+            2.11258050306465e-07,
+            2.3839280217128147e-08,
+            6.881842070307876e-09,
+            9.27739620248365e-09,
+            1.1466922032700505e-09,
+            2.4128866249260306e-12,
+            1.1927898182699336e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.228707999735972e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Mid",
+        "file": "inverse.npz",
+        "sha256": "1e9ba4cc090ee9b6063cd79339cafa36ad6f3c21d27e89461b935a7aca71aea2",
+        "line": {
+          "channel_mean_power": [
+            0.09744517765334741,
+            0.0877552477097809,
+            1.1466860096637875e-05,
+            6.903745362881176e-06,
+            2.5490351863065276e-07,
+            2.141350914094572e-07,
+            2.4194648510964532e-08,
+            6.945789153276128e-09,
+            9.430566344175355e-09,
+            1.1650253873691487e-09,
+            1.7623090057401773e-12,
+            9.525946328219725e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.775698046451754e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.11776496903251121,
+            0.10648705927826081,
+            1.7991966547064544e-05,
+            1.0816046793307962e-05,
+            5.266666724684241e-07,
+            3.754964821594734e-07,
+            4.949214503005314e-08,
+            1.5763767560711293e-08,
+            2.035803467740989e-08,
+            2.509913332451195e-09,
+            6.0728381862934896e-12,
+            3.023312847951263e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.567242935474828e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Late",
+        "file": "source.npz",
+        "sha256": "1cdc6e9fdd565f060212839fa51d24b24baa6aa2236f48ec53a21f925d2fda55",
+        "line": {
+          "channel_mean_power": [
+            0.10032200157309094,
+            0.09287452749527736,
+            1.7046067915446378e-05,
+            1.214937819691811e-05,
+            3.490651202664023e-07,
+            2.1592794832470812e-07,
+            3.138019279602044e-08,
+            9.060793260152117e-09,
+            9.772897923030235e-09,
+            1.6304106151314083e-09,
+            1.309665621961553e-13,
+            2.90222890248806e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.892913674946569e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15133762371933232,
+            0.14025072567279379,
+            2.915046242305064e-05,
+            2.0189782510466417e-05,
+            8.821177092747489e-07,
+            5.158240977003261e-07,
+            7.734053856620378e-08,
+            2.1993952292086126e-08,
+            2.6355756543764788e-08,
+            4.285182704033027e-09,
+            5.56956114384756e-12,
+            2.5977196680374025e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.7165061827950203e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "12191a98e35b17aef32262238f9561ab4d25c63272752c27323383909d0fcf0a",
+        "line": {
+          "channel_mean_power": [
+            0.09504881613896318,
+            0.08800886599699842,
+            1.465373739663819e-05,
+            1.047232429531198e-05,
+            2.656170442535239e-07,
+            1.6912049694764164e-07,
+            2.3555454496300606e-08,
+            6.753717000439381e-09,
+            7.311804059570032e-09,
+            1.2284101301595698e-09,
+            1.99630941908593e-13,
+            1.4325962216092959e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5072215307919384e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.09991041715307178,
+            0.0925340837825706,
+            1.722228830746427e-05,
+            1.2259007082748527e-05,
+            3.47001458588371e-07,
+            2.1496244427605422e-07,
+            3.102937988655789e-08,
+            8.974560907578647e-09,
+            9.778962369169216e-09,
+            1.6387841309144808e-09,
+            1.2078100894390777e-12,
+            5.778108045130637e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.783288879955384e-12
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth First Late",
+        "file": "inverse.npz",
+        "sha256": "722c1c7f0f94caea5be40c6ce264beedccdc67180fb4eff0123fccb885b21837",
+        "line": {
+          "channel_mean_power": [
+            0.10031029150377935,
+            0.09286346048090063,
+            1.704479572450217e-05,
+            1.2148496046628018e-05,
+            3.4899067918555033e-07,
+            2.1588598683621764e-07,
+            3.137423952504426e-08,
+            9.059057018184484e-09,
+            9.770721005036192e-09,
+            1.6300549302091193e-09,
+            1.3091028812005013e-13,
+            2.90142626916992e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.892451238725195e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14220115878128095,
+            0.131824499187484,
+            2.7388320616280584e-05,
+            1.9290840737468136e-05,
+            7.994135639652567e-07,
+            4.7545853271855877e-07,
+            6.883449615982513e-08,
+            1.9800460661617134e-08,
+            2.3713095811733067e-08,
+            3.948839600655177e-09,
+            2.3808750480102068e-12,
+            2.1542101638652127e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5149033821718674e-12
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Early",
+        "file": "source.npz",
+        "sha256": "f54de1ed01e77752e7969938756aa22f6e9a1c10a6e73f7153f75e5665174daa",
+        "line": {
+          "channel_mean_power": [
+            0.14480219346658363,
+            0.08775860423584166,
+            6.248636878702087e-06,
+            5.1426747841731665e-06,
+            2.2163121006070198e-07,
+            1.1234966264005347e-07,
+            1.8423843596527803e-08,
+            6.978873118681945e-09,
+            6.42342307247653e-09,
+            9.300490362223861e-10,
+            3.244532564365512e-12,
+            8.404775756213649e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.804315221338992e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1715280396196728,
+            0.11061175169335322,
+            1.42698069855479e-05,
+            1.0402497697603431e-05,
+            6.12849330843171e-07,
+            2.965233103934836e-07,
+            4.9268245220013814e-08,
+            1.7475873452079754e-08,
+            1.7948336008423386e-08,
+            2.4988915187875265e-09,
+            1.1609003092162849e-11,
+            2.8232203274290602e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.6459235083015903e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "a7c2bcb42b0f3949666832f0995e37ec9624c96712580534323033d681e16f59",
+        "line": {
+          "channel_mean_power": [
+            0.1411328722821435,
+            0.0846206766645683,
+            4.821627316701813e-06,
+            4.10479324516678e-06,
+            1.650794223724031e-07,
+            8.390471342240112e-08,
+            1.3870721132070224e-08,
+            5.16848710826989e-09,
+            4.82085377316142e-09,
+            6.924930233415954e-10,
+            2.6506997028734532e-12,
+            6.454303647309758e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.573210721883943e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14465592171052516,
+            0.0876387511654866,
+            6.235924222980103e-06,
+            5.1504406314614605e-06,
+            2.1996519847496714e-07,
+            1.1127817712309442e-07,
+            1.8216373984287353e-08,
+            6.9171943244732815e-09,
+            6.360959227696805e-09,
+            9.282798262611214e-10,
+            3.96348637119978e-12,
+            1.1111108446650958e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.681060211890734e-12
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Early",
+        "file": "inverse.npz",
+        "sha256": "20f5056e8c465acce6f5b05fb543a9db09f8d93bfb96faae8cf2fa9f65920a58",
+        "line": {
+          "channel_mean_power": [
+            0.14479913613453096,
+            0.08775613495107927,
+            6.24766659341764e-06,
+            5.142036146363679e-06,
+            2.2157911604981244e-07,
+            1.1232438743433454e-07,
+            1.8419502066098887e-08,
+            6.977317368173442e-09,
+            6.4219204890871425e-09,
+            9.29843816001075e-10,
+            3.243361634734952e-12,
+            8.402376705331068e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.8027809623978216e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16125056013906677,
+            0.10171944302388458,
+            1.2929455491124388e-05,
+            9.698300248901856e-06,
+            5.33552378308701e-07,
+            2.638341383383997e-07,
+            4.4058984902263525e-08,
+            1.5934093980829807e-08,
+            1.5538169956854648e-08,
+            2.2336567005817236e-09,
+            9.64060309165455e-12,
+            2.39847920868849e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.4874237997188833e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Mid",
+        "file": "source.npz",
+        "sha256": "4bfa125f381d0fb7c81fbaeb042603a3114a82425e4cff81c6056c0881160aae",
+        "line": {
+          "channel_mean_power": [
+            0.16401049208101043,
+            0.1198104179482187,
+            7.094104111243113e-06,
+            5.854593782925488e-06,
+            2.719558753093557e-07,
+            1.311048990337618e-07,
+            1.9642936111239658e-08,
+            6.329066033329164e-09,
+            7.352164289163637e-09,
+            8.858204164899288e-10,
+            1.3444884235469285e-11,
+            1.578613824486398e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.625078276740163e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.19147696777228174,
+            0.14510551634514313,
+            1.2604137600384083e-05,
+            1.02629364879046e-05,
+            6.097297542420518e-07,
+            3.3254880479588036e-07,
+            4.7283501613379986e-08,
+            1.472031929948663e-08,
+            1.8516945940987776e-08,
+            2.4106474050489923e-09,
+            3.72345806645034e-11,
+            5.7024021392234765e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.9781138721630406e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "92f7f08d01aec939e9f3013d52c147e2d54e83b5c09cbd677ca3313afe95b804",
+        "line": {
+          "channel_mean_power": [
+            0.159823416701702,
+            0.11595363373864676,
+            6.123812163512458e-06,
+            5.113743677145764e-06,
+            2.1127403728949174e-07,
+            9.894841022323504e-08,
+            1.464347754675869e-08,
+            4.7608854119710375e-09,
+            5.790172859138489e-09,
+            6.557859092448535e-10,
+            7.646013220754453e-12,
+            1.1238628304469898e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.031903419663418e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16380240437997312,
+            0.1196395772997707,
+            7.0442173472949315e-06,
+            5.678860308272086e-06,
+            2.7090849439396013e-07,
+            1.3027292399156856e-07,
+            1.8811088080586083e-08,
+            6.056113484162085e-09,
+            7.44961854041107e-09,
+            9.042472322570873e-10,
+            1.2924066752921853e-11,
+            1.903811116903006e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.1622607886064526e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Mid",
+        "file": "inverse.npz",
+        "sha256": "995262e7b46d9623c89b22465796f356de429e5a94acf511439e599b4f899bbe",
+        "line": {
+          "channel_mean_power": [
+            0.16400602384155683,
+            0.1198061642525424,
+            7.09332296705032e-06,
+            5.8539779082215255e-06,
+            2.7191358878047103e-07,
+            1.310795593784727e-07,
+            1.9638640709098058e-08,
+            6.32764594932948e-09,
+            7.350453209259804e-09,
+            8.856048099120962e-10,
+            1.344175027567174e-11,
+            1.5779874541619055e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.621521314890055e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.18438852555909074,
+            0.13864028905719317,
+            1.1784620572646917e-05,
+            9.437679103467704e-06,
+            5.645299867204045e-07,
+            3.016463145952147e-07,
+            4.3343497199717805e-08,
+            1.3738148455712712e-08,
+            1.6663791716713655e-08,
+            2.1691077633359025e-09,
+            3.385374099762803e-11,
+            4.713437387130359e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.556253092668638e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Late",
+        "file": "source.npz",
+        "sha256": "c26eb73294da2138bb572f6b395e70893e2626c75db5630dcb44bca2db5e1360",
+        "line": {
+          "channel_mean_power": [
+            0.12782861381104926,
+            0.1168277193005773,
+            1.9202269234577083e-05,
+            1.0326004988657232e-05,
+            4.4648809610132155e-07,
+            2.800231440698343e-07,
+            3.1550211024564854e-08,
+            1.3570036148941054e-08,
+            1.0795874539507249e-08,
+            2.3030173273268923e-09,
+            4.839174432887938e-12,
+            2.7091453803103087e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1193575519131033e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.161933479867735,
+            0.14926711339525658,
+            3.315353635183185e-05,
+            1.9591481741931773e-05,
+            1.1820311522922749e-06,
+            7.214612368075174e-07,
+            8.194102317011287e-08,
+            3.510179381339091e-08,
+            2.911384342361408e-08,
+            6.4001360512785935e-09,
+            1.1575781960036155e-11,
+            5.236399373850976e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.233673097205096e-11
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "cd2aa1c48e5df6554dd0dd5ff08b08e0c774356206c18a3caf9ed1c464f8dcc8",
+        "line": {
+          "channel_mean_power": [
+            0.12391400262991685,
+            0.1130807712665498,
+            1.6134132294516154e-05,
+            8.384178282319014e-06,
+            3.4273394314317907e-07,
+            2.1345236263587037e-07,
+            2.2484753808182156e-08,
+            1.032093639162403e-08,
+            7.975874809602304e-09,
+            1.6536472157292723e-09,
+            3.5042241701628463e-12,
+            2.5819791409976413e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.0836863358445562e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1276184428840988,
+            0.11660278055729892,
+            1.920880787943295e-05,
+            1.0330208057956412e-05,
+            4.484129134775529e-07,
+            2.831167844177646e-07,
+            3.00321782461899e-08,
+            1.329256746582302e-08,
+            1.0773929631924492e-08,
+            2.289728284828693e-09,
+            3.754964703160073e-12,
+            5.73174673905919e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.491315369099652e-12
+        }
+      },
+      {
+        "study": "real2",
+        "label": "F3 Fifth Second Late",
+        "file": "inverse.npz",
+        "sha256": "cc4a0d2e8524417163de65c6308672b98c71c66744c6f6d45732338023cb6924",
+        "line": {
+          "channel_mean_power": [
+            0.12782241036784506,
+            0.11682192546922787,
+            1.9200598782553674e-05,
+            1.0324973319601912e-05,
+            4.463902283783081e-07,
+            2.799652869850973e-07,
+            3.154289536124974e-08,
+            1.356672671569811e-08,
+            1.0793283258106973e-08,
+            2.3024584849250422e-09,
+            4.8382818019449614e-12,
+            2.708550772291338e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1189952250913742e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15191418307010215,
+            0.1396020276530153,
+            3.18434297306505e-05,
+            1.8146356436678186e-05,
+            1.054553547248935e-06,
+            6.498548567902206e-07,
+            7.402973192282077e-08,
+            3.210952607663003e-08,
+            2.6394321154403367e-08,
+            5.8127857612754206e-09,
+            5.7682799976017204e-12,
+            4.094367945037406e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.6951847828112424e-12
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Early",
+        "file": "source.npz",
+        "sha256": "8c70ae48736e88d545e4babbb89d052dbe514e8186cffd9829abf79b792d2238",
+        "line": {
+          "channel_mean_power": [
+            0.12262506184869792,
+            0.0819243830381313,
+            6.510553796008575e-06,
+            3.97828804785314e-06,
+            2.4746469004587767e-07,
+            1.1912377182016361e-07,
+            1.6147417724166573e-08,
+            4.305837900851631e-09,
+            5.738285252494773e-09,
+            5.339626586150318e-10,
+            2.7204134860029385e-12,
+            1.5328638070847512e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.250041210153345e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15251308149217901,
+            0.11128456683662043,
+            1.1902490549740206e-05,
+            7.704228394513401e-06,
+            5.590929355624073e-07,
+            3.0890045132966174e-07,
+            4.072151682542666e-08,
+            1.0403805905217032e-08,
+            1.4847128064169785e-08,
+            1.5205969501520105e-09,
+            9.107648563668033e-12,
+            3.4856618386257736e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.2854838447445053e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "c442b3983fa90c6fe70551622a3e444e0ec4c4216d320af6c039014c2ab93bb6",
+        "line": {
+          "channel_mean_power": [
+            0.11837536789349941,
+            0.07781440205447157,
+            5.417749307524622e-06,
+            3.1744052386949094e-06,
+            1.9044267345547893e-07,
+            9.266885223192949e-08,
+            1.2199312315929392e-08,
+            3.4073508790465697e-09,
+            4.372174765854681e-09,
+            3.8854823947718467e-10,
+            2.1983828321800224e-12,
+            1.2702125350615127e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.0730378774444903e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12237723340949455,
+            0.08167439526744731,
+            6.3755355372301565e-06,
+            3.897136114951873e-06,
+            2.428158548272137e-07,
+            1.1783790083774799e-07,
+            1.614901149134741e-08,
+            4.285242506546992e-09,
+            5.687990008488096e-09,
+            5.229015238898655e-10,
+            3.5007789805463205e-12,
+            1.877176241256003e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5339260326098888e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Early",
+        "file": "inverse.npz",
+        "sha256": "28bdea727d208f43bbb892c31ef6b57028502ba88346e6cb6cbeb6be23adf5ce",
+        "line": {
+          "channel_mean_power": [
+            0.12261916873643149,
+            0.08191865559346154,
+            6.509857315056057e-06,
+            3.9778301291493825e-06,
+            2.4742120365449124e-07,
+            1.1909675239722425e-07,
+            1.614447469245869e-08,
+            4.3050681666537536e-09,
+            5.737070601548479e-09,
+            5.338294676884733e-10,
+            2.7199143242606758e-12,
+            1.5326701110718495e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.2499433219664917e-11
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14775868135209222,
+            0.10630520697211446,
+            1.1056074751606625e-05,
+            7.204618037077308e-06,
+            5.243161578483515e-07,
+            2.760336179060566e-07,
+            3.510775892766761e-08,
+            9.201015323985772e-09,
+            1.2961916176063054e-08,
+            1.305347486993109e-09,
+            8.254138036616958e-12,
+            3.207563483795616e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.17081220165491e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Mid",
+        "file": "source.npz",
+        "sha256": "0027d650bb99b43cf4577817c5a05bb9552b5e86dfdc0e847458dd42f52ed119",
+        "line": {
+          "channel_mean_power": [
+            0.09745034956409222,
+            0.08776016487083368,
+            1.1467861067631221e-05,
+            6.904356479650968e-06,
+            2.549441610624071e-07,
+            2.1416023177387159e-07,
+            2.4198500767363867e-08,
+            6.947111921378598e-09,
+            9.4322820266984e-09,
+            1.1652397040075512e-09,
+            1.7627998194126442e-12,
+            9.529297948698636e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.778618538901496e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.12621413630519282,
+            0.11444093601028704,
+            1.8775212175514858e-05,
+            1.131261492376156e-05,
+            5.679187660389522e-07,
+            4.0187873821381195e-07,
+            5.410421539398687e-08,
+            1.761104873107849e-08,
+            2.2373441139365447e-08,
+            2.762577382132389e-09,
+            8.597542791626824e-12,
+            4.583858240740956e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.631810488848041e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "82077bc8cda35ecea63171cde4e5fa550937df8575377463600e9b2fcdf4ba64",
+        "line": {
+          "channel_mean_power": [
+            0.09384898307907355,
+            0.08434811782086897,
+            1.0017519392565241e-05,
+            6.0144160969307015e-06,
+            1.9618927289161038e-07,
+            1.7697388174742955e-07,
+            1.8514909381356658e-08,
+            5.226496966901611e-09,
+            7.281024898978889e-09,
+            9.130945457328268e-10,
+            1.2919029224553609e-12,
+            7.052119116576944e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 7.514326618366339e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.0970767520457459,
+            0.0873874124638476,
+            1.1366975013759964e-05,
+            6.8565465457284256e-06,
+            2.509444286224427e-07,
+            2.11258050306465e-07,
+            2.3839280217128147e-08,
+            6.881842070307876e-09,
+            9.27739620248365e-09,
+            1.1466922032700505e-09,
+            2.4128866249260306e-12,
+            1.1927898182699336e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.228707999735972e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Mid",
+        "file": "inverse.npz",
+        "sha256": "3255193d3a970fc315813704b729fe4a0b3484b68f9ddf5f95b063cea2d8b8d1",
+        "line": {
+          "channel_mean_power": [
+            0.09744559612362842,
+            0.08775565521961973,
+            1.1466859404042356e-05,
+            6.9037451364943436e-06,
+            2.549035326256808e-07,
+            2.1413510597911144e-07,
+            2.4194652894210715e-08,
+            6.945788546953532e-09,
+            9.430566440375e-09,
+            1.1650252471929977e-09,
+            1.7623092119812499e-12,
+            9.52594729382765e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 9.775657056622815e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.11835725299645872,
+            0.10697249262813995,
+            1.7991209172561648e-05,
+            1.081487682798459e-05,
+            5.266373783917873e-07,
+            3.754699540754167e-07,
+            4.948852950894866e-08,
+            1.576074801218563e-08,
+            2.0356457749950637e-08,
+            2.509746751889033e-09,
+            6.073730323611335e-12,
+            3.02451331378325e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.555410198539961e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Late",
+        "file": "source.npz",
+        "sha256": "1cdc6e9fdd565f060212839fa51d24b24baa6aa2236f48ec53a21f925d2fda55",
+        "line": {
+          "channel_mean_power": [
+            0.10032200157309094,
+            0.09287452749527736,
+            1.7046067915446378e-05,
+            1.214937819691811e-05,
+            3.490651202664023e-07,
+            2.1592794832470812e-07,
+            3.138019279602044e-08,
+            9.060793260152117e-09,
+            9.772897923030235e-09,
+            1.6304106151314083e-09,
+            1.309665621961553e-13,
+            2.90222890248806e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.892913674946569e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15133762371933232,
+            0.14025072567279379,
+            2.915046242305064e-05,
+            2.0189782510466417e-05,
+            8.821177092747489e-07,
+            5.158240977003261e-07,
+            7.734053856620378e-08,
+            2.1993952292086126e-08,
+            2.6355756543764788e-08,
+            4.285182704033027e-09,
+            5.56956114384756e-12,
+            2.5977196680374025e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.7165061827950203e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "12191a98e35b17aef32262238f9561ab4d25c63272752c27323383909d0fcf0a",
+        "line": {
+          "channel_mean_power": [
+            0.09504881613896318,
+            0.08800886599699842,
+            1.465373739663819e-05,
+            1.047232429531198e-05,
+            2.656170442535239e-07,
+            1.6912049694764164e-07,
+            2.3555454496300606e-08,
+            6.753717000439381e-09,
+            7.311804059570032e-09,
+            1.2284101301595698e-09,
+            1.99630941908593e-13,
+            1.4325962216092959e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.5072215307919384e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.09991041715307178,
+            0.0925340837825706,
+            1.722228830746427e-05,
+            1.2259007082748527e-05,
+            3.47001458588371e-07,
+            2.1496244427605422e-07,
+            3.102937988655789e-08,
+            8.974560907578647e-09,
+            9.778962369169216e-09,
+            1.6387841309144808e-09,
+            1.2078100894390777e-12,
+            5.778108045130637e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.783288879955384e-12
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth First Late",
+        "file": "inverse.npz",
+        "sha256": "a2ab99c8001970bf9a86c07541cc7eb1c9d43e02bf344d74241a759c5544fe9f",
+        "line": {
+          "channel_mean_power": [
+            0.10031160750244217,
+            0.09286465040962374,
+            1.7044795596438537e-05,
+            1.2148496200926659e-05,
+            3.489906538361374e-07,
+            2.1588598070692955e-07,
+            3.13742350500446e-08,
+            9.059056518222526e-09,
+            9.77072129183605e-09,
+            1.6300548091778756e-09,
+            1.3091023949363051e-13,
+            2.901422318250451e-14
+          ],
+          "weakest_to_strongest_mean_ratio": 2.892409353702973e-13
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1427200976976411,
+            0.132334642764953,
+            2.738742982616772e-05,
+            1.929004907487456e-05,
+            7.993562380236672e-07,
+            4.754477776698057e-07,
+            6.882778280276505e-08,
+            1.9798522697033203e-08,
+            2.3712125902070578e-08,
+            3.948743255067998e-09,
+            2.3911246669885626e-12,
+            2.2207875099376273e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 1.556043995038782e-12
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Early",
+        "file": "source.npz",
+        "sha256": "f54de1ed01e77752e7969938756aa22f6e9a1c10a6e73f7153f75e5665174daa",
+        "line": {
+          "channel_mean_power": [
+            0.14480219346658363,
+            0.08775860423584166,
+            6.248636878702087e-06,
+            5.1426747841731665e-06,
+            2.2163121006070198e-07,
+            1.1234966264005347e-07,
+            1.8423843596527803e-08,
+            6.978873118681945e-09,
+            6.42342307247653e-09,
+            9.300490362223861e-10,
+            3.244532564365512e-12,
+            8.404775756213649e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.804315221338992e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1715280396196728,
+            0.11061175169335322,
+            1.42698069855479e-05,
+            1.0402497697603431e-05,
+            6.12849330843171e-07,
+            2.965233103934836e-07,
+            4.9268245220013814e-08,
+            1.7475873452079754e-08,
+            1.7948336008423386e-08,
+            2.4988915187875265e-09,
+            1.1609003092162849e-11,
+            2.8232203274290602e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.6459235083015903e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Early",
+        "file": "interpolated_observations.npz",
+        "sha256": "a7c2bcb42b0f3949666832f0995e37ec9624c96712580534323033d681e16f59",
+        "line": {
+          "channel_mean_power": [
+            0.1411328722821435,
+            0.0846206766645683,
+            4.821627316701813e-06,
+            4.10479324516678e-06,
+            1.650794223724031e-07,
+            8.390471342240112e-08,
+            1.3870721132070224e-08,
+            5.16848710826989e-09,
+            4.82085377316142e-09,
+            6.924930233415954e-10,
+            2.6506997028734532e-12,
+            6.454303647309758e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.573210721883943e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.14465592171052516,
+            0.0876387511654866,
+            6.235924222980103e-06,
+            5.1504406314614605e-06,
+            2.1996519847496714e-07,
+            1.1127817712309442e-07,
+            1.8216373984287353e-08,
+            6.9171943244732815e-09,
+            6.360959227696805e-09,
+            9.282798262611214e-10,
+            3.96348637119978e-12,
+            1.1111108446650958e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.681060211890734e-12
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Early",
+        "file": "inverse.npz",
+        "sha256": "e7b55d1bb1ffb255282577e0d021b304f8a1799d6f80655459395da20f5516a7",
+        "line": {
+          "channel_mean_power": [
+            0.1447993287011989,
+            0.08775628596755854,
+            6.247666499332273e-06,
+            5.142036319925657e-06,
+            2.2157912780818774e-07,
+            1.1232440027411698e-07,
+            1.8419502714458734e-08,
+            6.977317656475846e-09,
+            6.421920450850284e-09,
+            9.298438208305695e-10,
+            3.243361480736342e-12,
+            8.402377596326549e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 5.802773860689162e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16133864190613498,
+            0.10179487989549765,
+            1.2928670798238733e-05,
+            9.69780500973795e-06,
+            5.335250987338123e-07,
+            2.6382124457603656e-07,
+            4.405739384749599e-08,
+            1.5933604805733475e-08,
+            1.5537426868161445e-08,
+            2.233576740922899e-09,
+            9.675263807470921e-12,
+            2.4109436532456486e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.4943373916884144e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Mid",
+        "file": "source.npz",
+        "sha256": "4bfa125f381d0fb7c81fbaeb042603a3114a82425e4cff81c6056c0881160aae",
+        "line": {
+          "channel_mean_power": [
+            0.16401049208101043,
+            0.1198104179482187,
+            7.094104111243113e-06,
+            5.854593782925488e-06,
+            2.719558753093557e-07,
+            1.311048990337618e-07,
+            1.9642936111239658e-08,
+            6.329066033329164e-09,
+            7.352164289163637e-09,
+            8.858204164899288e-10,
+            1.3444884235469285e-11,
+            1.578613824486398e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.625078276740163e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.19147696777228174,
+            0.14510551634514313,
+            1.2604137600384083e-05,
+            1.02629364879046e-05,
+            6.097297542420518e-07,
+            3.3254880479588036e-07,
+            4.7283501613379986e-08,
+            1.472031929948663e-08,
+            1.8516945940987776e-08,
+            2.4106474050489923e-09,
+            3.72345806645034e-11,
+            5.7024021392234765e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.9781138721630406e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Mid",
+        "file": "interpolated_observations.npz",
+        "sha256": "92f7f08d01aec939e9f3013d52c147e2d54e83b5c09cbd677ca3313afe95b804",
+        "line": {
+          "channel_mean_power": [
+            0.159823416701702,
+            0.11595363373864676,
+            6.123812163512458e-06,
+            5.113743677145764e-06,
+            2.1127403728949174e-07,
+            9.894841022323504e-08,
+            1.464347754675869e-08,
+            4.7608854119710375e-09,
+            5.790172859138489e-09,
+            6.557859092448535e-10,
+            7.646013220754453e-12,
+            1.1238628304469898e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 7.031903419663418e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.16380240437997312,
+            0.1196395772997707,
+            7.0442173472949315e-06,
+            5.678860308272086e-06,
+            2.7090849439396013e-07,
+            1.3027292399156856e-07,
+            1.8811088080586083e-08,
+            6.056113484162085e-09,
+            7.44961854041107e-09,
+            9.042472322570873e-10,
+            1.2924066752921853e-11,
+            1.903811116903006e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 1.1622607886064526e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Mid",
+        "file": "inverse.npz",
+        "sha256": "f5854b2d586abe6fa847250a4406b7ada59c7d8143db17f980993127550df6bd",
+        "line": {
+          "channel_mean_power": [
+            0.16400632692321623,
+            0.11980641505188565,
+            7.093323702161429e-06,
+            5.853978125840077e-06,
+            2.7191358516998753e-07,
+            1.310795594043378e-07,
+            1.9638641211394952e-08,
+            6.327646524417597e-09,
+            7.3504527109042894e-09,
+            8.856047266096709e-10,
+            1.344175010347493e-11,
+            1.57798742408578e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 9.621503351053983e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.18451712977394033,
+            0.13875522335443358,
+            1.1784140476389816e-05,
+            9.43725910324119e-06,
+            5.644957361424788e-07,
+            3.0163022285643294e-07,
+            4.334147550876989e-08,
+            1.3736966969797049e-08,
+            1.6660788513623443e-08,
+            2.168849056766471e-09,
+            3.385367116232385e-11,
+            4.716700771747389e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 2.556240050734594e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Late",
+        "file": "source.npz",
+        "sha256": "c26eb73294da2138bb572f6b395e70893e2626c75db5630dcb44bca2db5e1360",
+        "line": {
+          "channel_mean_power": [
+            0.12782861381104926,
+            0.1168277193005773,
+            1.9202269234577083e-05,
+            1.0326004988657232e-05,
+            4.4648809610132155e-07,
+            2.800231440698343e-07,
+            3.1550211024564854e-08,
+            1.3570036148941054e-08,
+            1.0795874539507249e-08,
+            2.3030173273268923e-09,
+            4.839174432887938e-12,
+            2.7091453803103087e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1193575519131033e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.161933479867735,
+            0.14926711339525658,
+            3.315353635183185e-05,
+            1.9591481741931773e-05,
+            1.1820311522922749e-06,
+            7.214612368075174e-07,
+            8.194102317011287e-08,
+            3.510179381339091e-08,
+            2.911384342361408e-08,
+            6.4001360512785935e-09,
+            1.1575781960036155e-11,
+            5.236399373850976e-12
+          ],
+          "weakest_to_strongest_mean_ratio": 3.233673097205096e-11
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Late",
+        "file": "interpolated_observations.npz",
+        "sha256": "cd2aa1c48e5df6554dd0dd5ff08b08e0c774356206c18a3caf9ed1c464f8dcc8",
+        "line": {
+          "channel_mean_power": [
+            0.12391400262991685,
+            0.1130807712665498,
+            1.6134132294516154e-05,
+            8.384178282319014e-06,
+            3.4273394314317907e-07,
+            2.1345236263587037e-07,
+            2.2484753808182156e-08,
+            1.032093639162403e-08,
+            7.975874809602304e-09,
+            1.6536472157292723e-09,
+            3.5042241701628463e-12,
+            2.5819791409976413e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.0836863358445562e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.1276184428840988,
+            0.11660278055729892,
+            1.920880787943295e-05,
+            1.0330208057956412e-05,
+            4.484129134775529e-07,
+            2.831167844177646e-07,
+            3.00321782461899e-08,
+            1.329256746582302e-08,
+            1.0773929631924492e-08,
+            2.289728284828693e-09,
+            3.754964703160073e-12,
+            5.73174673905919e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 4.491315369099652e-12
+        }
+      },
+      {
+        "study": "real3",
+        "label": "F3 Fifth Second Late",
+        "file": "inverse.npz",
+        "sha256": "ffc5a9cccd72edc3df5d7ea0d7aa6117a2a52ea3f21d06814f13cde47b5d6ae8",
+        "line": {
+          "channel_mean_power": [
+            0.12782304022404034,
+            0.1168225322402184,
+            1.920059899684813e-05,
+            1.0324973161999559e-05,
+            4.4639019962557163e-07,
+            2.799652576059865e-07,
+            3.154289569052864e-08,
+            1.3566727067349089e-08,
+            1.0793283451040902e-08,
+            2.3024582541729262e-09,
+            4.838279942318287e-12,
+            2.7085501990438676e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.1189843351374587e-12
+        },
+        "broad": {
+          "channel_mean_power": [
+            0.15213568049756346,
+            0.13979509124915332,
+            3.1842569691260045e-05,
+            1.8145578592486846e-05,
+            1.0545007294870645e-06,
+            6.498160426698443e-07,
+            7.402464459355791e-08,
+            3.210906182539757e-08,
+            2.6392567630388698e-08,
+            5.81244000248349e-09,
+            5.771813196191179e-12,
+            4.1195557527717544e-13
+          ],
+          "weakest_to_strongest_mean_ratio": 2.707816956087255e-12
+        }
+      }
+    ],
+    "studies": {
+      "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real1": "d3b58ad2751c9b757d56b594c5a22dc047e97496acb03aef5bc71db7e844e8d5",
+      "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real2": "b1c1c7dd71bf649dc2b6bd22f92dbf4028d9f4380d27cf2eb8ed15815e067f2f",
+      "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1\\real3": "e0f0028f4497a325c2a5423162cae276b57985928fedf09b3cfdda319f8ab824"
+    },
+    "captures": 54,
+    "normalization": "Each channel mean power; covariance/lag by outer channel means; complex cross by sqrt(Lmean*Rmean). Fixed floor1e-24.",
+    "maximum_errors": {
+      "coefficients_absolute": 3.1172366705291434e-14,
+      "raw_power": 9.411752960443085e-11,
+      "raw_cross": 7.789969401486828e-11,
+      "line_mean": 8.009106335118195e-12,
+      "line_covariance": 2.6388616468866562e-12,
+      "line_lag_covariance": 4.2707179133312234e-12,
+      "line_CV": 7.0267680563063095e-12,
+      "line_complex_coherence": 3.6155458801132266e-12,
+      "line_mid_power": 6.959815864914196e-13,
+      "line_side_power": 6.54668834831836e-13,
+      "raw_broadband_power": 1.684848364085967e-11,
+      "raw_broadband_cross": 1.2712816589420964e-11,
+      "broad_mean": 6.439039167868879e-13,
+      "broad_covariance": 1.3804532388800066e-12,
+      "broad_lag_covariance": 1.7682728097326987e-12,
+      "broad_CV": 1.3092860129404471e-12,
+      "broad_complex_coherence": 9.778648537469755e-13,
+      "broad_mid_power": 1.2163583885489192e-13,
+      "broad_side_power": 1.92910230180881e-13,
+      "chunks_line_mean": 1.3272194794783455e-11,
+      "chunks_line_CV": 1.5867085423337812e-11,
+      "chunks_line_complex_coherence": 7.743915534521824e-12,
+      "chunks_broad_mean": 2.42237174368117e-12,
+      "chunks_broad_CV": 3.1532554345403696e-12,
+      "chunks_broad_complex_coherence": 1.3051527362333018e-12
+    },
+    "gate": 2e-09,
+    "no_new_waveform_synthesis": true,
+    "known_counterexamples": {
+      "raw_global": 1.999999999999993e-11,
+      "raw_local": 0.01999999999999993,
+      "covariance_global": 2.0000000000000086e-20,
+      "covariance_local": 0.020000000000000084
+    },
+    "auditor_sha256": "002788d9f7c6849e3d92dddab1efa0c5c952e182e4b10edc3a40c512ea2035c3",
+    "all_raw_power_cross_and_per_mean_covariance_verified": true
+  },
+  "results": {
+    "variants": {
+      "interpolated": {
+        "wave_NRMSE_mean": 0.4313965384688032,
+        "wave_region_NRMSE_mean": [
+          0.5205821741009883,
+          0.3771759566150985,
+          0.5651250711089556
+        ],
+        "line_power_error_dB_mean": 1.046140191439399,
+        "broad_power_error_dB_mean": 3.5327723020751636,
+        "line_coherence_error_mean": 0.02460505809770125,
+        "broad_coherence_error_mean": 0.045446737792541686,
+        "line_CV_error_mean": 0.034479455490206506,
+        "broad_CV_error_mean": 0.059267545905223776
+      },
+      "original4000": {
+        "wave_NRMSE_mean": 0.28030025906339234,
+        "wave_region_NRMSE_mean": [
+          0.3743753179870662,
+          0.18848665226185365,
+          0.4720193348520781
+        ],
+        "line_power_error_dB_mean": 0.0015781181065970342,
+        "broad_power_error_dB_mean": 0.7532424020235394,
+        "line_coherence_error_mean": 4.434126334321265e-05,
+        "broad_coherence_error_mean": 0.022364171142875942,
+        "line_CV_error_mean": 0.00020195724788034443,
+        "broad_CV_error_mean": 0.05323351551644659
+      },
+      "preconditioned4000": {
+        "wave_NRMSE_mean": 0.3570581009298796,
+        "wave_region_NRMSE_mean": [
+          0.47496306758979684,
+          0.19700858941393473,
+          0.6330420370501499
+        ],
+        "line_power_error_dB_mean": 0.0007665149301928551,
+        "broad_power_error_dB_mean": 0.806214640546212,
+        "line_coherence_error_mean": 2.16456762615509e-05,
+        "broad_coherence_error_mean": 0.021328079478484703,
+        "line_CV_error_mean": 0.0001289123645024042,
+        "broad_CV_error_mean": 0.05237118476187289
+      },
+      "corrected": {
+        "wave_NRMSE_mean": 0.34731296794450034,
+        "wave_region_NRMSE_mean": [
+          0.4690524638712959,
+          0.19133814700180926,
+          0.6104714161197985
+        ],
+        "line_power_error_dB_mean": 0.0007630342882617944,
+        "broad_power_error_dB_mean": 0.8015464220278488,
+        "line_coherence_error_mean": 2.1553335156810805e-05,
+        "broad_coherence_error_mean": 0.02128855209114254,
+        "line_CV_error_mean": 0.00012661314016287537,
+        "broad_CV_error_mean": 0.052066828394768595
+      }
+    },
+    "paired": {
+      "original4000_minus_interpolated": {
+        "wave_NRMSE": {
+          "mean_change": -0.15109627940541093,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.1426672989080148,
+          "improved": 15,
+          "regressed": 3,
+          "equivalent": 0,
+          "count": 18
+        },
+        "broad_power_error_dB": {
+          "mean_change": -2.7795299000516236,
+          "improved": 70,
+          "regressed": 2,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.02308256664966575,
+          "improved": 29,
+          "regressed": 7,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_CV_error": {
+          "mean_change": -0.006034030388777196,
+          "improved": 46,
+          "regressed": 26,
+          "equivalent": 0,
+          "count": 72
+        }
+      },
+      "preconditioned4000_minus_interpolated": {
+        "wave_NRMSE": {
+          "mean_change": -0.07433843753892368,
+          "improved": 5,
+          "regressed": 1,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.05262316925705361,
+          "improved": 12,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 18
+        },
+        "broad_power_error_dB": {
+          "mean_change": -2.7265576615289513,
+          "improved": 70,
+          "regressed": 2,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.02411865831405699,
+          "improved": 29,
+          "regressed": 7,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_CV_error": {
+          "mean_change": -0.00689636114335089,
+          "improved": 48,
+          "regressed": 24,
+          "equivalent": 0,
+          "count": 72
+        }
+      },
+      "corrected_minus_interpolated": {
+        "wave_NRMSE": {
+          "mean_change": -0.08408357052430286,
+          "improved": 5,
+          "regressed": 1,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.06400705827737958,
+          "improved": 12,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 18
+        },
+        "broad_power_error_dB": {
+          "mean_change": -2.7312258800473144,
+          "improved": 70,
+          "regressed": 2,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.024158185701399153,
+          "improved": 29,
+          "regressed": 7,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_CV_error": {
+          "mean_change": -0.00720071751045518,
+          "improved": 48,
+          "regressed": 24,
+          "equivalent": 0,
+          "count": 72
+        }
+      }
+    },
+    "source_models": 6,
+    "engines": 1,
+    "source_context": "F3 two ascents, early/mid/late; in-sample normalized-coordinate diagnostic",
+    "solver_converged": {
+      "real1": 0,
+      "real2": 0,
+      "real3": 0
+    }
+  },
+  "decision": {
+    "native_or_runtime_promoted": false,
+    "all24_outcomes_and18_solver_records_retained": true,
+    "all18_correction_checkpoints_retained": true,
+    "all6_correction_stops": 7,
+    "gradient_gate_passed": 5,
+    "full_convergence_passed": 0,
+    "reason": "The more converged original objective does not monotonically improve the full waveform. Explicit waveform blind spots and unobserved full-spectrum detail require stronger declared observations, not more blind iterations or harmonic reduction.",
+    "next": "Known-first complete-frequency/endcap observation with explicit coverage/Parseval/adjoint/edge-impulse controls; then all6 original inputs, original observer and all regressions. Existing inverse objective remains frozen. Only subsequently source-statistical sustained generation, native48k/aliasing, C, one driver and listening.",
+    "full_goal": "active"
+  },
+  "scientific_figures_individually_viewed": 2,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "runtime_default_driver_owned_take_room_changed": false,
+  "new_stochastic_source": false,
+  "native48k_or_C_or_timbre_qualified": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "Known-first complete-frequency/endcap observation with explicit coverage/Parseval/adjoint/edge-impulse controls; then all6 original inputs, original observer and all regressions. Existing inverse objective remains frozen. Only subsequently source-statistical sustained generation, native48k/aliasing, C, one driver and listening.",
+  "manifest_sha256": "fe6208d8dbaba48fc57cbb7e9ffe0fa771632db21a7fedab05de7bde7821b2c1",
+  "file_count": 1229,
+  "bytes": 198147498,
+  "independent_archive_verification": {
+    "file": "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1_archive_verification.json",
+    "sha256": "92fd62b7e6b9b2d7de2c4f01360660405569a7848797ac69c20d76849e2398d5",
+    "receipt": {
+      "result": "independent_archive_source_zip_contracts_verified",
+      "file_count": 1229,
+      "bytes": 198147498,
+      "manifest_sha256": "fe6208d8dbaba48fc57cbb7e9ffe0fa771632db21a7fedab05de7bde7821b2c1",
+      "source_zip_members": 901,
+      "protected_current_contracts": {
+        "C_files_sha256.json": 670,
+        "voice_files_sha256.json": 82,
+        "F2_files_sha256.json": 3
+      },
+      "C_index_exact": true,
+      "protected_hearings_exact": true,
+      "auditor_sha256": "2fd1a03a4fa6b556e4190e282df800cee916cb9de9c2c515fe7ab712d878e8e6"
+    }
+  },
+  "independent_checkpoint_and_input_verification": {
+    "file": "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1_archive_checkpoints1\\report.json",
+    "sha256": "c6e448766e3f00ff00477b2d3d9109da84c37b4e9c71756bad3cccf23886f2d4",
+    "receipt": {
+      "result": "independent_inverse_archive_checkpoints_and_bindings_verified",
+      "checkpoints": 18,
+      "input_bindings": 94,
+      "historical_source_bindings": 60,
+      "maximum_objective_relative_difference": 1.1366350568739404e-12,
+      "maximum_stationarity_absolute_difference": 2.9679740175487116e-12,
+      "manifest_sha256": "fe6208d8dbaba48fc57cbb7e9ffe0fa771632db21a7fedab05de7bde7821b2c1",
+      "auditor_sha256": "903626248b11a8e1132543a18a25aff9ccc618d783374badc9ba2996e8b70617"
+    },
+    "executed_auditor_file": "E:\\VehicleSoundLab\\references\\analysis\\observer_inverse_v1_archive_checkpoints1\\executed_audit.py",
+    "executed_auditor_sha256": "903626248b11a8e1132543a18a25aff9ccc618d783374badc9ba2996e8b70617"
+  }
+}
