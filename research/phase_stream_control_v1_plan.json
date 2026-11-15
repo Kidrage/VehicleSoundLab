@@ -1,0 +1,21 @@
+{
+  "schema": "vsl.phase-stream-control/1",
+  "parent_commit": "f913e09",
+  "previous_goal_turn": "Progress on resource planning: ADI V8 periodic-job estimates committed; no synthesis change. Resume the frozen phase-lift study's declared isolation control.",
+  "purpose": "Separate saved independent phase-stream effects from P-conditioned decoding using the ORIGINAL empirical relative-phase marginal.",
+  "known_first": "Identical conditional CDF rows must reproduce original empirical quantiles including half-cell endpoint atoms, repeated values and endpoint probabilities. Independent audit before source access.",
+  "inputs": "All six conditional_phase_time_v1 frozen bundles, three original saved dual-state paths; no RNG, refit, rho/rank/rate/strength sweep or branch lift.",
+  "variant": "independent_marginal",
+  "comparators": ["fixed", "relative", "parent", "density", "variation"],
+  "seeds": [1, 23117, 61927],
+  "frames": 65536,
+  "block": 1024,
+  "identity_block": 37,
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "carrier_edges_Hz": [0,3000,6000,8000,10000,14000,1000000000],
+  "coordinate": "1024 samples per acoustic cycle and 256 samples per endpoint; diagnostic normalized coordinate, not native48k or physical RPM.",
+  "checks": {"known_phase_radians":2e-12,"chunk_identity_FS":2e-12,"original_probe_FS":2e-12,"independent_wave_FS":2e-10,"Gram_per_band_scaled":2e-10,"statistics_scaled":2e-9},
+  "observer": "Original Hann4096/hop256; all241rows and original-source-row-count chunks; full12x12 complex Grams and signed carrier interference.",
+  "decision": "Retain all18 new outcomes and all90 old comparator outcomes. The stream control isolates a finite realization of marginal-preserving stream replacement, not a physical source or universal causal proof. No automatic C/native audio/listening adoption.",
+  "scope": "Preserve670C-H82voices3F2/index/acceptedmoving35/default/one-driver/owned/takes/room/pendinghearings;V6DNA/BODY/DETAIL/EVENT/AUX and independent future spatial; full goal active."
+}
