@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.observer-frequency-block-correction/1",
+  "parent": "5e621fd1069250b3fc2b6d570178d6c0e90c0e12",
+  "purpose": "Correct all six saved weighted4000 solutions with a known-qualified within-order right preconditioner, keeping the exact objective.",
+  "known_first": ["separated mono saved eight-iteration initial versus dense optimum", "neighbor mono saved eight-iteration initial versus dense optimum", "stereo shared metric and separate variables versus independent per-channel dense optima", "exact zero RHS"],
+  "sources": "all six original F3 local windows, one V10, two ascents, early/mid/late; no new source selection",
+  "initial": "observer_frequency_v1/real1 weighted.npz nodes, not zero initialization or an old-job restart",
+  "unchanged": ["source/native/warp arrays", "288 orders", "all original temporal nodes and scales", "all complete-Hann/endcap/DC/Nyquist rows", "frozen shared L/R frequency weights and 1e-8 mathematical floor", "alpha=0.001", "beta=0.000001", "original-space stationarity gate=2e-7"],
+  "right_map": "full 2M by 2M real/imag temporal block per order; carrier-frequency data Gram approximation plus exact D2/ridge; off-order/sideband couplings retained by exact operator",
+  "solver": {"correction_maxiter": 4000, "atol": 1e-13, "btol": 1e-13, "conlim": 1000000000000, "accepted_stops": [1, 2, 4, 5], "corrections_per_source": 1, "record_new_and_cumulative_iterations": true},
+  "checks": ["objective cannot increase", "independent source-metric/original-space gradient", "full scalar OSC and original observer", "weak-band raw power and complex L/R", "signed Grams, Parseval, original three partitions", "all improvements and regressions"],
+  "not_claimed": ["physical source separation", "native48k or anti-alias qualification", "sustained stochastic source", "new listening acceptance", "C or default promotion", "SHARC target optimization"],
+  "after": "If convergence/fidelity qualify, extract a new statistical sustained source and reobserve independent generated time; fitted node trajectories must not be looped or presented as controllable synthesis. Otherwise diagnose the exact residual and preconditioned operator without another blind cap/weight/rank sweep.",
+  "full_goal": "active; V6 DNA/BODY/DETAIL/EVENT/AUX, one driver, independent future spatial renderer and multiple engines/full states/physical7.1.4 remain required"
+}

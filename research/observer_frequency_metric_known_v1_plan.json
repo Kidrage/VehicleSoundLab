@@ -1,0 +1,13 @@
+{
+  "schema":"vsl.observer-frequency-known-plan/1",
+  "parent_commit":"5e621fd",
+  "previous_turn":"Progress: complete-frame all6 fits and independent controls/publication/archive; global waveform error low but weak HF/stereo regress; all6 stop7 frozen",
+  "known_data":"4353 samples;9 linear nodes;orders7/211;root64Hz;one channel;weak amplitudes1,0.01,0.0001;constant or alternating smooth curvature. Exact dense solutions for old harmonic-only, global-wave and new complete-frequency objectives; finite8 and full4000 iteration errors separate from exact bias.",
+  "metric":"All finite Hann4096/hop256 rows, DC/Nyquist/endcaps/between-harmonics; shared L/R weights; bands[0,3000,6000,8000,10000,14000,Nyquist-inclusive]. Weight=1/sqrt(max(joint-band-record-power,1e-8*joint-total-record-power)); absolute zero uses fixed all1. Mathematical floor, not measured noise. One rule for all sources, no per-band winner or gain correction.",
+  "regularization":"Old physical order scales and alpha0.001/beta0.000001 retained. NEW metric changes objective units explicitly; source analysis is offline, not product EQ.",
+  "preconditioner":"Invertible D2/ridge time whitening plus approximate carrier-frequency column normalization; not exact weighted norms. Dense equivalence/adjoint/condition and full objective must pass.",
+  "other_controls":"Metric adjoint,positive bound,uniform-weight Parseval,first/last impulses,between-bin tone,zero,silent-right,channel swap/orthogonal rotation,positive common scale; coefficient basis and real-coordinate weighted-system adjoint.",
+  "known_gate":"Independent SciPy full-frame weights/direct scalar OSC/explicit hats-D2/dense objective solves and all derived errors before real sources. Do not assume candidate wins; preserve exact losses/regressions.",
+  "real_gate":"After known and independent pass, read only original6 source/native/warp/nodes/scales, record all band powers and fixed rule before any solve. Same4000 solver gate and original observer diagnostics; no default/C/room/take/hearing changes.",
+  "full_goal":"V6five buses/one driver/independent future spatial;multi-engine/fullstates/physical7.1.4 remains active"
+}
