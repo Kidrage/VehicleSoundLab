@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.carrier-transfer/1",
+  "parent_commit": "e1c33b6",
+  "previous_goal_turn": "Progress:90 time-domain waves and full independent observer/statistics audit archived; conditional mapping was not promoted because static stereo improvements regressed after waveform generation.",
+  "purpose": "Account for generated HF by nominal carrier origin, retaining signed inter-group interference and complex LR terms. Identify origins before choosing a temporal-model change; not physical noise/source separation.",
+  "inputs": "Exact frozen conditional_phase_time_v1 real1 bundles, two saved state streams, all90 saved waves and source targets. No refit, new random draws, tuning, phase/rho/rank/rate change, normalization or media.",
+  "carrier_edges_Hz": [0,3000,6000,8000,10000,14000,1000000000],
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "coordinate": "Original1024samples/acoustic-cycle,64cycles,256sample endpoints. Diagnostic normalized waveforms only; no native48k/alias/listening/ECU-time qualification.",
+  "variants": ["fixed","relative","parent","density","variation"],
+  "seeds": [1,23117,61927],
+  "block": 1024,
+  "known": ["separated","positive_cross","negative_cross","quadrature","low_AM_sidebands","low_PM_sidebands","edge_bins","silence"],
+  "operator": "PeriodicHann4096/hop256. Save full12x12 complex group/channel Gram matrices per window and band, separately for original harmonic-line and full-band normalization. Sum ALL group pairs to recover previous power and complexLR; keep PSD and Hermitian checks. Global Parseval includes DC/Nyquist correctly.",
+  "checks": {"wave_sum_FS":2e-12,"independent_probe_FS":2e-10,"independent_Gram_scaled":2e-10,"recovered_parent_scaled":2e-9,"Parseval_scaled":2e-11,"known_analytic_FS":2e-12},
+  "comparison": "All6sources/3seeds/5variants. Report group self-power plus signed cross, and low/rest/low-rest identity including variation-minus-relative differences. Ratios can exceed1 or be negative under interference; no physical contribution percentage or independent-layer claim. No band-wise winner selection.",
+  "decision": "Known controls and independent audit first, then all real waves and independent per-group scalar probes plus all STFT matrices/recovery/aggregates. Do not promote a new sound on attribution alone; next temporal model must preserve generated waveform statistics through the original observer before native audio/C/listening.",
+  "scope": "V6 DNA/BODY/DETAIL/EVENT/AUX,one driver,independent future spatial layer. Preserve670C-H82voice3F2/Cindex/moving35/default/owned/take/room/hearings. No unchanged68CTest/download/push. Fullmulti-engine/fullstates/physical7.1.4 remains active."
+}

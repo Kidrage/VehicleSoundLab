@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.circular-phase-lift/1",
+  "purpose": "Test the half-angle branch hypothesis before modifying generated time paths. A continuous relative-phase lift preserves exp(i delta) but, at held common phase, changes both channel waveforms and their joint temporal law.",
+  "ordering": "Known analytic controls and independent scalar audit first; frozen-source replay only after carrier_transfer_v1 audit and archive. No new random draws, fitting, rate/rank/rho/strength sweep, C migration or hearing on known controls alone.",
+  "hypothesis": "For thetaL=common+delta/2 and thetaR=common-delta/2, a 2pi change in delta flips both oscillators unless common is also shifted by pi. Minimum-step circular lifting may reduce this representation-related motion, but a genuinely fast phase path is observationally ambiguous. This is a candidate temporal model, not an equivalent bug fix.",
+  "known_controls": ["no_crossing_exact", "positive_branch", "negative_branch", "gauge_compensation", "held_common_changes_wave", "fast_motion_ambiguity", "instantaneous_stereo_invariants", "block_continuity"],
+  "policy": "Nearest-integer winding increments, ties-to-even. Flag exact half-turn steps as ambiguous. Initialize winding at zero; retain previous raw endpoint and integer winding across blocks. No reset at observation windows.",
+  "known_gates": {"phase_or_wave_absolute": 2e-11, "analytic_spectral_leak_power": 2e-24, "chunking_bit_exact": true, "no_crossing_bit_exact": true},
+  "real_followup": "Same six frozen F3 models, three saved dual-state streams and all existing alternatives. Compare raw/lifted conditional paths through original Hann4096/hop256, retain all outcomes and signed power/LR budgets. First qualify original replay and circular/amplitude invariants; no native audio claims from normalized coordinates.",
+  "scope": "Preserve 670C-H,82voices,3F2,index,moving35,defaults,one driver,owned/takes/room/hearings. V6 DNA/BODY/DETAIL/EVENT/AUX, independent future physical7.1.4. Full goal remains active."
+}
