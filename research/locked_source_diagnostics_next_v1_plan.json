@@ -1,10 +1,10 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "MCPS-only answer: no synthesis progress. Current goal turn completes actual saved-wave/equation audit and all five terminal real diagnostics plus independently checked publication: progress.",
+  "previous_turn": "Progress: complete new-source saved-wave/equation verification and five actual diagnostics committed a4aaf16. Current turn executes same-case four-component signed budgets, virtual tail localization and independent full publication checks: progress.",
   "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
-  "live": "NONE: original fit PID65232/session62289 EXIT1, original coordinator PID441220/session31430 EXIT1 with0/5stages; separate complete guard PID550136/session21078 EXIT0. All five manual diagnostics completed after the new explicit math proof. Never restart/refit/overwrite the original jobs, firstEarly or firstMid captures/factors. Preserve original124specsources101inputs and original151conditionalbindings.",
+  "live": "NONE: original failed fit/coordinator and separate math guard remain terminal. This turn source-error session39670 and independent audit41931 both EXIT0; all four variants and publication/audit terminal. Never restart/refit original jobs or firstEarly/firstMid captures/factors.",
   "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
-  "native_after_terminal": "ACTUALLY EXECUTED all five diagnostics with new math proof. Same F3FirstMid actual48k fitted32/raw waveform.000146629;0..14k powermax.003762dB,SideMid.002175dB,complexcohdifference.0002952,CV.000638. Highestphysical.991140 and originalvirtual.442484>.02 FAIL.16/32wave3.299e-9/worstband6.844e-6<.003 PASS. No source-statistics admission or C/sustained/hearing promotion. Next same-case four-component native error decomposition plus originalvirtual weighted absolute/spectral localization BEFORE any justified later fit; no refit firstMid.",
+  "native_after_terminal": "All five native/virtual diagnostics remain complete. New locked_source_error_v1 real1/audit1/review1/review_audit1 actually complete for SAME firstMid288/74nodes. SourceFIR10..14k component.0114524 dominates gridfit6.6567e-5; sixpair maincomponent sensitivitymax3.112e-7. Originalvirtualhighest.442484>.02 remainsFALSE; strictlyabovecentre holds18.6389percent referenceweightedmass and99.8679percent error, unweightedreference3.77e-16FS2. No relabelled gates or sustained/C qualification.",
   "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
   "storage_preflight": {
     "result": "ACTUALLY EXECUTED: locked_source_ssd_storage_preflight_verified",
@@ -75,6 +75,43 @@
     "native16_32_convergence_passed": true,
     "eligible_for_later_source_statistics": false,
     "not_same_segment_as_prior_firstEarly": true,
-    "next": "On SAME actual source diagnose FIR/grid-reconstruction/grid-fit/continuous-render residuals with signed cross terms and declared reconstruction sensitivity; independently verify known controls before real decomposition. Localize original virtual highest-band absolute/weighted energy above/below288*64centre without treating centre as strict bandwidth. Keep all288orders/nodes/scales/gates and failed results. No more source fits until justified; no data-trained timeline loops."
+    "next": "DONE: same-case four-component signed decomposition and virtual highest-band localization in locked_source_error_v1. Next trace weak tail through original source FIR/fractional interpolation/common registered time queries, using known bandlimited stereo controls at those exact queries; preserve actual source/clock/metrics and original failed admission."
+  },
+  "same_case_error_budget": {
+    "state": "TERMINAL PASS in declared diagnostic scopes; sourcefidelity/statisticseligibility remain FALSE",
+    "study": "E:/VehicleSoundLab/references/analysis/locked_source_error_v1",
+    "physical_variants": [
+      [
+        32,
+        16
+      ],
+      [
+        64,
+        16
+      ],
+      [
+        128,
+        16
+      ],
+      [
+        128,
+        32
+      ]
+    ],
+    "all_query_FIR_Gram_signed_cross_verified": true,
+    "pairwise_sensitivity_count": 6,
+    "original_virtual_highest_NRMSE": 0.44248390217893113,
+    "above_centre_reference_fraction": 0.18638852109787898,
+    "above_centre_error_fraction": 0.99867857726043,
+    "main_component_sensitivity_max": 3.1121325515645397e-07,
+    "publication_checks": 112,
+    "maximum_publication_error": 7.389381052554564e-15,
+    "figures_actually_viewed": [
+      "physical_budget.png",
+      "virtual_split.png"
+    ],
+    "qualified_unchanged_core_reused": "native_error_budget_v1/known1; original algorithms/audits unchanged",
+    "new_observer": "exact independently qualified declared saved-wave FP64 frame order, before actual direct2049bin and broadbandgain controls",
+    "next": "Known-first source-transfer weak-tail diagnosis on SAME registered source/context/common queries. Keep raw/FIR/query-only/timewarp/representation distinctions; no physical-frequency confusion, no carriercentre=strictbandwidth claim, no blind morefits/nativeupsampling/HFcloud. Preserve original failed firstMid.442 and 14..16 virtual subdiagnostic.02053. Full autonomousjointLR/V6/multiengine/allstates/separatephysical7.1.4 continues."
   }
 }
