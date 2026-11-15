@@ -1,8 +1,8 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "Progress: complete new-source saved-wave/equation verification and five actual diagnostics committed a4aaf16. Current turn executes same-case four-component signed budgets, virtual tail localization and independent full publication checks: progress.",
+  "previous_turn": "No synthesis progress: previous goal turn only rechecked MCPS. Current known-first long-kernel source-query controls, same-case real diagnostics and complete independent publication are progress.",
   "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
-  "live": "NONE: original failed fit/coordinator and separate math guard remain terminal. This turn source-error session39670 and independent audit41931 both EXIT0; all four variants and publication/audit terminal. Never restart/refit original jobs or firstEarly/firstMid captures/factors.",
+  "live": "NONE: all original failed jobs remain terminal/no restart; locked_source_tail_v1 known, real, independent audits and review are terminal EXIT0.",
   "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
   "native_after_terminal": "All five native/virtual diagnostics remain complete. New locked_source_error_v1 real1/audit1/review1/review_audit1 actually complete for SAME firstMid288/74nodes. SourceFIR10..14k component.0114524 dominates gridfit6.6567e-5; sixpair maincomponent sensitivitymax3.112e-7. Originalvirtualhighest.442484>.02 remainsFALSE; strictlyabovecentre holds18.6389percent referenceweightedmass and99.8679percent error, unweightedreference3.77e-16FS2. No relabelled gates or sustained/C qualification.",
   "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
@@ -75,7 +75,7 @@
     "native16_32_convergence_passed": true,
     "eligible_for_later_source_statistics": false,
     "not_same_segment_as_prior_firstEarly": true,
-    "next": "DONE: same-case four-component signed decomposition and virtual highest-band localization in locked_source_error_v1. Next trace weak tail through original source FIR/fractional interpolation/common registered time queries, using known bandlimited stereo controls at those exact queries; preserve actual source/clock/metrics and original failed admission."
+    "next": "Subsequent same-case signed decomposition and weak-tail source-query diagnosis DONE. Continue research/locked_source_tail_next_v1_plan.json: independently bind/rebuild frozen common mapping, then known smooth-clock/C0 controls. Preserve actual source/clock and failed admission."
   },
   "same_case_error_budget": {
     "state": "TERMINAL PASS in declared diagnostic scopes; sourcefidelity/statisticseligibility remain FALSE",
@@ -112,6 +112,30 @@
     ],
     "qualified_unchanged_core_reused": "native_error_budget_v1/known1; original algorithms/audits unchanged",
     "new_observer": "exact independently qualified declared saved-wave FP64 frame order, before actual direct2049bin and broadbandgain controls",
-    "next": "Known-first source-transfer weak-tail diagnosis on SAME registered source/context/common queries. Keep raw/FIR/query-only/timewarp/representation distinctions; no physical-frequency confusion, no carriercentre=strictbandwidth claim, no blind morefits/nativeupsampling/HFcloud. Preserve original failed firstMid.442 and 14..16 virtual subdiagnostic.02053. Full autonomousjointLR/V6/multiengine/allstates/separatephysical7.1.4 continues."
+    "next": "Subsequent locked_source_tail_v1 completed: long interpolation does not eliminate tail, real2048/original128 above-centre power.838944; known registered/affine ratio121300.7 includes finitewindowleakage. Next original common clock geometry/controlled smoothness diagnosis, no refit/targetchange."
+  },
+  "source_query_tail_diagnostic": {
+    "state": "ACTUAL terminal PASS in diagnostic scopes; originalsourcefidelity/statisticseligibilityFALSE",
+    "study": "E:/VehicleSoundLab/references/analysis/locked_source_tail_v1",
+    "known_then_real": true,
+    "diagnostic_radii": [
+      512,
+      1024,
+      2048
+    ],
+    "all_query_spectra_LR_signed_Gram_verified": true,
+    "original_highest_NRMSE": 0.44248390217893097,
+    "real_above_centre_power_2048_to_128_ratio": 0.8389444500513581,
+    "known_registered_to_affine_tail_power_ratio": 121300.73558352253,
+    "counterfactual_oldfit_vs_long_reference_highest": 0.58930221,
+    "source_fidelity_qualified": false,
+    "eligible_for_later_source_statistics": false,
+    "publication_rows": 160,
+    "publication_checks": 1289,
+    "figures_actually_viewed": [
+      "real_tail.png",
+      "known_transfer.png"
+    ],
+    "next_plan": "research/locked_source_tail_next_v1_plan.json"
   }
 }
