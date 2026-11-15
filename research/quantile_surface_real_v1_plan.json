@@ -1,0 +1,21 @@
+{
+  "schema": "vsl.quantile-surface-real/1",
+  "parent_commit": "165aa20",
+  "previous_goal_turn": "Progress: full54 anchored input-path groups,216counterfactuals and independent104112Gram/publication/archive checks;7known direct-quantile controls frozen.",
+  "known_first": "Preserve original7known9474queries. Add seam negative case and common-pi half-angle gauge control, independent scalar inverses/Gauss circular moments before real-material reads. Seam failure is an explicit limitation, not a passed sound qualification.",
+  "law": "Use unchanged quantile_surface_v1/surface.py: exact row inverse at both adjacent P nodes, then linear blend on original declared phase branch. New conditional distribution, not an equivalent decoder optimization. No branch lift or added phase compensation in real probes.",
+  "endcaps": "Apply original decoder's forced0/1 CDF boundaries to each prepared row once, leaving all interior entries exact. Real1 stopped before generation because raw LP row-sum drift corrupted the moment identity; preserve failure and first-source diagnostic. Seam2/endcap controls pass before real2, same moment gate.",
+  "decoders": ["parent","density","variation"],
+  "seeds": [1,23117,61927],
+  "frames": 65536,
+  "block": 1024,
+  "identity_block": 37,
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "carrier_edges_Hz": [0,3000,6000,8000,10000,14000,1000000000],
+  "source_scope": "ALL six original frozen F3 models from two local passages of one V10, not six engines. Same original saved dual states, amplitudes,common phase,uniform,U/RNG/rho/rank/rate/taper/gain.54 new full-joint waves,not fixed-P/U variants.",
+  "comparators": "All108 already-frozen fixed/relative/independent-original-marginal/three-conditional results from phase_stream_control_v1. Publish all162 outcomes and all regressions; frozen raw comparator archives remain the authority for recomputing those old waves.",
+  "moments": "Every original P-knot interval midpoint for every partial and all3maps: exact integral of exp(i Q_blend(u)) on union CDF intervals vs original mixed-CDF circular moment. This is a declared unweighted geometry probe,not a material probability distribution or physical power share. Also measure actual generated instantaneous coefficient power/cross separately from reobserved wave statistics.",
+  "observer": "Original Hann4096/hop256,241rows and original39-41row chunks. Full six-carrier-group complex12x12 line/broad/all-frequency Grams, signed low/rest cross and Parseval. Do not delete low carriers or count spread as new physical detail.",
+  "gates": {"wave_identity_FS":2e-12,"independent_wave_FS":2e-10,"phase_step_radians":2e-8,"Gram_per_band_scaled":2e-10,"statistics_scaled":2e-9,"circular_moment":2e-12},
+  "scope": "No native48k/audio listening/C/target-cost promotion. Keep670C-H82voice3F2/index/accepted moving35/default/one driver/owned/takes/room/hearings. V6DNA/BODY/DETAIL/EVENT/AUX plus separate future spatial; fullmulti-engine/state/physical7.1.4 goalACTIVE."
+}
