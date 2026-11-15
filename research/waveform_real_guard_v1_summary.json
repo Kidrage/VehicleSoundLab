@@ -1,0 +1,251 @@
+{
+  "result": "first_actual_terminal_numerics_and_native_diagnostics_frozen",
+  "previous_goal_turn": "MCPS-only answer: no synthesis progress",
+  "this_goal_turn": "Actual first-case audit repair, verified native diagnostics and observedHF/LR/time evidence: progress",
+  "original_jobs_terminal": true,
+  "original_jobs_not_restarted": true,
+  "original_sources_bound_and_unchanged": 96,
+  "original_inputs_bound_and_unchanged": 71,
+  "C_files_unchanged": 670,
+  "voice_files_unchanged": 82,
+  "F2_files_unchanged": 3,
+  "C_index_unchanged": true,
+  "independent_mathematical_verification": true,
+  "source_solver_qualified": true,
+  "source_fidelity_qualified": false,
+  "native16_32_convergence_passed": true,
+  "eligible_for_later_source_statistics": false,
+  "all_original_gates_unchanged": true,
+  "original_failed_audit": {
+    "result": "failed",
+    "cases": [],
+    "inputs": {
+      "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\run_spec.json": "4fb8f12fa828df480f074a2cd228609cd26385ca942999d689202607a77f3096"
+    },
+    "error": "AssertionError(('base_guard_separate_LR_stable', 2.431896024225714e-12, 2e-12))"
+  },
+  "actual_virtual_metrics": {
+    "whole_wave_NRMSE": 0.0005622489160941077,
+    "target_wave_NRMSE": 0.00025277415790792755,
+    "target_supported_band_complex_NRMSE": [
+      0.00024907228135094566,
+      4.1978629506791716e-05,
+      1.973812882005384e-05,
+      2.5328627100452087e-05,
+      6.131952742308959e-05,
+      0.06232421115638021
+    ],
+    "whole_supported_band_complex_NRMSE": [
+      0.00025696152184598536,
+      8.850869856262891e-05,
+      0.0001422161261550665,
+      0.0002633763117351408,
+      0.0003564731414141196,
+      0.048518092832760956
+    ],
+    "whole_wave_regions_NRMSE": [
+      0.0005341932770197712,
+      0.00025277415790792755,
+      0.0015004363526356054
+    ]
+  },
+  "actual_native_raw_errors": {
+    "wave_NRMSE": 0.00027047589325277047,
+    "channel_wave_NRMSE": [
+      0.00028941251561763774,
+      0.00024198960615152556
+    ],
+    "band_complex_NRMSE": [
+      0.0002473938059799542,
+      0.00012150204279238597,
+      0.00027355140688650726,
+      0.0006859878879194177,
+      0.014935509222239157,
+      0.9959844893254127
+    ],
+    "signed_mean_FS": [
+      -7.777704385276664e-08,
+      -2.1058255829308103e-07
+    ],
+    "signed_peak_range_FS": [
+      [
+        -0.0011853177986161922,
+        -0.0002876638965446099
+      ],
+      [
+        0.0006633791643192999,
+        0.0002772614614451746
+      ]
+    ]
+  },
+  "native16_32_errors": {
+    "wave_NRMSE": 3.860782206542016e-09,
+    "channel_wave_NRMSE": [
+      3.836545136457675e-09,
+      3.893906937088159e-09
+    ],
+    "band_complex_NRMSE": [
+      3.931035654945224e-09,
+      8.8977583219779e-09,
+      3.255367565823528e-08,
+      1.3692065556184816e-07,
+      3.620812382944857e-07,
+      1.9690849099959366e-05
+    ],
+    "signed_mean_FS": [
+      -3.933082818440234e-12,
+      -2.3230288659981216e-12
+    ],
+    "signed_peak_range_FS": [
+      [
+        -3.9055773060070464e-09,
+        -3.491394728882824e-09
+      ],
+      [
+        3.909641277388687e-09,
+        3.443470286690342e-09
+      ]
+    ]
+  },
+  "native0_14k_max_abs_band_power_dB": 0.01163991851402915,
+  "native0_14k_max_abs_LR_complex_component_change": 0.00016102441507959142,
+  "native0_14k_max_abs_CV_change": 0.0007311953648290737,
+  "native14k_plus_fraction_of_all_measured_Welch_power": 4.581763918549671e-09,
+  "no_factors_copied": true,
+  "no_new_voice_or_C_or_hearing_promotion": true,
+  "uncompleted_original_labels": [
+    "F3 Fifth First Mid",
+    "F3 Fifth First Late",
+    "F3 Fifth Second Early",
+    "F3 Fifth Second Mid",
+    "F3 Fifth Second Late"
+  ],
+  "full_goal": "ACTIVE: V6fivebuses, multiengine/all driving states, sustained jointLR, independent physical7.1.4",
+  "input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\native_clock_case_v1\\evidence\\C_files_sha256.json": "protected/C_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\native_clock_case_v1\\evidence\\voice_files_sha256.json": "protected/voice_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\native_clock_case_v1\\evidence\\F2_files_sha256.json": "protected/F2_files_sha256.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\run_spec.json": "original_producer/run_spec.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\report.json": "original_producer/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\report.json": "original_first_case/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\capture.npz": "original_first_case/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\preflight.json": "original_first_case/preflight.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\progress.json": "original_first_case/progress.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early_audit\\executed_audit.py": "original_failed_audit/executed_audit.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early_audit\\report.json": "original_failed_audit/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\report.json": "external/references/analysis/waveform_file_real_v1/prepare1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare_audit1\\report.json": "external/references/analysis/waveform_file_real_v1/prepare_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\generic_audit2\\report.json": "external/references/analysis/waveform_file_real_adapter_v1/generic_audit2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\known1\\report.json": "external/references/analysis/waveform_file_real_adapter_v1/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\known_audit1\\report.json": "external/references/analysis/waveform_file_real_adapter_v1/known_audit1/report.json",
+    "E:\\VehicleSoundLab-Git\\research\\waveform_file_full_v1_summary.json": "repository/research/waveform_file_full_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\manifest.json": "external/baselines/waveform_file_full_v1/manifest.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_full_v1_archive_verification.json": "external/references/analysis/waveform_file_full_v1_archive_verification.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_full_v1_binding_verification.json": "external/references/analysis/waveform_file_full_v1_binding_verification.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\full_audit1\\report.json": "external/baselines/waveform_file_full_v1/evidence/full_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\peak_audit1\\report.json": "external/baselines/waveform_file_full_v1/evidence/peak_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\resources_audit1\\report.json": "external/baselines/waveform_file_full_v1/evidence/resources_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\C_files_sha256.json": "external/baselines/waveform_file_full_v1/evidence/C_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\voice_files_sha256.json": "external/baselines/waveform_file_full_v1/evidence/voice_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\F2_files_sha256.json": "external/baselines/waveform_file_full_v1/evidence/F2_files_sha256.json",
+    "E:\\VehicleSoundLab-Git\\research\\recorded_phase_context_v1_summary.json": "repository/research/recorded_phase_context_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\manifest.json": "external/baselines/recorded_phase_context_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\report.json": "external/baselines/recorded_phase_context_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real_audit1\\report.json": "external/baselines/recorded_phase_context_v1/evidence/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\validation.json": "external/baselines/recorded_phase_context_v1/validation.json",
+    "E:\\VehicleSoundLab-Git\\research\\observer_frequency_v1_summary.json": "repository/research/observer_frequency_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\manifest.json": "external/baselines/observer_frequency_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\source\\tools\\run_observer_frequency_real_v1.py": "external/baselines/observer_frequency_v1/source/tools/run_observer_frequency_real_v1.py",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Early.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Mid.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Late.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Early.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Mid.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Late.npz": "external/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Late.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\selection.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\result.json": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\coordinates.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\source.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\scale.npz": "external/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\native.wav": "external/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/native.wav",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Early.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Mid.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Late.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Early.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Mid.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Late.npz": "external/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\report.json": "original_dependent/run1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\run_spec.json": "original_dependent/run1/run_spec.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\research\\native_clock_batch_v1_plan.json": "original_dependent/run1/exact_sources/research/native_clock_batch_v1_plan.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\audit_extraction_sound_cases_v2.py": "original_dependent/run1/exact_sources/tools/audit_extraction_sound_cases_v2.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\audit_native_clock_case_v1.py": "original_dependent/run1/exact_sources/tools/audit_native_clock_case_v1.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\research_archive_v1.py": "original_dependent/run1/exact_sources/tools/research_archive_v1.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\run_extraction_sound_cases_v2.py": "original_dependent/run1/exact_sources/tools/run_extraction_sound_cases_v2.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\run_native_clock_batch_v1.py": "original_dependent/run1/exact_sources/tools/run_native_clock_batch_v1.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\run_native_clock_case_v1.py": "original_dependent/run1/exact_sources/tools/run_native_clock_case_v1.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\compare.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/compare.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\consume.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/consume.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\fixtures.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/fixtures.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\measure.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/measure.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\numerics.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/numerics.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\extraction_sound_v1\\__init__.py": "original_dependent/run1/exact_sources/tools/extraction_sound_v1/__init__.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_batch_v1\\pipeline.py": "original_dependent/run1/exact_sources/tools/native_clock_batch_v1/pipeline.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_batch_v1\\process.py": "original_dependent/run1/exact_sources/tools/native_clock_batch_v1/process.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_batch_v1\\__init__.py": "original_dependent/run1/exact_sources/tools/native_clock_batch_v1/__init__.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_audit_v1\\clock.py": "original_dependent/run1/exact_sources/tools/native_clock_case_audit_v1/clock.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_audit_v1\\identity.py": "original_dependent/run1/exact_sources/tools/native_clock_case_audit_v1/identity.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_audit_v1\\sound.py": "original_dependent/run1/exact_sources/tools/native_clock_case_audit_v1/sound.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_audit_v1\\__init__.py": "original_dependent/run1/exact_sources/tools/native_clock_case_audit_v1/__init__.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_v1\\binding.py": "original_dependent/run1/exact_sources/tools/native_clock_case_v1/binding.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_v1\\diagnostics.py": "original_dependent/run1/exact_sources/tools/native_clock_case_v1/diagnostics.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_case_v1\\__init__.py": "original_dependent/run1/exact_sources/tools/native_clock_case_v1/__init__.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_render_v1\\basis.py": "original_dependent/run1/exact_sources/tools/native_clock_render_v1/basis.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_render_v1\\filter.py": "original_dependent/run1/exact_sources/tools/native_clock_render_v1/filter.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_render_v1\\fixtures.py": "original_dependent/run1/exact_sources/tools/native_clock_render_v1/fixtures.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_render_v1\\geometry.py": "original_dependent/run1/exact_sources/tools/native_clock_render_v1/geometry.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\run1\\exact_sources\\tools\\native_clock_render_v1\\__init__.py": "original_dependent/run1/exact_sources/tools/native_clock_render_v1/__init__.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\process_controls1\\report.json": "original_dependent/process_controls1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\process_controls1\\exact_sources\\tools\\check_native_clock_batch_process_v1.py": "original_dependent/process_controls1/exact_sources/tools/check_native_clock_batch_process_v1.py",
+    "E:\\VehicleSoundLab\\references\\analysis\\native_clock_batch_v1\\process_controls1\\exact_sources\\tools\\native_clock_batch_v1\\process.py": "original_dependent/process_controls1/exact_sources/tools/native_clock_batch_v1/process.py"
+  },
+  "protected_C_index_sha256": "4875e77aeb5ae35c36d61b6ea3b11ac9e240fc9b90769a4b4590764b3b239a2f",
+  "archive": "E:\\VehicleSoundLab\\baselines\\waveform_real_guard_v1",
+  "manifest_sha256": "05fc03afc70bb050d6cb4a61b8829d9740467be721365e30718542d273f03bf4",
+  "file_count": 677,
+  "bytes": 125812389,
+  "independent_archive_audit": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\waveform_real_guard_v1_archive_audit1\\report.json",
+    "sha256": "5bb1f9e28af2d8766e5f888b5e4b91b087ffdd0de3decd8b992ca5b88b038192",
+    "all_bytes_and_ZIP_verified": true
+  }
+}
