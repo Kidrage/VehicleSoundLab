@@ -1,0 +1,641 @@
+{
+  "result": "waveform_original_correction_known_progress_frozen",
+  "selected_terminal_evidence_directories": [
+    "controls1",
+    "controls_audit1",
+    "known1",
+    "known_audit1",
+    "shared1",
+    "shared_audit1",
+    "resources_audit1"
+  ],
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\report.json": "inputs/upstream/waveform_banded_v1/evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known_audit2\\report.json": "inputs/upstream/waveform_banded_v1/evidence/known_audit2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\controls_audit1\\report.json": "evidence/controls_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\manifest.json": "inputs/upstream/waveform_banded_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\algebra_mono.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/algebra_mono.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\algebra_stereo.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/algebra_stereo.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\algebra_weak1e-5.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/algebra_weak1e-5.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\algebra_silent_right.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/algebra_silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_constant_1.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_constant_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_curved_1.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_curved_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_constant_0.01.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_constant_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_curved_0.01.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_curved_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_constant_0.0001.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_constant_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_curved_0.0001.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_curved_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_constant_1e-05.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_constant_1e-05.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\known1\\Hann_curved_1e-05.npz": "inputs/upstream/waveform_banded_v1/evidence/known1/Hann_curved_1e-05.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\algebra_mono.npz": "evidence/known1/algebra_mono.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\mono.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/mono.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\algebra_stereo.npz": "evidence/known1/algebra_stereo.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\stereo.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/stereo.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\algebra_weak1e-5.npz": "evidence/known1/algebra_weak1e-5.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\weak1e-5.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/weak1e-5.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\algebra_silent_right.npz": "evidence/known1/algebra_silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\silent_right.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/silent_right.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_constant_1.npz": "evidence/known1/Hann_constant_1.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_curved_1.npz": "evidence/known1/Hann_curved_1.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_constant_0.01.npz": "evidence/known1/Hann_constant_0.01.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_curved_0.01.npz": "evidence/known1/Hann_curved_0.01.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_constant_0.0001.npz": "evidence/known1/Hann_constant_0.0001.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_curved_0.0001.npz": "evidence/known1/Hann_curved_0.0001.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_constant_1e-05.npz": "evidence/known1/Hann_constant_1e-05.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known1\\Hann_curved_1e-05.npz": "evidence/known1/Hann_curved_1e-05.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\report.json": "inputs/upstream/waveform_banded_v1/evidence/shared1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared_audit1\\report.json": "inputs/upstream/waveform_banded_v1/evidence/shared_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\algebra_stereo.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/algebra_stereo.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\algebra_weak1e-5.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/algebra_weak1e-5.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\algebra_silent_right.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/algebra_silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\Hann_unequal_LR.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/Hann_unequal_LR.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\Hann_silent_right.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/Hann_silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\Hann_delayed_right.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/Hann_delayed_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\Hann_right_dominant.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/Hann_right_dominant.npz",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\shared1\\Hann_both_zero.npz": "inputs/upstream/waveform_banded_v1/evidence/shared1/Hann_both_zero.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\report.json": "evidence/shared1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\algebra_stereo.npz": "evidence/shared1/algebra_stereo.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\algebra_weak1e-5.npz": "evidence/shared1/algebra_weak1e-5.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\algebra_silent_right.npz": "evidence/shared1/algebra_silent_right.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\Hann_unequal_LR.npz": "evidence/shared1/Hann_unequal_LR.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\Hann_silent_right.npz": "evidence/shared1/Hann_silent_right.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\Hann_delayed_right.npz": "evidence/shared1/Hann_delayed_right.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\Hann_right_dominant.npz": "evidence/shared1/Hann_right_dominant.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared1\\Hann_both_zero.npz": "evidence/shared1/Hann_both_zero.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\known_audit1\\report.json": "evidence/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\shared_audit1\\report.json": "evidence/shared_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_banded_v1\\evidence\\native_context1\\report.json": "inputs/upstream/waveform_banded_v1/evidence/native_context1/report.json"
+  },
+  "upstream_manifests_sha256": {
+    "waveform_banded_v1": "8d68ed6adc9dfa2b919b8a7f44d56860973a67df0ba3a16ded8b63fe2a65843d",
+    "observer_representer_v1": "799ad81aaee116c374132796ccd84de01fe2af9098d55b43dd19851401ca9b26"
+  },
+  "inverse_controls_qualified": 8,
+  "original_arbitrary_controls_qualified": 7,
+  "original12_qualified": 12,
+  "shared8_qualified": 8,
+  "fixed_correction_steps": 2,
+  "delayed_right_independent_original_normal": 1.0292987912057811e-14,
+  "unchanged_original_normal_gate": 1e-11,
+  "upstream_band_shared_pass_count": 7,
+  "upstream_delayed_right_failure_retained": true,
+  "upstream_strict_Gram_failures_retained": true,
+  "native_triangle_replays": 23,
+  "native_invalid_cases_rejected": 5,
+  "native_factory_selected": false,
+  "original12_cumulative_peak": 107155456,
+  "shared8_cumulative_peak": 98865152,
+  "conditional_resource_cases": [
+    {
+      "label": "full_known",
+      "frames": 12289,
+      "nodes": 49,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 402685952,
+        "X_raw": 2774757888,
+        "graph_raw": 3982914056,
+        "graph_T": 1208156168
+      },
+      "correction_arrays": {
+        "X_raw": 2774757888,
+        "inverse_right": 2774757888,
+        "inverse_inner": 2416312336,
+        "inverse_T": 1208156168
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 14767740456,
+        "required_available": 19599578664,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 9173984280,
+        "required_available": 14005822488,
+        "available_memory_gate_passed": true
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 8368514064,
+        "required_available": 13200352272,
+        "available_memory_gate_passed": true
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1208156168,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Early original",
+      "frames": 14335,
+      "nodes": 57,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 469729280,
+        "X_raw": 3765173760,
+        "graph_raw": 5409111560,
+        "graph_T": 1643937800
+      },
+      "correction_arrays": {
+        "X_raw": 3765173760,
+        "inverse_right": 3765173760,
+        "inverse_inner": 3287875600,
+        "inverse_T": 1643937800
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 19984939560,
+        "required_available": 24816777768,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12462160920,
+        "required_available": 17293999128,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 11287952400,
+        "required_available": 16119790608,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1643937800,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Early proposed_context",
+      "frames": 18431,
+      "nodes": 73,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 603947008,
+        "X_raw": 6199893504,
+        "graph_raw": 8917507592,
+        "graph_T": 2717614088
+      },
+      "correction_arrays": {
+        "X_raw": 6199893504,
+        "inverse_right": 6199893504,
+        "inverse_inner": 5435228176,
+        "inverse_T": 2717614088
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 32791697960,
+        "required_available": 37623536168,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 20552629272,
+        "required_available": 25384467480,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 18438962192,
+        "required_available": 23270800400,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2717614088,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Mid original",
+      "frames": 14338,
+      "nodes": 58,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 469827584,
+        "X_raw": 3832031232,
+        "graph_raw": 5476657184,
+        "graph_T": 1644625952
+      },
+      "correction_arrays": {
+        "X_raw": 3832031232,
+        "inverse_right": 3832031232,
+        "inverse_inner": 3289251904,
+        "inverse_T": 1644625952
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 20189051040,
+        "required_available": 25020889248,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12597940320,
+        "required_available": 17429778528,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 11423141952,
+        "required_available": 16254980160,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1644625952,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Mid proposed_context",
+      "frames": 18434,
+      "nodes": 74,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 604045312,
+        "X_raw": 6285846528,
+        "graph_raw": 9004345376,
+        "graph_T": 2718498848
+      },
+      "correction_arrays": {
+        "X_raw": 6285846528,
+        "inverse_right": 6285846528,
+        "inverse_inner": 5436997696,
+        "inverse_T": 2718498848
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 33054079136,
+        "required_available": 37885917344,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 20727189600,
+        "required_available": 25559027808,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 18612736064,
+        "required_available": 23444574272,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2718498848,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Late original",
+      "frames": 14334,
+      "nodes": 57,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 469696512,
+        "X_raw": 3764911104,
+        "graph_raw": 5408619552,
+        "graph_T": 1643708448
+      },
+      "correction_arrays": {
+        "X_raw": 3764911104,
+        "inverse_right": 3764911104,
+        "inverse_inner": 3287416896,
+        "inverse_T": 1643708448
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 19982972064,
+        "required_available": 24814810272,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12460947552,
+        "required_available": 17292785760,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 11286935616,
+        "required_available": 16118773824,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1643708448,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth First Late proposed_context",
+      "frames": 18430,
+      "nodes": 73,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 603914240,
+        "X_raw": 6199557120,
+        "graph_raw": 8916876320,
+        "graph_T": 2717319200
+      },
+      "correction_arrays": {
+        "X_raw": 6199557120,
+        "inverse_right": 6199557120,
+        "inverse_inner": 5434638400,
+        "inverse_T": 2717319200
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 32789181600,
+        "required_available": 37621019808,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 20551071840,
+        "required_available": 25382910048,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 18437666880,
+        "required_available": 23269505088,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2717319200,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Early original",
+      "frames": 14078,
+      "nodes": 56,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 461307904,
+        "X_raw": 3632799744,
+        "graph_raw": 5218320416,
+        "graph_T": 1585520672
+      },
+      "correction_arrays": {
+        "X_raw": 3632799744,
+        "inverse_right": 3632799744,
+        "inverse_inner": 3171041344,
+        "inverse_T": 1585520672
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 19287310496,
+        "required_available": 24119148704,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12022161504,
+        "required_available": 16853999712,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 10897948736,
+        "required_available": 15729786944,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1585520672,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Early proposed_context",
+      "frames": 18174,
+      "nodes": 72,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 595525632,
+        "X_raw": 6029697024,
+        "graph_raw": 8672051232,
+        "graph_T": 2642354208
+      },
+      "correction_arrays": {
+        "X_raw": 6029697024,
+        "inverse_right": 6029697024,
+        "inverse_inner": 5284708416,
+        "inverse_T": 2642354208
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 31896387744,
+        "required_available": 36728225952,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 19986456672,
+        "required_available": 24818294880,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 17939628096,
+        "required_available": 22771466304,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2642354208,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Mid original",
+      "frames": 14080,
+      "nodes": 56,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 461373440,
+        "X_raw": 3633315840,
+        "graph_raw": 5219287040,
+        "graph_T": 1585971200
+      },
+      "correction_arrays": {
+        "X_raw": 3633315840,
+        "inverse_right": 3633315840,
+        "inverse_inner": 3171942400,
+        "inverse_T": 1585971200
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 19291176960,
+        "required_available": 24123015168,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12024545280,
+        "required_available": 16856383488,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 10899947520,
+        "required_available": 15731785728,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1585971200,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Mid proposed_context",
+      "frames": 18176,
+      "nodes": 72,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 595591168,
+        "X_raw": 6030360576,
+        "graph_raw": 8673296384,
+        "graph_T": 2642935808
+      },
+      "correction_arrays": {
+        "X_raw": 6030360576,
+        "inverse_right": 6030360576,
+        "inverse_inner": 5285871616,
+        "inverse_T": 2642935808
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 31901351936,
+        "required_available": 36733190144,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 19989528576,
+        "required_available": 24821366784,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 17942183936,
+        "required_available": 22774022144,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2642935808,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Late original",
+      "frames": 14335,
+      "nodes": 57,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 469729280,
+        "X_raw": 3765173760,
+        "graph_raw": 5409111560,
+        "graph_T": 1643937800
+      },
+      "correction_arrays": {
+        "X_raw": 3765173760,
+        "inverse_right": 3765173760,
+        "inverse_inner": 3287875600,
+        "inverse_T": 1643937800
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 19984939560,
+        "required_available": 24816777768,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 12462160920,
+        "required_available": 17293999128,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 11287952400,
+        "required_available": 16119790608,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 1643937800,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    },
+    {
+      "label": "F3 Fifth Second Late proposed_context",
+      "frames": 18431,
+      "nodes": 73,
+      "orders": 288,
+      "independent_RHS": 2,
+      "base_arrays": {
+        "W_band": 603947008,
+        "X_raw": 6199893504,
+        "graph_raw": 8917507592,
+        "graph_T": 2717614088
+      },
+      "correction_arrays": {
+        "X_raw": 6199893504,
+        "inverse_right": 6199893504,
+        "inverse_inner": 5435228176,
+        "inverse_T": 2717614088
+      },
+      "all_old_factors_retained": {
+        "main_arrays_only": 32791697960,
+        "required_available": 37623536168,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases": {
+        "main_arrays_only": 20552629272,
+        "required_available": 25384467480,
+        "available_memory_gate_passed": false
+      },
+      "proposed_separate_phases_native_triangle": {
+        "main_arrays_only": 18438962192,
+        "required_available": 23270800400,
+        "available_memory_gate_passed": false
+      },
+      "native_and_temporary_allowance_bytes": 1610612736,
+      "unchanged_headroom_bytes": 3221225472,
+      "square_T_bytes_potentially_avoided": 2717614088,
+      "integrated_release_or_native_solver_implemented": false,
+      "conditional_only_not_allocated": true,
+      "peak_memory_or_feasibility_NOT_proven": true
+    }
+  ],
+  "original1_5GiB_native_plus3GiB_headroom_preserved": true,
+  "full_or_real_or_native48k_or_C_or_hearing_qualified": false,
+  "outer_corrected_phase_qualified": false,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "previous_goal_turn": "MCPS-only; no synthesis progress",
+  "manifest_sha256": "81757751fe37d3c3eef9562c31abc31a86af273bca526d08dd88ba084943c425",
+  "file_count": 1045,
+  "bytes": 180505737,
+  "external_verification_receipts": {
+    "archive": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\archive_independent_verification.json",
+      "sha256": "36b971e3d2c39fdb190c66147486364fb6a36ce7c8470a05b77307f316442fd8",
+      "result": "independent_archive_source_zip_contracts_verified"
+    },
+    "bindings": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\waveform_original_correction_v1\\archive_binding_verification.json",
+      "sha256": "3ad8a9ddac5db2ae36d9fc24d5d3695d87d893a11a854543d22b18e6c10378f4",
+      "result": "independent_waveform_original_correction_archive_bindings_verified"
+    }
+  }
+}
