@@ -1,11 +1,11 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "Previous goal turn verified wait. Current turn observes actual terminal audit failure, executes known3-before-real eight-factorial numerical diagnosis and full5 SSD resource preflight: progress; no new acoustic or C acceptance.",
-  "terminal_diagnostics": "E:/VehicleSoundLab/references/analysis/locked_source_diagnostics_v1: virtual_known1, virtual_known_audit1, virtual_stereo_audit1 and native_references1 all TERMINAL PASS. Signed10656 fields independently verified, directCSD/LRGram/MS/timeGram and frozenjointstats max2.63e-14<2e-11; allfive actual physical-reference bridges full288, independent16/32queries max1.78e-15cycles. Five previous tiny-line normalizedcrossFFT failures remainFALSE. No actualnewfit admission/native rendering/C/hearing promotion claimed.",
-  "live": "NO live fit or dependent diagnostic. Original PID65232/session62289 EXIT1 after full288/74nodes/all4factors/2corrections/capture; audit target-band field difference1.0224926461e-10 exceeds2e-12. Coordinator PID441220/session31430 EXIT1,0/5stages. NEVER restart/refit either, overwrite failures or mutate151sources101inputs. Production solverTRUE not independently established; fidelityFALSE highestvirtual.442483902>.02.",
-  "after_terminal": "Actual terminal math audit FAILED and all outputs retained. Next separate known-first complete-equation verification with independent saved-wave/declared-rounded-measurement checks; preserve original cross-operator failure, all17fields/3histories/2updates/bothgaps/resources and every original gate. Factorial diagnosis1 is NOT mathematical verification. Do not rerun a fit or forge a successful original root report. Only a new explicit independent mathematical audit may unlock existing virtual/native diagnostic consumers.",
-  "native_after_terminal": "Existing newmethod virtual/stereo/native consumers remain unexecuted on this actual capture. After a valid separate math proof, use its actual path and explicit retained-failure identity with existing commands, then inspect all raw/FIRonly/fitted16/fitted32 HF/LR/MS/CV/covlag under unchanged.02/.003 gates. Do not restart the old coordinator or claim prior successful admission. Only then decide representation work; no remaining four fits while fidelity remainsFALSE.",
-  "protected": "Original96sources71inputs/capture/factors,670C-H82voice3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest. No originalfailure repairclaim by replacingtarget, no independentHFcloud or fittedtimeline/PCMloops. Full goal remains incomplete.",
+  "previous_turn": "MCPS-only answer: no synthesis progress. Current goal turn completes actual saved-wave/equation audit and all five terminal real diagnostics plus independently checked publication: progress.",
+  "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
+  "live": "NONE: original fit PID65232/session62289 EXIT1, original coordinator PID441220/session31430 EXIT1 with0/5stages; separate complete guard PID550136/session21078 EXIT0. All five manual diagnostics completed after the new explicit math proof. Never restart/refit/overwrite the original jobs, firstEarly or firstMid captures/factors. Preserve original124specsources101inputs and original151conditionalbindings.",
+  "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
+  "native_after_terminal": "ACTUALLY EXECUTED all five diagnostics with new math proof. Same F3FirstMid actual48k fitted32/raw waveform.000146629;0..14k powermax.003762dB,SideMid.002175dB,complexcohdifference.0002952,CV.000638. Highestphysical.991140 and originalvirtual.442484>.02 FAIL.16/32wave3.299e-9/worstband6.844e-6<.003 PASS. No source-statistics admission or C/sustained/hearing promotion. Next same-case four-component native error decomposition plus originalvirtual weighted absolute/spectral localization BEFORE any justified later fit; no refit firstMid.",
+  "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
   "storage_preflight": {
     "result": "ACTUALLY EXECUTED: locked_source_ssd_storage_preflight_verified",
     "evidence": "E:/VehicleSoundLab/references/analysis/locked_source_storage_v1/observation1/report.json",
@@ -51,5 +51,30 @@
     "original_math_audit_retained_failed": true,
     "original_source_fidelity_remains_false": true,
     "complete_math_or_C_or_hearing_qualification": false
+  },
+  "manual_terminal_diagnostics": {
+    "math_proof": "E:/VehicleSoundLab/references/analysis/locked_source_guard_v1/real1/report.json",
+    "all_five_stages_terminal": true,
+    "stages": [
+      "virtual_real1",
+      "virtual_real_audit1",
+      "virtual_real_stereo_audit1",
+      "native_real1",
+      "native_real_audit1"
+    ],
+    "publication": "E:/VehicleSoundLab/references/analysis/locked_source_guard_v1/review1/report.json",
+    "publication_audit": "E:/VehicleSoundLab/references/analysis/locked_source_guard_v1/review_audit1/report.json",
+    "publication_values": 774,
+    "publication_max_error": 4.440892098500626e-15,
+    "figures_actually_viewed": [
+      "all_bands.png",
+      "0_14k.png"
+    ],
+    "original_virtual_highest_complex_NRMSE": 0.44248390217893097,
+    "source_fidelity_qualified": false,
+    "native16_32_convergence_passed": true,
+    "eligible_for_later_source_statistics": false,
+    "not_same_segment_as_prior_firstEarly": true,
+    "next": "On SAME actual source diagnose FIR/grid-reconstruction/grid-fit/continuous-render residuals with signed cross terms and declared reconstruction sensitivity; independently verify known controls before real decomposition. Localize original virtual highest-band absolute/weighted energy above/below288*64centre without treating centre as strict bandwidth. Keep all288orders/nodes/scales/gates and failed results. No more source fits until justified; no data-trained timeline loops."
   }
 }
