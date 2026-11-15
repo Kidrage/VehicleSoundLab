@@ -13,7 +13,9 @@ def main():
     for n in ('workspace','study','base-audit','prerequisite','out'):p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--kind',choices=('original12','shared8'),required=True)
     p.add_argument('--inverse-backend',choices=('copy','native'),default='copy')
-    p.add_argument('--pipeline',action='store_true');a=p.parse_args()
+    p.add_argument('--pipeline',action='store_true')
+    p.add_argument('--owned-pipeline',action='store_true');a=p.parse_args()
+    if a.owned_pipeline:a.pipeline=True
     if a.pipeline and a.inverse_backend!='native':p.error('Pipeline requires declared native backend')
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
@@ -43,6 +45,9 @@ def main():
         names=set(source['sources'])
         names.update(('tools/run_waveform_correction_known_v1.py','research/waveform_original_correction_v1_plan.json'))
         if a.inverse_backend=='native':names.add('research/waveform_correction_storage_v1_plan.json')
+        if a.owned_pipeline:
+            names.add('research/waveform_early_release_v1_plan.json')
+            names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_early_release_v1').glob('*.py'))
         names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_correction_v1').glob('*.py'))
         for n in sorted(names):
             path=a.out/'exact_sources'/n;path.parent.mkdir(parents=True,exist_ok=True)
@@ -57,6 +62,8 @@ def main():
             if a.pipeline:
                 import hashlib
                 from waveform_correction_v1.pipeline import solve_corrected
+                if a.owned_pipeline:
+                    from waveform_early_release_v1.pipeline import solve_owned_corrected as solve_corrected
                 from waveform_banded_v1.metric import BandedMetric,supported_banded
                 expected_X_sha=hashlib.sha256(memoryview(base['x_raw'].ravel(order='F'))).hexdigest()
                 del base['x_raw'],base['x_tau']

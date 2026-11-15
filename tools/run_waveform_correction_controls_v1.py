@@ -11,7 +11,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','out'):p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--inverse-backend',choices=('copy','native'),default='copy')
+    p.add_argument('--owned',action='store_true')
     a=p.parse_args()
+    if a.owned and a.inverse_backend!='native':p.error('Owned source transfer requires native inverse')
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -21,6 +23,7 @@ def main():
     from waveform_correction_v1.inverse import NormalInverse
     if a.inverse_backend=='native':
         from waveform_correction_v1.native_inverse import NativeNormalInverse as NormalInverse
+    if a.owned:from waveform_early_release_v1.inverse import OwnedNativeInverse
     from waveform_correction_v1.correct import refine
     from waveform_stream_v1.householder import Householder
     from waveform_stream_v1.solver import solve
@@ -31,6 +34,9 @@ def main():
     names={'tools/run_waveform_correction_controls_v1.py','tools/waveform_representer_v1/fixtures.py',
         'research/waveform_original_correction_v1_plan.json','tools/waveform_structured_v1/resources.py'}
     if a.inverse_backend=='native':names.add('research/waveform_correction_storage_v1_plan.json')
+    if a.owned:
+        names.add('research/waveform_early_release_v1_plan.json')
+        names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_early_release_v1').glob('*.py'))
     for folder in ('waveform_correction_v1','waveform_stream_v1','waveform_banded_v1'):
         names.update(p.relative_to(repo).as_posix() for p in (repo/'tools'/folder).glob('*.py'))
     class Prior:
@@ -43,22 +49,38 @@ def main():
             shutil.copy2(repo/n,path);r['sources'][n]=sha(path)
         for label,X,rhs in inverse_fixtures():
             ledger=ArrayLedger();qr=Householder(np.array(X,order='F'),ledger,'control.X_QR')
-            inverse=NormalInverse(qr.raw,ledger,block=3)
+            if a.owned:
+                archived_raw=qr.raw.copy(order='F');archived_tau=qr.tau.copy()
+                ledger.add('audit_only.saved_source_copy',archived_raw)
+                holder=[qr.raw];del qr
+                inverse=OwnedNativeInverse(holder,ledger,block=3)
+            else:
+                archived_raw,archived_tau=qr.raw,qr.tau
+                inverse=NormalInverse(qr.raw,ledger,block=3)
             got=inverse.apply(rhs);reverse=inverse.apply(rhs[:,len(X[0]):len(X[0])+2])
             path=a.out/('inverse_'+label+'.npz')
-            np.savez_compressed(path,X=X,rhs=rhs,got=got,reverse=reverse,x_raw=qr.raw,x_tau=qr.tau,**inverse.arrays())
+            np.savez_compressed(path,X=X,rhs=rhs,got=got,reverse=reverse,x_raw=archived_raw,x_tau=archived_tau,**inverse.arrays())
             r['inverse_cases'].append(dict(label=label,file=path.name,sha256=sha(path),factor=inverse.info(),resources=ledger.report()))
             print('INVERSE CONTROL',label,flush=True)
         rng=np.random.default_rng(471083)
         for label,Phi,W,R,y in algebra_fixtures():
             prior=Prior(R);ledger=ArrayLedger()
-            base,info=solve(lambda x:Phi@x,lambda x:Phi.T@x,prior,BandedMetric.control_from_dense(W),y,ledger,block=3)
-            inverse=NormalInverse(base['x_raw'],ledger,block=3)
+            base,info=solve(lambda x:Phi@x,lambda x:Phi.T@x,prior,BandedMetric.control_from_dense(W),y,ledger,block=3,
+                            **({'triangle_backend':'native'} if a.owned else {}))
+            if a.owned:
+                archived_raw=base['x_raw'].copy(order='F');archived_tau=base['x_tau'].copy()
+                ledger.add('audit_only.saved_source_copy',archived_raw)
+                holder=[base['x_raw']]
+                base={n:base[n] for n in ('q','z','wave_model_residual')}
+                inverse=OwnedNativeInverse(holder,ledger,block=3)
+            else:
+                archived_raw,archived_tau=base['x_raw'],base['x_tau']
+                inverse=NormalInverse(base['x_raw'],ledger,block=3)
             delta=np.zeros_like(base['z']) if label=='zero' else rng.normal(size=base['z'].shape)*.01
             corrected=refine(lambda x:Phi@x,lambda x:Phi.T@x,prior,lambda e:W@e,base,inverse,initial_delta=delta)
             path=a.out/('original_'+label+'.npz')
             np.savez_compressed(path,Phi=Phi,W=W,R=R,y=y,base_z=base['z'],base_wave=base['wave_model_residual'],
-                initial_delta=delta,x_raw=base['x_raw'],x_tau=base['x_tau'],**corrected,**inverse.arrays())
+                initial_delta=delta,x_raw=archived_raw,x_tau=archived_tau,**corrected,**inverse.arrays())
             r['original_cases'].append(dict(label=label,file=path.name,sha256=sha(path),base_solver=info,
                 factor=inverse.info(),resources=ledger.report(),fixed_correction_steps=2))
             print('ORIGINAL CORRECTION CONTROL',label,flush=True)

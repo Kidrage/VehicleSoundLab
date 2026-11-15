@@ -5,7 +5,9 @@ from .householder import Householder
 from .metric_root import factor
 
 
-def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
+def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16, *, triangle_backend='copy'):
+    if triangle_backend not in ('copy','native'):
+        raise ValueError('Declared copy/native graph triangle backend required')
     target = np.asarray(target, float)
     vector = target.ndim == 1
     if target.ndim not in (1, 2) or not np.isfinite(target).all():
@@ -47,12 +49,28 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
     qr.graph_into(D, block)
     graph = Householder(D, ledger, 'graph_QR')
     del D
-    T = graph.square_triangular()
-    a = linalg.solve_triangular(T, transformed[:k], trans='T', lower=False, check_finite=False)
+    if triangle_backend=='native':
+        from waveform_correction_v1.native_triangular import NativeUpperTriangular
+        T = None
+        native_T = NativeUpperTriangular(graph.raw,k)
+        ledger.add('graph.native_triangle_storage',graph.raw)
+        a = np.array(transformed[:k],order='F',copy=True)
+        ledger.add('graph.native_transpose_rhs',a)
+        native_T.solve_inplace(a,True)
+    else:
+        T = graph.square_triangular()
+        a = linalg.solve_triangular(T, transformed[:k], trans='T', lower=False, check_finite=False)
     ledger.add('graph.coordinates', a)
     coordinates = np.vstack((a, np.zeros((n, y.shape[1]))))
     reduced = -graph.apply(coordinates)
-    reduced[:k] = -linalg.solve_triangular(T, a, lower=False, check_finite=False)
+    if triangle_backend=='native':
+        rhs = np.array(a,order='F',copy=True)
+        ledger.add('graph.native_normal_rhs',rhs)
+        native_T.solve_inplace(rhs)
+        reduced[:k] = -rhs
+        ledger.snapshot('graph.native_triangular_solves_complete')
+    else:
+        reduced[:k] = -linalg.solve_triangular(T, a, lower=False, check_finite=False)
     z = reduced[k:].copy()
     q = prior.inverse_transpose(z)
     residual_coordinates = -transformed.copy()
@@ -85,13 +103,14 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
         reduced_model_residual=packed(reduced), root_model_residual=packed(model),
         wave_model_residual=packed(wave_model), direct_transformed_normal=packed(normal),
         stable_root_normal=packed(stable_normal), temporal_K=prior.K, temporal_L=prior.L)
+    if triangle_backend=='native':values['graph_triangle_raw']=graph.raw
     def number(value):
         return float(value[0]) if vector else value.tolist()
     info = dict(method='direct_geqrf_structured_graph_independent_RHS',
         waveform_rows=m, source_columns=n, RHS=y.shape[1], retained_QR_directions=k, block=block,
         metric_root_shares_input=metric_alias, metric_root_type=root.kind,X_QR_alias=qr.alias, graph_QR_alias=graph.alias,
         geqrf_lwork=[qr.lwork, graph.lwork],
-        graph_triangular_explicit_F_copy=True,
+        graph_triangular_explicit_F_copy=triangle_backend=='copy',
         rectangular_R_or_explicit_Q_or_dense_packed_R_allocated_by_solver=False,
         explicit_Q_or_dense_packed_R_allocated_by_solver=False,
         complete_normal_uses_original_synthesis_adjoint=True,
@@ -100,4 +119,9 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
         stable_root_normal_relative=number(stable_ratio), root_backward_discrepancy=number(backward),
         stable_root_guard_passed=bool(np.all(stable_ratio <= 1e-11) and np.all(backward <= 1e-11)),
         augmented_root_Frobenius=normA, no_order_node_rank_rate_reduction=True)
+    if triangle_backend=='native':
+        info.update(graph_triangle_backend=triangle_backend,
+                    graph_triangle_leading_dimension=graph.raw.shape[0],
+                    graph_triangle_ABI=native_T.signature,
+                    graph_triangle_aliases_raw=native_T.raw is graph.raw)
     return values, info

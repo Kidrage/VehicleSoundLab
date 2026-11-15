@@ -12,8 +12,10 @@ def main():
     for n in ('workspace','out'):p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--backend',choices=('structured','stream','banded'),default='structured')
     p.add_argument('--shared-rhs',action='store_true')
+    p.add_argument('--triangle-backend',choices=('copy','native'),default='copy')
     a=p.parse_args()
     if a.shared_rhs and a.backend not in ('stream','banded'):p.error('--shared-rhs requires --backend stream or banded')
+    if a.triangle_backend=='native' and a.backend not in ('stream','banded'):p.error('Native graph requires stream/banded backend')
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -37,6 +39,8 @@ def main():
     if a.backend=='banded':
         names.extend(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_banded_v1').glob('*.py'))
         names.append('research/waveform_banded_known_v1_plan.json')
+    if a.triangle_backend=='native':
+        names.extend(('tools/waveform_correction_v1/native_triangular.py','research/waveform_early_release_v1_plan.json'))
     r=dict(result='running',backend=a.backend,shared_rhs=a.shared_rhs,cases=[],frames=[],temporal=[],sources={},material_read=False)
     # Original seven fixtures have arbitrary coupled R, so this SMALL CONTROL
     # adapter exercises the unchanged graph algebra only. It is not a fallback
@@ -55,7 +59,8 @@ def main():
                 ledger=ArrayLedger()
                 wave_metric=BandedMetric.control_from_dense(W) if a.backend=='banded' else np.array(W,order='F')
                 values,info=solve(lambda x:Phi@x,lambda x:Phi.T@x,DenseControlPenalty(R),
-                    wave_metric,y if a.shared_rhs else y[:,j],ledger,block=3)
+                    wave_metric,y if a.shared_rhs else y[:,j],ledger,block=3,
+                    **({'triangle_backend':'native'} if a.triangle_backend=='native' else {}))
                 channels.append(values);infos.append(info);ledgers.append(ledger.report())
             packed={n:np.column_stack([v[n] for v in channels]) for n in
                 ('q','z','t','root_model_residual','wave_model_residual','stable_root_normal','direct_transformed_normal')}

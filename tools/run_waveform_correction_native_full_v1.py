@@ -11,7 +11,7 @@ from research_archive_v1 import load,save,sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','original','prerequisite','out'):p.add_argument('--'+n,type=Path,required=True)
-    a=p.parse_args()
+    p.add_argument('--owned',action='store_true');a=p.parse_args()
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -25,13 +25,14 @@ def main():
     from waveform_stream_v1.shared import SharedSupportedGeometry
     from waveform_banded_v1.metric import supported_banded
     from waveform_correction_v1.pipeline import solve_corrected
+    if a.owned:from waveform_early_release_v1.pipeline import solve_owned_corrected as solve_corrected
     from waveform_correction_v1.trace import original_frobenius
     from waveform_structured_v1.penalty import TemporalPenalty
     from waveform_structured_v1.resources import ArrayLedger,process_memory
     from run_waveform_stream_full_v1 import physical_memory
     repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
     started=time.monotonic()
-    r=dict(result='running',pid=os.getpid(),sources={},inputs={},material_read=False,only_one_attempt=True)
+    r=dict(result='running',pid=os.getpid(),sources={},inputs={},material_read=False,only_one_attempt=True,owned_pipeline=a.owned)
     class Telemetry(ArrayLedger):
         def add(self,name,value):
             result=super().add(name,value)
@@ -48,18 +49,29 @@ def main():
             if entry['available_physical_bytes']<1024**3:
                 raise MemoryError('Available physical memory below declared1GiB checkpoint guard')
     try:
-        prerequisite=load(a.prerequisite/'storage_audit2/report.json')
-        assert prerequisite['result']=='independent_waveform_correction_storage_verified'
-        assert prerequisite['both_native_and_pipeline_same_as_previous'] and prerequisite['all_actual_phase_releases_verified']
-        assert prerequisite['production_trace_controls']==13
-        for prefix,digest in prerequisite['producer_bindings'].items():
-            assert sha(a.prerequisite/(prefix+'1')/'report.json')==digest
-        checked_kernel=load(a.prerequisite/'pipeline_shared1/report.json')['sources']
+        receipt='lifetime_audit1' if a.owned else 'storage_audit2'
+        prerequisite=load(a.prerequisite/receipt/'report.json')
+        if a.owned:
+            assert prerequisite['result']=='independent_waveform_early_release_known_verified'
+            assert prerequisite['all_original12_shared8_qualified'] and prerequisite['actual_lifetimes_verified']
+            assert prerequisite['all_output_arrays_bitwise_previous']
+            checked_kernel=load(a.prerequisite/'shared1/report.json')['sources']
+            for folder in ('waveform_early_release_v1','waveform_stream_v1'):
+                for path in (repo/'tools'/folder).glob('*.py'):
+                    assert sha(path)==checked_kernel[path.relative_to(repo).as_posix()]
+        else:
+            assert prerequisite['result']=='independent_waveform_correction_storage_verified'
+            assert prerequisite['both_native_and_pipeline_same_as_previous'] and prerequisite['all_actual_phase_releases_verified']
+            assert prerequisite['production_trace_controls']==13
+            for prefix,digest in prerequisite['producer_bindings'].items():
+                assert sha(a.prerequisite/(prefix+'1')/'report.json')==digest
+            checked_kernel=load(a.prerequisite/'pipeline_shared1/report.json')['sources']
         for leaf in ('inverse.py','native_inverse.py','native_triangular.py','correct.py','pipeline.py'):
             name='tools/waveform_correction_v1/'+leaf
             assert sha(repo/name)==checked_kernel[name]
-        assert sha(repo/'tools/waveform_correction_v1/trace.py')==prerequisite['trace_source_sha256']
-        for n in ('controls_audit1','known_audit1','shared_audit1','pipeline_known_audit1','pipeline_shared_audit1'):
+        if not a.owned:assert sha(repo/'tools/waveform_correction_v1/trace.py')==prerequisite['trace_source_sha256']
+        audit_names=('controls_audit1','roots_audit1','known_audit1','shared_audit1') if a.owned else ('controls_audit1','known_audit1','shared_audit1','pipeline_known_audit1','pipeline_shared_audit1')
+        for n in audit_names:
             path=a.prerequisite/n/'report.json';v=load(path);assert v['all_qualified'];r['inputs'][str(path)]=sha(path)
         original=load(a.original/'report.json')
         root=a.workspace/'baselines/waveform_stream_full_v1'
@@ -68,7 +80,7 @@ def main():
         r['inputs'][str(root/'manifest.json')]=sha(root/'manifest.json')
         assert original['result']=='waveform_stream_full_known_measured' and original['solver_qualified'] and original['fidelity_qualified']
         assert sha(a.original/'capture.npz')==original['capture_sha256']
-        for path in (a.original/'report.json',a.original/'capture.npz',a.prerequisite/'storage_audit2/report.json'):
+        for path in (a.original/'report.json',a.original/'capture.npz',a.prerequisite/receipt/'report.json'):
             r['inputs'][str(path)]=sha(path)
         names=set(original['sources'])
         for folder in ('waveform_correction_v1','waveform_banded_v1','waveform_stream_v1','waveform_structured_v1',
@@ -76,6 +88,9 @@ def main():
             names.update(path.relative_to(repo).as_posix() for path in (repo/'tools'/folder).glob('*.py'))
         names.update(('tools/run_waveform_correction_native_full_v1.py','tools/run_waveform_stream_full_v1.py',
             'research/waveform_correction_native_full_v1_plan.json'))
+        if a.owned:
+            names.add('research/waveform_early_release_full_v1_plan.json')
+            names.update(path.relative_to(repo).as_posix() for path in (repo/'tools/waveform_early_release_v1').glob('*.py'))
         for name in sorted(names):
             path=a.out/'exact_sources'/name;path.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(repo/name,path);r['sources'][name]=sha(path)
@@ -83,7 +98,7 @@ def main():
             capture={n:z[n] for n in ('audio','positions','orders','scale','nodes','factors','loadings')}
         audio,positions,orders,scale=(capture[n] for n in ('audio','positions','orders','scale'))
         assert audio.shape==(12289,2) and len(positions)==49 and len(orders)==288
-        memory=physical_memory();main=8368514064;reserve=3*1024**3//2;headroom=3*1024**3
+        memory=physical_memory();main=7160357896 if a.owned else 8368514064;reserve=3*1024**3//2;headroom=3*1024**3
         required=main+reserve+headroom
         r['resource_preflight']=dict(**memory,main_phase_arrays=main,native_temporary_allowance=reserve,
             headroom_guard=headroom,required_available=required,
@@ -142,6 +157,8 @@ def main():
             no_parameter_error_to_unknown_dense_optimum_claim=True,independently_qualified=False,
             source_or_runtime_or_hearing_qualified=False)
         save(a.out/'report.json',r)
+        save(a.out/'progress.json',dict(pid=os.getpid(),status='completed',elapsed_seconds=time.monotonic()-started,
+                                       report_sha256=sha(a.out/'report.json')))
         print(r['result'],'solver',qualified,'fidelity',r['fidelity_qualified'],flush=True)
         print('COMPLETE',gradient,stable,backward,'GAPS',rc['gap_upper_bound'],pc['gap_upper_bound'],flush=True)
     except BaseException as error:

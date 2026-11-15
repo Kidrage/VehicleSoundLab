@@ -101,10 +101,19 @@ def main():
             for item in snapshots:
                 assert len(item['live_storages'])==len(set(item['live_storages']))
                 assert item['tracked_live_backing_bytes']==sum(stores[i] for i in item['live_storages'])
-            main=['wave_metric.L_banded','X_QR.raw','graph_QR.raw','graph_QR.square_R']
+            owned=source.get('owned_pipeline',False)
+            main=['wave_metric.L_banded','X_QR.raw','graph_QR.raw']+([] if owned else ['graph_QR.square_R'])
             storage_ids=[arrays[name]['storage'] for name in main]
-            assert len(set(storage_ids))==4 and sum(stores[i] for i in storage_ids)==8368514064
-            assert arrays['graph_QR.square_R']['F_contiguous'] and 'X_QR.R' not in arrays
+            actual_main=7160357896 if owned else 8368514064
+            assert len(set(storage_ids))==len(main) and sum(stores[i] for i in storage_ids)==actual_main
+            if owned:
+                assert 'graph_QR.square_R' not in arrays
+                assert arrays['graph.native_triangle_storage']['storage']==arrays['graph_QR.raw']['storage']
+                assert not source['solver']['graph_triangular_explicit_F_copy']
+                assert source['solver']['graph_triangle_aliases_raw']
+                assert source['solver']['graph_triangle_leading_dimension']==arrays['graph_QR.raw']['shape'][0]
+            else:assert arrays['graph_QR.square_R']['F_contiguous']
+            assert 'X_QR.R' not in arrays
             assert arrays['wave_metric.L_banded']['storage']==arrays['wave_metric.input']['storage']
             assert arrays['X_QR.raw']['storage']==arrays['weighted_synthesis']['storage']
             assert arrays['graph_QR.raw']['storage']==arrays['graph.input']['storage']
@@ -135,11 +144,17 @@ def main():
             assert source['inverse_info']['native_triangle_aliases_inner_raw']
             assert 'correction.inner_QR.square_R' not in arrays
             phases={e['phase']:e for e in snapshots}
-            oldids={arrays[n]['storage'] for n in ('wave_metric.L_banded','graph_QR.raw','graph_QR.square_R')}
+            oldids={arrays[n]['storage'] for n in (['wave_metric.L_banded','graph_QR.raw']+([] if owned else ['graph_QR.square_R']))}
             for phase in ('pipeline.old_metric_graph_T_released','correction.right_QR.factored_with_work','correction.inner_QR.factored_with_work'):
                 assert not oldids.intersection(phases[phase]['live_storages'])
             for phase in ('pipeline.source_QR_released','pipeline.original_correction_complete'):
                 assert arrays['X_QR.raw']['storage'] not in phases[phase]['live_storages']
+            if owned:
+                for phase in ('owned_inverse.source_released_before_inner','correction.inner_QR.factored_with_work'):
+                    assert arrays['X_QR.raw']['storage'] not in phases[phase]['live_storages']
+                assert source['inverse_info']['source_QR_released_before_inner']
+                assert source['pipeline']['source_QR_released_before_inner'] and source['pipeline']['base_graph_has_no_square_copy']
+                assert next(i for i,e in enumerate(events) if e.get('phase')=='owned_inverse.source_released_before_inner') < next(i for i,e in enumerate(events) if e.get('name')=='correction.inner_input')
             for prefix,key in (('correction.right_QR','correction.right_input'),('correction.inner_QR','correction.inner_input')):
                 assert arrays[prefix+'.raw']['storage']==arrays[key]['storage']==arrays[prefix+'.reflectors']['storage']
             assert all(source['pipeline']['released_before_new_factors'].values())
@@ -155,7 +170,9 @@ def main():
                 metrics=stats,gradient=gradient,stable_original_complete_normal=stable,original_backward=backward,
                 independent_all_bin_trace=trace,extra_trace2e_11_passed=bool(strict_trace_error<2e-11),extra_trace_relative_error=float(strict_trace_error),
                 residual_certificate=cert,representer_certificate=pc,residual_gap_passed=gates[0],representer_gap_passed=gates[1],
-                actual_full_four_array_bytes=8368514064,actual_aliases_and_lifetimes_verified=True,
+                actual_full_four_array_bytes=None if owned else 8368514064,actual_full_main_array_bytes=actual_main,
+                base_graph_copy_avoided=owned,source_released_before_inner=owned,
+                actual_aliases_and_lifetimes_verified=True,
                 process_peak_working_set_bytes=source['process_memory']['cumulative_peak_working_set_bytes'],
                 tracked_peak_bytes=source['resources']['max_tracked_live_backing_bytes'],
                 producer_sha256=sha(a.study/'report.json'),auditor_sha256=sha(__file__),oracles_sha256={n:sha(repo/n) for n in helpers},
