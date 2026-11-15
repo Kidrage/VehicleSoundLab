@@ -1,0 +1,91 @@
+{
+  "result": "observer_representer_frozen",
+  "results": {
+    "dual_algebra_passes": 0,
+    "primal_algebra_passes": 4,
+    "actual_Hann_passes": 8,
+    "full_solver_qualified": false,
+    "full_fidelity_qualified": true,
+    "old_objective": 0.10566704139261388,
+    "new_objective": 0.03400097412736988,
+    "old_wave": 3.0796969270053394e-05,
+    "new_wave": 7.009892160550115e-05,
+    "old_target_wave": 4.006415611140168e-06,
+    "new_target_wave": 5.118521178975223e-06,
+    "target_band_regressions": 1,
+    "whole_band_regressions": 3,
+    "region_regressions": 3,
+    "old_region_errors": [
+      5.0017694348677024e-05,
+      4.006415611140168e-06,
+      5.969735586347198e-05
+    ],
+    "new_region_errors": [
+      9.754450567440422e-05,
+      5.118521178975223e-06,
+      0.00014737444574471808
+    ],
+    "original_outer_high_loss": 0.06442800454804466,
+    "null_witness_penalty_derivative": 1.0469327228063152e-18,
+    "source_or_runtime_or_hearing_qualified": false
+  },
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra2\\report.json": "evidence/algebra2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra_audit1\\report.json": "evidence/algebra_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra2\\mono.npz": "evidence/algebra2/mono.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra2\\stereo.npz": "evidence/algebra2/stereo.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra2\\weak1e-5.npz": "evidence/algebra2/weak1e-5.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\algebra2\\silent_right.npz": "evidence/algebra2/silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\report.json": "inputs/upstream/observer_supported_v1/evidence/context1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\primal_algebra_audit1\\report.json": "evidence/primal_algebra_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\constant_1.npz": "inputs/upstream/observer_supported_v1/evidence/context1/constant_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\curved_1.npz": "inputs/upstream/observer_supported_v1/evidence/context1/curved_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\constant_0.01.npz": "inputs/upstream/observer_supported_v1/evidence/context1/constant_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\curved_0.01.npz": "inputs/upstream/observer_supported_v1/evidence/context1/curved_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\constant_0.0001.npz": "inputs/upstream/observer_supported_v1/evidence/context1/constant_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\curved_0.0001.npz": "inputs/upstream/observer_supported_v1/evidence/context1/curved_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\constant_1e-05.npz": "inputs/upstream/observer_supported_v1/evidence/context1/constant_1e-05.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\context1\\curved_1e-05.npz": "inputs/upstream/observer_supported_v1/evidence/context1/curved_1e-05.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\full1\\report.json": "inputs/upstream/observer_supported_v1/evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\full1\\capture.npz": "inputs/upstream/observer_supported_v1/evidence/full1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1\\context_audit1\\report.json": "evidence/context_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_supported_v1\\evidence\\null1\\witness.npz": "inputs/upstream/observer_supported_v1/evidence/null1/witness.npz"
+  },
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "construction_failure_retained": "algebra1",
+  "failed_dual_iteration_retained": "algebra2 all4",
+  "full288_solver_failed": true,
+  "scientific_figures_individually_viewed": 2,
+  "layout_review1_preserved": true,
+  "original_gates_and_objective_unchanged": true,
+  "source_models_fitted": 0,
+  "native48k_or_C_or_timbre_qualified": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "previous_goal_turn_classification": "progress: supported extraction/full-known/null evidence frozen at1b9e375",
+  "next": "research/observer_representer_krylov_v1_plan.json",
+  "manifest_sha256": "799ad81aaee116c374132796ccd84de01fe2af9098d55b43dd19851401ca9b26",
+  "file_count": 1144,
+  "bytes": 61915168,
+  "external_verification": {
+    "archive": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1_archive_independent.json",
+      "sha256": "5fbbabbe95c998aed1152b58f0d12d90e6220ed10ecf1226e0737edc3f65b1e6",
+      "result": "independent_archive_source_zip_contracts_verified"
+    },
+    "bindings": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_representer_v1_bindings_independent.json",
+      "sha256": "9417693d04b1c06845e38400c1b402c42e97905e845802436fc13c561e6fe27f",
+      "result": "independent_observer_representer_input_executed_capture_bindings_verified"
+    }
+  }
+}

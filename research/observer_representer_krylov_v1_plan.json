@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.representer-krylov-diagnostic/1",
+  "parent": "observer_representer_v1 full1 session56044/PID555552 and full_audit1 are terminal; do not restart or increase cap",
+  "evidence": "Penalty-whitened4tiny+8actual-Hann cases independently pass. Full288 objective.105667->.034001, gradient3.18685e-6->2.45746e-7, residual gap.10556->.003691 but stop7/4000 and bothgap gates fail. Old null witness penalty derivative -1.34393e-4->1.04693e-18, so exact data-null stationarity is fixed for that witness. Target/whole waveform and all3regions regress; preserve them.",
+  "unknown": "Remaining convergence loss may involve finite-precision Krylov orthogonality, singular-value spread or other coupling; no sole cause identified. LSMR estimated condition131.88 is not an exact full condition bound.",
+  "next_known_first": "Qualify a short saved-vector Golub-Kahan diagnostic on explicit finite diagonal/clustered/ill-conditioned and original4algebra matrices. Check forward/adjoint recurrence identities and U/V Gram orthogonality independently, including signs/breakdown. Only then one short fixed128-step probe of the SAME frozen full operator, saving vectors/Gram/recurrence residuals, no new full fit or trajectory correction.",
+  "after_evidence": "If lost orthogonality is established, independently qualify a two-sided reorthogonalized square-root solve on same4algebra and8Hann cases with SAME objective/gates before a separately declared full attempt. If not established, inspect spectrum/coupling with suitable known controls; do not blindly switch algorithms, caps, strengths, floor, rank or update cadence.",
+  "material": "No six-real fit until full288 gate passes; then approved actual recording-context and independent phase-coordinate evidence are required. Other engines/fullstates/physical7.1.4 remain unfinished; no current C/default/driver/owned/take/room/hearing changes."
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.representer-full-known/1",
+  "prerequisites": "primal_algebra1/primal_algebra_audit1 all4; context1/context_audit1 all8. Failed observation-dual algebra2 remains failed; constructionalgebra1 snapshots retained.",
+  "frozen_problem": "Use baselines/observer_supported_v1/evidence/full1/capture.npz byte-exact audio,positions,orders,scale and truth.12289x2 observations,49nodes,288orders,12analytic factors,quarter-cycle256cadence,2048 genuine context each side. Original target8193 unchanged. No generated replacement observations.",
+  "one_new_solver": "PenaltyPrimal same original SupportedSystem/Phi/sharedLR weights/floor1e-8/alpha.001/beta1e-6. One zero-initial LSMR,maxiter4000,atol/btol1e-11,conlim1e12; q=Tz, no diagonal postwhitening or dual reconstruction. Prior old full1 stop7 is preserved, not resumed/corrected.",
+  "gates": {"accepted_stops": [1,2,4,5], "original_relative_stationarity_max": 2e-7, "residual_and_representer_gap_relative": 1e-6, "residual_and_representer_gap_absolute": 1e-10, "target_wave_NRMSE_max": 0.02, "each_target_supported_band_complex_NRMSE_max": 0.02},
+  "audit": "Same frozen source binding, independent reduced-carrier full waveform and exact supported-row FFT, full primal operator and adjoint/temporal root, original-space gradient, actual feasible u and original residual-scaled dual certificates; old/new full/target/region/band metrics. No dense full inverse, exact full condition, target runtime or timbre claim.",
+  "stop": "If any numerical gate fails, save and diagnose before any six-material solve; do not increase caps or alter strengths/rate/rank. If all pass, independently qualify actual approved recording context/phase-coordinate availability before a declared all6 comparison; normalized known success does not prove source coordinate availability."
+}

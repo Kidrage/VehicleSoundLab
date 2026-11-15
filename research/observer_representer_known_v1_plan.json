@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.observer-representer-qualification/1",
+  "parent": "research/observer_representer_v1_plan.json; frozen observer_supported_v1 unchanged",
+  "method": "Retain original data rows B=P Phi, data target b=P x and R. Let T=L_R^-T. Observation-dual augmented least squares min_u ||T*B*u||^2+||u-b||^2 yields q=T T* B* u. This is the same stationary representer q=R^-1 Phi* w, w=P*u; it avoids explicitly applying H^-1 or squared normal matrices. Observation-row variable is larger than waveform variable: no reduced-cost claim.",
+  "tiny_controls": "Four fixed finite algebra fixtures: mono separated orders, stereo neighboring orders, weakhigh1e-5, silent right. N33/9nodes/3orders7,8,211; actual real OSC columns. Explicit positive DCT-weighted H has weights1..100; this is an algebra test, not the original4096 Hann metric. Fixed alpha.001,beta1e-6 with finite second-difference R. Compare original augmented denseSVD, explicit waveform representer, stable observation-dual denseSVD and iterative observation-dual. Keep any plain-normal cancellation loss; no gate change.",
+  "original_metric_after_tiny": "Only if stable tiny methods independently qualify, all8 unchanged context1 cases: original SupportedSystem, original audio/orders/nodes/scales/weights/floor/regularization. One dualLSMR zero start each,max4000,atol/btol1e-11,conlim1e12. Compare saved original dense optima. Preserve all original no-context and extended-end losses.",
+  "gates": {"original_dense_relative_solution_error_max": 2e-7, "original_relative_stationarity_max": 2e-7, "accepted_stops": [1,2,4,5], "original_residual_gap_relative": 1e-6, "original_residual_gap_absolute": 1e-10, "independent_representer_gap_relative": 1e-6, "independent_representer_gap_absolute": 1e-10},
+  "failure": "If original metric controls fail, do not run full288/source solves. Save all attempts, inspect numerical cancellation/conditioning; no blind cap/strength/floor/context/rank changes.",
+  "full_after": "Predeclare same frozen full1 audio and original gates only after actual-context independent qualification. No new material or runtime/audio/C change in these controls."
+}

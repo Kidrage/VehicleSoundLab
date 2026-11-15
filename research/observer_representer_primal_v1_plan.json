@@ -1,0 +1,8 @@
+{
+  "schema": "vsl.representer-square-root-primal/1",
+  "reason": "algebra2: dense observation-dual equivalents pass~3e-12, but iterative dual restores node relative errors3e-6..8e-5 despite internalstop2 and original gradient passing. Keep all4 iterative failures; do not run source/full or blindly tighten tolerances.",
+  "same_objective_alternative": "Penalty-whitened primal min_z ||B T z-b||²+||z||², T=L_R^-T, q=Tz. Start zero. Krylov(I+T*B*BT,T*B*b) stays in range(T*B*), so q remains in range(R^-1B*) in exact arithmetic. Direct q=Tz avoids an additional dual-residual -> B* -> R^-1 reconstruction. No diagonal scaling that breaks this range invariant.",
+  "controls": "Same exact4 tiny captures/scales/Phi/H/R/audio and original dense optima, not new easier fixtures. Independent original objective/gradient/nodes/gaps plus retained data-null stationarity. Same LSMR atol/btol1e-11,conlim1e12,max4000, acceptedstops1/2/4/5 and original2e-7 node/gradient gates. Both residual and explicit feasible-dual gap gates remain1e-6 J+1e-10.",
+  "then": "Only if all4 pass independent audit, use SAME8 context1 original SupportedSystem/audio/scales/coordinates and saved dense optima, one fixed attempt each. Only if all8 independently qualify predeclare a same-frozen full288 known attempt. No six-real source yet.",
+  "preserve": "Failed constructionalgebra1 snapshots; dualalgebra2 all4 failed results; original no-context7/8 failure; context whole-record6.44percent edge loss. No current C/model/default/driver/owned/take/room/hearing changes."
+}
