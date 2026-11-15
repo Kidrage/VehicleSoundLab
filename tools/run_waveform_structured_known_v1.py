@@ -11,7 +11,8 @@ from research_archive_v1 import load,save,sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','original','baseline','prerequisite','out'):p.add_argument('--'+n,type=Path,required=True)
-    p.add_argument('--block',type=int,default=16);a=p.parse_args()
+    p.add_argument('--block',type=int,default=16)
+    p.add_argument('--backend',choices=('structured','stream'),default='structured');a=p.parse_args()
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -27,8 +28,9 @@ def main():
     from waveform_structured_v1.penalty import TemporalPenalty
     from waveform_structured_v1.resources import ArrayLedger,process_memory
     from waveform_structured_v1.solver import solve
+    if a.backend=='stream':from waveform_stream_v1.solver import solve
     repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
-    r=dict(result='running',pid=os.getpid(),cases=[],sources={},inputs={},material_read=False,
+    r=dict(result='running',backend=a.backend,pid=os.getpid(),cases=[],sources={},inputs={},material_read=False,
         previous_goal_turn_classification='progress: frozen graph12/12 and precision diagnosis ate8c3825',block=a.block)
     try:
         required=load(a.prerequisite/'report.json')
@@ -39,6 +41,9 @@ def main():
                  (('algebra','primal_algebra1'),('Hann','context1'))}
         names={n for _,parent in parents.values() for n in parent['sources']}
         names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_structured_v1').glob('*.py'))
+        if a.backend=='stream':
+            names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_stream_v1').glob('*.py'))
+            names.add('research/waveform_structured_stream_v1_plan.json')
         names.update(('tools/run_waveform_structured_known_v1.py','tools/waveform_representer_v1/metric.py',
                       'research/waveform_graph_structured_v1_plan.json'))
         for name in sorted(names):

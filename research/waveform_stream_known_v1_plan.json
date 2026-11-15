@@ -1,0 +1,12 @@
+{
+  "scope": "KNOWN ONLY: direct GEQRF and exact shared geometry, independent L/R RHS",
+  "previous_goal_turn": "MCPS recheck only; no synthesis progress. Structured12 and resources now committed9315c84.",
+  "controls": "Original7 arbitraryR (control adapter only),4finiteDFT,3temporal roots. Original12 unchanged with directGEQRF and independent original equations/complete-adjoint/gradient/BOTHgaps. Additionally original7 with sharedQR multiRHS.",
+  "shared_cases": "Three original stereo DenseFixtures incl weak1e-5/silentright; five SupportedSystem stereo cases, N4353,9nodes,orders1/8/75/187/287,normalized1024cycle grid (NOT native48k or recording). unequalLR, silent_right, delayed_right, right_dominant, both_zero. Scale1/.7/.3/.15/.05; RNG650923. Original joint stereo metric computed ONCE; two independent targets, no averaging. Dense reference built from original complete operator columns; independent oracle reconstructs original interleaved objective and adjoint.",
+  "conditions": "Actual channel-independent SupportedSystem/WaveSynthesis, exact same frames/window/coverage/keep/weights/global waveform scale/amplitude/root, common source scales and identical temporal prior. Reject separately refit side metrics or explicit changed channel weights/scales; no objective substitution.",
+  "gates": "Same2e-7 parameter and complete gradient,1e-11 stable complete normal/backward, BOTHgaps1e-6J+1e-10. Preserve original2e-8 unwhitened equation and strict2e-11 white diagnostics. No truncation/rate/rank/node/order reduction or normal-equation production solve.",
+  "resources": "Observe GEQRF and ORMQR overwrite/alias and reported workspace; graph square T intentionally copied F-order so triangular solves need no strided factor copy. Count actual live backing stores and cumulative working set separately; small problem does not prove fullpeak. FullW still dense.",
+  "before_full": "No automatic full solve. Declare separate full12289/49/288 twoRHS known experiment only after independent numerical/resource conditions and current headroom. Known-only this stage.",
+  "protected": "670C/H82voice3F2/index,moving35/default,one-driver,owned/takes,room/hearings;no push/download/newhearing/unchanged68CTest",
+  "goal": "ACTIVE full multi-engine/state system, V6fivebuses and independent future physical7.1.4. No new real-fit/native48k/audio/C qualification in this known-only stage."
+}

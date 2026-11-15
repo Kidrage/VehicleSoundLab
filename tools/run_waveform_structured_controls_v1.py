@@ -10,7 +10,10 @@ from research_archive_v1 import save,sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','out'):p.add_argument('--'+n,type=Path,required=True)
+    p.add_argument('--backend',choices=('structured','stream'),default='structured')
+    p.add_argument('--shared-rhs',action='store_true')
     a=p.parse_args()
+    if a.shared_rhs and a.backend!='stream':p.error('--shared-rhs requires --backend stream')
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -20,13 +23,17 @@ def main():
     from waveform_structured_v1.penalty import TemporalPenalty
     from waveform_structured_v1.resources import ArrayLedger
     from waveform_structured_v1.solver import solve
+    if a.backend=='stream':from waveform_stream_v1.solver import solve
     from observer_inverse_v1.regularizer import curvature
     repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
     names=['tools/run_waveform_structured_controls_v1.py','tools/waveform_representer_v1/fixtures.py',
         'tools/waveform_representer_v1/metric.py','tools/observer_inverse_v1/regularizer.py',
         'research/waveform_graph_structured_v1_plan.json']
     names.extend(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_structured_v1').glob('*.py'))
-    r=dict(result='running',cases=[],frames=[],temporal=[],sources={},material_read=False)
+    if a.backend=='stream':
+        names.extend(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_stream_v1').glob('*.py'))
+        names.append('research/waveform_structured_stream_v1_plan.json')
+    r=dict(result='running',backend=a.backend,shared_rhs=a.shared_rhs,cases=[],frames=[],temporal=[],sources={},material_read=False)
     # Original seven fixtures have arbitrary coupled R, so this SMALL CONTROL
     # adapter exercises the unchanged graph algebra only. It is not a fallback
     # for complete source extraction or a claim of a structured arbitrary R.
@@ -40,10 +47,10 @@ def main():
             shutil.copy2(repo/n,dest);r['sources'][n]=sha(dest)
         for label,Phi,W,R,y in algebra_fixtures():
             channels=[];infos=[];ledgers=[]
-            for j in range(y.shape[1]):
+            for j in range(1 if a.shared_rhs else y.shape[1]):
                 ledger=ArrayLedger()
                 values,info=solve(lambda x:Phi@x,lambda x:Phi.T@x,DenseControlPenalty(R),
-                    np.array(W,order='F'),y[:,j],ledger,block=3)
+                    np.array(W,order='F'),y if a.shared_rhs else y[:,j],ledger,block=3)
                 channels.append(values);infos.append(info);ledgers.append(ledger.report())
             packed={n:np.column_stack([v[n] for v in channels]) for n in
                 ('q','z','t','root_model_residual','wave_model_residual','stable_root_normal','direct_transformed_normal')}

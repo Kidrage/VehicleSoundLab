@@ -68,7 +68,10 @@ def main():
                 indices=np.arange(M)*H*C
                 check('original_temporal_K',R[np.ix_(indices,indices)],z['temporal_K'],gate=2e-12)
                 check('temporal_root_identity',z['temporal_L']@z['temporal_L'].T,z['temporal_K'],gate=2e-12)
-                F=z['F'];k=len(F);m=z['x_reflectors'].shape[0]
+                # Reconstruction is a SMALL known-case audit oracle only;
+                # the stream producer never materializes rectangular R.
+                F=z['F'] if 'F' in z else np.triu(z['x_raw'][:len(z['x_tau'])])
+                k=len(F);m=z['x_reflectors'].shape[0]
                 Q=apply_q(z['x_reflectors'],z['x_tau'],np.eye(m,k))
                 check('scalar_householder_orthogonality',Q.T@Q,np.eye(k),gate=2e-12)
                 transformed=apply_q(z['x_reflectors'],z['x_tau'],z['t'],True)
