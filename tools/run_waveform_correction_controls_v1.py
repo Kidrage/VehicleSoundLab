@@ -10,6 +10,7 @@ from research_archive_v1 import save,sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','out'):p.add_argument('--'+n,type=Path,required=True)
+    p.add_argument('--inverse-backend',choices=('copy','native'),default='copy')
     a=p.parse_args()
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
@@ -18,15 +19,18 @@ def main():
     from waveform_representer_v1.fixtures import algebra_fixtures
     from waveform_correction_v1.fixtures import inverse_fixtures
     from waveform_correction_v1.inverse import NormalInverse
+    if a.inverse_backend=='native':
+        from waveform_correction_v1.native_inverse import NativeNormalInverse as NormalInverse
     from waveform_correction_v1.correct import refine
     from waveform_stream_v1.householder import Householder
     from waveform_stream_v1.solver import solve
     from waveform_banded_v1.metric import BandedMetric
     from waveform_structured_v1.resources import ArrayLedger
     repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
-    r=dict(result='running',inverse_cases=[],original_cases=[],sources={},material_read=False)
+    r=dict(result='running',inverse_cases=[],original_cases=[],sources={},material_read=False,inverse_backend=a.inverse_backend)
     names={'tools/run_waveform_correction_controls_v1.py','tools/waveform_representer_v1/fixtures.py',
         'research/waveform_original_correction_v1_plan.json','tools/waveform_structured_v1/resources.py'}
+    if a.inverse_backend=='native':names.add('research/waveform_correction_storage_v1_plan.json')
     for folder in ('waveform_correction_v1','waveform_stream_v1','waveform_banded_v1'):
         names.update(p.relative_to(repo).as_posix() for p in (repo/'tools'/folder).glob('*.py'))
     class Prior:

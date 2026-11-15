@@ -10,6 +10,8 @@ from waveform_stream_v1.householder import Householder
 
 
 class NormalInverse:
+    native_triangle=False
+
     def __init__(self,x_raw,ledger,block=16):
         raw=np.asarray(x_raw)
         if raw.ndim!=2 or raw.dtype!=np.dtype('float64') or min(raw.shape)<1 or block<1:
@@ -27,7 +29,11 @@ class NormalInverse:
         inner=np.empty((2*k,k),order='F');ledger.add('correction.inner_input',inner)
         self.right.graph_into(inner,block)
         self.inner=Householder(inner,ledger,'correction.inner_QR')
-        self.T=self.inner.square_triangular()
+        if self.native_triangle:
+            from .native_triangular import NativeUpperTriangular
+            self.native_T=NativeUpperTriangular(self.inner.raw,k)
+        else:
+            self.T=self.inner.square_triangular()
         ledger.snapshot('correction.inverse_factors_complete')
 
     def apply(self,value):
@@ -35,17 +41,29 @@ class NormalInverse:
         if value.ndim not in (1,2) or value.shape[0]!=self.size or not np.isfinite(value).all():
             raise ValueError('Finite complete source RHS required')
         coordinates=self.right.apply(value,True)
-        first=linalg.solve_triangular(self.T,coordinates[:self.k],trans='T',lower=False,check_finite=False)
-        coordinates[:self.k]=linalg.solve_triangular(self.T,first,lower=False,check_finite=False)
+        if self.native_triangle:
+            rhs=np.array(coordinates[:self.k,None] if coordinates.ndim==1 else coordinates[:self.k],order='F',copy=True)
+            self.ledger.add('correction.native_triangular_rhs',rhs)
+            self.native_T.solve_inplace(rhs,True)
+            self.native_T.solve_inplace(rhs)
+            coordinates[:self.k]=rhs[:,0] if coordinates.ndim==1 else rhs
+            self.ledger.snapshot('correction.native_triangular_solves_complete')
+        else:
+            first=linalg.solve_triangular(self.T,coordinates[:self.k],trans='T',lower=False,check_finite=False)
+            coordinates[:self.k]=linalg.solve_triangular(self.T,first,lower=False,check_finite=False)
         return self.right.apply(coordinates)
 
     def arrays(self):
-        return dict(inverse_right_raw=self.right.raw,inverse_right_tau=self.right.tau,
-            inverse_inner_raw=self.inner.raw,inverse_inner_tau=self.inner.tau,inverse_inner_T=self.T)
+        values=dict(inverse_right_raw=self.right.raw,inverse_right_tau=self.right.tau,
+            inverse_inner_raw=self.inner.raw,inverse_inner_tau=self.inner.tau)
+        if not self.native_triangle:values['inverse_inner_T']=self.T
+        return values
 
     def info(self):
         return dict(method='orthogonal_right_basis_and_inner_QR',source_columns=self.size,retained_inner_directions=self.k,
             identity_complement_directions=self.size-self.k,explicit_full_Q=False,
             normal_equation_factorization=False,subtractive_Woodbury=False,
             right_alias=self.right.alias,inner_alias=self.inner.alias,
+            triangle_backend='native_leading_dimension' if self.native_triangle else 'copied_square_T',
+            separate_square_T_allocated=not self.native_triangle,
             full_or_real_resource_qualification=False)

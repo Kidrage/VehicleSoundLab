@@ -51,12 +51,13 @@ def main():
             result[j:]-=v[:,None]*(tau[j]*(v@result[j:]))[None]
         return result
     def factors(z):
+        assert ('inverse_inner_T' in z)==(source.get('inverse_backend','copy')=='copy')
         raw=z['x_raw'];m,n=raw.shape;k=min(raw.shape);F=np.triu(raw[:k])
         Q=qmap(raw,z['x_tau'],np.eye(m,k));check('X_Q_orthogonality',Q.T@Q,np.eye(k))
         right=z['inverse_right_raw'];Z=qmap(right,z['inverse_right_tau'],np.eye(n))
         check('right_full_Q_orthogonality',Z.T@Z,np.eye(n))
         R=np.triu(right[:k]);check('right_factor_identity',Z[:,:k]@R,F.T)
-        inner=z['inverse_inner_raw'];T=z['inverse_inner_T']
+        inner=z['inverse_inner_raw'];T=z['inverse_inner_T'] if 'inverse_inner_T' in z else np.triu(inner[:k])
         U=qmap(inner,z['inverse_inner_tau'],np.eye(2*k,k))
         check('inner_factor_identity',U@T,np.vstack((np.eye(k),-R.T)))
         check('inner_Q_orthogonality',U.T@U,np.eye(k))
@@ -127,6 +128,7 @@ def main():
                 print('AUDITED CORRECTION',case['label'],stable,flush=True)
         assert len(r['inverse_cases'])==8 and len(r['original_cases'])==7
         r.update(result='independent_waveform_original_correction_controls_passed',all_qualified=True,
+            inverse_backend=source.get('inverse_backend','copy'),
             producer_sha256=sha(a.study/'report.json'),auditor_sha256=sha(__file__),no_original12_or_shared8_or_source_or_runtime_qualification=True)
         save(a.out/'report.json',r);print(r['result'],flush=True)
     except BaseException as error:

@@ -135,7 +135,9 @@ def main():
             Rt = np.triu(right[:k])
             check('full_right_basis_orthogonality', Z.T @ Z, np.eye(n))
             check('right_QR_identity', Z[:, :k] @ Rt, F.T)
-            inner, itau, T = z['inverse_inner_raw'], z['inverse_inner_tau'], z['inverse_inner_T']
+            inner, itau = z['inverse_inner_raw'], z['inverse_inner_tau']
+            assert ('inverse_inner_T' in z) == (source.get('inverse_backend', 'copy') == 'copy')
+            T = z['inverse_inner_T'] if 'inverse_inner_T' in z else np.triu(inner[:k])
             assert inner.shape == (2*k, k) and len(itau) == k and T.shape == (k, k)
             assert np.array_equal(T, np.triu(inner[:k]))
             U = qmap(inner, itau, np.eye(2*k, k))
@@ -155,6 +157,14 @@ def main():
             assert es.shape == (3, len(Phi)//channels, channels)
             assert np.array_equal(zs[0].ravel(), base['z'].ravel())
             assert np.array_equal(es[0].ravel(), base['wave_model_residual'].ravel())
+            if source.get('pipeline'):
+                import hashlib
+                info = case['pipeline_info']
+                assert info['source_QR_sha256'] == hashlib.sha256(memoryview(base['x_raw'].ravel(order='F'))).hexdigest()
+                assert all(info['released_before_new_factors'].values())
+                assert info['source_QR_released_before_correction'] and info['native_triangle_has_no_square_copy']
+                for name in ('q', 'z', 'wave_model_residual'):
+                    assert np.array_equal(z['pipeline_base_'+name], base[name])
             stable_history = []
             for j in range(3):
                 packed = zs[j].ravel()
@@ -217,10 +227,12 @@ def main():
                 original_gradient=gradient, dense_relative_error=relative, stable_complete_normal=stable,
                 original_backward=backward, certificates=gaps, independent_normal_history=stable_history,
                 all_original_directions_and_two_updates_verified=True,
+                pipeline_recomputed_base_exact=bool(source.get('pipeline')),
                 complete_original_Frobenius=normG, previous_qualified=case['previous_qualified']))
             save(a.out/'report.json', r)
             print('AUDITED ORIGINAL CORRECTION', case['label'], qualified, stable, flush=True)
         r.update(result='independent_waveform_original_correction_known_verified', kind=source['kind'],
+            inverse_backend=source.get('inverse_backend', 'copy'),
             pass_count=sum(c['qualified'] for c in r['cases']), all_qualified=all(c['qualified'] for c in r['cases']),
             producer_sha256=sha(a.study/'report.json'), auditor_sha256=sha(__file__),
             oracle_sha256={n: sha(repo/n) for n in helpers}, original_gate_not_changed=1e-11,
