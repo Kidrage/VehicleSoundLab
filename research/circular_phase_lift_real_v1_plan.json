@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.circular-phase-lift-real/1",
+  "parent_commit": "a0bb4f7",
+  "previous_goal_turn": "Progress: exact carrier attribution and 8 known half-angle controls independently audited, archived and committed. No real lift candidate or runtime change yet.",
+  "purpose": "Apply the one already-defined continuous lift to all original frozen phase paths, holding common phase fixed, and judge actual waveform statistics through the original observer. This changes temporal joint structure, not instantaneous stereo moments.",
+  "inputs": "Exact conditional_phase_time_v1 bundles/source targets/dual states/probes and carrier_transfer_v1 partitions; no RNG draws, fit, new material or alternate rate/rho/rank/strength.",
+  "known_gate": "Use the exact 8 known controls and independent audit frozen inside carrier_transfer_v1; verify plan/lift/fixture/producer source hashes before any real source reads.",
+  "coordinate": "1024 samples per acoustic cycle;65536 samples;256-sample endpoints. Normalized coordinate only, not native48k, alias, ECU-time or listening qualification.",
+  "variants": ["fixed","relative","parent","density","variation"],
+  "seeds": [1,23117,61927],
+  "block": 1024,
+  "identity_block": 37,
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "carrier_edges_Hz": [0,3000,6000,8000,10000,14000,1000000000],
+  "observer": "Original periodicHann4096/hop256;full241rows plus same-original-row-count chunks. Save full complex group/channel Gram matrices and preserve signed cross terms.",
+  "checks": {"original_wave_FS":2e-12,"chunk_identity_FS":2e-12,"independent_wave_FS":2e-10,"independent_phase_radians":2e-8,"circular_invariant":2e-11,"Gram_per_band_scaled":2e-10,"statistics_scaled":2e-9},
+  "decision": "All6sources/3seeds/5alternatives retained. Independent circular unwrapping and scalar/CDF/synthesis/STFT/Gram/summary checks precede publication. Report crossings, no-crossing bypass, ambiguity, all improvements and regressions. No native audio/C/hearing from circular invariants or reduced HF alone.",
+  "scope": "Preserve670C-H82voice3F2/index/moving35/default/one-driver/owned/takes/room/hearings;V6DNA/BODY/DETAIL/EVENT/AUX and separate future spatial. Full engines/states/physical7.1.4 goal active."
+}
