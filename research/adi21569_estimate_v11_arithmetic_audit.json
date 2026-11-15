@@ -1,0 +1,261 @@
+{
+  "schema": "vsl.adi21569-recheck-arithmetic/11",
+  "date": "2026-11-15",
+  "code_basis": "1b358846c8c1fc2ec4a6dbd701a5e8f8ebf24e06",
+  "recheck_sha256": "97d1acbaadbc74b5b9ec8af74fd7853206bb98f647666cae3eb1a34d55a1197f",
+  "verified_V8_inputs": 1818,
+  "runtime_C_H_count": 670,
+  "C_H_and_voices_git_diff_against_V10": [],
+  "C_H_directly_in_hash_input": 30,
+  "all_30_recipe_block_sums_and_cycle_conversions_pass": true,
+  "current_largest_exactly_matches_V10": true,
+  "research_sums_and_block_conversions_pass": true,
+  "measured_target_cycles": false,
+  "coefficient_assumptions_validated": false,
+  "prior_attempt": {
+    "result": "failed_before_audit_publication",
+    "reason": "Incorrectly assumed the 1818-input estimator binding directly contained all 670 C/H files; it contains 30. Corrected verification uses all-file Git comparison against V10 plus a tracked/untracked C/H set check. No C/H or estimate coefficients changed."
+  },
+  "cases": [
+    {
+      "recipe": "moving35",
+      "frames": 240,
+      "sum_MCPS": [
+        238.3714285714286,
+        442.65714285714284
+      ]
+    },
+    {
+      "recipe": "moving35",
+      "frames": 256,
+      "sum_MCPS": [
+        237.8357142857143,
+        441.22857142857146
+      ]
+    },
+    {
+      "recipe": "moving35",
+      "frames": 512,
+      "sum_MCPS": [
+        237.8357142857143,
+        441.22857142857146
+      ]
+    },
+    {
+      "recipe": "moving35_plus_current_fine_idle",
+      "frames": 240,
+      "sum_MCPS": [
+        314.1122285714286,
+        584.3083428571429
+      ]
+    },
+    {
+      "recipe": "moving35_plus_current_fine_idle",
+      "frames": 256,
+      "sum_MCPS": [
+        309.4677142857143,
+        575.2765714285714
+      ]
+    },
+    {
+      "recipe": "moving35_plus_current_fine_idle",
+      "frames": 512,
+      "sum_MCPS": [
+        309.4677142857143,
+        575.2765714285714
+      ]
+    },
+    {
+      "recipe": "stationary_five_anchors_four_detail_banks",
+      "frames": 240,
+      "sum_MCPS": [
+        410.67314285714286,
+        712.4278857142857
+      ]
+    },
+    {
+      "recipe": "stationary_five_anchors_four_detail_banks",
+      "frames": 256,
+      "sum_MCPS": [
+        408.14157142857147,
+        707.9407428571428
+      ]
+    },
+    {
+      "recipe": "stationary_five_anchors_four_detail_banks",
+      "frames": 512,
+      "sum_MCPS": [
+        408.14157142857147,
+        707.9407428571428
+      ]
+    },
+    {
+      "recipe": "legacy_exterior_four",
+      "frames": 240,
+      "sum_MCPS": [
+        447.1881142857143,
+        794.0594285714286
+      ]
+    },
+    {
+      "recipe": "legacy_exterior_four",
+      "frames": 256,
+      "sum_MCPS": [
+        445.16285714285715,
+        790.4697142857143
+      ]
+    },
+    {
+      "recipe": "legacy_exterior_four",
+      "frames": 512,
+      "sum_MCPS": [
+        445.16285714285715,
+        790.4697142857143
+      ]
+    },
+    {
+      "recipe": "legacy_cabin_two",
+      "frames": 240,
+      "sum_MCPS": [
+        430.98605714285713,
+        765.3417142857143
+      ]
+    },
+    {
+      "recipe": "legacy_cabin_two",
+      "frames": 256,
+      "sum_MCPS": [
+        429.9734285714286,
+        763.5468571428572
+      ]
+    },
+    {
+      "recipe": "legacy_cabin_two",
+      "frames": 512,
+      "sum_MCPS": [
+        429.9734285714286,
+        763.5468571428572
+      ]
+    },
+    {
+      "recipe": "legacy_start_settle",
+      "frames": 240,
+      "sum_MCPS": [
+        384.40799999999996,
+        743.056
+      ]
+    },
+    {
+      "recipe": "legacy_start_settle",
+      "frames": 256,
+      "sum_MCPS": [
+        381.62699999999995,
+        737.2555
+      ]
+    },
+    {
+      "recipe": "legacy_start_settle",
+      "frames": 512,
+      "sum_MCPS": [
+        381.62699999999995,
+        737.2555
+      ]
+    },
+    {
+      "recipe": "E_decel_stereo",
+      "frames": 240,
+      "sum_MCPS": [
+        269.5408,
+        501.616
+      ]
+    },
+    {
+      "recipe": "E_decel_stereo",
+      "frames": 256,
+      "sum_MCPS": [
+        268.846,
+        500.167
+      ]
+    },
+    {
+      "recipe": "E_decel_stereo",
+      "frames": 512,
+      "sum_MCPS": [
+        268.846,
+        500.167
+      ]
+    },
+    {
+      "recipe": "F3_additive_stereo",
+      "frames": 240,
+      "sum_MCPS": [
+        281.9248,
+        526.192
+      ]
+    },
+    {
+      "recipe": "F3_additive_stereo",
+      "frames": 256,
+      "sum_MCPS": [
+        281.23,
+        524.7429999999999
+      ]
+    },
+    {
+      "recipe": "F3_additive_stereo",
+      "frames": 512,
+      "sum_MCPS": [
+        281.23,
+        524.7429999999999
+      ]
+    },
+    {
+      "recipe": "F3_fifth_first_local_triplet",
+      "frames": 240,
+      "sum_MCPS": [
+        344.8304,
+        599.568
+      ]
+    },
+    {
+      "recipe": "F3_fifth_first_local_triplet",
+      "frames": 256,
+      "sum_MCPS": [
+        342.74600000000004,
+        595.221
+      ]
+    },
+    {
+      "recipe": "F3_fifth_first_local_triplet",
+      "frames": 512,
+      "sum_MCPS": [
+        342.74600000000004,
+        595.221
+      ]
+    },
+    {
+      "recipe": "F3_fifth_second_local_triplet",
+      "frames": 240,
+      "sum_MCPS": [
+        344.8304,
+        599.568
+      ]
+    },
+    {
+      "recipe": "F3_fifth_second_local_triplet",
+      "frames": 256,
+      "sum_MCPS": [
+        342.74600000000004,
+        595.221
+      ]
+    },
+    {
+      "recipe": "F3_fifth_second_local_triplet",
+      "frames": 512,
+      "sum_MCPS": [
+        342.74600000000004,
+        595.221
+      ]
+    }
+  ]
+}
