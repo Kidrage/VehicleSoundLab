@@ -1,0 +1,55 @@
+{
+  "result": "observer_forward_known_frozen",
+  "known_controls": 7,
+  "independent_audit": {
+    "result": "independent_observer_forward_known_passed",
+    "cases": [
+      "constant",
+      "amplitude_ramp",
+      "complex_rotation",
+      "neighbor_and_image_leakage",
+      "asymmetric_silent_right",
+      "adjoint",
+      "underdetermined_null"
+    ],
+    "maximum_wave_error_FS": 1.554312234475219e-14,
+    "maximum_DFT_error_FS": 2.7122555491380405e-15,
+    "maximum_adjoint_error": 1.066334393690002e-15,
+    "material_read": false,
+    "null_control": {
+      "rank": 12,
+      "nullity": 64,
+      "wave_RMS": 0.13656963187685275,
+      "maximum_observed": 1.9227922364777563e-17
+    },
+    "all7_verified": true,
+    "producer_sha256": "2a3723e2e5542fd9eeff487b3d949d2154a4808db3a140a1aa35f347e99517f3",
+    "auditor_sha256": "6dc6997cb393733de0f012a589e18c708e99ef7cb902f57b9d204ba528cf76ab",
+    "oracle_sha256": "42dcc3fdef62922fff6c88e31de5844f2b162b9bea9071e181654e02258e1d26",
+    "forward_correctness_not_inverse_uniqueness_or_timbre": true
+  },
+  "original_observer_and_37_1024_exact_verified": true,
+  "underidentified_control_explicit": true,
+  "actual_material_inverse_not_started": true,
+  "native48k_or_C_or_timbre_qualified": false,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "runtime_default_driver_owned_take_room_changed": false,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "All6 source native/warp inputs, regularized latent inference with conditioning/residual diagnostics, then sample-free temporal model reobserved validation.",
+  "manifest_sha256": "e69cd34442e0489dd7c80c4614e2f8fa75008ebb2ab606c4832fe3727dc3beed",
+  "file_count": 890,
+  "bytes": 21455397,
+  "external_archive_verification": {
+    "receipt": "E:\\VehicleSoundLab\\references\\analysis\\observer_forward_known_archive_verification.json",
+    "sha256": "7ca6a3e380cab2d910cce7eda2b685c9ebff0fa360ca3cf138331da3b4a4b262",
+    "result": "independent_archive_source_zip_contracts_verified"
+  }
+}

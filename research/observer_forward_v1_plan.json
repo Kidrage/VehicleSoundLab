@@ -1,12 +1,21 @@
 {
   "schema": "vsl.observer-forward-plan/1",
-  "status": "planned; not implemented or qualified",
+  "status": "7 known controls and independent scalar/DFT/adjoint/null audit passed; actual-material inverse not started",
   "reason": "Row-quantile blending improves old conditional phase spreading but still worsens observed L/R and CV relative to original relative phase; instantaneous distribution fitting is insufficient.",
   "known_first": "Build a matrix-free linear forward map from complex oscillator-envelope nodes through waveform synthesis to the ORIGINAL Hann4096/hop256 coefficient observer. Verify against independent scalar OSC plus direct DFT before material inference.",
-  "controls": ["constant complex coefficients", "known amplitude ramp", "known phase rotation represented as complex nodes", "nearby carriers and image leakage", "asymmetric stereo and silent channel", "forward/adjoint inner-product identity", "explicit underdetermined null direction and non-unique inverse"],
+  "controls": [
+    "constant complex coefficients",
+    "known amplitude ramp",
+    "known phase rotation represented as complex nodes",
+    "nearby carriers and image leakage",
+    "asymmetric stereo and silent channel",
+    "forward/adjoint inner-product identity",
+    "explicit underdetermined null direction and non-unique inverse"
+  ],
   "constraints": "Preserve exact original observation times/global demodulation, both complex channels, signed cross-order terms and all declared carrier groups. No blind rate/rho/rank/strength or unwrap sweep. Fitted envelope nodes are an inference representation, not proof of physical mechanics.",
   "material_next": "Only after known controls, use all six frozen F3 source arrays and saved native/warp coordinates. Infer temporally regularized latent trajectories with explicit regularization/conditioning diagnostics, then fit sample-free stochastic source parameters and reobserve generated waves. Keep all source/band/chunk regressions.",
   "acceptance": "Separate forward correctness, inverse ambiguity, statistical improvement, native48k antialiasing, target cost, C numerical fidelity and human timbre acceptance. None substitutes for another.",
   "product_scope": "One driver and modular V6 DNA/BODY/DETAIL/EVENT/AUX; separate future spatial renderer. Multiple engines, full driving state coverage and physical7.1.4 remain active.",
-  "no_promotion_or_new_hearing_yet": true
+  "no_promotion_or_new_hearing_yet": true,
+  "known_results": "research/observer_forward_known_v1_summary.json"
 }
