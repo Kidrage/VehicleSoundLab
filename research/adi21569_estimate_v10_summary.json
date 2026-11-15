@@ -1,0 +1,61 @@
+{
+  "schema": "vsl.adi21569-cycle-recheck/10",
+  "date": "2026-11-15",
+  "code_basis": "bcee6866c45eaffa331be00dadb48907e1d0dba7",
+  "target": "ADSP-21569",
+  "sample_rate": 48000,
+  "channels": 2,
+  "vehicles": 1,
+  "assumed_clock_MHz": 1000,
+  "measured": false,
+  "optimized_target_port_implemented": false,
+  "guaranteed_WCET": false,
+  "established_minimum_cost": false,
+  "verified_V8_input_count": 1818,
+  "all_V8_inputs_exact": true,
+  "current_C_planning_MCPS": 800,
+  "current_C_allocation_MCPS": 900,
+  "current_C_largest_by_block": {
+    "240": {
+      "recipe": "legacy_exterior_four",
+      "known_job_concentration_upper_MCPS": 794.0594285714286,
+      "rounded_planning_MCPS": 800
+    },
+    "256": {
+      "recipe": "legacy_exterior_four",
+      "known_job_concentration_upper_MCPS": 790.4697142857143,
+      "rounded_planning_MCPS": 800
+    },
+    "512": {
+      "recipe": "legacy_exterior_four",
+      "known_job_concentration_upper_MCPS": 790.4697142857143,
+      "rounded_planning_MCPS": 800
+    }
+  },
+  "current_C_cases_unchanged_from_v9": true,
+  "research_reference_MCPS": {
+    "compact_runtime_reciprocal": [
+      2417.4320000000002,
+      4442.448
+    ],
+    "prepared_cell_slopes": [
+      2085.656,
+      3889.488
+    ]
+  },
+  "research_scope": "Earlier single-anchor per-sample statistical phase law; not current C or an accepted sound. Full driving, BODY, DETAIL and spatial excluded.",
+  "latest_inverse_scope": "Offline source analysis, not a replacement sustained source or a runtime audio path; no additional current-C MCPS.",
+  "basic_12channel_extra_MCPS": [
+    10,
+    30
+  ],
+  "runtime_tracked_modifications": [],
+  "recheck_file": "E:\\VehicleSoundLab\\references\\analysis\\adi21569_estimate_v10\\v9_recheck.json",
+  "recheck_sha256": "2fa623506070afef33e464297de123884353eac9d0c17b3ec091eb5cf15b76bd",
+  "arithmetic_audit_file": "E:\\VehicleSoundLab\\references\\analysis\\adi21569_estimate_v10\\arithmetic_audit.json",
+  "arithmetic_audit_sha256": "911c6a81bc61f131476c54a376017bf671b14d0ef385d76a66a226b3661238f6",
+  "documentation": "handoff/ADI21569算力估算V10.md",
+  "documentation_sha256": "5180a456fa5e32a4ad061b96d0107cf2daff59fd1d6e58a843941102921e5d88",
+  "no_runtime_C_model_driver_hearing_change": true,
+  "no_push": true
+}
