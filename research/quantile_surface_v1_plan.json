@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.quantile-surface/1",
+  "status": "Seven known controls and independent9474-query audit passed. Original phase_input_paths_v1 all54 sets,216 outcomes and full independent publication review now finished. No real-material quantile-surface comparisons started; add the circular-seam known counterexample before all-source comparison.",
+  "purpose": "Construct a new conditional phase law that removes the tiny-CDF-probability divisor from the P derivative; measure the resulting distributional and waveform tradeoff, without claiming an equivalent decoder optimization.",
+  "definition": "Q_new(P,u)=(1-w)*Q_i(u)+w*Q_(i+1)(u), with the original conditional rows, original P knots, original shared phase branch and original clamping. Q_i is the exact row inverse including atoms. At a knot it equals the old decoder. Between knots it generally does not preserve the old conditional CDF or circular moments.",
+  "known_first": "Seven declared cases: identical rows, single node, moving atom mass, three unequal knots, constant atom, repeated atoms and extended phase branch. Endpoints, all CDF boundaries and adjacent floats, interior P and outside clamps. Independent scalar cell walk and hat interpolation. A moving-atom counterexample must show both the bounded P derivative and a nonzero conditional circular-moment change.",
+  "no_material_read_in_known": true,
+  "gates": {"known_phase_radians": 2e-12, "known_P_derivative": 2e-12},
+  "real_followup_if_justified_by_completed_input_paths": "All six frozen sources, all three original saved dual-state paths and all three conditional maps. Preserve amplitudes/common phase/U/RNG,65536 coordinates,1024 samples per cycle,256 endpoints,original taper and gain. Retain all old conditional and original-marginal comparators. Inspect the full Hann4096/hop256 observer, original39-41-row chunks, all bands, complex L/R, CV, phase derivatives and failures. No selected winning engine/seed/band publication.",
+  "known_limit": "No guarantee on U slopes, temporal statistics, joint moments, native48k aliasing, sound quality or hardware cost. Positive CDF-cell masses and common phase support are preconditions. Smoother anchored P paths are not sound presets.",
+  "scope": "Generic offline module, no engine-specific formulas. Keep670C-H82voice3F2/index/accepted moving35/default/one driver/owned/take/room/hearings. V6 DNA/BODY/DETAIL/EVENT/AUX and separate future spatial; complete multi-engine/state/physical7.1.4 goal active."
+}
