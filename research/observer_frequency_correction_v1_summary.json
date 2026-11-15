@@ -1,0 +1,755 @@
+{
+  "result": "observer_frequency_correction_frozen",
+  "source_models": 6,
+  "engines": 1,
+  "ascents": 2,
+  "correction_known_mono_stereo_cases": 3,
+  "zero_rhs_exact": true,
+  "source_captures": 12,
+  "band_Gram_matrices": 5760,
+  "primal_dual_known_candidates": 9,
+  "primal_dual_source_states": 12,
+  "boundary_known_cases": 2,
+  "boundary_source_cases": 6,
+  "publication_rows": 36,
+  "solver_converged": 0,
+  "additional_gap_passed": {
+    "initial": 0,
+    "block_refined": 0
+  },
+  "results": {
+    "source_models": 6,
+    "engines": 1,
+    "ascents": 2,
+    "in_sample_only": true,
+    "original_solver_converged": 0,
+    "stops": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "variants": {
+      "interpolated": {
+        "weighted_objective_mean": 159138.30346466004,
+        "wave_NRMSE_mean": 0.4313965384688032,
+        "wave_region_NRMSE_mean": 0.4876277339416808,
+        "line_power_error_dB_mean": 1.046140191439399,
+        "broad_power_error_dB_mean": 3.5327723020751636,
+        "line_coherence_error_mean": 0.02460505809770125,
+        "broad_coherence_error_mean": 0.045446737792541686,
+        "line_CV_error_mean": 0.034479455490206506,
+        "broad_CV_error_mean": 0.059267545905223776,
+        "chunks_broad_power_error_dB_mean": 3.5564617066270134,
+        "chunks_broad_coherence_error_mean": 0.061418027426839474,
+        "chunks_broad_CV_error_mean": 0.05912803144312758,
+        "broad_signed_power_error_dB_by_band": [
+          -1.132840033781723,
+          -2.6143518574984,
+          -3.8810233173890083,
+          -4.01258790764123,
+          -4.227054149733137,
+          -5.328776546407481
+        ]
+      },
+      "old_original4000": {
+        "weighted_objective_mean": 73709.17177580822,
+        "wave_NRMSE_mean": 0.28030025906339234,
+        "wave_region_NRMSE_mean": 0.34496043503366597,
+        "line_power_error_dB_mean": 0.0015781181065970342,
+        "broad_power_error_dB_mean": 0.7532424020235394,
+        "line_coherence_error_mean": 4.434126334321265e-05,
+        "broad_coherence_error_mean": 0.022364171142875942,
+        "line_CV_error_mean": 0.00020195724788034443,
+        "broad_CV_error_mean": 0.05323351551644659,
+        "chunks_broad_power_error_dB_mean": 0.7797280804477899,
+        "chunks_broad_coherence_error_mean": 0.04042812026669292,
+        "chunks_broad_CV_error_mean": 0.040470330499613454,
+        "broad_signed_power_error_dB_by_band": [
+          -0.2150146489641923,
+          -0.23588844953446628,
+          -0.360790094113115,
+          -0.3957593613578827,
+          -0.41226010211701863,
+          -2.8997417560545617
+        ]
+      },
+      "old_corrected": {
+        "weighted_objective_mean": 233516.36739870792,
+        "wave_NRMSE_mean": 0.34731296794450034,
+        "wave_region_NRMSE_mean": 0.42362067566430117,
+        "line_power_error_dB_mean": 0.0007630342882617944,
+        "broad_power_error_dB_mean": 0.8015464220278488,
+        "line_coherence_error_mean": 2.1553335156810805e-05,
+        "broad_coherence_error_mean": 0.02128855209114254,
+        "line_CV_error_mean": 0.00012661314016287537,
+        "broad_CV_error_mean": 0.052066828394768595,
+        "chunks_broad_power_error_dB_mean": 0.8180648976868669,
+        "chunks_broad_coherence_error_mean": 0.03778751361760087,
+        "chunks_broad_CV_error_mean": 0.04280498444875816,
+        "broad_signed_power_error_dB_by_band": [
+          -0.24609543303786485,
+          -0.27991756448703636,
+          -0.4158637439837511,
+          -0.450298650759322,
+          -0.4808418379784923,
+          -2.9362613019206267
+        ]
+      },
+      "complete": {
+        "weighted_objective_mean": 3014.725258460167,
+        "wave_NRMSE_mean": 0.0021052599413754545,
+        "wave_region_NRMSE_mean": 0.001817429845483628,
+        "line_power_error_dB_mean": 5.3839522292508395,
+        "broad_power_error_dB_mean": 6.616938879142996,
+        "line_coherence_error_mean": 0.1078870776094799,
+        "broad_coherence_error_mean": 0.13914790257164186,
+        "line_CV_error_mean": 0.09499835997004807,
+        "broad_CV_error_mean": 0.09749946855992703,
+        "chunks_broad_power_error_dB_mean": 6.709696328610749,
+        "chunks_broad_coherence_error_mean": 0.14355428886583232,
+        "chunks_broad_CV_error_mean": 0.07564689303269284,
+        "broad_signed_power_error_dB_by_band": [
+          -6.901749620435417e-05,
+          -0.6758994867069291,
+          -4.240066953778782,
+          -10.831131997347134,
+          -17.43702983255618,
+          6.446378228841584
+        ]
+      },
+      "weighted": {
+        "weighted_objective_mean": 2.7871446527077004,
+        "wave_NRMSE_mean": 0.00041214293486906123,
+        "wave_region_NRMSE_mean": 0.0003182976778149634,
+        "line_power_error_dB_mean": 0.38386263702109735,
+        "broad_power_error_dB_mean": 0.37906085463101746,
+        "line_coherence_error_mean": 0.02105634105100909,
+        "broad_coherence_error_mean": 0.036347311056511636,
+        "line_CV_error_mean": 0.023361823981547753,
+        "broad_CV_error_mean": 0.04321227907601845,
+        "chunks_broad_power_error_dB_mean": 0.45661790120387474,
+        "chunks_broad_coherence_error_mean": 0.030124107368482908,
+        "chunks_broad_CV_error_mean": 0.026203101229989288,
+        "broad_signed_power_error_dB_by_band": [
+          -0.00016584942179243377,
+          -0.0003349714566559692,
+          -0.0009686314156727788,
+          -0.00857025147247441,
+          -0.058667734738334566,
+          2.015116766550855
+        ]
+      },
+      "block_refined": {
+        "weighted_objective_mean": 2.537519755119635,
+        "wave_NRMSE_mean": 0.0003917905696942981,
+        "wave_region_NRMSE_mean": 0.0003027036682767025,
+        "line_power_error_dB_mean": 0.3441229382098696,
+        "broad_power_error_dB_mean": 1.0234517302355994,
+        "line_coherence_error_mean": 0.010027201193171022,
+        "broad_coherence_error_mean": 0.029408683930209525,
+        "line_CV_error_mean": 0.0133785864428815,
+        "broad_CV_error_mean": 0.05018004734842633,
+        "chunks_broad_power_error_dB_mean": 1.0889568548598714,
+        "chunks_broad_coherence_error_mean": 0.03453922280423264,
+        "chunks_broad_CV_error_mean": 0.0341082113598207,
+        "broad_signed_power_error_dB_by_band": [
+          -7.412217752408635e-05,
+          -0.0003161239712587764,
+          -0.0009373996972543847,
+          -0.008517708873737536,
+          -0.05869050192156874,
+          -6.0721745247722545
+        ]
+      }
+    },
+    "paired": {
+      "block_refined_minus_interpolated": {
+        "wave_NRMSE": {
+          "mean_change": -0.43100474789910886,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.4873250302734042,
+          "improved": 18,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 18
+        },
+        "line_power_error_dB": {
+          "mean_change": -0.7020172532295295,
+          "improved": 63,
+          "regressed": 9,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_power_error_dB": {
+          "mean_change": -2.509320571839564,
+          "improved": 66,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 72
+        },
+        "line_coherence_error": {
+          "mean_change": -0.014577856904530232,
+          "improved": 32,
+          "regressed": 4,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.01603805386233217,
+          "improved": 30,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 36
+        },
+        "line_CV_error": {
+          "mean_change": -0.021100869047325003,
+          "improved": 64,
+          "regressed": 8,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_CV_error": {
+          "mean_change": -0.00908749855679746,
+          "improved": 62,
+          "regressed": 10,
+          "equivalent": 0,
+          "count": 72
+        },
+        "chunks_broad_power_error_dB": {
+          "mean_change": -2.4675048517671425,
+          "improved": 193,
+          "regressed": 23,
+          "equivalent": 0,
+          "count": 216
+        },
+        "chunks_broad_coherence_error": {
+          "mean_change": -0.026878804622606826,
+          "improved": 92,
+          "regressed": 16,
+          "equivalent": 0,
+          "count": 108
+        },
+        "chunks_broad_CV_error": {
+          "mean_change": -0.02501982008330688,
+          "improved": 191,
+          "regressed": 25,
+          "equivalent": 0,
+          "count": 216
+        }
+      },
+      "block_refined_minus_old_original4000": {
+        "wave_NRMSE": {
+          "mean_change": -0.27990846849369805,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.34465773136538924,
+          "improved": 18,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 18
+        },
+        "line_power_error_dB": {
+          "mean_change": 0.3425448201032726,
+          "improved": 47,
+          "regressed": 25,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_power_error_dB": {
+          "mean_change": 0.27020932821206006,
+          "improved": 60,
+          "regressed": 12,
+          "equivalent": 0,
+          "count": 72
+        },
+        "line_coherence_error": {
+          "mean_change": 0.009982859929827807,
+          "improved": 23,
+          "regressed": 13,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_coherence_error": {
+          "mean_change": 0.007044512787333584,
+          "improved": 31,
+          "regressed": 5,
+          "equivalent": 0,
+          "count": 36
+        },
+        "line_CV_error": {
+          "mean_change": 0.013176629195001156,
+          "improved": 54,
+          "regressed": 18,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_CV_error": {
+          "mean_change": -0.003053468168020261,
+          "improved": 65,
+          "regressed": 7,
+          "equivalent": 0,
+          "count": 72
+        },
+        "chunks_broad_power_error_dB": {
+          "mean_change": 0.30922877441208163,
+          "improved": 179,
+          "regressed": 37,
+          "equivalent": 0,
+          "count": 216
+        },
+        "chunks_broad_coherence_error": {
+          "mean_change": -0.005888897462460286,
+          "improved": 93,
+          "regressed": 15,
+          "equivalent": 0,
+          "count": 108
+        },
+        "chunks_broad_CV_error": {
+          "mean_change": -0.006362119139792751,
+          "improved": 190,
+          "regressed": 26,
+          "equivalent": 0,
+          "count": 216
+        }
+      },
+      "block_refined_minus_old_corrected": {
+        "wave_NRMSE": {
+          "mean_change": -0.34692117737480604,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.4233179719960245,
+          "improved": 18,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 18
+        },
+        "line_power_error_dB": {
+          "mean_change": 0.3433599039216078,
+          "improved": 42,
+          "regressed": 30,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_power_error_dB": {
+          "mean_change": 0.2219053082077507,
+          "improved": 60,
+          "regressed": 12,
+          "equivalent": 0,
+          "count": 72
+        },
+        "line_coherence_error": {
+          "mean_change": 0.01000564785801421,
+          "improved": 21,
+          "regressed": 15,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_coherence_error": {
+          "mean_change": 0.008120131839066987,
+          "improved": 31,
+          "regressed": 5,
+          "equivalent": 0,
+          "count": 36
+        },
+        "line_CV_error": {
+          "mean_change": 0.013251973302718625,
+          "improved": 46,
+          "regressed": 26,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_CV_error": {
+          "mean_change": -0.0018867810463422821,
+          "improved": 64,
+          "regressed": 8,
+          "equivalent": 0,
+          "count": 72
+        },
+        "chunks_broad_power_error_dB": {
+          "mean_change": 0.2708919571730045,
+          "improved": 180,
+          "regressed": 36,
+          "equivalent": 0,
+          "count": 216
+        },
+        "chunks_broad_coherence_error": {
+          "mean_change": -0.003248290813368227,
+          "improved": 93,
+          "regressed": 15,
+          "equivalent": 0,
+          "count": 108
+        },
+        "chunks_broad_CV_error": {
+          "mean_change": -0.008696773088937461,
+          "improved": 194,
+          "regressed": 22,
+          "equivalent": 0,
+          "count": 216
+        }
+      },
+      "block_refined_minus_complete": {
+        "wave_NRMSE": {
+          "mean_change": -0.0017134693716811561,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -0.0015147261772069254,
+          "improved": 18,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 18
+        },
+        "line_power_error_dB": {
+          "mean_change": -5.03982929104097,
+          "improved": 68,
+          "regressed": 4,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_power_error_dB": {
+          "mean_change": -5.593487148907395,
+          "improved": 54,
+          "regressed": 18,
+          "equivalent": 0,
+          "count": 72
+        },
+        "line_coherence_error": {
+          "mean_change": -0.09785987641630887,
+          "improved": 34,
+          "regressed": 2,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.10973921864143234,
+          "improved": 35,
+          "regressed": 1,
+          "equivalent": 0,
+          "count": 36
+        },
+        "line_CV_error": {
+          "mean_change": -0.08161977352716658,
+          "improved": 66,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_CV_error": {
+          "mean_change": -0.04731942121150069,
+          "improved": 56,
+          "regressed": 16,
+          "equivalent": 0,
+          "count": 72
+        },
+        "chunks_broad_power_error_dB": {
+          "mean_change": -5.620739473750878,
+          "improved": 165,
+          "regressed": 51,
+          "equivalent": 0,
+          "count": 216
+        },
+        "chunks_broad_coherence_error": {
+          "mean_change": -0.10901506606159968,
+          "improved": 102,
+          "regressed": 6,
+          "equivalent": 0,
+          "count": 108
+        },
+        "chunks_broad_CV_error": {
+          "mean_change": -0.04153868167287214,
+          "improved": 177,
+          "regressed": 39,
+          "equivalent": 0,
+          "count": 216
+        }
+      },
+      "block_refined_minus_weighted": {
+        "wave_NRMSE": {
+          "mean_change": -2.0352365174763117e-05,
+          "improved": 6,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 6
+        },
+        "wave_region_NRMSE": {
+          "mean_change": -1.559400953826085e-05,
+          "improved": 18,
+          "regressed": 0,
+          "equivalent": 0,
+          "count": 18
+        },
+        "line_power_error_dB": {
+          "mean_change": -0.03973969881122768,
+          "improved": 54,
+          "regressed": 18,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_power_error_dB": {
+          "mean_change": 0.6443908756045821,
+          "improved": 51,
+          "regressed": 21,
+          "equivalent": 0,
+          "count": 72
+        },
+        "line_coherence_error": {
+          "mean_change": -0.011029139857838068,
+          "improved": 22,
+          "regressed": 14,
+          "equivalent": 0,
+          "count": 36
+        },
+        "broad_coherence_error": {
+          "mean_change": -0.006938627126302102,
+          "improved": 22,
+          "regressed": 14,
+          "equivalent": 0,
+          "count": 36
+        },
+        "line_CV_error": {
+          "mean_change": -0.009983237538666253,
+          "improved": 41,
+          "regressed": 31,
+          "equivalent": 0,
+          "count": 72
+        },
+        "broad_CV_error": {
+          "mean_change": 0.006967768272407883,
+          "improved": 39,
+          "regressed": 33,
+          "equivalent": 0,
+          "count": 72
+        },
+        "chunks_broad_power_error_dB": {
+          "mean_change": 0.6323389536559966,
+          "improved": 161,
+          "regressed": 55,
+          "equivalent": 0,
+          "count": 216
+        },
+        "chunks_broad_coherence_error": {
+          "mean_change": 0.004415115435749732,
+          "improved": 63,
+          "regressed": 45,
+          "equivalent": 0,
+          "count": 108
+        },
+        "chunks_broad_CV_error": {
+          "mean_change": 0.007905110129831413,
+          "improved": 132,
+          "regressed": 84,
+          "equivalent": 0,
+          "count": 216
+        }
+      }
+    },
+    "additional_gap_passed": {
+      "initial": 0,
+      "block_refined": 0
+    },
+    "additional_gap_not_original_stop_gate": true
+  },
+  "boundary_endcap_fractions": [
+    [
+      0.29363352522466984,
+      0.6763861956134687,
+      0.9090986252062672,
+      0.9902142722372903,
+      0.9973675834414889,
+      0.9999979843887131,
+      0.9999997711891329
+    ],
+    [
+      0.28425281987195244,
+      0.5052437030844783,
+      0.8556665272162907,
+      0.97910280504017,
+      0.993712538431007,
+      0.9999966669157743,
+      0.9999996560878294
+    ],
+    [
+      0.2630303753390751,
+      0.34879808127256207,
+      0.6837923401073371,
+      0.9361881229518956,
+      0.9829316431537071,
+      0.9999952179858214,
+      0.9999966460763653
+    ],
+    [
+      0.3118901443630482,
+      0.6231240732178488,
+      0.8941977649077635,
+      0.985199085320804,
+      0.9962027940313138,
+      0.9999973348856867,
+      0.9999997038032601
+    ],
+    [
+      0.25623258739970806,
+      0.7792109020320275,
+      0.9519897499763172,
+      0.9944306559254227,
+      0.9984213831070278,
+      0.9999967572048849,
+      0.9999998694097351
+    ],
+    [
+      0.28466706805176856,
+      0.542103049624867,
+      0.8401644104754052,
+      0.9799687526345982,
+      0.994810474226975,
+      0.9999974804998764,
+      0.9999995869028409
+    ]
+  ],
+  "historical_failed_audits": [
+    {
+      "folder": "optimality/known_audit1",
+      "error": "AssertionError(('separated_corrected', 'residual_dual_scale', 1.0000000287611015, 1.0000000003453413))",
+      "executed_auditor_sha256": "361e33d3bbceddab93d90e15a724c440ad9e653d46db93eb172bc045191555eb"
+    },
+    {
+      "folder": "optimality/real_audit1",
+      "error": "AssertionError(('F3 Fifth First Mid', 'block_refined', 'dual_lower_bound', 6.701367693459848e-08))",
+      "executed_auditor_sha256": "a74d3b327b17f99e4c1eb4e6e2a12d359bbc1d35c8f78da2ab22fc1b8f6067db"
+    }
+  ],
+  "failed_packaging_attempt": "package_attempt1/executed_package.py;per-source folder lookup repaired;copied payloads reused only after byte verification",
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\block_known2\\report.json": "inputs/upstream/observer_frequency_v1/evidence/block_known2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\block_known_audit1\\report.json": "inputs/upstream/observer_frequency_v1/evidence/block_known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\block_known2\\separated.npz": "inputs/upstream/observer_frequency_v1/evidence/block_known2/separated.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\block_known2\\neighbors.npz": "inputs/upstream/observer_frequency_v1/evidence/block_known2/neighbors.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\known_audit1\\report.json": "evidence/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\report.json": "inputs/upstream/observer_frequency_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real_audit1\\report.json": "inputs/upstream/observer_frequency_v1/evidence/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\metric_preparation.json": "inputs/upstream/observer_frequency_v1/evidence/real1/metric_preparation.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Early\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Early\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Early\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Early\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Mid\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Mid\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Mid\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Mid\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Late\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Late\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Late\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth First Late\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Early\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Early\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Early\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Early\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Mid\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Mid\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Mid\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Mid\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Late\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Late\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Late\\metric.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\real1\\F3 Fifth Second Late\\weighted.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/weighted.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\known1\\separated.npz": "evidence/known1/separated.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\known1\\neighbors.npz": "evidence/known1/neighbors.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\known1\\stereo.npz": "evidence/known1/stereo.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_optimality_v1\\known1\\report.json": "evidence/optimality/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_optimality_v1\\known_audit2\\report.json": "evidence/optimality/known_audit2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Early\\source.npz": "evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Early\\scale.npz": "evidence/real1/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Early\\metric.npz": "evidence/real1/F3 Fifth First Early/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Early\\initial.npz": "evidence/real1/F3 Fifth First Early/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Early\\block_refined.npz": "evidence/real1/F3 Fifth First Early/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Mid\\source.npz": "evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Mid\\scale.npz": "evidence/real1/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Mid\\metric.npz": "evidence/real1/F3 Fifth First Mid/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Mid\\initial.npz": "evidence/real1/F3 Fifth First Mid/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Mid\\block_refined.npz": "evidence/real1/F3 Fifth First Mid/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Late\\source.npz": "evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Late\\scale.npz": "evidence/real1/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Late\\metric.npz": "evidence/real1/F3 Fifth First Late/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Late\\initial.npz": "evidence/real1/F3 Fifth First Late/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth First Late\\block_refined.npz": "evidence/real1/F3 Fifth First Late/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Early\\source.npz": "evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Early\\scale.npz": "evidence/real1/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Early\\metric.npz": "evidence/real1/F3 Fifth Second Early/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Early\\initial.npz": "evidence/real1/F3 Fifth Second Early/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Early\\block_refined.npz": "evidence/real1/F3 Fifth Second Early/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Mid\\source.npz": "evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Mid\\scale.npz": "evidence/real1/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Mid\\metric.npz": "evidence/real1/F3 Fifth Second Mid/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Mid\\initial.npz": "evidence/real1/F3 Fifth Second Mid/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Mid\\block_refined.npz": "evidence/real1/F3 Fifth Second Mid/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Late\\source.npz": "evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Late\\scale.npz": "evidence/real1/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Late\\metric.npz": "evidence/real1/F3 Fifth Second Late/metric.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Late\\initial.npz": "evidence/real1/F3 Fifth Second Late/initial.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\F3 Fifth Second Late\\block_refined.npz": "evidence/real1/F3 Fifth Second Late/block_refined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real1\\report.json": "evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_boundary_v1\\known_audit1\\report.json": "evidence/boundary/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\review1\\report.json": "inputs/upstream/observer_frequency_v1/evidence/review1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\review1\\metrics_verification.json": "inputs/upstream/observer_frequency_v1/evidence/review1/metrics_verification.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_v1\\review1\\figure_inputs.json": "inputs/upstream/observer_frequency_v1/evidence/review1/figure_inputs.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1\\real_audit1\\report.json": "evidence/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_optimality_v1\\real1\\report.json": "evidence/optimality/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_optimality_v1\\real_audit2\\report.json": "evidence/optimality/real_audit2/report.json"
+  },
+  "decision": {
+    "native_or_runtime_promoted": false,
+    "all6_original_gate_failed": true,
+    "all12_additional_gap_gates_failed": true,
+    "reason": "Same objective decreased but weak-high-band power/CV regress; partial endcap rows dominate complete-frame high-band reference energy. Preserve every outcome and diagnose supported spectral constraints before a new solve.",
+    "next": "research/observer_supported_metric_v1_plan.json"
+  },
+  "original_solver_gate_unchanged": true,
+  "floating_point_not_interval_certificate": true,
+  "numpy_longdouble_bits": 64,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "runtime_default_driver_owned_take_room_changed": false,
+  "new_stochastic_source": false,
+  "native48k_or_C_or_timbre_qualified": false,
+  "scientific_figures_individually_viewed": 2,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "research/observer_supported_metric_v1_plan.json",
+  "manifest_sha256": "fa38c0f24aa2652e15c3ae6ae463c6b468f76583c63ef707def573f224021de8",
+  "file_count": 1205,
+  "bytes": 190618269,
+  "independent_archive_verification": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1_archive_verification.json",
+    "sha256": "07817ce63c285f50810e28467d5a583872b336697fd7cee680dbb15abc93aa0e"
+  },
+  "independent_input_binding_verification": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_frequency_correction_v1_binding_verification.json",
+    "sha256": "70f36f2db8c94dd2529611e443c76250b4176e26c04f9aa21c5f8ae96331e819"
+  }
+}

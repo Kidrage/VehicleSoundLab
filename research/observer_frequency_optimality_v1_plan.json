@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.observer-frequency-optimality/1",
+  "purpose": "Evaluate an independent convex primal/dual gap on saved initial and block-corrected solutions; no further fitting or iteration restart.",
+  "objective": "J(q)=||Bq-y||^2 + q^T R q; B is the full shared-weighted finite-Hann OSC operator; R=alpha D2^T D2+beta I with the ORIGINAL alpha=0.001, beta=0.000001 and scale coordinates.",
+  "dual": "D(u)=-||u||^2-2 y^T u-(B^T u)^T R^-1(B^T u). Choose u=t(Bq-y), with t minimizing the gap along that dual ray.",
+  "identity": "J-D=||r-u||^2+||R^(1/2)(q+R^-1 B^T u)||^2, a stable nonnegative sum. J-Jstar<=J-D; both the weighted waveform and penalty distance to the unique regularized mathematical optimum are bounded, not physical identifiability.",
+  "known_first": "Both original separated/neighbor mono fixtures, old-eight-iteration initial, corrected solution, deterministic perturbed source; stereo initial/corrected with shared metric; exact silence. Independent explicit matrices/dense optima check bound validity, identity and all reported scalars.",
+  "additional_gap_gate_before_material_read": {"relative": 0.000001, "absolute": 1e-10},
+  "scope": "Additional numerical diagnosis. Original stop1/2/4/5 plus 2e-7 gradient convergence field must remain unchanged. Passing this gap gate alone never qualifies sound, native48k, stereo fidelity or a stochastic generator.",
+  "material": "Once known controls pass, evaluate both saved states for ALL six original source windows; no new weights/rates/ranks/strengths or solver calls.",
+  "precision": "Double floating-point evaluation with independent arithmetic consistency, not rigorous interval arithmetic. Preserve negative bounds or failures rather than clamping evidence into a pass."
+}
