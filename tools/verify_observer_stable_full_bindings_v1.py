@@ -75,6 +75,21 @@ def main():
         value=json.loads(line)
         assert value['producer_handle_confirmed_live'] and value['progress']['pid']==full['pid']
     assert json.loads(observations[-1])==watch['latest_observed']
+    for folder,tool,array,key in (
+        ('stationarity_gap_audit1','audit_observer_stationarity_gap_v1.py','frozen_full_normals.npz','full_capture_sha256'),
+        ('full_gap_alignment1','audit_observer_stable_gap_alignment_v1.py','normals.npz','normals_sha256')):
+        extra=read(e/folder/'report.json')
+        expected='independent_observer_stationarity_gap_identity_passed' if folder=='stationarity_gap_audit1' else 'independent_observer_stable_gap_alignment_passed'
+        assert extra['result']==expected
+        assert extra['auditor_sha256']==sha(e/folder/'executed_audit.py')==sha(a.archive/'source/tools'/tool)
+        for name,digest in extra['inputs'].items(): bound(name,digest)
+        for j,(name,digest) in enumerate(extra['sources'].items()):
+            assert sha(e/folder/f'executed_oracle_{j}.py')==sha(a.archive/'source'/name)==digest
+        assert sha(e/folder/array)==extra[key]
+        if folder=='stationarity_gap_audit1': assert len(extra['controls'])==6 and extra['new_solves']==0
+        else:
+            assert extra['solver_qualified_unchanged']==full['solver_qualified']
+            assert len(extra['subspace_known_controls'])==5
     pub=read(e/'full_review1/report.json')
     assert pub['publisher_sha256']==sha(e/'full_review1/executed_publication.py')==sha(a.archive/'source/tools/publish_observer_stable_full_v1.py')
     assert pub['figure_inputs_sha256']==sha(e/'full_review1/figure_inputs.json')
@@ -95,6 +110,8 @@ def main():
         producer_source_bindings=sources,original_input_bindings=inputs,raw_basis_bindings=2,
         executed_auditor_oracle_bindings=executed,full_Gram_verified=True,
         independently_checked_projection_columns=len(columns),upstream_archives=sorted(manifests),
+        independent_gap_identity_controls=6,terminal_complete_normal_alignment_verified=True,
+        independent_subspace_controls=5,
         solver_qualified=full['solver_qualified'],fidelity_qualified=full['fidelity_qualified'],
         final_band_includes_analysis_Nyquist=True,all_failures_and_regressions_preserved=True,
         scientific_figures_verified=2,auditor_sha256=sha(Path(__file__)))

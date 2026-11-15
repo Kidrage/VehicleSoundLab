@@ -98,6 +98,17 @@ def main():
         assert summary['projection_columns_independently_checked']==len(audit['independently_checked_projection_columns'])
         assert summary['final_stable_estimator_pass']==audit['independent_stable_pass']
         assert summary['final_backward_discrepancy']==audit['independent_backward_discrepancy']
+        identity_path=a.study.parent/'stationarity_gap_audit1/report.json'
+        alignment_path=a.study.parent/'full_gap_alignment1/report.json'
+        identity,alignment=load(identity_path),load(alignment_path)
+        assert pub['inputs'][str(identity_path)]==sha(identity_path)
+        assert pub['inputs'][str(alignment_path)]==sha(alignment_path)
+        assert identity['result']=='independent_observer_stationarity_gap_identity_passed'
+        assert alignment['result']=='independent_observer_stable_gap_alignment_passed'
+        assert summary['independent_gap_identity_controls']==len(identity['controls'])==6
+        assert summary['complete_normal_alignment']=={key:alignment[key] for key in summary['complete_normal_alignment']}
+        assert summary['independent_subspace_controls']==len(alignment['subspace_known_controls'])==5
+        assert summary['complete_normal_subspace_decomposition']==alignment['Krylov_subspace_normal_decomposition']
         for key in ('whole_wave_NRMSE','target_wave_NRMSE'):
             assert summary[key+'_before']==old['metrics'][key]
             assert summary[key+'_after']==audit['metrics'][key]

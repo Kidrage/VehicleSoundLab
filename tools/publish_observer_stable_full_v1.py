@@ -20,6 +20,15 @@ def main():
     assert audit['producer_sha256']==sha(a.study/'report.json')
     assert report['solver_qualified']==audit['solver_qualified']
     assert report['fidelity_qualified']==audit['fidelity_qualified']
+    identity_path=a.study.parent/'stationarity_gap_audit1/report.json'
+    alignment_path=a.study.parent/'full_gap_alignment1/report.json'
+    identity,alignment=load(identity_path),load(alignment_path)
+    assert identity['result']=='independent_observer_stationarity_gap_identity_passed'
+    assert alignment['result']=='independent_observer_stable_gap_alignment_passed'
+    assert len(identity['controls'])==6 and identity['new_solves']==0
+    assert alignment['inputs'][str(a.study/'report.json')]==sha(a.study/'report.json')
+    assert alignment['inputs'][str(a.audit/'report.json')]==sha(a.audit/'report.json')
+    assert alignment['inputs'][str(identity_path)]==sha(identity_path)
     units_path=a.study.parent/'frequency_units_audit1/report.json'
     units=load(units_path)
     assert units['result']=='independent_observer_stable_frequency_units_passed'
@@ -66,11 +75,19 @@ def main():
         projection_columns_independently_checked=len(audit['independently_checked_projection_columns']),
         final_stable_estimator_pass=audit['independent_stable_pass'],
         final_backward_discrepancy=audit['independent_backward_discrepancy'],
+        complete_normal_alignment={key:alignment[key] for key in (
+            'direct_normal_norm','modeled_normal_norm','normal_difference_norm',
+            'normal_difference_relative_to_direct','fitted_original_normal_squared',
+            'gap_at_negative_residual','original_saved_dual_gap','original_saved_gap_gate',
+            'model_normal_squared_would_pass_gap','fitted_node_roundtrip_normal_difference')},
+        independent_gap_identity_controls=len(identity['controls']),
+        independent_subspace_controls=len(alignment['subspace_known_controls']),
+        complete_normal_subspace_decomposition=alignment['Krylov_subspace_normal_decomposition'],
         regressions={field:sum(r['regressed'] for r in rows if r['metric']==field) for field in sorted({r['metric'] for r in rows})},
         whole_wave_NRMSE_before=before['whole_wave_NRMSE'],whole_wave_NRMSE_after=after['whole_wave_NRMSE'],
         target_wave_NRMSE_before=before['target_wave_NRMSE'],target_wave_NRMSE_after=after['target_wave_NRMSE'],
         source_or_native48k_or_C_or_hearing_qualified=False)
-    inputs={str(a.study/'report.json'):sha(a.study/'report.json'),str(a.audit/'report.json'):sha(a.audit/'report.json'),str(original_path):sha(original_path),str(units_path):sha(units_path)}
+    inputs={str(path):sha(path) for path in (a.study/'report.json',a.audit/'report.json',original_path,units_path,identity_path,alignment_path)}
     data=dict(checkpoints=checkpoints,gaps=gaps,fidelity_rows=rows,summary=summary,
         gates=dict(stable_normal=1e-11,backward=1e-11,original_gradient=2e-7,gap_relative=1e-6,gap_absolute=1e-10))
     save(a.out/'figure_inputs.json',data)
@@ -79,6 +96,7 @@ def main():
     fig.suptitle('Full288 known problem: stopping estimates and original guards',y=.985)
     x=[c['directions'] for c in checkpoints]
     axes[0].semilogy(x,[c['stable_normal_relative']/1e-11 for c in checkpoints],label='Stable model normal / gate',color='#246d8d')
+    axes[0].semilogy(x,[c['direct_normal_relative']/1e-11 for c in checkpoints],label='Direct complete normal / gate',color='#7f5292',ls=':')
     axes[0].semilogy(x,[c['original_gradient']/2e-7 for c in checkpoints],label='Original gradient / gate',color='#b94b3e')
     axes[0].set_ylabel('Stopping / gradient ratios')
     axes[0].legend(loc='upper left',bbox_to_anchor=(0,1.30),ncol=2,frameon=False)

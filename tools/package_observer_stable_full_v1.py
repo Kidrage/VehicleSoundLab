@@ -17,6 +17,8 @@ def main():
     visual=load(e/'full_review1/visual_review.json')
     units=load(e/'frequency_units_audit1/report.json')
     watch=load(e/'full_watch1/report.json')
+    identity=load(e/'stationarity_gap_audit1/report.json')
+    alignment=load(e/'full_gap_alignment1/report.json')
     assert full['result']=='observer_stable_full_known_measured' and full['only_one_attempt']
     assert independent['result']=='independent_observer_stable_full_passed'
     assert independent['producer_sha256']==sha(e/'full1/report.json')
@@ -31,6 +33,10 @@ def main():
     assert watch['producer_report_sha256']==sha(e/'full1/report.json')
     assert watch['audit_report_sha256']==sha(e/'full_audit1/report.json')
     assert watch['watcher_sha256']==sha(e/'full_watch1/executed_watch.py')==sha(repo/'tools/watch_observer_stable_full_v1.py')
+    assert identity['result']=='independent_observer_stationarity_gap_identity_passed'
+    assert alignment['result']=='independent_observer_stable_gap_alignment_passed'
+    assert len(identity['controls'])==6 and identity['new_solves']==0
+    assert len(alignment['subspace_known_controls'])==5
     parents={}
     inputs={}
     for name in ('observer_representer_v1','observer_stable_known_v1'):
@@ -55,7 +61,8 @@ def main():
     assert sha(repo/'handoff/C文件索引.csv')==entries['source/handoff/C文件索引.csv']
     hearings=load(repo/'research/observer_stable_known_v1_summary.json')['protected_hearings_sha256']
     assert all(sha(repo/name)==digest for name,digest in hearings.items())
-    folders=('full1','full_audit1','full_review1','frequency_units_audit1','full_watch1')
+    folders=('full1','full_audit1','full_review1','frequency_units_audit1','full_watch1',
+        'stationarity_gap_audit1','full_gap_alignment1')
     locations={}
     def bind(original,digest):
         original=Path(original)
@@ -89,6 +96,15 @@ def main():
     for j,(name,digest) in enumerate(independent['oracles_sha256'].items()):
         assert sha(repo/name)==sha(e/'full_audit1'/f'executed_oracle_{j}.py')==digest
     for name,digest in pub['inputs'].items(): bind(name,digest)
+    for folder,report in (('stationarity_gap_audit1',identity),('full_gap_alignment1',alignment)):
+        tool='tools/audit_observer_stationarity_gap_v1.py' if folder=='stationarity_gap_audit1' else 'tools/audit_observer_stable_gap_alignment_v1.py'
+        assert report['auditor_sha256']==sha(e/folder/'executed_audit.py')==sha(repo/tool)
+        for name,digest in report['inputs'].items(): bind(name,digest)
+        for j,(name,digest) in enumerate(report['sources'].items()):
+            assert sha(repo/name)==sha(e/folder/f'executed_oracle_{j}.py')==digest
+        array='frozen_full_normals.npz' if folder=='stationarity_gap_audit1' else 'normals.npz'
+        key='full_capture_sha256' if folder=='stationarity_gap_audit1' else 'normals_sha256'
+        assert sha(e/folder/array)==report[key]
     assert sha(e/'full_review1/executed_publication.py')==sha(repo/'tools/publish_observer_stable_full_v1.py')==pub['publisher_sha256']
     assert metrics['auditor_sha256']==sha(e/'full_review1/executed_metrics_audit.py')==sha(repo/'tools/audit_observer_stable_full_review_v1.py')
     assert all(sha(e/'full_review1'/name)==digest for name,digest in pub['images'].items())
@@ -104,6 +120,7 @@ def main():
     sources=[n.removeprefix('source/') for n in entries if n.startswith('source/') and (repo/n.removeprefix('source/')).is_file()]
     sources += [n for n in names if 'observer_stable' in n and Path(n).suffix in ('.py','.json','.md')]
     sources += ['research/稳定残差完整声源求解V1.md']
+    sources += ['tools/audit_observer_stationarity_gap_v1.py','research/observer_stable_full_followup_v1_plan.json']
     validation=dict(result='observer_stable_full_frozen',results=pub['summary'],original_input_archive_locations=locations,
         upstream_manifests_sha256={n:sha(v[0]/'manifest.json') for n,v in parents.items()},
         C_H_exact=670,voice_parameters_exact=82,F2_files_exact=3,C_index_exact=True,protected_hearings_sha256=hearings,
@@ -111,6 +128,8 @@ def main():
         fidelity_qualified=full['fidelity_qualified'],full_basis_Grams_independently_verified=True,
         selected_projection_columns_independently_verified=len(independent['independently_checked_projection_columns']),
         scientific_figures_individually_viewed=2,original_gates_and_objective_unchanged=True,all_regressions_retained=True,
+        independent_gap_identity_controls=6,terminal_complete_normal_alignment_verified=True,
+        independent_subspace_controls=5,
         original_analysis_rate=65536,final_band_includes_Nyquist=True,native48k_or_C_or_timbre_qualified=False,
         runtime_default_driver_owned_take_room_changed=False,old_68CTest_not_repeated=True,downloaded=False,pushed=False,full_goal='active')
     root=a.workspace/'baselines/observer_stable_full_v1'

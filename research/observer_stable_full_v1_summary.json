@@ -1,0 +1,128 @@
+{
+  "result": "observer_stable_full_frozen",
+  "results": {
+    "solver_qualified": false,
+    "fidelity_qualified": true,
+    "directions": 4000,
+    "stopping_code": 7,
+    "accepted": false,
+    "original_gradient": 3.0813407892625336e-08,
+    "full_Gram_verified": true,
+    "projection_columns_independently_checked": 64,
+    "final_stable_estimator_pass": false,
+    "final_backward_discrepancy": 5.749424935799236e-13,
+    "complete_normal_alignment": {
+      "direct_normal_norm": 0.0188575091333541,
+      "modeled_normal_norm": 0.018857508411064348,
+      "normal_difference_norm": 1.0510109175690154e-07,
+      "normal_difference_relative_to_direct": 5.573434487750275e-06,
+      "fitted_original_normal_squared": 0.00035560567963774435,
+      "gap_at_negative_residual": 0.00035560567963773676,
+      "original_saved_dual_gap": 0.00035560565071453336,
+      "original_saved_gap_gate": 3.385360257381465e-08,
+      "model_normal_squared_would_pass_gap": false,
+      "fitted_node_roundtrip_normal_difference": 6.407136779636954e-08
+    },
+    "independent_gap_identity_controls": 6,
+    "independent_subspace_controls": 5,
+    "complete_normal_subspace_decomposition": {
+      "direct": {
+        "complete_squared": 0.0003556056507145333,
+        "inside_squared": 9.770349292135807e-15,
+        "outside_squared": 0.0003556056507047629,
+        "outside_energy_fraction": 0.9999999999725246,
+        "relative_Pythagoras_error": 1.524444522052689e-16
+      },
+      "modeled": {
+        "complete_squared": 0.0003556056234733626,
+        "inside_squared": 2.200243164506523e-23,
+        "outside_squared": 0.0003556056234733627,
+        "outside_energy_fraction": 1.0000000000000002,
+        "relative_Pythagoras_error": 3.04888927766554e-16
+      },
+      "difference": {
+        "complete_squared": 1.1046239488492636e-14,
+        "inside_squared": 9.770340125291595e-15,
+        "outside_squared": 1.27589936320104e-15,
+        "outside_energy_fraction": 0.1155053142320698,
+        "relative_Pythagoras_error": 1.4282886154021984e-16
+      }
+    },
+    "regressions": {
+      "target_supported_band_complex_NRMSE": 2,
+      "target_wave_NRMSE": 0,
+      "whole_supported_band_complex_NRMSE": 0,
+      "whole_wave_NRMSE": 0,
+      "whole_wave_regions_NRMSE": 0
+    },
+    "whole_wave_NRMSE_before": 7.009892160550115e-05,
+    "whole_wave_NRMSE_after": 2.667140471698532e-05,
+    "target_wave_NRMSE_before": 5.118521178975223e-06,
+    "target_wave_NRMSE_after": 3.7813114010074364e-06,
+    "source_or_native48k_or_C_or_hearing_qualified": false
+  },
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\full1\\report.json": "inputs/upstream/observer_representer_v1/evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\full1\\capture.npz": "inputs/upstream/observer_representer_v1/evidence/full1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\known_mapped_audit1\\report.json": "inputs/upstream/observer_stable_known_v1/evidence/known_mapped_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full1\\report.json": "evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full_audit1\\report.json": "evidence/full_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\frequency_units_audit1\\report.json": "evidence/frequency_units_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\stationarity_gap_audit1\\report.json": "evidence/stationarity_gap_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full_gap_alignment1\\report.json": "evidence/full_gap_alignment1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full1\\capture.npz": "evidence/full1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full1\\basis\\V.bin": "evidence/full1/basis/V.bin"
+  },
+  "upstream_manifests_sha256": {
+    "observer_representer_v1": "799ad81aaee116c374132796ccd84de01fe2af9098d55b43dd19851401ca9b26",
+    "observer_stable_known_v1": "ca893cb6c2e4c955e2bd8a76eb80a8976497eedc27d788550dd3cc6aecc0b463"
+  },
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "selected_terminal_evidence_directories": [
+    "full1",
+    "full_audit1",
+    "full_review1",
+    "frequency_units_audit1",
+    "full_watch1",
+    "stationarity_gap_audit1",
+    "full_gap_alignment1"
+  ],
+  "one_same_full_attempt": true,
+  "solver_qualified": false,
+  "fidelity_qualified": true,
+  "full_basis_Grams_independently_verified": true,
+  "selected_projection_columns_independently_verified": 64,
+  "scientific_figures_individually_viewed": 2,
+  "original_gates_and_objective_unchanged": true,
+  "all_regressions_retained": true,
+  "independent_gap_identity_controls": 6,
+  "terminal_complete_normal_alignment_verified": true,
+  "independent_subspace_controls": 5,
+  "original_analysis_rate": 65536,
+  "final_band_includes_Nyquist": true,
+  "native48k_or_C_or_timbre_qualified": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "manifest_sha256": "659514d1020599f18f2b9c1ad72c4f0efe36f801abce353b99f152f301a21a9a",
+  "file_count": 1132,
+  "bytes": 13249309723,
+  "external_independent_receipts": {
+    "full_archive_independent_verification.json": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full_archive_independent_verification.json",
+      "sha256": "73f5059849b273c02ac3161792e16ce80a2e23b8ce71676c535a7aef7664bcba"
+    },
+    "full_archive_bindings_verification.json": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_stable_residual_v1\\full_archive_bindings_verification.json",
+      "sha256": "517472f6d5bdbfc6b1f7f949f47fd4fbb2fdbd9a79603d6b6e054a66d79c4033"
+    }
+  }
+}
