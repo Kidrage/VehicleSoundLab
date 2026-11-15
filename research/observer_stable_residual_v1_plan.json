@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.stable-residual/1",
+  "previous_goal_turn_classification": "progress: full128 orthogonality and4+8 reorth cases numerically measured, independently audited and frozen at e1c128c",
+  "parent": "research/observer_reorth_stopping_v1_plan.json",
+  "estimator": "For full projectedH use completeQR; residual coefficients are minusQ_perp Q_perp^T beta e0, avoidingHy-betae0 cancellation. Apply the complete original adjoint to U times these coefficients, measure outside-V normal component explicitly; projectedH^T residual alone is insufficient. Keep every direct residual/normal test and the direct-versus-model discrepancy.",
+  "known_first": "Explicit rectangular/exact/cancellation/zero/square/ill-conditioned and nonzero outside-gradient fixtures. Independent Decimal QR at80 and110digits on exact binary64 inputs, including exact forward projection/rhs defects and their actual gradient identity/bound. No external download/library needed.",
+  "same12": "Only after independent estimator controls pass, SAME4algebra+8originalHann observations using newly executed two-sided reorth solve with stable residual. Originalobjective/alpha/beta/scales/orders/nodes, atol=btol1e-11, conlim1e12/maxiter4000. Candidate1/2 must also pass direct-versus-model backward discrepancy <=atol*normrhs, original-space gradient<2e-7 and BOTH priorgap gates; otherwise continue or retain failure. Dense relativeerror2e-7 independently checked, never used by solver.",
+  "qualification": "Stable normal is an estimator for the projected square-root problem, not a rigorous interval bound on exact full normal. Direct disagreement is reported, not erased. The unchanged original-space gradient and BOTH original gap certificates are mandatory. Earlier8stop7 failures remain frozen, no retrospective relabeling.",
+  "after": "Only after all12 independently pass, separately declare a resource-aware full288 attempt. No six-real fitting/nativeaudio/C/default/driver/owned/take/room/hearing changes. Preserve670C-H82voice3F2/index/moving35 and V6five buses/multi-engine/fullstates/future separate7.1.4 goal."
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "vsl.stable-mapped/1",
+  "evidence": "Seven Decimal controls and actual4+8 stable solver cases independently pass, no original tolerance/objective/gap changes. All eight earlier direct-test failures retained.",
+  "change": "Only U/V allocation changes to float64 Fortran-order raw memmap files. Same two-pass orthogonalization, completeQR/SVD condition estimates, every8-direction stable/full-adjoint/original-certificate checks. No solver or rate reduction.",
+  "qualification": "Execute same12 cases on actual mapped storage, independently use same explicit-matrix audit. Original RAM outputs remain separate. Flush and close mappings before trimming only verified task-ownedU.bin/V.bin to used complete columns; save shapes and exact execution sources.",
+  "full_after": "Only after mapped12 pass, one separately declared full288 solve at max4000/atol=btol1e-11/conlim1e12, same originalgradient/BOTHgaps and original data. Logical mapped reserve about13GB at4000, actual touched pages follow used columns, OS may evict file pages. FullGram and complete projectedQR remain potentially expensive; monitor exact same live process, do not restart on observation timeouts. Previousfull4000 and128probe terminal."
+}
