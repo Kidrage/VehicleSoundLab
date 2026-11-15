@@ -1,0 +1,17 @@
+{
+  "schema": "vsl.waveform-representer-nullspace-known-first/1",
+  "previous_goal_turn": "MCPS-only input recheck did not change synthesis. Waveform-space equivalence now independently improves qualification4/12 to9/12, with all three failures and dense resource barrier retained.",
+  "status": "planned, not implemented or qualified",
+  "derive_first": "With X=QF, c=(Qfull^T t)[:k], original reduced primal is min_z ||Fz-c||^2+||z||^2. Let B=[F;I_n] and D=[I_k;-F^T], so B^T D=0 and D has exactly k independent columns. Thin Householder QR D=Ud Td yields primal modeled residual r=-Ud(Ud^T[c;0]); z is its lower n rows. Retain the full target perpendicular component via the original raw X Householder reflectors. This constructs z and residual from the same complement, avoiding a separate z=F^T w reconstruction; equivalence and numerical benefit remain to be tested.",
+  "mandatory_known_order": [
+    "Same7 explicit wide/tall/rank-deficient/zero/disparate-scale/two-RHS/silent-right controls; independent Decimal80/110 and original full normal, not projected zero",
+    "Same4 finite DFT full-entry metric controls, including DC and Nyquist",
+    "Same4 algebra and8 original Hann controls from frozen observer_representer_v1 inputs, preserving original dense solution/gradient2e-7/BOTH gaps1e-6J+1e-10/stable complete normal and backward discrepancy1e-11",
+    "Diagnose any remaining failure in original coordinates before changing representation again; retain all direct/model discrepancies and old failures"
+  ],
+  "unchanged": ["original finite objective/W/R and audio", "all nodes/orders/scales/coordinates", "no rank or temporal rate truncation", "all tolerances and original gap identities", "complete original adjoint", "all old attempts"],
+  "resource_gate": "No new full/source experiment follows automatically from small controls. First implement or justify implicit Householder storage and structured temporal-penalty roots; derive actual array lifetimes and measure peak RAM, against original dense known cases. No full dense stereo R or full dual Q allocation.",
+  "after_qualified_extraction": "Return to the approved real recordings: source context, complete frequencies and joint L/R; then reusable sustained stochastic controls, native48k/C validation, same one-driver V6 five buses and separate future spatial renderer. Node trajectory replay is not the intended final voice.",
+  "protected": "670C/H,82voice,3F2,index,accepted moving35/default,one driver,owned/takes,room/hearings; no download/push/new hearing/unchanged68CTest repeat",
+  "full_goal": "ACTIVE: multiple engine timbres, full driving states, V6 DNA/BODY/DETAIL/EVENT/AUX and independent physical7.1.4"
+}
