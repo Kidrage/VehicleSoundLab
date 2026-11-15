@@ -1,0 +1,2091 @@
+{
+  "result": "recorded_phase_context_known_and_six_real_frozen",
+  "selected_terminal_evidence_directories": [
+    "known1",
+    "known_audit1",
+    "known_audit2",
+    "real1",
+    "real_audit1"
+  ],
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\constant.npz": "evidence/known1/constant.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\linear_sweep.npz": "evidence/known1/linear_sweep.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\common_PM.npz": "evidence/known1/common_PM.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\independent_AM.npz": "evidence/known1/independent_AM.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\stereo_phase.npz": "evidence/known1/stereo_phase.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\stereo_delay.npz": "evidence/known1/stereo_delay.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\low_root.npz": "evidence/known1/low_root.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\combined.npz": "evidence/known1/combined.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\missing_reference.npz": "evidence/known1/missing_reference.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\weak_reference.npz": "evidence/known1/weak_reference.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known1\\gapped_reference.npz": "evidence/known1/gapped_reference.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\known_audit2\\report.json": "evidence/known_audit2/report.json",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\manifest.json": "inputs/upstream/coefficient_geometry_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\coefficient_geometry_v1\\evidence\\real1\\report.json": "inputs/upstream/coefficient_geometry_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\manifest.json": "inputs/upstream/F3_pitch_anchors_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\selection.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\result.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\coordinates.npz": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\native.wav": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/native.wav",
+    "E:\\VehicleSoundLab\\references\\analysis\\state_media_v1\\F3_inspect1\\native_reference.wav": "inputs/local/references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\manifest.json": "inputs/upstream/observer_frequency_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\manifest.json": "inputs/upstream/F3_fifth_voice_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\selection.json": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\result.json": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\coordinates.npz": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\native.wav": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\selection.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\result.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\coordinates.npz": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\native.wav": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\selection.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\result.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\coordinates.npz": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\native.wav": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\selection.json": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\result.json": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\coordinates.npz": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\native.wav": "inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\selection.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\result.json": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\coordinates.npz": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\native.wav": "inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\source.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\scale.npz": "inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\report.json": "evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth First Early.npz": "evidence/real1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth First Mid.npz": "evidence/real1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth First Late.npz": "evidence/real1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth Second Early.npz": "evidence/real1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth Second Mid.npz": "evidence/real1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\real1\\F3 Fifth Second Late.npz": "evidence/real1/F3 Fifth Second Late.npz"
+  },
+  "upstream_manifests_sha256": {
+    "waveform_correction_storage_v1": "e2633f4e73f701215093d87110c83516638119196767a9c534cb07622d38ac67",
+    "coefficient_geometry_v1": "013d8fac68b897af45ac4f57226d74b7aec185e82c55c24dd3ab10b475c02bf8",
+    "F3_pitch_anchors_v1": "13e9fa81d272169213ffae2f8c09a08de67fb78fa5be8695cb8e85aa63ed03b7",
+    "observer_frequency_v1": "3a499656c663454c94f0276f73c391e792478398b58ecba5436d29e2a43478cd",
+    "F3_fifth_voice_v1": "e6dade5d0b5e34daeefc151006e62692ed7de17d1a62303fb2090718d2fcfcad"
+  },
+  "known_positive_count": 8,
+  "known_rejections": 7,
+  "known_cases": [
+    {
+      "label": "constant",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.6496790856727915e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.4097056855177925e-13,
+      "minimum_heldout_coherence": 0.9999999984190118,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999985965734,
+              0.9999999986057678
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999156972,
+              0.9999999999095815
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999992157752,
+              0.9999999992262784
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999124847,
+              0.9999999999119457
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999984430665,
+              0.9999999984190118
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999019262,
+              0.9999999999002386
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999991457056,
+              0.9999999991278089
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999027523,
+              0.9999999999033777
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 2.518998500272241e-06,
+      "analytic_wave_NRMSE": 7.166131852454374e-06,
+      "qualified": true
+    },
+    {
+      "label": "linear_sweep",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.6359698763017882e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.415811912153231e-13,
+      "minimum_heldout_coherence": 0.9999999968137613,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999971692305,
+              0.9999999971502416
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999476521,
+              0.9999999999511304
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999979557574,
+              0.9999999979556286
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999445994,
+              0.9999999999477791
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999968337276,
+              0.9999999968137613
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999454317,
+              0.999999999949711
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.999999997718727,
+              0.9999999976866553
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.999999999942118,
+              0.9999999999397512
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 2.1615744594064064e-06,
+      "analytic_wave_NRMSE": 7.165114188780275e-06,
+      "qualified": true
+    },
+    {
+      "label": "common_PM",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.639718073308024e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.4133139103478243e-13,
+      "minimum_heldout_coherence": 0.9999999274370539,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999817757597,
+              0.9999999816979082
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999996717883,
+              0.9999999996692893
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999882599688,
+              0.9999999882106018
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999818928,
+              0.99999999998326
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999275316857,
+              0.9999999274370539
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999986853093,
+              0.9999999986915119
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999543307724,
+              0.9999999542736341
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999998380459,
+              0.9999999998346006
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 7.500905633773615e-06,
+      "analytic_wave_NRMSE": 7.170543722402562e-06,
+      "qualified": true
+    },
+    {
+      "label": "independent_AM",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.355487660067455e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.326716514427062e-13,
+      "minimum_heldout_coherence": 0.9999985971058304,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999997295351875,
+              0.99999972231065
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999975299684,
+              0.9999999985116129
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999998195224631,
+              0.999999813003593
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999984016642,
+              0.9999999974276155
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999985971058304,
+              0.999998601477837
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999934226251,
+              0.9999999941331039
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999990796429239,
+              0.9999990767648729
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999876625648,
+              0.9999999861452288
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 3.773830664438417e-05,
+      "analytic_wave_NRMSE": 7.316998158168808e-06,
+      "qualified": true
+    },
+    {
+      "label": "stereo_phase",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.6496790856727915e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.4097056855177925e-13,
+      "minimum_heldout_coherence": 0.9999999984430665,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999985965734,
+              0.9999999986633038
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999156972,
+              0.9999999999241946
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999992157752,
+              0.999999999278977
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999124847,
+              0.9999999999174701
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999984430665,
+              0.9999999984787293
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999019262,
+              0.9999999999093981
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999991457056,
+              0.9999999991715667
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999027523,
+              0.9999999998994171
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 2.518998500272241e-06,
+      "analytic_wave_NRMSE": 7.162002851449879e-06,
+      "qualified": true
+    },
+    {
+      "label": "stereo_delay",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.6169880012603336e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.7505441540777156e-13,
+      "minimum_heldout_coherence": 0.9999992494092688,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999980141233,
+              0.9999998683427392
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999232873,
+              0.9999999989669397
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999986926122,
+              0.9999999218326201
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999227137,
+              0.9999999974023341
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999977809662,
+              0.9999992494092688
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999134234,
+              0.9999999924070818
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999985566789,
+              0.9999995492147092
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999189313,
+              0.9999999884824999
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 2.337833941382772e-06,
+      "analytic_wave_NRMSE": 7.3513619380605165e-06,
+      "qualified": true
+    },
+    {
+      "label": "low_root",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.639010805305845e-14,
+      "inverse_coordinate_max_error_seconds": 8.881784197001252e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 3.652633751016765e-14,
+      "minimum_heldout_coherence": 0.9999999984036887,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999985826574,
+              0.999999998591119
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999155362,
+              0.9999999999094575
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999992025496,
+              0.99999999921291
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999124249,
+              0.9999999999119091
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999999984278832,
+              0.9999999984036887
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999015649,
+              0.9999999998999928
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999999991305787,
+              0.999999999112616
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999999025098,
+              0.9999999999030993
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 2.512998314032771e-06,
+      "analytic_wave_NRMSE": 2.9350391962400065e-06,
+      "qualified": true
+    },
+    {
+      "label": "combined",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 1.36660207452335e-14,
+      "inverse_coordinate_max_error_seconds": 4.440892098500626e-16,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.614541833561134e-13,
+      "minimum_heldout_coherence": 0.9999585745532399,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999585745532399,
+              0.999977510448398
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999992792302199,
+              0.9999992823198991
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999726717138684,
+              0.9999857042136449
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999980160338,
+              0.9999998746839694
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9999787544633782,
+              0.999961926288084
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9999994660719509,
+              0.999999160039
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9999856564054886,
+              0.9999749062568096
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999999540244892,
+              0.9999999950346229
+            ]
+          }
+        }
+      },
+      "known_cycle_std": 0.00015348284842660402,
+      "analytic_wave_NRMSE": 7.32309222106064e-06,
+      "qualified": true
+    }
+  ],
+  "known_phase_cycle_std_max": 0.00015348284842660402,
+  "known_wave_NRMSE_max": 7.3513619380605165e-06,
+  "first_auditor_cutoff_failure_retained": true,
+  "real_cases": [
+    {
+      "label": "F3 Fifth First Early",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 3.41676885310303e-14,
+      "inverse_coordinate_max_error_seconds": 0.0,
+      "direct_FIR_and_polyphase_render_max_error_FS": 2.525757381022231e-14,
+      "minimum_heldout_coherence": 0.9660008729387678,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9855989995398559,
+              0.9843560788781898
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9993464472674433,
+              0.9995636137151733
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9925217541252318,
+              0.9931817041234153
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9966112753615539,
+              0.9968654981441413
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9660008729387678,
+              0.9673745555832765
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9990740522018384,
+              0.9978131074799863
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9810627519492804,
+              0.9801986632483093
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9993400632895971,
+              0.9981995151437987
+            ]
+          }
+        }
+      },
+      "qualified": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 2.7593461513413697e-14,
+      "inverse_coordinate_max_error_seconds": 2.842170943040401e-14,
+      "direct_FIR_and_polyphase_render_max_error_FS": 9.151013280472853e-14,
+      "minimum_heldout_coherence": 0.9401004587366131,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 73,
+            "coherence": [
+              0.9480227165668444,
+              0.9515157620173051
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9903559304095301,
+              0.9917320376182939
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9401004587366131,
+              0.9457850100041993
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9987634894472265,
+              0.9987955901219889
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 73,
+            "coherence": [
+              0.9802945166786347,
+              0.9814039459237375
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9909329618700169,
+              0.9995719517772447
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9829469209122262,
+              0.9802544909710464
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9999413542798089,
+              0.9988175242309013
+            ]
+          }
+        }
+      },
+      "qualified": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 2.6492381601582717e-14,
+      "inverse_coordinate_max_error_seconds": 0.0,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.7763568394002505e-15,
+      "minimum_heldout_coherence": 0.9227197886211534,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 73,
+            "coherence": [
+              0.9547073720413349,
+              0.9363857720721451
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9976254068972732,
+              0.9977249952543142
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9458918525895631,
+              0.9227197886211534
+            ]
+          },
+          "after": {
+            "windows": 9,
+            "coherence": [
+              0.952814801059149,
+              0.9445910533868346
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 73,
+            "coherence": [
+              0.9779348010532379,
+              0.9864239580262333
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9969667579126605,
+              0.9989503105152113
+            ]
+          },
+          "target": {
+            "windows": 56,
+            "coherence": [
+              0.9795378807954899,
+              0.989775736122949
+            ]
+          },
+          "after": {
+            "windows": 9,
+            "coherence": [
+              0.9894101482466598,
+              0.946164188065556
+            ]
+          }
+        }
+      },
+      "qualified": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 2.8128458946686434e-14,
+      "inverse_coordinate_max_error_seconds": 2.842170943040401e-14,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.0669243266647754e-13,
+      "minimum_heldout_coherence": 0.9394661733344783,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 71,
+            "coherence": [
+              0.9707933790615257,
+              0.9693411507129072
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9993497395093874,
+              0.9987048194566199
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9795413153526765,
+              0.9794219925530436
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9981148346873467,
+              0.9987469902875076
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 71,
+            "coherence": [
+              0.9434885278609326,
+              0.9394661733344783
+            ]
+          },
+          "before": {
+            "windows": 8,
+            "coherence": [
+              0.9992391376756997,
+              0.9994092447961626
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9495497234579928,
+              0.9465221278965831
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9985723182170153,
+              0.9985223482452089
+            ]
+          }
+        }
+      },
+      "qualified": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 3.509236927757596e-14,
+      "inverse_coordinate_max_error_seconds": 2.842170943040401e-14,
+      "direct_FIR_and_polyphase_render_max_error_FS": 1.9867441025667176e-13,
+      "minimum_heldout_coherence": 0.8510227084182147,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9835797881466625,
+              0.9812340443161294
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9986370518748879,
+              0.9990729725486879
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9823857012649116,
+              0.9793416938173761
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9961988083841155,
+              0.992631146812992
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9674682907912592,
+              0.8510227084182147
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9995356470300911,
+              0.9974683544843863
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9844385652174739,
+              0.9133509032576806
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9942414157444819,
+              0.9958774495788588
+            ]
+          }
+        }
+      },
+      "qualified": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "all_original_arrays_bitwise_exact": true,
+      "direct_carrier_max_error_FS": 2.8961716271304245e-14,
+      "inverse_coordinate_max_error_seconds": 0.0,
+      "direct_FIR_and_polyphase_render_max_error_FS": 4.845776557793613e-14,
+      "minimum_heldout_coherence": 0.9298937269715292,
+      "heldout": {
+        "3": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9298937269715292,
+              0.9307075911740533
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9810610345586807,
+              0.9808466722529467
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9431994576062522,
+              0.9441807341346174
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9888493966593963,
+              0.9918308152753463
+            ]
+          }
+        },
+        "7": {
+          "whole": {
+            "windows": 72,
+            "coherence": [
+              0.9958218171682732,
+              0.9940981476055674
+            ]
+          },
+          "before": {
+            "windows": 9,
+            "coherence": [
+              0.9986845587296961,
+              0.9987110295415567
+            ]
+          },
+          "target": {
+            "windows": 55,
+            "coherence": [
+              0.9954356690499624,
+              0.9941569127038383
+            ]
+          },
+          "after": {
+            "windows": 8,
+            "coherence": [
+              0.9991201744733658,
+              0.999466085817695
+            ]
+          }
+        }
+      },
+      "qualified": true
+    }
+  ],
+  "real_count": 6,
+  "real_minimum_heldout_coherence": 0.8510227084182147,
+  "original_heldout_gate": 0.8,
+  "all96_signed_comparison_rows": [
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9944965795049369,
+      "context_region_coherence": 0.9855989995398557,
+      "signed_change": -0.008897579965081115,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9965707900282434,
+      "context_region_coherence": 0.9843560788781904,
+      "signed_change": -0.012214711150053015,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9944965795049369,
+      "context_region_coherence": 0.9993464472674433,
+      "signed_change": 0.004849867762506399,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9965707900282434,
+      "context_region_coherence": 0.9995636137151729,
+      "signed_change": 0.0029928236869294356,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9944965795049369,
+      "context_region_coherence": 0.9925217541252321,
+      "signed_change": -0.0019748253797047255,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9965707900282434,
+      "context_region_coherence": 0.9931817041234164,
+      "signed_change": -0.003389085904827005,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9944965795049369,
+      "context_region_coherence": 0.996611275361554,
+      "signed_change": 0.002114695856617166,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9965707900282434,
+      "context_region_coherence": 0.9968654981441412,
+      "signed_change": 0.00029470811589771273,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9914042327483418,
+      "context_region_coherence": 0.9660008729387674,
+      "signed_change": -0.025403359809574422,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9891747061917678,
+      "context_region_coherence": 0.9673745555832768,
+      "signed_change": -0.021800150608491053,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9914042327483418,
+      "context_region_coherence": 0.9990740522018384,
+      "signed_change": 0.007669819453496651,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9891747061917678,
+      "context_region_coherence": 0.9978131074799863,
+      "signed_change": 0.008638401288218467,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9914042327483418,
+      "context_region_coherence": 0.9810627519492798,
+      "signed_change": -0.010341480799061942,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9891747061917678,
+      "context_region_coherence": 0.9801986632483092,
+      "signed_change": -0.008976042943458662,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9914042327483418,
+      "context_region_coherence": 0.9993400632895971,
+      "signed_change": 0.007935830541255351,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9891747061917678,
+      "context_region_coherence": 0.9981995151437989,
+      "signed_change": 0.00902480895203106,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9723000501174979,
+      "context_region_coherence": 0.9480227165668446,
+      "signed_change": -0.024277333550653313,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.979888703264758,
+      "context_region_coherence": 0.951515762017305,
+      "signed_change": -0.028372941247452932,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9723000501174979,
+      "context_region_coherence": 0.99035593040953,
+      "signed_change": 0.01805588029203209,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.979888703264758,
+      "context_region_coherence": 0.9917320376182941,
+      "signed_change": 0.011843334353536128,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9723000501174979,
+      "context_region_coherence": 0.9401004587366129,
+      "signed_change": -0.03219959138088502,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.979888703264758,
+      "context_region_coherence": 0.9457850100041987,
+      "signed_change": -0.03410369326055929,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9723000501174979,
+      "context_region_coherence": 0.9987634894472263,
+      "signed_change": 0.02646343932972839,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.979888703264758,
+      "context_region_coherence": 0.9987955901219896,
+      "signed_change": 0.01890688685723163,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9876531430082116,
+      "context_region_coherence": 0.9802945166786341,
+      "signed_change": -0.007358626329577511,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.982159975082858,
+      "context_region_coherence": 0.9814039459237374,
+      "signed_change": -0.0007560291591206525,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9876531430082116,
+      "context_region_coherence": 0.9909329618700169,
+      "signed_change": 0.0032798188618052837,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.982159975082858,
+      "context_region_coherence": 0.9995719517772446,
+      "signed_change": 0.017411976694386544,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9876531430082116,
+      "context_region_coherence": 0.9829469209122265,
+      "signed_change": -0.004706222095985146,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.982159975082858,
+      "context_region_coherence": 0.9802544909710463,
+      "signed_change": -0.0019054841118116839,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9876531430082116,
+      "context_region_coherence": 0.9999413542798091,
+      "signed_change": 0.012288211271597516,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.982159975082858,
+      "context_region_coherence": 0.9988175242309011,
+      "signed_change": 0.01665754914804307,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9866909129052246,
+      "context_region_coherence": 0.9547073720413347,
+      "signed_change": -0.03198354086388988,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.983250246140912,
+      "context_region_coherence": 0.936385772072145,
+      "signed_change": -0.04686447406876704,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9866909129052246,
+      "context_region_coherence": 0.9976254068972733,
+      "signed_change": 0.01093449399204871,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.983250246140912,
+      "context_region_coherence": 0.9977249952543142,
+      "signed_change": 0.014474749113402186,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9866909129052246,
+      "context_region_coherence": 0.9458918525895631,
+      "signed_change": -0.040799060315661495,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.983250246140912,
+      "context_region_coherence": 0.9227197886211531,
+      "signed_change": -0.06053045751975894,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9866909129052246,
+      "context_region_coherence": 0.9528148010591488,
+      "signed_change": -0.03387611184607575,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.983250246140912,
+      "context_region_coherence": 0.9445910533868346,
+      "signed_change": -0.038659192754077476,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9816150635775973,
+      "context_region_coherence": 0.9779348010532382,
+      "signed_change": -0.003680262524359157,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.99021105814642,
+      "context_region_coherence": 0.9864239580262333,
+      "signed_change": -0.0037871001201866816,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9816150635775973,
+      "context_region_coherence": 0.9969667579126602,
+      "signed_change": 0.015351694335062893,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.99021105814642,
+      "context_region_coherence": 0.9989503105152113,
+      "signed_change": 0.008739252368791361,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9816150635775973,
+      "context_region_coherence": 0.9795378807954894,
+      "signed_change": -0.002077182782107889,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.99021105814642,
+      "context_region_coherence": 0.989775736122949,
+      "signed_change": -0.00043532202347096316,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9816150635775973,
+      "context_region_coherence": 0.9894101482466596,
+      "signed_change": 0.007795084669062313,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.99021105814642,
+      "context_region_coherence": 0.9461641880655559,
+      "signed_change": -0.04404687008086405,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9817141910802955,
+      "context_region_coherence": 0.9707933790615255,
+      "signed_change": -0.010920812018769932,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9823459911694562,
+      "context_region_coherence": 0.9693411507129076,
+      "signed_change": -0.013004840456548594,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9817141910802955,
+      "context_region_coherence": 0.9993497395093879,
+      "signed_change": 0.01763554842909243,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9823459911694562,
+      "context_region_coherence": 0.9987048194566198,
+      "signed_change": 0.016358828287163618,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9817141910802955,
+      "context_region_coherence": 0.979541315352676,
+      "signed_change": -0.0021728757276194832,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9823459911694562,
+      "context_region_coherence": 0.9794219925530435,
+      "signed_change": -0.002923998616412682,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9817141910802955,
+      "context_region_coherence": 0.9981148346873467,
+      "signed_change": 0.01640064360705129,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9823459911694562,
+      "context_region_coherence": 0.998746990287508,
+      "signed_change": 0.016400999118051818,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9466906362531935,
+      "context_region_coherence": 0.9434885278609327,
+      "signed_change": -0.0032021083922607607,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9481735992121737,
+      "context_region_coherence": 0.9394661733344782,
+      "signed_change": -0.008707425877695463,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9466906362531935,
+      "context_region_coherence": 0.9992391376756999,
+      "signed_change": 0.052548501422506444,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9481735992121737,
+      "context_region_coherence": 0.9994092447961626,
+      "signed_change": 0.051235645583988854,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9466906362531935,
+      "context_region_coherence": 0.9495497234579927,
+      "signed_change": 0.0028590872047992155,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9481735992121737,
+      "context_region_coherence": 0.9465221278965826,
+      "signed_change": -0.0016514713155910687,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9466906362531935,
+      "context_region_coherence": 0.9985723182170153,
+      "signed_change": 0.05188168196382181,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9481735992121737,
+      "context_region_coherence": 0.9985223482452087,
+      "signed_change": 0.05034874903303499,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9844360047145273,
+      "context_region_coherence": 0.9835797881466618,
+      "signed_change": -0.0008562165678654976,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9805314881042316,
+      "context_region_coherence": 0.9812340443161293,
+      "signed_change": 0.0007025562118976314,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9844360047145273,
+      "context_region_coherence": 0.9986370518748879,
+      "signed_change": 0.014201047160360636,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9805314881042316,
+      "context_region_coherence": 0.9990729725486875,
+      "signed_change": 0.018541484444455913,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9844360047145273,
+      "context_region_coherence": 0.9823857012649116,
+      "signed_change": -0.0020503034496156536,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9805314881042316,
+      "context_region_coherence": 0.9793416938173761,
+      "signed_change": -0.0011897942868555056,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9844360047145273,
+      "context_region_coherence": 0.9961988083841152,
+      "signed_change": 0.011762803669587929,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9805314881042316,
+      "context_region_coherence": 0.992631146812992,
+      "signed_change": 0.012099658708760397,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9882859036414908,
+      "context_region_coherence": 0.9674682907912588,
+      "signed_change": -0.02081761285023198,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9581387522279722,
+      "context_region_coherence": 0.8510227084182151,
+      "signed_change": -0.10711604380975703,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9882859036414908,
+      "context_region_coherence": 0.999535647030091,
+      "signed_change": 0.011249743388600186,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9581387522279722,
+      "context_region_coherence": 0.9974683544843861,
+      "signed_change": 0.03932960225641391,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9882859036414908,
+      "context_region_coherence": 0.9844385652174742,
+      "signed_change": -0.003847338424016633,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9581387522279722,
+      "context_region_coherence": 0.9133509032576805,
+      "signed_change": -0.044787848970291644,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9882859036414908,
+      "context_region_coherence": 0.9942414157444817,
+      "signed_change": 0.005955512102990834,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9581387522279722,
+      "context_region_coherence": 0.9958774495788588,
+      "signed_change": 0.03773869735088664,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9439939352203105,
+      "context_region_coherence": 0.929893726971529,
+      "signed_change": -0.014100208248781443,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9457798650536507,
+      "context_region_coherence": 0.9307075911740536,
+      "signed_change": -0.015072273879597198,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9439939352203105,
+      "context_region_coherence": 0.9810610345586802,
+      "signed_change": 0.03706709933836971,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9457798650536507,
+      "context_region_coherence": 0.9808466722529463,
+      "signed_change": 0.03506680719929556,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9439939352203105,
+      "context_region_coherence": 0.9431994576062517,
+      "signed_change": -0.0007944776140588194,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9457798650536507,
+      "context_region_coherence": 0.9441807341346176,
+      "signed_change": -0.001599130919033187,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9439939352203105,
+      "context_region_coherence": 0.9888493966593961,
+      "signed_change": 0.04485546143908559,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 3,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9457798650536507,
+      "context_region_coherence": 0.9918308152753463,
+      "signed_change": 0.046050950221695586,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "whole",
+      "original_target_coherence": 0.9962325336138798,
+      "context_region_coherence": 0.9958218171682734,
+      "signed_change": -0.00041071644560630727,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "whole",
+      "original_target_coherence": 0.9953642621824148,
+      "context_region_coherence": 0.9940981476055676,
+      "signed_change": -0.0012661145768472215,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "before",
+      "original_target_coherence": 0.9962325336138798,
+      "context_region_coherence": 0.9986845587296959,
+      "signed_change": 0.0024520251158161033,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "before",
+      "original_target_coherence": 0.9953642621824148,
+      "context_region_coherence": 0.9987110295415562,
+      "signed_change": 0.0033467673591414115,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "target",
+      "original_target_coherence": 0.9962325336138798,
+      "context_region_coherence": 0.9954356690499622,
+      "signed_change": -0.0007968645639175875,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "target",
+      "original_target_coherence": 0.9953642621824148,
+      "context_region_coherence": 0.9941569127038382,
+      "signed_change": -0.0012073494785765915,
+      "regression": true
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 0,
+      "region": "after",
+      "original_target_coherence": 0.9962325336138798,
+      "context_region_coherence": 0.9991201744733655,
+      "signed_change": 0.002887640859485785,
+      "regression": false
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "heldout_order": 7,
+      "channel": 1,
+      "region": "after",
+      "original_target_coherence": 0.9953642621824148,
+      "context_region_coherence": 0.9994660858176951,
+      "signed_change": 0.004101823635280333,
+      "regression": false
+    }
+  ],
+  "real_direct_render_max_error_FS": 1.9867441025667176e-13,
+  "original_audio_coordinates_and_scales_bitwise_exact": true,
+  "real_two_cycle_each_side_context_qualified": true,
+  "global_clock_or_physical_RPM_or_load_or_AM_PM_identification": false,
+  "no_large_real_inverse_or_new_sustained_sound_or_C_or_hearing_qualification": true,
+  "memory_preflight_still_required": true,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "runtime_default_driver_owned_take_room_changed": false,
+  "downloaded": false,
+  "pushed": false,
+  "unchanged68CTest_not_repeated": true,
+  "full_goal": "active",
+  "previous_goal_turn": "No synthesis progress: MCPS-only recheck; this stage creates independently qualified actual six source contexts",
+  "manifest_sha256": "c450cdbc007a567403a6c1280fb8e39a38a6fb0d58d121d0a5ed4fb4999e4df4",
+  "file_count": 878,
+  "bytes": 216388197,
+  "archive_verification_file": "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\archive_verification.json",
+  "archive_verification_sha256": "b1798915912e334f0bd9127d1aee7a4d9f3da8e830c7ad6e5a484f45d4ff6244",
+  "bindings_verification_file": "E:\\VehicleSoundLab\\references\\analysis\\recorded_phase_context_v1\\bindings_verification.json",
+  "bindings_verification_sha256": "c26d0e326a167b31acbcd9ad8d16e268f4d024df8a1cc02130ff7a479e86bb94"
+}
