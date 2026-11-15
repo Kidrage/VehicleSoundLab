@@ -1,13 +1,22 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "Progress: explicit locked-calibration source adapter, known4/invalid6 and full288 real5 preparation qualified, next never-fitted firstMid launched. This turn: newmethod virtual admission/three actual analytic captures/six corruption guards, independent stereo12 observations and actual5 native-reference bridge executed; progress, not merely a wait.",
+  "previous_turn": "Previous goal turn verified wait. Current turn observes actual terminal audit failure, executes known3-before-real eight-factorial numerical diagnosis and full5 SSD resource preflight: progress; no new acoustic or C acceptance.",
   "terminal_diagnostics": "E:/VehicleSoundLab/references/analysis/locked_source_diagnostics_v1: virtual_known1, virtual_known_audit1, virtual_stereo_audit1 and native_references1 all TERMINAL PASS. Signed10656 fields independently verified, directCSD/LRGram/MS/timeGram and frozenjointstats max2.63e-14<2e-11; allfive actual physical-reference bridges full288, independent16/32queries max1.78e-15cycles. Five previous tiny-line normalizedcrossFFT failures remainFALSE. No actualnewfit admission/native rendering/C/hearing promotion claimed.",
-  "live": "SAME PID65232/session62289, E:/VehicleSoundLab/references/analysis/locked_source_fit_v1/real1/F3 Fifth First Mid. Source columns complete; file matrices continue. Never edit124bound sources101inputs or restart from timeout/staleprogress. Poll samehandle and actualprocess; only terminaloutput/missinghandle/process establishes stoppedstate. Original jobs245372/313772 remain terminal, never restart; firstoriginal never refit.",
-  "after_terminal": "Inspect real1/report.json and F3 Fifth First Mid_audit/report.json (independent_locked_source_real_verified), retaining verification/solver/fidelity distinction. Diagnose any mathfailure independently without refitting or gate changes. Then run tools/run_locked_source_virtual_v1.py --study <case> --math-audit <audit/report.json>, audit_locked_source_virtual_v1.py, audit_locked_source_virtual_stereo_v1.py --prior-audit <virtual audit dir>. All new diagnostics must retain originalfailures/regressions and explicitnewtarget/legacycalibration roles.",
-  "native_after_terminal": "Run tools/run_locked_source_native_v1.py using samecase/mathaudit, native_clock_render_v1/{prepare1,prepare_audit1,known1,known_audit1}, then tools/audit_locked_source_native_v1.py. Newproducer/nativeadmission and independentidentity implementations have NOT yet been exercised on actualfittednewsource. Retain samefull288/nodes/commonLRclock/genuinecontext/scales/native16/32 .003wave+eachband and virtual.02 gates. Compare raw/FIRonly/fitted16/fitted32 HF/LR/MS/CV/covlag, then decide remaining4cases or autonomous stochasticlaw.",
+  "live": "NO live fit or dependent diagnostic. Original PID65232/session62289 EXIT1 after full288/74nodes/all4factors/2corrections/capture; audit target-band field difference1.0224926461e-10 exceeds2e-12. Coordinator PID441220/session31430 EXIT1,0/5stages. NEVER restart/refit either, overwrite failures or mutate151sources101inputs. Production solverTRUE not independently established; fidelityFALSE highestvirtual.442483902>.02.",
+  "after_terminal": "Actual terminal math audit FAILED and all outputs retained. Next separate known-first complete-equation verification with independent saved-wave/declared-rounded-measurement checks; preserve original cross-operator failure, all17fields/3histories/2updates/bothgaps/resources and every original gate. Factorial diagnosis1 is NOT mathematical verification. Do not rerun a fit or forge a successful original root report. Only a new explicit independent mathematical audit may unlock existing virtual/native diagnostic consumers.",
+  "native_after_terminal": "Existing newmethod virtual/stereo/native consumers remain unexecuted on this actual capture. After a valid separate math proof, use its actual path and explicit retained-failure identity with existing commands, then inspect all raw/FIRonly/fitted16/fitted32 HF/LR/MS/CV/covlag under unchanged.02/.003 gates. Do not restart the old coordinator or claim prior successful admission. Only then decide representation work; no remaining four fits while fidelity remainsFALSE.",
   "protected": "Original96sources71inputs/capture/factors,670C-H82voice3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest. No originalfailure repairclaim by replacingtarget, no independentHFcloud or fittedtimeline/PCMloops. Full goal remains incomplete.",
+  "storage_preflight": {
+    "result": "ACTUALLY EXECUTED: locked_source_ssd_storage_preflight_verified",
+    "evidence": "E:/VehicleSoundLab/references/analysis/locked_source_storage_v1/observation1/report.json",
+    "live_storage": "E: SATA HDD; original run now TERMINAL EXIT1 at independent metric audit after all4factors/2corrections/capture; no move/copy/restart",
+    "candidate_storage": "D: NVMe SSD, observed616.48GiB free; EMPTY probe D:/VehicleSoundLab-Work/source_fit_storage_v1/preflight1",
+    "verified": "All five full288/originalnodes/block1024 resource budgets EXACT, independently summed132552230712B factors +originalglobal2GiB guard; original1.5GiBtemporary/3GiBheadroom retained, all5memory+disk pass,151frozen sources/spec unchanged before+after",
+    "limitation": "One lowCPU/smallread snapshot supports seek-cost hypothesis, not timing attribution/speedup or acoustic qualification. No actual matrices on D, no factor copy/move/restart, no next real fit",
+    "next_constraint": "First separately resolve complete mathematical verification and actual virtual/native diagnosis; source fidelity stillFALSE, no next fit. Before any later justified D launch, preserve original E run_spec namespace duplicate-label registration; cross-drive registration is NOT yet implemented."
+  },
   "dependent_diagnostics": {
-    "state": "CONFIRMED LIVE, waiting on the same original process",
+    "state": "TERMINAL EXIT1: source exited1 after independent audit failure;0of5stages",
     "pid": 441220,
     "exec_session": 31430,
     "source_pid": 65232,
@@ -25,8 +34,22 @@
       "native_real_audit1"
     ],
     "condition": "The identical source process terminates successfully, immutable run_spec still matches, and single new-method terminal case has an independently verified mathematical audit. Source fidelity may be false; diagnostic failures/negative results must remain visible.",
-    "instruction": "Poll SAME session31430 and actual PID441220 as well as original session62289/PID65232. DO NOT launch duplicate stage commands while coordinator is live. Never restart a fit, overwrite an existing stage directory or edit the 151 frozen source bindings while the workflow is live. A timeout is not termination.",
+    "instruction": "Both original handles are closed terminal failures. NEVER restart either job or repeat the fitted label. Retain151sources101inputs/spec/capture/factors/originalfailedreports. New explicit separate mathematical verification is prerequisite to any manual existing diagnostic stage; no fake root success, no overwrite.",
     "scope": "No fitting commands, no automatic later four fits, no C/default/hearing/sustained promotion. On any stage error it preserves outputs and stops; inspect the first failure before any new action.",
-    "classification": "Previous goal turn verified wait. Current turn executes a concrete conditional diagnostic workflow and verifies its original-process identity/source preflight; no new fitted/native qualification yet."
+    "classification": "Terminal failure observed, source stops after one actual case; subsequent numerical diagnosis/resource work is progress, not source qualification.",
+    "executed_stage_count": 0
+  },
+  "metric_diagnosis": {
+    "result": "ACTUALLY EXECUTED: locked_source_metric_operator_diagnosed",
+    "evidence": "E:\\VehicleSoundLab\\references\\analysis\\locked_source_metric_v1\\diagnosis1\\report.json",
+    "known_controls": 3,
+    "variants_per_case": 8,
+    "scalar_scipy_max_field_difference": 1.0261436145242442e-10,
+    "frozen_wave_scipy_max_field_difference": 3.237077272899569e-12,
+    "frozen_wave_declared_frozen_scales_max_field_difference": 0.0,
+    "scalar_vs_saved_wave_max_FS": 2.220446049250313e-15,
+    "original_math_audit_retained_failed": true,
+    "original_source_fidelity_remains_false": true,
+    "complete_math_or_C_or_hearing_qualification": false
   }
 }
