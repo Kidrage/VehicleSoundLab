@@ -1,0 +1,78 @@
+{
+  "result": "observer_krylov_frozen",
+  "results": {
+    "known_controls": 11,
+    "full_probe_steps": 128,
+    "full_U_max_offdiagonal": 0.782594044106122,
+    "full_V_max_offdiagonal": 0.7132699445045306,
+    "reorth_cases": 12,
+    "reorth_passes": 4,
+    "reorth_stopping_failures": 8,
+    "max_new_node_error": 1.4174273083002868e-11,
+    "full_fit_or_real_source_or_timbre_qualified": false
+  },
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\report.json": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\mono.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/mono.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\stereo.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/stereo.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\weak1e-5.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/weak1e-5.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\primal_algebra1\\silent_right.npz": "inputs/upstream/observer_representer_v1/evidence/primal_algebra1/silent_right.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\full1\\report.json": "inputs/upstream/observer_representer_v1/evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\full1\\capture.npz": "inputs/upstream/observer_representer_v1/evidence/full1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\known_audit1\\report.json": "evidence/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\full_audit1\\report.json": "evidence/full_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\report.json": "inputs/upstream/observer_representer_v1/evidence/context1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\constant_1.npz": "inputs/upstream/observer_representer_v1/evidence/context1/constant_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\curved_1.npz": "inputs/upstream/observer_representer_v1/evidence/context1/curved_1.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\constant_0.01.npz": "inputs/upstream/observer_representer_v1/evidence/context1/constant_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\curved_0.01.npz": "inputs/upstream/observer_representer_v1/evidence/context1/curved_0.01.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\constant_0.0001.npz": "inputs/upstream/observer_representer_v1/evidence/context1/constant_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\curved_0.0001.npz": "inputs/upstream/observer_representer_v1/evidence/context1/curved_0.0001.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\constant_1e-05.npz": "inputs/upstream/observer_representer_v1/evidence/context1/constant_1e-05.npz",
+    "E:\\VehicleSoundLab\\baselines\\observer_representer_v1\\evidence\\context1\\curved_1e-05.npz": "inputs/upstream/observer_representer_v1/evidence/context1/curved_1e-05.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\full1\\report.json": "evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\reorth_known1\\report.json": "evidence/reorth_known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\reorth_known_audit1\\report.json": "evidence/reorth_known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1\\full1\\coefficients.npz": "evidence/full1/coefficients.npz"
+  },
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "full128_forward_and_adjoint_independently_verified": true,
+  "reorth_Hann_failures_retained": 8,
+  "failed_publication_metric_versions_retained": 2,
+  "layout_review1_retained": true,
+  "scientific_figures_individually_viewed": 2,
+  "original_gates_and_objective_unchanged": true,
+  "new_full_fit_attempts": 0,
+  "source_models_fitted": 0,
+  "native48k_or_C_or_timbre_qualified": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "previous_goal_turn_classification": "MCPS evidence only, no synthesis improvement",
+  "next": "research/observer_reorth_stopping_v1_plan.json",
+  "manifest_sha256": "fea9c135ccecb3592ead24df222d3ffa9e0cc6a290be50826802f3c452d30c30",
+  "file_count": 1163,
+  "bytes": 843157003,
+  "previous_goal_turn_audit_classification": "no progress toward synthesis: requested MCPS input recheck confirmed unchanged runtime; current turn made concrete diagnostic and solver progress",
+  "external_verification": {
+    "archive": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1_archive_independent.json",
+      "sha256": "80ff1ae11e0f5ac28a0859ed7d7ad7a8cd1c2b332cfda21736cd1158716be1d6",
+      "result": "independent_archive_source_zip_contracts_verified"
+    },
+    "bindings": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_krylov_v1_bindings_independent.json",
+      "sha256": "a1c93cf615e41ebaa8a70835bbbd258bc76462f060c7dc58b5f4b2721375104c",
+      "result": "independent_observer_krylov_input_executed_capture_bindings_verified"
+    }
+  }
+}

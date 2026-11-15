@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.krylov-execution/1",
+  "parent": "research/observer_representer_krylov_v1_plan.json",
+  "previous_goal_turn_classification": "MCPS recheck evidence only; no synthesis progress. Equivalent-solver stage now frozen and independently verified at5542739.",
+  "purpose": "Measure finite-precision Golub-Kahan orthogonality without another solve or any source/state/model change.",
+  "known": "Seven explicit controls: zero rhs, zero operator, negative identity, rank one, diagonal, clustered, ill-conditioned; plus the exact4 frozen primal algebra matrices. Fixed8/16/48/64 step budgets, full forward/adjoint recurrence and Gram/sign/near-breakdown audit first.",
+  "recurrence": "Unreorthogonalized u,v normalization, nonnegative alpha,beta. Near breakdown at64epsilon times the raw matvec and subtracted coefficient scale, diagnosed separately from true rank or convergence. Save every basis vector, coefficient and Gram.",
+  "full": "Only after independent11-control pass, exactly one128-forward/128-adjoint probe of the SAME original full288 penalty-whitened operator and rhs from baselines/observer_representer_v1/evidence/full1. No fitting or original4000 restart. All128 recurrences independently recomputed by scalar-carrier oracle and independent spectral adjoint, not producer operator.",
+  "audit": "Recurrence/norm relative errors below2e-10, normalized basis diagonal below2e-12; Gram measurements independent block reduction. Offdiagonal is a measured outcome, not a pass condition. Known step rounding may differ from scipyLSMR; this is not a saved4000-basis identity claim.",
+  "next": "If loss measured, qualify a two-sided-reorthogonalized square-root method on4tiny+8originalHann with original objective/tolerances/gaps before separately declaring any full solve. No claim that loss alone explains4000 convergence or electronic timbre.",
+  "protected": "670C-H82voice3F2/index/moving35/default/one-driver/owned/takes/room/hearings; no audio/download/push/newlistening/old68CTest. No6real extraction until full gates. V6five buses/fullmulti-engine/fullstates/future separate physical7.1.4 active."
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "vsl.reorth-known/1",
+  "evidence": "Independent eleven-known and full128 recurrence/Gram/sign checks pass. FullU/V maxoffdiag .782594/.713270, first above1e-8 at columns19/18; all128 forward max3.42e-13 and adjoint2.15e-14. Not a claim of sole4000 or timbre cause.",
+  "method": "Two-pass modified projection against all accumulated left and right vectors. Store the full upper-Hessenberg projected square-root operator, including numerical off-bidiagonal corrections. QR plus triangular solve, no normal-equation solve or singular-value truncation. SAME min||BTz-b||2+||z||2, q=Tz.",
+  "known_only": "Same4 finite algebra and8 original4096-Hann frozen observations/dense optima. Check at each8 directions or near breakdown, originalatol/btol1e-11, conlim1e12, max4000 (Krylov subspace at most n). Original gradient2e-7, dense error2e-7 and BOTH original residual plus feasible-representer gap <=1e-6J+1e-10. Keep all failures.",
+  "stopping": "Solver is not scipyLSMR. Explicit residual/normal-residual stopping uses the declared projected square-root Frobenius estimate, reports compatibility codes1/2 only when respectiveatol/btol rule holds. Original-space gradient and independent two gap certificates remain mandatory; code alone is never qualification.",
+  "audit": "Reconstruct dense original Phi/H/R and originalHann controls independently; verify final original objective, node error, gradient and both feasible gaps. Save projected matrices, bases and QR solve; independently audit orthogonality and square-root projection without importing reorth module.",
+  "after": "No complete full288 solve in this declaration. Only after all12 cases independently pass, declare a separate resource-aware full attempt. No six-real fit until full gate passes, then genuine source context and independent phase coordinates. No runtime/default/driver/model/hearing changes."
+}
