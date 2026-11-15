@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.observer-supported-known/1",
+  "parent": "e2002d4",
+  "main_plan": "research/observer_supported_metric_v1_plan.json",
+  "before_material": true,
+  "dense_cases": "Original N4353,9nodes,mono,orders7/211,root64; original constant/curved normalized nodes; weak amplitudes1,.01,.0001 plus preregistered .00001.",
+  "fidelity_gate_before_run": {"high_component_wave_NRMSE_max": 0.02},
+  "solver_gate": {"accepted_stops": [1,2,4,5], "original_space_relative_gradient_max": 2e-7, "dense_relative_solution_error_max": 2e-7, "preconditioned_dense_condition_max": 1000000},
+  "optimality_gate": {"relative": 0.000001, "absolute": 1e-10},
+  "known_metric_controls": ["supported adjoint", "uniform weights give actual time coverage", "constant signal normalization", "left/right orthogonal invariance", "positive scale", "first/last impulses retained by waveform rows", "between-bin high", "silent channel", "zero"],
+  "comparators": ["original finite harmonic", "global whole wave", "all-frame shared weighted", "new fullwave plus supported relative spectrum"],
+  "after_sparse_controls": "Only if all dense fidelity/solver/gap controls qualify, test one deterministic full288-order,original quarter-cycle node cadence synthetic problem with a certified residual before ANY six-source fit. Sparse two-order success alone does not qualify the real solver.",
+  "failure": "Preserve complete outcomes and diagnose exact objective bias/unsupported edge envelope or conditioning. No floor/mix/strength/iteration sweep, material solve or sound promotion after a failed known qualification."
+}

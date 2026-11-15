@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.observer-supported-full-known/1",
+  "prerequisite": "All8 genuine-context target cases independently audited; preserve old curved1e-5 failure and extended-record6.44percent outer loss.",
+  "one_fixed_problem": "288 orders1..288, stereo, acoustic root64Hz,1024 samples/cycle, node cadence256 samples. Original target8193 samples, genuine analytic2048-sample context each side:12289 observations,49 nodes. These are normalized coordinates, NOT native48k or measured RPM.",
+  "truth": "12 fixed deterministic temporal factors, no media. Order scale h^-1.15, multiplied by0.1 at order126 and above. Complex common phase plus asymmetric channel phase, moderate continuous coefficient variation; all288 orders present. Outer observations generated from declared analytic functions, never zero/reflection/fitted loops.",
+  "objective": "Same supported spectrum + complete waveform, original sharedLR6bands/floor1e-8/alpha.001/beta1e-6 and SupportedBlockRight. No floor/strength/rate/rank/context sweep.",
+  "solver": "Exactly one zero-initialized LSMR attempt, maxiter4000,atol1e-11,btol1e-11,conlim1e12. Record failures without restart or saved-solution correction.",
+  "gates": {"accepted_stops": [1,2,4,5], "original_relative_stationarity_max": 2e-7, "gap_relative": 1e-6, "gap_absolute": 1e-10, "target_wave_NRMSE_max": 0.02, "each_target_supported_band_complex_NRMSE_max": 0.02},
+  "independent_audit": "Full reduced-phase scalarOSC/hat adjoint, independent SciPy supported FFT rows and frame adjoint, random full-system and right-map forward/transpose, declared factor truth, original-scale gradient, actual saved feasible-dual gap and full/target band errors. No dense full inverse or exact full condition number claimed.",
+  "limitations": "Deterministic synthetic numerical qualification only, not physical source separation, actual material, sustained stochastic generation, C/SHARC cost or listening acceptance.",
+  "after": "If solver or fidelity fails, diagnose exact failed gate before any six-source solve. If passes, next predeclare approved-recording genuine-context feasibility and independent coordinate evidence without modifying original six targets."
+}

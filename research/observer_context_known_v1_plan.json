@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.observer-context-known/1",
+  "parent": "observer_supported_v1/known1 and independent known_audit3",
+  "reason": "No-context composite exact optima pass7/8 target fidelity cases. Curved1e-5 is0.02130777>original0.02 gate, with first/last544 high error~0.0428 and middle~0.00125. Original result remains a failed qualification, not reclassified.",
+  "new_information": "Provide genuinely known synthetic neighboring samples, not zero/reflection/repeated fitted audio. Original4353-sample target and all9 target nodes remain exact. Later material use would require actual recorded neighbors and independently supported phase coordinates.",
+  "fixed_context": "Original uniform node spacing544. The Hann half-window is2048; ceil(2048/544)=4 additional nodes per side. Offset2176,17 total nodes,8705 total samples, original target [2176,6529). No context-length sweep.",
+  "truth": "Extend the SAME declared constant/curved functions to node indices-4..12, and rotate source coefficients by the exact2176-sample acoustic-cycle offset. Generate observations before fitting; no truth initialization. Verify target waveform and high component match original known captures.",
+  "fit": "Same supported/fullwave objective and its derived normalization, floor1e-8, alpha0.001,beta0.000001, original scales/orders and node spacing. Additional outer nodes are nuisance inference variables, not frozen truth.",
+  "cases": "All original8 strong-low/weak-high constant/curved cases at amplitudes1,.01,.0001,.00001; no case selection.",
+  "gates": {"original_target_high_component_NRMSE_max": 0.02, "dense_relative_solution_error_max": 2e-7, "relative_gradient_max": 2e-7, "accepted_stops": [1,2,4,5], "preconditioned_dense_condition_max": 1000000, "gap_relative": 0.000001, "gap_absolute": 1e-10},
+  "full_context": "Report whole8705-sample waveform/high-component errors and first/middle/last errors, including any failures. Target qualification does not claim full-context reconstruction or introduce a new full-record pass.",
+  "after": "If all8 original-target extra-context cases independently qualify, test one deterministic full288-order/quarter-cycle synthetic problem and its numerical gap before any actual source solve. Otherwise diagnose representation/observability without retuning strength/floor/context length or raising iteration caps.",
+  "no_material_or_runtime_promotion": true
+}

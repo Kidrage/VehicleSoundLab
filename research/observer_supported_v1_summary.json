@@ -1,0 +1,69 @@
+{
+  "result": "observer_supported_frozen",
+  "results": {
+    "no_context_fidelity_passes": 7,
+    "context_target_fidelity_passes": 8,
+    "known_cases": 8,
+    "full_solver_qualified": false,
+    "full_fidelity_qualified": true,
+    "full_target_wave_NRMSE": 4.006415611140168e-06,
+    "maximum_target_band_NRMSE": 7.518790681808241e-05,
+    "outer_loss_retained": 0.06442800491093321,
+    "data_null_dimension_lower_bound": 31870,
+    "witness_data_norm": 4.603511189866165e-15,
+    "penalty_directional_derivative": -0.0001343931909798538,
+    "native_C_or_hearing_qualified": false
+  },
+  "original_input_archive_locations": {
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\report.json": "evidence/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known_audit3\\report.json": "evidence/known_audit3/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\constant_1\\capture.npz": "evidence/known1/constant_1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\curved_1\\capture.npz": "evidence/known1/curved_1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\constant_0.01\\capture.npz": "evidence/known1/constant_0.01/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\curved_0.01\\capture.npz": "evidence/known1/curved_0.01/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\constant_0.0001\\capture.npz": "evidence/known1/constant_0.0001/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\curved_0.0001\\capture.npz": "evidence/known1/curved_0.0001/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\constant_1e-05\\capture.npz": "evidence/known1/constant_1e-05/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\known1\\curved_1e-05\\capture.npz": "evidence/known1/curved_1e-05/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\context_audit1\\report.json": "evidence/context_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\full1\\capture.npz": "evidence/full1/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\full1\\report.json": "evidence/full1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1\\full_audit1\\report.json": "evidence/full_audit1/report.json"
+  },
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "protected_hearings_sha256": {
+    "research/relative_phase_v1_listening.json": "a14b74d4f2d7100e6f54faf91588878639cf74953c8d81a061d922bbe88e052e"
+  },
+  "historical_failed_audits": [
+    "known_audit1",
+    "known_audit2"
+  ],
+  "superseded_layout": "review1 legend only;review2 final",
+  "scientific_figures_individually_viewed": 2,
+  "original_gates_unchanged": true,
+  "full288_solver_failed": true,
+  "source_models_fitted": 0,
+  "new_stochastic_source": false,
+  "native48k_or_C_or_timbre_qualified": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "full_goal": "active",
+  "next": "research/observer_representer_v1_plan.json",
+  "manifest_sha256": "e8e44471d22a7abd636d126a6c4405841c7eef1293dccd880d63dbf1b8cde7c6",
+  "file_count": 1121,
+  "bytes": 48626341,
+  "independent_archive_verification": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1_archive_verification.json",
+    "sha256": "9d416ca1f4dc21085c35d5fd8ff671f4c0e9bb7d4e8be31cad778196a711b892"
+  },
+  "independent_input_binding_verification": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\observer_supported_v1_binding_verification.json",
+    "sha256": "23e1a019a3ca299a87a2afbdc0f084310235c06ec1505984a68cae2aa2be0218"
+  },
+  "previous_goal_turn_classification": "no progress toward sound/simulator goal: MCPS recheck completed a separate estimate request; current turn makes controlled extraction/solver progress"
+}
