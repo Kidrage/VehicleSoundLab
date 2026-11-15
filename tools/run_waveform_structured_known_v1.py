@@ -12,7 +12,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','original','baseline','prerequisite','out'):p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--block',type=int,default=16)
-    p.add_argument('--backend',choices=('structured','stream'),default='structured');a=p.parse_args()
+    p.add_argument('--band-prerequisite',type=Path)
+    p.add_argument('--backend',choices=('structured','stream','banded'),default='structured');a=p.parse_args()
+    if a.backend=='banded' and not a.band_prerequisite:p.error('banded backend requires --band-prerequisite independent packed-root audit')
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -28,22 +30,32 @@ def main():
     from waveform_structured_v1.penalty import TemporalPenalty
     from waveform_structured_v1.resources import ArrayLedger,process_memory
     from waveform_structured_v1.solver import solve
-    if a.backend=='stream':from waveform_stream_v1.solver import solve
+    if a.backend in ('stream','banded'):from waveform_stream_v1.solver import solve
+    if a.backend=='banded':from waveform_banded_v1.metric import BandedMetric,supported_banded
     repo=Path(__file__).resolve().parents[1];a.out.mkdir(parents=True,exist_ok=False)
     r=dict(result='running',backend=a.backend,pid=os.getpid(),cases=[],sources={},inputs={},material_read=False,
         previous_goal_turn_classification='progress: frozen graph12/12 and precision diagnosis ate8c3825',block=a.block)
     try:
         required=load(a.prerequisite/'report.json')
         assert required['result']=='independent_waveform_structured_controls_passed' and required['all_qualified']
+        if a.backend=='banded':
+            band_gate=load(a.band_prerequisite/'report.json')
+            assert band_gate['result']=='independent_waveform_banded_controls_passed' and band_gate['all_qualified']
+            assert band_gate['original_audit_sha256']==sha(a.prerequisite/'report.json')
+            assert band_gate['producer_sha256']==required['producer_sha256']
+            r['inputs'][str(a.band_prerequisite/'report.json')]=sha(a.band_prerequisite/'report.json')
         baseline=load(a.baseline/'report.json');assert baseline['all_qualified']
         for path in (a.prerequisite/'report.json',a.baseline/'report.json'):r['inputs'][str(path)]=sha(path)
         parents={kind:(a.original/folder,load(a.original/folder/'report.json')) for kind,folder in
                  (('algebra','primal_algebra1'),('Hann','context1'))}
         names={n for _,parent in parents.values() for n in parent['sources']}
         names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_structured_v1').glob('*.py'))
-        if a.backend=='stream':
+        if a.backend in ('stream','banded'):
             names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_stream_v1').glob('*.py'))
             names.add('research/waveform_structured_stream_v1_plan.json')
+        if a.backend=='banded':
+            names.update(p.relative_to(repo).as_posix() for p in (repo/'tools/waveform_banded_v1').glob('*.py'))
+            names.add('research/waveform_banded_known_v1_plan.json')
         names.update(('tools/run_waveform_structured_known_v1.py','tools/waveform_representer_v1/metric.py',
                       'research/waveform_graph_structured_v1_plan.json'))
         for name in sorted(names):
@@ -60,6 +72,7 @@ def main():
                     system=DenseFixture(case['channels'],case['weak'],case['silent_right']);audio=system.audio
                     assert np.array_equal(system.A,old['A']) and np.array_equal(audio,old['audio'])
                     W=np.array(system.wave_metric,order='F');reference=old['original']
+                    if a.backend=='banded':W=BandedMetric.control_from_dense(W)
                     positions,orders=system.positions,system.orders
                     forward=lambda x:system.Phi@x
                     adjoint=lambda x:system.Phi.T@x
@@ -68,7 +81,7 @@ def main():
                     synthesis=WaveSynthesis(len(audio),positions,orders,1)
                     metric=SupportedMetric(audio,64.);system=SupportedSystem(synthesis,scale,metric)
                     print('BUILDING STRUCTURED',case['label'],len(audio),'PID',os.getpid(),flush=True)
-                    W=supported_gram(metric,order='F')
+                    W=supported_banded(metric) if a.backend=='banded' else supported_gram(metric,order='F')
                     reference=real_vector(old['original_dense_nodes']/scale[None])
                     forward=lambda x:synthesis.synthesize(complex_array(x,system.nshape)*system.scale[None]).ravel()
                     adjoint=lambda x:real_vector(synthesis.adjoint(x.reshape(audio.shape))*system.scale[None])

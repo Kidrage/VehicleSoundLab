@@ -12,7 +12,12 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','prerequisite','original','out'):
         p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--backend',choices=('stream','banded'),default='stream')
+    p.add_argument('--band-prerequisite',type=Path)
+    p.add_argument('--band-metric-audit',type=Path)
     a=p.parse_args()
+    if a.backend=='banded' and (not a.band_prerequisite or not a.band_metric_audit):
+        p.error('banded backend requires packed-root and original-metric independent gates')
     for name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[name]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
@@ -29,20 +34,34 @@ def main():
     from waveform_structured_v1.resources import ArrayLedger, process_memory
     from waveform_stream_v1.shared import SharedSupportedGeometry
     from waveform_stream_v1.solver import solve
+    if a.backend=='banded':from waveform_banded_v1.metric import BandedMetric,supported_banded
     repo=Path(__file__).resolve().parents[1]
     a.out.mkdir(parents=True,exist_ok=False)
     prerequisite=load(a.prerequisite/'report.json')
     assert prerequisite['all_qualified'] and prerequisite['pass_count']==12
+    if a.backend=='banded':
+        band_gate=load(a.band_prerequisite/'report.json')
+        metric_gate=load(a.band_metric_audit/'report.json')
+        assert band_gate['result']=='independent_waveform_banded_controls_passed' and band_gate['all_qualified']
+        assert metric_gate['result']=='waveform_banded_original_metrics_diagnosed' and metric_gate['all_original_lower_metrics_bitwise_equal']
+        assert metric_gate['inputs'] and prerequisite['producer_sha256'] in metric_gate['inputs'].values()
+        assert prerequisite['banded_old_root_diagnostics_separate']
     parent=load(a.original/'primal_algebra1/report.json')
     names=set(parent['sources'])
     names.update(('tools/run_waveform_shared_known_v1.py','research/waveform_stream_known_v1_plan.json',
         'tools/run_waveform_structured_known_v1.py','tools/waveform_representer_v1/metric.py'))
     for folder in ('waveform_stream_v1','waveform_structured_v1','observer_supported_v1','observer_complete_v1','observer_forward_v1'):
         names.update(f.relative_to(repo).as_posix() for f in (repo/'tools'/folder).glob('*.py'))
-    r=dict(result='running',pid=os.getpid(),cases=[],rejections=[],sources={},inputs={},material_read=False)
+    if a.backend=='banded':
+        names.update(f.relative_to(repo).as_posix() for f in (repo/'tools/waveform_banded_v1').glob('*.py'))
+        names.add('research/waveform_banded_known_v1_plan.json')
+    r=dict(result='running',backend=a.backend,pid=os.getpid(),cases=[],rejections=[],sources={},inputs={},material_read=False)
     try:
         for path in (a.prerequisite/'report.json',a.original/'primal_algebra1/report.json'):
             r['inputs'][str(path)]=sha(path)
+        if a.backend=='banded':
+            for path in (a.band_prerequisite/'report.json',a.band_metric_audit/'report.json'):
+                r['inputs'][str(path)]=sha(path)
         for name in sorted(names):
             dest=a.out/'exact_sources'/name;dest.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(repo/name,dest);r['sources'][name]=sha(dest)
@@ -55,9 +74,11 @@ def main():
                 single=system.Phi[::C,::C].copy()
                 forward=lambda x:single@x;adjoint=lambda x:single.T@x
                 W=np.array(system.wave_metric[::C,::C],order='F')
+                if a.backend=='banded':W=BandedMetric.control_from_dense(W)
             else:
                 shared=SharedSupportedGeometry(system)
-                prior=shared.prior;forward=shared.forward;adjoint=shared.adjoint;W=shared.metric_matrix()
+                prior=shared.prior;forward=shared.forward;adjoint=shared.adjoint
+                W=supported_banded(shared.metric) if a.backend=='banded' else shared.metric_matrix()
             values,info=solve(forward,adjoint,prior,W,audio,ledger,block=32)
             q=values['q'].ravel();fitted=complex_array(q,system.nshape)*system.scale[None]
             # Original complete interleaved matrix is a SMALL known oracle,

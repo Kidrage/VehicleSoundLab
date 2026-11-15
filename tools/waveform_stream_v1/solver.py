@@ -2,6 +2,7 @@
 import numpy as np
 from scipy import linalg
 from .householder import Householder
+from .metric_root import factor
 
 
 def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
@@ -13,13 +14,11 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
     m, n = len(y), prior.size
     if wave_metric.shape != (m, m) or block < 1:
         raise ValueError('Invalid waveform dimensions or block size')
-    for name, value in (('wave_metric.input', wave_metric), ('penalty.K', prior.K), ('penalty.L', prior.L)):
+    for name, value in (('penalty.K', prior.K), ('penalty.L', prior.L)):
         ledger.add(name, value)
-    ledger.snapshot('metric.before_root')
-    Lw = linalg.cholesky(wave_metric, lower=True, overwrite_a=True, check_finite=False)
-    metric_alias = bool(np.shares_memory(Lw, wave_metric))
-    ledger.add('wave_metric.L', Lw)
-    t = Lw.T@y
+    root=factor(wave_metric,ledger)
+    metric_alias=root.shares_input
+    t = root.transpose(y)
     ledger.add('weighted_target', t)
     X = np.empty((m, n), order='F')
     ledger.add('weighted_synthesis', X)
@@ -32,7 +31,7 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
             basis[j] = 1
             raw[:, j-first] = forward(basis)
             basis[j] = 0
-        X[:, first:last] = Lw.T@raw
+        X[:, first:last] = root.transpose(raw)
     del raw, basis
     for first in range(0, m, block):
         last = min(m, first+block)
@@ -59,13 +58,13 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
     residual_coordinates = -transformed.copy()
     residual_coordinates[:k] = reduced[:k]
     model = qr.apply(residual_coordinates)
-    wave_model = linalg.solve_triangular(Lw, model, trans='T', lower=True, check_finite=False)
+    wave_model = root.solve_transpose(model)
     # Multiple RHS are never averaged. Original complete actions are repeated
     # independently; the QR and graph factors alone are shared.
     def apply_X(value):
-        return np.column_stack([Lw.T@forward(prior.inverse_transpose(v)) for v in value.T])
+        return np.column_stack([root.transpose(forward(prior.inverse_transpose(v))) for v in value.T])
     def apply_XT(value):
-        return np.column_stack([prior.inverse(adjoint(Lw@v)) for v in value.T])
+        return np.column_stack([prior.inverse(adjoint(root.apply(v))) for v in value.T])
     direct = apply_X(z)-t
     normal = apply_XT(direct)+z
     stable_normal = apply_XT(model)+z
@@ -90,7 +89,7 @@ def solve(forward, adjoint, prior, wave_metric, target, ledger, block=16):
         return float(value[0]) if vector else value.tolist()
     info = dict(method='direct_geqrf_structured_graph_independent_RHS',
         waveform_rows=m, source_columns=n, RHS=y.shape[1], retained_QR_directions=k, block=block,
-        metric_root_shares_input=metric_alias, X_QR_alias=qr.alias, graph_QR_alias=graph.alias,
+        metric_root_shares_input=metric_alias, metric_root_type=root.kind,X_QR_alias=qr.alias, graph_QR_alias=graph.alias,
         geqrf_lwork=[qr.lwork, graph.lwork],
         graph_triangular_explicit_F_copy=True,
         rectangular_R_or_explicit_Q_or_dense_packed_R_allocated_by_solver=False,

@@ -10,6 +10,8 @@ from research_archive_v1 import load,save,sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ('workspace','study','out'):p.add_argument('--'+n,type=Path,required=True)
+    p.add_argument('--record-banded-root-differences',action='store_true',
+        help='Banded backend only: record the old-root 2e-11 comparison separately; preserve all original gates')
     a=p.parse_args()
     for n in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[n]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
@@ -39,6 +41,7 @@ def main():
         return value[:,0] if vector else value
     try:
         source=load(a.study/'report.json');assert source['result']=='waveform_structured_original12_measured'
+        if a.record_banded_root_differences:assert source['backend']=='banded'
         assert len(source['cases'])==12
         for n,h in source['sources'].items():assert sha(a.study/'exact_sources'/n)==h
         for n,h in source['inputs'].items():assert sha(n)==h
@@ -91,8 +94,12 @@ def main():
                 with np.load(case['baseline_file']) as baseline:
                     baseline_white=baseline['F'].T@baseline['F']
                     baseline_white_error=float(np.max(abs(baseline_white-original_white))/max(1.,abs(original_white).max()))
-                    check('unchanged_whitened_graph_Gram',F.T@F,baseline_white,max(1.,abs(baseline_white).max()),gate=2e-11)
-                    check('unchanged_whitened_graph_linear',F.T@transformed[:k],baseline['X'].T@baseline['t'],max(1.,abs(baseline['X'].T@baseline['t']).max()),gate=2e-11)
+                    root_gram_difference=float(np.max(abs(F.T@F-baseline_white))/max(1.,abs(baseline_white).max()))
+                    old_linear=baseline['X'].T@baseline['t']
+                    root_linear_difference=float(np.max(abs(F.T@transformed[:k]-old_linear))/max(1.,abs(old_linear).max()))
+                    if not a.record_banded_root_differences:
+                        check('unchanged_whitened_graph_Gram',F.T@F,baseline_white,max(1.,abs(baseline_white).max()),gate=2e-11)
+                        check('unchanged_whitened_graph_linear',F.T@transformed[:k],old_linear,max(1.,abs(old_linear).max()),gate=2e-11)
                 normG=float(np.sqrt(np.sum(Gdata*Gdata)+len(R)))
                 check('root_QR_Frobenius',np.sqrt(np.sum(F*F)+len(R)),case['solver']['augmented_root_Frobenius'],max(1.,normG),gate=2e-12)
                 T=z['graph_R'];Qd=apply_q(z['graph_reflectors'],z['graph_tau'],np.eye(k+len(R),k))
@@ -147,11 +154,16 @@ def main():
                     original_unwhitened_equation_audit_gate=2e-8,
                     stricter_whitened_2e_11_diagnostic_passed=bool(strict_white_error<2e-11),
                     stricter_whitened_diagnostic_error=strict_white_error,
-                    frozen_baseline_whitened_diagnostic_error=baseline_white_error))
+                    frozen_baseline_whitened_diagnostic_error=baseline_white_error,
+                    old_root_Gram_2e_11_passed=bool(root_gram_difference<2e-11),
+                    old_root_Gram_relative_difference=root_gram_difference,
+                    old_root_linear_2e_11_passed=bool(root_linear_difference<2e-11),
+                    old_root_linear_relative_difference=root_linear_difference))
                 print('AUDITED',case['label'],'qualified',qualified,'normal',stable_ratio,'direct',direct_ratio,flush=True)
         r.update(result='independent_waveform_structured_original12_verified',pass_count=sum(c['qualified'] for c in r['cases']),
             all_qualified=all(c['qualified'] for c in r['cases']),producer_sha256=sha(a.study/'report.json'),
             auditor_sha256=sha(__file__),oracles_sha256={n:sha(repo/n) for n in helpers},
+            banded_old_root_diagnostics_separate=a.record_banded_root_differences,
             source_or_full_or_runtime_or_hearing_qualified=False)
         save(a.out/'report.json',r);print(r['result'],r['pass_count'],flush=True)
     except BaseException as error:

@@ -1,0 +1,11 @@
+{
+  "scope": "KNOWN-FIRST exact finite-Hann band storage and roots; original source-independent objective/gates unchanged",
+  "previous_goal_turn": "Progress: full12289/49/288 independent solver+fidelity passed, archiveda5e2141; real6 context/resources inventoried but no sourcefit",
+  "representation": "Finite supported Hann sizeS couples at most S-1 time diagonals. Lower storage bands[i-j,j]=W[i,j], bandwidth4095 atS4096. Construct original irfft kernel contributions directly; no denseW production, no frequency/row/diagonal truncation. Original frequency weights/globalLR scale and all source nodes/orders retained.",
+  "root": "LAPACK lower band Cholesky, BLASdtbmv/dtbsv with explicit input copies and observed aliases; root/transpose/inverse maps for arbitrary multiple RHS. Square graphT remains explicit; don't claim bandW alone solves genuine-context20GB resource limit.",
+  "controls": "Original7 arbitraryR adapters and original4finiteDFT everyentry; independent lower bands/root actions and native overwrite aliases. Same original4algebra+8Hann with complete original2e-8 unwhitened equations, parameter/gradient2e-7,stablecomplete/backward1e-11,BOTHgaps1e-6J+1e-10. Retain oldstrict white and newdiagnostic failures; no tolerance relabeling. Then original shared8 without channel averaging if justified.",
+  "context_independent_work": "Trace six original source_seconds coordinates back to actual native spans and original clock record; verify units and genuinely recordedneighbors plus independently supported phase before extension. Do not infer source_seconds are sample indices, fake context, extrapolate outside support, or call acousticfrequency measuredRPM/load.",
+  "resource": "Record actual band input/root alias, BLAS RHS aliases, live stores and process peak; compare dense known separately. Calculate fullknown,original6,genuine-context6 shape costs plus native allowance/headroom; no automaticfull/source run from smallpass.",
+  "protected": "670C/H82voice3F2/index,moving35/default,one-driver,owned/takes,room/hearings;no push/download/newhearing/unchanged68CTest",
+  "goal": "ACTIVE full multi-engine/states/V6fivebuses/independentfuturephysical7.1.4; no new C/audio/hearing qualification here"
+}
