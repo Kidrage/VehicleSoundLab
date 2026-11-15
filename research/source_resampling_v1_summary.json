@@ -1,0 +1,427 @@
+{
+  "result": "source_resampling_transfer_evidence_frozen",
+  "previous_goal_turn": "native_error_budget actual signed decomposition/publication: progress",
+  "this_goal_turn": "known-qualified direct bandlimited source query, six independently verified real transfers and preserved fixed-fit regression: progress",
+  "known_cases_verified": 8,
+  "real_cases_verified": 6,
+  "publication_checks": 88,
+  "all_radius_pairs_verified": 18,
+  "original96sources_unchanged": true,
+  "original71inputs_unchanged": true,
+  "original_jobs_not_restarted": true,
+  "first_case_never_refit": true,
+  "original_remaining_five_never_fitted": true,
+  "C_files_unchanged": 670,
+  "voice_files_unchanged": 82,
+  "F2_files_unchanged": 3,
+  "protected_C_index_sha256": "4875e77aeb5ae35c36d61b6ea3b11ac9e240fc9b90769a4b4590764b3b239a2f",
+  "original_source_fidelity_qualified": false,
+  "eligible_for_later_source_statistics": false,
+  "resampling_improvement_is_not_perceptual_or_sustained_voice_qualification": true,
+  "saved_old_fit_cross_reference_regression_retained": true,
+  "all_four_methods_and_weak_absolute_powers_retained": true,
+  "no_factors_copied": true,
+  "cases": [
+    {
+      "label": "F3 Fifth First Early",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          8.233006266842495e-13,
+          6.09341374652179e-13
+        ],
+        "sinc64": [
+          3.475372564723764e-15,
+          1.3874496846425838e-15
+        ],
+        "sinc128": [
+          3.3968854095771776e-15,
+          1.3408505241667578e-15
+        ],
+        "sinc256": [
+          3.390268796938027e-15,
+          1.3350513730990075e-15
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 0.00330699220693263,
+      "main0_14k_max_abs_band_power_change_dB": 0.006413500975925296,
+      "main0_14k_max_abs_LR_complex_component_change": 8.180956777947834e-05,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.29896002892016e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 1.9053227156607615e-07,
+          "maximum_FS": 2.335549986742791e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 1.8929924707788786e-07,
+          "maximum_FS": 2.5744267762028983e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 8.094600138365498e-08,
+          "maximum_FS": 1.131701788392725e-07
+        }
+      ]
+    },
+    {
+      "label": "F3 Fifth First Mid",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          2.439430578145855e-12,
+          2.0095050808947548e-12
+        ],
+        "sinc64": [
+          6.207991621519881e-16,
+          7.040687202523344e-16
+        ],
+        "sinc128": [
+          1.265953192810551e-16,
+          2.502008664173402e-16
+        ],
+        "sinc256": [
+          1.0605186478790683e-16,
+          2.3301748358520745e-16
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 8.469355697080355e-05,
+      "main0_14k_max_abs_band_power_change_dB": 0.00635467894295515,
+      "main0_14k_max_abs_LR_complex_component_change": 0.00027895497929054935,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.8920614640627664e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 2.2095759188278317e-07,
+          "maximum_FS": 2.4127555897646147e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 2.1601813653021188e-07,
+          "maximum_FS": 2.8004256302782693e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 6.674041707696956e-08,
+          "maximum_FS": 1.0768734493016296e-07
+        }
+      ]
+    },
+    {
+      "label": "F3 Fifth First Late",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          5.893601120116374e-12,
+          4.892978731752256e-12
+        ],
+        "sinc64": [
+          2.216914159274624e-15,
+          2.3583321230898102e-15
+        ],
+        "sinc128": [
+          7.389891590594619e-16,
+          8.559977444568545e-16
+        ],
+        "sinc256": [
+          6.240799797340308e-16,
+          7.829306895397824e-16
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 0.00014786771390191917,
+      "main0_14k_max_abs_band_power_change_dB": 0.006842592161365057,
+      "main0_14k_max_abs_LR_complex_component_change": 5.474541248296633e-05,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.481312969184658e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 2.3219198744269142e-07,
+          "maximum_FS": 2.438060717757651e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 2.304723145595069e-07,
+          "maximum_FS": 3.0322566402229967e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 6.112262971384005e-08,
+          "maximum_FS": 1.3163467795992978e-07
+        }
+      ]
+    },
+    {
+      "label": "F3 Fifth Second Early",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          9.721715556898303e-13,
+          6.330003195440401e-13
+        ],
+        "sinc64": [
+          4.143706644894032e-15,
+          8.704986126031123e-16
+        ],
+        "sinc128": [
+          4.060939141070673e-15,
+          8.200036929345972e-16
+        ],
+        "sinc256": [
+          4.046489738304577e-15,
+          8.138190797317318e-16
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 0.0030407602508573275,
+      "main0_14k_max_abs_band_power_change_dB": 0.0047415366739483695,
+      "main0_14k_max_abs_LR_complex_component_change": 0.00028482964102677366,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.693421078868188e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 1.967703818122624e-07,
+          "maximum_FS": 2.569123825901798e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 1.974793540691891e-07,
+          "maximum_FS": 2.698264005562834e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 8.892372900555094e-08,
+          "maximum_FS": 1.318527786953183e-07
+        }
+      ]
+    },
+    {
+      "label": "F3 Fifth Second Mid",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          1.2727263469974554e-12,
+          1.0602205426588082e-12
+        ],
+        "sinc64": [
+          5.975552063638628e-16,
+          3.302838874411713e-16
+        ],
+        "sinc128": [
+          4.604721852133946e-16,
+          2.2385917289335854e-16
+        ],
+        "sinc256": [
+          4.51854590321663e-16,
+          2.1382171199051276e-16
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 0.00029333344927006994,
+      "main0_14k_max_abs_band_power_change_dB": 0.005800211200140171,
+      "main0_14k_max_abs_LR_complex_component_change": 0.00022950459130338663,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.740472365033803e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 2.4821630566444835e-07,
+          "maximum_FS": 2.6451304857566527e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 2.3521987116217544e-07,
+          "maximum_FS": 2.9966107917278606e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 5.6319239527489096e-08,
+          "maximum_FS": 9.591192605407084e-08
+        }
+      ]
+    },
+    {
+      "label": "F3 Fifth Second Late",
+      "tail_Welch_FS2_LR": {
+        "legacy": [
+          7.152179176150739e-12,
+          5.9834471988767165e-12
+        ],
+        "sinc64": [
+          1.1112242832520274e-14,
+          7.715529450310624e-15
+        ],
+        "sinc128": [
+          9.11162438883975e-15,
+          5.7282705219956234e-15
+        ],
+        "sinc256": [
+          8.988962970999946e-15,
+          5.630742821626646e-15
+        ]
+      },
+      "sinc128_over_legacy_tail_power": 0.001129743986860646,
+      "main0_14k_max_abs_band_power_change_dB": 0.007551404023091803,
+      "main0_14k_max_abs_LR_complex_component_change": 8.692944493124584e-05,
+      "sinc128_target_wave_NRMSE_vs_legacy": 6.771488113906935e-06,
+      "all_radius_pairs": [
+        {
+          "first": "sinc64",
+          "second": "sinc128",
+          "target_wave_NRMSE_relative_legacy": 2.4420833276177736e-07,
+          "maximum_FS": 2.5910067419365745e-07
+        },
+        {
+          "first": "sinc64",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 2.3894291927765125e-07,
+          "maximum_FS": 2.878186911026148e-07
+        },
+        {
+          "first": "sinc128",
+          "second": "sinc256",
+          "target_wave_NRMSE_relative_legacy": 5.5902674478003936e-08,
+          "maximum_FS": 9.797836393599102e-08
+        }
+      ]
+    }
+  ],
+  "saved_fit_cross_reference_complex_NRMSE": {
+    "legacy": [
+      0.0002490722813509306,
+      4.1978629505083894e-05,
+      1.973812881917108e-05,
+      2.532862710578063e-05,
+      6.131952743472773e-05,
+      0.062324211156460134
+    ],
+    "sinc64": [
+      0.00024915972244129704,
+      0.00011314555619032637,
+      0.00025617703935889896,
+      0.0005428841713770438,
+      0.0023973409732726213,
+      0.15609707113177476
+    ],
+    "sinc128": [
+      0.0002491593246575469,
+      0.00011297792638511297,
+      0.00025605662036579514,
+      0.0005424913180730611,
+      0.0023931559843722167,
+      0.1565133495481942
+    ],
+    "sinc256": [
+      0.0002491588256288584,
+      0.00011293915513307336,
+      0.00025600399503804554,
+      0.0005423732483369049,
+      0.0023907196899521236,
+      0.15643592491891894
+    ]
+  },
+  "full_goal": "ACTIVE: sustained jointLR/V6fivebuses/multiengine/allstates/independent physical7.1.4",
+  "input_archive_locations": {
+    "E:\\VehicleSoundLab\\baselines\\native_error_budget_v1\\evidence\\C_files_sha256.json": "protected/C_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\native_error_budget_v1\\evidence\\voice_files_sha256.json": "protected/voice_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\native_error_budget_v1\\evidence\\F2_files_sha256.json": "protected/F2_files_sha256.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\report.json": "workspace/references/analysis/waveform_file_real_v1/prepare1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare_audit1\\report.json": "workspace/references/analysis/waveform_file_real_v1/prepare_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\generic_audit2\\report.json": "workspace/references/analysis/waveform_file_real_adapter_v1/generic_audit2/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\known1\\report.json": "workspace/references/analysis/waveform_file_real_adapter_v1/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_adapter_v1\\known_audit1\\report.json": "workspace/references/analysis/waveform_file_real_adapter_v1/known_audit1/report.json",
+    "E:\\VehicleSoundLab-Git\\research\\waveform_file_full_v1_summary.json": "repository/research/waveform_file_full_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\manifest.json": "workspace/baselines/waveform_file_full_v1/manifest.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_full_v1_archive_verification.json": "workspace/references/analysis/waveform_file_full_v1_archive_verification.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_full_v1_binding_verification.json": "workspace/references/analysis/waveform_file_full_v1_binding_verification.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\full_audit1\\report.json": "workspace/baselines/waveform_file_full_v1/evidence/full_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\peak_audit1\\report.json": "workspace/baselines/waveform_file_full_v1/evidence/peak_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\resources_audit1\\report.json": "workspace/baselines/waveform_file_full_v1/evidence/resources_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\C_files_sha256.json": "workspace/baselines/waveform_file_full_v1/evidence/C_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\voice_files_sha256.json": "workspace/baselines/waveform_file_full_v1/evidence/voice_files_sha256.json",
+    "E:\\VehicleSoundLab\\baselines\\waveform_file_full_v1\\evidence\\F2_files_sha256.json": "workspace/baselines/waveform_file_full_v1/evidence/F2_files_sha256.json",
+    "E:\\VehicleSoundLab-Git\\research\\recorded_phase_context_v1_summary.json": "repository/research/recorded_phase_context_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\manifest.json": "workspace/baselines/recorded_phase_context_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\report.json": "workspace/baselines/recorded_phase_context_v1/evidence/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real_audit1\\report.json": "workspace/baselines/recorded_phase_context_v1/evidence/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\validation.json": "workspace/baselines/recorded_phase_context_v1/validation.json",
+    "E:\\VehicleSoundLab-Git\\research\\observer_frequency_v1_summary.json": "repository/research/observer_frequency_v1_summary.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\manifest.json": "workspace/baselines/observer_frequency_v1/manifest.json",
+    "E:\\VehicleSoundLab\\baselines\\observer_frequency_v1\\source\\tools\\run_observer_frequency_real_v1.py": "workspace/baselines/observer_frequency_v1/source/tools/run_observer_frequency_real_v1.py",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Early.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Early\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Early\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Early/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Mid.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Mid\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth First Mid\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth First Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth First Late.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth First Late\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth First Late/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth First Late\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth First Late/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Early.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Early\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Early/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Early\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Early/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Mid.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Mid\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Mid/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_fifth_voice_v1\\evidence\\fit1\\F3 Fifth Second Mid\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_fifth_voice_v1/evidence/fit1/F3 Fifth Second Mid/native.wav",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\evidence\\real1\\F3 Fifth Second Late.npz": "workspace/baselines/recorded_phase_context_v1/evidence/real1/F3 Fifth Second Late.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\selection.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/selection.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\result.json": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/result.json",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\coordinates.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/coordinates.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\source.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/source.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\observer_frequency_v1\\evidence\\real1\\F3 Fifth Second Late\\scale.npz": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/observer_frequency_v1/evidence/real1/F3 Fifth Second Late/scale.npz",
+    "E:\\VehicleSoundLab\\baselines\\recorded_phase_context_v1\\inputs\\upstream\\F3_pitch_anchors_v1\\evidence\\fit1\\F3 Fifth Second Late\\native.wav": "workspace/baselines/recorded_phase_context_v1/inputs/upstream/F3_pitch_anchors_v1/evidence/fit1/F3 Fifth Second Late/native.wav",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Early.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Mid.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth First Late.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Early.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Mid.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\prepare1\\F3 Fifth Second Late.npz": "workspace/references/analysis/waveform_file_real_v1/prepare1/F3 Fifth Second Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\known1\\report.json": "workspace/references/analysis/source_resampling_v1/known1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\known_audit1\\report.json": "workspace/references/analysis/source_resampling_v1/known_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\report.json": "workspace/references/analysis/source_resampling_v1/real1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real_audit1\\report.json": "workspace/references/analysis/source_resampling_v1/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth First Early.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth First Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth First Mid.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth First Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth First Late.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth First Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth Second Early.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth Second Early.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth Second Mid.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth Second Mid.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\source_resampling_v1\\real1\\F3 Fifth Second Late.npz": "workspace/references/analysis/source_resampling_v1/real1/F3 Fifth Second Late.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_real_guard_v1\\real_audit1\\report.json": "workspace/references/analysis/waveform_real_guard_v1/real_audit1/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\capture.npz": "workspace/references/analysis/waveform_file_real_v1/real1/F3 Fifth First Early/capture.npz",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\F3 Fifth First Early\\report.json": "workspace/references/analysis/waveform_file_real_v1/real1/F3 Fifth First Early/report.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\run_spec.json": "workspace/references/analysis/waveform_file_real_v1/real1/run_spec.json",
+    "E:\\VehicleSoundLab\\references\\analysis\\waveform_file_real_v1\\real1\\report.json": "workspace/references/analysis/waveform_file_real_v1/real1/report.json",
+    "E:\\VehicleSoundLab\\baselines\\native_error_budget_v1\\manifest.json": "workspace/baselines/native_error_budget_v1/manifest.json"
+  },
+  "archive": "E:\\VehicleSoundLab\\baselines\\source_resampling_v1",
+  "manifest_sha256": "c3f9417f5b671784fa7f9d6931d5f695a54f532e8377bebc3ec3c48869e98601",
+  "file_count": 279,
+  "bytes": 131903129
+}
