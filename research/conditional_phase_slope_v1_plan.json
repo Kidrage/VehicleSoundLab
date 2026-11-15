@@ -1,0 +1,39 @@
+{
+  "schema": "vsl.conditional-phase-slope/1",
+  "parent_commit": "dd089f0",
+  "previous_goal_turn": "Progress: continuous P-conditioned class implemented,1728 LPs independently certified and archived. Sparse positivity probe retained excessive inverse slopes; no audio/runtime adoption.",
+  "purpose": "Directly optimize slope bounds at the SAME attainable weighted circular moment and SAME amplitude/phase marginals, rather than equating maximum entropy with smoothness.",
+  "source": "All6 frozen conditional_phase_feasibility_v1 real1 outcomes, all288 harmonics. Original32P hats, phase segment/tail cells, amplitudes and fixed1e-4 positivity floor remain unchanged. Target is exactly the parent's positive-probe cross, not the infeasible raw target.",
+  "representation": "Interior conditional CDF variables c_ij; c_i0=0,c_iJ=1. Joint masses are r_i*(c_i,j+1-c_ij). The q marginal fixes sum_i r_i*c_ij to the original cumulative q. Centered weighted circular cross is linear in interior CDFs, with each nonzero real/imag constraint scaled by its absolute coefficient sum. The frozen target is unchanged; its componentwise1e-9 interval inherits the parent's declared LP feasibility precision. This is below the unchanged2e-7 acceptance gate and is recorded explicitly, not a hidden timbre/strength allowance.",
+  "moment_component_allowance": 1e-09,
+  "revision_evidence": "known1/known_audit1 pass. real1 exact-moment stage2 reports infeasible; first-stage witness satisfies rows within6.48785e-11, while parent finite-precision moment lies just outside the strict probability-floor face. Disabling presolve also reports infeasible, so solver switching is not the repair. known2/real2 use the inherited1e-9 moment interval and unchanged target/margins/acceptance gates; old sources and failed attempts remain.",
+  "forward_error_evidence": "real2 first source order177 reaches2.22565e-9 Euclidean cross error: per-component moment allowance plus measured5.68715e-10 scaled LP residual times1.73786 scale. A new extra2e-9 cutoff incorrectly omitted solver/marginal forward error. known3/real3 restore the ORIGINAL plan2e-7 physical acceptance and additionally verify a derived per-component interval+scaled-residual+marginal bound. No physical gate, input, target or optimization coefficient is loosened.",
+  "solver_matrix_precision_evidence": "real3 second source order22: canonical dual stationarity .00123555 fails. Both alternate IPM and no-presolve reproduce it. Exactly TWO nonzero coefficients2.91698e-10 lie below HiGHS default small_matrix_value1e-9; independently applying that same truncation makes the old dual residual2.73e-11. Native small_matrix_value1e-12 retains the original matrix and restores canonical residual2.73e-11. known4/real4 use this precision option, same problem and gates; all earlier attempts remain.",
+  "lexicographic_optimization": "Stage1 maximizes kappa subject to cell_probability>=kappa*phase_cell_width and the original positivity floor. Thus1/kappa minimizes the global inverse-uniform slope over continuous P hats in this class. Stage2 holds kappa at the certified optimum minus max(2e-10,abs(kappa)*1e-8), a declared numerical feasibility allowance, and minimizes the largest adjacent-row CDF derivative with respect to normalized P. A dimensionless variable scaled by stage1's actual CDF derivative bounds avoids large objectives; every inequality is explicitly row-scaled. No rank/rho/strength or bandwidth search.",
+  "limits": "The optimized density bound is exact for this CDF cell class up to recorded numeric tolerance; CDF/P derivative times inverse-uniform bound is conservative, not measured phase velocity or an engine time law. Keep regressions in the actual P inverse bound. Maximum entropy alone provides no Lipschitz guarantee, so is not used as a smoothing claim.",
+  "known": [
+    "independent_linear_phase",
+    "associated_continuous_phase",
+    "constant_product",
+    "single_row",
+    "fixed_phase",
+    "quarter_turn",
+    "conjugate",
+    "invalid_target_rejected"
+  ],
+  "LP": {
+    "method": "highs",
+    "primal_feasibility_tolerance": 1e-10,
+    "dual_feasibility_tolerance": 1e-10,
+    "small_matrix_value": 1e-12
+  },
+  "checks": {
+    "scaled_primal_dual": 2e-07,
+    "physical_marginal_and_cross": 2e-07,
+    "decoder_radians": 2e-08,
+    "known_optimum": 2e-07
+  },
+  "decision": "Retain all1728 parent/density/variation solutions and full two-stage primal/dual certificates, all24 band coordinates and all slope regressions. Independently rederive constraints, quadrature and decoder. Inspect quantiles and actual fixed input paths, without calling path speed an observed engine modulation. No audio before time-through-original-observer qualification; no new hearing question/default/C/driver/room changes.",
+  "scope": "Preserve670C-H82voices3F2/Cindex, accepted moving35, one driver/owned/takes and original hearings. V6 DNA/BODY/DETAIL/EVENT/AUX and independent future7.1.4 spatial adapter. Full engines/states/Cport/physical7.1.4 remain active; no unchanged68CTest, download or push.",
+  "dual_accumulation_evidence": "real_audit1 on real4 SecondEarly order260 variation: signed dual terms absolute sum4.278411826869671e8 cancel to objective.829672. Float64 accumulation gives gap-2.12361608e-7; independently exact binary products give-1.59269027e-7 within unchanged2e-7 gate. Production used a signed gap in max, which missed negative defects: repair to abs and100digit Decimal products/sum, independent audit uses exact binary-rational Fraction. All earlier sources/results retained; known5/real5 rerun SAME LP/targets/gates, no solver or model change."
+}

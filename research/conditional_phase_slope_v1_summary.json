@@ -1,0 +1,436 @@
+{
+  "result": "conditional_phase_slope_frozen",
+  "parent_commit": "dd089f0559c9f96fdc63ae3fca4410d0d6d57f89",
+  "previous_goal_turn": "Progress: real4 complete, independent audit found dual accumulation and signed-gap gate defects; repaired Decimal/absolute gate and exact Fraction audit, known5 passed, real5 launched. This turn continues the same live handle and final qualification.",
+  "known_controls": 8,
+  "numerical_known_models": 6,
+  "source_models": 6,
+  "harmonics": 1728,
+  "real_LP_certificates": 3456,
+  "unitless_probe_points": 1025,
+  "summary": {
+    "inverse_uniform_slope_bound": {
+      "parent": {
+        "quantiles": [
+          1182.1852780205488,
+          229601.97380203207,
+          411802.6597163537,
+          661342.3218776246,
+          1118444.3341969722
+        ]
+      },
+      "density": {
+        "quantiles": [
+          0.8794457981722651,
+          33.83071316228333,
+          213841.8888641878,
+          561251.2580612344,
+          1117950.127257636
+        ]
+      },
+      "variation": {
+        "quantiles": [
+          0.8794458069665251,
+          33.83071349993615,
+          213851.03469444846,
+          561314.2780441768,
+          1118200.1456566611
+        ]
+      },
+      "variation_improves_vs_parent": 1728
+    },
+    "inverse_product_slope_bound": {
+      "parent": {
+        "quantiles": [
+          121636.68907278923,
+          5059482.373844569,
+          12615138.0567604,
+          100263115.8128539,
+          1579900297.765778
+        ]
+      },
+      "density": {
+        "quantiles": [
+          29.246512323451615,
+          907.6478387507693,
+          5755956.71326363,
+          69089177.15981305,
+          296075145.5041614
+        ]
+      },
+      "variation": {
+        "quantiles": [
+          0.026872605119908542,
+          320.6850851377503,
+          5630970.990239631,
+          64898550.29312566,
+          296086195.1041917
+        ]
+      },
+      "variation_improves_vs_parent": 1686
+    },
+    "cdf_product_gradient": {
+      "parent": {
+        "quantiles": [
+          15.875942811911955,
+          30.62517941431422,
+          75.2292608138612,
+          529.7443144290672,
+          9544.383435562844
+        ]
+      },
+      "density": {
+        "quantiles": [
+          13.95585906718031,
+          26.694441702945063,
+          72.92649589169022,
+          529.744314428948,
+          7145.415725054683
+        ]
+      },
+      "variation": {
+        "quantiles": [
+          0.004508491346116319,
+          17.541997715266064,
+          62.38932956222521,
+          461.3488859187287,
+          4107.040491150613
+        ]
+      },
+      "variation_improves_vs_parent": 1618
+    },
+    "path_maximum_step_radians": {
+      "parent": {
+        "quantiles": [
+          0.0034941377352506464,
+          2.506223656614006,
+          4.092252103432447,
+          4.978746946892516,
+          5.445743950643115
+        ]
+      },
+      "density": {
+        "quantiles": [
+          0.0034941365315246387,
+          1.1375815396167277,
+          2.3159753058490904,
+          3.8125235542357148,
+          5.142279865814924
+        ]
+      },
+      "variation": {
+        "quantiles": [
+          0.0034941365319234308,
+          0.2863758595050787,
+          1.9652314672342086,
+          3.7972832904337896,
+          5.14227986577124
+        ]
+      },
+      "variation_improves_vs_parent": 1520
+    },
+    "path_step_RMS_radians": {
+      "parent": {
+        "quantiles": [
+          0.00046067673004622614,
+          0.19940088044869417,
+          0.36024813920068466,
+          0.4785814758057294,
+          0.5801174058123774
+        ]
+      },
+      "density": {
+        "quantiles": [
+          0.0004606767124783915,
+          0.08245424270016014,
+          0.1541331754826396,
+          0.2536607832105736,
+          0.42819554308248686
+        ]
+      },
+      "variation": {
+        "quantiles": [
+          0.00046067671252189726,
+          0.03373863606062829,
+          0.12564660777275347,
+          0.24652074386272124,
+          0.4281955430872548
+        ]
+      },
+      "variation_improves_vs_parent": 1541
+    }
+  },
+  "outcomes": {
+    "strict_floating_point_comparison_counts": {
+      "inverse_uniform_slope_bound": {
+        "density_vs_parent": {
+          "less": 1728,
+          "equal": 0,
+          "greater": 0
+        },
+        "variation_vs_parent": {
+          "less": 1728,
+          "equal": 0,
+          "greater": 0
+        },
+        "variation_vs_density": {
+          "less": 8,
+          "equal": 0,
+          "greater": 1720
+        }
+      },
+      "inverse_product_slope_bound": {
+        "density_vs_parent": {
+          "less": 1659,
+          "equal": 1,
+          "greater": 68
+        },
+        "variation_vs_parent": {
+          "less": 1686,
+          "equal": 1,
+          "greater": 41
+        },
+        "variation_vs_density": {
+          "less": 1424,
+          "equal": 5,
+          "greater": 299
+        }
+      },
+      "cdf_product_gradient": {
+        "density_vs_parent": {
+          "less": 1302,
+          "equal": 22,
+          "greater": 404
+        },
+        "variation_vs_parent": {
+          "less": 1618,
+          "equal": 0,
+          "greater": 110
+        },
+        "variation_vs_density": {
+          "less": 1728,
+          "equal": 0,
+          "greater": 0
+        }
+      },
+      "path_maximum_step_radians": {
+        "density_vs_parent": {
+          "less": 1507,
+          "equal": 0,
+          "greater": 221
+        },
+        "variation_vs_parent": {
+          "less": 1520,
+          "equal": 0,
+          "greater": 208
+        },
+        "variation_vs_density": {
+          "less": 1159,
+          "equal": 0,
+          "greater": 569
+        }
+      },
+      "path_step_RMS_radians": {
+        "density_vs_parent": {
+          "less": 1539,
+          "equal": 0,
+          "greater": 189
+        },
+        "variation_vs_parent": {
+          "less": 1541,
+          "equal": 0,
+          "greater": 187
+        },
+        "variation_vs_density": {
+          "less": 1281,
+          "equal": 0,
+          "greater": 447
+        }
+      }
+    },
+    "maximum_cross_target_error": {
+      "parent": 1.2291051413029514e-15,
+      "density": 1.4142578391383046e-09,
+      "variation": 1.4142287719103156e-09
+    },
+    "maximum_phase_marginal_error": {
+      "parent": 1.8439957893967573e-11,
+      "density": 4.349062776576318e-12,
+      "variation": 3.280674343297818e-12
+    },
+    "maximum_24_band_change_from_parent": {
+      "density": 7.469908037353457e-10,
+      "variation": 7.368779334090397e-10
+    },
+    "maximum_absolute_certificate_gap": {
+      "density": 1.0386863403712921e-12,
+      "variation": 1.6481587111622406e-07
+    },
+    "maximum_absolute_raw_float64_gap_diagnostic": {
+      "density": 9.656463996476905e-13,
+      "variation": 2.1236160829829487e-07
+    },
+    "counts_are_strict_numeric_comparisons_not_audibility": true
+  },
+  "audit": {
+    "result": "independent_conditional_slope_audit_passed",
+    "models": 1728,
+    "LP_certificates": 3456,
+    "cases": [
+      {
+        "label": "F3 Fifth First Early",
+        "models": 288
+      },
+      {
+        "label": "F3 Fifth First Mid",
+        "models": 288
+      },
+      {
+        "label": "F3 Fifth First Late",
+        "models": 288
+      },
+      {
+        "label": "F3 Fifth Second Early",
+        "models": 288
+      },
+      {
+        "label": "F3 Fifth Second Mid",
+        "models": 288
+      },
+      {
+        "label": "F3 Fifth Second Late",
+        "models": 288
+      }
+    ],
+    "maximum_scaled_certificate_error": 1.592690272950359e-07,
+    "maximum_physical_moment_error": 1.4142578195114481e-09,
+    "maximum_path_error_radians": 5.659916979539048e-12,
+    "maximum_phase_integral_error": 1.2412670766236366e-15,
+    "all_source_summary_fields_verified": true,
+    "producer_sha256": "30080c08d514fc96be2dda3f59ec98ed0b2fc5246ae638656399fb744a613eb2",
+    "auditor_sha256": "56a7626729d861b015849b8df389a6856c9cbce5002a75cb7fc739e0c02dccac",
+    "declared_identical_1025_point_paths_verified": true
+  },
+  "retained_attempts": {
+    "known1": "conditional_slope_known_controls_ready",
+    "known_audit1": "independent_conditional_slope_audit_passed",
+    "known2": "conditional_slope_known_controls_ready",
+    "known_audit2": "independent_conditional_slope_audit_passed",
+    "known3": "conditional_slope_known_controls_ready",
+    "known_audit3": "independent_conditional_slope_audit_passed",
+    "known4": "conditional_slope_known_controls_ready",
+    "known_audit4": "independent_conditional_slope_audit_passed",
+    "known5": "conditional_slope_known_controls_ready",
+    "known_audit5": "independent_conditional_slope_audit_passed",
+    "real1": "failed",
+    "real2": "failed",
+    "real3": "failed",
+    "real4": "six_source_conditional_slope_evidence_ready",
+    "real5": "six_source_conditional_slope_evidence_ready"
+  },
+  "precision_receipt": {
+    "strict_exact_moment_failure": {
+      "stage": "real1",
+      "source": "F3 Fifth First Early",
+      "order": 1,
+      "first_density_kappa": 3.336305081792733e-05,
+      "first_primal_dual_gap": 4.094401412964993e-15,
+      "first_equality_error": 9.992007221626409e-16,
+      "first_inequality_error": 6.487845754652694e-11,
+      "stage2_first_solution_as_witness_maximum_inequality_residual": 6.487845754652694e-11,
+      "second_stage_default_and_presolve_false_both_report_infeasible": true,
+      "exact_executed_sources": "c3f03db65833e82264bbc9b539f6300df2c8c795d067ee37aad16c8525bf239e"
+    },
+    "extra_cutoff_failure": {
+      "stage": "real2",
+      "source": "F3 Fifth First Early",
+      "order": 177,
+      "density_cross_error": 2.2256523658814943e-09,
+      "real_error": -1.988348374837301e-09,
+      "imag_error": -9.999995970177977e-10,
+      "density_scaled_inequality_error": 5.687149640110079e-10,
+      "moment_coefficient_scales": [
+        1.7378630824900219,
+        1.7194091619077585
+      ],
+      "explanation": "The extra2e-9 Euclidean cutoff omitted scaled-LP and marginal forward error; original plan acceptance remains2e-7."
+    },
+    "final": {
+      "targets_changed": false,
+      "original_physical_acceptance": 2e-07,
+      "original_scaled_certificate_acceptance": 2e-07,
+      "moment_component_interval": 1e-09,
+      "interval_source": "Parent conditional_phase_feasibility_v1 declared LP feasibility tolerance, retained below unchanged physical acceptance.",
+      "forward_error_bound": "interval + coefficient_scale*(measured_scaled_inequality_error+64eps) + abs(E[P])*sum(abs(delta_phase_moment_component*CDF_marginal_residual))",
+      "knobs_swept": false,
+      "source_clock_window_orders_rho_changed": false
+    },
+    "diagnostic_import_failure": "First inline diagnostic omitted tools/python_deps and stopped at scipy import; no numeric outputs were produced. Corrected path used for the recorded witness.",
+    "matrix_precision_failure": {
+      "stage": "real3",
+      "source": "F3 Fifth First Mid",
+      "order": 22,
+      "original_stationarity_error": 0.0012355544857376444,
+      "original_gradient_objective": 0.9999756691127192,
+      "dropped_coefficients": 2,
+      "minimum_original_coefficient": 2.9169834546937434e-10,
+      "default_small_matrix_value": 1e-09,
+      "truncated_matrix_stationarity_error": 2.7284841053187847e-11,
+      "corrected_small_matrix_value": 1e-12,
+      "corrected_stationarity_error": 2.7284841053187847e-11,
+      "corrected_gradient_objective": 0.9999756706439792,
+      "same_problem_alternate_ipm_and_no_presolve_did_not_fix_original_truncation": true,
+      "auxiliary_dual_norm_diagnostic_also_retained_the_same_truncation": true,
+      "original_target_or_constraint_coefficients_changed": false
+    },
+    "diagnostic_path_failures": [
+      "One inline diagnostic used the runtime path without codex-runtimes and did not execute Python.",
+      "One diagnostic directory glob included exact_sources/research and stopped at integer conversion; numeric model was not evaluated."
+    ],
+    "extra_cutoff_repair_176_completed_numeric_files_exact": true,
+    "dual_accumulation_failure": {
+      "audit": "real_audit1",
+      "producer": "real4",
+      "source": "F3 Fifth Second Early",
+      "order": 260,
+      "stage": "variation",
+      "raw_float64_gap": -2.1236160829829487e-07,
+      "exact_binary_product_gap": -1.592690272950359e-07,
+      "absolute_dual_term_sum": 427841182.6869671,
+      "unchanged_acceptance": 2e-07,
+      "producer_signed_negative_gap_gate_bug_repaired_to_absolute": true,
+      "producer_certificate_accumulation": "100digit Decimal products/sum",
+      "independent_audit_accumulation": "exact binary-rational Fraction products/sum",
+      "optimization_matrix_target_solver_changed": false,
+      "all_failed_audit_and_diagnostic_sources_retained": true
+    }
+  },
+  "all1728_LP_solutions_duals_maps_paths_exact_real4_to_real5": true,
+  "raw_float64_signed_gap_preserved_and_absolute_gate_fixed": true,
+  "producer_decimal_vs_independent_exact_binary_rational_gap": true,
+  "failed_real_audit1_and_both_exact_diagnostics_retained": true,
+  "same_parent_positive_probe_target_and_original_marginals": true,
+  "moment_component_interval": 1e-09,
+  "unchanged_physical_acceptance": 2e-07,
+  "no_actual_audio_time_law_or_naturalness_claim": true,
+  "scientific_figures_individually_viewed": 1,
+  "review1_label_overlap_retained_review2_layout_only_data_exact": true,
+  "C_H_exact": 670,
+  "voice_parameters_exact": 82,
+  "F2_files_exact": 3,
+  "C_index_exact": true,
+  "new_C_H": 0,
+  "new_audio": false,
+  "runtime_default_driver_owned_take_room_changed": false,
+  "parent_and_old_F2_F3_hearings": "independently pending; not repeated",
+  "old_68CTest_not_repeated": true,
+  "downloaded": false,
+  "pushed": false,
+  "physical_7_1_4": false,
+  "ADI_candidate_budget_claimed": false,
+  "full_goal": "active",
+  "next": "Validate actual generated time through the original observation window before audio/listening/C port; retain amplitude-joint feasibility gaps, all slope/path regressions, V6 buses, one driver and independent future spatial layer. Full multi-engine/state/physical7.1.4 remain incomplete.",
+  "manifest_sha256": "ac0a45649fca9c0ab9fd8f5ab35ce60b42b69375f312b94e91cdde04617735de",
+  "file_count": 6693,
+  "bytes": 632738460
+}
