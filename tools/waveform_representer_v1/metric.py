@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def finite_gram(frames, starts, window, coverage, amplitude, weights, sigma):
+def finite_gram(frames, starts, window, coverage, amplitude, weights, sigma, order='C'):
     frames = int(frames)
     window, coverage, weights = (np.asarray(x, float) for x in (window, coverage, weights))
     size = len(window)
@@ -19,7 +19,7 @@ def finite_gram(frames, starts, window, coverage, amplitude, weights, sigma):
     # Unit frequency weights must therefore give the identity circular Gram.
     kernel = np.fft.irfft(weights**2, n=size)
     circular = kernel[(np.arange(size)[:, None]-np.arange(size)[None, :]) % size]
-    W = np.zeros((frames, frames))
+    W = np.zeros((frames, frames),order=order)
     np.fill_diagonal(W, 1/sigma**2)
     for start in starts.astype(int):
         gain = amplitude*window/np.sqrt(coverage[start:start+size])
@@ -27,7 +27,7 @@ def finite_gram(frames, starts, window, coverage, amplitude, weights, sigma):
     return W
 
 
-def supported_gram(metric):
+def supported_gram(metric,order='C'):
     f = metric.frame
     return finite_gram(f.frames, f.starts[metric.keep], f.window, f.coverage,
-                       metric.amplitude_scale, metric.weights, metric.wave_scale)
+                       metric.amplitude_scale, metric.weights, metric.wave_scale,order=order)

@@ -1,0 +1,16 @@
+{
+  "schema": "vsl.waveform-structured-stream-and-shared-rhs-known-first/1",
+  "previous_goal_turn": "Progress: actual node-root/block/implicitQ implementation, original12 independently qualified, peak1929154560->962129920bytes, alias/lifetime audit. Retain failed extra2e-11 whitened audit and all8 diagnostic failures; original2e-8 unwhitened audit and all solver/gap gates unchanged.",
+  "resource_evidence": "Current observed SciPy QR input/raw share but R is a distinct allocation. Full mono five coexisting registered stores11948742168bytes; naive stereo47794968672bytes exceeds32GB before extra workspace. Neither is a full peak proof or allocation. DenseW remains.",
+  "known_first": [
+    "Use direct LAPACK geqrf for raw X reflectors without materializing an extra X_R. Build D=[I;-F^T] from upper-triangular blocks of raw X in declared small buffers, zeroing reflector entries below the true triangle. Do not call np.triu on the complete large array. Independently compare every known block, action, original equations/gaps and saved graph baseline; retain all directions/orders/nodes.",
+    "Graph triangular solves still require an explicit or proven strided triangular factor. Account actual copy/workspace behavior of any LAPACK/BLAS view; do not assume a noncontiguous top-square view avoids allocation. Prove alias/lifetimes at small original shapes and measure process peak.",
+    "Prove shared operator conditions from actual SupportedMetric weights, global scale, channel-independent synthesis and temporal prior, including unequal L/R targets and silent right. Shared geometry with two RHS must be equivalent to the original interleaved stereo problem. Reject mismatched per-channel metrics/scales rather than silently averaging or treating recordings as mono.",
+    "Run same7 arbitrary-R algebra controls with explicit control adapter, same4 finiteDFT, same3 temporal roots and same original12; add full interleaved-vs-two-RHS known controls before considering frozen full stereo. Separate statistical-source questions from linear algebra identity.",
+    "Independent audit original objective, full adjoint/stable backward/gradient/BOTHgaps, all source bindings, original2e-8 unwhitened equations and retained2e-11 white diagnostic. Measure actual allocations and lifetimes, native-library workspaces/copies and available physical memory. No full run follows automatically from small pass."
+  ],
+  "before_any_full": "Declare one separately scoped full known experiment only after memory/cost envelope is supported and sufficient current headroom remains. Preserve original12289frames49nodes288orders, shared-LR metric and all original tolerances. Do not replace QR with normal equations, truncate rank, drop high orders or increase blind iteration caps.",
+  "after_full_qualification": "Return to six approved real observations and their native contexts, joint L/R/high-frequency statistics, sustained controllable generation, native48k/C and one-driver V6 five buses with separate future spatial. Fitted node trajectories are not final voices.",
+  "protected": "670C/H82voice3F2/Cindex,accepted moving35/default,one-driver,owned/takes,room/hearings; no push/download/newhearing/unchanged68CTest",
+  "full_goal": "ACTIVE multi-engine/full driving states/V6 DNA BODY DETAIL EVENT AUX/independent physical7.1.4"
+}
