@@ -86,11 +86,20 @@ def main():
                     # check the complete primal normal, not just F^T residual.
                     F,Q=z['F'],z['Q'];k=len(F)
                     c=Q.T@(Lw.T@y)
-                    dual=np.vstack((F.T,np.eye(k)))
-                    dual_target=np.vstack((np.zeros((len(R),y.shape[1])),c))
-                    complement=linalg.null_space(dual.T)
-                    dual_model=-complement@(complement.T@dual_target)
-                    check('independent_dual_residual',dual_model,z['dual_model_residual'],max(1.,np.linalg.norm(dual_target)))
+                    if 'reduced_primal_model_residual' in z:
+                        B=np.vstack((F,np.eye(len(R))))
+                        rhs=np.vstack((c,np.zeros((len(R),y.shape[1]))))
+                        complement=linalg.null_space(B.T)
+                        reduced=-complement@(complement.T@rhs)
+                        check('independent_primal_residual',reduced,z['reduced_primal_model_residual'],max(1.,np.linalg.norm(rhs)))
+                        check('nodes_from_same_residual',z['reduced_primal_model_residual'][k:],z['z'])
+                        check('nullspace_identity',B.T@z['nullspace_generators'],np.zeros((len(R),k)),gate=2e-12)
+                    else:
+                        dual=np.vstack((F.T,np.eye(k)))
+                        dual_target=np.vstack((np.zeros((len(R),y.shape[1])),c))
+                        complement=linalg.null_space(dual.T)
+                        dual_model=-complement@(complement.T@dual_target)
+                        check('independent_dual_residual',dual_model,z['dual_model_residual'],max(1.,np.linalg.norm(dual_target)))
                     model=z['root_model_residual']
                     check('model_waveform_mapping',Lw.T@z['wave_model_residual'],model,max(1.,np.linalg.norm(Lw.T@y)))
                     normal=X.T@model+z['z']

@@ -1,0 +1,10 @@
+{
+  "schema": "vsl.waveform-nullspace-triangular-graph-known-first/1",
+  "evidence": "Nullspace original12 still9/12 and three actual gaps fail despite modeled complete normal1e-14. Frozen four constant diagnostics repeat the exact executed projection, solve saved reduced equations at80/110digits, and measure small QR top-block vs T^-1 relative errors1.6e-14..1.7e-12 with wholeQ orthogonality about5e-15. This supports examining top-block evaluation, not claiming the sole numerical or timbre cause.",
+  "declared_evaluation": "D=[I;-F^T]=U T. Since exact Utop=T^-1, compute projected coefficients a=T^-T c by triangular solve rather than applying the computed small Utop^T to c. Obtain lower residual from the unchanged implicit U application to [a;0], and upper residual as -T^-1 a; map both through original roots. Evaluate the COMPLETE original adjoint and backward discrepancy, including errors in F/U/T. Do not set any normal to zero or assume this is numerically qualified.",
+  "sequence": ["same7 explicit and4 finite DFT controls, independent Decimal80/110 and complete normal", "same4algebra+8originalHann, original parameter/gradient/BOTHgap/stable full normal/backward gates", "retain all direct/model errors and old9/12 failures, measure resource lifetimes before any full run"],
+  "unchanged": "Same objective,W/R/scales/nodes/orders/coordinates/targets/tolerances, all source versions, no iterative refit/rank reduction/new material or hearing",
+  "resource_gate": "DenseW and penalty roots are still prototype limitations. No complete288 or sixreal run without implicitQR/structured penalty-root validation and bounded allocations.",
+  "protected": "670C/H,82voices,3F2,index,accepted moving35/default,one driver,owned/takes,room/hearings; no push/download/old68CTest",
+  "full_goal": "ACTIVE V6 five buses, multi-engine/full driving and separate future physical7.1.4"
+}

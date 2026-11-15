@@ -1,5 +1,5 @@
 """Explicit square-root algebra and all-entry finite-frame controls before old12."""
-import argparse, os, shutil, sys
+import argparse, importlib, os, shutil, sys
 from pathlib import Path
 from research_archive_v1 import save, sha
 
@@ -7,20 +7,26 @@ from research_archive_v1 import save, sha
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','out'): p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--solver',choices=('dual','nullspace','graph'),default='dual')
     a=p.parse_args()
     for name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'): os.environ[name]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
     import numpy as np
-    from waveform_representer_v1.algebra import solve
+    solver_module={'dual':'waveform_representer_v1.algebra','nullspace':'waveform_nullspace_v1.algebra',
+                   'graph':'waveform_nullspace_v1.graph'}[a.solver]
+    solve=importlib.import_module(solver_module).solve
     from waveform_representer_v1.metric import finite_gram
     from waveform_representer_v1.fixtures import algebra_fixtures,frame_fixtures
     repo=Path(__file__).resolve().parents[1]
     a.out.mkdir(parents=True,exist_ok=False)
     r=dict(result='running',cases=[],frames=[],sources={},material_read=False)
     try:
+        extra=('tools/'+solver_module.replace('.','/')+'.py',)
+        if a.solver=='nullspace':extra+=('research/waveform_representer_nullspace_v1_plan.json',)
+        if a.solver=='graph':extra+=('tools/waveform_nullspace_v1/algebra.py','research/waveform_graph_v1_plan.json')
         for name in ('tools/run_waveform_representer_controls_v1.py','tools/waveform_representer_v1/algebra.py',
                 'tools/waveform_representer_v1/metric.py','tools/waveform_representer_v1/fixtures.py',
-                'research/observer_stable_full_followup_v1_plan.json'):
+                'research/observer_stable_full_followup_v1_plan.json')+extra:
             dest=a.out/'exact_sources'/name;dest.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(repo/name,dest);r['sources'][name]=sha(dest)
         for label,Phi,W,R,y in algebra_fixtures():

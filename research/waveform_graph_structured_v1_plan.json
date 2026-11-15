@@ -1,0 +1,15 @@
+{
+  "schema": "vsl.waveform-graph-structured-storage-known-first/1",
+  "prerequisite": "Triangular graph same original12 and explicit7+DFT4 independently passed; failed raw nullspace9/12 and four Decimal diagnoses retained. This is not a full288 or real-source or runtime-C qualification.",
+  "derive_and_control_first": [
+    "Represent unchanged temporal K=alpha D2^T D2+beta I and its Cholesky on node axis only. Prove R=blockdiag(kron(K,I_HC),kron(K,I_HC)) for actual real/imag/node/order/channel flattening; compare apply/inverse/transpose/energy to original dense R and PenaltyPrimal on same four algebra and eight Hann controls. Include stereo silent and unequal-RHS controls; no assumed shared L/R metrics without checking actual weights/scales.",
+    "Apply raw X and graph Householder reflectors without materializing thin/full Q. Fuse target-perpendicular mapping in coordinates and use column-block weighted synthesis plus structured penalty-root transforms. Retain all n=min(m,p) directions, all orders/nodes and complete original adjoint; prove dense identity on same controls and compare parameters/gaps/backward errors to frozen graph12.",
+    "Record actual allocated arrays, dtype/order/copy/overwrite behavior and lifetime, cumulative Windows peak working set and CPU time. Conditional shape arithmetic alone does not establish feasibility. Confirm F and reflectors returned by SciPy are distinct allocations; do not double count views or assume overwrite succeeded.",
+    "Keep no full stereo dense R and no full dual Q. Do not switch to normal equations or drop weak directions to make the resource check pass. Complete small control qualification and independent resource audit precede a separately declared full experiment."
+  ],
+  "original_full_shape_reference": {"frames":12289,"nodes":49,"orders":288,"mono_real_columns":28224,"stereo_real_columns":56448},
+  "unchanged": "Original finite waveform and supported spectral objective,W/scales/alpha.001/beta.000001/coordinates,all288orders49nodes,gradient2e-7,BOTHgaps1e-6J+1e-10,stable complete normal/backward1e-11; all previous failures",
+  "after_resource_qualified": "Declare a full known-input experiment only with an explicit lifetime/memory/cost envelope supported by measured controls; no automatic new4000cap or real6fit. After full qualification return to six approved real observations and reusable sustained joint-L/R source laws, native48k/C, one driving controller and independent spatial renderer. A fitted node-trajectory loop is not final success.",
+  "protected": "670C/H,82voice,3F2,Cindex,accepted moving35/default,one-driver,owned/takes,room/hearings; no push/download/new hearing/unchanged68CTest",
+  "full_goal": "ACTIVE V6 DNA/BODY/DETAIL/EVENT/AUX, multiple measured engine timbres/full driving states and separate future physical7.1.4"
+}

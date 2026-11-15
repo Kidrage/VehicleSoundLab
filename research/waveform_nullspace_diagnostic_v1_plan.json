@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.waveform-nullspace-numeric-diagnosis/1",
+  "trigger": "Nullspace residual improves original modeled normal to about1e-14, yet same original12 remains9/12; constant1/.01/1e-5 now fail actual original gap gates. Do not promote the model-normal improvement.",
+  "fixed_cases": ["constant_1", "constant_0.01", "constant_0.0001", "constant_1e-05"],
+  "selection": "All three new failed constant cases, plus the remaining constant case as a declared passing control. No aperture/time/threshold/refit selection.",
+  "questions": [
+    "For the exact saved reduced F and executed raw-Householder target c, does an80/110digit original primal solve confirm that lower-projected z has error? Retain precision agreement and true reduced gradient, not only a modeled residual.",
+    "In D=[I;-F^T]=U T, is the small top block Utop preserved relative to independently reconstructed T^-1? Record Utop*T-I, orthogonality, small-block relative discrepancy and parameter amplification without asserting sole physical/timbre causation.",
+    "Compare exact lower-projection reconstruction and original gap failures; distinguish observed correlation from a complete error attribution. Do not adopt a replacement solver in this diagnostic."
+  ],
+  "unchanged": "All original inputs/equations/nodes/orders/scales/tolerances/gap gates; no full or source or C run, no rendering/hearing/download/push",
+  "after": "If the identity-block diagnosis supports it, separately declare a stable graph/triangular evaluation and validate same explicit/original12. Do not keep blind variants, loosen tolerances or promote a tiny modeled normal.",
+  "full_goal": "ACTIVE: one-driver modular V6 DNA/BODY/DETAIL/EVENT/AUX, multiple engines/full states and separate future spatial/physical7.1.4"
+}

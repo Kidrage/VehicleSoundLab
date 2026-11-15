@@ -1,5 +1,5 @@
 """Run the same frozen four algebra and eight original-Hann cases, without material."""
-import argparse, ctypes, os, shutil, sys, time
+import argparse, ctypes, importlib, os, shutil, sys, time
 from pathlib import Path
 from research_archive_v1 import load, save, sha
 
@@ -21,6 +21,7 @@ def peak_working_set():
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('workspace','original','prerequisite','out'):p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--solver',choices=('dual','nullspace','graph'),default='dual')
     a=p.parse_args()
     for name in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ[name]='2'
     sys.path.insert(0,str(a.workspace/'tools/python_deps'))
@@ -35,7 +36,9 @@ def main():
     from observer_frequency_v1.optimality import bound
     from observer_inverse_v1.fit import real_vector,complex_array
     from waveform_representer_v1.metric import supported_gram
-    from waveform_representer_v1.algebra import solve
+    solver_module={'dual':'waveform_representer_v1.algebra','nullspace':'waveform_nullspace_v1.algebra',
+                   'graph':'waveform_nullspace_v1.graph'}[a.solver]
+    solve=importlib.import_module(solver_module).solve
     repo=Path(__file__).resolve().parents[1]
     a.out.mkdir(parents=True,exist_ok=False)
     r=dict(result='running',pid=os.getpid(),cases=[],sources={},inputs={},material_read=False,
@@ -49,6 +52,9 @@ def main():
         names={n for _,parent in parents.values() for n in parent['sources']}
         names.update(('tools/run_waveform_representer_known_v1.py','tools/waveform_representer_v1/metric.py',
             'tools/waveform_representer_v1/algebra.py','research/observer_stable_full_followup_v1_plan.json'))
+        names.add('tools/'+solver_module.replace('.','/')+'.py')
+        if a.solver=='nullspace':names.add('research/waveform_representer_nullspace_v1_plan.json')
+        if a.solver=='graph':names.update(('tools/waveform_nullspace_v1/algebra.py','research/waveform_graph_v1_plan.json'))
         for name in sorted(names):
             dest=a.out/'exact_sources'/name;dest.parent.mkdir(parents=True,exist_ok=True)
             shutil.copy2(repo/name,dest);r['sources'][name]=sha(dest)
