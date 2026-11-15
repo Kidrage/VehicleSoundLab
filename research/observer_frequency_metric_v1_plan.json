@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.observer-frequency-metric-plan/1",
+  "previous_stage": "observer_complete_v1: full waveform improves, high bands/LR/CV regress, all6 stop7; not promoted",
+  "known_first": [
+    "Strong low plus weak high carriers with constant and varying-curvature envelopes; exact dense original and complete objectives, separate finite-iteration errors from exact-optimum bias",
+    "Complete finite-Hann coverage including endpoints, DC/Nyquist and between-carrier content; any frequency-weighted objective requires its own explicit real adjoint",
+    "Shared L/R frequency weights preserve a common stereo metric; exact zero input, silent channel, scale and coordinate controls",
+    "Explicit small dense weighted operator, positive regularization, invertible preconditioning and condition/gradient verification before sources"
+  ],
+  "choice_gate": "Use known exact solutions and actual all6 band powers to specify one shared, positive bounded metric and its scale/floor before any source solve; do not select separate winners per source/band or call a mathematical floor measured noise",
+  "sources_after_gate": "All6 frozen source/native/warp/node/scale arrays, original observer, whole/interior/edge, all bands/stereo/CV/Gram/three-partition diagnostics; keep the complete and original harmonic baselines",
+  "not_authorized_as_success": "No native48k/C/hearing promotion from in-sample fitting; not a stochastic generator or physical source separation",
+  "protected_product": "670C-H82voice3F2/index/accepted defaults, one driver, owned/takes/room and pending hearings; V6five buses plus independent future spatial; full multiple-engine/state/physical7.1.4 goal active"
+}

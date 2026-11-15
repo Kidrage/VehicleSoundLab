@@ -1,0 +1,15 @@
+{
+  "schema":"vsl.observer-complete-plan/1",
+  "parent_commit":"6920c1c",
+  "previous_goal_turn":"Progress: all6x3 inverse attempts,54 weakband/24 unique outcomes and explicit finite-Hann blind spots frozen and independently verified; no sound promotion.",
+  "known_first":"Complete finite Hann4096/hop256 frame, all bins including DC/Nyquist, starts from-3840 through last intersecting hop; normalize by sqrt(sum windows squared) on each known finite-record sample. Prove Parseval, adjoint and H*H=I including edges. Padding defines a finite-vector transform, not measured silence outside the recording.",
+  "new_objective":"J(q)=||S(s*q)-audio||^2 / sigma^2 +0.001||D2 q||^2+0.000001||q||^2. Complete normalized STFT data term is exactly equivalent to waveform term. This NEW objective does not equal the old harmonic-only objective; old baselines and gates remain frozen.",
+  "sigma":"One source joint-channel waveform RMS; no per-band gain fitting. Known silence controls use explicit fixed1. All source order scales and nodes retained exactly from frozen prior inference.",
+  "solver":{"atol":1e-11,"btol":1e-11,"conlim":1e12,"maxiter":4000,"relative_stationarity_gate":2e-7,"accepted_stops":[1,2,4,5]},
+  "preconditioner":"Same curvature/ridge time whitening; exact real/imag waveform column norms from squared interpolated time bases and twice-carrier Fourier moments. Independently verify against explicit dense operator before any source fit.",
+  "sources":"All6 original F3 sources, one V10/two ascents, from observer_inverse_v1 archive; original audio/native/coordinates/nodes/scale arrays exact, no clock refit.",
+  "comparators":["original_observation_interpolation","old_original4000","old_corrected16000","new_complete4000"],
+  "evaluation":"Original Hann4096/hop256/global demod, all288 harmonic coefficients; six broadband bands and full six-group12x12 complex Grams/Parseval/three contiguous row partitions; full/interior/edge waveform errors, all regressions and weakband-scaled errors retained. Complete-data objective alone never implies timbre or sustained generation.",
+  "not_yet":"Source-statistical sustained generator, native48k aliasing, C port, target cycles and human acceptance remain separate. No new listening question/download/push/unchanged68CTest.",
+  "product_scope":"Keep V6 DNA/BODY/DETAIL/EVENT/AUX,one driver,independent future spatial renderer;multi-engine/fullstates/physical7.1.4 full goal active. Preserve670C-H82voice3F2/index/accepted defaults/owned-takes-room/pending hearings."
+}
