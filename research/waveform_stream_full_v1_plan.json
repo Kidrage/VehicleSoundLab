@@ -1,0 +1,12 @@
+{
+  "scope": "ONE separately declared FULL KNOWN experiment; not actual recording or audio promotion",
+  "prerequisites": "baselines/waveform_stream_v1 independently1045files/255250759B/manifest72f1e587de587be84ad8dc734caca49915edbbeae1168eb2288b2f9e78422849; original12 and shared8 original gates PASS, all extra strict failures retained, aliases/lifetimes audited",
+  "original": "baselines/observer_representer_v1/evidence/full1/capture.npz SAMEaudio/positions/orders/scale/nodes/factors/loadings;12289frames49nodes288orders2channels; original shared SupportedMetric root64,alpha.001,beta.000001",
+  "algorithm": "SharedSupportedGeometry with two independent targets, directGEQRF, all directions, node-axis prior, explicit F-order graphT; no packedR/fullQ/Phi; no normal-equation solve, truncation, rate/node/rank reduction, added iterations or target averaging",
+  "resource_gate": "Before any large allocation, current available physical and commit >=9173984280 registered four-array bytes +1.5GiB unregistered/native/temporary allowance +3GiB headroom. Allowance is conservative planning, not a native-allocation proof. Record actual work/aliases/phase memory. Abort safely at phase checkpoint if physical available<1GiB. Block128. One attempt, preserve failure and do not auto-retry.",
+  "qualification": "Original complete gradient<2e-7; BOTHgaps<=1e-6J+1e-10; stable original complete normal and backward<=1e-11; actual complete root guard<=1e-11. Original full fidelity target whole-wave and six target band complex NRMSE<.02, record allwhole/regions/bands. No dense optimum exists atfull; do not invent parameter error. Full known result must be independently audited before real6 fit.",
+  "serialization": "Save original small capture, fitted nodes/wave, separate q/z/t/residuals/adjoints and original complete model; do not serialize huge raw QR matrices twice or archive old13GB Krylov bases. Record all actual sources/inputs/phase memory/lifetimes. Prior controls and stricter failures remain frozen.",
+  "protected": "670C/H82voice3F2/index/moving35/default,one-driver,owned/takes,room/hearings;no push/download/newhearing/unchanged68CTest",
+  "after": "Independent full waveform/complete adjoint/gradient/BOTHgaps/resource audit, preserve regressions; only after qualification return to six approved real observations and sustained jointLR source laws; trajectory fit is not final voice",
+  "full_goal": "ACTIVE fullmulti-engine/states/V6DNA BODY DETAIL EVENT AUX/separatefuturephysical7.1.4"
+}
