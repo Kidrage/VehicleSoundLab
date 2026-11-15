@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.conditional-phase-time/1",
+  "parent_commit": "47cdce6",
+  "previous_goal_turn": "Progress: full slope optimization, exact independent audit, archive and local commit. No waveform-time qualification or new listening acceptance.",
+  "purpose": "Forward-generate the original temporal probe and each frozen conditional map, then apply the ORIGINAL periodic Hann4096/hop256 harmonic observer. Keep instantaneous coefficient moments distinct from reobserved waveform moments and total windowed band power.",
+  "inputs": "All six frozen relative_phase_v1 profiles/training rows, coefficient_geometry_v1 rebuilt double source waves, and all1728 conditional_phase_slope_v1 real5 maps. No refit/window change/RPM reinterpretation/new media.",
+  "coordinate": "1024 samples per acoustic cycle,64 cycles, texture endpoints every256 coordinate samples exactly as the existing4-updates/cycle law. Generate directly here to isolate resampling error. These are normalized-coordinate diagnostic waveforms, NOT native48k audio, alias qualification or new RPM trajectories.",
+  "cycles": 64,
+  "seeds": [1,23117,61927],
+  "block": 1024,
+  "identity_block": 37,
+  "variants": ["fixed","relative","parent","density","variation"],
+  "pairing": "All variants share original amplitudes, original common-phase stream,root,taper and output gain1. Fixed uses original mean phases; relative uses original coupled relative phase. Three conditional maps share a NEW independent phase-normal stream from SeedSequence([seed,789783]); its relative-phase features preserve the original temporal probe but are independent of amplitude. Record finite P-table outside-range counts and all results.",
+  "time_law": "Original12factor/diagonal AR and .95cap retained ONLY as a probe, not an inferred physical time law; no rho/rank/strength sweep. A new independent stream changes common/relative-phase joint structure, which is not claimed preserved by marginal or E[PU] agreement.",
+  "bands_Hz": [[3000,6000],[6000,8000],[8000,10000],[10000,14000]],
+  "known": ["static","common_AM","differential_AM","common_PM","relative_PM","sideband","silence"],
+  "checks": {"known_projection_FS":2e-12,"source_rows_FS":2e-12,"saved_map_probe_radians":2e-8,"independent_waveform_FS":2e-10,"chunk_identity_FS":2e-12,"independent_stats_relative":2e-9},
+  "decision": "First known analytic controls + independent audit, then all6x3x5 waveforms. Keep every regression. Compare full241-row results and SAME original-row-count chunks, whose overlapping apertures are NOT independent trials. No timbre pass from these training observations, no new listening question or default/C/driver/room changes. Subsequent native audio/listening/C/CPU qualification must precede deployment.",
+  "scope": "V6 DNA/BODY/DETAIL/EVENT/AUX,one original driver,independent future physical7.1.4 spatial layer. Preserve670C-H82voice3F2/Cindex/hearings/owned/takes; no unchanged68CTest/download/push. Fullmulti-engine/fullstates/physical7.1.4 goal remains active."
+}
