@@ -5,5 +5,28 @@
   "live": "SAME PID65232/session62289, E:/VehicleSoundLab/references/analysis/locked_source_fit_v1/real1/F3 Fifth First Mid. Source columns complete; file matrices continue. Never edit124bound sources101inputs or restart from timeout/staleprogress. Poll samehandle and actualprocess; only terminaloutput/missinghandle/process establishes stoppedstate. Original jobs245372/313772 remain terminal, never restart; firstoriginal never refit.",
   "after_terminal": "Inspect real1/report.json and F3 Fifth First Mid_audit/report.json (independent_locked_source_real_verified), retaining verification/solver/fidelity distinction. Diagnose any mathfailure independently without refitting or gate changes. Then run tools/run_locked_source_virtual_v1.py --study <case> --math-audit <audit/report.json>, audit_locked_source_virtual_v1.py, audit_locked_source_virtual_stereo_v1.py --prior-audit <virtual audit dir>. All new diagnostics must retain originalfailures/regressions and explicitnewtarget/legacycalibration roles.",
   "native_after_terminal": "Run tools/run_locked_source_native_v1.py using samecase/mathaudit, native_clock_render_v1/{prepare1,prepare_audit1,known1,known_audit1}, then tools/audit_locked_source_native_v1.py. Newproducer/nativeadmission and independentidentity implementations have NOT yet been exercised on actualfittednewsource. Retain samefull288/nodes/commonLRclock/genuinecontext/scales/native16/32 .003wave+eachband and virtual.02 gates. Compare raw/FIRonly/fitted16/fitted32 HF/LR/MS/CV/covlag, then decide remaining4cases or autonomous stochasticlaw.",
-  "protected": "Original96sources71inputs/capture/factors,670C-H82voice3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest. No originalfailure repairclaim by replacingtarget, no independentHFcloud or fittedtimeline/PCMloops. Full goal remains incomplete."
+  "protected": "Original96sources71inputs/capture/factors,670C-H82voice3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest. No originalfailure repairclaim by replacingtarget, no independentHFcloud or fittedtimeline/PCMloops. Full goal remains incomplete.",
+  "dependent_diagnostics": {
+    "state": "CONFIRMED LIVE, waiting on the same original process",
+    "pid": 441220,
+    "exec_session": 31430,
+    "source_pid": 65232,
+    "source_exec_session": 62289,
+    "root": "E:\\VehicleSoundLab\\references\\analysis\\locked_source_diagnostics_followthrough_v1",
+    "manifest": "manifest.json",
+    "script": "followthrough.ps1",
+    "report": "report.json",
+    "source_bindings": 151,
+    "stages": [
+      "virtual_real1",
+      "virtual_real_audit1",
+      "virtual_real_stereo_audit1",
+      "native_real1",
+      "native_real_audit1"
+    ],
+    "condition": "The identical source process terminates successfully, immutable run_spec still matches, and single new-method terminal case has an independently verified mathematical audit. Source fidelity may be false; diagnostic failures/negative results must remain visible.",
+    "instruction": "Poll SAME session31430 and actual PID441220 as well as original session62289/PID65232. DO NOT launch duplicate stage commands while coordinator is live. Never restart a fit, overwrite an existing stage directory or edit the 151 frozen source bindings while the workflow is live. A timeout is not termination.",
+    "scope": "No fitting commands, no automatic later four fits, no C/default/hearing/sustained promotion. On any stage error it preserves outputs and stops; inspect the first failure before any new action.",
+    "classification": "Previous goal turn verified wait. Current turn executes a concrete conditional diagnostic workflow and verifies its original-process identity/source preflight; no new fitted/native qualification yet."
+  }
 }
