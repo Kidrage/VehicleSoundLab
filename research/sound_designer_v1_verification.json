@@ -1,0 +1,152 @@
+{
+  "schema": "vsl.sound-designer-verification/1",
+  "date": "2026-11-16",
+  "result": "passed",
+  "scope": "Existing fixed-phase Sound DNA authoring workflow only",
+  "user_input_choice": "Already cut single-state clips, user labels state/viewpoint and confirms acoustic root",
+  "core_C_modified": false,
+  "accepted_models_modified": false,
+  "driver_integrated": false,
+  "deep_optimization": false,
+  "new_timbre_listening_acceptance": false,
+  "current_reports": {
+    "api": {
+      "result": "passed",
+      "checks": [
+        "neutral_parameter_edit_matches_original_C_all_samples",
+        "parameter_JSON_restore_and_replay_exact_without_audio",
+        "complete_export_bundle",
+        "unicode_audio_to_measurements_to_parameter_table_to_C_preview",
+        "exposed_controls_change_actual_C_output",
+        "individual_phase_edit_changes_output",
+        "saved_edits_and_recent_projects_reopen_without_render",
+        "zero_component_JSON_roundtrip"
+      ],
+      "invalid_inputs_rejected": [
+        "nan_control",
+        "invalid_range",
+        "unsafe_harmonics",
+        "bad_profile",
+        "variable_pitch_without_optin",
+        "restored_JSON_has_no_original_audio"
+      ],
+      "browser_fixture": "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\api3\\合成已知片段.wav",
+      "project_id": "a4fafad34294401093d78ae01f54e74c",
+      "renderer_sha256": "4415fb87b713c9b4f36c8a8e501bc437569e4d0b2d31f0e6d76ee672a2a23390",
+      "no_core_C_changes": true,
+      "goal_complete": false
+    },
+    "browser": {
+      "result": "passed",
+      "page_errors": [],
+      "real_upload_analysis_compile_C_preview": true,
+      "preset_switch": true,
+      "editable_macros": true,
+      "complete_JSON_available": true,
+      "downloads": 3,
+      "preview_seconds": 0.5,
+      "mobile_no_horizontal_overflow": true,
+      "save_and_reload": true,
+      "recent_projects": true,
+      "sticky_preview": true,
+      "automated_audio_muted": true
+    },
+    "real_reference": {
+      "result": "passed",
+      "scope": "Real saved A reference import/analysis/existing compiler/C preview; not new listening acceptance",
+      "source": "E:/VehicleSoundLab/baselines/residual_motion_v1/evidence/fit1/reference.wav",
+      "source_context": "Saved normalized 46.875 Hz fixed A reference, not original unprocessed YouTube audio",
+      "project_id": "9f3ef16a3d47453bad7d883bac09f57a",
+      "model": {
+        "root_hz": 46.875,
+        "harmonics": 300,
+        "components": 12,
+        "rho": [
+          0.95,
+          0.95,
+          0.95,
+          0.95,
+          0.95,
+          0.9316344289434375,
+          0.8297764682801366,
+          0.8299501287732426,
+          0.8504280021222165,
+          0.8418334501248494,
+          0.7852178811188127,
+          0.7811952649748733
+        ]
+      },
+      "report": {
+        "peak": 0.44952592253685,
+        "frames": 192000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "rms_dbfs": -16.632463233954873,
+        "overload": false,
+        "model_sha256": "cc45fb2fdb54defff1d2a2d1c0bcbfab58211f13c570e2a0ebf6bd4df0075e90",
+        "renderer_sha256": "4415fb87b713c9b4f36c8a8e501bc437569e4d0b2d31f0e6d76ee672a2a23390",
+        "processing": "现有C Sound DNA；参数域增益／声线编辑；无混响、限幅或自动响度匹配"
+      },
+      "urls": {
+        "audio": "/files/9f3ef16a3d47453bad7d883bac09f57a/20d0332d56f04ad3a2f947689ff7ff06/preview.wav",
+        "bundle": "/files/9f3ef16a3d47453bad7d883bac09f57a/20d0332d56f04ad3a2f947689ff7ff06/sound-design.zip",
+        "parameters": "/files/9f3ef16a3d47453bad7d883bac09f57a/20d0332d56f04ad3a2f947689ff7ff06/parameters.json",
+        "csv": "/files/9f3ef16a3d47453bad7d883bac09f57a/20d0332d56f04ad3a2f947689ff7ff06/harmonics.csv"
+      }
+    }
+  },
+  "source_files": {
+    "tools/sound_designer/__init__.py": "91ae60fc8586eec3c773404a7efe78e3937812a317017e2b42cdf869bae1f543",
+    "tools/sound_designer/analysis.py": "0d711be4eec58f3045e90822c38ee248f95fd4d8c3fe94dd04e6e66dcf581f72",
+    "tools/sound_designer/models.py": "443762156b0356148072aaf810b11f4b3f09cec0cdfe7ce64b4e37150ca48edc",
+    "tools/sound_designer/render.py": "252bfdd555984d86977ae537842eea87f8f2ee5a875977e484e7ac134eb5cc05",
+    "tools/sound_designer/requirements.txt": "c451aacbe15cab62a09b131f21da089f4403784f3e02c6d941d53ead66db71a1",
+    "tools/sound_designer/server.py": "5e6c97a99cb2e3cefae6c2fefea544c388b80f3bd3a0af6df8e576da36ebc339",
+    "tools/sound_designer/web/app.js": "eb28ecaa48a5ee55f27fdc663041ad0e70413f8bc1f15deb51568a3d7bfb9d7b",
+    "tools/sound_designer/web/index.html": "40c5200d3d4d5c4d5e395673ca6a3ba3d09e6c8a2ff7a2ff0ccf663be5a0d1eb",
+    "tools/sound_designer/web/style.css": "d5567be2f2315f13bcc8ab0ee60cb6b6d53ec05c5149b0f361989addb5cc634d",
+    "tools/sound_designer/workspace.py": "306704a7ef8b7d774ca6ecafd33985ef7429dce5b182b305d9dd0567de11b8a0",
+    "tools/run_sound_designer.py": "505c22bce574781be308ca9960f5ecd8e2bd398d2853e69b8f025b3259a6216d",
+    "tools/verify_sound_designer.py": "25e400ece838e5743a969100372971d6202c8e9540f5d6e90bb55c3cb3e86ec1",
+    "tools/verify_sound_designer_ui.cjs": "e6871610bda445defc06b086331e453952606040b23464471692d1f9d291c89a",
+    "Build-Sound-Designer.ps1": "bcfdfd3834e2fcfafcd75a233033619ec07c8970238720c74917f86a84f651ec",
+    "Launch-Sound-Designer.ps1": "024c4c8529c18587a15e542e236254626ed3f60ecbfecff9982a45dc7837fdb3",
+    "Launch-Sound-Designer.cmd": "b39c47cb35a23e580ced9e13b08e28cd31df8c29fa0a732f7b83bfbd37f46f76",
+    "handoff/音色工作台使用说明.md": "b70f2eb760ead0afe52d2715bb3a2bde69f2d49efa04b74baf6814fd7dc56470"
+  },
+  "browser_captures": {
+    "desktop.png": {
+      "path": "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui4\\desktop.png",
+      "sha256": "37ea31579fa61660d7e8bbf3799e03c3269339d4885802be13ea42119ed57825",
+      "viewed": true
+    },
+    "mobile.png": {
+      "path": "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui4\\mobile.png",
+      "sha256": "d4dd5b962aa6b16534221fa0dc5fb13655e0870599d548b2f9d26d2e02eb4330",
+      "viewed": true
+    }
+  },
+  "retained_attempts": {
+    "paths": [
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\api1",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\api2",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\api3",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui1",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui2",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui3",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\ui4",
+      "E:\\VehicleSoundLab\\renders\\sound_designer_v1\\real1"
+    ],
+    "ui3_failure": "Test asserted the asynchronous recent-project list immediately after name restoration. Added explicit list-ready wait; ui4 passes. No DSP or threshold change."
+  },
+  "limitations": [
+    "Manual root may have octave/period ambiguity; no physical RPM/cylinder inference",
+    "Fixed-phase C model with amplitude statistics, not automatic full-state coverage",
+    "Highest modeled partial is H times root; upper-band loss is displayed",
+    "Changing-pitch input needs explicit fixed-timbre-draft opt-in; pitch trajectory stays descriptive",
+    "Preview finite and generated on click; optional loop repeats rendered clip",
+    "Real example uses saved normalized A fixed reference, not newly downloaded raw audio"
+  ],
+  "product_goal_status": "active",
+  "deferred_research_status": "deferred_by_user"
+}
