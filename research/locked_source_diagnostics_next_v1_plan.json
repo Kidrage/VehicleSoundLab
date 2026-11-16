@@ -1,6 +1,6 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "PROGRESS: separate complete declared known4/QR3/corrupt10 before SAME FirstLate full equations and read-only resources, archive independently verified. Current registration actual known success/18 rejection before E/D paired claim and independent196source137input131native proof is PROGRESS. No actual fit, source fidelity or new timbre claim.",
+  "previous_turn": "PROGRESS: paired original-label/ancestry E/D registration with independent196source137input131native/resource audit. Current PROGRESS: saved full known3+zero/6corruptions/12factorhashes, launch success/6rejects, explicit paired206source144input execution and ACTUAL ONE full FirstLate D extraction started.",
   "native_clock_bridge_diagnostic": {
     "state": "ACTUAL TERMINAL known1/known_audit1/known_bindings1, real1/audit1/bindings1, review1/review_audit1 complete in declared scopes; no live jobs",
     "study": "E:/VehicleSoundLab/references/analysis/clock_native_bridge_v1",
@@ -22,7 +22,7 @@
     "next": "research/clock_native_bridge_next_v1_plan.json: explicit newC1source-method adapter and bandwidth metadata, original legacy metric_target/calibration exact, full known objective/adjoint/normal/QR proofs before any actual preparation; no refit firstEarly/firstMid or remaining4batch"
   },
   "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
-  "live": "NONE: c1_fit_registration_v1 known1/registration1/registration_audit1 all terminal. Single FirstLate E/D claim reserved_only; no launchintent/factors. Old jobs remain terminal and original SciPy failure retained. D now contains registered run_spec; historical zero-D-spec checks must not be rerun.",
+  "live": "VERIFY ACTUAL HANDLE NOW: PID277576/start2026-11-16 10:24:04 Asia/Shanghai, exec_session62945, one FirstLate full288/73/18430 D file extraction. At last check bandroot complete/source_column_panel written with actual CPU increasing. Timeout/stale progress is not terminal; never restart or mutate bound sources.",
   "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
   "native_after_terminal": "All five native/virtual diagnostics remain complete. New locked_source_error_v1 real1/audit1/review1/review_audit1 actually complete for SAME firstMid288/74nodes. SourceFIR10..14k component.0114524 dominates gridfit6.6567e-5; sixpair maincomponent sensitivitymax3.112e-7. Originalvirtualhighest.442484>.02 remainsFALSE; strictlyabovecentre holds18.6389percent referenceweightedmass and99.8679percent error, unweightedreference3.77e-16FS2. No relabelled gates or sustained/C qualification.",
   "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
@@ -257,5 +257,22 @@
     "source_fidelity_not_evaluated": true,
     "eligible_for_later_source_statistics": false,
     "next": "research/c1_fit_registration_next_v1_plan.json: separate single-run wrapper/complete declared terminal auditor; first THREE SAVED known full captures/factors, no producer reruns. After proof bind paired explicit execution spec/new source closure/current resources and exclusive paired launchintent; only ONE FirstLate D extraction, never Early/Mid/refit/restart/remaining4batch."
+  },
+  "c1_registered_source": {
+    "state": "ACTUAL LIVE at OS snapshot; known1/launch_known1/execution1 already terminal verified",
+    "study": "E:/VehicleSoundLab/references/analysis/c1_registered_source_v1",
+    "pid": 277576,
+    "exec_session": 62945,
+    "process_start_local": "2026-11-16 10:24:04",
+    "claim": "D:/VehicleSoundLab-Work/source_fit_storage_v1/c1_22k_declared_v1/claims/3cfbdb688cd83cba917e7071e5de5f7b73b1daa0872d39ccf6b3ede1fe50092d",
+    "case": "run1",
+    "terminal_audit": "run1_audit",
+    "terminal_receipt": "execution_result.json",
+    "execution_spec_sha256": "5afa783ce3a16cc5327f4b386f960a21389f7a95d2c59502af0da8247763b10d",
+    "source_closure_count": 206,
+    "input_closure_count": 144,
+    "source_fidelity_not_evaluated": true,
+    "eligible_for_later_source_statistics": false,
+    "next": "research/c1_registered_source_next_v1_plan.json: continue SAME actual job, then read actual terminal result/automatic complete audit; no retry/refit/restart. Only after math qualification use explicit new C1-declared reader/native bridge, not old PL/sinc128 identity. Full virtual/nativeLR/MS/time/16vs32 before autonomous statistics/C."
   }
 }
