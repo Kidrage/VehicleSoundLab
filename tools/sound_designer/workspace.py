@@ -15,6 +15,7 @@ from sound_dna.profile import compile_file
 from .analysis import measure
 from . import models
 from . import history
+from .metadata import fields
 from .render import preview
 
 
@@ -89,12 +90,12 @@ class Workspace:
 
     def save_design(self,data):
         folder,p=self.load(data['id']);m,base=models.read(folder/'base.model')
+        labels=fields(data,p)
         ctl=models.controls(data.get('params',{}))
         rows=data.get('rows');rho=data.get('rho')
         models.edit(m,base,ctl,rows,rho)
         history.checkpoint(folder,p,'编辑前')
-        p.update(name=str(data.get('name',p['name']))[:100],params=ctl,rows=rows,rho=rho,
-                 state=data.get('state',p['state']),viewpoint=data.get('viewpoint',p['viewpoint']),preview_stale=True)
+        p.update(**labels,params=ctl,rows=rows,rho=rho,preview_stale=True)
         self.save(folder,p)
         history.checkpoint(folder,p,'保存参数')
         return self.view(data['id'])
@@ -139,6 +140,7 @@ class Workspace:
             p['source']=dict(kind='audio',file=source.name,original_name=str(data['filename']),sha256=sha(source))
             p['name']=Path(str(data['filename'])).stem[:100]
             p['selection']=[0,len(audio)/rate]
+        p.update(fields(data,p))
         self.save(folder,p)
         history.checkpoint(folder,p,'新建工程')
         return self.view(identity)
@@ -158,6 +160,7 @@ class Workspace:
             self.save_design(dict(data['draft'],id=data['id']))
             folder,p=self.load(data['id'])
         history.checkpoint(folder,p,'分析前')
+        p.update(fields(data,p))
         p['analysis']=measure(audio,rate,root)
         p['selection']=[start,stop]
         sf.write(folder/'reference.wav',audio,rate,subtype='FLOAT')
@@ -168,6 +171,9 @@ class Workspace:
 
     def compile(self,data):
         folder,p=self.load(data['id']);root=float(data['root_hz'])
+        labels=fields(data,p)
+        if type(data.get('allow_unstable',False)) is not bool:
+            raise ValueError('固定音色草稿选择必须是布尔值true／false')
         if not p.get('audio_file'): raise ValueError('请先导入参考片段')
         if not np.isfinite(root) or not 5<=root<=1000: raise ValueError('请确认有效声学基频')
         if not p['analysis']: raise ValueError('请先分析参考音频')
@@ -179,10 +185,10 @@ class Workspace:
         if type(h) is not int or type(k) is not int or not 1<=h<=320 or not 0<=k<=16:
             raise ValueError('阶次1–320，联动成分0–16')
         output=folder/('compile_'+uuid.uuid4().hex)
-        info=compile_file(folder/'reference.wav',output,root,p['name'],h,k)
+        info=compile_file(folder/'reference.wav',output,root,labels['name'],h,k)
         history.checkpoint(folder,p,'提取前')
         shutil.copy2(output/'voice.model',folder/'base.model')
-        p.update(build=info,state=str(data.get('state','steady')),viewpoint=str(data.get('viewpoint','exterior')),
+        p.update(**labels,build=info,
                  rows=None,rho=None,params=dict(models.DEFAULTS),
                  model_scope='固定音色统计参数；音高轨迹另存于分析，不自动转换成驾驶RPM映射')
         p['model_reference']=dict(reference_sha256=sha(folder/'reference.wav'),source=p['source'],
@@ -194,15 +200,16 @@ class Workspace:
 
     def render(self,data):
         folder,p=self.load(data['id']);original,base=models.read(folder/'base.model')
+        labels=fields(data,p)
         ctl=models.controls(data.get('params',{}))
         rows=data.get('rows');rho=data.get('rho')
         edited=models.edit(original,base,ctl,rows,rho)
         version=uuid.uuid4().hex;output=folder/version;output.mkdir()
         model_file=output/'voice.model';models.write(model_file,edited,base)
         report=preview(self.repo,model_file,output/'preview.wav',ctl)
-        package=dict(schema='vsl.sound-designer-preset/1',name=str(data.get('name',p['name']))[:100],
+        package=dict(schema='vsl.sound-designer-preset/1',**labels,
                      root_hz=base,base_profile={k:v.tolist() for k,v in original.items()},params=ctl,
-                     rows=rows,rho=rho,state=data.get('state',p['state']),viewpoint=data.get('viewpoint',p['viewpoint']),
+                     rows=rows,rho=rho,
                      source=p['source'],selection=p.get('selection'),analysis=p['analysis'],render_report=report,
                      model_reference=p.get('model_reference'),reference_matches_model=self.view(data['id'])['reference_matches_model'],
                      gain_policy='gain_db已写入voice.model系数；调用C时使用unity gain，避免重复增益')

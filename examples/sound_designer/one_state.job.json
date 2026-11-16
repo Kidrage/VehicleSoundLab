@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.sound-design-job/1",
+  "name": "My engine idle exterior",
+  "audio": "my-clip.wav",
+  "source_sha256": null,
+  "state": "idle",
+  "viewpoint": "exterior",
+  "selection": {"start": 0, "end": null},
+  "root_hz": null,
+  "harmonics": "auto",
+  "components": 12,
+  "allow_unstable": false,
+  "parameters": {"gain_db": -6, "seconds": 4, "seed": 48271}
+}

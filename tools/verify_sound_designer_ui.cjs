@@ -21,7 +21,9 @@ try{const page=await browser.newPage({viewport:{width:1400,height:1050}});page.o
  await page.locator('#audioFile').setInputFiles(fixture);
  await page.waitForFunction(()=>document.querySelector('#sourceInfo').textContent.includes('2.00s')&&!document.querySelector('#analyze').disabled,{},{timeout:30000});
  await page.fill('#root','47');await page.fill('#start','.1');await page.fill('#end','1.9');
+ await page.selectOption('#state','idle');await page.selectOption('#viewpoint','cabin');
  await page.click('#analyze');await page.waitForFunction(()=>document.querySelector('#sourceInfo').textContent.includes('1.80s')&&!document.querySelector('#analyze').disabled,{},{timeout:30000});
+ assert.equal(await page.inputValue('#state'),'idle');assert.equal(await page.inputValue('#viewpoint'),'cabin');
  await page.fill('#harmonics','128');await page.click('#compile');
  await page.waitForFunction(()=>document.querySelector('#modelInfo').textContent.includes('128阶')&&!document.querySelector('#compile').disabled,{},{timeout:90000});
  await page.click('[data-recipe=bright]');assert.equal(await page.inputValue('#high_db'),'3');
@@ -45,6 +47,7 @@ try{const page=await browser.newPage({viewport:{width:1400,height:1050}});page.o
  await page.click('#advanced summary');await page.click('#loadJson');
  await page.waitForFunction(()=>document.querySelector('#jsonEditor').value.includes('base_profile'));
  const pkg=JSON.parse(await page.inputValue('#jsonEditor'));assert(pkg.base_profile.basis.length===128);
+ assert.equal(pkg.state,'idle');assert.equal(pkg.viewpoint,'cabin');
  await page.click('#advanced summary');
  await page.fill('#name','UI saved voice');await page.click('#save');
  await page.waitForFunction(()=>!document.querySelector('#save').disabled&&document.querySelector('#projectLabel').textContent==='UI saved voice');
@@ -86,6 +89,7 @@ try{const page=await browser.newPage({viewport:{width:1400,height:1050}});page.o
    save_and_reload:true,recent_projects:true,sticky_preview:true,
    ab_uses_one_player_without_gain_change:true,reference_and_preview_mutually_exclusive:true,
    analyze_preserves_pending_edits:true,restore_history_restores_model_controls_and_selection:true,
+   labels_survive_analysis_before_model_exists:true,
    automated_audio_muted:true};
 }catch(e){report={result:'failed',error:String(e),page_errors:errors};throw e;}
 finally{fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));await browser.close();}

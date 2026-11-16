@@ -1,0 +1,334 @@
+{
+  "schema": "vsl.sound-design-jobs-verification/1",
+  "date": "2026-11-16",
+  "previous_commit": "b9da1e3",
+  "result": "passed",
+  "user_scope": "Already cut single-state clips; manual state/viewpoint and confirmed acoustic root; authoring tools, no deep DSP optimization or driver integration",
+  "cli": {
+    "result": "passed",
+    "checks": [
+      "Unicode_relative_audio_job_to_C_preview_with_exact_input_receipt",
+      "PowerShell_and_Python_repeat_same_model_and_all_C_audio_samples",
+      "explicit_name_state_viewpoint_preserved_across_analysis_compile_and_export",
+      "analysis_only_and_unconfirmed_root_never_silently_compile",
+      "variable_pitch_requires_explicit_draft_optin",
+      "invalid_specs_and_overwrite_refused_original_audio_unchanged"
+    ],
+    "cases": [
+      {
+        "label": "生成一",
+        "exit_code": 0,
+        "status": "generated"
+      },
+      {
+        "label": "生成二",
+        "exit_code": 0,
+        "status": "generated"
+      },
+      {
+        "label": "只分析",
+        "exit_code": 0,
+        "status": "analyzed"
+      },
+      {
+        "label": "待确认",
+        "exit_code": 3,
+        "status": "root_confirmation_required"
+      },
+      {
+        "label": "变音高",
+        "exit_code": 4,
+        "status": "stable_crop_required"
+      },
+      {
+        "label": "变音高草稿",
+        "exit_code": 0,
+        "status": "generated"
+      },
+      {
+        "label": "未知字段",
+        "exit_code": 2,
+        "status": "failed"
+      },
+      {
+        "label": "错误状态",
+        "exit_code": 2,
+        "status": "failed"
+      },
+      {
+        "label": "字符串布尔",
+        "exit_code": 2,
+        "status": "failed"
+      },
+      {
+        "label": "假哈希",
+        "exit_code": 2,
+        "status": "failed"
+      },
+      {
+        "label": "越界频率",
+        "exit_code": 2,
+        "status": "failed"
+      },
+      {
+        "label": "错误选区",
+        "exit_code": 2,
+        "status": "failed"
+      }
+    ],
+    "first_project": "263be440af39409d8fb5af93272abb28",
+    "source_sha256": "a567f55e711eacc740ef3b64abd8363a21fe3d5364659aad44c8d864026cf4af",
+    "model_sha256": "49d63590971996790ab8f899224a67673182d7cde9839cc745d74479114604f0",
+    "renderer_sha256": "4415fb87b713c9b4f36c8a8e501bc437569e4d0b2d31f0e6d76ee672a2a23390",
+    "no_C_changes": true,
+    "goal_complete": false
+  },
+  "api": {
+    "result": "passed",
+    "checks": [
+      "neutral_parameter_edit_matches_original_C_all_samples",
+      "parameter_JSON_restore_and_replay_exact_without_audio",
+      "complete_export_bundle",
+      "unicode_audio_to_measurements_to_parameter_table_to_C_preview",
+      "exposed_controls_change_actual_C_output",
+      "individual_phase_edit_changes_output",
+      "saved_edits_and_recent_projects_reopen_without_render",
+      "reextract_and_restore_model_edits_selection_C_audio_and_immutable_history",
+      "reference_and_training_analysis_remain_separate_in_export",
+      "zero_component_JSON_roundtrip"
+    ],
+    "invalid_inputs_rejected": [
+      "nan_control",
+      "invalid_range",
+      "unsafe_harmonics",
+      "bad_profile",
+      "variable_pitch_without_optin",
+      "restored_JSON_has_no_original_audio",
+      "root_not_analyzed",
+      "bad_history_identity"
+    ],
+    "browser_fixture": "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\api1\\合成已知片段.wav",
+    "project_id": "2b733b04f8994697b77e28ffb0023c2e",
+    "renderer_sha256": "4415fb87b713c9b4f36c8a8e501bc437569e4d0b2d31f0e6d76ee672a2a23390",
+    "no_core_C_changes": true,
+    "goal_complete": false
+  },
+  "browser": {
+    "result": "passed",
+    "page_errors": [],
+    "real_upload_analysis_compile_C_preview": true,
+    "preset_switch": true,
+    "editable_macros": true,
+    "complete_JSON_available": true,
+    "downloads": 3,
+    "preview_seconds": 0.5,
+    "mobile_no_horizontal_overflow": true,
+    "save_and_reload": true,
+    "recent_projects": true,
+    "sticky_preview": true,
+    "ab_uses_one_player_without_gain_change": true,
+    "reference_and_preview_mutually_exclusive": true,
+    "analyze_preserves_pending_edits": true,
+    "restore_history_restores_model_controls_and_selection": true,
+    "labels_survive_analysis_before_model_exists": true,
+    "automated_audio_muted": true
+  },
+  "real_example": {
+    "generated": {
+      "schema": "vsl.sound-design-job-result/1",
+      "status": "generated",
+      "stage": "complete",
+      "job_file": "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\real1\\A_fixed.job.json",
+      "job_sha256": "f9e33fe34a978f367e7ccba2ed1e4abbb8e93023ededb8f2fd868d505cac00cb",
+      "output": "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\real1\\generated2",
+      "compiled": true,
+      "listening_accepted": false,
+      "state": "steady",
+      "viewpoint": "exterior",
+      "toolchain_sha256": "898f343573ca91f9faf3b23b7a7c8e11888215f1237d400604aa33a15958597f",
+      "source_sha256": "31d8632b6f9305402e74cf29e682ecf55fc1b89be20b9b87e5dd529096f308c5",
+      "project_id": "b85c5a864b2f4002bf3ba464d8c4de2b",
+      "project_folder": "E:\\VehicleSoundLab\\designs\\b85c5a864b2f4002bf3ba464d8c4de2b",
+      "ui_path": "/?project=b85c5a864b2f4002bf3ba464d8c4de2b",
+      "selection": [
+        0.0,
+        1.2171666666666667
+      ],
+      "stable_candidate": true,
+      "root_candidates": [
+        {
+          "hz": 46.878012168741996,
+          "score": 0.8956946699711522
+        },
+        {
+          "hz": 117.07084909491911,
+          "score": 0.789743657397657
+        },
+        {
+          "hz": 78.19814382372023,
+          "score": 0.7859046120063399
+        },
+        {
+          "hz": 23.438664213371847,
+          "score": 0.7408093918410206
+        },
+        {
+          "hz": 33.47646090368426,
+          "score": 0.6941279543395097
+        },
+        {
+          "hz": 29.309684333870486,
+          "score": 0.6925941595973987
+        },
+        {
+          "hz": 234.7500677373408,
+          "score": 0.6715218679620505
+        },
+        {
+          "hz": 58.60155079968738,
+          "score": 0.6410262061592436
+        }
+      ],
+      "pitch_drift": 0.0011720721034718432,
+      "harmonics": 300,
+      "components": 12,
+      "highest_partial_hz": 14062.5,
+      "fixed_timbre_draft": false,
+      "model_scope": "固定音色统计参数；音高轨迹另存于分析，不自动转换成驾驶RPM映射",
+      "exit_code": 0,
+      "render_report": {
+        "peak": 0.44952592253685,
+        "frames": 192000,
+        "sample_rate": 48000,
+        "channels": 2,
+        "rms_dbfs": -16.632463233954873,
+        "overload": false,
+        "model_sha256": "cc45fb2fdb54defff1d2a2d1c0bcbfab58211f13c570e2a0ebf6bd4df0075e90",
+        "renderer_sha256": "4415fb87b713c9b4f36c8a8e501bc437569e4d0b2d31f0e6d76ee672a2a23390",
+        "processing": "现有C Sound DNA；参数域增益／声线编辑；无混响、限幅或自动响度匹配"
+      },
+      "output_sha256": {
+        "analysis.json": "76492042511cf1eec9a141282f6127be5e16b3a76d89bbd3c8ad00c9c94a8bf6",
+        "bands.csv": "b1c3ce5705ca703c1f2af7c243de2a31ac8c0ed1d08d28fde2ca86533a2ac6ac",
+        "harmonics.csv": "4dc54536ef228f93b3e1fceaf06dcfe6f7b278274a63d6eb053e76b8c5a769bc",
+        "job.input.json": "f9e33fe34a978f367e7ccba2ed1e4abbb8e93023ededb8f2fd868d505cac00cb",
+        "job.resolved.json": "cea01a92be1bcb0b182cd31d5167a2b3a5d11d31a992da75a541c8c0e09f9776",
+        "parameters.json": "a8e46e656640780578715d15e941e7700f65f3dc8f4a3d9215d69e22a93026aa",
+        "pitch_track.csv": "dd29abb0303878dc6a2d2ae05cda982225de811978e0a94192a70f2d95ab6d9c",
+        "preview.wav": "93dcc69ed6277ae315eeff685a2c1c23fafa713702afefeaa1da8e8fe944ed8e",
+        "sound-design.zip": "859ec7d1466c758cf552e71a30205bf5a80a1a14f6f7ab13a15990e3b40bcdc8",
+        "toolchain.json": "898f343573ca91f9faf3b23b7a7c8e11888215f1237d400604aa33a15958597f",
+        "voice.model": "cc45fb2fdb54defff1d2a2d1c0bcbfab58211f13c570e2a0ebf6bd4df0075e90"
+      }
+    },
+    "raw_idle_analysis": {
+      "schema": "vsl.sound-design-job-result/1",
+      "status": "analyzed",
+      "stage": "complete",
+      "job_file": "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\real1\\A_idle_inspect.job.json",
+      "job_sha256": "0acbd94de048e7e0a863bf03654067e40caafef742eda8d408b2d30de41cff0f",
+      "output": "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\real1\\idle_analysis2",
+      "compiled": false,
+      "listening_accepted": false,
+      "state": "idle",
+      "viewpoint": "exterior",
+      "toolchain_sha256": "898f343573ca91f9faf3b23b7a7c8e11888215f1237d400604aa33a15958597f",
+      "source_sha256": "34752247d666f066e0cec08c26d880b0324764db9244f107f64b2c8c6af94c4d",
+      "project_id": "8b4f597c27924e5d90ce26b9828cf046",
+      "project_folder": "E:\\VehicleSoundLab\\designs\\8b4f597c27924e5d90ce26b9828cf046",
+      "ui_path": "/?project=8b4f597c27924e5d90ce26b9828cf046",
+      "selection": [
+        0.0,
+        5.0
+      ],
+      "stable_candidate": false,
+      "root_candidates": [
+        {
+          "hz": 163.57922115604862,
+          "score": 0.6709374514164503
+        },
+        {
+          "hz": 34.03367121061937,
+          "score": 0.659858697593648
+        },
+        {
+          "hz": 84.34569877154567,
+          "score": 0.5873670252938584
+        },
+        {
+          "hz": 56.52036354685415,
+          "score": 0.5509446119776524
+        },
+        {
+          "hz": 42.6633532413847,
+          "score": 0.513698955254136
+        },
+        {
+          "hz": 28.256143212538284,
+          "score": 0.48055980238540336
+        },
+        {
+          "hz": 24.286326269113584,
+          "score": 0.43731696346962373
+        },
+        {
+          "hz": 21.202471909277666,
+          "score": 0.37718390719808653
+        }
+      ],
+      "pitch_drift": 0.2531330884494541,
+      "exit_code": 0,
+      "output_sha256": {
+        "analysis.json": "a3a8478ed93affcbe5e6b25baa22ed059b916e2642c0a7bfa01f49c8f15831d8",
+        "bands.csv": "9dae3fa0a212f24085dad8575a2305a5428556e7f6ec50bf97c99b2d578ff2ef",
+        "job.input.json": "0acbd94de048e7e0a863bf03654067e40caafef742eda8d408b2d30de41cff0f",
+        "job.resolved.json": "6efea917bb16768be227f94d9fd047989ccc992035f50f5601cd179b378c6728",
+        "pitch_track.csv": "e5869a51a38417c086ccc37695111593c49f7da9d2cbd0f6992eaf18527f06d9",
+        "toolchain.json": "898f343573ca91f9faf3b23b7a7c8e11888215f1237d400604aa33a15958597f"
+      }
+    },
+    "prior_UI_version": "E:\\VehicleSoundLab\\designs\\9f3ef16a3d47453bad7d883bac09f57a\\20d0332d56f04ad3a2f947689ff7ff06",
+    "model_and_WAV_match_prior_UI_bytes": true,
+    "fixed_reference_was_normalized": true,
+    "raw_idle_periodicity_ambiguous": true,
+    "physical_RPM_not_inferred": true,
+    "new_listening_acceptance": false
+  },
+  "source_files": {
+    "Design-Sound-Clip.ps1": "fb01b24dfb5b70bcb0fdb16d801d9f160470106e4d39690f4bde70d7c5f833e1",
+    "examples/sound_designer/one_state.job.json": "e6ff4a359d8637f1040c1c6501ce0aa3cb6d5919a5b0127e128e89c7bec7ebe5",
+    "handoff/音色工作台使用说明.md": "8a37ae7c7e645b1597e4ce62ed1c39af53b7cb52f98701bf00907b36259e8d50",
+    "handoff/音频到参数任务范式.md": "eb2a048c9bf5b3a65125426390b21f1c00e72227f532a4d2c6d5f5a5792523f7",
+    "tools/design_sound_clip.py": "6f3dd962c9967d3873694c553e4ee9934453dc663c2ef8738edb721c61cfb27c",
+    "tools/sound_designer/__init__.py": "91ae60fc8586eec3c773404a7efe78e3937812a317017e2b42cdf869bae1f543",
+    "tools/sound_designer/analysis.py": "0d711be4eec58f3045e90822c38ee248f95fd4d8c3fe94dd04e6e66dcf581f72",
+    "tools/sound_designer/history.py": "05aa8794f1f6d6375d772dac80ed1b7bb1748703cabf0d7316129f505575397b",
+    "tools/sound_designer/jobs.py": "a71cd628fe97690d229abc5659f1795d2bf30a6130694e7559b77f885a86b10d",
+    "tools/sound_designer/metadata.py": "3a8045c41e2d80e21834c3ac60d100f3ffc4da82d9f2b7f486435d53688a28f3",
+    "tools/sound_designer/models.py": "443762156b0356148072aaf810b11f4b3f09cec0cdfe7ce64b4e37150ca48edc",
+    "tools/sound_designer/render.py": "252bfdd555984d86977ae537842eea87f8f2ee5a875977e484e7ac134eb5cc05",
+    "tools/sound_designer/requirements.txt": "c451aacbe15cab62a09b131f21da089f4403784f3e02c6d941d53ead66db71a1",
+    "tools/sound_designer/server.py": "ee78aad75ec3bbf899ce87dcebb14fd83708276b009c6b0bc12e1dbcfcb7b20b",
+    "tools/sound_designer/web/app.js": "f3e6193d24a0f79eeddd1dc8bc199f1b1fefa8c555fb7ec9420a17f6f0a165d8",
+    "tools/sound_designer/web/audition.js": "d9c1651cf95996f40f00cf16e30620cb24944cbbd0083a0bfc81de1363dfa291",
+    "tools/sound_designer/web/history.js": "fa09453cdcc69bce25b1567f3b7be0cbb978ad48884839d07aeb52bd9fee392c",
+    "tools/sound_designer/web/index.html": "c13835b09891cdc1cb5976960c1af30ca18b10f015ccc120b4ea0c01a275c280",
+    "tools/sound_designer/web/style.css": "1a84ae6f2c099eaf008731a40d5d53be99bb0f2f8b8b953b6907af06cc0080cd",
+    "tools/sound_designer/workspace.py": "9c2b2386f61077824407aaf3b252551c8eaf216ab42af2392ebf0f7cdc4e9033",
+    "tools/verify_sound_design_jobs.py": "c20894dd367e77fb195611ed8047e4dc08c0104ae1163d5c67ccdf683392a0e5",
+    "tools/verify_sound_designer.py": "a28f1a13958abc656b35ab05a6e0f6988e8c93777c1c599e9a254b6835a7202a",
+    "tools/verify_sound_designer_ui.cjs": "e803d44420ba2500658e54538556e8904e82095fd2c8b1bc7ddfd4283f53e5f1"
+  },
+  "C_files_modified": [],
+  "accepted_models_modified": [],
+  "retained_runs": [
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\cli1",
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\cli2",
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\cli3",
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\api1",
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\ui1",
+    "E:\\VehicleSoundLab\\renders\\sound_design_jobs_v1\\real1"
+  ],
+  "goal_status": "active",
+  "deep_solver_status": "deferred_by_user"
+}
