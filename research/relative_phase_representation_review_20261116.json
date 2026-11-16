@@ -1,0 +1,97 @@
+{
+  "result": "existing_relative_phase_representation_traced_without_training",
+  "sources": {
+    "tools/relative_phase_v1/profile.py": "1c0ad0bc09a16b854abb97caf019d157e65ac7586014a6cd7109371d41c92020",
+    "tools/relative_phase_v1/coordinates.py": "fd41ff9bc9d345e6681f6872653d59c43c5289565a67dcf4c269c1660c5d46d0",
+    "tools/relative_phase_v1/render.py": "e79157155711d9a7d5aed9a52ad1d5826d5ede35ecbd5096bfbdef82b1163586",
+    "tools/radial_copula_v1/latent.py": "1aead3d49669ec6bcff2d4dbb641b03b54fa2d13913c800999c619d995fdb375",
+    "tools/trace_relative_phase_representation_v1.py": "bc1446b616db6c35d5978aedfa46d70432d44440197e02f8d9864b43301d246f"
+  },
+  "inputs": {
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\report.json": "317c0cea080fc1d58c59d8cfd2cae72f089700acc527f76378107f886af03a9d",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth First Late\\profile.npz": "abeb381f23843135da2576e0bede8aae01bb60b7288a2808fab30be0122468f1",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\real1\\F3 Fifth First Late\\training.npz": "263c7f2a43bf4bf9a0f7992f20b05b529833945ecbab72b7b9ccdde1ed7ebb74",
+    "E:\\VehicleSoundLab\\references\\analysis\\relative_phase_v1\\audio1\\report.json": "64be290751d438c4b5b7b062607c96aaa50b45e7cad3b319180d6594f49ff36d"
+  },
+  "model_shapes": {
+    "amplitude": [
+      40,
+      576
+    ],
+    "phase": [
+      40,
+      576
+    ],
+    "fixed_phase": [
+      288,
+      2
+    ],
+    "phase_cuts": [
+      576
+    ],
+    "basis": [
+      1152,
+      12
+    ],
+    "rho": [
+      12
+    ],
+    "residual_std": [
+      1152
+    ],
+    "residual_rho": [
+      1152
+    ],
+    "active": [
+      1152
+    ],
+    "target_amplitude_second": [
+      576
+    ]
+  },
+  "training_shapes": {
+    "source_rows": [
+      40,
+      1152
+    ],
+    "amplitude": [
+      40,
+      576
+    ],
+    "coordinates": [
+      40,
+      576
+    ],
+    "scores": [
+      40,
+      1152
+    ],
+    "pc": [
+      40,
+      12
+    ],
+    "residual": [
+      40,
+      1152
+    ],
+    "normalization": [
+      576
+    ]
+  },
+  "observed_rows": 40,
+  "oscillator_orders": 288,
+  "feature_dimensions": 1152,
+  "shared_components": 12,
+  "features": "576 L/R amplitudes + 288 common-phase + 288 relative-phase coordinates",
+  "retained": "empirical scalar marginals, 12-component joint rank-Gaussian structure, per-coordinate lag1 AR parameter",
+  "discarded_by_representation": "off-diagonal covariance of the residual feature vector; cross-coordinate lagged coupling; temporal dependencies beyond the imposed scalar AR1 law",
+  "limitation": "This code trace establishes representation limits, not their audible importance or the cause of electronic timbre. 40 overlapping/context-linked rows are not 40 independent recordings.",
+  "old_source_CV_error_L2": {
+    "old_radial": 0.20330415742869307,
+    "relative_phase": 0.20345630296599002
+  },
+  "retained_failed_inventory": "E:/VehicleSoundLab/references/analysis/relative_phase_representation_review_20261116_failed1",
+  "current_new_C1_source_eligible_for_statistics": false,
+  "no_new_training_generation_fitting_audio_C_preset_or_room_change": true,
+  "next": "Known temporal/cross-coordinate controls, then read-only preservation assessment on the existing saved profile; new C1 source admission remains a separate failed gate."
+}

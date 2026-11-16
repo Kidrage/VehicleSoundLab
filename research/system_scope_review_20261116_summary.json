@@ -1,0 +1,76 @@
+{
+  "result": "current_catalog_scope_and_feedback_record_verified",
+  "verification_passed": true,
+  "catalog_entries": [
+    {
+      "key": "v10-moving-fine-idle",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-moving35",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-exterior4",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-cabin2",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-start-settle",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "synthetic-warm",
+      "profile": "VSL_SCIFI"
+    },
+    {
+      "key": "synthetic-hollow",
+      "profile": "VSL_SCIFI"
+    },
+    {
+      "key": "v10-stationary-bridge5",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-cabin-slowing",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-F3-before-upshift",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-F3-fifth-first-local",
+      "profile": "VSL_V10"
+    },
+    {
+      "key": "v10-F3-fifth-second-local",
+      "profile": "VSL_V10"
+    }
+  ],
+  "catalog_count": 12,
+  "V10_observation_entries": 10,
+  "analytic_examples": 2,
+  "engineering_profile_templates": 5,
+  "lifecycle_states": 6,
+  "operating_states": 8,
+  "shift_stages": 4,
+  "protected_C_H": 670,
+  "protected_voice_files": 82,
+  "protected_F2": 3,
+  "original_hearings_and_C_index_exact": true,
+  "sources": {
+    "modules/drive_catalog/catalog.c": "243c1f787fb20069c155693410f203baa6c7c265ed5f5d0879608a11c77f4fe0",
+    "modules/drive_catalog/catalog.h": "00b683787486dd156ef2b38c035c19302fbbec6ea752fab9b6b0b2f306533b2d",
+    "src/core/profiles.c": "4d3757794e8084fe8fadcfb23acda4dc2f02010f357adfc70375d9864670eb62",
+    "src/drive/types.h": "d234b8a888d761e60f46bc8a6daac1246fed3f1c8d777f49db0b124830d3c49f",
+    "modules/stereo_bed/route.c": "a37865c4b1450d53ab993c21bf14a465d8a99fd2b73e944366aa578a57fa152a",
+    "research/relative_phase_v1_feedback_20261116.json": "97cb0ac2bb72995226f37ef03edd697f06fd093f1217c07dbfbeb16d7f8d98e9",
+    "handoff/算法说明.md": "98e843580e4fe1d46decc0d9e83cf78e3682ff15f1ff98176793756e5aa2ddd3"
+  },
+  "no_runtime_test_or_new_timbre_claim": true,
+  "no_live_fit_or_native_source_modified": true
+}

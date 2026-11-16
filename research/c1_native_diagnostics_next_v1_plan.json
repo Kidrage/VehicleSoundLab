@@ -1,36 +1,47 @@
 {
-  "full_goal": "ACTIVE: autonomous controllable natural HF and joint LR, multiple real engines/full driving states, V6 DNA/BODY/DETAIL/EVENT/AUX, one driver/modular C/owned takes, independent stereo and future physical7.1.4. No fitted PCM or coefficient timeline engines.",
-  "this_turn": "PROGRESS: new explicit C1/22k declared-source native adapter prepared and actually qualified on FOUR SAVED known terminal captures, no refit. All scalar samples/native16+32/source+candidate/full stereo checked. Original known_audit1 FAILED at near-zero fsum-centered lag covariance; complete diagnostic retains20 old failures. New separate declared FP64-centering audit controls5 and full known1/2 PASS with unchanged2e-11 gates; max1.1704893185010757e-11. Contract1 success+6rejections. No real acoustic or C qualification.",
-  "known": {
-    "root": "E:/VehicleSoundLab/references/analysis/c1_native_diagnostics_v1",
-    "current_study": "known2",
-    "current_independent_audit": "known_declared_audit2",
-    "known_report_sha256": "df20e615ed49fb0687d657dc472aa57a8d919a12f4a26962ba9c75b950b65ebe",
-    "known_audit_sha256": "47aa352255897fdc4d4c073d75d4c716c5b302a06fa077d516ee606f055425e6",
-    "original_failed_audit": "known_audit1",
-    "original_failures_not_relabelled": true,
+  "full_goal": "ACTIVE: natural autonomous DNA/BODY/DETAIL/EVENT/AUX, one driver/modular C/owned takes, multiple actual engines/full states, separate source/room/render, stereo now and future physical7.1.4.",
+  "current_state": "TERMINAL: original PID277576/session62945 and coordinator PID285020/session17001 completed. Do not poll/restart them based on historical notes.",
+  "actual_source": {
+    "label": "F3 Fifth First Late",
+    "claim": "D:/VehicleSoundLab-Work/source_fit_storage_v1/c1_22k_declared_v1/claims/3cfbdb688cd83cba917e7071e5de5f7b73b1daa0872d39ccf6b3ede1fe50092d",
+    "receipt_sha256": "c483c125f727ed296330b3108063fee5baa7fef34334c3f1a7f654248e7fbc82",
+    "solver_qualified": true,
+    "fidelity_qualified": false,
+    "target_wave_NRMSE": 0.0002333220530284678,
+    "highest_original_virtual_band_NRMSE": 0.11012827610031706,
+    "unchanged_original_gate": 0.02,
     "eligible_for_later_source_statistics": false
   },
-  "live_source": {
-    "instruction": "Verify SAME actual process/session now. Source.bin QR and upper transpose complete, graph.bin QR active at observation. Counts are not overall percentage/ETA.",
-    "pid": 277576,
-    "session": 62945,
-    "creation_local": "2026-11-16T10:24:04.676262+08:00",
-    "claim": "D:/VehicleSoundLab-Work/source_fit_storage_v1/c1_22k_declared_v1/claims/3cfbdb688cd83cba917e7071e5de5f7b73b1daa0872d39ccf6b3ede1fe50092d",
-    "terminal_receipt": "execution_result.json",
-    "audit": "run1_audit/report.json"
+  "actual_native": {
+    "root": "E:/VehicleSoundLab/references/analysis/c1_native_diagnostics_v1",
+    "producer": "real1",
+    "audit": "real_declared_audit1",
+    "verification_passed": true,
+    "maximum_comparison_error": 7.644550370157405e-15,
+    "original_centering_failures_in_this_real_case": 0,
+    "candidate_vs_raw_wave_NRMSE": 0.0002332649291039019,
+    "source_and_candidate16_32_converged": true,
+    "interpretation": "Same9884native48kframes, saved-grid sinc128 reconstruction plus output FIR; NOT direct continuous fitted OSC or runtime source."
   },
-  "live_followthrough": {
-    "instruction": "Continue SAME coordinator; do not launch real1 manually while pending. It waits on the original OS process handle, then checks exact successful receipt/PID/independent solver audit. Any failure is terminal with outputs retained, no retry.",
-    "pid": 285020,
-    "session": 17001,
-    "root": "E:/VehicleSoundLab/references/analysis/c1_native_followthrough_v1/run1",
-    "state_at_start": "waiting_for_same_registered_process",
-    "stages": ["c1_native_diagnostics_v1/real1", "c1_native_diagnostics_v1/real_declared_audit1"],
-    "never": "No fit command, remaining4batch, old failed coordinator restart, engine/default/preset/C/hearing promotion."
+  "actual_review": {
+    "root": "E:/VehicleSoundLab/references/analysis/c1_native_review_v1",
+    "producer": "review1",
+    "audit": "audit1",
+    "known_controls": 6,
+    "corruptions_rejected": 3,
+    "CSV_numeric_cells_independently_checked": 117,
+    "PNG_viewed_and_SVG_parsed": true,
+    "finding": "Observed absolute error mainly0..3k85.076percent and3..6k14.842percent, max2683.59375Hz. Weak14k+ ratios do NOT establish audible cause. Three signed components and radial/angular geometry are not physical or perceptual attribution."
   },
-  "while_live": "Do not modify206 execution sources/144 inputs/196registered sources/131native identities or the native producer/adapter/declared auditor/coordinator sources captured in known2 and known_declared_audit2. New docs/archive tools outside these closures may be edited. Do not read incomplete actual capture; no duplicate native real1 run.",
-  "after_both_terminal": "Read authoritative original receipt/coordinator report/all new outputs/audit. Preserve original SciPy source preparation failure and20 native fsum-centering failures. Compare raw/source FIR/source-grid roundtrip/fitted grid on SAME native target, all bins/LR complex/MS/CV/covariance/lags and16vs32, then publish actual loss diagnosis. Sampled-grid interpretation is not direct continuous fitted OSC; numerical verification is not acoustic admission. Source/statistical eligibility remains false until actual evidence qualifies.",
-  "later": "Only after source qualification derive fresh-seed autonomous joint amplitude/phase/time laws and controllable RPM/load/state transitions with native aliasing checks, then modular C integration. Accepted moving35/default/one-driver/owned/takes/room/hearing contracts remain. LR recording is not12 physical sources; room/IR separable.",
-  "protected": "Original124sources101inputs151bindings/failures/captures/factors;670C-H82voices3F2/Cindex unchanged. No push/download/newhearing/unchanged68CTest/HFcloud/Cpromotion. No currentC MCPS increase;800planning/900allocation remains unmeasured. FullgoalACTIVE."
+  "human_feedback": "research/relative_phase_v1_feedback_20261116.json: stereo more natural, no reported timbre regression, slight electronic character remains. Offline scope only; no whole-timbre or C acceptance.",
+  "existing_representation_trace": "research/relative_phase_representation_review_20261116.json: previous saved profile288orders/1152features/40rows/12sharedPCs, independent residual coordinates and scalarAR1. No training. First inventory source-binding failure archived separately; corrected inventory binds analysis and audio producers separately.",
+  "next": [
+    "Known controls distinguish marginal/covariance preservation from cross-coordinate lag and temporal structure. Then read-only assess existing saved relative-phase profile/training rows; no source re-fit or new autonomous model/audio promotion.",
+    "Publish precisely represented/discarded relations. 12PC/AR1 limitations are not evidence of audible causality; no blind rank increase/HFcloud/added jitter.",
+    "Keep new C1 source gate failed and unchanged. Only after justified source admission use it for fresh-seed autonomous joint laws, RPM/load/state conditioning and native alias checks before C."
+  ],
+  "never": "No consumed real-case refit/restart, remaining4automatic fits, fitted PCM/coefficient timeline loops, downloads/push/new listening question, unchanged68CTest rerun or C/preset/room/driver/take promotion.",
+  "preserve": "Original124sources101inputs151bindings/failures/captures/factors and206execution144inputs196registration131nativeidentities;670C-H82voices3F2/Cindex/original hearings/moving35/defaults/one driver/owned/takes. Original SciPy failure and20known fsum-centering failures remain failed. All actual factor files stay on D and are not archived.",
+  "archive": "E:/VehicleSoundLab/baselines/c1_native_terminal_review_v1; NEW archive, previous known archive unchanged.",
+  "MCPS": "CurrentC unchanged.800MCPS planning/900allocation, not target measured."
 }

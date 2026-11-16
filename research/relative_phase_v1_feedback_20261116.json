@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.listening-feedback/1",
+  "recorded_date": "2026-11-16",
+  "experiment": "relative_phase_v1",
+  "status": "stereo_improvement_accepted_timbre_incomplete",
+  "source": "Human reply in this conversation to question call_6182988518274050aa0c7e274dbbfbd3",
+  "review_url": "http://127.0.0.1:8789/references/analysis/relative_phase_v1/review1/index.html",
+  "user_feedback": "左右更自然，音色未退化，但是这个音色照参考音频里的质感还是差一点，还是呈现出些微电子感。",
+  "accepted_scope": "Offline paired fixed-phase versus common/relative-phase sustained OSC: stereo naturalness improved without reported timbre regression. The comparison shares amplitude, with no added room or widener.",
+  "still_unresolved": [
+    "Residual electronic timbre and texture difference from the original recording",
+    "Source extraction fidelity and autonomous joint amplitude/phase/time generation",
+    "Realtime C listening parity and controlled RPM/load/state transitions"
+  ],
+  "not_established": [
+    "Every group and random seed was separately approved; the reply does not identify one",
+    "Whole engine timbre or all driving states accepted",
+    "Multiple real engines calibrated",
+    "Recorded left/right relations identify physical source locations or a 7.1.4 sound field"
+  ],
+  "runtime_adopted": false,
+  "preservation": "Append this human feedback separately. Keep original pending listening record, frozen reports, audio, original failures, prior F2/F3 and amplitude questions unchanged."
+}
