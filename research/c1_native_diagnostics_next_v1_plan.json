@@ -1,0 +1,36 @@
+{
+  "full_goal": "ACTIVE: autonomous controllable natural HF and joint LR, multiple real engines/full driving states, V6 DNA/BODY/DETAIL/EVENT/AUX, one driver/modular C/owned takes, independent stereo and future physical7.1.4. No fitted PCM or coefficient timeline engines.",
+  "this_turn": "PROGRESS: new explicit C1/22k declared-source native adapter prepared and actually qualified on FOUR SAVED known terminal captures, no refit. All scalar samples/native16+32/source+candidate/full stereo checked. Original known_audit1 FAILED at near-zero fsum-centered lag covariance; complete diagnostic retains20 old failures. New separate declared FP64-centering audit controls5 and full known1/2 PASS with unchanged2e-11 gates; max1.1704893185010757e-11. Contract1 success+6rejections. No real acoustic or C qualification.",
+  "known": {
+    "root": "E:/VehicleSoundLab/references/analysis/c1_native_diagnostics_v1",
+    "current_study": "known2",
+    "current_independent_audit": "known_declared_audit2",
+    "known_report_sha256": "df20e615ed49fb0687d657dc472aa57a8d919a12f4a26962ba9c75b950b65ebe",
+    "known_audit_sha256": "47aa352255897fdc4d4c073d75d4c716c5b302a06fa077d516ee606f055425e6",
+    "original_failed_audit": "known_audit1",
+    "original_failures_not_relabelled": true,
+    "eligible_for_later_source_statistics": false
+  },
+  "live_source": {
+    "instruction": "Verify SAME actual process/session now. Source.bin QR and upper transpose complete, graph.bin QR active at observation. Counts are not overall percentage/ETA.",
+    "pid": 277576,
+    "session": 62945,
+    "creation_local": "2026-11-16T10:24:04.676262+08:00",
+    "claim": "D:/VehicleSoundLab-Work/source_fit_storage_v1/c1_22k_declared_v1/claims/3cfbdb688cd83cba917e7071e5de5f7b73b1daa0872d39ccf6b3ede1fe50092d",
+    "terminal_receipt": "execution_result.json",
+    "audit": "run1_audit/report.json"
+  },
+  "live_followthrough": {
+    "instruction": "Continue SAME coordinator; do not launch real1 manually while pending. It waits on the original OS process handle, then checks exact successful receipt/PID/independent solver audit. Any failure is terminal with outputs retained, no retry.",
+    "pid": 285020,
+    "session": 17001,
+    "root": "E:/VehicleSoundLab/references/analysis/c1_native_followthrough_v1/run1",
+    "state_at_start": "waiting_for_same_registered_process",
+    "stages": ["c1_native_diagnostics_v1/real1", "c1_native_diagnostics_v1/real_declared_audit1"],
+    "never": "No fit command, remaining4batch, old failed coordinator restart, engine/default/preset/C/hearing promotion."
+  },
+  "while_live": "Do not modify206 execution sources/144 inputs/196registered sources/131native identities or the native producer/adapter/declared auditor/coordinator sources captured in known2 and known_declared_audit2. New docs/archive tools outside these closures may be edited. Do not read incomplete actual capture; no duplicate native real1 run.",
+  "after_both_terminal": "Read authoritative original receipt/coordinator report/all new outputs/audit. Preserve original SciPy source preparation failure and20 native fsum-centering failures. Compare raw/source FIR/source-grid roundtrip/fitted grid on SAME native target, all bins/LR complex/MS/CV/covariance/lags and16vs32, then publish actual loss diagnosis. Sampled-grid interpretation is not direct continuous fitted OSC; numerical verification is not acoustic admission. Source/statistical eligibility remains false until actual evidence qualifies.",
+  "later": "Only after source qualification derive fresh-seed autonomous joint amplitude/phase/time laws and controllable RPM/load/state transitions with native aliasing checks, then modular C integration. Accepted moving35/default/one-driver/owned/takes/room/hearing contracts remain. LR recording is not12 physical sources; room/IR separable.",
+  "protected": "Original124sources101inputs151bindings/failures/captures/factors;670C-H82voices3F2/Cindex unchanged. No push/download/newhearing/unchanged68CTest/HFcloud/Cpromotion. No currentC MCPS increase;800planning/900allocation remains unmeasured. FullgoalACTIVE."
+}

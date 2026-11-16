@@ -1,0 +1,74 @@
+{
+  "result": "c1_declared_native_known_qualified_and_live_followthrough_archived",
+  "known_cases": 4,
+  "controls": 5,
+  "contract_success": 1,
+  "contract_rejections": 6,
+  "original_fsum_centering_failed_fields": 20,
+  "original_failed_audit_preserved": true,
+  "original_execution_sources": 206,
+  "original_execution_inputs": 144,
+  "protected_C_H": 670,
+  "protected_voices": 82,
+  "protected_F2": 3,
+  "original_execution_spec_sha256": "5afa783ce3a16cc5327f4b386f960a21389f7a95d2c59502af0da8247763b10d",
+  "live_observation": {
+    "observed_utc": "2026-11-16T03:03:21.3120378Z",
+    "source": {
+      "ProcessId": 277576,
+      "CreationDate": "2026-11-16T10:24:04.676262+08:00",
+      "CommandLine": "\"C:\\Users\\mlslabs-06\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" tools/run_c1_registered_source_v1.py --workspace E:\\VehicleSoundLab"
+    },
+    "coordinator": {
+      "ProcessId": 285020,
+      "CreationDate": "2026-11-16T10:58:01.883502+08:00",
+      "CommandLine": "\"C:\\Users\\mlslabs-06\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -Command \"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\n& 'E:\\VehicleSoundLab-Git\\tools\\run_c1_native_followthrough_v1.ps1' -Workspace 'E:\\VehicleSoundLab' -Out 'E:\\VehicleSoundLab\\references\\analysis\\c1_native_followthrough_v1\\run1'\""
+    },
+    "source_progress": {
+      "pid": 277576,
+      "status": "running",
+      "phase": "fileQR.panel.factored",
+      "active_file": "graph.bin",
+      "phase_counts": {
+        "metric.before_root": 1,
+        "metric.band_root_built": 1,
+        "fileSolver.source_column_panel.written": 42,
+        "fileSolver.penalty_row_panel.written": 18,
+        "fileQR.panel.factored": 33,
+        "fileQR.panel.applied_T": 750,
+        "fileQR.factor.complete": 1,
+        "fileQR.upper_transpose.materialized": 18
+      },
+      "elapsed_seconds": 2348.563000000082,
+      "working_set_bytes": 396324864,
+      "cumulative_peak_working_set_bytes": 1612570624,
+      "private_commit_bytes": 1213657088,
+      "cumulative_peak_private_commit_bytes": 2322034688,
+      "total_physical_bytes": 33975316480,
+      "available_physical_bytes": 11683946496,
+      "total_commit_bytes": 64040087552,
+      "available_commit_bytes": 15993487360
+    },
+    "coordinator_report": {
+      "result": "running",
+      "state": "waiting_for_same_registered_process",
+      "pid": 285020,
+      "source_pid": 277576,
+      "source_creation": "2026-11-16T10:24:04.676262+08:00",
+      "claim": "D:\\VehicleSoundLab-Work\\source_fit_storage_v1\\c1_22k_declared_v1\\claims\\3cfbdb688cd83cba917e7071e5de5f7b73b1daa0872d39ccf6b3ede1fe50092d",
+      "stages": [],
+      "no_fit_restart_or_runtime_or_hearing_change": true,
+      "known_sha256": "df20e615ed49fb0687d657dc472aa57a8d919a12f4a26962ba9c75b950b65ebe",
+      "known_audit_sha256": "47aa352255897fdc4d4c073d75d4c716c5b302a06fa077d516ee606f055425e6"
+    },
+    "source_terminal_receipt_exists": false
+  },
+  "no_live_factors_or_real_capture_copied": true,
+  "source_fidelity_not_evaluated": true,
+  "eligible_for_later_source_statistics": false,
+  "no_C_default_driver_owned_takes_room_or_hearing_change": true,
+  "archive": "E:\\VehicleSoundLab\\baselines\\c1_native_diagnostics_known_v1",
+  "manifest_sha256": "eb55d671360ca1fab9bc6977c77df0079983e4b6015e9606540a93f8eab3e159",
+  "file_count": 348,
+  "bytes": 166507654
+}
