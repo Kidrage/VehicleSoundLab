@@ -1,0 +1,13 @@
+{
+  "scope": "Read-only preservation diagnosis of the six PREVIOUS saved relative_phase_v1 profiles. No source fit/compiler call, new C1 training, generated listening audio, C/default/driver/room change.",
+  "measurement": "Normal-rank feature space BEFORE scalar quantile decode. Empirical globally-centered lag covariance uses N-lag denominator; model uses its exact stationary independent AR1 law. Lags are sequence steps, not asserted physical milliseconds.",
+  "lags": [0, 1, 2, 4, 8],
+  "controls_before_actual": ["independent_AR1", "directed_rotation", "same_static_different_temporal", "row_reversal", "row_permutation", "signed_three_component_closure", "silent_feature", "all_zero"],
+  "analysis": ["full feature matrices and four feature-group blocks", "static trace retained in shared PCA (feature variance, not acoustic energy)", "shared-dynamics, residual-dynamics and omitted shared/residual cross-lag signed errors", "observed antisymmetric lag covariance and symmetric-model lower bound"],
+  "storage": "Compute every full matrix at original dimensions and bind its SHA256. Save exact compact score/PC/residual/model factors, not duplicate gigabytes of deterministically reproducible dense matrices. Independent audit regenerates and hashes all producer matrices before a separate full-entry reduction.",
+  "verification": "Full independent sequential-einsum covariance and loading sums, selected scalar fsum entries, direct known matrix state-space powers, full published table verification; linear comparison gate2e-11 on lag0 covariance scale. Frozen-series ratios separately verified. Controls must not rely on training a real source.",
+  "interpretation": "Model stationary lag covariance is symmetric at every lag; this diagnoses representation limits only. Forty linked rows have finite-sample/nonstationary/clock/extraction effects. Normal-rank feature weighting is not acoustic/audibility weighting. No claim of physical causal direction, source mechanics or electronic-timbre cause.",
+  "preserve": "Original124/101/151 and206/144/196/131 bindings;670C-H82voices3F2/index/hearings/defaults/moving35/one driver/owned/takes/source-room-render. Original failures and newC1 source/statistical eligibility FALSE unchanged.",
+  "not_allowed": "No consumed-case restart/refit, remaining4batch, source timelines or PCM loops, blind rank/rho search/HFcloud/jitter, push/download/newhearing/unchangedCTest/Cpromotion.800MCPS planning900allocation unmeasured.",
+  "full_goal": "ACTIVE: natural autonomous joint-LR five-layer engine system, multiple actual engines/full states, modular C and separate future physical7.1.4."
+}
