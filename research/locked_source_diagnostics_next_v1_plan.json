@@ -1,17 +1,20 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "MCPS-only no synthesisprogress. Current clock_native_bridge_v1 actually completes22known/independent math+bindings BEFORE one sameFirstMid physicalC1/PL16+32 and all-query/dense/FIR/spectra/LR/MS/time audit;94250publishednumbers bitwiseverified/twoPNGactuallyviewed. Two sparse-known convergence failures retained, real allsix-band convergenceTRUE. This is source-FIR information preservation, not rawfullband or sustained qualification.",
+  "previous_turn": "MCPS-only verification, no synthesis progress. Current explicit C1 source adapter makes concrete progress: known complete4/QR and22k samplingknown4 independently verified BEFORE ONE FirstLate input. All18430C1 queries/FIR/sinc/input calibration independently pass; original COMPLETE prepare_audit1 FAIL retained at RHS2.5585096571438003e-12>2e-12. Fourknown-before-real2x2 rounding diagnosis finds exact prescribed-order+frozenlegacy RHS, not a complete audit repair. Physical9884frames/2049bins/LR/MS/time and240CSVnumbers verified, PNG viewed. No fitting/runtime promotion.",
   "native_clock_bridge_diagnostic": {
     "state": "ACTUAL TERMINAL known1/known_audit1/known_bindings1, real1/audit1/bindings1, review1/review_audit1 complete in declared scopes; no live jobs",
     "study": "E:/VehicleSoundLab/references/analysis/clock_native_bridge_v1",
     "native_frames": 10372,
     "clock_nodes": 89,
     "source_grid_queries": 18434,
-    "C1_vs_source_FIR_wave_NRMSE": 8.959712112298191e-8,
-    "C1_native16_32_wave_NRMSE": 3.297010353139216e-9,
-    "C1_native16_32_worst_band_NRMSE": 4.9982747069703995e-6,
+    "C1_vs_source_FIR_wave_NRMSE": 8.959712112298191e-08,
+    "C1_native16_32_wave_NRMSE": 3.297010353139216e-09,
+    "C1_native16_32_worst_band_NRMSE": 4.9982747069703995e-06,
     "real_both_clocks_all_six_band_convergence": true,
-    "retained_known_convergence_failures": ["near_Nyquist", "pure_stopband"],
+    "retained_known_convergence_failures": [
+      "near_Nyquist",
+      "pure_stopband"
+    ],
     "raw_highest_band_NRMSE": 0.9911127137443282,
     "source_FIR_information_preserved_not_raw_fullband": true,
     "original_fidelity_qualified": false,
@@ -19,7 +22,7 @@
     "next": "research/clock_native_bridge_next_v1_plan.json: explicit newC1source-method adapter and bandwidth metadata, original legacy metric_target/calibration exact, full known objective/adjoint/normal/QR proofs before any actual preparation; no refit firstEarly/firstMid or remaining4batch"
   },
   "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
-  "live": "NONE: clock_native_bridge known/math/bindings/real/math/bindings/review/audit all terminal; old fitting jobs remain terminal/no restart. Latest next action is new explicit C1 input adapter, not another native render or source fit.",
+  "live": "NONE: all c1_source_adapter_v1 known/sampling/preparation/inputaudit/roundingdiagnosis/bandwidth stages terminal. Complete real audit remains failed. Old fits remain terminal; no newfits/restarts/reprepare.",
   "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
   "native_after_terminal": "All five native/virtual diagnostics remain complete. New locked_source_error_v1 real1/audit1/review1/review_audit1 actually complete for SAME firstMid288/74nodes. SourceFIR10..14k component.0114524 dominates gridfit6.6567e-5; sixpair maincomponent sensitivitymax3.112e-7. Originalvirtualhighest.442484>.02 remainsFALSE; strictlyabovecentre holds18.6389percent referenceweightedmass and99.8679percent error, unweightedreference3.77e-16FS2. No relabelled gates or sustained/C qualification.",
   "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
@@ -196,5 +199,16 @@
     ],
     "first_bindings1_failure_retained": true,
     "next_plan": "research/clock_c1_next_v1_plan.json"
+  },
+  "c1_source_adapter_preparation": {
+    "state": "All stages terminal; prepare_audit1 FAILED, input-only and bandwidth audits PASS; no livejobs or realfit",
+    "study": "E:/VehicleSoundLab/references/analysis/c1_source_adapter_v1",
+    "label": "F3 Fifth First Late",
+    "explicit_new_source_identity": "vsl.c1-22k-source-preparation/1",
+    "input_only_verified": true,
+    "complete_preparation_verified": false,
+    "source_fidelity_not_evaluated": true,
+    "eligible_for_later_source_statistics": false,
+    "next": "research/c1_source_adapter_next_v1_plan.json: separate known-first complete declared-rounded equations/QR/positive-context audit then SAME prepared actual capture; retain originalSciPy failure, no fit launch"
   }
 }
