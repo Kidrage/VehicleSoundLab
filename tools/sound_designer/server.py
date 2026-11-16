@@ -45,6 +45,8 @@ def serve(repo,root,port):
                     return self.json(workspace.projects())
                 if path.startswith('/api/parameters/'):
                     return self.json(workspace.parameters(path.rsplit('/',1)[-1]))
+                if path.startswith('/api/history/'):
+                    return self.json(workspace.revisions(path.rsplit('/',1)[-1]))
                 if path.startswith('/api/project/'):
                     return self.json(workspace.view(path.rsplit('/',1)[-1]))
                 if path.startswith('/files/'):
@@ -59,7 +61,7 @@ def serve(repo,root,port):
                 self.send_header('Content-Length',str(size));self.send_header('Cache-Control','no-store');self.end_headers()
                 with target.open('rb') as stream:
                     while chunk:=stream.read(1024**2): self.wfile.write(chunk)
-            except (BrokenPipeError,ConnectionResetError): pass
+            except ConnectionError: pass
             except Exception as error: self.json(dict(error=str(error)),400)
         def do_POST(self):
             try:
@@ -69,7 +71,8 @@ def serve(repo,root,port):
                 if not 0<length<=68*1024**2: raise ValueError('请求过大或为空')
                 data=json.loads(self.rfile.read(length))
                 actions={'/api/new':workspace.create,'/api/analyze':workspace.analyze,
-                         '/api/compile':workspace.compile,'/api/render':workspace.render,'/api/save':workspace.save_design}
+                         '/api/compile':workspace.compile,'/api/render':workspace.render,'/api/save':workspace.save_design,
+                         '/api/restore':workspace.restore}
                 if self.path=='/api/driver':
                     exe=repo/'build-catalog-local-v1/bin/Release/VslAtlasMonitor.exe'
                     if not exe.exists(): raise ValueError('请先构建原生音色目录')
@@ -77,6 +80,7 @@ def serve(repo,root,port):
                     return self.json(dict(opened=True))
                 if self.path not in actions: return self.json(dict(error='接口不存在'),404)
                 self.json(dict(job=submit(actions[self.path],data)),202)
+            except ConnectionError: pass
             except Exception as error: self.json(dict(error=str(error)),400)
 
     server=ThreadingHTTPServer(('127.0.0.1',port),Handler)

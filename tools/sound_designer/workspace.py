@@ -14,6 +14,7 @@ from research_archive_v1 import sha
 from sound_dna.profile import compile_file
 from .analysis import measure
 from . import models
+from . import history
 from .render import preview
 
 
@@ -47,6 +48,9 @@ class Workspace:
         p['id']=identity
         p['has_audio']=bool(p.get('audio_file') and (folder/p['audio_file']).is_file())
         p['reference_url']=f'/files/{identity}/reference.wav' if (folder/'reference.wav').exists() else None
+        origin=p.get('model_reference')
+        p['reference_matches_model']=(origin['reference_sha256']==p.get('reference_sha256') and
+            abs(origin['root_hz']-((p.get('analysis') or {}).get('root_hz') or 0))<1e-6) if origin and p['has_audio'] else None
         return p
 
     def parameters(self,identity):
@@ -54,7 +58,27 @@ class Workspace:
         return dict(schema='vsl.sound-designer-preset/1',name=p['name'],root_hz=base,
                     base_profile={k:v.tolist() for k,v in m.items()},params=p['params'],
                     rows=p['rows'],rho=p['rho'],state=p['state'],viewpoint=p['viewpoint'],source=p['source'],
-                    analysis=p['analysis'],selection=p.get('selection'))
+                    analysis=p['analysis'],selection=p.get('selection'),model_reference=p.get('model_reference'))
+
+    def revisions(self,identity):
+        return history.listing(self.folder(identity))
+
+    def restore(self,data):
+        folder,current=self.load(data['id']);value=history.read(folder,data['revision'])
+        p=value['project']
+        temporary=folder/'restore.pending.model'
+        if value['base_model'] is not None:
+            temporary.write_text(value['base_model'],encoding='ascii',newline='\n')
+            models.read(temporary)
+        history.checkpoint(folder,current,'恢复前')
+        if p.get('audio_file'):
+            source=folder/p['audio_file'];info=sf.info(source);start,stop=p['selection']
+            audio,rate=sf.read(source,start=round(start*info.samplerate),stop=round(stop*info.samplerate),always_2d=True)
+            sf.write(folder/'reference.wav',audio,rate,subtype='FLOAT')
+        if value['base_model'] is not None: temporary.replace(folder/'base.model')
+        elif (folder/'base.model').exists(): (folder/'base.model').unlink()
+        self.save(folder,p);history.checkpoint(folder,p,'恢复版本')
+        return self.view(data['id'])
 
     def projects(self):
         result=[]
@@ -68,9 +92,11 @@ class Workspace:
         ctl=models.controls(data.get('params',{}))
         rows=data.get('rows');rho=data.get('rho')
         models.edit(m,base,ctl,rows,rho)
+        history.checkpoint(folder,p,'编辑前')
         p.update(name=str(data.get('name',p['name']))[:100],params=ctl,rows=rows,rho=rho,
                  state=data.get('state',p['state']),viewpoint=data.get('viewpoint',p['viewpoint']),preview_stale=True)
         self.save(folder,p)
+        history.checkpoint(folder,p,'保存参数')
         return self.view(data['id'])
 
     def create(self,data):
@@ -93,6 +119,7 @@ class Workspace:
             p.update(name=str(package.get('name','导入音色'))[:100],params=models.controls(package['params']),
                      rows=package.get('rows'),rho=package.get('rho'),source=package.get('source'),
                      analysis=package.get('analysis'),selection=package.get('selection'),
+                     model_reference=package.get('model_reference'),
                      state=package.get('state','custom'),viewpoint=package.get('viewpoint','unspecified'))
             models.edit(m,base,p['params'],p['rows'],p['rho'])
         else:
@@ -108,10 +135,12 @@ class Workspace:
             audio,rate=sf.read(source,always_2d=True)
             p['analysis']=measure(audio,rate)
             sf.write(folder/'reference.wav',audio,rate,subtype='FLOAT')
+            p['reference_sha256']=sha(folder/'reference.wav')
             p['source']=dict(kind='audio',file=source.name,original_name=str(data['filename']),sha256=sha(source))
             p['name']=Path(str(data['filename'])).stem[:100]
             p['selection']=[0,len(audio)/rate]
         self.save(folder,p)
+        history.checkpoint(folder,p,'新建工程')
         return self.view(identity)
 
     def analyze(self,data):
@@ -125,10 +154,16 @@ class Workspace:
         root=data.get('root_hz')
         if root is not None and (not np.isfinite(float(root)) or not 5<=float(root)<=1000):
             raise ValueError('声学基频需在5–1000Hz内')
+        if data.get('draft') and (folder/'base.model').exists():
+            self.save_design(dict(data['draft'],id=data['id']))
+            folder,p=self.load(data['id'])
+        history.checkpoint(folder,p,'分析前')
         p['analysis']=measure(audio,rate,root)
         p['selection']=[start,stop]
         sf.write(folder/'reference.wav',audio,rate,subtype='FLOAT')
+        p['reference_sha256']=sha(folder/'reference.wav')
         self.save(folder,p)
+        history.checkpoint(folder,p,'参考分析')
         return self.view(data['id'])
 
     def compile(self,data):
@@ -136,6 +171,8 @@ class Workspace:
         if not p.get('audio_file'): raise ValueError('请先导入参考片段')
         if not np.isfinite(root) or not 5<=root<=1000: raise ValueError('请确认有效声学基频')
         if not p['analysis']: raise ValueError('请先分析参考音频')
+        if abs(root-(p['analysis']['root_hz'] or 0))>1e-6:
+            raise ValueError('基频与当前分析不一致，请先按新基频重新分析选区')
         if not p['analysis']['stable_candidate'] and not data.get('allow_unstable',False):
             raise ValueError('片段音高有变化或周期证据不足。缩短选区，或明确选择“固定音色草稿”；分析表仍可导出。')
         h,k=data['harmonics'],data['components']
@@ -143,12 +180,16 @@ class Workspace:
             raise ValueError('阶次1–320，联动成分0–16')
         output=folder/('compile_'+uuid.uuid4().hex)
         info=compile_file(folder/'reference.wav',output,root,p['name'],h,k)
+        history.checkpoint(folder,p,'提取前')
         shutil.copy2(output/'voice.model',folder/'base.model')
         p.update(build=info,state=str(data.get('state','steady')),viewpoint=str(data.get('viewpoint','exterior')),
                  rows=None,rho=None,params=dict(models.DEFAULTS),
                  model_scope='固定音色统计参数；音高轨迹另存于分析，不自动转换成驾驶RPM映射')
+        p['model_reference']=dict(reference_sha256=sha(folder/'reference.wav'),source=p['source'],
+                                  selection=p.get('selection'),root_hz=root,analysis=p['analysis'])
         p.pop('last_version',None);p.pop('render_report',None)
         self.save(folder,p)
+        history.checkpoint(folder,p,'提取参数')
         return self.view(data['id'])
 
     def render(self,data):
@@ -163,18 +204,23 @@ class Workspace:
                      root_hz=base,base_profile={k:v.tolist() for k,v in original.items()},params=ctl,
                      rows=rows,rho=rho,state=data.get('state',p['state']),viewpoint=data.get('viewpoint',p['viewpoint']),
                      source=p['source'],selection=p.get('selection'),analysis=p['analysis'],render_report=report,
+                     model_reference=p.get('model_reference'),reference_matches_model=self.view(data['id'])['reference_matches_model'],
                      gain_policy='gain_db已写入voice.model系数；调用C时使用unity gain，避免重复增益')
         (output/'parameters.json').write_text(json.dumps(package,ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
         table=models.describe(edited,base)['rows']
         with (output/'harmonics.csv').open('w',encoding='utf-8-sig',newline='') as stream:
             writer=csv.DictWriter(stream,fieldnames=list(table[0]));writer.writeheader();writer.writerows(table)
-        (output/'analysis.json').write_text(json.dumps(p.get('analysis'),ensure_ascii=False,indent=2),encoding='utf-8')
+        analysis=dict(schema='vsl.sound-designer-analysis/1',reference=p.get('analysis'),selection=p.get('selection'),
+                      model_reference=p.get('model_reference'),reference_matches_model=package['reference_matches_model'])
+        (output/'analysis.json').write_text(json.dumps(analysis,ensure_ascii=False,indent=2),encoding='utf-8')
         with zipfile.ZipFile(output/'sound-design.zip','w',zipfile.ZIP_DEFLATED) as archive:
             for name in ('voice.model','parameters.json','harmonics.csv','analysis.json','preview.wav'):
                 archive.write(output/name,name)
+        history.checkpoint(folder,p,'试听前')
         p.update(name=package['name'],state=package['state'],viewpoint=package['viewpoint'],
                  params=ctl,rows=rows,rho=rho,last_version=version,render_report=report,preview_stale=False)
         self.save(folder,p)
+        history.checkpoint(folder,p,'生成试听')
         return dict(project=self.view(data['id']),audio=f'/files/{data["id"]}/{version}/preview.wav',
                     bundle=f'/files/{data["id"]}/{version}/sound-design.zip',
                     parameters=f'/files/{data["id"]}/{version}/parameters.json',

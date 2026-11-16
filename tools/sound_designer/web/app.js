@@ -23,11 +23,12 @@ function markDirty(){if(project?.model){$('renderInfo').textContent='参数已�
 function readouts(){for(const [id,,,,step,unit] of definitions)$(id+'Value').textContent=Number($(id).value).toFixed(step>=.5?1:id==='pitch'?3:2)+unit;}
 function params(){const p={};for(const [id] of definitions)p[id]=Number($(id).value);p.seconds=Number($('seconds').value);p.seed=Number($('seed').value);return p;}
 function setParams(p){for(const [id] of definitions)$(id).value=p[id];$('seconds').value=p.seconds;$('seed').value=p.seed;readouts();chart();}
-function lock(value){busy=value;document.querySelectorAll('button').forEach(b=>b.disabled=value);if(!value){$('compile').disabled=!project?.has_audio;$('analyze').disabled=!project?.has_audio;$('render').disabled=!project?.model;$('save').disabled=!project?.model;$('analysisDownload').disabled=!project?.analysis;}}
+function lock(value){busy=value;document.querySelectorAll('button').forEach(b=>b.disabled=value);if(!value){$('compile').disabled=!project?.has_audio;$('analyze').disabled=!project?.has_audio;$('render').disabled=!project?.model;$('save').disabled=!project?.model;$('analysisDownload').disabled=!project?.analysis;}window.DesignAudition.updateButtons(value);}
 async function request(url,data){const response=await fetch(url,data===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const value=await response.json();if(!response.ok)throw Error(value.error||'请求失败');return value;}
 async function task(url,data,message){lock(true);notice(message,false,true);try{const {job}=await request(url,data);for(;;){await new Promise(r=>setTimeout(r,350));const value=await request('/api/job/'+job);if(value.status==='error')throw Error(value.error);if(value.status==='done')return value.result;}}finally{lock(false);}}
 async function guarded(action){try{await action();}catch(error){notice(error.message,true);}}
 function load(p){
+ document.querySelectorAll('audio').forEach(audio=>audio.pause());
  project=p;editedRows=p.rows?structuredClone(p.rows):null;editedRho=p.rho?structuredClone(p.rho):null;
  $('name').value=p.name;$('projectLabel').textContent=p.name;$('state').value=p.state;$('viewpoint').value=p.viewpoint;
  if(p.reference_url){$('reference').src=p.reference_url+'?v='+Date.now();}else{$('reference').removeAttribute('src');$('reference').load();}
@@ -44,6 +45,8 @@ function load(p){
  if(p.last_version){const prefix=`/files/${p.id}/${p.last_version}/`;setAudio({audio:prefix+'preview.wav',bundle:prefix+'sound-design.zip',parameters:prefix+'parameters.json',csv:prefix+'harmonics.csv'},p.render_report);}
  else{$('preview').removeAttribute('src');$('preview').load();$('downloads').replaceChildren();$('renderInfo').textContent='由现有C算法生成';}
  if(p.preview_stale)$('renderInfo').textContent='参数已保存 · 已有试听对应上次生成';
+ $('sourceBinding').textContent=p.reference_matches_model===false?'参考选区或基频已改变。当前试听仍用上次提取模型；重新提取后才更新声源。':p.reference_matches_model===true?'当前参考与模型提取来源一致。':p.has_audio&&p.model?'旧模型尚无参考绑定记录，重新提取后建立。':'';
+ window.DesignHistory.refresh(p).catch(error=>notice(error.message,true));window.DesignAudition.update(p);
 }
 async function refreshProjects(){const list=await request('/api/projects');$('projects').replaceChildren();const placeholder=document.createElement('option');placeholder.value='';placeholder.textContent='选择已保存的音色…';$('projects').append(placeholder);for(const p of list){const option=document.createElement('option');option.value=p.id;option.textContent=p.name+' · '+p.id.slice(0,6);$('projects').append(option);}$('projects').value=project?.id||'';}
 $('projects').onchange=()=>guarded(async()=>{if(busy||!$('projects').value)return;load(await request('/api/project/'+$('projects').value));notice('已打开本地工程。');});
@@ -64,12 +67,14 @@ $('root').onchange=()=>rootBudget();$('harmonics').onchange=()=>rootBudget();
 async function openPreset(preset){load(await task('/api/new',{preset},'载入现有参数…'));notice('已载入。调整参数后点击“生成 C 试听”。');}
 document.querySelectorAll('[data-preset]').forEach(b=>b.onclick=()=>guarded(()=>openPreset(b.dataset.preset)));
 $('audioFile').onchange=()=>guarded(async()=>{const file=$('audioFile').files[0];if(!file)return;if(file.size>48*1024**2)throw Error('请选择小于48MB的片段');const encoded=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',')[1]);reader.onerror=reject;reader.readAsDataURL(file);});load(await task('/api/new',{filename:file.name,audio:encoded,state:$('state').value,viewpoint:$('viewpoint').value},'分析片段：波形、频谱、周期与左右关系…'));rootBudget(true);notice('已分析。请确认声学基频，再提取参数。');});
-function analysisRequest(){return {id:project.id,start:Number($('start').value),end:Number($('end').value),root_hz:Number($('root').value)||null};}
+function designDraft(){return {name:$('name').value,params:params(),rows:editedRows,rho:editedRho,state:$('state').value,viewpoint:$('viewpoint').value};}
+async function savePending(){if(project?.model)await task('/api/save',{id:project.id,...designDraft()},'保留当前调参…');}
+function analysisRequest(){return {id:project.id,start:Number($('start').value),end:Number($('end').value),root_hz:Number($('root').value)||null,draft:project?.model?designDraft():null};}
 $('analyze').onclick=()=>guarded(async()=>{load(await task('/api/analyze',analysisRequest(),'重新分析选区…'));notice('选区分析完成。');});
 $('compile').onclick=()=>guarded(async()=>{const state=$('state').value,viewpoint=$('viewpoint').value;const h=Number($('harmonics').value),k=Number($('components').value),root=Number($('root').value);load(await task('/api/analyze',analysisRequest(),'确认选区与基频…'));load(await task('/api/compile',{id:project.id,root_hz:root,harmonics:h,components:k,allow_unstable:$('allowUnstable').checked,state,viewpoint},'提取统计参数：平均声线、联动与逐分音变化…'));notice('参数已生成。接下来可调音、试听和导出。');});
 function setAudio(result,report){$('preview').src=result.audio+'?v='+Date.now();$('preview').loop=$('loop').checked;$('downloads').replaceChildren();for(const [label,key] of [['工程与C模型 ZIP','bundle'],['完整参数 JSON','parameters'],['分音表 CSV','csv']]){const a=document.createElement('a');a.textContent=label;a.href=result[key];a.download='';$('downloads').append(a);}if(report)$('renderInfo').textContent=`峰值 ${report.peak.toFixed(3)} · ${report.rms_dbfs.toFixed(1)} dBFS`;
  if(report?.overload)notice('预览峰值超过1，请降低输出增益后重新生成。',true);}
-$('render').onclick=()=>guarded(async()=>{const result=await task('/api/render',{id:project.id,name:$('name').value,params:params(),rows:editedRows,rho:editedRho,state:$('state').value,viewpoint:$('viewpoint').value},'现有C声源正在生成试听并保存参数版本…');load(result.project);setAudio(result,result.project.render_report);if(!result.project.render_report.overload)notice('试听已生成，当前参数已保存。点击播放器开始监听。');});
+$('render').onclick=()=>guarded(async()=>{const result=await task('/api/render',{id:project.id,name:$('name').value,params:params(),rows:editedRows,rho:editedRho,state:$('state').value,viewpoint:$('viewpoint').value},'现有C声源正在生成试听并保存参数版本…');load(result.project);if(!result.project.render_report.overload)notice('试听已生成，当前参数已保存。点击播放器开始监听。');});
 $('save').onclick=()=>guarded(async()=>{load(await task('/api/save',{id:project.id,name:$('name').value,params:params(),rows:editedRows,rho:editedRho,state:$('state').value,viewpoint:$('viewpoint').value},'保存参数…'));notice('参数已保存，可从“打开本地工程”重新载入。');});
 for(const id of ['name','state','viewpoint','seconds','seed'])$(id).addEventListener('change',markDirty);
 $('loop').onchange=()=>{$('preview').loop=$('loop').checked;};
@@ -81,5 +86,7 @@ $('loadJson').onclick=()=>guarded(async()=>{if(!project?.model)throw Error('请�
 $('applyJson').onclick=()=>guarded(async()=>{load(await task('/api/new',{package:JSON.parse($('jsonEditor').value)},'校验完整参数…'));notice('完整参数验证通过。已创建独立音色。');});
 $('analysisDownload').onclick=()=>{if(!project?.analysis)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({name:project.name,state:$('state').value,viewpoint:$('viewpoint').value,source:project.source,selection:project.selection,...project.analysis},null,2)],{type:'application/json'}));a.download='voice-analysis.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 $('driver').onclick=()=>guarded(async()=>{await request('/api/driver',{});notice('已打开现有原生驾驶窗口；该窗口独立控制驾驶与声层。');});
+window.DesignAudition.setup(notice);
+window.DesignHistory.setup({getProject:()=>project,request,task,load,notice,guarded,savePending});
 window.addEventListener('resize',()=>{drawWave();chart();});
 guarded(async()=>{const config=await request('/api/config');$('storage').textContent='本地工程目录 · '+config.root;const previous=new URLSearchParams(location.search).get('project')||localStorage.getItem('vslSoundProject');if(previous){try{load(await request('/api/project/'+previous));notice('已恢复上次音色工程。');return;}catch{}}await openPreset('v10');});
