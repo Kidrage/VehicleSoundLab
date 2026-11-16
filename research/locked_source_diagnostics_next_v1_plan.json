@@ -1,8 +1,8 @@
 {
   "full_goal": "ACTIVE: autonomous controllable sustained naturalHF/jointLR/multiple actual engines/all video-derived driving states, V6DNA/BODY/DETAIL/EVENT/AUX, one driver, modularC/owned/takes, separate stereo/futurephysical7.1.4. Fitted trajectories remain diagnostics, never engine loops.",
-  "previous_turn": "Progress: committed11c1a94 actual long-kernel weak-tail transfer study. Current turn independently rebuilds frozen clock, qualifies manufactured slope-jump/smooth controls, decomposes all actual nodes and publishes all22527/18432 rows: progress.",
+  "previous_turn": "MCPS-only no synthesisprogress. Current clock_c1_v1 known-first and one realcounterfactual/independent allquery spectra+LR+MS+time/publication/bindings2 complete: actual progress. Initial reduced-norm binary-equality bindings1 failure retained; no source or originalgate changes.",
   "terminal_diagnostics": "ACTUALLY COMPLETE: separate locked_source_guard_v1 real1 math verification; original cross-operator and terminal failures retained. Existing known3/guard6/stereo12 and five native reference bridges remain. Actual virtual_real1, virtual_real_audit1, virtual_real_stereo_audit1, native_real1 and native_real_audit1 all terminal PASS in their declared verification scopes. Full288/74nodes, native10372frames; solverTRUE, sourcefidelityFALSE,16/32convergenceTRUE, laterstatisticseligibilityFALSE. Original five tiny-line crossFFT failures remainFALSE.",
-  "live": "NONE: all original jobs remain terminal/no restart. clock_structure_v1 known/audit then real/audit, review/audit and supplementalbindings all terminal EXIT0.",
+  "live": "NONE: current C1 known/audit/real/audit/review/audit/bindings2 all terminal PASS; all old fit jobs terminal/no restart.",
   "after_terminal": "Complete equations/independent scalar waveform/declared saved-wave metrics/histories/bothgaps/resources now independently verified in locked_source_guard_v1/real1/report.json. Cross-operator normalized comparison stillFAIL1.026e-10>2e-12; originalfailedreports remain. Do not claim certified crossFFTbound or relabel originalfailure. Known-first measurement1 + known2 with3nonzero controls/5corrupt-capture rejections executed before actual audit; known1 rejection-location assertionfailure retained.",
   "native_after_terminal": "All five native/virtual diagnostics remain complete. New locked_source_error_v1 real1/audit1/review1/review_audit1 actually complete for SAME firstMid288/74nodes. SourceFIR10..14k component.0114524 dominates gridfit6.6567e-5; sixpair maincomponent sensitivitymax3.112e-7. Originalvirtualhighest.442484>.02 remainsFALSE; strictlyabovecentre holds18.6389percent referenceweightedmass and99.8679percent error, unweightedreference3.77e-16FS2. No relabelled gates or sustained/C qualification.",
   "protected": "Original captures/factors/failures and124specsources101inputs/151conditionalbindings unchanged;670C-H82voices3F2/Cindex/moving35/default/one-driver/owned/takes/room/hearings unchanged. No push/download/newhearing/unchanged68CTest or fittedtimeline/PCM engine loops. Full V6fivebuses/autonomousjointLR/multiengine/fullstates/independentphysical7.1.4 remains ACTIVE.",
@@ -75,7 +75,7 @@
     "native16_32_convergence_passed": true,
     "eligible_for_later_source_statistics": false,
     "not_same_segment_as_prior_firstEarly": true,
-    "next": "Same-case signed budget, weak-tail source query and clock structure DONE. Continue research/clock_structure_next_v1_plan.json: known-first node-preserving C1 Hermite diagnosis, then at most one explicitly counterfactual actual source reference. Keep original target/clock/failed source admission."
+    "next": "Current C1 diagnostic complete. Next isolated known-first C1 forward/inverse native48k bridge with fresh16vs32/fullLR/MS/time; no original clocktarget replacement/refit/remaining4fit launch."
   },
   "same_case_error_budget": {
     "state": "TERMINAL PASS in declared diagnostic scopes; sourcefidelity/statisticseligibility remain FALSE",
@@ -160,5 +160,24 @@
     "source_fidelity_qualified": false,
     "eligible_for_later_source_statistics": false,
     "next_plan": "research/clock_structure_next_v1_plan.json"
+  },
+  "clock_c1_diagnostic": {
+    "state": "ACTUAL terminal PASS in diagnostic scopes; original target/fidelityFALSE unchanged",
+    "study": "E:/VehicleSoundLab/references/analysis/clock_c1_v1",
+    "observed_nodes": 89,
+    "queries": 18434,
+    "all_nodes_preserved_exactly": true,
+    "clock_change_max_seconds": 3.2505059266441094e-07,
+    "above_centre_power_fraction": 0.0014967380617987,
+    "main_power_change_max_dB": 0.0006770755204943184,
+    "main_coherence_difference_max": 8.8007806989162e-05,
+    "weak_band_spatial_time_changes_retained": true,
+    "publication_numeric_values": 84903,
+    "figures_actually_viewed": [
+      "clock.png",
+      "spectra_stereo.png"
+    ],
+    "first_bindings1_failure_retained": true,
+    "next_plan": "research/clock_c1_next_v1_plan.json"
   }
 }
