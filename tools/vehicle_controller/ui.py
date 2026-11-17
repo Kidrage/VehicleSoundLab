@@ -35,7 +35,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V18');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V19');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)
@@ -98,7 +98,7 @@ class Window:
         ttk.Label(row,text='手动挡位').pack(side='left',padx=(18,5))
         gear_box=ttk.Spinbox(row,from_=0,to=7,width=4,textvariable=self.gear,state='readonly');gear_box.pack(side='left')
         self.slider(left,'gain','输出电平')
-        backfire_box=ttk.Checkbutton(left,text='允许收油回火（电平见音色页）',variable=self.backfire)
+        backfire_box=ttk.Checkbutton(left,text='允许收油回火（单次试听与电平见独立事件页）',variable=self.backfire)
         backfire_box.pack(anchor='w',pady=8)
         self.drive_widgets=(mode_box,auto_box,gear_box,backfire_box,self.start_button,self.ignition_button,self.demo_button)
         ttk.Label(left,text='W 油门 · S 刹车 · Q / E 换挡\n释放按键后回落；窗口失焦释放键盘踏板。',style='Hint.TLabel').pack(anchor='w',pady=12)
@@ -141,7 +141,7 @@ class Window:
         ttk.Button(buttons,text='回放行程',command=self.open_take).pack(side='left',padx=8)
         ttk.Label(self.signals,textvariable=self.status,style='Hint.TLabel',wraplength=850).pack(anchor='w')
 
-    def load(self,selection,dna_bank=None):
+    def load(self,selection,dna_bank=None,with_event_defaults=True):
         if self.running():return
         bank=dna.validate(dna_bank)
         control,features=self.bridge.initial(selection,bank)
@@ -152,6 +152,11 @@ class Window:
         if self.policy_panel:self.policy_panel.close()
         self.startup_response=deepcopy(self.bridge.startup_defaults)
         self.event_policy=deepcopy(self.bridge.event_policy_defaults)
+        if with_event_defaults:
+            self.event_overrides={}
+            if self.bridge.path.resolve()==(self.repo/'build-vehicle-source-v16/bin/Release/vsl_source_bridge.dll').resolve():
+                from .afterfire import defaults as afterfire_defaults
+                control,self.event_overrides,self.event_policy=afterfire_defaults(self.bridge,selection,control,features,bank)
         self.control,self.features=control,features;self.loaded=selection;self.preset_box.current(selection)
         if bank:self.preset.set('工作台 DNA · '+bank['name'])
         self.dna_bank=bank;self.dna_status.set(dna.coverage(bank))
@@ -234,7 +239,7 @@ class Window:
         if self.dna_panel:self.dna_panel.close()
         if replay:
             self.event_overrides=deepcopy(replay['event_overrides'])
-            self.load(replay['catalog']['id'],replay.get('dna_bank'));value=replay['initial']
+            self.load(replay['catalog']['id'],replay.get('dna_bank'),with_event_defaults=False);value=replay['initial']
             self.startup_response=startup.validate(replay['startup_response'])
             self.event_policy=policy.configuration(self.bridge,replay.get('event_policy'))
             self.display_controls(value,MODES[3] if value['input']['source'] else {0:MODES[1],1:MODES[0],2:MODES[2]}[value['mode']])
@@ -395,8 +400,8 @@ def run(repo,workspace,ready_file=None,library=None):
         import os
         take.save(ready_file,dict(schema='vsl.source-controller-ready/1',pid=os.getpid(),title=root.title(),
             bridge_sha256=window.bridge.sha256,voices_sha256=window.bridge.voices_sha256,
-            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=18,preset_schema=9,take_schema=10,
+            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=19,preset_schema=9,take_schema=10,
             event_bank_sha256=window.bridge.event_bank_sha256,abi=window.bridge.abi(),
             geometry=root.geometry(),source_only=True,listening=window.running(),visible=bool(root.winfo_viewable()),
-            startup_flare_available=bool(window.features&128)))
+            startup_flare_available=bool(window.features&128),afterfire_available=bool(window.event_panel.available_mask()&8)))
     root.mainloop()

@@ -1,0 +1,600 @@
+{
+  "schema": "vsl.procedural-afterfire-delivery/1",
+  "date": "2026-11-17",
+  "base_commit": "81f47028b173252b2b9896bb383e9e96fc07dc4b",
+  "evidence": "E:\\VehicleSoundLab\\references\\analysis\\procedural_afterfire_v1\\verification2",
+  "local_delivery": "E:\\VehicleSoundLab\\references\\analysis\\procedural_afterfire_v1\\delivery1",
+  "verification": {
+    "schema": "vsl.procedural-afterfire/1",
+    "bridge_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "no_runtime_C_changes": true,
+    "source_design": "engineered candidate, not extracted from an afterfire recording",
+    "automatic_starts": [
+      {
+        "id": 1,
+        "frame": 219504,
+        "requested_frame": 219504,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 2,
+        "frame": 363264,
+        "requested_frame": 363264,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 3,
+        "frame": 370813,
+        "requested_frame": 370813,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "policy_stats": {
+      "opportunities": 2,
+      "bursts_attempted": 2,
+      "unavailable": 0,
+      "probability_skips": 0,
+      "cooldown_skips": 0
+    },
+    "continuous_19_channels_exact": true,
+    "delta_vs_events_error": 1.4901161193847656e-08,
+    "partition_and_replay_exact": true,
+    "backfire_permission_silences": true,
+    "manual_three_fresh_events": true,
+    "peak": 0.185099795460701,
+    "existing_pool": {
+      "voices": 4,
+      "max_modes_per_voice": 12,
+      "max_bands_per_voice": 4
+    },
+    "preset": {
+      "modes": 4,
+      "bands": 2,
+      "seconds": 0.22,
+      "extra_fir": false,
+      "room": false
+    },
+    "ui": true,
+    "pc_cost": {
+      "seconds_per_run": 2.0,
+      "repeats": 3,
+      "scenes": {
+        "no_event": {
+          "pairs": [
+            {
+              "False": {
+                "cpu_ms": 546.875,
+                "wall_ms": 550.3202,
+                "peak_voices": 0
+              },
+              "True": {
+                "cpu_ms": 531.25,
+                "wall_ms": 548.5778,
+                "peak_voices": 0
+              }
+            },
+            {
+              "True": {
+                "cpu_ms": 562.5,
+                "wall_ms": 557.0617,
+                "peak_voices": 0
+              },
+              "False": {
+                "cpu_ms": 546.875,
+                "wall_ms": 560.7072,
+                "peak_voices": 0
+              }
+            },
+            {
+              "False": {
+                "cpu_ms": 546.875,
+                "wall_ms": 547.6875,
+                "peak_voices": 0
+              },
+              "True": {
+                "cpu_ms": 531.25,
+                "wall_ms": 555.7102,
+                "peak_voices": 0
+              }
+            }
+          ],
+          "median_base_cpu_ms": 546.875,
+          "median_candidate_cpu_ms": 531.25,
+          "median_cpu_change_percent": -2.857142857142858
+        },
+        "four_active": {
+          "pairs": [
+            {
+              "False": {
+                "cpu_ms": 531.25,
+                "wall_ms": 555.3156,
+                "peak_voices": 0
+              },
+              "True": {
+                "cpu_ms": 546.875,
+                "wall_ms": 566.9231,
+                "peak_voices": 4
+              }
+            },
+            {
+              "True": {
+                "cpu_ms": 531.25,
+                "wall_ms": 571.1079,
+                "peak_voices": 4
+              },
+              "False": {
+                "cpu_ms": 546.875,
+                "wall_ms": 569.0668,
+                "peak_voices": 0
+              }
+            },
+            {
+              "False": {
+                "cpu_ms": 562.5,
+                "wall_ms": 564.3664,
+                "peak_voices": 0
+              },
+              "True": {
+                "cpu_ms": 562.5,
+                "wall_ms": 572.4266,
+                "peak_voices": 4
+              }
+            }
+          ],
+          "median_base_cpu_ms": 546.875,
+          "median_candidate_cpu_ms": 546.875,
+          "median_cpu_change_percent": 0.0
+        }
+      },
+      "caveat": "PC C-boundary CPU timing only, includes call/copy overhead; not ADI MCPS or proof of zero added cycles."
+    },
+    "manual_button": true,
+    "old_v18_take_preserved": true,
+    "take_replay": {
+      "frame": 16320,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.9857357660909997,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 20,
+      "event_active": 0,
+      "event_started": 1,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 1,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.2542299999959141,
+      "pc_max_block_load": 0.4097200000160228,
+      "replay": true,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 0,
+        "start_id": 0,
+        "gear": 1,
+        "automatic": 1,
+        "backfire": 1,
+        "rpm": 850.0,
+        "load": 0.0,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 0.0,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 0.5,
+        "catch_gain": 0.0,
+        "idle_mix": 1.0,
+        "idle_motion": 0.5,
+        "idle_detail": 1.0,
+        "input": {
+          "source": 0,
+          "valid": 4,
+          "sequence": 20,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 1,
+          "manual_type": 3,
+          "manual_sequence": 1,
+          "gain": 0.7,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            0.0,
+            0.0,
+            0.0,
+            0.8,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "dna_unified": 1,
+        "dna": {
+          "line": 1.0,
+          "air": 1.0,
+          "motion": 0.5,
+          "idle_blend": 1.0,
+          "air_continuity": 0.35,
+          "pitch_follow": 0.25,
+          "line_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "air_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "automatic_app": {
+      "frame": 210720,
+      "rpm": 6444.148342604736,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": -0.11144676242236715,
+      "root_hz": 54.0808497196108,
+      "gain": 0.25,
+      "idle_weight": 7.418899037492565e-12,
+      "gear": 0,
+      "lifecycle": 4,
+      "operating": 4,
+      "coverage": 1,
+      "shifts": 0,
+      "overruns": 1,
+      "legacy_hits": 4,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 95,
+      "event_active": 0,
+      "event_started": 1,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 1,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.2714399999831585,
+      "pc_max_block_load": 0.5469499999890104,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 1,
+        "bursts_attempted": 1,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "catalog_isolation": true
+  },
+  "cycle_measurement": {
+    "schema": "vsl.afterfire-cost-cycles/1",
+    "bridge_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "seconds_per_run": 3.0,
+    "repeats": 5,
+    "scenes": {
+      "no_event": {
+        "pairs": [
+          {
+            "False": {
+              "thread_cycles": 1949954945,
+              "wall_ms": 830.2509,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 1979767628,
+              "wall_ms": 840.6615,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": 1.528890863680954
+          },
+          {
+            "True": {
+              "thread_cycles": 1947166547,
+              "wall_ms": 826.906,
+              "peak_voices": 0
+            },
+            "False": {
+              "thread_cycles": 1952083656,
+              "wall_ms": 826.5598,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": -0.251890280669409
+          },
+          {
+            "False": {
+              "thread_cycles": 1975253791,
+              "wall_ms": 831.9787,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 1987421867,
+              "wall_ms": 843.6688,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": 0.6160259534973456
+          },
+          {
+            "True": {
+              "thread_cycles": 1955732977,
+              "wall_ms": 834.1948,
+              "peak_voices": 0
+            },
+            "False": {
+              "thread_cycles": 1959221645,
+              "wall_ms": 831.0999,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": -0.1780639780549209
+          },
+          {
+            "False": {
+              "thread_cycles": 1959870405,
+              "wall_ms": 831.1342,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 1966185206,
+              "wall_ms": 834.6966,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": 0.3222050286534106
+          }
+        ],
+        "median_paired_cycle_change_percent": 0.3222050286534106,
+        "min_paired_percent": -0.251890280669409,
+        "max_paired_percent": 1.528890863680954
+      },
+      "four_active": {
+        "pairs": [
+          {
+            "False": {
+              "thread_cycles": 1984470942,
+              "wall_ms": 841.9232,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 1996002041,
+              "wall_ms": 841.5204,
+              "peak_voices": 4
+            },
+            "cycle_change_percent": 0.5810666589241453
+          },
+          {
+            "True": {
+              "thread_cycles": 2007109122,
+              "wall_ms": 843.7638,
+              "peak_voices": 4
+            },
+            "False": {
+              "thread_cycles": 1952060649,
+              "wall_ms": 823.0759,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": 2.8200185802731204
+          },
+          {
+            "False": {
+              "thread_cycles": 1981121835,
+              "wall_ms": 840.0045,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 2034509625,
+              "wall_ms": 861.085,
+              "peak_voices": 4
+            },
+            "cycle_change_percent": 2.694826186699406
+          },
+          {
+            "True": {
+              "thread_cycles": 2032100069,
+              "wall_ms": 857.8072,
+              "peak_voices": 4
+            },
+            "False": {
+              "thread_cycles": 1952674117,
+              "wall_ms": 821.1323,
+              "peak_voices": 0
+            },
+            "cycle_change_percent": 4.067547744322364
+          },
+          {
+            "False": {
+              "thread_cycles": 2007197176,
+              "wall_ms": 843.6146,
+              "peak_voices": 0
+            },
+            "True": {
+              "thread_cycles": 2034409219,
+              "wall_ms": 852.8353,
+              "peak_voices": 4
+            },
+            "cycle_change_percent": 1.3557234598261525
+          }
+        ],
+        "median_paired_cycle_change_percent": 2.694826186699406,
+        "min_paired_percent": 0.5810666589241453,
+        "max_paired_percent": 4.067547744322364
+      }
+    },
+    "notes": "Windows QueryThreadCycleTime around existing C bridge calls; frequency, scheduling and copy/call costs remain. Four-active is a saturation probe, not normal 1–2-pop duty. No hard realtime, zero-cycle or ADI MCPS guarantee."
+  },
+  "full_flow": {
+    "bridge_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "seconds": 36,
+    "afterfire_starts": [
+      {
+        "id": 1,
+        "frame": 915504,
+        "requested_frame": 915504,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "stats": {
+      "opportunities": 1,
+      "bursts_attempted": 1,
+      "unavailable": 0,
+      "probability_skips": 0,
+      "cooldown_skips": 0
+    },
+    "end_lifecycle": 0
+  },
+  "header_msvc_syntax_checked": true,
+  "source_delta": {
+    "AGENTS.md": {
+      "sha256": "e2c7453830046e2b4d698850a63b77144529aeaf07386ad23ef87ea6d4d85aee",
+      "bytes": 518029
+    },
+    "README.md": {
+      "sha256": "330614ced0756b42971da6223ac47615181608562fa2bc4e9bf30396e38f6428",
+      "bytes": 3280
+    },
+    "handoff/AppV19程序回火与成本边界.md": {
+      "sha256": "99807af24b689316ef0260322d903db6f7e5f41e942b91d5756edc92bff8c0fc",
+      "bytes": 6039
+    },
+    "handoff/统一系统主线.svg": {
+      "sha256": "59b0be03952c1f567ebefa2be5845f07d696ece6d2c2bfb87035cf22fe79506a",
+      "bytes": 5336
+    },
+    "handoff/统一系统报告.md": {
+      "sha256": "d3c9e71bad6f82fd54d2a5b5ee390403a3e90f4427183e4dae2c677427292462",
+      "bytes": 18147
+    },
+    "presets/events/procedural_afterfire_v1.h": {
+      "sha256": "4f71c5fc05a8e1f6f6cf179bf065f4828e74ea39e147197e4922f58036db5734",
+      "bytes": 732
+    },
+    "presets/events/procedural_afterfire_v1.json": {
+      "sha256": "ea159f5ebc36ea02759bdc93f8db473259ee0c61469f5f96063ee69f81571c17",
+      "bytes": 1189
+    },
+    "tools/measure_afterfire_cost_v1.py": {
+      "sha256": "8e65fbf44cf1ded4e3a6b2254aa9c188ebaa38db144c7b1621dd0320b65521b2",
+      "bytes": 3391
+    },
+    "tools/vehicle_controller/afterfire.py": {
+      "sha256": "89e217170421e537fcc718cc402fdb35fbfd0c0b04c78e98226db5a434d5669a",
+      "bytes": 1111
+    },
+    "tools/vehicle_controller/events.py": {
+      "sha256": "03c864b379b7fcacb78a36b1011a01537182c0ceea0d18430015988960fed21e",
+      "bytes": 10955
+    },
+    "tools/vehicle_controller/ui.py": {
+      "sha256": "5262e8806956b4b6a9dd74bad0c2913a1d2d41081b74cefac03b604325741d10",
+      "bytes": 29476
+    },
+    "tools/verify_procedural_afterfire_v1.py": {
+      "sha256": "db0c413ae1161bfa43c5b9ba54148d541abf20e16b87b5aec216974fbec66cb0",
+      "bytes": 11078
+    }
+  }
+}

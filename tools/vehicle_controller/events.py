@@ -18,19 +18,19 @@ class EventPanel:
         self.model_info=tk.StringVar();self.info_kind=1
         left=ttk.Frame(parent);left.pack(side='left',fill='both',expand=True,padx=(0,22))
         right=ttk.Frame(parent);right.pack(side='left',fill='both',expand=True)
-        ttk.Checkbutton(left,text='启用独立事件候选',variable=self.enabled).pack(anchor='w',pady=(0,12))
+        ttk.Checkbutton(left,text='启用独立事件',variable=self.enabled).pack(anchor='w',pady=(0,12))
         imports=ttk.Frame(left);imports.pack(fill='x',pady=(0,10))
         ttk.Button(imports,text='导入事件 JSON',command=self.import_profile).pack(side='left')
         ttk.Button(imports,text='恢复默认事件',command=self.reset_profiles).pack(side='left',padx=6)
         self.remove_rejected=ttk.Button(left,text='移除已排除的参考',command=self.clear_rejected)
         self.remove_rejected.pack(anchor='w',pady=(0,10))
         ttk.Button(left,text='触发配方…',command=window.edit_event_policy).pack(anchor='w',pady=(0,10))
-        ttk.Label(left,text='启动变调在驾驶页调整。\n本页用于其他独立事件与历史候选。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
+        ttk.Label(left,text='启动变调在驾驶页调整。\n回火：可点右侧单次试听，或加速后快速收油。\n转速与油门条件合格后触发，怠速松油不会回火。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
         window.slider(left,'event_gain','事件总电平',0,2)
         window.slider(left,'event_pitch','事件音高',.5,2)
         window.slider(left,'event_decay','事件时长／衰减',.25,4)
         window.slider(left,'event_texture','程序纹理比例',0,2)
-        ttk.Label(left,text='音高、时长和纹理用于下一次触发；电平可以实时调。\n启动早期纹理的单次试听持续约 0.8 秒，之后淡出。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=14)
+        ttk.Label(left,text='音高调低更沉，时长加大让尾声更长，纹理增加爆裂感。\n音高／时长／纹理用于下一次触发；电平可以实时调。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=14)
         ttk.Label(left,textvariable=self.status,style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=8)
         ttk.Label(right,text='单次试听与分类型电平',font=('Microsoft YaHei UI',11,'bold')).pack(anchor='w',pady=(0,10))
         for kind,name in enumerate(NAMES):
@@ -44,10 +44,11 @@ class EventPanel:
             slider=ttk.Scale(row,variable=variable,from_=0,to=2.6 if window.bridge.tuning_headroom else 2);slider.pack(side='left',fill='x',expand=True,padx=8)
             ttk.Label(row,textvariable=readout,width=6,anchor='e').pack(side='right');window.widgets[key]=(slider,0)
         ttk.Label(right,textvariable=self.model_info,style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(12,0))
-        ttk.Label(left,text='目前为素材驱动的试听候选，尚未获得音色验收。\n没有参数的类型保持禁用，不替换成通用爆音。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=12)
+        ttk.Label(left,text='回火为程序设计候选，其他事件按已导入配方发声。\n音色仍需听评；没有参数的类型保持禁用。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=12)
 
     def load(self,control):
         w=self.window;c=control['events'];self.enabled.set(c['enabled'])
+        if self.available_mask()&8 and not self.available_mask()&(1<<self.info_kind):self.info_kind=3
         for key in ('gain','pitch','decay','texture'):w.vars['event_'+key].set(c[key])
         for kind in range(7):
             key='event_level_'+str(kind);w.vars[key].set(c['levels'][kind])
@@ -84,6 +85,9 @@ class EventPanel:
         if review:
             self.model_info.set(str(doc.get('name',NAMES[kind]))[:90]+'\n已排除该参考：'+review['reason'])
             return
+        if doc.get('design_method')=='procedural':
+            self.model_info.set(doc['name']+'\n纯合成设计候选，尚未经实车回火录音标定或听评验收。\n连发次数、间隔与冷却在“触发配方”中调整。')
+            return
         try:
             job=doc.get('source_job',{});scope=normalize(job.get('analysis_scope'))
             band=(f"分析范围 {scope['low_hz']/1000:g}–{scope['high_hz']/1000:g} kHz；只作该频带补充。"
@@ -111,7 +115,12 @@ class EventPanel:
     def reset_profiles(self):
         w=self.window
         if w.running():w.message.set('请先停止监听，再恢复默认事件。');return
-        w.event_overrides={};self.refresh();w.message.set('已恢复编译事件库；自定义参数已从当前工程移除。')
+        from .afterfire import defaults
+        control,overrides,event_policy=defaults(w.bridge,w.loaded,w.control,w.features,w.dna_bank)
+        w.event_overrides=overrides
+        if overrides:w.control['events']=control['events'];w.event_policy=event_policy;self.load(w.control)
+        else:self.refresh()
+        w.message.set('已恢复程序回火候选及触发配方。' if overrides else '已恢复编译事件库；自定义参数已从当前工程移除。')
 
     def clear_rejected(self):
         w=self.window
