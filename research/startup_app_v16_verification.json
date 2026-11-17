@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.startup-app-audition/1",
+  "bridge_sha256": "a8b990c1a689f471edc2b1fd147dd3ba948d0259bff97b6735a998b1203cda50",
+  "cases": {
+    "new": {
+      "reference_max_error": 1.4210854715202004e-14,
+      "partition_exact": true,
+      "stems_recombine_exact": true,
+      "peak": 0.185099795460701
+    },
+    "previous": {
+      "reference_max_error": 1.4210854715202004e-14,
+      "partition_exact": true,
+      "stems_recombine_exact": true,
+      "peak": 0.185099795460701
+    }
+  },
+  "other_actions_identical": true,
+  "no_numpy_in_app": true,
+  "native_bad_timeline_rejected": true,
+  "ui": true,
+  "early_stop_passed": true,
+  "fake_take_refused": true,
+  "buttons_visible": true,
+  "final_local_evidence": "E:\\VehicleSoundLab\\references\\analysis\\startup_app_v16\\verification2\\verification.json",
+  "human_timbre_accepted": false,
+  "main_dll_sha256": "a8b990c1a689f471edc2b1fd147dd3ba948d0259bff97b6735a998b1203cda50",
+  "audition_dll_sha256": "a6194ac22ecade4039bf3ac80fa1e8a47ad8ed3b079e4e5a0188c291d67bb2a2",
+  "remote_branch": "research/coherent-low-v1"
+}

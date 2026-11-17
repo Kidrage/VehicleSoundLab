@@ -32,7 +32,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V15');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V16');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)
@@ -60,6 +60,11 @@ class Window:
         self.event_panel=EventPanel(self,self.events_page)
         from .startup_sound_panel import StartupSoundPanel
         self.startup_sound=StartupSoundPanel(self,self.drive_side)
+        audition=ttk.LabelFrame(self.drive_main,text='启动 A/B · 7秒',padding=10);audition.pack(fill='x',pady=(10,0))
+        buttons=ttk.Frame(audition);buttons.pack(fill='x')
+        self.new_startup_button=ttk.Button(buttons,text='新启动试听',command=lambda:self.audition_startup(False));self.new_startup_button.pack(side='left',fill='x',expand=True)
+        self.old_startup_button=ttk.Button(buttons,text='旧 V3 对照',command=lambda:self.audition_startup(True));self.old_startup_button.pack(side='left',fill='x',expand=True,padx=(8,0))
+        ttk.Label(audition,text='相同接火与怠速，仅切换拖转。固定试听电平，可静音／停止。',style='Hint.TLabel',wraplength=650).pack(anchor='w',pady=(6,0))
         ttk.Label(outer,textvariable=self.message,style='Hint.TLabel',wraplength=950).pack(fill='x',pady=(14,0))
         root.bind('<KeyPress>',self.key_down);root.bind('<KeyRelease>',self.key_up);root.bind('<FocusOut>',self.focus_out)
         root.bind('<Unmap>',lambda event:self.release_keyboard() if event.widget is root else None)
@@ -75,6 +80,7 @@ class Window:
     def _build_drive(self):
         left=ttk.Frame(self.drive);left.pack(side='left',fill='both',expand=True,padx=(0,24));right=ttk.Frame(self.drive,width=260);right.pack(side='right',fill='y')
         self.drive_side=right
+        self.drive_main=left
         actions=ttk.Frame(left);actions.pack(fill='x',pady=(0,18))
         self.start_button=ttk.Button(actions,text='启动',style='Primary.TButton',command=self.start);self.start_button.pack(side='left')
         self.ignition_button=ttk.Button(actions,text='熄火',command=self.ignition_off)
@@ -106,7 +112,7 @@ class Window:
         from .dna_tone_panel import DnaTonePanel
         bar=ttk.Frame(self.dna_page);bar.pack(fill='x',pady=(0,12))
         self.dna_button=ttk.Button(bar,text='导入／编辑声纹…',command=self.edit_dna);self.dna_button.pack(side='left')
-        ttk.Combobox(bar,textvariable=self.solo,values=STEMS,state='readonly',width=21).pack(side='right')
+        self.dna_solo_box=ttk.Combobox(bar,textvariable=self.solo,values=STEMS,state='readonly',width=21);self.dna_solo_box.pack(side='right')
         ttk.Label(bar,textvariable=self.dna_status,style='Hint.TLabel',wraplength=680).pack(side='left',padx=16)
         body=ttk.Frame(self.dna_page);body.pack(fill='both',expand=True);self.dna_tone=DnaTonePanel(body)
         columns=[]
@@ -117,7 +123,7 @@ class Window:
             for key,label,feature in rows:self.slider(group,key,label,feature=feature,row_padding=2)
         ttk.Label(columns[0],text='先在 DNA 配方页调声线与纹理，再调低频。\n本页细节源送入同一个 DNA 纹理总线。',wraplength=390,style='Hint.TLabel').pack(anchor='w',pady=8)
         ttk.Label(columns[0],text='独奏监听',font=('Microsoft YaHei UI',11,'bold')).pack(anchor='w',pady=(12,8))
-        ttk.Combobox(columns[0],textvariable=self.solo,values=STEMS,state='readonly').pack(fill='x')
+        self.aux_solo_box=ttk.Combobox(columns[0],textvariable=self.solo,values=STEMS,state='readonly');self.aux_solo_box.pack(fill='x')
         self.mute_box=ttk.Checkbutton(columns[0],text='监听静音（生成继续）',variable=self.muted)
         self.mute_box.pack(anchor='w',pady=10)
         ttk.Label(columns[0],text='旧回火／起动机是历史工程声源；新事件音色正在另行制作。',wraplength=350,style='Hint.TLabel').pack(anchor='w',pady=8)
@@ -250,6 +256,15 @@ class Window:
             self.message.set('36秒完整流程：启动 → 怠速 → 加速 → 收油 → 制动降挡 → 停车怠速 → 熄火。采用播放前的音色设置；播放中可切换独奏。')
         except Exception as error:self.message.set(str(error))
 
+    def audition_startup(self,previous=False):
+        if self.running():self.message.set('请先停止监听，再试听启动对照。');return
+        if self.loaded!=0 or self.dna_bank is not None:self.message.set('请先选择默认 V10 音色，再试听它的启动对照。');return
+        from .startup_audition import AuditionHost
+        self.last_error=None;self.pending_start=False;self.replaying=True;self.keys.clear();self.solo.set(STEMS[0])
+        self.host=AuditionHost(self.bridge,previous);self.host.update(self.control,muted=bool(self.muted.get()))
+        self.host.start();self.preset_box.state(['disabled'])
+        self.message.set(('旧 V3' if previous else '新持续 OSC')+'启动试听：重点听0.81–1.91秒拖转；4.01秒交接到同一DNA怠速。')
+
     def ignition_off(self):
         self.pending_start=False
         if not self.replaying:self.control['ignition']=0;self.vars['throttle'].set(0);self.vars['brake'].set(0);self.keys.clear()
@@ -292,6 +307,9 @@ class Window:
         try:
             self.dna_tone.refresh(self.features)
             self.startup_sound.refresh()
+            audition_active=self.running() and getattr(self.host,'is_audition',False)
+            for button in (self.new_startup_button,self.old_startup_button):button.state(['disabled'] if self.running() or self.loaded!=0 or self.dna_bank is not None else ['!disabled'])
+            for box in (self.dna_solo_box,self.aux_solo_box):box.state(['disabled'] if audition_active else ['!disabled','readonly'])
             self.startup_button.state(['disabled'] if self.running() else ['!disabled'])
             self.dna_button.state(['disabled'] if self.running() else ['!disabled'])
             if 'w' in self.keys:self.vars['throttle'].set(min(1,self.vars['throttle'].get()+.07))
@@ -360,6 +378,7 @@ class Window:
         except Exception as error:self.message.set(str(error))
 
     def save_take(self):
+        if getattr(self.host,'is_audition',False):self.message.set('本次是固定配方启动A/B试听；驾驶行程请用“启动”录制。');return
         if not self.host or not self.host.take_snapshot()['frames']:self.message.set('请先启动并生成一段声音。');return
         self.workspace.mkdir(parents=True,exist_ok=True)
         path=self.workspace/(datetime.now().strftime('%Y%m%d_%H%M%S_%f')+'.vsltake.json')
@@ -389,7 +408,8 @@ def run(repo,workspace,ready_file=None,library=None):
         import os
         take.save(ready_file,dict(schema='vsl.source-controller-ready/1',pid=os.getpid(),title=root.title(),
             bridge_sha256=window.bridge.sha256,voices_sha256=window.bridge.voices_sha256,
-            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=15,preset_schema=9,take_schema=10,
+            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=16,preset_schema=9,take_schema=10,
             event_bank_sha256=window.bridge.event_bank_sha256,abi=window.bridge.abi(),
-            geometry=root.geometry(),source_only=True,listening=window.running()))
+            geometry=root.geometry(),source_only=True,listening=window.running(),visible=bool(root.winfo_viewable()),
+            startup_audition_available=(Path(repo)/'build-startup-character-v5/Release/startup_character_bridge.dll').is_file()))
     root.mainloop()

@@ -1,4 +1,5 @@
 #include "startup_character/voice.h"
+#include "startup_character/scene.h"
 #include "spectral_texture/io.h"
 #include <stdlib.h>
 #ifdef _WIN32
@@ -15,6 +16,8 @@ SC_API void *sc_open(const char *a,const char *b,const char *c,const double *env
 done:free(p);return v;
 }
 SC_API void sc_close(void *v){sc_destroy(v);}
+SC_API unsigned sc_timeline_size(void){return sizeof(ScTimeline);}
+SC_API int sc_scene_process(ScVoice *const v[3],const ScTimeline *t,uint64_t frame,const float *base,float *out,float *parts,unsigned frames){return sc_mix_scene(v,t,frame,base,out,parts,frames);}
 SC_API int sc_configure_rotation(void *v,const CkProfile *p,uint64_t seed){return sc_set_rotation(v,p,seed);}
 SC_API int sc_configure_ridges(void *v,const ScRidge *r,unsigned count,unsigned frames,double variation,double pitch,uint64_t seed){
     return sc_set_ridges(v,r,count,frames,variation,pitch,seed);
