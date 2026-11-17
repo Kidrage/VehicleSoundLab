@@ -12,14 +12,13 @@ from . import take,startup,event_policy as policy,dna_bank as dna
 from .events import EventPanel
 
 MODES=('踏板驾驶','固定转速','自动演示','外部信号占位')
-LIFE=('熄火','就绪','拖转','接火','运行','停机')
+LIFE=('熄火','就绪','准备','接火','运行','停机')
 OPERATING=('怠速','空载补油','加速','巡航','收油','换挡切断','换挡恢复','降挡补油')
 STEMS=('完整干声','DNA · 进气感声线','低频轰鸣','DNA · 空气纹理','旧进气模板','机械','旧排气空气模板','道路','风','启动纹理','接火补充','附加声源','旧事件／起动机',
        '事件声部 1','事件声部 2','事件声部 3','事件声部 4')
 TONE=(
     ('低频与 DNA 细节源',(('detail','主声线幅度细节',0),('low_mix','互补低频分轨',0),('coherent_low_gain','相干低频',2),
                       ('resonant_gain','共振纹理源',4),('residual_gain','残差纹理源',1))),
-    ('独立启停层',(('startup_gain','启动纹理',8),('catch_gain','接火补充',16),('legacy_event_gain','旧事件／起动机',0))),
     ('辅助模板 · 默认关闭',(('intake_gain','旧进气模板',0),('mechanical_gain','机械',0),('air_gain','旧排气空气模板',0),
                 ('road_gain','道路',0),('wind_gain','风',0))))
 
@@ -32,7 +31,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V16');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V17');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)
@@ -60,12 +59,8 @@ class Window:
         self.event_panel=EventPanel(self,self.events_page)
         from .startup_sound_panel import StartupSoundPanel
         self.startup_sound=StartupSoundPanel(self,self.drive_side)
-        audition=ttk.LabelFrame(self.drive_main,text='启动 A/B · 7秒',padding=10);audition.pack(fill='x',pady=(10,0))
-        buttons=ttk.Frame(audition);buttons.pack(fill='x')
-        self.new_startup_button=ttk.Button(buttons,text='新启动试听',command=lambda:self.audition_startup(False));self.new_startup_button.pack(side='left',fill='x',expand=True)
-        self.old_startup_button=ttk.Button(buttons,text='旧 V3 对照',command=lambda:self.audition_startup(True));self.old_startup_button.pack(side='left',fill='x',expand=True,padx=(8,0))
-        ttk.Label(audition,text='相同接火与怠速，仅切换拖转。固定试听电平，可静音／停止。',style='Hint.TLabel',wraplength=650).pack(anchor='w',pady=(6,0))
-        ttk.Label(outer,textvariable=self.message,style='Hint.TLabel',wraplength=950).pack(fill='x',pady=(14,0))
+        self.footer=ttk.Label(outer,textvariable=self.message,style='Hint.TLabel',wraplength=950)
+        self.footer.pack(side='bottom',fill='x',pady=(12,0),before=self.tabs)
         root.bind('<KeyPress>',self.key_down);root.bind('<KeyRelease>',self.key_up);root.bind('<FocusOut>',self.focus_out)
         root.bind('<Unmap>',lambda event:self.release_keyboard() if event.widget is root else None)
         root.protocol('WM_DELETE_WINDOW',self.close);self.load(0);root.after(40,self.tick)
@@ -126,7 +121,7 @@ class Window:
         self.aux_solo_box=ttk.Combobox(columns[0],textvariable=self.solo,values=STEMS,state='readonly');self.aux_solo_box.pack(fill='x')
         self.mute_box=ttk.Checkbutton(columns[0],text='监听静音（生成继续）',variable=self.muted)
         self.mute_box.pack(anchor='w',pady=10)
-        ttk.Label(columns[0],text='旧回火／起动机是历史工程声源；新事件音色正在另行制作。',wraplength=350,style='Hint.TLabel').pack(anchor='w',pady=8)
+        ttk.Label(columns[0],text='启动在驾驶页调电平；独立事件在对应页调整。',wraplength=350,style='Hint.TLabel').pack(anchor='w',pady=8)
 
     def _build_signals(self):
         self.slider(self.signals,'external_speed','输入速度 · km/h',0,360)
@@ -147,7 +142,7 @@ class Window:
         control,features=self.bridge.initial(selection,bank)
         if selection==0 and bank is None:
             from .startup_sound import defaults
-            control=defaults(control,self.bridge.event_available_mask)
+            control=defaults(control,self.bridge.event_available_mask,features)
         if self.startup_panel:self.startup_panel.close()
         if self.policy_panel:self.policy_panel.close()
         self.startup_response=deepcopy(self.bridge.startup_defaults)
@@ -256,15 +251,6 @@ class Window:
             self.message.set('36秒完整流程：启动 → 怠速 → 加速 → 收油 → 制动降挡 → 停车怠速 → 熄火。采用播放前的音色设置；播放中可切换独奏。')
         except Exception as error:self.message.set(str(error))
 
-    def audition_startup(self,previous=False):
-        if self.running():self.message.set('请先停止监听，再试听启动对照。');return
-        if self.loaded!=0 or self.dna_bank is not None:self.message.set('请先选择默认 V10 音色，再试听它的启动对照。');return
-        from .startup_audition import AuditionHost
-        self.last_error=None;self.pending_start=False;self.replaying=True;self.keys.clear();self.solo.set(STEMS[0])
-        self.host=AuditionHost(self.bridge,previous);self.host.update(self.control,muted=bool(self.muted.get()))
-        self.host.start();self.preset_box.state(['disabled'])
-        self.message.set(('旧 V3' if previous else '新持续 OSC')+'启动试听：重点听0.81–1.91秒拖转；4.01秒交接到同一DNA怠速。')
-
     def ignition_off(self):
         self.pending_start=False
         if not self.replaying:self.control['ignition']=0;self.vars['throttle'].set(0);self.vars['brake'].set(0);self.keys.clear()
@@ -307,9 +293,6 @@ class Window:
         try:
             self.dna_tone.refresh(self.features)
             self.startup_sound.refresh()
-            audition_active=self.running() and getattr(self.host,'is_audition',False)
-            for button in (self.new_startup_button,self.old_startup_button):button.state(['disabled'] if self.running() or self.loaded!=0 or self.dna_bank is not None else ['!disabled'])
-            for box in (self.dna_solo_box,self.aux_solo_box):box.state(['disabled'] if audition_active else ['!disabled','readonly'])
             self.startup_button.state(['disabled'] if self.running() else ['!disabled'])
             self.dna_button.state(['disabled'] if self.running() else ['!disabled'])
             if 'w' in self.keys:self.vars['throttle'].set(min(1,self.vars['throttle'].get()+.07))
@@ -374,11 +357,10 @@ class Window:
             self.event_policy=policy.configuration(self.bridge,value.get('event_policy'))
             if value['schema']=='vsl.source-controller-preset/1':value['control']['events']=deepcopy(self.control['events'])
             self.display_controls(value['control'],value['mode'])
-            self.message.set('参数已载入。' if value['control']['events']['enabled'] else '参数已载入；此配方关闭了独立事件，驾驶页可启用启动音。')
+            self.message.set('参数已载入。')
         except Exception as error:self.message.set(str(error))
 
     def save_take(self):
-        if getattr(self.host,'is_audition',False):self.message.set('本次是固定配方启动A/B试听；驾驶行程请用“启动”录制。');return
         if not self.host or not self.host.take_snapshot()['frames']:self.message.set('请先启动并生成一段声音。');return
         self.workspace.mkdir(parents=True,exist_ok=True)
         path=self.workspace/(datetime.now().strftime('%Y%m%d_%H%M%S_%f')+'.vsltake.json')
@@ -408,8 +390,8 @@ def run(repo,workspace,ready_file=None,library=None):
         import os
         take.save(ready_file,dict(schema='vsl.source-controller-ready/1',pid=os.getpid(),title=root.title(),
             bridge_sha256=window.bridge.sha256,voices_sha256=window.bridge.voices_sha256,
-            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=16,preset_schema=9,take_schema=10,
+            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=17,preset_schema=9,take_schema=10,
             event_bank_sha256=window.bridge.event_bank_sha256,abi=window.bridge.abi(),
             geometry=root.geometry(),source_only=True,listening=window.running(),visible=bool(root.winfo_viewable()),
-            startup_audition_available=(Path(repo)/'build-startup-character-v5/Release/startup_character_bridge.dll').is_file()))
+            startup_flare_available=bool(window.features&128)))
     root.mainloop()

@@ -2,6 +2,7 @@
 #include "atlas_drive/source_process.h"
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 VsEngine *vs_engine_create(const VsAssets *assets,const VsControl *control) {
     VsEngine *s;AdControl adopted;AdConfig config;
     if(!assets||!control||!vi_valid(&control->input)||!ec_control_valid(&control->events)||
@@ -22,16 +23,22 @@ VsEngine *vs_engine_create(const VsAssets *assets,const VsControl *control) {
     if(!vs_state_init(s)){vs_engine_destroy(s);return NULL;}
     return s;
 }
-void vs_engine_destroy(VsEngine *s){if(s){dch_destroy(s->character);ad_render_dispose(&s->generator);free(s);}}
+void vs_engine_destroy(VsEngine *s){if(s){sfl_destroy(s->flare);dch_destroy(s->character);ad_render_dispose(&s->generator);free(s);}}
 int vs_engine_set(VsEngine *s,const VsControl *control) {
     AdControl adopted;ViState input;EcState events;
     if(!s||!control||!vi_valid(&control->input)||control->dna_unified!=s->dna_unified||!dch_control_valid(&control->dna))return 0;
     input=s->input;if(!vi_accept(&input,&control->input,s->generator.frame))return 0;
     events=s->event_control;if(!ec_set(&events,&control->events,s->generator.frame))return 0;
-    vs_control_to_atlas(control,&adopted);
+    if(s->flare){
+        VsControl dry=*control;
+        if(!isfinite(control->startup_gain)||control->startup_gain<0||control->startup_gain>2||
+           control->catch_gain!=0||control->legacy_event_gain!=0)return 0;
+        dry.startup_gain=dry.catch_gain=dry.legacy_event_gain=0;
+        vs_control_to_atlas(&dry,&adopted);
+    }else vs_control_to_atlas(control,&adopted);
     if(!ad_render_set(&s->generator,&adopted))return 0;
     if(s->character&&!dch_set(s->character,&control->dna))return 0;
-    s->adopted=adopted;s->input=input;s->event_control=events;return 1;
+    s->adopted=adopted;s->input=input;s->event_control=events;s->flare_gain=control->startup_gain;return 1;
 }
 int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames) {
     AdCapture c={0};double gain;AdSourceDriver driver={s,vs_drive_step,vs_events_sample,NULL};
@@ -46,6 +53,7 @@ int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames) {
     gain=s->generator.gain;
     s->event_block_frame=s->generator.frame;
     if(!ad_source_process_controlled(&s->generator,s->monitor,frames,&c,&driver))return 0;
+    vs_flare_apply(s,frames,gain);
     if(!s->character)s->idle_weight=s->telemetry[frames-1].idle_weight;
     vs_stems_write(s,out,frames,gain);return 1;
 }

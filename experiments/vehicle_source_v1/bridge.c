@@ -51,6 +51,12 @@ VsbHandle *vsl_source_open(int selection) {
     dc_preset_destroy(preset);
     if(h->assets)h->engine=vs_engine_create(h->assets,&h->control);
     if(!h->engine){vsl_source_close(h);return NULL;}
+    if(selection==DC_FINE_IDLE){
+        if(!vs_engine_enable_start_flare(h->engine)){vsl_source_close(h);return NULL;}
+        h->capabilities=(h->capabilities&~(VSB_STARTUP|VSB_CATCH))|VSB_START_FLARE;
+        h->control.startup_gain=1;h->control.catch_gain=h->control.legacy_event_gain=0;
+        if(!vs_engine_set(h->engine,&h->control)){vsl_source_close(h);return NULL;}
+    }
     return h;
 }
 void vsl_source_close(VsbHandle *h) {

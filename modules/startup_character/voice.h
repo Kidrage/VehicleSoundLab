@@ -11,6 +11,8 @@ typedef struct ScVoice ScVoice;
 ScVoice *sc_create(const SfProfile *profiles[SC_STAGES],const double envelope[SC_POINTS],
                    double variation,uint64_t seed);
 void sc_destroy(ScVoice *voice);
+/* RT-safe finite-gesture rearm; keeps spectral/RNG state, clears onset gate. */
+void sc_rearm(ScVoice *voice);
 int sc_set_rotation(ScVoice *voice,const CkProfile *profile,uint64_t seed);
 /* Optional sparse moving OSC core, configured before processing. */
 int sc_set_ridges(ScVoice *voice,const ScRidge *ridges,unsigned count,unsigned reference_frames,double variation,double pitch,uint64_t seed);

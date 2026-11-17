@@ -80,7 +80,7 @@ def pack(data):
 class Bridge:
     def __init__(self,repo,library=None):
         self.repo=Path(repo)
-        self.path=Path(library) if library is not None else Path(repo)/'build-vehicle-source-v14/bin/Release/vsl_source_bridge.dll'
+        self.path=Path(library) if library is not None else Path(repo)/'build-vehicle-source-v15/bin/Release/vsl_source_bridge.dll'
         if not self.path.is_file(): raise RuntimeError('请先运行 Build-Vehicle-Source.ps1')
         self.lib=C.CDLL(str(self.path))
         signatures={

@@ -68,6 +68,10 @@ int vs_engine_event_profile(VsEngine *engine,unsigned type,const EsProfile *prof
    Governs the unique driver and startup/catch texture progress, not event modes. */
 int vs_engine_startup_set(VsEngine *engine,const VsStartupResponse *response);
 int vs_engine_startup_get(const VsEngine *engine,VsStartupResponse *response);
+/* Non-RT catalog opt-in, before frame zero. Enables the selected catch-only
+   model; startup_gain controls it, old starter/catch sources are replaced.
+   Other catalogs/authored DNA never inherit these V10 parameters implicitly. */
+int vs_engine_enable_start_flare(VsEngine *engine);
 /* Non-RT, before frame 0 and before queued/manual events; copied per engine. */
 int vs_engine_event_policy_set(VsEngine *engine,const VsEventPolicy *policy);
 int vs_engine_event_policy_get(const VsEngine *engine,VsEventPolicy *policy);

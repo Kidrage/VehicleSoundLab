@@ -4,6 +4,7 @@
 #include "atlas_take/assets.h"
 #include "state_dna/api.h"
 #include "dna_character/voice.h"
+#include "startup_flare/voice.h"
 struct VsStateAssets;
 struct VsAssets {AtAssets owned;struct VsStateAssets *states;};
 struct VsEngine {
@@ -14,6 +15,10 @@ struct VsEngine {
     double idle_weight;
     int dna_unified;
     DchVoice *character;
+    SflVoice *flare;
+    double flare_gain;
+    float flare_audio[VS_BLOCK_MAX*2];
+    double flare_background[VS_BLOCK_MAX];
     ViState input;
     ViAdopted input_adopted;
     float monitor[VS_BLOCK_MAX*2];
@@ -41,4 +46,6 @@ int vs_state_init(VsEngine *engine);
 void vs_state_observe(VsEngine *engine,const VslDrive *driver);
 int vs_state_sample(void *state,SaVoice *main,const HbBand *band,double stereo[2],double body[2]);
 int vs_character_sample(void *state,const AdSourceContext *context,AdSourceFrame *frame);
+int vs_flare_sample(VsEngine *engine,uint64_t frame);
+void vs_flare_apply(VsEngine *engine,unsigned frames,double start_gain);
 #endif

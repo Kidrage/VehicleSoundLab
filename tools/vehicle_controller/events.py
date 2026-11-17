@@ -25,7 +25,7 @@ class EventPanel:
         self.remove_rejected=ttk.Button(left,text='移除已排除的参考',command=self.clear_rejected)
         self.remove_rejected.pack(anchor='w',pady=(0,10))
         ttk.Button(left,text='触发配方…',command=window.edit_event_policy).pack(anchor='w',pady=(0,10))
-        ttk.Label(left,text='启用后替换旧回火／起动机和启动附加层。\n持续 DNA、低频和细节仍由原系统生成。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
+        ttk.Label(left,text='启动变调在驾驶页调整。\n本页用于其他独立事件与历史候选。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
         window.slider(left,'event_gain','事件总电平',0,2)
         window.slider(left,'event_pitch','事件音高',.5,2)
         window.slider(left,'event_decay','事件时长／衰减',.25,4)
@@ -58,6 +58,7 @@ class EventPanel:
         mask=self.window.bridge.event_available_mask
         for kind,doc in self.window.event_overrides.items():
             if not rejection(doc):mask|=1<<KINDS.index(kind)
+        if getattr(self.window,'features',0)&128:mask&=~((1<<0)|(1<<1)|(1<<2)|(1<<5))
         return mask
 
     def refresh(self):
@@ -138,9 +139,6 @@ class EventPanel:
 
     def update(self,state):
         w=self.window
-        for key in ('legacy_event_gain','startup_gain','catch_gain'):
-            widget,feature=w.widgets[key]
-            widget.state(['disabled'] if self.enabled.get() or feature and not w.features&feature else ['!disabled'])
         self.status.set(f"活动声部 {state.get('event_active',0)} / 4 · 峰值 {state.get('event_peak',0)}\n"
             f"已触发 {state.get('event_started',0)} · 容量拒绝 {state.get('event_rejected',0)}\n"
             f"排队 {state.get('event_queue',0)} · 队列溢出 {state.get('event_overflow',0)} · 身份日志丢失 {state.get('event_log_lost',0)}")

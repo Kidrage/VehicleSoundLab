@@ -1,4 +1,4 @@
-"""One bounded App audition over existing C voices and the same engine clock.
+"""Archived V16 research audition; not imported by the production App.
 
 Standard library only. Profiles are loaded/copied before audio. C produces,
 weights and mixes each block; no original or rendered audio is played back.
@@ -9,8 +9,8 @@ from copy import deepcopy
 from pathlib import Path
 from startup_character_v1.contract import Ridge,pack as pack_ridges
 from startup_rotation_v1.contract import Profile,pack as pack_rotation
-from .native import Engine
-from .device import Output
+from vehicle_controller.native import Engine
+from vehicle_controller.device import Output
 
 class Gesture(C.Structure):
     _fields_=[('level',C.c_double),('core',C.c_double),('texture',C.c_double),('count',C.c_uint),('knot',C.c_double*4),('pitch',C.c_double*4)]

@@ -1,6 +1,6 @@
-add_library(vehicle_source STATIC assets.c dna_assets.c state_dna.c control.c source.c stems.c driver.c events.c startup.c event_policy.c character.c)
+add_library(vehicle_source STATIC assets.c dna_assets.c state_dna.c control.c source.c stems.c driver.c events.c startup.c event_policy.c character.c flare.c)
 target_include_directories(vehicle_source PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
-target_link_libraries(vehicle_source PUBLIC atlas_drive atlas_take vehicle_input event_synth event_control state_dna dna_character)
+target_link_libraries(vehicle_source PUBLIC atlas_drive atlas_take vehicle_input event_synth event_control state_dna dna_character startup_flare)
 target_include_directories(vehicle_source PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../voices/events_v1")
 target_compile_features(vehicle_source PUBLIC c_std_11)
 if(MSVC)

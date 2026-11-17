@@ -4,6 +4,7 @@ const char *vs_event_bank_identity(void){return VSL_EVENT_BANK_SHA256;}
 int vs_engine_event_profile(VsEngine *s,unsigned type,const EsProfile *p) {
     if(!s||type>=ES_TYPES||!es_profile_valid(p)||s->generator.frame||s->event_pool.frame||
        s->event_pool.started||s->event_control.count)return 0;
+    if(s->flare&&((1u<<type)&0x27u)&&(p->mode_count||p->band_count))return 0;
     s->event_pool.profiles[type]=*p;
     if(p->mode_count||p->band_count)s->event_control.available_mask|=1u<<type;
     else s->event_control.available_mask&=~(1u<<type);
@@ -40,7 +41,7 @@ int vs_events_sample(void *state,uint64_t frame) {
     }
     if(!es_pool_tick(&s->event_pool,&f))return 0;
     for(k=0;k<ES_VOICES;++k)s->event_voices[k][n]=(float)(f.sample[k]*s->event_levels[f.type[k]]);
-    return 1;
+    return vs_flare_sample(s,frame);
 }
 unsigned vs_engine_events(VsEngine *s,EsNotice *out,unsigned capacity) {
     return s?es_pool_notices(&s->event_pool,out,capacity):0;

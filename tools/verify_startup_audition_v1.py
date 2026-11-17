@@ -1,8 +1,11 @@
-"""Qualify the actual App's streaming C scene against the frozen audition."""
+"""Historical V16 scene check; --ui requires its frozen V16 UI sources.
+
+The current production App is checked by verify_startup_flare_v1.py.
+"""
 import argparse,ctypes as C,hashlib,json,time
 from pathlib import Path
 from vehicle_controller.native import Bridge,Engine
-from vehicle_controller.startup_audition import Scene
+from startup_character_v1.archived_audition import Scene
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--ui',action='store_true');a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
@@ -10,7 +13,7 @@ def main():
     assert 'numpy' not in sys.modules,'App scene must not import NumPy'
     import numpy as np
     import soundfile as sf
-    repo=Path(__file__).resolve().parents[1];bridge=Bridge(repo);reference=Path('E:/VehicleSoundLab/references/analysis/startup_rotation_v1/listen2')
+    repo=Path(__file__).resolve().parents[1];bridge=Bridge(repo,repo/'build-vehicle-source-v14/bin/Release/vsl_source_bridge.dll');reference=Path('E:/VehicleSoundLab/references/analysis/startup_rotation_v1/listen2')
     results={}
     def render(previous,chunk):
         with Scene(repo,previous) as scene,Engine(bridge,0,startup_response=scene.response) as engine:

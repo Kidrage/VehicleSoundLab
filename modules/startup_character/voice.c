@@ -11,6 +11,7 @@ struct ScVoice {
     CkVoice *rotation;
 };
 void sc_destroy(ScVoice *v){unsigned k;if(!v)return;for(k=0;k<SC_STAGES;++k){sf_voice_destroy(v->voice[k]);sf_bank_destroy(v->bank[k]);}free(v->rotation);free(v);}
+void sc_rearm(ScVoice *v){if(v){v->gate=0;v->ridges.previous_gate=0;memset(v->ridges.active,0,sizeof v->ridges.active);}}
 int sc_set_rotation(ScVoice *v,const CkProfile *p,uint64_t seed){
     CkVoice *r;if(!v||v->frame||v->ridges.count||v->rotation)return 0;
     r=malloc(sizeof *r);if(!r)return 0;if(!ck_init(r,p,seed)){free(r);return 0;}v->rotation=r;return 1;

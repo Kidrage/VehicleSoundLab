@@ -1,0 +1,7 @@
+add_library(startup_character STATIC voice.c ridge.c ../crank_rotation/voice.c)
+target_include_directories(startup_character PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_link_libraries(startup_character PUBLIC spectral_texture)
+target_compile_features(startup_character PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(startup_character PRIVATE /W4 /we4013 /utf-8 /fp:strict)
+endif()

@@ -1,0 +1,7 @@
+add_library(startup_flare STATIC voice.c model.c)
+target_include_directories(startup_flare PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/.." PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../src")
+target_link_libraries(startup_flare PUBLIC startup_character)
+target_compile_features(startup_flare PUBLIC c_std_11)
+if(MSVC)
+  target_compile_options(startup_flare PRIVATE /W4 /we4013 /utf-8 /fp:strict)
+endif()
