@@ -66,7 +66,7 @@ class StateRecipes:
                 raise ValueError('默认组需1–8个工程，其他组可为空且最多8个')
             if len(set(identity(x) for x in values)) != len(values):
                 raise ValueError('同一组不能重复加入同一个工程')
-        for key, low, high in (('reference_rpm', 50, 10000), ('transition_seconds', .02, 2), ('detail', 0, 1)):
+        for key, low, high in (('reference_rpm', 50, 10000), ('transition_seconds', .02, 2.6), ('detail', 0, 1.3)):
             dna._number(data[key], low, high, key)
         dna._integer(data['seed'], 1, 2**32-1, '随机种子')
         result = deepcopy(data)

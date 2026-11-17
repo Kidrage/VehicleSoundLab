@@ -6,15 +6,15 @@ import math
 
 # Same units and limits as profiles/lifecycle.c; native C validates again.
 FIELDS=(
-    ('crank_seconds','拖转时长 · s',.05,5),
-    ('crank_rpm','拖转目标 · RPM',50,600),
-    ('crank_tau','拖转响应时间 · s',.005,1),
-    ('catch_rise_seconds','接火上升时长 · s',.025,1.5),
-    ('catch_settle_seconds','冲转回落时长 · s',.05,4),
-    ('flare_rpm','冲转峰值 · RPM',500,5000),
-    ('combustion_seconds','燃烧建立时长 · s',.005,2),
-    ('stopping_seconds','停机时长 · s',.05,5),
-    ('stopping_tau','停机衰减时间 · s',.01,2))
+    ('crank_seconds','拖转时长 · s',.05,6.5),
+    ('crank_rpm','拖转目标 · RPM',50,780),
+    ('crank_tau','拖转响应时间 · s',.005,1.3),
+    ('catch_rise_seconds','接火上升时长 · s',.025,1.95),
+    ('catch_settle_seconds','冲转回落时长 · s',.05,5.2),
+    ('flare_rpm','冲转峰值 · RPM',500,6500),
+    ('combustion_seconds','燃烧建立时长 · s',.005,2.6),
+    ('stopping_seconds','停机时长 · s',.05,6.5),
+    ('stopping_tau','停机衰减时间 · s',.01,2.6))
 
 
 class Response(C.Structure):

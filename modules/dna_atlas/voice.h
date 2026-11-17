@@ -16,7 +16,7 @@ typedef struct {
 
 /* One harmonic clock across the atlas. Each anchor has independent RNG/state,
    initialized with the explicit seed; all advance, including muted anchors.
-   root 0..1000Hz (0 pauses the clock), detail/gain 0..1. No file I/O/allocation. */
+   root 0..1000Hz (0 pauses the clock), detail 0..1.3, gain 0..1. No file I/O/allocation. */
 int sa_voice_init(SaVoice *voice, const SaBank *bank, uint64_t seed, double root_hz, double detail, double gain);
 int sa_voice_set(SaVoice *voice, double root_hz, double detail, double gain);
 void sa_voice_tick(SaVoice *voice, double stereo[2]);

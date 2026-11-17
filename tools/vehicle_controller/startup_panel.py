@@ -9,7 +9,7 @@ class StartupPanel:
     def __init__(self,owner):
         self.owner=owner
         self.root=tk.Toplevel(owner.root);self.root.title('启动与停机响应')
-        self.root.geometry('590x530');self.root.resizable(False,False);self.root.transient(owner.root)
+        self.root.geometry('590x530' if owner.features&128 else '590x625');self.root.resizable(False,False);self.root.transient(owner.root)
         self.root.protocol('WM_DELETE_WINDOW',self.close)
         body=ttk.Frame(self.root,padding=20);body.pack(fill='both',expand=True)
         ttk.Label(body,text='启动与停机响应',font=('Microsoft YaHei UI',15,'bold')).pack(anchor='w')
@@ -19,6 +19,7 @@ class StartupPanel:
             style='Hint.TLabel',wraplength=540).pack(anchor='w',pady=(8,12))
         self.vars={};self.inputs={}
         for key,label,low,high in startup.FIELDS:
+            if not owner.bridge.tuning_headroom:high=round(high/1.3,8)
             var=tk.StringVar(value=f'{owner.startup_response[key]:g}');self.vars[key]=var
             if flare and key.startswith('crank_'):continue
             row=ttk.Frame(body);row.pack(fill='x',pady=4)

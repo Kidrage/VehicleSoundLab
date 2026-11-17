@@ -10,7 +10,7 @@ struct VsStateAssets {
 VsAssets *vs_assets_from_state_dna(const VsStateDnaConfig *c) {
     VsAssets *a;VsDnaConfig base={0};const SaBank *banks[SX_STATES-1]={0};
     unsigned s,k,available=0;
-    if(!c||!isfinite(c->transition_seconds)||c->transition_seconds<.02||c->transition_seconds>2)return NULL;
+    if(!c||!isfinite(c->transition_seconds)||c->transition_seconds<.02||c->transition_seconds>2.6)return NULL;
     for(s=1;s<SX_STATES;++s){
         if(c->count[s]>SA_MAX_ANCHORS||(c->count[s]&&!c->anchors[s]))return NULL;
         if(c->count[s])available=1;

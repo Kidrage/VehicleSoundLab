@@ -13,8 +13,8 @@ static uint64_t delay_frames(double seconds){return (uint64_t)(seconds*ES_RATE+.
 int ec_control_valid(const EcControl *c) {
     unsigned k;
     if(!c||(c->enabled!=0&&c->enabled!=1)||c->manual_type<0||c->manual_type>=ES_TYPES||
-       !range(c->gain,0,2)||!range(c->pitch,.5,2)||!range(c->decay,.25,4)||!range(c->texture,0,2))return 0;
-    for(k=0;k<ES_TYPES;++k)if(!range(c->levels[k],0,2))return 0;
+       !range(c->gain,0,2.6)||!range(c->pitch,.5,2.6)||!range(c->decay,.25,5.2)||!range(c->texture,0,2.6))return 0;
+    for(k=0;k<ES_TYPES;++k)if(!range(c->levels[k],0,2.6))return 0;
     return 1;
 }
 void ec_init(EcState *s,unsigned mask) {

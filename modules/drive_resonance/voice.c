@@ -3,6 +3,7 @@
 #include <string.h>
 #define DRS_PI 3.14159265358979323846
 static int unit(double x){return isfinite(x)&&x>=0&&x<=1;}
+static int amount_valid(double x){return isfinite(x)&&x>=0&&x<=1.3;}
 static double cycle(double x) {
     double phase=fmod(x,1);if(phase<0)phase+=1;
     /* A tiny negative remainder can round to1 when adding1. */
@@ -18,7 +19,7 @@ static double support(const DrsBank *b,unsigned a,double hz) {
 }
 int drs_voice_init(DrsVoice *out,const DrsBank *b,const SaBank *dna,uint64_t seed,double amount) {
     DrsVoice v;unsigned a,n;
-    if(!out||!unit(amount)||!drs_bank_valid(b,dna))return 0;
+    if(!out||!amount_valid(amount)||!drs_bank_valid(b,dna))return 0;
     memset(&v,0,sizeof v);v.bank=b;v.amount=v.target=amount;v.follow=1-exp(-1/(.018*48000));
     for(a=0;a<b->count;++a)if(b->enabled[a]) {
         if(b->kind[a]==DRS_STEREO) {
@@ -33,7 +34,7 @@ int drs_voice_init(DrsVoice *out,const DrsBank *b,const SaBank *dna,uint64_t see
         }
     }*out=v;return 1;
 }
-int drs_voice_set(DrsVoice *v,double amount){if(!v||!v->bank||!unit(amount))return 0;v->target=amount;return 1;}
+int drs_voice_set(DrsVoice *v,double amount){if(!v||!v->bank||!amount_valid(amount))return 0;v->target=amount;return 1;}
 int drs_voice_tick(DrsVoice *v,const SaVoice *dna,double sampled_phase,DrsFrame *f) {
     unsigned a,c;const DrsBank *b;
     if(!v||!v->bank||!dna||!dna->bank||!f||!isfinite(sampled_phase)||sampled_phase<0||sampled_phase>=2*DRS_PI||

@@ -1,5 +1,6 @@
-add_library(dna_character STATIC control.c voice.c)
+add_library(dna_character STATIC control.c voice.c mechanical.c)
 target_include_directories(dna_character PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_include_directories(dna_character PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../src")
 target_link_libraries(dna_character PUBLIC fine_idle_layer)
 target_compile_features(dna_character PUBLIC c_std_11)
 if(MSVC)

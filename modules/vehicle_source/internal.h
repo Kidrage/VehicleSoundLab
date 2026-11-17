@@ -48,4 +48,5 @@ int vs_state_sample(void *state,SaVoice *main,const HbBand *band,double stereo[2
 int vs_character_sample(void *state,const AdSourceContext *context,AdSourceFrame *frame);
 int vs_flare_sample(VsEngine *engine,uint64_t frame);
 void vs_flare_apply(VsEngine *engine,unsigned frames,double start_gain);
+void vs_mechanical_sample(void *state,VslEngine *owner,DaVoice *voice,VslObjectFrame *raw,VslObjectFrame *mixed);
 #endif

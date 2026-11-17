@@ -19,6 +19,8 @@ typedef struct {
     /* Optional dry-source voicing after all continuous generators, before
        master gain. Startup/events/auxiliary are deliberately outside it. */
     int (*character)(void *state,const AdSourceContext *context,AdSourceFrame *frame);
+    /* Optional production mechanical feature in place of historical templates. */
+    void (*auxiliary)(void *state,VslEngine *owner,DaVoice *voice,VslObjectFrame *raw,VslObjectFrame *mixed);
 } AdSourceDriver;
 /* Optional replacement of the single 200Hz driver step, not a second driver. */
 int ad_source_process_controlled(AdRender *source,float *monitor,unsigned frames,

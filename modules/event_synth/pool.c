@@ -23,8 +23,8 @@ int es_pool_init(EsPool *p,const EsProfile profiles[ES_TYPES]) {
 }
 static int valid(const EsRequest *r) {
     return r&&r->id&&r->type<ES_TYPES&&r->priority<=255&&isfinite(r->strength)&&r->strength>=0&&r->strength<=4&&
-        isfinite(r->pitch)&&r->pitch>=.5&&r->pitch<=2&&isfinite(r->decay)&&r->decay>=.25&&r->decay<=4&&
-        isfinite(r->texture)&&r->texture>=0&&r->texture<=2;
+        isfinite(r->pitch)&&r->pitch>=.5&&r->pitch<=2.6&&isfinite(r->decay)&&r->decay>=.25&&r->decay<=5.2&&
+        isfinite(r->texture)&&r->texture>=0&&r->texture<=2.6;
 }
 int es_pool_start(EsPool *p,const EsRequest *r) {
     unsigned k,slot=ES_VOICES;int candidate=-1;

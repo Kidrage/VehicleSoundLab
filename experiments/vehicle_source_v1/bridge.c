@@ -48,13 +48,15 @@ VsbHandle *vsl_source_open(int selection) {
     h->assets=vs_assets_from_atlas(dc_preset_config(preset));
     initial=dc_preset_initial(preset);vs_control_from_atlas(&initial,&h->control);
     h->control.dna_unified=1;
+    h->control.intake_gain=h->control.air_gain=h->control.road_gain=h->control.wind_gain=0;
+    h->capabilities|=VSB_TUNING_HEADROOM|VSB_MECHANICAL_DNA;
     dc_preset_destroy(preset);
     if(h->assets)h->engine=vs_engine_create(h->assets,&h->control);
     if(!h->engine){vsl_source_close(h);return NULL;}
     if(selection==DC_FINE_IDLE){
         if(!vs_engine_enable_start_flare(h->engine)){vsl_source_close(h);return NULL;}
         h->capabilities=(h->capabilities&~(VSB_STARTUP|VSB_CATCH))|VSB_START_FLARE;
-        h->control.startup_gain=1;h->control.catch_gain=h->control.legacy_event_gain=0;
+        h->control.startup_gain=.5;h->control.catch_gain=h->control.legacy_event_gain=0;
         if(!vs_engine_set(h->engine,&h->control)){vsl_source_close(h);return NULL;}
     }
     return h;
@@ -82,6 +84,7 @@ VsbHandle *vsl_source_open_dna(int selection,const char *const *paths,unsigned c
     h->control.intake_gain=h->control.mechanical_gain=h->control.air_gain=h->control.road_gain=h->control.wind_gain=0;
     h->control.events.enabled=0;
     h->control.dna_unified=1;
+    h->capabilities=VSB_TUNING_HEADROOM|VSB_MECHANICAL_DNA;
     h->engine=vs_engine_create(h->assets,&h->control);
 done:
     free(loaded);dc_preset_destroy(preset);
@@ -114,6 +117,7 @@ VsbHandle *vsl_source_open_state_dna(int selection,const char *const *paths,cons
     h->control.intake_gain=h->control.mechanical_gain=h->control.air_gain=h->control.road_gain=h->control.wind_gain=0;
     h->control.events.enabled=0;
     h->control.dna_unified=1;
+    h->capabilities=VSB_TUNING_HEADROOM|VSB_MECHANICAL_DNA;
     if(h->assets)h->engine=vs_engine_create(h->assets,&h->control);
 done:
     free(loaded);dc_preset_destroy(preset);

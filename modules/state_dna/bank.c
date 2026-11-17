@@ -35,7 +35,7 @@ static void insert(SxBank *b,unsigned s,double root) {
 int sx_bank_init(SxBank *b,const SaBank *base,const SaBank *const *donors,unsigned orders,double seconds) {
     unsigned s,a,h;
     if(!b||!base||!donors||!base->count||base->count>SA_MAX_ANCHORS||orders>32||
-       !isfinite(seconds)||seconds<.02||seconds>2)return 0;
+       !isfinite(seconds)||seconds<.02||seconds>2.6)return 0;
     for(s=0;s<SX_STATES-1;++s)if(donors[s]&&(!donors[s]->count||donors[s]->count>SA_MAX_ANCHORS||
         donors[s]->harmonics!=base->harmonics))return 0;
     memset(b,0,sizeof *b);b->base=base;b->transition_seconds=seconds;b->mask=1;

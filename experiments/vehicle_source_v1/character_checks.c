@@ -24,6 +24,7 @@ int main(void) {
     CHECK(p=cd_models_load(DC_FINE_IDLE));CHECK(assets=vs_assets_from_atlas(dc_preset_config(p)));
     {AdControl old=dc_preset_initial(p);vs_control_from_atlas(&old,&c);}
     dc_preset_destroy(p);p=NULL;c.dna_unified=1;c.mode=VS_BENCH;c.ignition=c.start_id=1;
+    c.intake_gain=c.air_gain=c.road_gain=c.wind_gain=0;
     CHECK(a=vs_engine_create(assets,&c));CHECK(b=vs_engine_create(assets,&c));
     CHECK(space=malloc(sizeof *space));memcpy(space,&a->owner.spatial,sizeof *space);
     out.monitor=full;out.stem[VS_DNA]=line;out.stem[VS_DETAIL]=air;
@@ -35,7 +36,7 @@ int main(void) {
         for(j=0;j<960;++j){CHECK(isfinite(full[j]));le+=line[j]*line[j];ae+=air[j]*air[j];}
     }
     CHECK(le>0&&ae>0);
-    bad=c;bad.dna.air=NAN;CHECK(!vs_engine_set(a,&bad));bad=c;bad.dna.air_state[5]=2.01;CHECK(!vs_engine_set(a,&bad));
+    bad=c;bad.dna.air=NAN;CHECK(!vs_engine_set(a,&bad));bad=c;bad.dna.air_state[5]=2.61;CHECK(!vs_engine_set(a,&bad));
     bad=c;bad.dna_unified=0;CHECK(!vs_engine_set(a,&bad));
     puts("PASS: six response rows, owned fingerprint, exact partitioning, unchanged spatial storage, finite startup-to-high-RPM-to-stop, invalid controls");result=0;
 done:dch_destroy(v);dc_preset_destroy(p);vs_engine_destroy(a);vs_engine_destroy(b);vs_assets_destroy(assets);free(space);return result;

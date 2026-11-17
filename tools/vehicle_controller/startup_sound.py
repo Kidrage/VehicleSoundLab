@@ -5,7 +5,7 @@ def defaults(control,available_mask,features=0):
     value=deepcopy(control)
     events=value['events']
     if features&128:
-        value.update(startup_gain=1.,catch_gain=0.,legacy_event_gain=0.)
+        value.update(startup_gain=.5 if features&256 else 1.,catch_gain=0.,legacy_event_gain=0.)
         events.update(enabled=0,manual_sequence=0)
         events['levels']=[0.]*7
         return value

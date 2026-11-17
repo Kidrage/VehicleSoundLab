@@ -5,14 +5,14 @@ import math
 FIELDS=(
  ('afterfire_min_count','回火最少次数',1,4,1,1),
  ('afterfire_max_count','回火最多次数',1,4,1,3),
- ('afterfire_delay_seconds','收油后延迟 · s',0,.5,.001,.018),
- ('afterfire_interval_min_seconds','连发最短间隔 · s',.02,.5,.005,.095),
- ('afterfire_interval_max_seconds','连发最长间隔 · s',.02,.5,.005,.16),
- ('afterfire_repeat_gain','每次连发强度倍率',0,1,.01,.72),
+ ('afterfire_delay_seconds','收油后延迟 · s',0,.65,.001,.018),
+ ('afterfire_interval_min_seconds','连发最短间隔 · s',.02,.65,.005,.095),
+ ('afterfire_interval_max_seconds','连发最长间隔 · s',.02,.65,.005,.16),
+ ('afterfire_repeat_gain','每次连发强度倍率',0,1.3,.01,.72),
  ('afterfire_probability','合格收油的触发概率',0,1,.05,1),
- ('afterfire_cooldown_seconds','两组回火冷却 · s',0,5,.05,0),
- ('shift_delay_seconds','换挡短声延迟 · s',0,.25,.001,.010),
- ('crank_delay_seconds','拖转纹理延迟 · s',0,.1,.001,.008))
+ ('afterfire_cooldown_seconds','两组回火冷却 · s',0,6.5,.05,0),
+ ('shift_delay_seconds','换挡短声延迟 · s',0,.325,.001,.010),
+ ('crank_delay_seconds','拖转纹理延迟 · s',0,.13,.001,.008))
 
 class Policy(C.Structure):
     _fields_=[(key,C.c_uint if index<2 else C.c_double) for index,(key,*_) in enumerate(FIELDS)]

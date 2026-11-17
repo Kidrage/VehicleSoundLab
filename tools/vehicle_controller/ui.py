@@ -14,13 +14,17 @@ from .events import EventPanel
 MODES=('踏板驾驶','固定转速','自动演示','外部信号占位')
 LIFE=('熄火','就绪','准备','接火','运行','停机')
 OPERATING=('怠速','空载补油','加速','巡航','收油','换挡切断','换挡恢复','降挡补油')
-STEMS=('完整干声','DNA · 进气感声线','低频轰鸣','DNA · 空气纹理','旧进气模板','机械','旧排气空气模板','道路','风','启动纹理','接火补充','附加声源','旧事件／起动机',
-       '事件声部 1','事件声部 2','事件声部 3','事件声部 4')
+# Explicit native indexes: retiring template choices must not renumber stems.
+STEM_CHOICES=((-1,'完整干声'),(0,'DNA · 进气感声线'),(1,'低频轰鸣'),(2,'DNA · 空气纹理'),
+              (4,'DNA · 机械特征'),(8,'启动声音'),(9,'接火补充'),(10,'附加声源'),(11,'旧事件／起动机'),
+              (12,'事件声部 1'),(13,'事件声部 2'),(14,'事件声部 3'),(15,'事件声部 4'))
+STEMS=tuple(label for _,label in STEM_CHOICES)
+SOLO_INDEX={label:index for index,label in STEM_CHOICES}
+SOUND_AMOUNTS={'gain','detail','low_mix','coherent_low_gain','resonant_gain','residual_gain','mechanical_gain',
+               'event_gain','event_pitch','event_decay','event_texture'}
 TONE=(
     ('低频与 DNA 细节源',(('detail','主声线幅度细节',0),('low_mix','互补低频分轨',0),('coherent_low_gain','相干低频',2),
-                      ('resonant_gain','共振纹理源',4),('residual_gain','残差纹理源',1))),
-    ('辅助模板 · 默认关闭',(('intake_gain','旧进气模板',0),('mechanical_gain','机械',0),('air_gain','旧排气空气模板',0),
-                ('road_gain','道路',0),('wind_gain','风',0))))
+                      ('resonant_gain','共振纹理源',4),('residual_gain','残差纹理源',1))),)
 
 
 class Window:
@@ -31,7 +35,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V17');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V18');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)
@@ -50,7 +54,7 @@ class Window:
         self.tabs=ttk.Notebook(outer);self.tabs.pack(fill='both',expand=True)
         self.drive=ttk.Frame(self.tabs,padding=18);self.tone=ttk.Frame(self.tabs,padding=18);self.signals=ttk.Frame(self.tabs,padding=18)
         self.events_page=ttk.Frame(self.tabs,padding=18);self.dna_page=ttk.Frame(self.tabs,padding=18)
-        self.tabs.add(self.drive,text=' 驾驶 ');self.tabs.add(self.dna_page,text=' DNA 配方 ');self.tabs.add(self.tone,text=' 低频与辅助层 ');self.tabs.add(self.events_page,text=' 独立事件 ');self.tabs.add(self.signals,text=' 信号与回放 ')
+        self.tabs.add(self.drive,text=' 驾驶 ');self.tabs.add(self.dna_page,text=' DNA 配方 ');self.tabs.add(self.tone,text=' 低频与细节源 ');self.tabs.add(self.events_page,text=' 独立事件 ');self.tabs.add(self.signals,text=' 信号与回放 ')
         self.vars={};self.values={};self.mode=tk.StringVar(value=MODES[0]);self.automatic=tk.IntVar(value=1);self.backfire=tk.IntVar(value=1)
         self.gear=tk.IntVar(value=1);self.solo=tk.StringVar(value=STEMS[0]);self.muted=tk.IntVar();self.pause_signals=tk.IntVar()
         self.message=tk.StringVar(value='选择音色，点击“启动”开始；更换音色前停止监听。')
@@ -66,6 +70,7 @@ class Window:
         root.protocol('WM_DELETE_WINDOW',self.close);self.load(0);root.after(40,self.tick)
 
     def slider(self,parent,key,label,low=0,high=1,feature=0,row_padding=5):
+        if self.bridge.tuning_headroom and key in SOUND_AMOUNTS:high=round(high*1.3,8)
         row=ttk.Frame(parent);row.pack(fill='x',pady=row_padding);variable=self.vars.setdefault(key,tk.DoubleVar())
         ttk.Label(row,text=label,width=19).pack(side='left');readout=tk.StringVar();self.values[key]=(readout,high)
         widget=ttk.Scale(row,variable=variable,from_=low,to=high);widget.pack(side='left',fill='x',expand=True,padx=8)
@@ -109,9 +114,9 @@ class Window:
         self.dna_button=ttk.Button(bar,text='导入／编辑声纹…',command=self.edit_dna);self.dna_button.pack(side='left')
         self.dna_solo_box=ttk.Combobox(bar,textvariable=self.solo,values=STEMS,state='readonly',width=21);self.dna_solo_box.pack(side='right')
         ttk.Label(bar,textvariable=self.dna_status,style='Hint.TLabel',wraplength=680).pack(side='left',padx=16)
-        body=ttk.Frame(self.dna_page);body.pack(fill='both',expand=True);self.dna_tone=DnaTonePanel(body)
+        body=ttk.Frame(self.dna_page);body.pack(fill='both',expand=True);self.dna_tone=DnaTonePanel(body,self)
         columns=[]
-        for _ in range(2):
+        for _ in range(1):
             col=ttk.Frame(self.tone);col.pack(side='left',fill='both',expand=True,padx=6);columns.append(col)
         for i,(title,rows) in enumerate(TONE):
             group=ttk.LabelFrame(columns[0 if i==0 else 1],text=title);group.pack(fill='x',pady=(0,12))
@@ -238,7 +243,7 @@ class Window:
             else:self.control['ignition']=0
             value=self.controls()
         self.host=Host(self.bridge,self.loaded,value,replay,self.event_overrides,self.startup_response,self.event_policy,self.dna_bank)
-        self.host.update(value,STEMS.index(self.solo.get())-1,bool(self.muted.get()))
+        self.host.update(value,SOLO_INDEX[self.solo.get()],bool(self.muted.get()))
         self.host.start();self.preset_box.state(['disabled'])
         self.message.set('正在回放记录的 C 控制信号。' if replay else '正在监听纯合成干声；空间渲染由外部系统处理。')
 
@@ -299,9 +304,9 @@ class Window:
             if 's' in self.keys:self.vars['brake'].set(min(1,self.vars['brake'].get()+.10))
             for key,(text,high) in self.values.items():
                 value=self.vars[key].get()
-                text.set(f'{value:.2f}×' if key in ('event_pitch','event_decay') else f'{value*100:.0f}%' if key.startswith('event_') or high<=1 else f'{value:.0f}')
+                text.set(f'{value:.2f}×' if key in ('event_pitch','event_decay') else f'{value*100:.0f}%' if key in SOUND_AMOUNTS or key.startswith('event_') or high<=1 else f'{value:.0f}')
             if self.running():
-                self.host.update(self.control if self.replaying else self.controls(),STEMS.index(self.solo.get())-1,bool(self.muted.get()))
+                self.host.update(self.control if self.replaying else self.controls(),SOLO_INDEX[self.solo.get()],bool(self.muted.get()))
             if self.host:
                 state=self.host.snapshot()
                 if self.replaying and 'adopted_control' in state:
@@ -390,7 +395,7 @@ def run(repo,workspace,ready_file=None,library=None):
         import os
         take.save(ready_file,dict(schema='vsl.source-controller-ready/1',pid=os.getpid(),title=root.title(),
             bridge_sha256=window.bridge.sha256,voices_sha256=window.bridge.voices_sha256,
-            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=17,preset_schema=9,take_schema=10,
+            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=18,preset_schema=9,take_schema=10,
             event_bank_sha256=window.bridge.event_bank_sha256,abi=window.bridge.abi(),
             geometry=root.geometry(),source_only=True,listening=window.running(),visible=bool(root.winfo_viewable()),
             startup_flare_available=bool(window.features&128)))

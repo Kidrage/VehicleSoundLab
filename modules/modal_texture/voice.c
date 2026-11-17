@@ -10,7 +10,7 @@ int mt_voice_init(MtVoice *out,const MsProfile *p,const MtProfile *m,
 }
 int mt_voice_set(MtVoice *v,double ratio,double gain,double amount) {
     if(!v||!v->source.profile||!v->envelope.profile||!isfinite(ratio)||ratio<.25||ratio>4||
-       !isfinite(gain)||gain<0||gain>1||!isfinite(amount)||amount<0||amount>1)return 0;
+       !isfinite(gain)||gain<0||gain>1||!isfinite(amount)||amount<0||amount>1.3)return 0;
     return ms_voice_set(&v->source,ratio,gain)&&mt_envelope_set(&v->envelope,amount);
 }
 int mt_voice_tick(MtVoice *v,double out[2]) {

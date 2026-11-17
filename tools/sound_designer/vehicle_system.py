@@ -10,10 +10,10 @@ from vehicle_controller.native import Bridge, Engine
 from research_archive_v1 import sha, load
 
 EVENT_LABELS = ('啮合', '拖转', '接火', '收油回火', '换挡短声', '脱开', '停机末响')
-LAYERS = (('intake_gain', '旧进气模板'), ('mechanical_gain', '机械'), ('air_gain', '旧排气空气模板'),
-          ('road_gain', '道路'), ('wind_gain', '风'))
-MACROS = (('gain', '事件总量', 0, 1, .01), ('pitch', '事件音高', .5, 2, .01),
-          ('decay', '事件时长', .25, 4, .01), ('texture', '事件纹理', 0, 2, .01))
+LAYERS = (('mechanical_gain', 'DNA · 机械特征'),)
+RETIRED_LAYERS = {'intake_gain','air_gain','road_gain','wind_gain'}
+MACROS = (('gain', '事件总量', 0, 1.3, .01), ('pitch', '事件音高', .5, 2.6, .01),
+          ('decay', '事件时长', .25, 5.2, .01), ('texture', '事件纹理', 0, 2.6, .01))
 
 
 def event_id(value):
@@ -37,14 +37,15 @@ def validate(value):
         if project is not None: event_id(project)
     if not isinstance(events['levels'], list) or len(events['levels']) != 7:
         raise ValueError('事件电平需七项')
-    for level in events['levels']: dna_bank._number(level, 0, 1, '事件电平')
+    for level in events['levels']: dna_bank._number(level, 0, 1.3, '事件电平')
     for key, label, low, high, _ in MACROS: dna_bank._number(events[key], low, high, label)
     result['events'] = deepcopy(events)
     layers = value['layers']
-    if not isinstance(layers, dict) or set(layers) != {k for k, _ in LAYERS}:
+    if not isinstance(layers, dict) or set(layers) not in ({k for k, _ in LAYERS},{k for k, _ in LAYERS}|RETIRED_LAYERS):
         raise ValueError('辅助层参数不完整')
-    for key, label in LAYERS: dna_bank._number(layers[key], 0, 1, label)
-    result['layers'] = deepcopy(layers)
+    if any(layers.get(key,0)!=0 for key in RETIRED_LAYERS):raise ValueError('旧辅助模板已退役；请先将其电平清零，原冻结版仍可回放旧配方')
+    for key, label in LAYERS: dna_bank._number(layers[key], 0, 1.3, label)
+    result['layers'] = {key:layers[key] for key,_ in LAYERS}
     result['dna'] = dna_character.validate(value.get('dna',dna_character.defaults()))
     return result
 

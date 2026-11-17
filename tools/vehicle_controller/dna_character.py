@@ -3,9 +3,9 @@ from copy import deepcopy
 import math
 
 STATES=('启动／接火','怠速','加速／补油','巡航','收油／断火','高转速区')
-FIELDS=(('line','进气感声线',0,2),('air','排气空气感纹理',0,2),
-        ('motion','声线自然起伏',0,1),('idle_blend','细谱指纹参与量',0,1),
-        ('air_continuity','高转纹理保留',0,1),('pitch_follow','指纹声线随转速',0,1))
+FIELDS=(('line','进气感声线',0,2.6),('air','排气空气感纹理',0,2.6),
+        ('motion','声线自然起伏',0,1.3),('idle_blend','细谱指纹参与量',0,1.3),
+        ('air_continuity','高转纹理保留',0,1.3),('pitch_follow','指纹声线随转速',0,1.3))
 
 def defaults():
     return dict(line=1.,air=1.,motion=.5,idle_blend=1.,air_continuity=.35,pitch_follow=.25,
@@ -20,5 +20,5 @@ def validate(value):
     for key,_,_,maximum in FIELDS:number(value[key],maximum)
     for key in ('line_state','air_state'):
         if not isinstance(value[key],list) or len(value[key])!=6:raise ValueError('DNA需要六组工况响应')
-        for x in value[key]:number(x,2)
+        for x in value[key]:number(x,2.6)
     return deepcopy(value)

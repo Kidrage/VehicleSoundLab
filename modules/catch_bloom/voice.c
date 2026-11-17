@@ -3,8 +3,9 @@
 #include <math.h>
 #include <string.h>
 static int unit(double x){return isfinite(x)&&x>=0&&x<=1;}
+static int amount_valid(double x){return isfinite(x)&&x>=0&&x<=1.3;}
 int cb_voice_init(CbVoice *s,const CbProfile *p,double amount) {
-    unsigned i;if(!s||!cb_profile_valid(p)||!unit(amount))return 0;
+    unsigned i;if(!s||!cb_profile_valid(p)||!amount_valid(amount))return 0;
     memset(s,0,sizeof *s);s->profile=*p;s->amount=s->amount_target=amount;
     s->attack=1-exp(-1/(48000*p->attack_seconds));s->release=1-exp(-1/(48000*p->release_seconds));
     s->follow=1-exp(-1/(48000*.018));
@@ -12,7 +13,7 @@ int cb_voice_init(CbVoice *s,const CbProfile *p,double amount) {
     s->initialized=1;return 1;
 }
 int cb_voice_set(CbVoice *s,int gate,double u,double amount) {
-    if(!s||!s->initialized||(gate!=0&&gate!=1)||!unit(u)||!unit(amount))return 0;
+    if(!s||!s->initialized||(gate!=0&&gate!=1)||!unit(u)||!amount_valid(amount))return 0;
     s->target=gate?cb_pulse(u,s->profile.rise_shape,s->profile.fall_shape):0;s->amount_target=amount;return 1;
 }
 int cb_voice_process(CbVoice *s,const double *input,double *delta,unsigned frames) {

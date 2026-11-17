@@ -80,7 +80,7 @@ def pack(data):
 class Bridge:
     def __init__(self,repo,library=None):
         self.repo=Path(repo)
-        self.path=Path(library) if library is not None else Path(repo)/'build-vehicle-source-v15/bin/Release/vsl_source_bridge.dll'
+        self.path=Path(library) if library is not None else Path(repo)/'build-vehicle-source-v16/bin/Release/vsl_source_bridge.dll'
         if not self.path.is_file(): raise RuntimeError('请先运行 Build-Vehicle-Source.ps1')
         self.lib=C.CDLL(str(self.path))
         signatures={
@@ -146,6 +146,7 @@ class Bridge:
             response=startup.Response()
             if not self.startup_get(handle,C.byref(response)):raise RuntimeError('无法读取 C 默认启动响应')
             self.startup_defaults=startup.validate(unpack(response))
+            self.tuning_headroom=bool(self.capabilities(handle)&256)
             self.event_policy_defaults=policy.validate(policy.defaults())
             if self.abi()>=7:
                 configuration=policy.Policy()

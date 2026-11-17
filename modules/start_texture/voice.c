@@ -2,8 +2,9 @@
 #include <math.h>
 #include <string.h>
 static int amount_valid(double x) { return isfinite(x)&&x>=0&&x<=1; }
+static int gain_valid(double x) { return isfinite(x)&&x>=0&&x<=1.3; }
 int st_voice_init(StVoice *s,const StProfile *p,uint64_t seed,double amount) {
-    if(!s||!st_profile_valid(p)||!amount_valid(amount))return 0;
+    if(!s||!st_profile_valid(p)||!gain_valid(amount))return 0;
     memset(s,0,sizeof *s);sr_cloud_init(&s->cloud,&p->spectrum,seed);sr_cloud_tune(&s->cloud,1);
     s->attack=1-exp(-1/(48000*p->attack_seconds));
     s->release=1-exp(-1/(48000*p->release_seconds));s->follow=1-exp(-1/(48000*.018));
@@ -27,7 +28,7 @@ static void coefficients(StVoice *s) {
     }
 }
 int st_voice_set(StVoice *s,int gate,double amount) {
-    if(!s||!s->initialized||(gate!=0&&gate!=1)||!amount_valid(amount))return 0;
+    if(!s||!s->initialized||(gate!=0&&gate!=1)||!gain_valid(amount))return 0;
     s->gate=gate;s->amount_target=amount;return 1;
 }
 int st_voice_process(StVoice *s,double *out,double *raw,unsigned frames) {

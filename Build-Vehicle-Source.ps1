@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$vslSourceBuild = Join-Path $PSScriptRoot 'build-vehicle-source-v15'
+$vslSourceBuild = Join-Path $PSScriptRoot 'build-vehicle-source-v16'
 cmake -S (Join-Path $PSScriptRoot 'experiments/vehicle_source_v1') -B $vslSourceBuild -G 'Visual Studio 17 2022' -A x64
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 cmake --build $vslSourceBuild --config Release --parallel 2 --target vsl_source_bridge vehicle_source_checks vehicle_source_probe vehicle_input_checks vehicle_event_checks event_policy_checks vehicle_dna_checks vehicle_state_dna_checks vehicle_character_checks

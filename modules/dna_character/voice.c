@@ -45,8 +45,11 @@ int dch_tick(DchVoice *v,const DchContext *ctx,const double line[2],const double
     for(k=0;k<2;++k){
         double level=v->profile?v->profile->level_gain*ctx->envelope:0;
         double detail_gain=v->profile?v->profile->detail_gain:0;
-        out->line[k]=v->line*((1-v->idle_weight)*line[k]+v->idle_weight*level*modal[k]);
-        out->air[k]=v->air*((1-v->idle_weight)*air[k]+v->air_weight*level*detail_gain*texture[k]);
+        /* Beyond the nominal replacement endpoint, increase the fingerprint
+           without introducing a negative, phase-inverted base contribution. */
+        double keep=fmax(0,1-v->idle_weight);
+        out->line[k]=v->line*(keep*line[k]+v->idle_weight*level*modal[k]);
+        out->air[k]=v->air*(keep*air[k]+v->air_weight*level*detail_gain*texture[k]);
         if(!isfinite(out->line[k])||!isfinite(out->air[k]))return 0;
     }
     out->idle_weight=v->idle_weight;out->air_weight=v->air_weight;++v->frame;return 1;

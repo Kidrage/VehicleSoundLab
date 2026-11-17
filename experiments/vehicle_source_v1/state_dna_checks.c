@@ -37,7 +37,7 @@ int main(void) {
     CHECK(sx_voice_telemetry(&voice,&stats)&&stats.available_mask==5&&stats.target[2]==1);
     CHECK(!sx_voice_select(&voice,4));
     CHECK(!sx_bank_init(&blend,bank,donors,33,.1));CHECK(!sx_bank_init(&blend,bank,donors,0,NAN));
-    CHECK(!sx_bank_init(&blend,bank,donors,0,.019));CHECK(!sx_bank_init(&blend,bank,donors,0,2.01));
+    CHECK(!sx_bank_init(&blend,bank,donors,0,.019));CHECK(!sx_bank_init(&blend,bank,donors,0,2.61));
     {VsStateDnaConfig config={0},bad;VsAssets *assets;VsControl control={0};VsEngine *engine;
         config.anchors[0]=models;config.count[0]=1;config.anchors[1]=models+1;config.count[1]=1;
         config.seed=93;config.vehicle_profile=VSL_V10;config.root_per_rpm=.02;config.transition_seconds=.1;

@@ -1,7 +1,7 @@
 #include "mix.h"
 #include <math.h>
 #include <string.h>
-static int unit(double x) { return isfinite(x)&&x>=0&&x<=1; }
+static int unit(double x) { return isfinite(x)&&x>=0&&x<=1.3; }
 int hb_mix_init(HbMix *m,unsigned rate,double amount,double scale) {
     if(!m||rate!=48000||!unit(amount)||!isfinite(scale)||scale<0||scale>4)return 0;
     memset(m,0,sizeof *m);m->amount=m->target=amount;m->scale=scale;

@@ -24,7 +24,7 @@ int drc_shape(const DrcBank *b,const SaVoice *dna,const DrsVoice *detail,double 
        dna->root_target<0||dna->root_target>1000)return 0;
     hz=dna->root_hz+dna->follow*(dna->root_target-dna->root_hz);drc_weights(b,hz,w);
     if(detail)amount=detail->amount+detail->follow*(detail->target-detail->amount);
-    if(!isfinite(amount)||amount<0||amount>1)return 0;
+    if(!isfinite(amount)||amount<0||amount>1.3)return 0;
     for(a=0;a<b->count;++a){double support=drc_support(b,a,hz);w[a]*=support*support*amount*amount;}
     for(h=0;h<dna->bank->harmonics;++h) {
         double power=0;for(a=0;a<b->count;++a)power+=w[a]*b->reduction[a][h];

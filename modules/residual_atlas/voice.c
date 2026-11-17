@@ -1,7 +1,7 @@
 #include "voice.h"
 #include <math.h>
 #include <string.h>
-static int valid(double root,double gain) {return isfinite(root)&&root>=0&&root<=1000&&isfinite(gain)&&gain>=0&&gain<=1;}
+static int valid(double root,double gain) {return isfinite(root)&&root>=0&&root<=1000&&isfinite(gain)&&gain>=0&&gain<=1.3;}
 static void select_anchor(RaVoice *v) {
     const RaBank *b=v->bank;unsigned lo=0,hi=0;double t=0;
     v->coverage=v->root<b->root[0]-1e-8?-1:v->root>b->root[b->count-1]+1e-8?1:0;

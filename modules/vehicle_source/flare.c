@@ -11,7 +11,7 @@ int vs_engine_enable_start_flare(VsEngine *s){
     response.crank_seconds=.05;response.catch_rise_seconds=.6;response.catch_settle_seconds=1.5;
     response.flare_rpm=2150;response.combustion_seconds=.16;
     s->owner.drive.lifecycle_response=response;s->owner.drive.lifecycle_override=1;
-    s->event_control.available_mask&=~mask;s->flare_gain=1;
+    s->event_control.available_mask&=~mask;s->flare_gain=.5;
     return 1;
 }
 int vs_flare_sample(VsEngine *s,uint64_t frame){

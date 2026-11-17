@@ -16,6 +16,7 @@ class EventPolicyPanel:
         ttk.Label(body,text='控制何时触发、连发次数及间隔；停止监听后应用。\n音色的模态、纹理与衰减仍在事件设计页编辑。',
             style='Hint.TLabel',wraplength=590).pack(anchor='w',pady=(8,12))
         for key,label,low,high,step,default in policy.FIELDS:
+            if not owner.bridge.tuning_headroom and key not in ('afterfire_min_count','afterfire_max_count','afterfire_probability'):high=round(high/1.3,8)
             row=ttk.Frame(body);row.pack(fill='x',pady=4)
             ttk.Label(row,text=label,width=29).pack(side='left')
             var=tk.StringVar(value=f'{owner.event_policy[key]:g}');self.vars[key]=var

@@ -12,10 +12,10 @@ const VslLifecycleProfile *vsl_lifecycle_profile(int profile) {
 }
 int vsl_lifecycle_profile_valid(const VslLifecycleProfile *p) {
 #define RANGE(field,lo,hi) (isfinite(p->field)&&p->field>=lo&&p->field<=hi)
-    return p&&RANGE(crank_seconds,.05,5)&&RANGE(crank_rpm,50,600)&&RANGE(crank_tau,.005,1)&&
-        RANGE(catch_rise_seconds,.025,1.5)&&RANGE(catch_settle_seconds,.05,4)&&
-        RANGE(flare_rpm,500,5000)&&RANGE(combustion_seconds,.005,2)&&
+    return p&&RANGE(crank_seconds,.05,6.5)&&RANGE(crank_rpm,50,780)&&RANGE(crank_tau,.005,1.3)&&
+        RANGE(catch_rise_seconds,.025,1.95)&&RANGE(catch_settle_seconds,.05,5.2)&&
+        RANGE(flare_rpm,500,6500)&&RANGE(combustion_seconds,.005,2.6)&&
         p->combustion_seconds<=p->catch_rise_seconds+p->catch_settle_seconds&&
-        RANGE(stopping_seconds,.05,5)&&RANGE(stopping_tau,.01,2);
+        RANGE(stopping_seconds,.05,6.5)&&RANGE(stopping_tau,.01,2.6);
 #undef RANGE
 }

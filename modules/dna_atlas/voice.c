@@ -4,7 +4,7 @@
 #define PI 3.14159265358979323846
 
 static int valid(double hz,double d,double g) {
-    return isfinite(hz)&&hz>=0&&hz<=1000&&isfinite(d)&&d>=0&&d<=1&&isfinite(g)&&g>=0&&g<=1;
+    return isfinite(hz)&&hz>=0&&hz<=1000&&isfinite(d)&&d>=0&&d<=1.3&&isfinite(g)&&g>=0&&g<=1;
 }
 int sa_voice_init(SaVoice *v,const SaBank *b,uint64_t seed,double hz,double d,double g) {
     unsigned a;
@@ -77,7 +77,7 @@ int sa_voice_tick_body(SaVoice *v,const HbBand *band,double out[2],double body[2
     sample(v,out,body,band,NULL,0);return 1;
 }
 int sa_voice_tick_shaped_body(SaVoice *v,const HbBand *band,const double *gain,double amount,double out[2],double body[2]) {
-    if(!v||!v->bank||!out||!body||out==body||!hb_band_valid(band)||!isfinite(amount)||amount<0||amount>1)return 0;
+    if(!v||!v->bank||!out||!body||out==body||!hb_band_valid(band)||!isfinite(amount)||amount<0||amount>1.3)return 0;
     sample(v,out,body,band,gain,amount);return 1;
 }
 void sa_voice_process(SaVoice *v,double *out,unsigned frames) {

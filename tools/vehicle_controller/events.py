@@ -41,7 +41,7 @@ class EventPanel:
             if not available:button.state(['disabled'])
             key='event_level_'+str(kind);variable=window.vars.setdefault(key,tk.DoubleVar())
             readout=tk.StringVar();window.values[key]=(readout,2)
-            slider=ttk.Scale(row,variable=variable,from_=0,to=2);slider.pack(side='left',fill='x',expand=True,padx=8)
+            slider=ttk.Scale(row,variable=variable,from_=0,to=2.6 if window.bridge.tuning_headroom else 2);slider.pack(side='left',fill='x',expand=True,padx=8)
             ttk.Label(row,textvariable=readout,width=6,anchor='e').pack(side='right');window.widgets[key]=(slider,0)
         ttk.Label(right,textvariable=self.model_info,style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(12,0))
         ttk.Label(left,text='目前为素材驱动的试听候选，尚未获得音色验收。\n没有参数的类型保持禁用，不替换成通用爆音。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=12)
@@ -135,7 +135,7 @@ class EventPanel:
         if not self.available_mask()&(1<<kind):return
         self.enabled.set(1);w.control['events']['manual_type']=kind;w.control['events']['manual_sequence']+=1
         if not w.running():w.start(monitor_only=True)
-        w.message.set('单次试听：'+NAMES[kind]+'。可以在“低频与辅助层”页独奏事件声部。')
+        w.message.set('单次试听：'+NAMES[kind]+'。可以在“低频与细节源”页独奏事件声部。')
 
     def update(self,state):
         w=self.window

@@ -1,0 +1,551 @@
+{
+  "schema": "vsl.app-headroom-delivery/1",
+  "date": "2026-11-17",
+  "base_commit": "158313d09b277c64cfc1a622c8feac7a839cb17d",
+  "verification": {
+    "schema": "vsl.app-headroom/1",
+    "bridge_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "prior_bridge_sha256": "b1a541e47568fe29cdb141027da839695d8cac7d5b6922a89cf5736a8a9ad5fd",
+    "default_max_error": 0.0,
+    "default_stems_max_error": 0.0,
+    "stem_sum_error": 8.731149137020111e-09,
+    "partition_exact": true,
+    "startup_volume": [
+      {
+        "gain": 0.0,
+        "max_scaling_error": 0.0,
+        "peak": 0.07216212153434753
+      },
+      {
+        "gain": 1.0,
+        "max_scaling_error": 0.0,
+        "peak": 0.370199590921402
+      },
+      {
+        "gain": 2.0,
+        "max_scaling_error": 0.0,
+        "peak": 0.740399181842804
+      },
+      {
+        "gain": 2.6,
+        "max_scaling_error": 1.1920928955078125e-07,
+        "peak": 0.9625189304351807
+      }
+    ],
+    "mechanical_preserved_and_retired_stems_zero": true,
+    "extended_limits_exercised": [
+      "gain",
+      "detail",
+      "low_mix",
+      "coherent_low_gain",
+      "resonant_gain",
+      "mechanical_gain",
+      "dna.line",
+      "dna.air",
+      "dna.motion",
+      "dna.idle_blend",
+      "dna.air_continuity",
+      "dna.pitch_follow",
+      "dna.line_state[6]",
+      "dna.air_state[6]",
+      "events.gain",
+      "events.pitch",
+      "events.decay",
+      "events.texture",
+      "events.levels[7]",
+      "vehicle_controller.startup.crank_seconds",
+      "vehicle_controller.startup.crank_rpm",
+      "vehicle_controller.startup.crank_tau",
+      "vehicle_controller.startup.catch_rise_seconds",
+      "vehicle_controller.startup.catch_settle_seconds",
+      "vehicle_controller.startup.flare_rpm",
+      "vehicle_controller.startup.combustion_seconds",
+      "vehicle_controller.startup.stopping_seconds",
+      "vehicle_controller.startup.stopping_tau",
+      "vehicle_controller.event_policy.afterfire_min_count",
+      "vehicle_controller.event_policy.afterfire_max_count",
+      "vehicle_controller.event_policy.afterfire_delay_seconds",
+      "vehicle_controller.event_policy.afterfire_interval_min_seconds",
+      "vehicle_controller.event_policy.afterfire_interval_max_seconds",
+      "vehicle_controller.event_policy.afterfire_repeat_gain",
+      "vehicle_controller.event_policy.afterfire_probability",
+      "vehicle_controller.event_policy.afterfire_cooldown_seconds",
+      "vehicle_controller.event_policy.shift_delay_seconds",
+      "vehicle_controller.event_policy.crank_delay_seconds",
+      "residual_gain"
+    ],
+    "extended_record_replay_exact": true,
+    "complete_36s_cycle": true,
+    "ui": true,
+    "normal_host": {
+      "frame": 134400,
+      "rpm": 850.0000000486835,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.04,
+      "root_hz": 7.083333333954635,
+      "gain": 0.25,
+      "idle_weight": 0.9999997319961698,
+      "gear": 1,
+      "lifecycle": 4,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 73,
+      "event_active": 0,
+      "event_started": 0,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 0,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.5133299855515361,
+      "pc_max_block_load": 0.5410900106653571,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "replay_host": {
+      "frame": 134400,
+      "rpm": 850.0000000486835,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.04,
+      "root_hz": 7.083333333954635,
+      "gain": 0.25,
+      "idle_weight": 0.9999997319961698,
+      "gear": 1,
+      "lifecycle": 4,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 73,
+      "event_active": 0,
+      "event_started": 0,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 0,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.30056999530643225,
+      "pc_max_block_load": 0.43810000643134117,
+      "replay": true,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 1,
+        "start_id": 1,
+        "gear": 1,
+        "automatic": 1,
+        "backfire": 1,
+        "rpm": 850.0,
+        "load": 0.0,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 1.3,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 2.6,
+        "catch_gain": 0.0,
+        "idle_mix": 1.0,
+        "idle_motion": 0.5,
+        "idle_detail": 1.0,
+        "input": {
+          "source": 0,
+          "valid": 4,
+          "sequence": 73,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 0,
+          "manual_type": 1,
+          "manual_sequence": 0,
+          "gain": 0.5,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "dna_unified": 1,
+        "dna": {
+          "line": 2.6,
+          "air": 1.0,
+          "motion": 0.5,
+          "idle_blend": 1.0,
+          "air_continuity": 0.35,
+          "pitch_follow": 0.25,
+          "line_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "air_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "mechanical_on_dna_page": true,
+    "no_retired_templates": true
+  },
+  "supplement": {
+    "bridge_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "authored_banks_extended": [
+      "vsl.controller-dna-bank/1",
+      "vsl.controller-dna-bank/2"
+    ],
+    "workbench_bounds": true,
+    "retired_zero_compatibility": true,
+    "retired_nonzero_rejected": true,
+    "restore_mechanical_zero": true
+  },
+  "local_delivery": "E:\\VehicleSoundLab\\references\\analysis\\app_headroom_v18\\delivery1",
+  "evidence": "E:\\VehicleSoundLab\\references\\analysis\\app_headroom_v18\\verification2",
+  "source_delta": {
+    "AGENTS.md": {
+      "sha256": "0194a24c3c1777d2a5f327341c77cd2e214ba67f42e961aab626adf20f9b4b4a",
+      "bytes": 515797
+    },
+    "Build-Vehicle-Source.ps1": {
+      "sha256": "d8c7e0d38c7ace7197d3c55f6b1e0cb376973beba8c685c3bb2c77ef948b0149",
+      "bytes": 928
+    },
+    "README.md": {
+      "sha256": "03ee7a854fcdae26e2798a5b5191ef408d7849486e8218884b4d7d63e98170bc",
+      "bytes": 2803
+    },
+    "experiments/vehicle_source_v1/bridge.c": {
+      "sha256": "dde7b057937f679227c319e6409b8b99a4227f77e013823d6331d519230a2758",
+      "bytes": 9323
+    },
+    "experiments/vehicle_source_v1/bridge.h": {
+      "sha256": "6595d8bac1569f6a51c573c3ef754fe1320c2209648439319c70b6861ce694db",
+      "bytes": 3402
+    },
+    "experiments/vehicle_source_v1/character_checks.c": {
+      "sha256": "c2decebb238d5f3d73dbdd03ad449e7eb78fe0827cbb821c6f9eff6297b8ca25",
+      "bytes": 2809
+    },
+    "experiments/vehicle_source_v1/state_dna_checks.c": {
+      "sha256": "010613310bac9d10405d77fb331d1ddc876dcda532eeb016defa44db3c408cc9",
+      "bytes": 4446
+    },
+    "handoff/AppV18参数扩展与机械DNA.md": {
+      "sha256": "61183fba4aca710e2ffe4f63975d4eafe007dc37f93dc2eaf927e234d75a494e",
+      "bytes": 5784
+    },
+    "handoff/统一系统主线.svg": {
+      "sha256": "29b9179bdecd319c682c89e3d3e431d0c0173d19cb70788a771916f10968d453",
+      "bytes": 5337
+    },
+    "handoff/统一系统报告.md": {
+      "sha256": "bf6c28a6ad5fcf767e352805b8564d0546c69ea132f4513ffa2154e37ce1bb3d",
+      "bytes": 17641
+    },
+    "modules/atlas_drive/control.c": {
+      "sha256": "3f06ee4f07ce3285549c1c3106ab3cb664ec1d9672ea90a33a06a9c11a9e3ca6",
+      "bytes": 1765
+    },
+    "modules/atlas_drive/render.c": {
+      "sha256": "41d7f5f054ad657445ca5f3b4f26a8860c750d9f1adfa542aacc74209893ffa2",
+      "bytes": 21535
+    },
+    "modules/atlas_drive/source_process.h": {
+      "sha256": "a92cd9f18ca8ff058c12fe5b0b74c4c8a38f3552415a7ac1efc78665fbaf8ea1",
+      "bytes": 1823
+    },
+    "modules/catch_bloom/voice.c": {
+      "sha256": "f0f448e0ce4c004e0fd30d08211fded0d2320e418d8afb01be24ead29b0b2680",
+      "bytes": 1611
+    },
+    "modules/dna_atlas/voice.c": {
+      "sha256": "25a237ad049e1a62529a96c76c2708bb49469f3e6d207438a1554ed1bb69b31b",
+      "bytes": 4497
+    },
+    "modules/dna_atlas/voice.h": {
+      "sha256": "100c81ade4339940b09ec16e7988996498161b2b21366b493d8ffc77b8b7afe7",
+      "bytes": 1715
+    },
+    "modules/dna_character/CMakeLists.txt": {
+      "sha256": "521652b74c3d1745380f3145f2e2752f05f51e195064503436e8cc105cd241a6",
+      "bytes": 447
+    },
+    "modules/dna_character/control.c": {
+      "sha256": "ac7ee31a830c5f9a791bdd767ae8aa9dd28fffbd01db613fa0ab32724a6b233b",
+      "bytes": 571
+    },
+    "modules/dna_character/mechanical.c": {
+      "sha256": "64aa276e05cfafa0eaf63d329b9d2198ef76f130e3b47a8656f9a9730e32a910",
+      "bytes": 374
+    },
+    "modules/dna_character/mechanical.h": {
+      "sha256": "e7a7a3c90adb557e65d56fa37859bbd848d8e61b99c9b5ea9850080e8310f972",
+      "bytes": 334
+    },
+    "modules/dna_character/voice.c": {
+      "sha256": "c3ee751070c7e22c15a759939e28da65e26515b0adebe71c234f17be95340096",
+      "bytes": 3343
+    },
+    "modules/drive_aux/voice.c": {
+      "sha256": "9aed560cd7a5ee3342556a9018350d3edfbd858eeafc91db583ab27ccf3a4b43",
+      "bytes": 1858
+    },
+    "modules/drive_recipe/shape.c": {
+      "sha256": "0f2c25b47f163c93e991140a2d2c00dbcdb78ee7db557d1fe32c426e8142dc13",
+      "bytes": 1642
+    },
+    "modules/drive_recipe/voice.c": {
+      "sha256": "0a7261d1379f2a45bc9d686cb731db2a3788e5a575b5acb65e6921b38371afec",
+      "bytes": 2011
+    },
+    "modules/drive_resonance/voice.c": {
+      "sha256": "00dda4fefcd4ae6fb38e2bc5a8efd14ccb747b15e99f9ec8a6703f4b7632b38f",
+      "bytes": 2907
+    },
+    "modules/event_control/configuration.c": {
+      "sha256": "4e69fef2e0dfedccbefdb1d5fa889ea8a55a89b3bf46fbe7447279e169b5cec6",
+      "bytes": 778
+    },
+    "modules/event_control/policy.c": {
+      "sha256": "9d075d59fab5d7fa425b285dcfc343e15a2aec7a02f5db130cb626d4bd4cde23",
+      "bytes": 5028
+    },
+    "modules/event_synth/pool.c": {
+      "sha256": "e4c4977ebf5fe64e3433288418389d3f7ddd542208cebd240966a40ad9eb8220",
+      "bytes": 4373
+    },
+    "modules/harmonic_body/mix.c": {
+      "sha256": "bcf06bdd1a3294ad71fb2040ad1633e71802f9606dccf19000281e1202fad3b0",
+      "bytes": 1134
+    },
+    "modules/modal_texture/envelope.c": {
+      "sha256": "4ab6c273300553dedf88de5b3d42e0b99f3a8cfb11a50b35df842301b2af4819",
+      "bytes": 2831
+    },
+    "modules/modal_texture/voice.c": {
+      "sha256": "848b40055dd3ae1624918d51f0b02572ff36e02a462e7759784c1e6a03195e71",
+      "bytes": 1244
+    },
+    "modules/residual_atlas/voice.c": {
+      "sha256": "ef95bdad8fc45194539654c75172c0be4a8cd46595a5125edccdb62a2daedfc4",
+      "bytes": 2988
+    },
+    "modules/start_texture/voice.c": {
+      "sha256": "6716bc35491c1cfedd504a5d9ed45fb0adc3da481fa0876f072c4afea3223a84",
+      "bytes": 2832
+    },
+    "modules/startup_flare/voice.c": {
+      "sha256": "bf860769c66df3471c65f7a59df32cf42e56d22a76316ed2272cf21afc4fe323",
+      "bytes": 2372
+    },
+    "modules/startup_flare/voice.h": {
+      "sha256": "8e05f100643f37dba62327c74f484cc146329a3f71314885d491ff9a0092a9cb",
+      "bytes": 625
+    },
+    "modules/state_dna/bank.c": {
+      "sha256": "0e7f79140d0500e5a80ecdfbb87bbdd84965d5cd3eb6e9eb2d87b542910501a8",
+      "bytes": 3172
+    },
+    "modules/vehicle_source/CMakeLists.txt": {
+      "sha256": "b34414122a14791d88ba36273180b5d34c5fcf79992642424ae9279a40778fce",
+      "bytes": 738
+    },
+    "modules/vehicle_source/flare.c": {
+      "sha256": "542c9f89a37d13a060f46df69e4911b3c4374a9de09cbfdea3fb647918df6d96",
+      "bytes": 2726
+    },
+    "modules/vehicle_source/internal.h": {
+      "sha256": "bceb766b1e34fce32f5d18cf71b1298156a36242fba011948262e69e194b0d17",
+      "bytes": 2289
+    },
+    "modules/vehicle_source/mechanical.c": {
+      "sha256": "b70b4f6fdfa59d37012bbec2d3b2e0876d262545f4deea65ab6cf6c53d4a4fdb",
+      "bytes": 650
+    },
+    "modules/vehicle_source/source.c": {
+      "sha256": "353d372b7c1d5cd4a9e5de5749a30ccc4b255e17d158825bdf3f5b33cc37874e",
+      "bytes": 4855
+    },
+    "modules/vehicle_source/state_dna.c": {
+      "sha256": "7832207b6b2a481f5be4c22e18ecb130facaea80b679e9f3f0ede53691e96840",
+      "bytes": 2875
+    },
+    "src/profiles/lifecycle.c": {
+      "sha256": "927367c94ad21d00a857795bd1e719afd1d61b17f4d19c670186033c977ca5bf",
+      "bytes": 1104
+    },
+    "tools/sound_designer/state_recipes.py": {
+      "sha256": "972cb3a9e48f516f2419524f1415980478986e00605e1cc80cf292fd48d850d3",
+      "bytes": 11058
+    },
+    "tools/sound_designer/vehicle_system.py": {
+      "sha256": "1796a61f27968ea6b25a2c493a9d26de3c9949b39dd79ce1656281132e92e056",
+      "bytes": 7992
+    },
+    "tools/sound_designer/web/vehicle_system.js": {
+      "sha256": "de03a47af1c3a9e078ba176399063b006da2cdfb9de79638bbfd0048778aae5c",
+      "bytes": 5002
+    },
+    "tools/sound_designer/web/vehicles.html": {
+      "sha256": "d08ce28ce7967019acb640d2bce70990ea878ab3b069786d148d90fcaa47c513",
+      "bytes": 3574
+    },
+    "tools/vehicle_controller/dna_bank.py": {
+      "sha256": "183b28c2eec3c3819eedcfdd3a7e775ca046e52f345c32f526db9656789d42de",
+      "bytes": 7239
+    },
+    "tools/vehicle_controller/dna_character.py": {
+      "sha256": "0e6440e1d68649cca78a99efe412a6e66016b6c43ed0019238f4bbce2530adb6",
+      "bytes": 1324
+    },
+    "tools/vehicle_controller/dna_panel.py": {
+      "sha256": "5a99ff4b7b08adde92c3e7f10fa5979107667c3906729de261f0d7a45db5e8c2",
+      "bytes": 8248
+    },
+    "tools/vehicle_controller/dna_tone_panel.py": {
+      "sha256": "647bc7a8ddd34ca3dd4e67ad9dd4a476de369bb90cecf535150e15d22d0af968",
+      "bytes": 4112
+    },
+    "tools/vehicle_controller/event_policy.py": {
+      "sha256": "3296f5a98c92e39d3a4bb6e733eaefdd0ee25a3020f9ce72b43a2f54101d57e3",
+      "bytes": 2288
+    },
+    "tools/vehicle_controller/event_policy_panel.py": {
+      "sha256": "dbd7aa149b49e2c81079bbe23c2555ce72db153d629a5257835ae8f7038c1eff",
+      "bytes": 3368
+    },
+    "tools/vehicle_controller/events.py": {
+      "sha256": "fdf652ec7833406de01a1ae7f8231d7cb38b317ba4b886a0d6e8e7a42cf4d039",
+      "bytes": 10162
+    },
+    "tools/vehicle_controller/native.py": {
+      "sha256": "d705786e5a54045831d2878a0852f8eb3aec70f002364a366179504b6dd5e153",
+      "bytes": 15548
+    },
+    "tools/vehicle_controller/startup.py": {
+      "sha256": "a270a98c9e42c13119707d8375c7f844d0c8e39742a2446bd78754780a41ceda",
+      "bytes": 2293
+    },
+    "tools/vehicle_controller/startup_panel.py": {
+      "sha256": "d46344dcc8a2728d214b985d2c978b925f0b927c81b8b2a3d4337fdb195ae7a2",
+      "bytes": 3249
+    },
+    "tools/vehicle_controller/startup_sound.py": {
+      "sha256": "9269bfddf3b9e708b0ea678e5d8973b709712095cb1e55c69a521518cb384ebc",
+      "bytes": 631
+    },
+    "tools/vehicle_controller/startup_sound_panel.py": {
+      "sha256": "408d13db58a3a18df43658a664f5c570b083f590c08eac67343f4ba962046bde",
+      "bytes": 1943
+    },
+    "tools/vehicle_controller/ui.py": {
+      "sha256": "9e0f8c729179c592d31159ddb12bd8eaf907d0598dde0945d6f4d79579c82616",
+      "bytes": 28943
+    },
+    "tools/verify_app_headroom_v18.py": {
+      "sha256": "4ac4eb7c89616b6690d7dbb2a5bdac070c2f5b4e55a6d52dd69af538b01a4b1a",
+      "bytes": 12128
+    }
+  },
+  "scope": "Startup .5 equals V17 nominal; 0..2.6 range; sound maxima +30%; mechanical in DNA; retired templates excluded; no new timbre fit"
+}

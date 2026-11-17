@@ -6,7 +6,8 @@
 VsEngine *vs_engine_create(const VsAssets *assets,const VsControl *control) {
     VsEngine *s;AdControl adopted;AdConfig config;
     if(!assets||!control||!vi_valid(&control->input)||!ec_control_valid(&control->events)||
-       (control->dna_unified!=0&&control->dna_unified!=1)||!dch_control_valid(&control->dna))return NULL;
+       (control->dna_unified!=0&&control->dna_unified!=1)||!dch_control_valid(&control->dna)||
+       (control->dna_unified&&(control->intake_gain!=0||control->air_gain!=0||control->road_gain!=0||control->wind_gain!=0)))return NULL;
     vs_control_to_atlas(control,&adopted);
     if(!ad_control_supported(&assets->owned.config,&adopted))return NULL;
     s=calloc(1,sizeof *s);if(!s)return NULL;
@@ -27,11 +28,12 @@ void vs_engine_destroy(VsEngine *s){if(s){sfl_destroy(s->flare);dch_destroy(s->c
 int vs_engine_set(VsEngine *s,const VsControl *control) {
     AdControl adopted;ViState input;EcState events;
     if(!s||!control||!vi_valid(&control->input)||control->dna_unified!=s->dna_unified||!dch_control_valid(&control->dna))return 0;
+    if(s->dna_unified&&(control->intake_gain!=0||control->air_gain!=0||control->road_gain!=0||control->wind_gain!=0))return 0;
     input=s->input;if(!vi_accept(&input,&control->input,s->generator.frame))return 0;
     events=s->event_control;if(!ec_set(&events,&control->events,s->generator.frame))return 0;
     if(s->flare){
         VsControl dry=*control;
-        if(!isfinite(control->startup_gain)||control->startup_gain<0||control->startup_gain>2||
+        if(!isfinite(control->startup_gain)||control->startup_gain<0||control->startup_gain>2.6||
            control->catch_gain!=0||control->legacy_event_gain!=0)return 0;
         dry.startup_gain=dry.catch_gain=dry.legacy_event_gain=0;
         vs_control_to_atlas(&dry,&adopted);
@@ -46,6 +48,7 @@ int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames) {
     if(!frames)return 1;
     if(s->assets->states)driver.dna=vs_state_sample;
     if(s->character)driver.character=vs_character_sample;
+    if(s->dna_unified)driver.auxiliary=vs_mechanical_sample;
     c.dna=s->dna;c.body=s->body;c.coherent_low=s->low;
     c.residual=s->residual;c.resonant=s->resonant;c.aux_objects=s->aux;
     c.startup=s->startup;c.catch_bloom=s->catching;c.source_added=s->added;

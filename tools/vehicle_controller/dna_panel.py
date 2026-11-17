@@ -37,8 +37,8 @@ class DnaPanel:
         defaults=dict(name=bank.get('name','自定义驾驶DNA'),reference_rpm=(self.groups['base'][0]['base_hz']/bank['root_per_rpm'] if bank else 3000),
             seed=bank.get('seed',48271),align_orders=bank.get('align_orders',12),detail=bank.get('detail',1.),
             transition_seconds=bank.get('transition_seconds',.12))
-        for key,label in (('name','音色名称'),('reference_rpm','默认首锚点参考 RPM'),('detail','DNA细节 · 0–1'),
-                          ('transition_seconds','状态过渡时间 · 0.02–2 s'),('align_orders','相位对齐 · 0–32'),('seed','随机种子')):
+        for key,label in (('name','音色名称'),('reference_rpm','默认首锚点参考 RPM'),('detail','DNA细节 · 0–1.3'),
+                          ('transition_seconds','状态过渡时间 · 0.02–2.6 s'),('align_orders','相位对齐 · 0–32'),('seed','随机种子')):
             row=ttk.Frame(body);row.pack(fill='x',pady=3);ttk.Label(row,text=label,width=25).pack(side='left')
             self.vars[key]=tk.StringVar(value=str(defaults[key]));ttk.Entry(row,textvariable=self.vars[key]).pack(side='left',fill='x',expand=True)
         ttk.Label(body,text='参考RPM为人工工程映射，四组共用；不同录音必须先确认阶次与视角可比。\n过渡时间是63%响应时间，约3倍达到95%；范围外变调会在驾驶窗口提示。\n单状态包导入当前组，多状态包整体替换。不会自动截断高频来兼容分音数。',

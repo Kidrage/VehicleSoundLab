@@ -2,7 +2,7 @@
 #include <math.h>
 #include <string.h>
 #define MT_PI 3.14159265358979323846
-static int valid(double amount){return isfinite(amount)&&amount>=0&&amount<=1;}
+static int valid(double amount){return isfinite(amount)&&amount>=0&&amount<=1.3;}
 /* Same declared Gaussian stream as the Python oracle; independent state,
    no coupling to the existing DNA/residual generators. */
 static double uniform(MtEnvelope *s) {

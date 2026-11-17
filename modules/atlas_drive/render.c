@@ -142,7 +142,9 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
             VslEventFrame parts;vsl_events_tick_parts(e,&parts);event=parts.transients*s->event_gain;
             st_voice_process(&s->startup,starter,NULL,1);
         } else event=vsl_events_tick(e)*s->event_gain;
-        da_voice_tick(&s->auxiliary,e,&aux_raw,&aux_objects);da_stereo(&aux_objects,aux);
+        if(source_only&&driver&&driver->auxiliary)driver->auxiliary(driver->state,e,&s->auxiliary,&aux_raw,&aux_objects);
+        else da_voice_tick(&s->auxiliary,e,&aux_raw,&aux_objects);
+        da_stereo(&aux_objects,aux);
         hb_mix_tick(&s->body,raw,body_raw,s->envelope,e->voice.body_gain,source.dna,source.low);
         if(s->config.catch_profile) {
             /* Full enveloped DNA before complementary body redistribution:

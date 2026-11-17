@@ -6,7 +6,8 @@ SflVoice *sfl_create(void);
 void sfl_destroy(SflVoice *voice);
 /* Single engine sample clock/lifecycle. Output is before master gain.
    Foreground replaces the engine, then hands back to its ongoing DNA.
-   Duration comes from the same lifecycle profile; no private vehicle driver. */
+   Duration comes from the same lifecycle profile; no private vehicle driver.
+   Amount 0..2.6, with 0.5 equal to the V17 nominal foreground level. */
 int sfl_tick(SflVoice *voice,int lifecycle,uint64_t frame,double duration,
              double amount,double stereo[2],double *background);
 #endif

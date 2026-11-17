@@ -5,7 +5,7 @@
 #include <string.h>
 static int valid(const double *a) {
     int i;if(!a)return 0;
-    for(i=0;i<DA_LAYERS;++i)if(!isfinite(a[i])||a[i]<0||a[i]>1)return 0;
+    for(i=0;i<DA_LAYERS;++i)if(!isfinite(a[i])||a[i]<0||a[i]>1.3)return 0;
     return 1;
 }
 int da_voice_set(DaVoice *v,const double a[DA_LAYERS]) {

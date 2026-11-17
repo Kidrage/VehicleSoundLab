@@ -2,7 +2,7 @@
 #include <math.h>
 #include <string.h>
 #define DRC_PI 3.14159265358979323846
-static int unit(double x){return isfinite(x)&&x>=0&&x<=1;}
+static int unit(double x){return isfinite(x)&&x>=0&&x<=1.3;}
 int drc_voice_init(DrcVoice *out,const DrcBank *b,const SaBank *dna,
                    const DrsBank *detail,uint64_t seed,double amount) {
     unsigned a;DrcVoice v;

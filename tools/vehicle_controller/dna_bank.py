@@ -59,7 +59,7 @@ def validate(value):
     _number(value['root_per_rpm'],1e-12,.1,'声学基频/RPM映射')
     _integer(value['seed'],1,2**64-1,'随机种子')
     _integer(value['align_orders'],0,32,'相位对齐阶数')
-    _number(value['detail'],0,1,'DNA细节')
+    _number(value['detail'],0,1.3,'DNA细节')
     anchors=value['anchors']
     if not isinstance(anchors,list) or not 1<=len(anchors)<=8:raise ValueError('需1–8个DNA锚点')
     last=0;harmonics=None
@@ -75,7 +75,7 @@ def validate(value):
             raise ValueError('锚点必须按基频递增，且分音数相同；不会自动截断分音')
         last=info['base_hz'];harmonics=info['harmonics']
     if value['schema']==STATE_SCHEMA:
-        _number(value['transition_seconds'],.02,2,'状态过渡时间')
+        _number(value['transition_seconds'],.02,2.6,'状态过渡时间')
         states=value['states']
         if not isinstance(states,dict) or not states or set(states)-set(STATES):raise ValueError('状态库应包含怠速、加速或收油锚点')
         for anchors in states.values():
