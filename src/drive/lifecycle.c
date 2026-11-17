@@ -14,8 +14,11 @@ const char *vsl_lifecycle_name(VslLifecycle state) {
     static const char *names[]={"OFF","READY","CRANK","CATCH","RUNNING","STOPPING"};
     return names[state>=VSL_OFF&&state<=VSL_STOPPING?state:0];
 }
+const VslLifecycleProfile *vsl_drive_lifecycle_profile(const VslDrive *d,int profile) {
+    return d&&d->lifecycle_override?&d->lifecycle_response:vsl_lifecycle_profile(profile);
+}
 int vsl_lifecycle_step(VslDrive *d,const VslParams *params,double dt) {
-    const VslLifecycleProfile *p=vsl_lifecycle_profile(params->profile);
+    const VslLifecycleProfile *p=vsl_drive_lifecycle_profile(d,params->profile);
     double idle=vsl_profile(params->profile)->idle_rpm,old_rpm=d->rpm;
     int old_start=d->last_start;
     d->last_start=params->start_id;d->life_seconds+=dt;d->lifecycle_flare=0;

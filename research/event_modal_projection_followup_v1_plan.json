@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-modal-projection-followup/1",
+  "status": "planned_not_executed",
+  "evidence": "Normalized current12-frequency bases are well conditioned. Nine-knot quadrature source projection explains18.98percent crank and11.56percent catch waveform SSE;300..1200 projection/raw27.69percent and16.71percent with signed cross retained. All five representations fail to reduce same-event withheld10ms waveform error. This is a conditional representation result, not physical source separation, a stochastic timbre gate or a limit of general OSC synthesis.",
+  "next": [
+    "Known-first local frequency/ridge and resonance-width observation at multiple finite window lengths. Controls must include fixed/detuned tones, known chirps and AM, damped ringing, coloured stochastic resonances and impulses. Check when the observer confuses finite noise with persistent lines; record unsupported gaps rather than automatically linking them.",
+    "Inspect the unchanged current A exterior source crops and already-approved comparable local material for supported frequency motion, cross-channel phase memory and stochastic band/time correlations. No new download or reuse of the rejected E afterfire reference. Avoid treating observed L/R as physical engine objects or inferring RPM without independent evidence.",
+    "Decide the controllable source model from supported statistics: sparse moving/modal OSC with measured amplitude/phase relationships, plus separately controlled procedural resonant texture if justified. Preserve native bandwidth, signed finite power budgets and source-onset/decay. Do not allocate all conditional projection remainder as independent noise or increase the knot rate toward a recording codec.",
+    "Before a new real generator fit, declare source controls and source-free schema, trigger/release initialization, fresh training/qualification random realizations and original spectral/temporal gates. Old random held-outs and this observed projection study are development evidence only. Known validation precedes fitting; C/UI promotion follows qualified procedural generation and explicit listening review."
+  ],
+  "scope": "Source generation only; preserve accepted DNA, runtime459/voices89/V12ABI11/author4, history and all failures. No spatial/ADI optimization/push/subagent/persistent restart; no duplicate pending G/material/hearing questions. Goal active."
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.event-ensemble-plan/1",
+  "previous_goal_turn": "Progress: short-event authoring through actual C/workbench, fixed B candidates and explicit failures frozen and independently audited.",
+  "prior_exploration": "Before this plan, a single fixed 200ms event window (-20,+180ms) and fixed backgrounds (-300,-200)/(+200,+300ms) were checked on all six previously selected B events. None had both sides >=3dB. This is exploratory evidence, not predeclared confirmation. Do not hunt other B windows or label these complete afterfire.",
+  "objective": "Reduce trigger-to-trigger spectral mismatch in material-derived event parameters using multiple procedural excitation seeds; keep the C kernel and old parameter fits exact.",
+  "fit": {
+    "method": "source-response-ensemble-v1",
+    "training_seeds": [27431,1049,17467,28123],
+    "held_out_seeds": [54123,5823,27183,48193],
+    "noise_cutoff_hz": [0,4000,6000,8000,10000,14000],
+    "spectral_bands_hz": [[0,60],[60,300],[300,1200],[1200,4500],[4500,14000],[14000,24001]],
+    "solve": "Same <=16 existing modal/noise component amplitudes, fixed frequency/phase/envelopes; exact finite-waveform per-seed quadratic power. Bounded nonnegative least-squares of all training seed log powers, <=240 evaluations/cutoff. Select using training results only, then independently check held-out seeds without further search.",
+    "qualification": "Original six-band gates remain: significant target>=total*1e-4 uses +/-3dB; weak bands allow max(2*target,2e-4*total). Every training AND held-out seed must pass; otherwise analysis-only, preserve editable model/refused profile.",
+    "protocol": "Explicit optional job11, full-band, ordinary envelopes only; supports existing 8ms minimum but does not infer full event extent or physical identity. No change to old jobs/defaults or runtime ABI."
+  },
+  "material_probe": "Use exact previously executed B rank3/rank6 16ms crop/background and existing A_crank/A_catch authoring jobs. No source/crop/background/cutoff/seeds/gates adjusted based on results; preserve all failures. Diagnostic only, no global event-bank or automatic-trigger promotion.",
+  "verification": "Known finite quadratic power/Jacobian, actual C multiple seeds, legacy profiles and PCM exact to frozen parent, workbench refusal/history/source-free parameter import/export, real desktop/mobile browser. No spatial rendering, ADI optimization, new download or persistent server restart."
+}

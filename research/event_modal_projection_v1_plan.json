@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.event-modal-projection-plan/1",
+  "scope": "Offline conditional representation-capacity diagnostic. No generator fit, C/UI/default replacement, spatial processing or new physical/RPM claims.",
+  "motivation": "Current crank modal coefficients constrain conservative300..1200Hz mean capacity to5.65percent of source target under old0..8 contour gains. This experiment removes old amplitude limits, not frequency evidence.",
+  "source_cases": "Unchanged A exterior verification5 crank47.60..48.18 and catch48.18..49.38, background47.00..47.25, source SHA25634885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964. Use all12 current frequencies, nominal original phases/sweep, including modes with zero old amplitude. No frequency search or source crop change.",
+  "models": [
+    {"id": "fixed1", "knots": 1, "quadrature": false},
+    {"id": "quad1", "knots": 1, "quadrature": true},
+    {"id": "fixed9", "knots": 9, "quadrature": false},
+    {"id": "quad5", "knots": 5, "quadrature": true},
+    {"id": "quad9", "knots": 9, "quadrature": true}
+  ],
+  "projection": "Joint unweighted native48k linear least-squares separately for observed channels. Unit-RMS columns, pivoted economic QR, independent singular-value rank/conditioning check; reject condition>1e5 or rank threshold1e-10. Real coefficients are signed. Hat envelopes at uniform duration knots, sine and optional cosine per mode. Not a recording codec or identified engine source; 9knot trajectories are diagnostic parameters only.",
+  "interpolation_probe": "Fit first3 of every4 consecutive10ms blocks and evaluate every fourth block, plus a separate full-source upper-capacity projection. No held-out random seed qualification or independent recording validation. Same-event interpolation does not prove autonomous generation.",
+  "known_first": "Exact prescribed quadrature AM/sweep including antiphase stereo, zero-old-amplitude independence, global energy and normal residual, same-event masked recovery, old oscillator phase parity, scale-conditioning invariance, duplicate-rank and invalid-input refusal, orthogonal-null control; independent direct finite FFT/cross-power accounting. Known report must pass before reading real source.",
+  "measure": "Raw source mean-channel power, no cancellation-prone stereo fold and no waveform background subtraction. Report background powers separately. Full waveform and six periodic2048Hann bands at240hop retain H,R,2Re(HR*) and signed cross terms; sum must reproduce raw. Band H/raw is not an additive coherent fraction. Compare reconstruction SSE and masked interpolation SSE, explain all conditional capacity limits.",
+  "next_decision": "Use measured capacity and conditioning to decide whether existing frequencies with sparse complex envelopes warrant a new procedural parameterization or require different supported frequency structure. Do not automatically export projected residual as mechanical noise, add it to a new noise source, or promote a source-trajectory reconstruction as a controllable voice.",
+  "preserve": "459 existing runtime/voice hashes,89formal voices,V12ABI11/author4, accepted DNA and history, rejected E overlap exclusion, all failed experiments. No downloads/push/subagent/persistent restart or repeated pending question. Goal active."
+}

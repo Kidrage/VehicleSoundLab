@@ -1,0 +1,36 @@
+{
+  "schema": "vsl.complementary-event-detector-plan/1",
+  "reason": "The existing fixed high-frequency detector can miss events dominated by low/middle frequencies. Add a separate selectable detector; retain the original high-frequency default and its evidence.",
+  "detector": {
+    "id": "low_mid",
+    "frequency_bands_hz": [[80, 300], [300, 1200], [1200, 3000]],
+    "window_frames": 960,
+    "hop_frames": 240,
+    "local_median_frames": 101,
+    "second_highest_band_excess_db": 6.0,
+    "minimum_peak_spacing_seconds": 0.1,
+    "event_offsets_seconds": [-0.025, 0.075],
+    "before_offsets_seconds": [-0.35, -0.15],
+    "after_offsets_seconds": [0.16, 0.36],
+    "fullband_contrast_gate_db_each_background": 3.0
+  },
+  "approved_material_ranges": {
+    "D": [[36.0, 46.0]],
+    "E": [[8.0, 20.0]],
+    "A": [[300.0, 344.0]]
+  },
+  "known_checks": [
+    "A low/mid Gaussian-windowed two-tone impact over a constant broadband floor is missed by the high detector and found by low_mid.",
+    "Changing stereo polarity preserves candidate times/powers; mono and duplicated stereo agree.",
+    "Constant tones, constant broadband power and silence do not establish impacts.",
+    "Existing A92 and new F3 high-frequency585 candidates remain exact, including original contrasts/windows.",
+    "Actual workbench selection/history/export retains detector identity and original context; no automatic physical label or fit.",
+    "Invalid detector requests preserve the existing project and reject cleanly.",
+    "Real C event preview and all runtime/voice sources remain unchanged."
+  ],
+  "limits": [
+    "A complementary acoustic detector is not a backfire classifier or source separator.",
+    "No threshold relaxation, background search, cleaning, new media download, global voice promotion or spatial/ADI work.",
+    "Any real candidate requires original video/audio context before fitting."
+  ]
+}

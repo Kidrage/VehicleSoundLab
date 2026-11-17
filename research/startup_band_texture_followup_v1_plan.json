@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.startup-band-texture-followup-plan/1",
+  "status": "planned_not_executed",
+  "evidence": "Independent64waveform audit preserves both unconditioned and conditioned failures. Current four-band stationary budget leaves below60Hz and above14kHz deficient. Catch fixed modal power already approximates the full low/mid target. Generalized necessary spectral bounds are INCONCLUSIVE, not a proof of infeasibility.",
+  "next_known_first": [
+    "Prove an exact source-frequency-budget adapter that covers all six original qualification bands, including lowpass below60Hz and highpass above14kHz when reliable, without lifting weak-band requirements.",
+    "Separate modal power controls from stochastic texture controls; retain coherent modal frequencies/phases but permit source-evidenced redistribution of their amplitudes. Do not simply add noise to a full modal budget.",
+    "Establish a feasible initialization and original constraints on prescribed sources before any new constrained real solve. Report numerical failure separately from acoustic failure; no assertion of infeasibility from SLSQP status.",
+    "Check finite-onset and release response, stereo policy and source-free editable parameter representation before considering C initialization or controller integration."
+  ],
+  "real_work": "This stage performs no further real fit. Declare final representation, limits and fresh held-out data before the next real run. Existing failed candidates and held-out observations remain development evidence only.",
+  "scope": "Pure generated native sources, no spatial renderer or ADI optimization. Keep current accepted sounds and the rejected-E decision. Full goal remains active."
+}

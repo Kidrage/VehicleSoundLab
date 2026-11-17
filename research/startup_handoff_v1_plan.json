@@ -1,0 +1,41 @@
+{
+  "schema": "vsl.startup-handoff-plan/1",
+  "date": "2026-11-17",
+  "purpose": "Measure the actual current C startup-to-idle layering and test existing controller timing against fixed approved A acoustic landmarks.",
+  "source_audio": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "reference_seconds": [35.0, 40.5],
+  "fixed_acoustic_intervals": {
+    "background": [35.0, 36.2],
+    "early": [36.65, 37.12],
+    "build": [37.22, 38.02],
+    "settling": [38.25, 39.0]
+  },
+  "reference_marker_gap_seconds": 0.57,
+  "reference_marker_warning": "Interval starts are existing acoustic analysis landmarks, not measured physical engagement/combustion times or an ECU RPM trace.",
+  "first_capture": {
+    "name": "original1",
+    "duration_seconds": 8,
+    "start_request_seconds": 0.35,
+    "crank_seconds": 0.28,
+    "catch_level": 1.0,
+    "gear": 0,
+    "throttle": 0,
+    "events_enabled": ["crank", "catch"]
+  },
+  "diagnostic_capture": {"name": "no-catch1", "catch_level": 0.0},
+  "candidate_hypothesis": {
+    "name": "timing1",
+    "crank_seconds": 0.58,
+    "expected_early_to_build_gap_seconds": 0.572,
+    "other_startup_response_fields": "unchanged",
+    "reason": "0.58s controller duration minus the existing 8ms early-event delay; no new runtime algorithm or inferred physical RPM."
+  },
+  "measurements": ["native 23-channel PCM", "200Hz lifecycle/RPM/idle-weight telemetry", "frame-level event notices", "continuous/event power and cross-power", "fixed-window band and time envelopes", "variable-block deterministic replay"],
+  "discovered_control_defect": {
+    "evidence": "original1 C capture and preserved core-red-test.log: requested neutral while OFF retains internal gear1, then CATCH->RUNNING triggers a 1->0 shift. SHIFT_CUT/RECOVER from1.280 to1.505s blocks the idle gate.",
+    "fix": "Adopt a stopped manual pedal-mode selector in OFF/READY before lifecycle stepping. Keep moving, automatic, bench and actual RUNNING shifts unchanged.",
+    "binary_revision": "V10; ABI9 layout and preset7/take8 remain; strict binary hashes distinguish V9 and V10."
+  },
+  "scope": {"runtime_c_changes": "only stopped pre-start selector adoption in drive.c", "accepted_voice_changes": false, "space_rendering": false, "compute_optimization": false, "downloads": false, "new_hearing_request": false},
+  "listening_acceptance": false
+}

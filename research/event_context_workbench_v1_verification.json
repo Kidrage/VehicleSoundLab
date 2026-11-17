@@ -1,0 +1,110 @@
+{
+  "schema": "vsl.event-context-workbench-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no_progress",
+  "current_goal_turn": "progress",
+  "scan": {
+    "ranges": [
+      [
+        45.0,
+        218.0
+      ],
+      [
+        230.0,
+        810.0
+      ]
+    ],
+    "candidates": 322,
+    "both_backgrounds_above_3db": 13,
+    "confirmed_afterfires": 0,
+    "independent_all_window_power_audit": true,
+    "max_contrast_error_db": 0.0,
+    "qualified_near_block_edges": false,
+    "source_sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f"
+  },
+  "editable_diagnostic_projects": [
+    {
+      "id": "ccb144e487b04925bf9b134d70c27674",
+      "name": "E18.59 · 补油段排除记录"
+    },
+    {
+      "id": "487efb8152c248d4b11a2558e97aad6b",
+      "name": "B122.53 · 操作声排除参考"
+    },
+    {
+      "id": "9ff3fbd5248a445bb5be62ed2e58b61d",
+      "name": "B526.055 · 行驶短声待辨识"
+    },
+    {
+      "id": "e321da3ebe0b4b5898d62af26cc549c3",
+      "name": "B546.135 · 行驶短声待辨识"
+    }
+  ],
+  "browser": {
+    "result": "passed",
+    "project_id": "6a4cd6d0c9a341a79ad5619bc93046f9",
+    "context_revision": "04e5914ab99d44bbaf3172112d3383b0",
+    "real_material_C_PCM_preserved": true,
+    "source_and_model_binding_checked": true,
+    "full_and_scoped_probes": true,
+    "rapid_switch_adopts_latest_audio_hash": true,
+    "context_evidence_in_parameter_exports": true,
+    "source_context_HTTP_seek_and_muted_play": true,
+    "history_restores_context_and_C_PCM": true,
+    "invalid_following_background_preserves_project": true,
+    "selection_save_reload": true,
+    "one_player_no_autoplay": true,
+    "desktop_mobile_checked": true,
+    "driver_not_launched": true,
+    "errors": []
+  },
+  "known_antiphase_and_PCM": "passed",
+  "legacy_response_regression": {
+    "schema": "vsl.event-response-workbench/1",
+    "result": "passed",
+    "ui": {
+      "result": "passed",
+      "project_id": "e00dc00d14b748f7befd09b22506623c",
+      "material_response_fit_parameters_exact": true,
+      "cutoff_edits_change_actual_C_PCM": true,
+      "history_restores_PCM_exact": true,
+      "checkbox_and_cutoff_persist": true,
+      "band_scope_disables_response_fit": true,
+      "legacy_missing_cutoff_preserved": true,
+      "exports_HTTP200": true,
+      "one_player_no_autoplay": true,
+      "desktop_mobile_checked": true,
+      "live_driver_not_launched": true,
+      "errors": []
+    },
+    "owned_server_closed": true,
+    "compiled_C_header_all_fields_exact": true,
+    "CSV_ZIP_manifest_verified": true,
+    "infeasible_response_preserves_model_and_refused_fit": true,
+    "invalid_protocols_refused": [
+      "vsl.event-authoring-job/1 / full",
+      "vsl.event-authoring-job/3 / band"
+    ],
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "scoped_context_cannot_claim_full_model_provenance": true,
+  "frozen_C_H_and_voice_subset_exact": 457,
+  "voice_files_exact": 89,
+  "runtime_binaries_exact": {
+    "build-vehicle-source-v6/bin/Release/vsl_source_bridge.dll": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+    "build-event-synth-v2/bin/Release/vsl_event_author_bridge.dll": "2043597cb96ab7902431bebb84ed2552ccf30277ace8d9160663ca357819fed1"
+  },
+  "source_C_changed": false,
+  "ABI_changed": false,
+  "formal_event_bank_changed": false,
+  "persistent_app_restarted": false,
+  "owned_test_services_closed": true,
+  "new_download": false,
+  "timbre_accepted": false,
+  "goal_complete": false,
+  "pending": "Startup hearing, true full-band afterfire and other event material/quality, complete multi-state vehicle acceptance.",
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\startup_timbre_v1\\delivery1",
+  "base_freeze_manifest_sha256": "902ae33b425b372d0cd405b07a684334cdc9afa885d45936d4029142691f5cb7",
+  "authoring_delta_freeze": "E:\\VehicleSoundLab\\baselines\\event_context_workbench_v1\\delivery1"
+}

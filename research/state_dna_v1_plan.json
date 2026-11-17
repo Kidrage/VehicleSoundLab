@@ -1,0 +1,36 @@
+{
+  "schema": "vsl.state-dna-plan/1",
+  "date": "2026-11-17",
+  "previous_goal_turn": "progress",
+  "purpose": "Complete an authored, state-aware continuous DNA path under the unique C vehicle controller, without changing accepted catalog timbres.",
+  "runtime": {
+    "source": "Pure parameter synthesis only; no waveform assets, playback or spatial processing.",
+    "states": ["base/cruise and fallback", "idle", "power/free-rev/recovery/rev-match", "overrun/shift-cut"],
+    "anchors_per_state": 8,
+    "clock": "One main harmonic phase/root clock and one driver. State banks supply interpolated magnitudes, statistical variation and relative L/R phases.",
+    "transition": "Explicit configurable first-order weight smoothing; state assignment comes from the existing lifecycle/operating enum.",
+    "alignment": "Non-RT arbitrary cycle-origin alignment and relative phase offsets; never claim physical cylinder timing.",
+    "missing_states": "Fall back to base DNA; report the available mask and actual/target weights.",
+    "scope": "New authored DNA only; catalog LF/resonance/idle assets are not inherited or silently combined.",
+    "resources": "No optimization or ADI porting; all donor statistical states continue on the common clock for predictable transitions."
+  },
+  "host": {
+    "package": "Explicit DNA schema2 carries base anchors, optional idle/power/overrun anchors and transition_seconds; schema1 remains supported.",
+    "window": "Extend stopped-only DNA editor with state selection, optional imports and transition time; expose actual state blend in independent controller.",
+    "persistence": "Existing DNA field carries the complete new parameter package through engine, recipe, take, scenario, replay and stem export; bind every coefficient to source identity.",
+    "build": "New source ABI9/build directory; retain original V8 binary and old documents with original binary."
+  },
+  "verification": [
+    "Known single harmonic/phase and positive-magnitude morph cases, relative stereo phase, weights, invalid C configs and ownership.",
+    "Actual preserved V8 vs V9 catalog presets, default authored DNA, events, startup abort and lifecycle PCM/state/notices exact.",
+    "State changes at fixed RPM alter sound, fallback and endpoints work, common phase never resets, no unrelated optional layer leaks.",
+    "Actual parameter package import/export, full 32-second native lifecycle, variable-block replay, all dry stems and event identity.",
+    "Actual owned bounded muted native window, state editor, recipe/take restoration and saved-take replay; close all owned processes.",
+    "Freeze exact sources and evidence; report quality/calibration gaps separately from engineering checks."
+  ],
+  "constraints": [
+    "No subagents, commits, push, persistent app restart or new unapproved media download.",
+    "Do not resume old inverse-solver research or claim new timbre acceptance.",
+    "Existing startup hearing and G1/G2/G3 approval requests remain pending."
+  ]
+}

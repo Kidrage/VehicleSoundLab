@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.event-authoring-job/1",
+  "kind": "catch",
+  "name": "A 接火低频建立混合候选",
+  "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "seconds": [37.22, 38.02],
+  "background_seconds": [35.0, 36.2],
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved A cabin startup LF-build observation. This includes continuous engine energy, not an isolated ignition event. Use conservatively alongside continuous DNA; no measured physical RPM trajectory."
+}

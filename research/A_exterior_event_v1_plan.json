@@ -1,0 +1,33 @@
+{
+  "schema": "vsl.event-inspection-plan/1",
+  "date": "2026-11-17",
+  "purpose": "Find context-supported transient source material for the pure-synthesis vehicle event system; preserve accepted continuous timbres.",
+  "source": "A",
+  "approval_manifest": "E:/VehicleSoundLab/references/approval_manifest.json",
+  "identity_manifest": "references/segments_v1.json",
+  "ranges_seconds": [[190, 285], [300, 355]],
+  "scope": "Approved Performante exterior stationary and road sequences; no new download.",
+  "detector": {
+    "window": 960,
+    "hop": 240,
+    "local_median_frames": 101,
+    "two_bands_above_db": 6,
+    "min_spacing_seconds": 0.1,
+    "event_offsets_seconds": [-0.025, 0.075],
+    "before_offsets_seconds": [-0.35, -0.15],
+    "after_offsets_seconds": [0.16, 0.36],
+    "both_full_band_contrasts_db": 3
+  },
+  "steps": [
+    "Run the existing fixed-rule scan into a new evidence directory.",
+    "Inspect nearby original video frames and original audio context for both-background candidates; identify edits, handling, speech, gear transitions and rev/overrun context.",
+    "Keep unclassified transients unclassified. Full-band contrast alone is not afterfire identity or physical source separation.",
+    "Only create event authoring candidates when context and fitting applicability support them; keep diagnostic failures and do not change the global bank or accepted timbres.",
+    "Preserve tool versions, source hashes, measurements and limitations; expose usable candidates through the existing event workbench."
+  ],
+  "constraints": [
+    "No search for quieter backgrounds or threshold relaxation to force a fit.",
+    "No spatial rendering, ADI optimization, old numerical solver research, commits or pushes.",
+    "Pending G1/G2/G3 approvals and existing startup hearing are unchanged."
+  ]
+}

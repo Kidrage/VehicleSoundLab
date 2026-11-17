@@ -1,0 +1,24 @@
+{
+  "schema": "vsl.startup-contour-ensemble-plan/1",
+  "previous_goal_turn": "Progress: optional multi-realization authoring, actual C/workbench/export verification and independently audited immutable delta.",
+  "objective": "Improve repeated exterior startup temporal detail while protecting the current source crop, onset/valley/catch chronology and all reliable-band shapes. Do not replace exterior startup with old cabin comparisons.",
+  "inputs": "Exactly the crank and catch documents named by A_exterior_startup_v1/verification5/report.json; fixed47.60..48.18 and48.18..49.38s, background47.00..47.25s, approved A. Retain current cutoff, mode/noise coefficients, phases, envelope knot times and runtime C.",
+  "training_seeds": [27431,1049,17467,28123],
+  "held_out_seeds": [54123,5823,27183,48193],
+  "sequence": [
+    "Capture current eight actual-C realizations and independent-model agreement; inspect four-band temporal curves without fitting.",
+    "Verify new multi-seed finite contour Gram, objective and constraint derivatives against known prescribed profiles before any real fit.",
+    "One bounded joint solve of existing contour gains per exterior document, using only the four training realizations. No cutoff, layout, seed or time-window search.",
+    "After finalizing the candidate, check the untouched four held-out seeds and actual C. Keep refusals, do not retry using held-out outcomes.",
+    "Only if useful and qualified, expose as an optional refinement of an existing, source-bound contour profile in the authoring UI; preserve original parameters and source-free exports. No automatic promotion."
+  ],
+  "variables": "Existing <=4 groups x <=8 knot gains, bounds0..8. Times/frequencies/phases/component amplitudes/global attack/release and source-noise cutoff fixed. Source is pure procedural synthesis, no PCM asset, new room or spatial processing.",
+  "method": "Per-training-seed affine finite waveform response, exact periodic-Hann/rFFT temporal and spectral Gram matrices. Minimize weighted mean normalized temporal shape error with SLSQP, max160 iterations, ftol1e-10; one solve starting at current gains.",
+  "guards": "All original six spectral gates: significant target ±3dB; weak target <=max(2target,2e-4 total). Every >=3dB material temporal band must retain per-seed normalized shape RMSE <=that same seed's original RMSE+1e-10. Evaluate all eight seeds after candidate fixed. Require training weighted mean shape objective to improve by more than1e-5 relative; otherwise report no useful change. Unqualified profile remains analysis-only.",
+  "limits": [
+    "Gated10s runtime safety duration is not the material observation length; measure only the actual580ms crank/1.2s catch crop. Evaluate saved FP32 C samples in FP64.",
+    "Band-energy shape and finite-seed checks cannot prove mechanical naturalness, physical source identity, measured RPM, arbitrary-seed bounds or full afterfire completion.",
+    "Do not mutate old source evidence, approved voices, runtime C/DLL/ABI or accepted driving timbre. No new downloads, ADI work, spatial integration, persistent-service restart or push.",
+    "Full goal remains startup/idle mechanical quality, confirmed complete afterfire and other independent event timbres, full RPM/load/state coverage and a maintainable operational workbench plus independent window."
+  ]
+}

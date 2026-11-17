@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-modal-capacity-next-plan/1",
+  "status": "planned_not_executed",
+  "evidence": "Full six-band coverage and known feasible/infeasible guard pass. Real crank training shape improves54.95percent but held-out middle-band noise varies; catch fails PhaseI and stops. Independent32saved-audio audit agrees. Finite vertex/Minkowski modal capacity in crank300..1200Hz has only5.65percent mean upper bound under current0..8 gains; actual modal contribution.021percent. Old fixed per-mode amplitudes include zeros. Cross-power means do not establish cancellation as the main cause.",
+  "next": [
+    "Known-first source projection with amplitude-normalized oscillator bases, so the diagnostic is not constrained by old fit amplitudes or zero modes. Preserve source frequency/phase evidence and independently verify projection, conditioning and energy bookkeeping.",
+    "Measure how much raw-source middle-band structure the existing frequencies can explain, and whether source-derived time-varying quadrature/complex envelopes improve supported reconstruction. Report this as acoustic representation capacity, not physical engine separation or RPM.",
+    "Choose coherent and stochastic source capacity from that evidence before declaring another real fit. Do not just amplify a few old sines, fill the whole band with noise, relax the original gates or reuse observed held-out seeds for qualification.",
+    "Declare new parameters, controls, runtime initialization and independent validation before any C/UI promotion. Preserve prior experiments and all candidate refusals."
+  ],
+  "scope": "Source-only pure procedural synthesis. No spatial renderer/ADI optimization/new download/push/persistent restart. Existing pending G/hearing questions unchanged; no duplicate question. Full goal remains active."
+}

@@ -6,4 +6,5 @@ typedef struct {
     double stopping_seconds, stopping_tau;
 } VslLifecycleProfile;
 const VslLifecycleProfile *vsl_lifecycle_profile(int profile);
+int vsl_lifecycle_profile_valid(const VslLifecycleProfile *profile);
 #endif

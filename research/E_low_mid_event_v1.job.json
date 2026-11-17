@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.event-authoring-job/3",
+  "kind": "afterfire",
+  "name": "E 驻车降转后低中频短声 · 待听候选",
+  "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+  "seconds": [14.315, 14.415],
+  "background_seconds": [13.99, 14.19],
+  "analysis_scope": {"mode": "full"},
+  "response_fit": "source-response-v1",
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved E Performante stationary exterior rear-quarter recording. Original sampled13.74..14.94s frames show the same parked car; no identified cabin operation or scene transition. A bounded low/mid-frequency rise around14.34s occurs after the earlier rev decay and before the strong rising harmonic family near14.85s. Keep unchanged detector event14.315..14.415 / before13.99..14.19 / after14.50..14.70 seconds. Both fixed fullband contrasts exceed3dB. This supports investigating an acoustic short event only; throttle, fueling, actual afterfire identity, physical isolation and precise AV timing remain unconfirmed. afterfire is a local audition slot, never a formal-bank or physical-identity assertion. This100ms crop does not claim to capture the complete onset/tail. No association with the earlier E13.309s high-frequency event is inferred."
+}

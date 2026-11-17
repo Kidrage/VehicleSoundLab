@@ -1,0 +1,8 @@
+{
+  "schema": "vsl.event-texture-conditioning-plan/1",
+  "evidence": "startup_band_texture_v1 known2 passed, low-to-high leakage -129dB; fit1 BOTH rejected with line-search failure and constraints badly violated, despite improved high-band onset. Independent amplitude-unit conditioning must be tested before inferring representational infeasibility. No source result will be relabelled.",
+  "change": "Numerical coordinates only: for each of four bands choose s=RMS(initial eight gains), floor1e-12, then optimize z=g/s. Multiply analytic objective/constraint Jacobians by s and use bounds0..8/s. The feasible physical profiles, filters, modes, knot times, target objective and gates remain identical. No gain normalization of generated audio or per-seed adjustment.",
+  "known_first": "Prescribed known event at normal and1e-4 common waveform scale: compare objective, transformed gradients, constraints/Jacobians and rendered response. Verify bounded conditioned solve improves both and preserves the same physical bounds. Preserve first source failures; do not tune from their held-out rows.",
+  "real_sequence": "Only after known pass, run ONE conditioned fit for each same source crop, using the existing fixed training seeds8123,20347,41017,57037. Lock candidates before evaluation. Use NEW held-out14741,38011,73013,98717; original12007,33013,65003,91813 are development observations and excluded from new qualification. No retry, filter grid, mode change, crop change or held-out reuse.",
+  "runtime": "No C/DLL/ABI/UI or default change; source-only offline prototype. Full goal remains active."
+}

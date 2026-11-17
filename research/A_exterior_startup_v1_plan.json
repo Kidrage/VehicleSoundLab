@@ -1,0 +1,23 @@
+{
+  "schema": "vsl.exterior-startup-study/1",
+  "previous_goal_turn": "Progress: four-band event authoring, complete E310ms C/controller comparison and immutable delivery; new A whole-action leads preserved.",
+  "approved_source": "A",
+  "source_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+  "context_rule": "Expand all three exterior low/mid onset leads and the cabin start-control lead selected in the previous predeclared search. Preserve original PCM, fixed quarter-gain monitors, neighboring frames and all candidate intervals; do not infer exterior controls from another edited viewpoint.",
+  "contexts": {
+    "A_rear_47": [45.0, 54.0],
+    "A_rear_77": [74.5, 83.5],
+    "A_rear_106": [103.5, 112.5],
+    "A_cabin_94": [92.0, 100.0]
+  },
+  "analysis": "Visually review the entire action first. Identify coarse acoustic onset and later low-frequency/periodic transition using explicit short-time channel-power and spectral plots. These are acoustic landmarks, not ECU, physical starter/combustion separation, RPM or calibrated AV timing.",
+  "candidate_policy": "Only after context review, declare one exterior source interval and neighboring background before fitting. Preserve complete action original reference. Do not shift the crop/background to pass a gate; reject and retain inadequate evidence. Keep later catch/settling and cabin sources separate. Existing fullband and reliable-band gates remain.",
+  "system": "If source usable, use existing modular event_synth oscillator/resonator core, event_control and vehicle_source clock. Export editable workspace parameters and independent-controller recipe, compare against current startup with other layers held fixed; test variable-block stems and identity. No recording playback as source.",
+  "limits": [
+    "No new download, source cleaning, physical source separation, space rendering or ADI optimization.",
+    "No new formal-bank/default or accepted-timbre promotion from numerical gates.",
+    "Keep current C/DLL/ABI and frozen voices unless evidence demonstrates an actual runtime defect.",
+    "No repeated pending hearing/material questions or restart of the persistent services.",
+    "Full goal remains startup/idle quality, confirmed fullband afterfire, other events and full RPM/load/state coverage."
+  ]
+}

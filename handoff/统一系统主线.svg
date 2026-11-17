@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6" fill="none" stroke="#526e82" stroke-width="1.5"/></marker></defs><rect width="1440" height="900" fill="#f4f6f8"/><style>text{font-family:'Microsoft YaHei',sans-serif;fill:#172d42}.title{font-size:30px;font-weight:700}.sub{font-size:17px;fill:#567084}.head{font-size:20px;font-weight:600}.body{font-size:17px}.arrow{fill:none;stroke:#526e82;stroke-width:2;marker-end:url(#arrow)}</style>
+<text x="44" y="57" class="title">Vehicle Sound Lab · 统一声源主线</text>
+<text x="44" y="90" class="sub">App V15 / C11 · 48 kHz / ABI 12 · 本仓库生成干声，空间渲染在外部</text>
+<rect x="44" y="132" width="315" height="146" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="66" y="166" class="head">素材 → 参数配方</text>
+<text x="66" y="198" class="body">单状态选区、录音视角与标签</text>
+<text x="66" y="224" class="body">声纹分析、统计纹理与人工调音</text>
+<text x="66" y="250" class="body">参数快照 / 来源身份 / 听评记录</text>
+<rect x="44" y="334" width="315" height="146" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="66" y="368" class="head">控制信号</text>
+<text x="66" y="400" class="body">油门 / 刹车 / 挡位 / 启停</text>
+<text x="66" y="426" class="body">速度 / 加速度 / 打滑</text>
+<text x="66" y="452" class="body">键鼠占位、外部信号或控制行程</text>
+<rect x="44" y="536" width="315" height="143" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="66" y="570" class="head">唯一驾驶器</text>
+<text x="66" y="602" class="body">启动 → 接火 → 运行 → 停机</text>
+<text x="66" y="628" class="body">RPM / 负载 / 换挡 / 收油状态</text>
+<text x="66" y="654" class="body">全层共用同一控制时钟</text>
+<rect x="424" y="132" width="550" height="210" rx="14" fill="#eaf3ff" stroke="#9bbde6"/>
+<text x="446" y="166" class="head">Sound DNA · 一个身份，两个可调特征</text>
+<text x="446" y="198" class="body">进气感声线：主转速 OSC + 低转声线指纹</text>
+<text x="446" y="224" class="body">排气空气感纹理：细谱激励 + 已配置连续细节</text>
+<text x="446" y="250" class="body">两种总量 + 起伏 + 指纹比例 + 高转保留</text>
+<text x="446" y="276" class="body">六组工况响应；平滑跟随，声源不随状态重启</text>
+<rect x="424" y="374" width="550" height="94" rx="14" fill="#edf4ee" stroke="#cbd5df"/>
+<text x="446" y="408" class="head">低频轰鸣</text>
+<text x="446" y="440" class="body">相干低频；独立电平与干声分轨</text>
+<rect x="424" y="500" width="550" height="94" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="446" y="534" class="head">辅助噪音</text>
+<text x="446" y="566" class="body">机械 / NVH / 道路 / 风；旧进排气模板默认关闭</text>
+<rect x="424" y="626" width="550" height="120" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="446" y="660" class="head">独立事件</text>
+<text x="446" y="692" class="body">啮合 / 拖转 / 接火 / 收油 / 换挡 / 脱开 / 停机</text>
+<text x="446" y="718" class="body">程序激励 / OSC / 共振；4声部，附实例身份</text>
+<rect x="1032" y="238" width="364" height="171" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="1054" y="272" class="head">隔离的干声输出</text>
+<text x="1054" y="304" class="body">DNA 声线 / DNA 空气纹理</text>
+<text x="1054" y="330" class="body">低频 / 辅助 / 启停 / 事件声部</text>
+<text x="1054" y="356" class="body">保留角色、参数与事件身份</text>
+<text x="1054" y="382" class="body">左右录音关系 ≠ 真实对象位置</text>
+<rect x="1032" y="472" width="364" height="119" rx="14" fill="#eaf3ff" stroke="#cbd5df"/>
+<text x="1054" y="506" class="head">同一 App 参与调音</text>
+<text x="1054" y="538" class="body">参数配方 / 独奏 / 完整流程</text>
+<text x="1054" y="564" class="body">保存与精确控制行程回放</text>
+<rect x="1032" y="660" width="364" height="104" rx="14" fill="#fff" stroke="#cbd5df"/>
+<text x="1054" y="694" class="head">外部空间渲染</text>
+<text x="1054" y="726" class="body">独立仓库与独立算力预算</text>
+<path class="arrow" d="M359 237H424"/>
+<path class="arrow" d="M202 480V536"/>
+<path class="arrow" d="M359 608H394V308H424"/>
+<path class="arrow" d="M394 421H424"/>
+<path class="arrow" d="M394 548H424"/>
+<path d="M394 608V686" fill="none" stroke="#526e82" stroke-width="2"/><path class="arrow" d="M394 686H424"/>
+<path class="arrow" d="M974 237H1032"/>
+<path class="arrow" d="M974 421H1003V330H1032"/>
+<path class="arrow" d="M974 548H1003V355H1032"/>
+<path class="arrow" d="M974 686H1015V382H1032"/>
+<path class="arrow" d="M1214 409V472"/>
+<path class="arrow" stroke-dasharray="7 5" d="M1396 335H1416V712H1396"/>
+<text x="44" y="821" class="sub">听觉角色：声线与纹理属于 DNA，不宣称从混合录音完成物理进排气分离。</text>
+<text x="44" y="851" class="sub">当前跨工况混合为可调工程配方；各车型全 RPM / 负载标定与独立事件音色仍需逐项听评。</text>
+</svg>

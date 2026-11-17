@@ -1,0 +1,422 @@
+{
+  "schema": "vsl.event-band-scope-milestone/1",
+  "created": "2026-11-16T12:38:37.905900+00:00",
+  "previous_goal_turn": "no progress toward implementation: source/render boundary and budget confirmation only",
+  "this_goal_turn": "progress: scoped authoring/UI/provenance, finite-response band calibration/refusal, real tailpipe candidate, C/import/history/browser evidence and review seek fix",
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "verification": {
+    "schema": "vsl.event-band-scope-verification/1",
+    "goal_complete": false,
+    "timbre_accepted": false,
+    "full_contrast_db": 0.003479600340362808,
+    "scoped_contrast_db": 37.04442875627612,
+    "stationary_contrast_db": -1.1186198612018274e-13,
+    "known_decay_seconds": 0.08001029511434996,
+    "scoped_target_relative_error": 0.0,
+    "out_of_band_LF_target_sensitivity": 7.642076749192483e-09,
+    "dual_band_actual_response_fit": [
+      {
+        "hz": [
+          1200.0,
+          4500
+        ],
+        "target_power": 7.847185967125241e-05,
+        "generated_power": 7.847185967125718e-05,
+        "error_db": 2.642257258355926e-13,
+        "significant_target": true,
+        "passed": true
+      },
+      {
+        "hz": [
+          4500,
+          14000.0
+        ],
+        "target_power": 4.3921571844302695e-08,
+        "generated_power": 4.39215718443061e-08,
+        "error_db": 3.365502858270842e-13,
+        "significant_target": true,
+        "passed": true
+      }
+    ],
+    "infeasible_basis_refused": true,
+    "C_max_error": 7.275957614183426e-12,
+    "legacy_cases": [
+      {
+        "name": "A_crank",
+        "observation_parameters_policy_pcm_exact": true
+      },
+      {
+        "name": "A_catch",
+        "observation_parameters_policy_pcm_exact": true
+      }
+    ],
+    "invalid_scopes_rejected": [
+      "{'mode': 'band', 'low_hz': 100, 'high_hz': 200}",
+      "{'mode': 'band', 'low_hz': True, 'high_hz': 10000}",
+      "{'mode': 'band', 'low_hz': nan, 'high_hz': 10000}",
+      "{'mode': 'band', 'low_hz': 6000, 'high_hz': 15000}",
+      "{'mode': 'full', 'low_hz': 60}",
+      "{'mode': 'unknown'}"
+    ],
+    "source_binding_scope_checked": true,
+    "refusal_preserves_model": true,
+    "unqualified_fit_preserves_model": true,
+    "source_free_import_pcm_exact": true,
+    "history_scope_and_pcm_exact": true,
+    "renderer_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+    "ui": {
+      "result": "passed",
+      "full_refuses_scoped_admits": true,
+      "scope_and_full_contrast_visible": true,
+      "controls_restore_disabled_state": true,
+      "scope_survives_reload": true,
+      "scope_history_restored": true,
+      "refused_scope_change_preserves_profile": true,
+      "one_player_no_autoplay": true,
+      "desktop_mobile_checked": true,
+      "automated_audio_muted": true,
+      "live_driver_not_launched": true,
+      "errors": []
+    },
+    "test_server_closed": true,
+    "result": "passed"
+  },
+  "regression": {
+    "schema": "vsl.event-designer-verification/1",
+    "goal_complete": false,
+    "generated_C_header_compiles_and_parameters_exact": true,
+    "independent_C_error": 3.725290298461914e-09,
+    "gated_sweep_release_error": 1.4901161193847656e-08,
+    "known_decay_seconds": 0.11998828171339478,
+    "preserved_48k_stereo": true,
+    "explicit_44100_decode": true,
+    "source_free_import_pcm_exact": true,
+    "history_pcm_exact": true,
+    "edits_change_PCM": true,
+    "analysis_only_preserves_profile": true,
+    "stale_reference_visible": true,
+    "csv_rows": 93,
+    "export_hashes_verified": true,
+    "refusals": [
+      "overlapping intervals",
+      "invalid project identity",
+      "nonfinite profile",
+      "invalid seed",
+      "mode capacity"
+    ],
+    "renderer_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+    "renderer_sources": {
+      "Build-Event-Designer.ps1": "0cf1b6cc4bafed04b54a1b1e2809e2d6f471875a51a1214356248be1ed45ce1d",
+      "experiments/event_synth_v1/author_bridge.c": "2222c6fad882a7a08e81c5867a8a6d25212022892da5bead8987a377796d2916",
+      "experiments/event_synth_v1/CMakeLists.txt": "c61b75aaa3f58120bbc5e9f4b704fe4e5036cc951ab3df29845459e7e6c73fca",
+      "modules/event_synth/api.h": "0e56bd9c000062f341ec22e972896cb18caeef4495672fc94e67ffdc80bc608e",
+      "modules/event_synth/CMakeLists.txt": "0353c5bb5e653438bf6890b6c0a6682915d05f07a9b2ea47c549140a9c8bd90a",
+      "modules/event_synth/envelope.c": "b8b74323a895aaae99c23688e98435ee0b74ee81826cb57bb734287e25cf56a2",
+      "modules/event_synth/excitation.c": "dcc5ab755480490219dc5ec7a2a6ec71c17e0206621f65bee83f16c76f02c166",
+      "modules/event_synth/internal.h": "ff85a47d86be0efd6c8f2c0d37c9316d8cdfc1c9c45426d73548b24eae9e51d2",
+      "modules/event_synth/oscillator.c": "f9826999358550e5d02e67fa6e153363d0787e369c3dbcb19bc39ba53cc4cc07",
+      "modules/event_synth/pool.c": "ff3201415d162b28f896bec9f06e7493433a4dade83cdf94d02e12df9dce5b71",
+      "modules/event_synth/profile.c": "779ca68f7175c8f24225a414d2d9a94001b0d4ba1a045a2455301396dd6f6a61",
+      "modules/event_synth/voice.c": "378f2c861de95bd473c78638e5ebc810c3fe9459b4afc389dbfc2818c601968c"
+    },
+    "approved_A": {
+      "project": "4dc28ad4104f4f3ab6da44747190d0db",
+      "source_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "crop_original_seconds": [
+        35,
+        38.2
+      ],
+      "event_original_seconds": [
+        37.22,
+        38.02
+      ],
+      "contrast_db": 24.437810485362043,
+      "hearing_accepted": false,
+      "physical_separation": false,
+      "output": "E:\\VehicleSoundLab\\renders\\event_band_scope_v1\\regression2\\workspace\\events\\4dc28ad4104f4f3ab6da44747190d0db\\b411cfe95d1d46409e850da9b52add5a"
+    },
+    "test_server": "http://127.0.0.1:58596",
+    "ui": {
+      "result": "passed",
+      "errors": [],
+      "real_upload_selection_fit_and_C_preview": true,
+      "mode_count": 12,
+      "band_count": 4,
+      "controls_affect_PCM": true,
+      "one_player_AB_preserves_volume": true,
+      "reference_uses_same_player": true,
+      "saved_parameters_survive_reload": true,
+      "history_restores_exact_PCM": true,
+      "refused_fit_preserves_draft_and_flags_binding": true,
+      "project_switch_preserves_unsaved_parameters": true,
+      "parameter_import_without_audio_reproduces_PCM": true,
+      "editable_modal_rows": true,
+      "download_count": 5,
+      "main_workbench_links_event_editor": true,
+      "mobile_no_horizontal_overflow": true,
+      "automated_audio_muted": true,
+      "live_driver_not_launched": true
+    },
+    "test_server_closed": true,
+    "result": "passed"
+  },
+  "material": {
+    "schema": "vsl.event-band-material-verification/1",
+    "result": "passed",
+    "hearing_accepted": false,
+    "physical_identity_confirmed": false,
+    "renderer_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+    "source_profile_sha256": "5fe3dcca886574a55d64bf497d88cf8fc67e6f72811bc9fb6080b9eda98f00e9",
+    "cases": [
+      {
+        "seed": 27431,
+        "independent_C_error": 2.3283064365386963e-10,
+        "peak": 0.12414074689149857,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0007739755015133552,
+            "actual_C_power": 0.0007739755290003814,
+            "error_db": 1.5423567691846665e-07
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 7.243535995359845e-06,
+            "actual_C_power": 7.243535105061483e-06,
+            "error_db": -5.337885943760742e-07
+          }
+        ]
+      },
+      {
+        "seed": 48271,
+        "independent_C_error": 9.313225746154785e-10,
+        "peak": 0.1243039071559906,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0007739755015133552,
+            "actual_C_power": 0.0007851655539070634,
+            "error_db": 0.06234024093237512
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 7.243535995359845e-06,
+            "actual_C_power": 6.6989080949042545e-06,
+            "error_db": -0.33946603038310325
+          }
+        ]
+      },
+      {
+        "seed": 90217,
+        "independent_C_error": 3.725290298461914e-09,
+        "peak": 0.1218659058213234,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0007739755015133552,
+            "actual_C_power": 0.0007538058923728386,
+            "error_db": -0.114676863337613
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 7.243535995359845e-06,
+            "actual_C_power": 6.395400875547352e-06,
+            "error_db": -0.5408285055563653
+          }
+        ]
+      },
+      {
+        "seed": 149921,
+        "independent_C_error": 4.656612873077393e-10,
+        "peak": 0.11876180022954941,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0007739755015133552,
+            "actual_C_power": 0.000777445904986962,
+            "error_db": 0.019429660904913798
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 7.243535995359845e-06,
+            "actual_C_power": 7.179412397917417e-06,
+            "error_db": -0.03861721925397781
+          }
+        ]
+      }
+    ],
+    "all_four_tested_seeds_within_3db": true,
+    "limitation": "Four specific seeds verify finite C output, not all random sequences, naturalness or physical event identity."
+  },
+  "web": {
+    "result": "passed",
+    "current_track": "context.wav",
+    "HTTP200": true,
+    "one_player": true,
+    "no_autoplay": true,
+    "four_tracks_and_all_downloads_available": true,
+    "switch_preserves_time_volume_and_play_state": true,
+    "rapid_switch_last_wins": true,
+    "unaccepted_status_visible": true,
+    "desktop_mobile_no_overflow": true,
+    "automated_audio_muted": true,
+    "errors": []
+  },
+  "source_bridge_sha256": "445af3ac7bc4f7236c7e29ec3a0d928503d91b59035a3a688a32c6af3a1dabe8",
+  "event_author_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+  "unchanged_files": [
+    "voices/cabin_anchors_v1/E Cabin Lower.model",
+    "voices/cabin_anchors_v1/E Cabin Upper.model",
+    "voices/cabin_anchors_v1/index.json",
+    "voices/catch_bloom_v1/A cabin catch.cb",
+    "voices/catch_bloom_v1/README.md",
+    "voices/coherent_low_v1/index.json",
+    "voices/coherent_low_v1/measured_phase.model",
+    "voices/coherent_low_v1/scrambled_phase.model",
+    "voices/dna_bank_v1/Hollow Spectrum.model",
+    "voices/dna_bank_v1/index.json",
+    "voices/dna_bank_v1/V10 Exterior.model",
+    "voices/dna_bank_v1/Warm Additive.model",
+    "voices/E_decel_source_v1/E slowing cabin.model",
+    "voices/E_decel_source_v1/E slowing cabin.sres",
+    "voices/E_decel_source_v1/index.json",
+    "voices/events_v1/profiles.h",
+    "voices/events_v1/profiles.json",
+    "voices/exterior_anchors_v1/A Stationary High.model",
+    "voices/exterior_anchors_v1/A Stationary Low.model",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+    "voices/exterior_anchors_v1/index.json",
+    "voices/F3_before_upshift_v1/F3 before upshift.model",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres",
+    "voices/F3_before_upshift_v1/index.json",
+    "voices/F3_fifth_local_v1/first_early.model",
+    "voices/F3_fifth_local_v1/first_late.model",
+    "voices/F3_fifth_local_v1/first_mid.model",
+    "voices/F3_fifth_local_v1/index.json",
+    "voices/F3_fifth_local_v1/second_early.model",
+    "voices/F3_fifth_local_v1/second_late.model",
+    "voices/F3_fifth_local_v1/second_mid.model",
+    "voices/idle_resonant_v1/detail.json",
+    "voices/idle_resonant_v1/README.md",
+    "voices/line_density_v1/index.json",
+    "voices/line_density_v1/README.md",
+    "voices/line_density_v1/V10 A Density 0.residual",
+    "voices/line_density_v1/V10 A Density 25.model",
+    "voices/line_density_v1/V10 A Density 25.residual",
+    "voices/line_density_v1/V10 A Density 50.model",
+    "voices/line_density_v1/V10 A Density 50.residual",
+    "voices/low_rumble_v2/A Exterior.model",
+    "voices/low_rumble_v2/B Cabin.model",
+    "voices/low_rumble_v2/D Dyno.model",
+    "voices/low_rumble_v2/E Cabin.model",
+    "voices/low_rumble_v2/index.json",
+    "voices/residual_atlas_v1/A Stationary High.residual",
+    "voices/residual_atlas_v1/A Stationary Low.residual",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+    "voices/residual_atlas_v1/E Cabin Lower.residual",
+    "voices/residual_atlas_v1/E Cabin Upper.residual",
+    "voices/residual_atlas_v1/index.json",
+    "voices/residual_atlas_v1/README.md",
+    "voices/residual_motion_v1/A_moving.motion",
+    "voices/residual_motion_v1/A_moving.residual",
+    "voices/residual_osc_v1/A_exterior.residual",
+    "voices/residual_osc_v1/E_cabin.residual",
+    "voices/residual_osc_v1/README.md",
+    "voices/resonant_detail_c_v1/idle_35.rdetail",
+    "voices/resonant_detail_c_v1/idle_add.rdetail",
+    "voices/resonant_detail_c_v1/index.json",
+    "voices/resonant_detail_c_v1/moving_35.rdetail",
+    "voices/resonant_detail_c_v1/README.md",
+    "voices/resonant_detail_v1/detail.json",
+    "voices/resonant_detail_v1/README.md",
+    "voices/resonant_detail_v1/SELECTION.json",
+    "voices/resonant_detail_v2/detail.json",
+    "voices/resonant_detail_v2/README.md",
+    "voices/start_texture_v1/A cabin early.start",
+    "voices/start_texture_v1/README.md",
+    "voices/startup_detail_v1/A startup settling detail.residual",
+    "voices/startup_detail_v1/index.json",
+    "voices/startup_detail_v1/README.md",
+    "voices/startup_drive_v1/A cabin motion.start",
+    "voices/startup_settle_v1/A start cabin settle.model",
+    "voices/startup_settle_v1/README.md",
+    "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+    "voices/state_colour_v2/fit.json",
+    "voices/state_colour_v2/README.md",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+    "voices/stationary_bridge_v1/index.json",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+    "voices/stationary_recipe_v1/index.json",
+    "voices/stereo_resonance_v1/A cabin settle.sres",
+    "voices/stereo_resonance_v1/README.md",
+    "modules/event_synth/api.h",
+    "modules/event_synth/CMakeLists.txt",
+    "modules/event_synth/envelope.c",
+    "modules/event_synth/excitation.c",
+    "modules/event_synth/internal.h",
+    "modules/event_synth/oscillator.c",
+    "modules/event_synth/pool.c",
+    "modules/event_synth/profile.c",
+    "modules/event_synth/voice.c",
+    "modules/event_control/api.h",
+    "modules/event_control/CMakeLists.txt",
+    "modules/event_control/internal.h",
+    "modules/event_control/policy.c",
+    "modules/event_control/scheduler.c",
+    "modules/vehicle_source/api.h",
+    "modules/vehicle_source/assets.c",
+    "modules/vehicle_source/atlas_adapter.h",
+    "modules/vehicle_source/CMakeLists.txt",
+    "modules/vehicle_source/control.c",
+    "modules/vehicle_source/driver.c",
+    "modules/vehicle_source/events.c",
+    "modules/vehicle_source/internal.h",
+    "modules/vehicle_source/source.c",
+    "modules/vehicle_source/stems.c"
+  ],
+  "global_event_bank_unchanged": true,
+  "new_downloads": false,
+  "new_C_or_runtime_DSP": false,
+  "deep_optimization": false,
+  "review_url": "http://127.0.0.1:8789/references/analysis/event_band_scope_v1/review3/index.html",
+  "editable_project": "E:\\VehicleSoundLab\\designs\\events\\09257bdb237b489fa6ee56f1c08b15df",
+  "limitations": [
+    "Only a scoped tailpipe acoustic increment, not confirmed afterfire or complete full-band event.",
+    "Original reference retains continuous/background sound. No waveform physical-source separation.",
+    "Band fit and four tested seeds do not establish transient fidelity, naturalness or all random seeds.",
+    "Original crank/catch remain unaccepted; automatic afterfire/other mechanical bank types still unavailable.",
+    "Startup hearing and G1/G2/G3 source approvals remain pending; no acceptance inferred.",
+    "Persistent launch/restart was previously automatically rejected: blocked by policy. No bypass or new persistent launch.",
+    "No ADI timing, spatial feature, new commit or push."
+  ]
+}

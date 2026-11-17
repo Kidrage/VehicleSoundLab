@@ -1,0 +1,36 @@
+{
+  "schema": "vsl.all-band-event-envelope-plan/1",
+  "previous_goal_turn": "Progress: complementary low/mid detection, editable E100ms candidate, actual C/driver/UI and immutable delivery.",
+  "problem": "The previous E100ms detection crop is not the event extent. Current automatic multiknot fitting only covers upper bands, despite existing runtime support for four arbitrary nonoverlapping frequency groups.",
+  "fixed_source": {
+    "id": "E",
+    "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+    "event_seconds": [14.19, 14.50],
+    "before_seconds": [13.99, 14.19],
+    "after_seconds": [14.50, 14.70],
+    "extent_rule": "Entire unused interval between unchanged previous background end and unchanged following background start. Do not search crop or background alternatives to pass. Does not establish physical separation or afterfire identity."
+  },
+  "authoring": {
+    "job_schema": "vsl.event-authoring-job/8",
+    "envelope_fit": "band-contour-v4",
+    "groups_hz": [[60, 300], [300, 1200], [1200, 4500], [4500, 14000]],
+    "group_reliability_db": 3.0,
+    "layout_candidates": ["fixed-eight-points", "adaptive-eight-points"],
+    "shape_spectral_alternations": 2,
+    "gates": "Original six spectral gates plus per-selected-band temporal nonregression against the original calibrated profile. Mean-normalized Hann band-power shape uses the same units and positive background excess; no component-count or runtime change."
+  },
+  "checks": [
+    "Known low/mid multiburst selects reliable low/mid groups and improves actual C time curves; weak upper bands do not get invented contours.",
+    "Constant scale does not change source reliability and knot proposals.",
+    "Old V2/V3 authoring parameters remain exactly reproducible under default helper arguments.",
+    "Actual E original PCM has unchanged fixed backgrounds and independent double-background powers; four C seeds and original six spectral gates are inspected.",
+    "Workbench extraction/edit/history/export uses the same job8 parameters and actual C; source-free import reproduces PCM.",
+    "Complete8s driver composition preserves continuous19channels and event trigger opportunities, with bounded event overlap and exact varied-block replay."
+  ],
+  "limits": [
+    "E remains an unclassified acoustic candidate; afterfire is only a local audition slot and not a formal-bank promotion.",
+    "No room/renderer, ADI optimization, deeper inverse solver, download, push or persistent-service restart.",
+    "Runtime C/ABI11/authorABI4/Profile1408 and89formal voices remain unchanged; previous candidate and all failures retained.",
+    "Human acceptance, startup/idle mechanical quality, other events and full RPM/load/state coverage remain required."
+  ]
+}

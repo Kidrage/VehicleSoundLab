@@ -1,0 +1,43 @@
+{
+  "schema": "vsl.original-event-context-notes/1",
+  "source": "A",
+  "scan_count": 169,
+  "both_background_qualified": 47,
+  "selected_after_45_seconds": 4,
+  "selection": "Unchanged predeclared minimum double-background contrast ranking; all four eligible candidates inspected, not a hand-picked threshold search.",
+  "cases": [
+    {
+      "name": "A_low_mid_47635",
+      "seconds": 47.635,
+      "view": "stationary exterior close rear exhaust",
+      "observation": "All five frames show the rear outlets. Original acoustic onset continues into a longer broadband interval, followed about0.6s later by much stronger low-frequency engine content. The100ms detector crop is only the beginning of a longer action.",
+      "decision": "Retain as exterior startup-like action context for further whole-action review; do not fit or classify as an independent overrun pop."
+    },
+    {
+      "name": "A_low_mid_94635",
+      "seconds": 94.635,
+      "view": "cabin with visible centre-console start control and P dashboard",
+      "observation": "The first frame carries a Corsa caption. The hand is at the red-covered centre-console control throughout the five frames. Acoustic content shows a longer onset followed by a stronger low-frequency phase. These images support checking a startup action, but do not measure exact switch timing, crank speed or combustion catch.",
+      "decision": "Keep cabin context separate from the exterior candidates; no automatic afterfire label or source fit."
+    },
+    {
+      "name": "A_low_mid_106215",
+      "seconds": 106.215,
+      "view": "stationary exterior close rear exhaust",
+      "observation": "All five frames show rear outlets; the first frame has visible editing-transition blending. The acoustic onset is followed by sustained sound and a stronger low-frequency phase, without a complete independent short-event tail in the detection crop.",
+      "decision": "Retain whole-action context, including edit-transition caveat; do not promote as isolated afterfire."
+    },
+    {
+      "name": "A_low_mid_77175",
+      "seconds": 77.175,
+      "view": "stationary exterior close rear exhaust",
+      "observation": "Rear-outlet frames include an early transition blend. The100ms onset grows into a longer acoustic action with a later low-frequency rise; it is not a self-contained short event.",
+      "decision": "Retain as an exterior whole-action lead; classification and complete action boundaries remain unconfirmed."
+    }
+  ],
+  "visual_evidence": "event_full_envelope_v1/A-contexts1: all4 dashboard sheets and timeline spectra inspected; cabin000,002,004 native frames additionally inspected.",
+  "audio_reuse_check": "Similar coarse envelopes prompted an explicit1s stereo alignment check across all6pairs with+/-40ms search. Absolute matched correlation<=0.274 and relative residual>=0.961; no exact-sample duplicate was found in these tested windows. This does not rule out other edits or prove independent recordings.",
+  "physical_identity_confirmed": false,
+  "new_event_parameters": false,
+  "next": "Review complete startup-like actions and their source-specific timing before assigning starter/catch/idle roles; preserve cabin/exterior and all earlier startup evidence."
+}

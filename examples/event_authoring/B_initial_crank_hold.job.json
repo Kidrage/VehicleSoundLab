@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/3",
+  "kind": "crank",
+  "name": "B Tecnica 启动早期持续纹理候选",
+  "source": "E:/VehicleSoundLab/references/clean/B_decoded_float.wav",
+  "seconds": [15.2, 15.95],
+  "background_seconds": [12.2, 13.2],
+  "gated": true,
+  "response_fit": "source-response-v1",
+  "physical_identity_confirmed": false,
+  "context": "Same approved B cabin crop and background as B_initial_crank_texture.job.json. The ungated fit preserved mean spectral bands but concentrated90% of its energy within0.111s versus0.709s in the0.75s recording. Use the existing gated event envelope to preserve sustained early texture and release it on the same C startup clock. This is an explicit engineering envelope choice, not a measured physical starter, combustion or RPM model. Preserve the ungated attempt and the refused full-band catch attempt. Never inherit A exterior layers into this separate B cabin candidate."
+}

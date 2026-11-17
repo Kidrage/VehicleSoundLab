@@ -1,3 +1,5 @@
+当前主线已收敛到[统一系统报告](统一系统报告.md#5-c-模块与数据边界)，新增 `dna_character` 与 `vehicle_source/character.c`。下面保留历次模块说明。
+
 # C 模块与接口
 
 新增`experiments/catalog_drive_v1/F3_local_models.c/.h`：两独立局部库的非实时事务加载／拥有权与原SaBank绑定；`F3_local_checks.c`：原拥有者填污释放后的全帧源契约、同驾驶器2／12干声和状态检查。原DNA／驾驶／空间／owned／take C保持，仅5份目录／装配／检查文件修改，总667C/H。见[F3统一驾驶接入](../research/F3局部声纹接入统一驾驶V1.md)。

@@ -1,0 +1,1118 @@
+{
+  "schema": "vsl.startup-shape-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no synthesis progress: source/render boundary and budget only",
+  "current_goal_turn": "actual per-mode source envelope and authoring/controller integration",
+  "bridge_sha256": "3e7b7e9d837bdf14a6cc28678e5358e00a3438556e917877d187f4b854982460",
+  "old_bridge_sha256": "6a5a6a7323b95e09c1f8e01b7df4aff975d57b16e827a3cb7934c3cfb22d29c8",
+  "author_bridge_sha256": "62d797a7e9c4e3e1c461036afeca1515601a96002ce0e70088774d90d5e00246",
+  "abi": 10,
+  "author_abi": 3,
+  "profile_bytes": 800,
+  "preset_schema": 7,
+  "take_schema": 8,
+  "runtime_C_H_changed": [
+    "modules/event_synth/api.h",
+    "modules/event_synth/profile.c",
+    "modules/event_synth/voice.c"
+  ],
+  "voices_unchanged": [
+    "voices/cabin_anchors_v1/E Cabin Lower.model",
+    "voices/cabin_anchors_v1/E Cabin Upper.model",
+    "voices/cabin_anchors_v1/index.json",
+    "voices/catch_bloom_v1/A cabin catch.cb",
+    "voices/catch_bloom_v1/README.md",
+    "voices/coherent_low_v1/index.json",
+    "voices/coherent_low_v1/measured_phase.model",
+    "voices/coherent_low_v1/scrambled_phase.model",
+    "voices/dna_bank_v1/Hollow Spectrum.model",
+    "voices/dna_bank_v1/index.json",
+    "voices/dna_bank_v1/V10 Exterior.model",
+    "voices/dna_bank_v1/Warm Additive.model",
+    "voices/E_decel_source_v1/E slowing cabin.model",
+    "voices/E_decel_source_v1/E slowing cabin.sres",
+    "voices/E_decel_source_v1/index.json",
+    "voices/events_v1/profiles.h",
+    "voices/events_v1/profiles.json",
+    "voices/exterior_anchors_v1/A Stationary High.model",
+    "voices/exterior_anchors_v1/A Stationary Low.model",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+    "voices/exterior_anchors_v1/index.json",
+    "voices/F3_before_upshift_v1/F3 before upshift.model",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres",
+    "voices/F3_before_upshift_v1/index.json",
+    "voices/F3_fifth_local_v1/first_early.model",
+    "voices/F3_fifth_local_v1/first_late.model",
+    "voices/F3_fifth_local_v1/first_mid.model",
+    "voices/F3_fifth_local_v1/index.json",
+    "voices/F3_fifth_local_v1/second_early.model",
+    "voices/F3_fifth_local_v1/second_late.model",
+    "voices/F3_fifth_local_v1/second_mid.model",
+    "voices/idle_resonant_v1/detail.json",
+    "voices/idle_resonant_v1/README.md",
+    "voices/line_density_v1/index.json",
+    "voices/line_density_v1/README.md",
+    "voices/line_density_v1/V10 A Density 0.residual",
+    "voices/line_density_v1/V10 A Density 25.model",
+    "voices/line_density_v1/V10 A Density 25.residual",
+    "voices/line_density_v1/V10 A Density 50.model",
+    "voices/line_density_v1/V10 A Density 50.residual",
+    "voices/low_rumble_v2/A Exterior.model",
+    "voices/low_rumble_v2/B Cabin.model",
+    "voices/low_rumble_v2/D Dyno.model",
+    "voices/low_rumble_v2/E Cabin.model",
+    "voices/low_rumble_v2/index.json",
+    "voices/residual_atlas_v1/A Stationary High.residual",
+    "voices/residual_atlas_v1/A Stationary Low.residual",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+    "voices/residual_atlas_v1/E Cabin Lower.residual",
+    "voices/residual_atlas_v1/E Cabin Upper.residual",
+    "voices/residual_atlas_v1/index.json",
+    "voices/residual_atlas_v1/README.md",
+    "voices/residual_motion_v1/A_moving.motion",
+    "voices/residual_motion_v1/A_moving.residual",
+    "voices/residual_osc_v1/A_exterior.residual",
+    "voices/residual_osc_v1/E_cabin.residual",
+    "voices/residual_osc_v1/README.md",
+    "voices/resonant_detail_c_v1/idle_35.rdetail",
+    "voices/resonant_detail_c_v1/idle_add.rdetail",
+    "voices/resonant_detail_c_v1/index.json",
+    "voices/resonant_detail_c_v1/moving_35.rdetail",
+    "voices/resonant_detail_c_v1/README.md",
+    "voices/resonant_detail_v1/detail.json",
+    "voices/resonant_detail_v1/README.md",
+    "voices/resonant_detail_v1/SELECTION.json",
+    "voices/resonant_detail_v2/detail.json",
+    "voices/resonant_detail_v2/README.md",
+    "voices/start_texture_v1/A cabin early.start",
+    "voices/start_texture_v1/README.md",
+    "voices/startup_detail_v1/A startup settling detail.residual",
+    "voices/startup_detail_v1/index.json",
+    "voices/startup_detail_v1/README.md",
+    "voices/startup_drive_v1/A cabin motion.start",
+    "voices/startup_settle_v1/A start cabin settle.model",
+    "voices/startup_settle_v1/README.md",
+    "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+    "voices/state_colour_v2/fit.json",
+    "voices/state_colour_v2/README.md",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+    "voices/stationary_bridge_v1/index.json",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+    "voices/stationary_recipe_v1/index.json",
+    "voices/stereo_resonance_v1/A cabin settle.sres",
+    "voices/stereo_resonance_v1/README.md"
+  ],
+  "before_snapshot_voice_subset": 49,
+  "full_prior_freeze_voice_check": 89,
+  "checks": {
+    "native": {
+      "result": "passed",
+      "author_legacy_exact": [
+        {
+          "kind": "afterfire",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        }
+      ],
+      "independent_model": [
+        {
+          "gated": 0,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 4.673367907936932e-10
+        },
+        {
+          "gated": 0,
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "max_error": 4.621075223865123e-10
+        },
+        {
+          "gated": 0,
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "max_error": 4.68533403047422e-10
+        },
+        {
+          "gated": 1,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 9.457884128649674e-10
+        },
+        {
+          "gated": 1,
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "max_error": 9.449494936530911e-10
+        },
+        {
+          "gated": 1,
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "max_error": 9.604325737488928e-10
+        }
+      ],
+      "invalid_attacks_refused": [
+        "-0.1",
+        "2.01",
+        "nan",
+        "True"
+      ],
+      "old_layout_nonzero_refused": true,
+      "original_startup_23channels_exact": true,
+      "candidate_continuous_19channels_exact": true,
+      "only_candidate_event_audio_changes": true,
+      "event_notices_and_driver_final_state_exact": true,
+      "variable_block_replays_exact": true,
+      "old_recipe_refused": true,
+      "current_bridge_sha256": "3e7b7e9d837bdf14a6cc28678e5358e00a3438556e917877d187f4b854982460",
+      "old_bridge_sha256": "6a5a6a7323b95e09c1f8e01b7df4aff975d57b16e827a3cb7934c3cfb22d29c8",
+      "author_bridge_sha256": "62d797a7e9c4e3e1c461036afeca1515601a96002ce0e70088774d90d5e00246",
+      "old_author_sha256": "2043597cb96ab7902431bebb84ed2552ccf30277ace8d9160663ca357819fed1",
+      "runtime_changes": [
+        "modules/event_synth/api.h",
+        "modules/event_synth/profile.c",
+        "modules/event_synth/voice.c"
+      ],
+      "formal_voices_unchanged": 49,
+      "source_binding_verified": true,
+      "timbre_accepted": false,
+      "goal_complete": false
+    },
+    "independent_fft": {
+      "result": "passed",
+      "method": "explicit 2048-frame periodic Hann, per-channel rFFT squared, one-sided PSD and band integration; independent of scipy.spectrogram and fitter",
+      "raw_reference_exact": true,
+      "all_four_C_seed_curves_and_summaries_verified": true,
+      "source_bands": [
+        {
+          "peak_seconds": 0.11133333333333334,
+          "energy_t10_t50_t90": [
+            0.04633333333333333,
+            0.14633333333333334,
+            0.6263333333333333
+          ],
+          "early_quarter_fraction": 0.7137761853857346,
+          "mean_power": 0.000282075067671783
+        },
+        {
+          "peak_seconds": 0.29133333333333333,
+          "energy_t10_t50_t90": [
+            0.11133333333333334,
+            0.3363333333333333,
+            0.6963333333333334
+          ],
+          "early_quarter_fraction": 0.2666261140792505,
+          "mean_power": 0.07426908838876671
+        },
+        {
+          "peak_seconds": 0.35133333333333333,
+          "energy_t10_t50_t90": [
+            0.23633333333333334,
+            0.42633333333333334,
+            0.6963333333333334
+          ],
+          "early_quarter_fraction": 0.08127226281830588,
+          "mean_power": 0.04751730235261293
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.036333333333333336,
+            0.21133333333333335,
+            0.7413333333333333
+          ],
+          "early_quarter_fraction": 0.48678406800466845,
+          "mean_power": 0.002794099678794681
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.026333333333333334,
+            0.13133333333333333,
+            0.7263333333333334
+          ],
+          "early_quarter_fraction": 0.6126725515712058,
+          "mean_power": 0.000424967090400059
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.04633333333333333,
+            0.19133333333333333,
+            0.7413333333333333
+          ],
+          "early_quarter_fraction": 0.5149936112942081,
+          "mean_power": 7.219629048421141e-07
+        }
+      ],
+      "actual_C_temporal_errors": [
+        {
+          "seed": 27431,
+          "bands": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "original_cdf_rmse": 0.2784309919822118,
+              "candidate_cdf_rmse": 0.28055764410245054,
+              "source_early_fraction": 0.7137761853857346,
+              "candidate_early_fraction": 0.22941741367010546
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "original_cdf_rmse": 0.033858474740445545,
+              "candidate_cdf_rmse": 0.030799705657370287,
+              "source_early_fraction": 0.2666261140792505,
+              "candidate_early_fraction": 0.25102334989661296
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "original_cdf_rmse": 0.17492767900286832,
+              "candidate_cdf_rmse": 0.014554949261069415,
+              "source_early_fraction": 0.08127226281830588,
+              "candidate_early_fraction": 0.07096384194897878
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "original_cdf_rmse": 0.13075526886274746,
+              "candidate_cdf_rmse": 0.13167927301183885,
+              "source_early_fraction": 0.48678406800466845,
+              "candidate_early_fraction": 0.2983738446596883
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "original_cdf_rmse": 0.17756851245162977,
+              "candidate_cdf_rmse": 0.1312856782035883,
+              "source_early_fraction": 0.6126725515712058,
+              "candidate_early_fraction": 0.42761471075234464
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "original_cdf_rmse": 0.12808833956278243,
+              "candidate_cdf_rmse": 0.11925638000083562,
+              "source_early_fraction": 0.5149936112942081,
+              "candidate_early_fraction": 0.44535211748662157
+            }
+          ]
+        },
+        {
+          "seed": 48271,
+          "bands": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "original_cdf_rmse": 0.2784309919822118,
+              "candidate_cdf_rmse": 0.27094542581926606,
+              "source_early_fraction": 0.7137761853857346,
+              "candidate_early_fraction": 0.30535434306511106
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "original_cdf_rmse": 0.033858474740445545,
+              "candidate_cdf_rmse": 0.02665630491006336,
+              "source_early_fraction": 0.2666261140792505,
+              "candidate_early_fraction": 0.26862888298018667
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "original_cdf_rmse": 0.17492767900286832,
+              "candidate_cdf_rmse": 0.019458928234249096,
+              "source_early_fraction": 0.08127226281830588,
+              "candidate_early_fraction": 0.06984576509436191
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "original_cdf_rmse": 0.13075526886274746,
+              "candidate_cdf_rmse": 0.13627226363167463,
+              "source_early_fraction": 0.48678406800466845,
+              "candidate_early_fraction": 0.2790674706903962
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "original_cdf_rmse": 0.17756851245162977,
+              "candidate_cdf_rmse": 0.1295983392914421,
+              "source_early_fraction": 0.6126725515712058,
+              "candidate_early_fraction": 0.4298339496648362
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "original_cdf_rmse": 0.12808833956278243,
+              "candidate_cdf_rmse": 0.12175092192986985,
+              "source_early_fraction": 0.5149936112942081,
+              "candidate_early_fraction": 0.38427734871182934
+            }
+          ]
+        },
+        {
+          "seed": 93931,
+          "bands": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "original_cdf_rmse": 0.2784309919822118,
+              "candidate_cdf_rmse": 0.21145964270876255,
+              "source_early_fraction": 0.7137761853857346,
+              "candidate_early_fraction": 0.3614819035386705
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "original_cdf_rmse": 0.033858474740445545,
+              "candidate_cdf_rmse": 0.022475440712189546,
+              "source_early_fraction": 0.2666261140792505,
+              "candidate_early_fraction": 0.26429400754237165
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "original_cdf_rmse": 0.17492767900286832,
+              "candidate_cdf_rmse": 0.015025943350186867,
+              "source_early_fraction": 0.08127226281830588,
+              "candidate_early_fraction": 0.06380350521388695
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "original_cdf_rmse": 0.13075526886274746,
+              "candidate_cdf_rmse": 0.13697011114893273,
+              "source_early_fraction": 0.48678406800466845,
+              "candidate_early_fraction": 0.2902285867106572
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "original_cdf_rmse": 0.17756851245162977,
+              "candidate_cdf_rmse": 0.12639158316546834,
+              "source_early_fraction": 0.6126725515712058,
+              "candidate_early_fraction": 0.4398027383652055
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "original_cdf_rmse": 0.12808833956278243,
+              "candidate_cdf_rmse": 0.12245959581684034,
+              "source_early_fraction": 0.5149936112942081,
+              "candidate_early_fraction": 0.39848928058951694
+            }
+          ]
+        },
+        {
+          "seed": 17389,
+          "bands": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "original_cdf_rmse": 0.2784309919822118,
+              "candidate_cdf_rmse": 0.2945490085993897,
+              "source_early_fraction": 0.7137761853857346,
+              "candidate_early_fraction": 0.250231601059073
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "original_cdf_rmse": 0.033858474740445545,
+              "candidate_cdf_rmse": 0.0330525902070095,
+              "source_early_fraction": 0.2666261140792505,
+              "candidate_early_fraction": 0.24127876436324328
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "original_cdf_rmse": 0.17492767900286832,
+              "candidate_cdf_rmse": 0.015920690241166754,
+              "source_early_fraction": 0.08127226281830588,
+              "candidate_early_fraction": 0.06837517941774646
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "original_cdf_rmse": 0.13075526886274746,
+              "candidate_cdf_rmse": 0.13960701629096994,
+              "source_early_fraction": 0.48678406800466845,
+              "candidate_early_fraction": 0.279570827344889
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "original_cdf_rmse": 0.17756851245162977,
+              "candidate_cdf_rmse": 0.12749398990520555,
+              "source_early_fraction": 0.6126725515712058,
+              "candidate_early_fraction": 0.4286338776087479
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "original_cdf_rmse": 0.12808833956278243,
+              "candidate_cdf_rmse": 0.12128964459073525,
+              "source_early_fraction": 0.5149936112942081,
+              "candidate_early_fraction": 0.4355273914975561
+            }
+          ]
+        }
+      ],
+      "all_tails_zero": true,
+      "limitation": "The finite smooth envelope does not reproduce high-band multiple bursts; temporal metrics are not listening acceptance or physical source separation."
+    },
+    "workbench": {
+      "result": "passed",
+      "browser": {
+        "result": "passed",
+        "project_id": "68aee319c3ac4e68ae6eb0bbd0724efd",
+        "legacy_missing_attack_preserved": true,
+        "material_parameters_exact": true,
+        "modal_attack_edit_changes_C_PCM": true,
+        "history_restores_PCM_exact": true,
+        "reload_preserves_controls": true,
+        "exports_HTTP200": true,
+        "scope_and_fit_dependencies": true,
+        "one_player_no_autoplay": true,
+        "desktop_mobile_checked": true,
+        "persistent_service_restarted": false,
+        "live_driver_not_launched": true,
+        "errors": []
+      },
+      "header_attacks_exact": true,
+      "csv_attacks_present": true,
+      "original_source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1680000,
+        "last_frame": 1944000,
+        "source_seconds": [
+          35.0,
+          40.5
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "own_server_closed": true,
+      "actual_editable_project": "5a0400394cea4e55a8979853a627bbc9",
+      "actual_parameters": "E:\\VehicleSoundLab\\designs\\events\\5a0400394cea4e55a8979853a627bbc9\\a717d60a34454972812358c92b9776a8\\parameters.json",
+      "source_free_import_C_PCM_exact": true,
+      "timbre_accepted": false
+    },
+    "review": {
+      "result": "passed",
+      "decoded": [
+        {
+          "frames": 264000,
+          "channels": 2
+        },
+        {
+          "frames": 38400,
+          "channels": 2
+        },
+        {
+          "frames": 57600,
+          "channels": 1
+        },
+        {
+          "frames": 57600,
+          "channels": 1
+        },
+        {
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "frames": 384000,
+          "channels": 2
+        }
+      ],
+      "six_hashes_and_decodes": true,
+      "blob_switch_and_seek": true,
+      "playing_switch_position_and_volume_preserved": true,
+      "downloads_HTTP200": true,
+      "desktop_mobile": true,
+      "timbre_accepted": false,
+      "errors": []
+    },
+    "controller": {
+      "result": "passed",
+      "bridge_sha256": "3e7b7e9d837bdf14a6cc28678e5358e00a3438556e917877d187f4b854982460",
+      "no_autoplay": true,
+      "preset_sound_parameters_restore_and_save_exact": true,
+      "saved_input_refresh": {
+        "source": 0,
+        "valid": 4,
+        "sequence": 1,
+        "speed_mps": 0,
+        "acceleration_mps2": 0,
+        "tire_slip": 0.0
+      },
+      "old_binary_preset_refused_without_mutation": true,
+      "cases": [
+        {
+          "variant": "V11-original",
+          "frames": 384000,
+          "underflows": 0,
+          "notices_exact": true,
+          "final_state_exact": true,
+          "no_shift_states": true
+        },
+        {
+          "variant": "V11-candidate",
+          "frames": 384000,
+          "underflows": 0,
+          "notices_exact": true,
+          "final_state_exact": true,
+          "no_shift_states": true
+        }
+      ],
+      "audio_muted": true,
+      "own_window_closed": true,
+      "persistent_service_restarted": false,
+      "timbre_accepted": false
+    },
+    "regression": {
+      "result": "passed",
+      "final_real_parameters_and_fit_exact": true,
+      "gated_crop_does_not_add_natural_release": true,
+      "known_slow_attacks": [
+        {
+          "gated": 0,
+          "known_mid_attack": 0.35,
+          "fitted_mid_attack": 0.34999906989243124,
+          "report": {
+            "method": "band-attack-v1",
+            "bands": [
+              {
+                "hz": [
+                  60,
+                  300
+                ],
+                "fitted": true,
+                "attack_seconds": 0.0800003573639398,
+                "decay_seconds": 1.0999931578723519,
+                "modal_indices": [
+                  0
+                ],
+                "old_envelope_cdf_rmse": 0.3310412441678665,
+                "envelope_cdf_rmse": 3.639146148516028e-07,
+                "optimizer_terminated": true,
+                "evaluations": 7,
+                "source_peak_seconds": 0.08133333333333333
+              },
+              {
+                "hz": [
+                  300,
+                  1200
+                ],
+                "fitted": true,
+                "attack_seconds": 0.34999906989243124,
+                "decay_seconds": 1.1000045129288267,
+                "modal_indices": [
+                  1
+                ],
+                "old_envelope_cdf_rmse": 0.49776740843538514,
+                "envelope_cdf_rmse": 1.5707321978493923e-07,
+                "optimizer_terminated": true,
+                "evaluations": 8,
+                "source_peak_seconds": 0.3313333333333333
+              },
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "fitted": true,
+                "attack_seconds": 0.003919281647810981,
+                "decay_seconds": 1.1000000786001884,
+                "modal_indices": [
+                  2
+                ],
+                "old_envelope_cdf_rmse": 0.2972308747337913,
+                "envelope_cdf_rmse": 4.2550928872399265e-09,
+                "optimizer_terminated": true,
+                "evaluations": 22,
+                "source_peak_seconds": 0.021333333333333333
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "fitted": true,
+                "attack_seconds": 0.00600016499801566,
+                "decay_seconds": 1.0999999980412196,
+                "modal_indices": [
+                  3
+                ],
+                "old_envelope_cdf_rmse": 0.2972312232468348,
+                "envelope_cdf_rmse": 1.0802011099550802e-10,
+                "optimizer_terminated": true,
+                "evaluations": 16,
+                "source_peak_seconds": 0.021333333333333333
+              }
+            ],
+            "policy": "Fixed 2048-frame Hann power,240-frame hop,mean channel powers; positive background-subtracted curves. Fit one smoothstep attack and nongated exponential decay per existing 60–300/300–1200/1200–4500/4500–14000Hz band to normalized cumulative energy; max120 evaluations. Existing frequencies/phases/carrier counts unchanged. Finite-response gains must be recalibrated afterwards.",
+            "limitations": "An acoustic band envelope is not individual-mode isolation or measured combustion/RPM. Envelope smoothing does not recreate multiple bursts or pitch movement. One crop does not validate another startup. Attack is seconds, independent of the request decay multiplier; gated decay remains unused. Listening acceptance is separate."
+          }
+        },
+        {
+          "gated": 1,
+          "known_mid_attack": 0.35,
+          "fitted_mid_attack": 0.3499995525066784,
+          "report": {
+            "method": "band-attack-v1",
+            "bands": [
+              {
+                "hz": [
+                  60,
+                  300
+                ],
+                "fitted": true,
+                "attack_seconds": 0.08000006537901926,
+                "decay_seconds": 0.2,
+                "modal_indices": [
+                  0
+                ],
+                "old_envelope_cdf_rmse": 0.023671415351293575,
+                "envelope_cdf_rmse": 2.2859511406468024e-08,
+                "optimizer_terminated": true,
+                "evaluations": 8,
+                "source_peak_seconds": 0.37633333333333335
+              },
+              {
+                "hz": [
+                  300,
+                  1200
+                ],
+                "fitted": true,
+                "attack_seconds": 0.3499995525066784,
+                "decay_seconds": 0.2,
+                "modal_indices": [
+                  1
+                ],
+                "old_envelope_cdf_rmse": 0.14561580615699868,
+                "envelope_cdf_rmse": 8.969534508695942e-08,
+                "optimizer_terminated": true,
+                "evaluations": 6,
+                "source_peak_seconds": 0.6063333333333333
+              },
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "fitted": true,
+                "attack_seconds": 0.006398886046424068,
+                "decay_seconds": 0.2,
+                "modal_indices": [
+                  2
+                ],
+                "old_envelope_cdf_rmse": 1.170431275325987e-05,
+                "envelope_cdf_rmse": 4.243187151811301e-07,
+                "optimizer_terminated": true,
+                "evaluations": 15,
+                "source_peak_seconds": 0.35133333333333333
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "fitted": true,
+                "attack_seconds": 0.006932631549916952,
+                "decay_seconds": 0.2,
+                "modal_indices": [
+                  3
+                ],
+                "old_envelope_cdf_rmse": 1.1453382667522607e-05,
+                "envelope_cdf_rmse": 5.50198731266144e-07,
+                "optimizer_terminated": true,
+                "evaluations": 12,
+                "source_peak_seconds": 0.08133333333333333
+              }
+            ],
+            "policy": "Fixed 2048-frame Hann power,240-frame hop,mean channel powers; positive background-subtracted curves. Fit one smoothstep attack and nongated exponential decay per existing 60–300/300–1200/1200–4500/4500–14000Hz band to normalized cumulative energy; max120 evaluations. Existing frequencies/phases/carrier counts unchanged. Finite-response gains must be recalibrated afterwards.",
+            "limitations": "An acoustic band envelope is not individual-mode isolation or measured combustion/RPM. Envelope smoothing does not recreate multiple bursts or pitch movement. One crop does not validate another startup. Attack is seconds, independent of the request decay multiplier; gated decay remains unused. Listening acceptance is separate."
+          }
+        }
+      ],
+      "timbre_accepted": false
+    }
+  },
+  "core_checks": {
+    "event": 2,
+    "source": 6
+  },
+  "editable_parameters": "E:\\VehicleSoundLab\\designs\\events\\5a0400394cea4e55a8979853a627bbc9\\a717d60a34454972812358c92b9776a8\\parameters.json",
+  "editable_parameters_sha256": "449742ed83a44b3e6f2f7d5c2abd5af9e6c078f66885881e999a60bf94f380da",
+  "source_files": {
+    "AGENTS.md": "14cb58bde8e19b1f0505401ac236d2634b7d584b3a8752b48f0a74a249624df1",
+    "Build-Event-Designer.ps1": "e00f5608291ef10c5b2e5c9535b4e5d90a769c7d2f2d6999078f2ab5b5d093a1",
+    "Build-Vehicle-Source.ps1": "5e984ec857c9e25189e3182e9b1d5cae0151901efe04fbcf6cc6690a68486cfa",
+    "experiments/event_synth_v1/CMakeLists.txt": "c61b75aaa3f58120bbc5e9f4b704fe4e5036cc951ab3df29845459e7e6c73fca",
+    "experiments/event_synth_v1/author_bridge.c": "2ce43e679a0ac6964f8d4d2029ccbd5c1e965eb8d93141a2022fc36c29da7f7e",
+    "experiments/event_synth_v1/checks.c": "b98819e76ba3eebabee743612d9e9da367a1e9659fd98f51acefecc1790f1075",
+    "experiments/vehicle_source_v1/bridge.c": "9aa32177b9f698fe2df15a8fece146ef849a943a91d1ca8ad387a614a9dd7ad8",
+    "handoff/启动分频起音与控制台V11.md": "6a28e3ded048152dd40b3f856cb6ef329317216f2124374d8d7e561ee337a3c8",
+    "handoff/声源生成边界与算力V2.md": "e26d0c904150ab61f8667ddd3f0317ea0a6e6509874b01cbf494eea4bd3a3ea6",
+    "handoff/当前代码阅读入口.md": "2dd4a6328f00d41f4acf08a980b275ef6cc0766c4a0030e9ea71e9d7432404bb",
+    "modules/event_synth/CMakeLists.txt": "319c3bef62bd246e32188907bf76aac32a5773b1b6471f092832f7ea30f23399",
+    "modules/event_synth/api.h": "914c630862bc7b20660db6e1622795155f195e74941c2986fd550852a3d1141f",
+    "modules/event_synth/coloration.c": "c4211c10c0d2b5acc1e338fe1c4fbfd4c29cef1495e0d200cf8678a5ed35aa7a",
+    "modules/event_synth/envelope.c": "b8b74323a895aaae99c23688e98435ee0b74ee81826cb57bb734287e25cf56a2",
+    "modules/event_synth/excitation.c": "dcc5ab755480490219dc5ec7a2a6ec71c17e0206621f65bee83f16c76f02c166",
+    "modules/event_synth/internal.h": "394002413731dedcff270006cb2d206180cb2057f3aefa264496938df49dabbe",
+    "modules/event_synth/oscillator.c": "f9826999358550e5d02e67fa6e153363d0787e369c3dbcb19bc39ba53cc4cc07",
+    "modules/event_synth/pool.c": "ff3201415d162b28f896bec9f06e7493433a4dade83cdf94d02e12df9dce5b71",
+    "modules/event_synth/profile.c": "668af3912e53e267469fcdd22686234b37135df11690a7a2ba3925f80bd0ee43",
+    "modules/event_synth/voice.c": "176c4a2677ba9e15f6e761443d2a98a4baa4e967024affa4fc616635103f201f",
+    "tools/audit_startup_shape_v1.py": "124b74844dcc4d76ddd2c2e1b3b9261b5c8f32c759d8254465648706f970c80b",
+    "tools/author_event.py": "7686018c53eab4d8ce43363fadbd618feb61a705939b360d8695ad50ad8246eb",
+    "tools/build_startup_shape_review_v1.py": "6680db9231b496a7932c879d9851821aa0af49023ac3bc6e006c0d49fe75b59d",
+    "tools/build_startup_shape_v1.py": "37e7e3eea74c96c8c3abf6f43a3769b1e773bb0e6ac80403ea78639bdf3f2b74",
+    "tools/event_authoring/__init__.py": "307af1efd4fa8e12b4fb5b761585c905706eeaca7ac5780f8b882b10745fcfbd",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_authoring/band_scope.py": "4a4d77a3dfed79cf1e3430d81f9997b2f54b9dca82b74e6f98aae9f01767fac1",
+    "tools/event_authoring/context.py": "9b875dc75ea6ab2ad0e51f5908e30a603ec0b672367cbf690931461e97097029",
+    "tools/event_authoring/contract.py": "d4cec2fe2780318f40bc893b72e5c1bb83535a9ede5c3d798b0d0a5a62c0277b",
+    "tools/event_authoring/export.py": "7c77d205fb910257cc60d58059e5432ec1a8948e01deab620ac9ceacc4077f45",
+    "tools/event_authoring/fit.py": "073b31847a3f7e0e724ebcd25e5c66aa634e23793713ac3c1f0afb57ab5f21cc",
+    "tools/event_authoring/measure.py": "1b6f3e1902dcf142c65971e8b383e13f08d587b2e5dab6f5a0fa3804407cad4d",
+    "tools/event_authoring/model.py": "ff90acaf8433d293ad4d4bae623e0c22c7c256891fc5103638fd2afaf3808179",
+    "tools/event_authoring/native.py": "a7704aa42ec3db1784958e164fe462b33833c9f9442109bfdf97d116690195e2",
+    "tools/event_authoring/response_fit.py": "79ee1cce874ac0c8251bc46af3e06bedaee870d31e43f5cc7930cdfc0d6c604b",
+    "tools/event_authoring/scan.py": "88aed60a2ca054521102f5e4782fb5c396f54427f7a44e1bfed6b02d295a0c85",
+    "tools/event_authoring/scoped_fit.py": "ffc2a5a92b9a7fb25958c44c6de3828d270c9300f0c6b9e8bea0a599a6555aab",
+    "tools/event_authoring/temporal_fit.py": "6796a0c643040643aa2f2316bc13e2725c3bbd5a76868b2ce4211c6c35c5372d",
+    "tools/event_designer/__init__.py": "8ffa7bdde29c803a039b202c65796a2534c586d35b7d6e3e1b8105b612f21f30",
+    "tools/event_designer/candidates.py": "9de801324efc48b360e0f329040949fab63410e017f4e43214892800f64995fd",
+    "tools/event_designer/context.py": "7348baba20060883deaa7215668675065f453f615b8ea3c3e9a2937ce11626af",
+    "tools/event_designer/media.py": "0ce0cbb1121c58b1ba46122d73800000e284ae93565ca68436ab8061ccca9505",
+    "tools/event_designer/package.py": "226e1c3a08cfa8694d083e8fa99240d98eaf3f28b7d400561c5e356d194aec2b",
+    "tools/event_designer/workspace.py": "518e9d8a289b793820f5fc743ec4af2c0a3d156cd30e0945a451836048c1ce44",
+    "tools/finalize_startup_shape_v1.py": "62048ec0b3567c63dafdd04ec311eeca815839d157b510b9a31f5cb9af22e938",
+    "tools/inspect_startup_shape_v1.py": "a58a7691e22414e5a846e178240e8036fa047ccbb2865c27e0ae59bf529eba0b",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/sound_designer/controller.py": "a6cf1ebb75d00ae99b4a15e24d003f59e2159a1130f89bcee3f46a6f6ae1b6d3",
+    "tools/sound_designer/web/events.html": "9feeffae13fdda5a46ffd855d02421ac2c2a7d5ffc2eb2539180dd901c146975",
+    "tools/sound_designer/web/events.js": "2c4f5633d3411609620689fe0e46e781d0d585a65295bab08565808302bdfcd0",
+    "tools/startup_response_evidence_v1.py": "861eb976794171e44b5aee66534c53ddda737e2c14e764e50d5b4a1bf9d1fc6c",
+    "tools/vehicle_controller/__init__.py": "10224feb7d366f090047f4d3701c5f371b58ed28dd1a44a4f294070fcb147f13",
+    "tools/vehicle_controller/device.py": "f2895398b8e250bb49c4202a059e806f04441576580ba438a03043493a61fe52",
+    "tools/vehicle_controller/dna_bank.py": "469db6cb4612e3ce53192cd9fe66dd555d684ffb7b83cc83d230dcdd55fe0b79",
+    "tools/vehicle_controller/dna_panel.py": "592c709a07e8aa6c2bcb90dcc1edc84b7819a3c7d57618bb224bb8afde4b66b4",
+    "tools/vehicle_controller/dna_states.py": "099beab804b0455b55f8063a85be1ccff72a23d90cbad934fa1e5937f36d0f93",
+    "tools/vehicle_controller/event_policy.py": "362d85b528e2169ac0dadc7fc9891e1dfdd6194d861c3d7a43ddcfd567219e2c",
+    "tools/vehicle_controller/event_policy_panel.py": "1dc5f47b4a12018a71628a0357d603b807397d9901ab006081280f6db12d8ee6",
+    "tools/vehicle_controller/event_profiles.py": "561a76b40d7f841a66a7cc7020363fb69fe2ca1a6cd892f1b99eecfd9795ced3",
+    "tools/vehicle_controller/events.py": "35adaa96d0b2b23d6ef4de7771b5d01586742daec20a3995a9f69895b9e3c983",
+    "tools/vehicle_controller/host.py": "3372227b21baff148e1d0fe718c4fdf72e8148196741c309831cc1839cbe0883",
+    "tools/vehicle_controller/identity.py": "380a5c40f752398c407c06c095dfa40bb67d9c937bd3d493efd75d3967ab6568",
+    "tools/vehicle_controller/native.py": "7ba5a67b8ae6fb1c8d7e991bc03e5a2cee9f48016b5c35dc4fa1f5224a721f10",
+    "tools/vehicle_controller/recipe.py": "b776e4b4a5879515a4c9e0eaaf6fec82bb3a630fcab1de2573fd3b7dc177d31f",
+    "tools/vehicle_controller/render.py": "7fb6617b849f941a73705c3ca67755cb11e7f1bdee59cc41669c66cc78765213",
+    "tools/vehicle_controller/startup.py": "f7517683c727fd3a103a3f70c538823515e6ce167e031569d29408ce12bd2056",
+    "tools/vehicle_controller/startup_panel.py": "099a67c05d6805ebddd5c545f9862d11849fdf27399148c55cb3263b218de092",
+    "tools/vehicle_controller/take.py": "f21858c07e7c58bda31a77a68091a866e7d35a2a6ea0764c3267d06aa2a393b6",
+    "tools/vehicle_controller/ui.py": "3a7beb35f4790d186a61674b5ff32ba34176eca8a1c6301a3afa84406332899c",
+    "tools/verify_startup_shape_regression_v1.py": "7cad11aa6454b2b8536f31cede85163bf8b6b6576f15e62767fb5b2d1d9e898a",
+    "tools/verify_startup_shape_review_v1.cjs": "6cf1e86fceb89e30e1b644611c82d010fe89cf653d5d25c9dc31635ee966d46b",
+    "tools/verify_startup_shape_ui_v1.py": "d7e78916507e423ae8a02657a784498f0d03b8ac72536930a11c8eb2afa62790",
+    "tools/verify_startup_shape_v1.py": "ae5cb83866c74db8a45f0f11ee8446c731ae6100be9b183d5f680ed3cd622c45",
+    "tools/verify_startup_shape_web_v1.cjs": "189e7d3f5ee35ad86a5a8574157aed258cc735503ce79f401e1bdb65022a1566",
+    "tools/verify_startup_shape_workbench_v1.py": "4ec15adde76ed446e0a6b8258f5316149f0e32d50ba5414b65536f82f04dbd51"
+  },
+  "freeze": "E:\\VehicleSoundLab\\baselines\\startup_shape_v1\\delivery1",
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\startup_handoff_v1\\delivery1",
+  "base_manifest_sha256": "f32829e073300ab451c2a74f57da9d9d858722e7642a67becd28d8a3c73eaafc",
+  "retained_failures": [
+    "diagnosis1/candidate1 used implicit Tukey while claiming Hann",
+    "web1 compared WAV timestamp bytes instead of PCM",
+    "web2 CSV BOM verifier",
+    "review-web1 read old media before new Blob loaded"
+  ],
+  "new_timbre_accepted": false,
+  "goal_complete": false,
+  "physical_rpm_measured": false,
+  "persistent_service_restarted": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "unresolved": [
+    "startup mechanical sound quality and high-band multiple bursts",
+    "idle variation quality",
+    "confirmed full-band afterfire",
+    "other event timbres",
+    "full RPM/load/state coverage"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "B_console_setup": {
+    "source": "B",
+    "seconds": [110, 126],
+    "frames": [110, 110.5, 111, 111.5, 112, 112.5, 113, 113.5, 114, 114.5, 115, 115.5, 116, 116.5, 117, 117.5, 118, 118.5, 119, 119.5, 120, 120.5, 121, 121.5, 122, 122.5, 123, 123.5, 124, 124.5, 125, 125.5, 126],
+    "crop": [0, 0, 1, 1],
+    "caption": "113s overview visibly says ENGINE START REQUIRED. Inspect the subsequent console actions before assigning a startup interval; no ECU or combustion timing claim."
+  },
+  "B_initial_controls": {
+    "source": "B",
+    "seconds": [8, 18],
+    "frames": [8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18],
+    "crop": [0, 0, 1, 1],
+    "caption": "Check the original beginning independently of historical B_start/B_catch folder names. No presumed startup or physical event identity."
+  }
+}

@@ -4,4 +4,5 @@
 /* Returns one only when RUNNING; other states update rotation/permission here.
    Called once per simulation control tick, never from UI wall time. */
 int vsl_lifecycle_step(VslDrive *d,const VslParams *p,double dt);
+const VslLifecycleProfile *vsl_drive_lifecycle_profile(const VslDrive *drive,int profile);
 #endif

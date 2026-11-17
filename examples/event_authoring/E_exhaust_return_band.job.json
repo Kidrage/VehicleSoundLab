@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/2",
+  "kind": "afterfire",
+  "name": "E 驻车尾排降转瞬态：中高频回火候选",
+  "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+  "seconds": [13.285, 13.385],
+  "background_seconds": [12.96, 13.16],
+  "analysis_scope": {"mode": "band", "low_hz": 1200, "high_hz": 14000},
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved E stationary exterior rear-quarter rev sequence, continuous sampled video8..20s. A short broadband impulse around13.309s follows a falling harmonic family and has a decaying tail. This supports an exhaust-return acoustic candidate, not confirmed combustion or fuel telemetry. Before/after backgrounds differ during the engine decay; full-band extraction is not admitted against the declared preceding background. Fit only1.2..14kHz acoustic excess, with no claim to low body or full physical separation. afterfire is an explicit local audition slot; do not promote to global event bank without listening review."
+}

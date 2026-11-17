@@ -1,0 +1,34 @@
+{
+  "schema": "vsl.approved-event-context-plan/1",
+  "source": "F3",
+  "previous_goal_turn": "no progress: source/render boundary and design MCPS confirmation only",
+  "purpose": "Classify existing approved driving transients before compiling any independent event; continue full source-system work without ADI optimization or spatial processing.",
+  "scan_seconds": [[0.0, 278.0]],
+  "known_candidate_seconds": 103.465,
+  "detector": {
+    "window_frames": 960,
+    "hop_frames": 240,
+    "local_median_frames": 101,
+    "second_highest_HF_excess_db": 6.0,
+    "minimum_spacing_seconds": 0.1,
+    "event_offsets_seconds": [-0.025, 0.075],
+    "before_offsets_seconds": [-0.35, -0.15],
+    "after_offsets_seconds": [0.16, 0.36],
+    "fullband_both_background_gate_db": 3.0
+  },
+  "inspection": {
+    "known_context_seconds": [101.5, 105.5],
+    "known_frame_evidence": "E:/VehicleSoundLab/references/analysis/event_sources_v1/timelines1/F3_103",
+    "shortlist": "Inspect at most eight strongest both-background-qualified candidates outside known speech intro (<80s), ranked by minimum full-band contrast; keep every detector output.",
+    "followup": "After the first eight contain no supported exhaust event, inspect the remaining qualified >=80s candidates as a separate batch with the same fixed windows and gates; do not discard them by rank.",
+    "physical_identity": "Inspect original nearby video frames before fitting. An energy threshold, visible flame or folder name is not an afterfire label. Reject cuts, speech, cabin operations and sustained acceleration as isolated exhaust events.",
+    "no_window_search": true
+  },
+  "constraints": [
+    "Only already approved local F3 audio/video; no new download.",
+    "Retain original PCM and exact intervals/hashes, no denoising, normalization or threshold relaxation.",
+    "No global voice-bank/default/C change until a source candidate is qualified and explicitly staged.",
+    "Independent events and continuous DNA remain separate; output native stems and sample-clock identities.",
+    "Full goal remains startup/idle/driving/events/workbench/independent controller with verified sound, not merely successful detection."
+  ]
+}

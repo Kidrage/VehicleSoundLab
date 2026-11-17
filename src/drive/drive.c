@@ -21,7 +21,7 @@ void vsl_drive_reset(VslDrive *d,int profile) {
     memset(d,0,sizeof *d); d->profile=profile;d->gear=d->requested_gear=1;
     vsl_shift_cancel(d);d->release_seconds=-1;
 }
-void vsl_drive_step(VslDrive *d,const VslParams *p,double dt) {
+static void step(VslDrive *d,const VslParams *p,double dt,const VslKinematics *external) {
     const VslProfile *profile=vsl_profile(p->profile);
     double idle=profile->idle_rpm,maxrpm=profile->max_rpm;
     double pedal=p->throttle,brake=p->brake,old=d->throttle,target;
@@ -37,12 +37,24 @@ void vsl_drive_step(VslDrive *d,const VslParams *p,double dt) {
         d->last_start=old_start;
         if(was_active) { d->last_start=p->start_id;return; }
     }
+    if(external)vsl_kinematic_adopt(d,external);
+    /* A stopped manual selector is an initial condition, not a running
+       transmission event. Adopt it before an immediate start edge too; doing
+       this after CATCH would invent a torque cut on the way into idle.
+       Moving vehicles, automatic policy and the RPM bench retain their paths. */
+    if((d->lifecycle==VSL_OFF||d->lifecycle==VSL_READY)&&
+       p->drive_mode==VSL_PEDALS&&!p->auto_gear&&fabs(d->speed_kph)<1e-6&&
+       p->gear>=0&&p->gear<=7&&d->gear!=p->gear) {
+        d->gear=d->previous_gear=d->requested_gear=p->gear;
+        vsl_shift_cancel(d);
+    }
     if(!vsl_lifecycle_step(d,p,dt)) {
         d->throttle=d->load=d->acceleration=0;
         d->engine_throttle=d->engine_throttle_rate=d->throttle_rate=d->blip=0;
         if(p->drive_mode!=VSL_BENCH) {
             d->brake=follow(d->brake,p->brake,.04,dt);
-            vsl_longitudinal_step(d,idle,maxrpm,dt);
+            if(external)vsl_kinematic_step(d,external,idle,maxrpm,dt);
+            else vsl_longitudinal_step(d,idle,maxrpm,dt);
         } else { d->brake=0;memset(&d->vehicle,0,sizeof d->vehicle); }
         d->operating=VSL_IDLE;
         vsl_fueling_step(d,p,dt);
@@ -82,7 +94,10 @@ void vsl_drive_step(VslDrive *d,const VslParams *p,double dt) {
     if(p->drive_mode==VSL_BENCH && d->shifting)vsl_shift_cancel(d);
     if(d->shifting)vsl_shift_step(d,idle,maxrpm,dt);
     else { d->shift_gain=d->clutch_transfer=1;d->blip=0; }
-    if(p->drive_mode!=VSL_BENCH)vsl_longitudinal_step(d,idle,maxrpm,dt);
+    if(p->drive_mode!=VSL_BENCH) {
+        if(external)vsl_kinematic_step(d,external,idle,maxrpm,dt);
+        else vsl_longitudinal_step(d,idle,maxrpm,dt);
+    }
     else memset(&d->vehicle,0,sizeof d->vehicle);
     if(p->drive_mode==VSL_BENCH) {
         target=p->rpm;
@@ -137,4 +152,8 @@ void vsl_drive_step(VslDrive *d,const VslParams *p,double dt) {
             }
         }
     }
+}
+void vsl_drive_step(VslDrive *d,const VslParams *p,double dt){step(d,p,dt,NULL);}
+void vsl_drive_step_kinematic(VslDrive *d,const VslParams *p,double dt,const VslKinematics *input){
+    step(d,p,dt,input);
 }

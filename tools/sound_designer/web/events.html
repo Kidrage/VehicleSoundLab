@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vehicle Sound · 独立事件设计</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/events.css"></head>
+<body><header><div class="brand"><span class="mark">V</span><div>VEHICLE SOUND <small>音色工作台</small></div></div><div class="header-actions"><a href="/">工作区</a><a href="/index.html">Sound DNA</a><span>独立事件</span><button id="driver" class="quiet">打开驾驶试听 ↗</button></div></header>
+<main><div class="intro"><div><p class="eyebrow">EVENT DESIGNER / 02</p><h1>塑造每一次机械动作。</h1><p>选出一次事件和附近背景，提取参数，再用 C 声源试听与调整。</p></div><div id="projectLabel" class="project-tag">未载入工程</div></div>
+<div class="studio"><aside>
+<section class="card"><div class="section-head"><h2><b>01</b> 选择起点</h2><span>音频 / 参数</span></div>
+<label class="drop"><input id="audioFile" type="file" accept="audio/*,.aif,.aiff,.m4a"><span class="upload-icon">＋</span><strong>导入事件与附近背景</strong><small>0.12–60秒，单声道或双声道<br>保留原电平，不做自动归一化</small></label>
+<div class="presets" id="presets"></div><label class="import-label">或导入事件参数 JSON<input id="presetFile" type="file" accept=".json,application/json"></label>
+<label>打开事件工程<select id="projects"><option value="">选择已保存的事件…</option></select></label><p class="hint">启动啮合、拖转、接火、回火、换挡、脱开、停机均使用同一事件声源核。候选预设不表示音色已获认可。</p></section>
+<section class="card"><div class="section-head"><h2><b>02</b> 选区与提参</h2><span id="sourceInfo">等待音频</span></div>
+<details id="candidatePanel"><summary>查找短促声音 <span>先找候选，再判断动作</span></summary>
+<label>扫描关注频段<select id="scanDetector"><option value="high">高频瞬态 · 默认</option><option value="low_mid">低中频瞬态 · 闷爆 / 机械冲击候选</option><option value="short_high">短促高频瞬态 · 16毫秒事件窗</option></select></label>
+<button id="scanCandidates" disabled>扫描导入片段</button><p class="hint" id="candidateInfo">在整段导入音频中查找短瞬态，不自动判断回火或换挡，也不生成音色参数。</p>
+<label class="check"><input id="candidateAll" type="checkbox"> 显示全部候选，包含弱对比</label>
+<div id="candidateRows" class="candidate-list"></div><a id="candidateReport" hidden download="candidate-scan.json">下载完整候选记录</a>
+<p class="hint">选取后自动带入固定的事件、前背景和后背景。先听原声上下文，确认动作和干扰，再决定是否提参。</p></details>
+<canvas id="waveform" height="74"></canvas><div class="two"><label>事件起点 · 秒<input id="start" type="number" step=".01" min="0" value=".5"></label><label>事件终点 · 秒<input id="end" type="number" step=".01" min="0" value="1"></label></div>
+<div class="two"><label>背景起点 · 秒<input id="bgStart" type="number" step=".01" min="0" value="0"></label><label>背景终点 · 秒<input id="bgEnd" type="number" step=".01" min="0" value=".3"></label></div>
+<details id="contextPanel"><summary>前后背景核查 <span>选区 / 上下文</span></summary>
+<div class="two"><label>后背景起点 · 秒<input id="afterStart" type="number" step=".01" min="0" value="1.2"></label><label>后背景终点 · 秒<input id="afterEnd" type="number" step=".01" min="0" value="1.4"></label></div>
+<button id="probeContext">核查前后背景</button><p class="hint" id="contextInfo">把上方背景选在事件之前，再选事件之后的背景。对比度只能描述声音变化，不能识别回火或机械部件。</p>
+<button id="listenContext" disabled>听原声上下文</button><a id="contextReport" hidden download="event-context.json">下载核查记录</a></details>
+<label>分析范围<select id="scopeMode"><option value="full">全频：完整动作音色</option><option value="band">指定频带：补充局部短声</option></select></label>
+<div class="two"><label>频带下限 · Hz<input id="scopeLow" type="number" min="60" max="13850" step="10" value="1200" disabled></label><label>频带上限 · Hz<input id="scopeHigh" type="number" min="210" max="14000" step="10" value="14000" disabled></label></div>
+<p class="hint">指定频带适合低频轰鸣覆盖下的短促高频细节，只生成该频带的声学补充。参考仍为原始全频录音；这不是部件分离，滤波输出也可能延伸到选定频带之外。</p>
+<label>声音动作<select id="kind"><option value="engage">启动机啮合</option><option value="crank">启动拖转</option><option value="catch">接火</option><option value="afterfire">收油回火</option><option value="shift">换挡机械声</option><option value="disengage">启动机脱开</option><option value="stop">停机</option></select></label>
+<label>录音视角<select id="viewpoint"><option value="exterior">车外 / 尾排</option><option value="cabin">车内</option><option value="engine">发动机舱</option><option value="unspecified">未知 / 自定义</option></select></label>
+<label class="check"><input id="fitGated" type="checkbox"> 提取为持续门控声，如启动拖转</label>
+<label class="check"><input id="fitResponse" type="checkbox"> 校准频谱响应：自动设置噪声高切与成分电平</label>
+<label>频谱校准方式<select id="responseMethod" disabled><option value="source-response-v1">原方式：单次触发响应</option><option value="source-response-ensemble-v1">多次触发：稳定声音频谱</option></select></label>
+<p class="hint">多次触发用4次生成共同提参，再用另外4次检查；未通过时保留已有音色。它调整现有成分电平，不固定随机种子；目前使用普通起落包络。</p>
+<label class="check"><input id="fitEnvelope" type="checkbox"> 按频带提取起音：让低频与高频分别建立</label>
+<label class="check"><input id="fitContour" type="checkbox"> 提取高频多段包络：首响、低谷与再次建立</label>
+<label>频带包络策略<select id="contourMethod" disabled><option value="band-contour-v1">原方式：直接拟合高频能量</option><option value="band-contour-v2">保护弱频带：联合校准高频包络与频谱</option><option value="band-contour-v3">适应短促首响：选择高频控制点位置</option><option value="band-contour-v4">包含低中频：提取四频段时间变化</option><option value="band-contour-v5">保持声线：同时匹配频谱与起伏</option></select></label>
+<p class="hint">对比度不足的频带保留原包络。多段包络需启用频谱响应校准，并有至少16帧分析数据（约0.12秒）。四频段策略还包含60–300与300–1200 Hz；同时匹配策略会一并约束频谱和能量起伏。下方可修改模态起音及包络控制点。</p>
+<button id="analyze" class="accent">从选区提取事件参数 →</button>
+<p class="hint">事件0.008–5秒，背景至少0.06秒，选区互不重叠。短于60毫秒时关闭持续门控和长窗起音提取；低频峰与长尾衰减的测量会受片段长度限制。背景应在附近且不含目标事件。按所选分析范围检验3 dB对比度；指定频带另检查实际合成的频带误差，不合格时仅输出分析，保留已有参数。</p>
+<p class="hint" id="analysisInfo">混合录音的声学提取，不识别真实发动机部件或RPM。</p></section></aside>
+<div class="editor"><div class="transport"><div class="transport-action"><button id="render" class="primary">生成 C 试听</button><small id="renderInfo">选择音频或候选预设</small></div><audio id="player" controls preload="metadata"></audio>
+<div class="audition-controls"><button id="listenSource">导入片段</button><button id="listenReference">事件参考</button><button id="listenB">本次 B</button><button id="listenA">对照 A</button><button id="pinA">B 保留为 A</button><span id="auditionLabel">单播放器 · 参考与合成都以固定 −12 dB 监听</span></div></div>
+<section class="card main-card"><div class="section-head"><h2><b>03</b> 调整声源</h2><button id="save">保存参数</button></div>
+<div class="title-edit"><input id="name" value="未命名事件" aria-label="事件名称"><span id="modelInfo">等待参数</span></div><p class="hint" id="sourceBinding"></p>
+<div class="event-scalars" id="profileControls"></div><label class="check"><input id="gated" type="checkbox"> 持续门控：按保持时间释放；关闭时各成分自然衰减</label>
+<details><summary>振荡模态 <span>最多12个 / 正弦 / 独立起音 / 相位 / 扫频 / 衰减</span></summary><div class="table-scroll"><table><thead><tr><th>Hz</th><th>终点 Hz</th><th>幅度</th><th>相位 rad</th><th>衰减 秒</th><th>起音 秒</th><th></th></tr></thead><tbody id="modeRows"></tbody></table></div><button id="addMode">＋ 模态</button></details>
+<details><summary>噪声共振频带 <span>最多4个 / 中心频率 / Q / 包络</span></summary><div class="table-scroll"><table><thead><tr><th>Hz</th><th>Q</th><th>幅度</th><th>起音 秒</th><th>衰减 秒</th><th></th></tr></thead><tbody id="bandRows"></tbody></table></div><button id="addBand">＋ 频带</button></details>
+<details id="contourPanel"><summary>多段包络 <span>最多4个频段 / 每段2–8个控制点</span></summary><p class="hint">选组依据原模态／共振中心频率。包络替代组内成分的独立起音和衰减，总起音与释放仍生效；时间随衰减倍率伸缩，末点后保持。第一点为0秒，时间须递增、频段不能重叠。</p><div id="contourRows"></div><button id="addContour">＋ 包络频段</button></details>
+<details><summary>完整参数 JSON <span>可编辑并应用</span></summary><textarea id="jsonEditor" spellcheck="false" aria-label="完整事件参数JSON"></textarea><button id="applyJson">应用到编辑器</button></details>
+<label>素材备注<input id="context" type="text" placeholder="录音位置、改装情况、动作与干扰声音"></label>
+<div class="guide"><p><strong>更有金属感：</strong>微调模态频率与短衰减；避免全部等间距、同相位。<strong>更有冲击：</strong>缩短总起音，调整低频模态与噪声起音。<strong>更干净：</strong>降低纹理或频带幅度，保留素材中有证据的峰。</p><p>本页试听与车载事件使用同一C核。导出JSON后，在独立驾驶窗口的“独立事件”页导入；停止监听后载入，下次监听生效。背景扣除只估计统计增量，不能从混合录音中物理分离机械声。</p></div></section>
+<section class="card"><div class="section-head"><h2><b>04</b> 试听与导出</h2><span>宏参数应用于本次触发</span></div><div class="event-scalars" id="macroControls"></div>
+<div id="downloads" class="downloads"></div><p class="hint">所有预览使用相同固定监听增益，无房间、限幅或逐条响度补偿。下载包含原电平合成WAV、JSON、C参数、CSV及校验清单；WAV用于试听，运行时由参数合成。</p>
+<details id="historyPanel"><summary>事件参数历史 <span id="historyCount">0 个版本</span></summary><label>历史版本<select id="historyList"></select></label><button id="restoreHistory">恢复这一版</button><p class="hint">恢复参数、试听宏、选区与原有试听；每次成功提取、编辑和生成均保留记录。</p></details></section></div></div>
+<footer><span id="storage">本地事件工程</span><span>DNA / BODY / DETAIL / EVENT / AUX</span></footer></main><div id="toast" role="status" aria-live="polite">正在准备事件设计器…</div><script src="/event_player.js"></script><script src="/event_candidates.js"></script><script src="/event_contours.js"></script><script src="/events.js"></script></body></html>

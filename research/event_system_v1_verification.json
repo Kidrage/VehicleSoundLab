@@ -1,0 +1,642 @@
+{
+  "schema": "vsl.event-system-milestone-verification/1",
+  "goal_complete": false,
+  "hearing_accepted": false,
+  "implemented": [
+    "event_synth bounded4voice parameter synthesis",
+    "event_control semantic observer and16command queue",
+    "sample-clock vehicle_source integration",
+    "23native channels and per-instance notices",
+    "independent controller event page and frame-accurate take3",
+    "reusable cropped-event authoring/JSON-to-C compiler"
+  ],
+  "checks": {
+    "schema": "vsl.event-system-verification/1",
+    "bridge_sha256": "a65bdf4a6aa4d0e81a1ba19b25960317c3cacabf308b8f10928e8c48de93e59c",
+    "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "event_bank_sha256": "d63aeaf2f9be31a9ded6f39b28e0fb7a4c34cc3d10cbf58fd05180f9ea8be354",
+    "available_mask": 6,
+    "native_channels": 23,
+    "known_decay_seconds": 0.11998658605719852,
+    "known_modal_peaks": [
+      1007.8125,
+      750.0,
+      656.25,
+      1335.9375,
+      585.9375,
+      1453.125,
+      468.75,
+      281.25,
+      351.5625,
+      1570.3125,
+      1710.9375,
+      1640.625
+    ],
+    "profiles": [
+      {
+        "kind": "crank",
+        "frames": 22560,
+        "independent_python_vs_c_max_error": 2.9802322387695312e-08,
+        "peak": 0.5647318959236145
+      },
+      {
+        "kind": "catch",
+        "frames": 38400,
+        "independent_python_vs_c_max_error": 5.960464477539063e-08,
+        "peak": 1.5082141160964966
+      }
+    ],
+    "ui": true,
+    "replay_pcm_exact": true,
+    "replay_event_notices_exact": true,
+    "non_drive_tick_manual_frame": 87137,
+    "native_reconstruction_max_error": 7.216427719280993e-09,
+    "final_state": {
+      "frame": 182400,
+      "rpm": 850.0000000051358,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 7.083333333380548,
+      "gain": 0.25,
+      "idle_weight": 1.0,
+      "gear": 1,
+      "lifecycle": 4,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 0,
+      "event_active": 0,
+      "event_started": 4,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2
+    },
+    "source_events": [
+      {
+        "id": 1,
+        "frame": 384,
+        "requested_frame": 384,
+        "type": 1,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 2,
+        "frame": 13440,
+        "requested_frame": 13440,
+        "type": 2,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 1,
+        "frame": 14304,
+        "requested_frame": 384,
+        "type": 1,
+        "slot": 0,
+        "action": 2,
+        "reason": 1
+      },
+      {
+        "id": 2,
+        "frame": 51840,
+        "requested_frame": 13440,
+        "type": 2,
+        "slot": 1,
+        "action": 2,
+        "reason": 0
+      },
+      {
+        "id": 3,
+        "frame": 87137,
+        "requested_frame": 87137,
+        "type": 2,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 4,
+        "frame": 115200,
+        "requested_frame": 115200,
+        "type": 1,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 3,
+        "frame": 117858,
+        "requested_frame": 87137,
+        "type": 2,
+        "slot": 0,
+        "action": 2,
+        "reason": 0
+      },
+      {
+        "id": 4,
+        "frame": 162480,
+        "requested_frame": 115200,
+        "type": 1,
+        "slot": 1,
+        "action": 2,
+        "reason": 1
+      }
+    ],
+    "ui_method": "Application-owned Tk actions, own-HWND captures, muted WinMM output",
+    "no_autoplay": true,
+    "missing_event_buttons_disabled": true,
+    "manual_without_engine_start": true,
+    "exposed_event_controls": true,
+    "legacy_layers_disabled_in_candidate_mode": true,
+    "ui_native_stems": 16,
+    "ui_saved_identity_events": true,
+    "ui_final_state": {
+      "frame": 47520,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.0,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 32,
+      "event_active": 1,
+      "event_started": 2,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 1,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.28694998472929,
+      "pc_max_block_load": 0.5393699975684285,
+      "replay": false
+    }
+  },
+  "protected_previous_voice_files": [
+    {
+      "path": "voices/cabin_anchors_v1/E Cabin Lower.model",
+      "sha256": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9"
+    },
+    {
+      "path": "voices/cabin_anchors_v1/E Cabin Upper.model",
+      "sha256": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3"
+    },
+    {
+      "path": "voices/cabin_anchors_v1/index.json",
+      "sha256": "042c1896e80b583b97de60ba43f2a8ec32d2c9660faa1408ceca7b4a69c0987d"
+    },
+    {
+      "path": "voices/catch_bloom_v1/A cabin catch.cb",
+      "sha256": "4d63ffe0f282bdc1b079c7de11b0439e2cb48314d651d3e10e09f52b74d21a5d"
+    },
+    {
+      "path": "voices/catch_bloom_v1/README.md",
+      "sha256": "4a359ddd48f4c69cd2f20dd123e9f914a5cd8aa3fe41b9f6e4e3140acbb85c7c"
+    },
+    {
+      "path": "voices/coherent_low_v1/index.json",
+      "sha256": "367203e5b8a86700a637001f575fd28e77f134e556fa1619ee7ccab4e1cb1925"
+    },
+    {
+      "path": "voices/coherent_low_v1/measured_phase.model",
+      "sha256": "9e456a4198bce540a4ccc60220b9cf86e40dc80eadc8d1c2904dc5248715e895"
+    },
+    {
+      "path": "voices/coherent_low_v1/scrambled_phase.model",
+      "sha256": "b105ca085e6d42d5f2f6de7b7570b96a3357deddb3d28868b1070947f6d93349"
+    },
+    {
+      "path": "voices/dna_bank_v1/Hollow Spectrum.model",
+      "sha256": "bb97530b529f2b0b9f451c5bf79b870e6279b837298a34607e2a89504873b3bc"
+    },
+    {
+      "path": "voices/dna_bank_v1/index.json",
+      "sha256": "4f8a1b024086ce125b9ce2fd87cfd913d6a263dee073ff390c91f244a8bb1e60"
+    },
+    {
+      "path": "voices/dna_bank_v1/V10 Exterior.model",
+      "sha256": "6f8992e6674f603334f82bdbc526fd8ac5bbe750606154c5e83c166c077bb1b7"
+    },
+    {
+      "path": "voices/dna_bank_v1/Warm Additive.model",
+      "sha256": "b1135665d190328f38eded9db1879bbd23ad5624af37fbf2bc5d01628111e2ce"
+    },
+    {
+      "path": "voices/E_decel_source_v1/E slowing cabin.model",
+      "sha256": "91e9f33dc1ce722bd13aab365376b2f4f1d4567b03f1975811085f077c9885bf"
+    },
+    {
+      "path": "voices/E_decel_source_v1/E slowing cabin.sres",
+      "sha256": "0e3638655ee901e12ac154b1afbd9e611448e2120f340defcde683c86bce9b84"
+    },
+    {
+      "path": "voices/E_decel_source_v1/index.json",
+      "sha256": "d7ce285b1742400c60604e184c96aceca7127b062602b8bbbe3895cbfda3d961"
+    },
+    {
+      "path": "voices/exterior_anchors_v1/A Stationary High.model",
+      "sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4"
+    },
+    {
+      "path": "voices/exterior_anchors_v1/A Stationary Low.model",
+      "sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301"
+    },
+    {
+      "path": "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+      "sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b"
+    },
+    {
+      "path": "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+      "sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc"
+    },
+    {
+      "path": "voices/exterior_anchors_v1/index.json",
+      "sha256": "63318b6d5c6ca4eddd01005fd4fb1207ac216a951221a6d0ea5693b95c37d646"
+    },
+    {
+      "path": "voices/F3_before_upshift_v1/F3 before upshift.model",
+      "sha256": "8637d26b37d59f30cfc83e8e848d3a9bfcd913d74609a4ec607c668baa9caedd"
+    },
+    {
+      "path": "voices/F3_before_upshift_v1/F3 before upshift.sres",
+      "sha256": "1490a594f69543e661a4b5912fbc051112b4f175cbf5e3aa6ba5eb5e468992ba"
+    },
+    {
+      "path": "voices/F3_before_upshift_v1/index.json",
+      "sha256": "e39cdfe5f3fea405cd6da2bdd3d95e9cf553477eb9426e2b2ef6c23df743da85"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/first_early.model",
+      "sha256": "f04d5cf82d1b2fc08f5e4daf12eb95a6db14665cfa38f4d2e951961ad32eed4e"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/first_late.model",
+      "sha256": "72e62965d60025541a18aac05d870ebab3abfd53d48db92497ebcea5dccc5d80"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/first_mid.model",
+      "sha256": "07beef3b8a0265434f451d635cf7bbbc369e0adc0b1a6fe02faf5c5d28f5d333"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/index.json",
+      "sha256": "2693b1c9e9938a4201c5b1ac4c2bdc5f8398d842250ea0448c655724eb333841"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_early.model",
+      "sha256": "8654d48d35389e665bbdca2dac613a66848ad64c240f4d7c0d880955cac32843"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_late.model",
+      "sha256": "f4620a82f14cdb981e5642eeefc57927fb1eeb25ecb7d8fa29dff49cd5cdf23c"
+    },
+    {
+      "path": "voices/F3_fifth_local_v1/second_mid.model",
+      "sha256": "03b2a1af0844b49025793324ae4b2c08a1788eaa4c58d3dad453131cc9cfb672"
+    },
+    {
+      "path": "voices/idle_resonant_v1/detail.json",
+      "sha256": "3e662df22b15b40faec3379477c9d9fea1136ad006418b2bda7d5bd7d8cfbf8e"
+    },
+    {
+      "path": "voices/idle_resonant_v1/README.md",
+      "sha256": "ecc5097af810b86d32486a752093873d97dc2f1e70ce94e5ce4d0cf425a1514e"
+    },
+    {
+      "path": "voices/line_density_v1/index.json",
+      "sha256": "ba1702902d70549596b5053e9f6cb8adb4221ac8c12624f606a7d736fe71a097"
+    },
+    {
+      "path": "voices/line_density_v1/README.md",
+      "sha256": "327549de5994c82a6feaa9d66220ec3c782bb22afbbbcd7ca36a937f91cec0a9"
+    },
+    {
+      "path": "voices/line_density_v1/V10 A Density 0.residual",
+      "sha256": "67665a63ddfa0cb74d313ccccd0f77abe253637a577febbef2ec0e787da5c80b"
+    },
+    {
+      "path": "voices/line_density_v1/V10 A Density 25.model",
+      "sha256": "187109fccd4af2c294d9a8aa95bc8e41863dff5274861b0d266d1141fc01b660"
+    },
+    {
+      "path": "voices/line_density_v1/V10 A Density 25.residual",
+      "sha256": "ef7a50a365c43f996620159ce04510558698bb441ebe621bdeb86ff1f53bc158"
+    },
+    {
+      "path": "voices/line_density_v1/V10 A Density 50.model",
+      "sha256": "dc780739ffaa5b23c8918b6cd3c50c9266af76b23dba7d26435a6200c0c6b178"
+    },
+    {
+      "path": "voices/line_density_v1/V10 A Density 50.residual",
+      "sha256": "c29fafd6d3c5cc2d970b7fa0384784efd15e788362cf5b7b05993c000f4cc360"
+    },
+    {
+      "path": "voices/low_rumble_v2/A Exterior.model",
+      "sha256": "6172075395c61791ea9abb89ec41efc71f7aaaa922c15b93cc2b1e40df7211d6"
+    },
+    {
+      "path": "voices/low_rumble_v2/B Cabin.model",
+      "sha256": "2e3e94f63bbc91748735f70c0352e23e7c9078bc418c4b36b07f083caa00d794"
+    },
+    {
+      "path": "voices/low_rumble_v2/D Dyno.model",
+      "sha256": "249c136b2b346a9af57ee7a15e397e1d31537d667892d12f5c01302cebb57143"
+    },
+    {
+      "path": "voices/low_rumble_v2/E Cabin.model",
+      "sha256": "2aa40fcb7252dea764ef0a2e828dbad0079fd1e07fa3fab20406656a7bd46023"
+    },
+    {
+      "path": "voices/low_rumble_v2/index.json",
+      "sha256": "9865ca29c06fb5ba14f14d39099a63b0343b3a09ff0a8857c744e2ba9c018300"
+    },
+    {
+      "path": "voices/residual_atlas_v1/A Stationary High.residual",
+      "sha256": "0fc39668a9f95f58d4abd62f286a969e4812cd2d311e09f22c36057a25f4763c"
+    },
+    {
+      "path": "voices/residual_atlas_v1/A Stationary Low.residual",
+      "sha256": "986589d8e7c5f76f44e4a3ed954e023c44ff8422c30dbd805196d8270f6769df"
+    },
+    {
+      "path": "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+      "sha256": "bf835b14c8e9807b091df0cfa2db68c000e899536592f720c97678653d47e31e"
+    },
+    {
+      "path": "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+      "sha256": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a"
+    },
+    {
+      "path": "voices/residual_atlas_v1/E Cabin Lower.residual",
+      "sha256": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f"
+    },
+    {
+      "path": "voices/residual_atlas_v1/E Cabin Upper.residual",
+      "sha256": "90f3c5037bde0548f3c75c89f48f9a00f2b42c0e3a1a7dc1296c63e785164c8c"
+    },
+    {
+      "path": "voices/residual_atlas_v1/index.json",
+      "sha256": "dcecb6d04f4db1b7219ff477b34305e364939757da48870e2718df46e3655524"
+    },
+    {
+      "path": "voices/residual_atlas_v1/README.md",
+      "sha256": "54317c3ab3ed42ff245b7f0019efdfb79b68f7461692db65773db6a6d51bc6de"
+    },
+    {
+      "path": "voices/residual_motion_v1/A_moving.motion",
+      "sha256": "36396a0d13dc52b7c5c37c18cf701e32508151f10ab3e12966db121c51f1f150"
+    },
+    {
+      "path": "voices/residual_motion_v1/A_moving.residual",
+      "sha256": "28d99768ef5a440cd548101c465963a0f60802342337bef73d2cdc2ae66dd18e"
+    },
+    {
+      "path": "voices/residual_osc_v1/A_exterior.residual",
+      "sha256": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a"
+    },
+    {
+      "path": "voices/residual_osc_v1/E_cabin.residual",
+      "sha256": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f"
+    },
+    {
+      "path": "voices/residual_osc_v1/README.md",
+      "sha256": "631bd877603fc0a23d0c81d13221c716109d4526913efc28d3ee99f9eaca3574"
+    },
+    {
+      "path": "voices/resonant_detail_c_v1/idle_35.rdetail",
+      "sha256": "9cf69a08e47ec83b93ff5cab507ac4e214213b8366a6513f4154594cbb0291c9"
+    },
+    {
+      "path": "voices/resonant_detail_c_v1/idle_add.rdetail",
+      "sha256": "11285e4a7ff0b11c28ec4760509b10a168c4ea3dff80117123a3001534963ad2"
+    },
+    {
+      "path": "voices/resonant_detail_c_v1/index.json",
+      "sha256": "e94323272123a67a2bcded8af51a9ee1cfc772a05a76141331d5f38dbc838830"
+    },
+    {
+      "path": "voices/resonant_detail_c_v1/moving_35.rdetail",
+      "sha256": "0f9c140dab555dea45650941061fd9f8a9d1b976ac9e050aced6bc98bd919b19"
+    },
+    {
+      "path": "voices/resonant_detail_c_v1/README.md",
+      "sha256": "d3bed6be4f854923c42204e30c2891cfe8e19878cd717fc7c98260439ac69403"
+    },
+    {
+      "path": "voices/resonant_detail_v1/detail.json",
+      "sha256": "2f2f9fc52c369c24ebd7a494c7e88ba0cb719a47c58cf0eabd463b019ddf8589"
+    },
+    {
+      "path": "voices/resonant_detail_v1/README.md",
+      "sha256": "a6d10bd9d512990cd12d335466ff8fbf9087969743de9c985443666544bfed59"
+    },
+    {
+      "path": "voices/resonant_detail_v1/SELECTION.json",
+      "sha256": "a5231518c8c2f161d52ef8e63ca8e6fe548b24e58f958927dd09119cf9357657"
+    },
+    {
+      "path": "voices/resonant_detail_v2/detail.json",
+      "sha256": "273ba7ea1415736ed6b0ca9aadacd18b201fb33879f746a414eb0b171650cb40"
+    },
+    {
+      "path": "voices/resonant_detail_v2/README.md",
+      "sha256": "c26fef46f4c11c31873a5d37e964a19b8b78ffeed23a12bfff1ff7a28e3f999d"
+    },
+    {
+      "path": "voices/start_texture_v1/A cabin early.start",
+      "sha256": "bcce1ab434c52cb4d10c977d34e066a262fb265c4c8427d8b408acb0a10799e0"
+    },
+    {
+      "path": "voices/start_texture_v1/README.md",
+      "sha256": "87705c627c7b5653d1a2d830c655f79c11aa333ec16995f82c85072a4e25dd16"
+    },
+    {
+      "path": "voices/startup_detail_v1/A startup settling detail.residual",
+      "sha256": "c2e38e4fdd8eabf20b3b09b2ba81ca53b4874b1be5fe972cc67f58ec2aa346b9"
+    },
+    {
+      "path": "voices/startup_detail_v1/index.json",
+      "sha256": "4cde4c061033185a593adf168e923546a604da4585ee1a3806e3d8f227de0c67"
+    },
+    {
+      "path": "voices/startup_detail_v1/README.md",
+      "sha256": "ded7f028cef090f014ce88c848b32a6aceed4884dc821344ea35996292648a48"
+    },
+    {
+      "path": "voices/startup_drive_v1/A cabin motion.start",
+      "sha256": "99ad3db6870cf3e01e68dcf1b7c519fc920655a6535c4119dac39d0360b44d7b"
+    },
+    {
+      "path": "voices/startup_settle_v1/A start cabin settle.model",
+      "sha256": "d5dbe07bb4f9cc0f324a21d52ea7c26d9907c166184dc98e41a03cbcf847af23"
+    },
+    {
+      "path": "voices/startup_settle_v1/README.md",
+      "sha256": "8939850ef4987c49b24f9caa345e54901c20ac3177b562666c2c1880f5c9a571"
+    },
+    {
+      "path": "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+      "sha256": "f4432be43d9f0d8b5769f89d496d7d4d2140d6d5d0e6a43d6e61daa58c9d3883"
+    },
+    {
+      "path": "voices/state_colour_v2/fit.json",
+      "sha256": "0c78094db9e71f5ca7a067bd2e790591c8f3031ef0a969bdd25022997a58f0fb"
+    },
+    {
+      "path": "voices/state_colour_v2/README.md",
+      "sha256": "0d1e45797558706209dc0496ccda99a344aab5496b0242b22cbf3532b778b894"
+    },
+    {
+      "path": "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+      "sha256": "d1929f7d48ef026c9f1ca721616376b12c5b09970765b4dfea896683558d910d"
+    },
+    {
+      "path": "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+      "sha256": "04e837953ac2c325062805042e9600904d861ddd32bda801cec26e4d3a4b754a"
+    },
+    {
+      "path": "voices/stationary_bridge_v1/index.json",
+      "sha256": "d440793df96c20ef93d96d995e66cc1f25dcf4b5d614614e12f6cb63282120ee"
+    },
+    {
+      "path": "voices/stationary_recipe_v1/A Stationary High.rdetail",
+      "sha256": "fcf4dd40c133db70aaa8fe6964562fb72d6cbc408fe9acb6eaabfdb54131cc21"
+    },
+    {
+      "path": "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+      "sha256": "fa4f91903eb789cde2cc0f9e1cef8f7ef09e7dbe521af2335512fb4262aeae3b"
+    },
+    {
+      "path": "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+      "sha256": "570a845119ef5b1f80cdce6f046aa9adae014ebf6ae44942b2a6f3afe8579e89"
+    },
+    {
+      "path": "voices/stationary_recipe_v1/index.json",
+      "sha256": "105078b1e7ba98dfd1e7098fb01cbd60059eed2a728f352eb1fe969072a05bea"
+    },
+    {
+      "path": "voices/stereo_resonance_v1/A cabin settle.sres",
+      "sha256": "45346dc779fcdb37057590b732bbeea6d92023f0e34d6ccbe1868b266667a475"
+    },
+    {
+      "path": "voices/stereo_resonance_v1/README.md",
+      "sha256": "0898fe868a443ad5458e479e051b924617835a207d61a787a2389abeff38e59c"
+    }
+  ],
+  "c_test_logs": {
+    "source_three_checks": {
+      "path": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\source-event-build1.log",
+      "sha256": "921a9c851f1c7929c4f5e74df2cc99ce91a01334d92061ca04c2fcbd1cb0f9b5"
+    },
+    "event_core_two_checks": {
+      "path": "E:\\VehicleSoundLab-Git\\build-event-synth-v1\\Testing\\Temporary\\LastTest.log",
+      "sha256": "1bc78fc827624dfe4afa4fbb2e74541f5504472d69bfc96cbf24071cfa5b7cea"
+    },
+    "latest_source_event_check": {
+      "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v2\\Testing\\Temporary\\LastTest.log",
+      "sha256": "6d6a5efc5496efc9cf3bc16dc98190f74b741ba537edb3e94b3e642c2484f650"
+    }
+  },
+  "candidate_profiles": [
+    "A mixed-cabin early-start",
+    "A mixed-cabin LF build/catch"
+  ],
+  "refused_profiles": {
+    "afterfire": {
+      "source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 15285840,
+        "last_frame": 15293280,
+        "source_seconds": [
+          318.455,
+          318.61
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "event_to_background_db": -2.239401099574108,
+      "reason": "Event/background contrast <3 dB; no profile compiled"
+    },
+    "shift": {
+      "source": {
+        "path": "E:\\VehicleSoundLab\\references\\analysis\\state_media_v1\\F3_inspect1\\native_reference.wav",
+        "sha256": "392152f304a4c675f8899ecf0fb01a8921fe3a54f009ab0ab7e6fbca2d131869",
+        "first_frame": 9623040,
+        "last_frame": 9636000,
+        "source_seconds": [
+          200.48,
+          200.75
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "event_to_background_db": 0.3525768929059083,
+      "reason": "Event/background contrast <3 dB; no profile compiled"
+    }
+  },
+  "prior_attempts": "First CLI revision raised the same contrast refusal before creating an output directory; tool trace preserved in the conversation. Revised CLI writes analysis-only reports and exits3, without changing the3dB condition.",
+  "review": {
+    "path": "E:\\VehicleSoundLab\\references\\analysis\\event_authoring_v1\\review1",
+    "sha256": "0e555dec1242cd6e7ae01c385bf6bf067daff7514a1514a620862eef3c9f49d4",
+    "http_checked_clips": 7,
+    "browser_render_qa": false,
+    "hearing_accepted": false
+  },
+  "persistent_launch": {
+    "schema": "vsl.event-system-launch-attempt/1",
+    "result": "not_executed",
+    "automatic_approval_rejected": true,
+    "attempts": [
+      {
+        "action": "Stop and restart the owned workbench server, then open the updated independent controller",
+        "reason": "blocked by policy",
+        "details": "exec_command CreateProcess rejected before execution; no more specific policy reason was supplied."
+      },
+      {
+        "action": "Keep existing server/window and start a new workbench on independent port8792",
+        "reason": "blocked by policy",
+        "details": "Safe alternative was also rejected before execution. No service started and no existing process stopped."
+      }
+    ],
+    "fallback": "Latest own-window verification already passed and closed its own muted test window. User can manually run Launch-Vehicle-Controller.cmd; no persistent launch is claimed."
+  },
+  "not_complete": [
+    "material-approved afterfire and mechanical profiles",
+    "startup and full lifecycle listening acceptance",
+    "event authoring workbench page and vehicle recipe packaging",
+    "long-run/overlap qualification",
+    "persistent updated workbench launch (automatic approval rejected)"
+  ],
+  "compute_optimized": false,
+  "adi_measured": false,
+  "new_media_downloaded": false
+}

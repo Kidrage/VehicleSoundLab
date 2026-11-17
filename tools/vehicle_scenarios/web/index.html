@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VEHICLE SOUND · 完整驾驶流程</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <header><span>VEHICLE SOUND</span><small>纯合成声源 · 完整流程</small></header>
+  <h1>从启动到熄火，听同一套系统。</h1>
+  <p class="intro">行驶为当前配方，启动与接火为待听评候选。回火、换挡独立短声尚无实车参数，当前留空。转速来自演示控制，不是原车实测轨迹。</p>
+  <section class="player">
+    <div class="track-row"><label for="track">监听声层</label><select id="track"></select><span class="badge">相同增益 · 无房间处理</span></div>
+    <audio id="audio" controls preload="metadata"></audio>
+    <div id="stages" class="stages" aria-label="跳转驾驶阶段"></div>
+    <p id="message" aria-live="polite">先听完整干声，再切换各层。切换保留当前时间；独立事件仅在启动阶段发声。</p>
+  </section>
+  <section class="telemetry">
+    <div class="readouts"><div><small>发动机</small><strong id="rpm">0</strong><span>RPM</span></div><div><small>车速</small><strong id="speed">0.0</strong><span>km/h</span></div><div><small>挡位 / 状态</small><strong id="gear">1</strong><span id="state">熄火</span></div></div>
+    <canvas id="plot" height="250" aria-label="实际转速与车速曲线，点击可跳转"></canvas>
+    <div class="legend"><span class="blue">转速</span><span class="green">车速</span><small>点击曲线跳转 · 读取生成过程的实际状态</small></div>
+    <div class="pedals"><label>油门 <meter id="throttle" min="0" max="1"></meter></label><label>刹车 <meter id="brake" min="0" max="1"></meter></label></div>
+  </section>
+  <footer><a href="lifecycle.vsltake.json" download>下载可回放行程</a><a href="telemetry.csv" download>下载转速与状态表</a><a href="verification.json" download>核查记录</a><p>在独立窗口“信号与回放 → 回放行程”载入。使用“完整流程”按钮，可采用播放前设置的音色参数重新生成。</p></footer>
+</main>
+<script src="data.js"></script><script src="app.js"></script>
+</html>

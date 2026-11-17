@@ -2,6 +2,7 @@
 #define VSL_DRIVE_TYPES_H
 #include "fuel_types.h"
 #include "vehicle_types.h"
+#include "profiles/lifecycle.h"
 typedef enum { VSL_OFF, VSL_READY, VSL_CRANK, VSL_CATCH, VSL_RUNNING, VSL_STOPPING } VslLifecycle;
 typedef enum { VSL_IDLE, VSL_FREE_REV, VSL_PULL, VSL_CRUISE, VSL_OVERRUN, VSL_SHIFT_CUT, VSL_SHIFT_RECOVER, VSL_REV_MATCH, VSL_OPERATING_COUNT } VslOperating;
 typedef enum { VSL_SHIFT_NONE, VSL_SHIFT_DISCONNECT, VSL_SHIFT_MATCH, VSL_SHIFT_ENGAGE } VslShiftStage;
@@ -27,5 +28,8 @@ typedef struct {
     VslVehicle vehicle;
     double clutch_capacity_nm,shift_target_rate;
     VslCouplingAudit coupling_audit;
+    /* Instance-owned immutable-before-play configuration; reset clears it. */
+    int lifecycle_override;
+    VslLifecycleProfile lifecycle_response;
 } VslDrive;
 #endif

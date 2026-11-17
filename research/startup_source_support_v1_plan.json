@@ -1,0 +1,19 @@
+{
+  "schema": "vsl.startup-source-support-plan/1",
+  "previous_goal_turn": "Progress: exact current-contour ensemble math and one real solve per source; independent saved-C audit refused both candidates. No promotion.",
+  "evidence": "startup_source_support_v1/diagnostic1 actual C component isolation: first120ms catch high-band power is almost entirely134Hz SOS tail while its7937Hz branch is effectively silent. Crank high branch amplitude is about4e-36. Nominal contour groups do not isolate output frequency bands. Current C remains unchanged.",
+  "objective": "Improve real frequency-band control and exterior startup temporal detail using the existing12-mode/four-SOS/four-eight-point-contour C capacity. No new oscillator cloud, source separation, physical RPM or afterfire claim.",
+  "sources": "The same current exterior verification5 documents and unchanged crops47.60..48.18 and48.18..49.38; background47.00..47.25. No alternate window or cutoff search.",
+  "proposal": "Preserve every existing modal frequency, phase, component amplitude, global attack/release and event duration. For each reliable acoustic band, derive procedural-noise center from the positive PSD excess geometric mean and Q=center/(weighted90th-frequency minus weighted10th-frequency), constrained to2..12 and center strictly inside its declared band. These are source-design rules, not measured physical modes. Remove the global noise-only lowpass only in the new candidate; narrower individual SOS support replaces its shared coupling. Recreate amplitude-knot times once from the source's unchanged long-Hann temporal curve, using the existing eight-point greedy placement. Initialize gain shapes from square-root normalized source power. Recalibrate only the four noise amplitudes against fixed training data, preserving modal amplitudes. Then one joint gain solve with unchanged C capacity.",
+  "training_seeds": [27431,1049,17467,28123],
+  "held_out_seeds": [19001,31907,61979,91153],
+  "limits": "One topology per profile from source statistics. One four-noise-amplitude least-squares solve max160 evaluations, bounds0..8. One contour SLSQP solve max160 iterations ftol1e-10, gains0..8; objective mean normalized shape error weighted by inverse max(old per-seed shape RMSE,.05), plus mean squared log spectral error. Training spectral constraints are tightened to ±2.5dB significant power; original weak upper bounds and every reliable-band per-seed legacy shape nonregression remain. Actual qualification keeps original ±3dB gates. Candidate stored before held-out evaluation; no retry using held-out results, no seed/window/layout/filter grid.",
+  "sequence": [
+    "Inspect actual C component support and original transition context; do not identify acoustic stage boundary as physical ignition.",
+    "Verify support design, finite noise-amplitude response, new joint objective/constraint derivatives, prescribed feasible controls and explicit refusals before any real fit.",
+    "Execute one declared fit per current exterior document, then freeze candidate and validate independent held-out realizations and actual C.",
+    "If all checks qualify and reliable-band shape improves, expose the method as an opt-in authoring operation with old-project preservation, editable source-free exports, and paired dry listening evidence. Otherwise retain diagnostic candidate without UI or preset promotion."
+  ],
+  "runtime": "No C/DLL/ABI change or additional oscillator/resonator capacity. Different parameters can change initialization cost and timbre; no ADI cycle or quality acceptance claim.",
+  "scope": "Pure generated sources and native dry stems only; no room, spatial integration, new downloads, persistent service restart, push or ADI optimization. Full system goal remains active."
+}

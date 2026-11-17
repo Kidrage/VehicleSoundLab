@@ -1,0 +1,2565 @@
+{
+  "schema": "vsl.exhaust-return-milestone/1",
+  "created": "2026-11-16T13:40:35.080196+00:00",
+  "previous_goal_turn": "no progress: source-only MCPS scope confirmation",
+  "this_goal_turn": "progress: reusable two-background probe, scoped E event into actual C automatic lift, full32s lifecycle, controller visibility, HTTP seek repair and verified replay",
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "physical_identity_confirmed": false,
+  "source_bridge_sha256": "d0f864e824df83e136613fd8b50a64c3234dbda23a84647afe511f760243bcb3",
+  "author_bridge_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+  "unchanged_since_startup_delivery": {
+    "src": 149,
+    "modules": 208,
+    "voices": 89
+  },
+  "voice_bank_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+  "source_job": {
+    "schema": "vsl.event-authoring-job/2",
+    "kind": "afterfire",
+    "name": "E 驻车尾排降转瞬态：中高频回火候选",
+    "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+    "seconds": [
+      13.285,
+      13.385
+    ],
+    "background_seconds": [
+      12.96,
+      13.16
+    ],
+    "analysis_scope": {
+      "mode": "band",
+      "low_hz": 1200,
+      "high_hz": 14000
+    },
+    "gated": false,
+    "physical_identity_confirmed": false,
+    "context": "Approved E stationary exterior rear-quarter rev sequence, continuous sampled video8..20s. A short broadband impulse around13.309s follows a falling harmonic family and has a decaying tail. This supports an exhaust-return acoustic candidate, not confirmed combustion or fuel telemetry. Before/after backgrounds differ during the engine decay; full-band extraction is not admitted against the declared preceding background. Fit only1.2..14kHz acoustic excess, with no claim to low body or full physical separation. afterfire is an explicit local audition slot; do not promote to global event bank without listening review."
+  },
+  "project": "E:\\VehicleSoundLab\\designs\\events\\028a56d636574ab1bb902a1d3479ac7e",
+  "context_probe": {
+    "schema": "vsl.event-context-probe/1",
+    "source": {
+      "path": "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav",
+      "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+      "first_frame": 637680,
+      "last_frame": 642480,
+      "source_seconds": [
+        13.285,
+        13.385
+      ],
+      "channels": 2,
+      "sample_rate": 48000,
+      "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+    },
+    "analysis_scope": {
+      "mode": "band",
+      "low_hz": 1200.0,
+      "high_hz": 14000.0
+    },
+    "sample_peak_seconds": 13.309145833333334,
+    "backgrounds": [
+      {
+        "name": "before",
+        "source": {
+          "path": "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav",
+          "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+          "first_frame": 622080,
+          "last_frame": 631680,
+          "source_seconds": [
+            12.96,
+            13.16
+          ],
+          "channels": 2,
+          "sample_rate": 48000,
+          "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+        },
+        "full_contrast_db": 1.2410830213770143,
+        "scoped_contrast_db": 11.079109475373066,
+        "observation": {
+          "rms_channels": [
+            0.10533856180127772,
+            0.12159509890329394
+          ],
+          "background_rms_channels": [
+            0.09438318658002597,
+            0.10266524305392803
+          ],
+          "excess_mean_square": 0.0032166213196706643,
+          "event_to_background_db": 1.2410830213770143,
+          "modal_peaks_hz": [
+            1593.75,
+            1359.375,
+            1781.25,
+            2531.25,
+            2343.75,
+            3445.3125,
+            3023.4375,
+            3187.5,
+            2859.375,
+            2062.5,
+            3585.9375,
+            4640.625
+          ],
+          "modal_observations": [
+            {
+              "hz": 1593.5698525255038,
+              "phase": -1.2908023231962145,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 1359.1758280989582,
+              "phase": 2.4868433396390506,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 1781.0818634561124,
+              "phase": 0.8928844467124083,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2528.375654194257,
+              "phase": 1.151411459849857,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2344.442260918278,
+              "phase": 4.674593568065845,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3444.568930467989,
+              "phase": 2.4954272124187584,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3026.916516205439,
+              "phase": 2.3961810622855264,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3183.17472786686,
+              "phase": 3.783502349927719,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2852.574377337389,
+              "phase": 2.7923078387355407,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2055.6772659688554,
+              "phase": 3.949570420557787,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3590.23744948751,
+              "phase": -0.1251699927113834,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 4652.03885259509,
+              "phase": 3.3667293548638773,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            }
+          ],
+          "bands": [
+            {
+              "hz": [
+                1200.0,
+                4500
+              ],
+              "background_power": 0.00029238858618008557,
+              "excess_power": 0.0035922479626137585,
+              "peak_time": 0.025,
+              "attack_seconds": 0.005000000000000001,
+              "decay_seconds": 0.02554966450300984,
+              "log_amplitude_tail_slope": -39.13945718865297,
+              "decay_fitted": true
+            },
+            {
+              "hz": [
+                4500,
+                14000.0
+              ],
+              "background_power": 1.674591322488633e-05,
+              "excess_power": 6.328133498653994e-05,
+              "peak_time": 0.025,
+              "attack_seconds": 0.005000000000000001,
+              "decay_seconds": 0.022969362390349427,
+              "log_amplitude_tail_slope": -43.536254207045374,
+              "decay_fitted": true
+            }
+          ],
+          "limits": [
+            "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+            "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+            "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position.",
+            "Frequency scope measures an acoustic increment only; SOS output is not a brickwall-isolated physical source."
+          ],
+          "analysis_scope": {
+            "mode": "band",
+            "low_hz": 1200.0,
+            "high_hz": 14000.0
+          },
+          "scoped_event_power": 0.003963313463198427,
+          "scoped_background_power": 0.0003091344994049719,
+          "scoped_excess_mean_square": 0.0036541789637934553,
+          "scoped_positive_psd_excess_power": 0.0036555292976002984,
+          "scoped_event_to_background_db": 11.079109475373066
+        }
+      },
+      {
+        "name": "after",
+        "source": {
+          "path": "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav",
+          "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+          "first_frame": 646560,
+          "last_frame": 656160,
+          "source_seconds": [
+            13.47,
+            13.67
+          ],
+          "channels": 2,
+          "sample_rate": 48000,
+          "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+        },
+        "full_contrast_db": 10.033079089014315,
+        "scoped_contrast_db": 19.00994769214021,
+        "observation": {
+          "rms_channels": [
+            0.10533856180127772,
+            0.12159509890329394
+          ],
+          "background_rms_channels": [
+            0.03486444582694244,
+            0.03678301291394552
+          ],
+          "excess_mean_square": 0.011656530528908077,
+          "event_to_background_db": 10.033079089014315,
+          "modal_peaks_hz": [
+            1593.75,
+            1359.375,
+            1781.25,
+            2531.25,
+            3445.3125,
+            3023.4375,
+            3187.5,
+            2859.375,
+            2062.5,
+            3585.9375,
+            4640.625,
+            4125.0
+          ],
+          "modal_observations": [
+            {
+              "hz": 1593.9635985854866,
+              "phase": -1.3805264042880485,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 1357.4274961976046,
+              "phase": 2.902676605411812,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 1779.923415239477,
+              "phase": 1.1226762393608145,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2527.9954387152416,
+              "phase": 1.225758075832894,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3445.135840286154,
+              "phase": 2.370947758148968,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3026.563569615779,
+              "phase": 2.478150618938629,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3183.446359990279,
+              "phase": 3.726797857586623,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2851.261552304523,
+              "phase": 2.9211709517980218,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 2056.0156538302635,
+              "phase": 3.9379446607551807,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 3591.99700964744,
+              "phase": -0.44385670454904735,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 4652.237934585016,
+              "phase": 3.3225670698079304,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            },
+            {
+              "hz": 4115.69153741994,
+              "phase": 1.951075458555466,
+              "phase_channel": 1,
+              "frequency_bin_hz": 23.4375
+            }
+          ],
+          "bands": [
+            {
+              "hz": [
+                1200.0,
+                4500
+              ],
+              "background_power": 4.552546432830578e-05,
+              "excess_power": 0.0038379856901746183,
+              "peak_time": 0.025,
+              "attack_seconds": 0.005000000000000001,
+              "decay_seconds": 0.02671735088870709,
+              "log_amplitude_tail_slope": -37.42886052459193,
+              "decay_fitted": true
+            },
+            {
+              "hz": [
+                4500,
+                14000.0
+              ],
+              "background_power": 4.2555398998424295e-06,
+              "excess_power": 7.558385104640976e-05,
+              "peak_time": 0.025,
+              "attack_seconds": 0.005000000000000001,
+              "decay_seconds": 0.03171647377128633,
+              "log_amplitude_tail_slope": -31.529356233331452,
+              "decay_fitted": true
+            }
+          ],
+          "limits": [
+            "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+            "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+            "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position.",
+            "Frequency scope measures an acoustic increment only; SOS output is not a brickwall-isolated physical source."
+          ],
+          "analysis_scope": {
+            "mode": "band",
+            "low_hz": 1200.0,
+            "high_hz": 14000.0
+          },
+          "scoped_event_power": 0.003963313463198427,
+          "scoped_background_power": 4.9781004228148224e-05,
+          "scoped_excess_mean_square": 0.003913532458970279,
+          "scoped_positive_psd_excess_power": 0.003913569541221028,
+          "scoped_event_to_background_db": 19.00994769214021
+        }
+      }
+    ],
+    "fit_performed": false,
+    "physical_identity_confirmed": false,
+    "limits": [
+      "Contrasts depend on the explicitly selected backgrounds; none is selected automatically.",
+      "A contrast above 3 dB alone does not identify an afterfire or isolate a physical source.",
+      "Positive PSD excess is a statistical estimate, not a cleaned event waveform."
+    ],
+    "source_job": {
+      "schema": "vsl.event-authoring-job/2",
+      "kind": "afterfire",
+      "name": "E 驻车尾排降转瞬态：中高频回火候选",
+      "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+      "seconds": [
+        13.285,
+        13.385
+      ],
+      "background_seconds": [
+        12.96,
+        13.16
+      ],
+      "analysis_scope": {
+        "mode": "band",
+        "low_hz": 1200,
+        "high_hz": 14000
+      },
+      "gated": false,
+      "physical_identity_confirmed": false,
+      "context": "Approved E stationary exterior rear-quarter rev sequence, continuous sampled video8..20s. A short broadband impulse around13.309s follows a falling harmonic family and has a decaying tail. This supports an exhaust-return acoustic candidate, not confirmed combustion or fuel telemetry. Before/after backgrounds differ during the engine decay; full-band extraction is not admitted against the declared preceding background. Fit only1.2..14kHz acoustic excess, with no claim to low body or full physical separation. afterfire is an explicit local audition slot; do not promote to global event bank without listening review."
+    },
+    "context_seconds": [
+      12.6,
+      14.0
+    ],
+    "source_files": {
+      "audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+      "band_scope.py": "4a4d77a3dfed79cf1e3430d81f9997b2f54b9dca82b74e6f98aae9f01767fac1",
+      "context.py": "9b875dc75ea6ab2ad0e51f5908e30a603ec0b672367cbf690931461e97097029",
+      "contract.py": "cc46523ac70dc2a101c28a5fbe91ea270086a8cce737e5ba533463b0c427baa1",
+      "export.py": "92e872df965e915e85fa4a72a3db4b87210f592c8825868505a411299edd6962",
+      "fit.py": "073b31847a3f7e0e724ebcd25e5c66aa634e23793713ac3c1f0afb57ab5f21cc",
+      "measure.py": "1b6f3e1902dcf142c65971e8b383e13f08d587b2e5dab6f5a0fa3804407cad4d",
+      "model.py": "d0bc899b8d0065a88e3866183871dcdb161702d56f5574705dbde27e03da52d8",
+      "native.py": "ddf2330d74000ad700decc6e99af36d9341215b0c1930f551f57095eafce2c86",
+      "probe_event_context.py": "6b62f1ebbaac94b574f503183d710d78e9bc37ef2a4639d635014dcaa1dafdad",
+      "scoped_fit.py": "ffc2a5a92b9a7fb25958c44c6de3828d270c9300f0c6b9e8bea0a599a6555aab",
+      "__init__.py": "307af1efd4fa8e12b4fb5b761585c905706eeaca7ac5780f8b882b10745fcfbd"
+    }
+  },
+  "single_event_and_lift": {
+    "schema": "vsl.exhaust-return-review/1",
+    "goal_complete": false,
+    "timbre_accepted": false,
+    "physical_identity_confirmed": false,
+    "bridge_sha256": "d0f864e824df83e136613fd8b50a64c3234dbda23a84647afe511f760243bcb3",
+    "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "source": {
+      "path": "E:\\VehicleSoundLab\\references\\clean\\E_decoded_float.wav",
+      "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+      "first_frame": 604800,
+      "last_frame": 672000,
+      "source_seconds": [
+        12.6,
+        14.0
+      ],
+      "channels": 2,
+      "sample_rate": 48000,
+      "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+    },
+    "source_job": {
+      "schema": "vsl.event-authoring-job/2",
+      "kind": "afterfire",
+      "name": "E 驻车尾排降转瞬态：中高频回火候选",
+      "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+      "seconds": [
+        13.285,
+        13.385
+      ],
+      "background_seconds": [
+        12.96,
+        13.16
+      ],
+      "analysis_scope": {
+        "mode": "band",
+        "low_hz": 1200,
+        "high_hz": 14000
+      },
+      "gated": false,
+      "physical_identity_confirmed": false,
+      "context": "Approved E stationary exterior rear-quarter rev sequence, continuous sampled video8..20s. A short broadband impulse around13.309s follows a falling harmonic family and has a decaying tail. This supports an exhaust-return acoustic candidate, not confirmed combustion or fuel telemetry. Before/after backgrounds differ during the engine decay; full-band extraction is not admitted against the declared preceding background. Fit only1.2..14kHz acoustic excess, with no claim to low body or full physical separation. afterfire is an explicit local audition slot; do not promote to global event bank without listening review."
+    },
+    "project": "E:\\VehicleSoundLab\\designs\\events\\028a56d636574ab1bb902a1d3479ac7e",
+    "editable_project_matches_cli": true,
+    "full_contrast_db": 1.2410830213770143,
+    "scoped_contrast_db": 11.079109475373066,
+    "generation": {
+      "frames": 384000,
+      "selection": 1,
+      "pedal_only": true,
+      "overruns": 2,
+      "starts": [
+        {
+          "id": 3,
+          "frame": 180384,
+          "requested_frame": 180384,
+          "type": 3,
+          "slot": 0,
+          "action": 1,
+          "reason": 0
+        },
+        {
+          "id": 4,
+          "frame": 315264,
+          "requested_frame": 315264,
+          "type": 3,
+          "slot": 0,
+          "action": 1,
+          "reason": 0
+        },
+        {
+          "id": 5,
+          "frame": 320399,
+          "requested_frame": 320399,
+          "type": 3,
+          "slot": 0,
+          "action": 1,
+          "reason": 0
+        },
+        {
+          "id": 6,
+          "frame": 327811,
+          "requested_frame": 327811,
+          "type": 3,
+          "slot": 0,
+          "action": 1,
+          "reason": 0
+        }
+      ],
+      "non_event_stems_exact": true,
+      "notices_exact_with_level_zero": true,
+      "mix_difference_reconstruction_error": 3.725290298461914e-09,
+      "event_monitor_peak": 0.032003533095121384,
+      "final_state": {
+        "frame": 384000,
+        "rpm": 4326.111946716615,
+        "speed_mps": 0.0,
+        "acceleration_mps2": 0.0,
+        "load": -0.09533822874532971,
+        "root_hz": 36.3307635755583,
+        "gain": 0.25,
+        "idle_weight": 0.0,
+        "gear": 0,
+        "lifecycle": 4,
+        "operating": 4,
+        "coverage": -1,
+        "shifts": 1,
+        "overruns": 2,
+        "legacy_hits": 7,
+        "input_source": 0,
+        "input_stale": 0,
+        "tire_slip": 0.0,
+        "signal_sequence": 0,
+        "event_active": 0,
+        "event_started": 6,
+        "event_rejected": 0,
+        "event_replaced": 0,
+        "event_queue": 0,
+        "event_overflow": 0,
+        "event_log_lost": 0,
+        "event_peak": 2
+      }
+    },
+    "global_bank_changed": false,
+    "runtime_uses_recording": false,
+    "files": {
+      "candidate.wav": "576dd5dc2362f70507d8f7d948498bf8684ff8c5aad88961bdec8c53860959c1",
+      "context-original.wav": "70cb2929ded5f88cd06431299969bb3ec423d1b94f0708b56e6d53220341b7ec",
+      "drive_events.wav": "3fdd0778d1f29f62bc210f3e8144026a8ef9a4e45aad4cac5f242d1fb018d672",
+      "drive_off.wav": "83191419442cc71ff3fc8cc3078afb70f93411d01b308182ac4548b69c22f384",
+      "drive_on.wav": "9101c5973db6df263ab37550fb61358a43534a9c7f2121758693fe013e260503",
+      "reference.wav": "7eec76c89329585af4e2cd7de87cb10ca739b83b62b0a04b136c7b6b5d5fb5e1",
+      "reference_band.wav": "f413b33fe548fd0f8d0fef8f5729b4da2c916d06e843a9cd7d3d6c1fed18ffe3"
+    },
+    "limitations": [
+      "Only1.2..14kHz exhaust-return acoustic supplement, not confirmed/full-band afterfire.",
+      "C neutral-rev pedals demonstrate triggering, not a measured reproduction of E footage.",
+      "Candidate modes/noise share a short-envelope model; spectral fit does not prove transient fidelity/naturalness.",
+      "Local afterfire slot override is explicit; compiled global event bank remains unchanged."
+    ]
+  },
+  "material": {
+    "schema": "vsl.event-band-material-verification/1",
+    "result": "passed",
+    "hearing_accepted": false,
+    "physical_identity_confirmed": false,
+    "renderer_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+    "source_profile_sha256": "44799014f8c4e4634b0546f777d310d852423cedd992d831da98b1c31e92c289",
+    "cases": [
+      {
+        "seed": 27431,
+        "independent_C_error": 1.862645149230957e-09,
+        "peak": 0.3870459198951721,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0035909210046080695,
+            "actual_C_power": 0.0035909210964746308,
+            "error_db": 1.1110559130672342e-07
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 6.325795918538561e-05,
+            "actual_C_power": 6.325795887107688e-05,
+            "error_db": -2.1578715270918203e-08
+          }
+        ]
+      },
+      {
+        "seed": 48271,
+        "independent_C_error": 4.656612873077393e-10,
+        "peak": 0.40343400835990906,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0035909210046080695,
+            "actual_C_power": 0.0035305653227624134,
+            "error_db": -0.07361600090059241
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 6.325795918538561e-05,
+            "actual_C_power": 5.1843729309553055e-05,
+            "error_db": -0.8641894231016092
+          }
+        ]
+      },
+      {
+        "seed": 90217,
+        "independent_C_error": 1.862645149230957e-09,
+        "peak": 0.3682534694671631,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0035909210046080695,
+            "actual_C_power": 0.0034071802019752795,
+            "error_db": -0.22810747813637483
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 6.325795918538561e-05,
+            "actual_C_power": 5.187626328506667e-05,
+            "error_db": -0.8614649095049769
+          }
+        ]
+      },
+      {
+        "seed": 149921,
+        "independent_C_error": 3.725290298461914e-09,
+        "peak": 0.38811224699020386,
+        "bands": [
+          {
+            "hz": [
+              1200.0,
+              4500
+            ],
+            "target_power": 0.0035909210046080695,
+            "actual_C_power": 0.00342524924690224,
+            "error_db": -0.20513671829687447
+          },
+          {
+            "hz": [
+              4500,
+              14000.0
+            ],
+            "target_power": 6.325795918538561e-05,
+            "actual_C_power": 6.19394242562521e-05,
+            "error_db": -0.09148012536421639
+          }
+        ]
+      }
+    ],
+    "all_four_tested_seeds_within_3db": true,
+    "limitation": "Four specific seeds verify finite C output, not all random sequences, naturalness or physical event identity."
+  },
+  "ui": {
+    "schema": "vsl.exhaust-return-verification/1",
+    "goal_complete": false,
+    "timbre_accepted": false,
+    "physical_identity_confirmed": false,
+    "method": "Actual local event import, recipe, C take/variable blocks; own muted Tk/WinMM.",
+    "result": "passed",
+    "limited_scope_visible": true,
+    "unconfirmed_type_visible": true,
+    "import_and_recipe_roundtrip": true,
+    "native_variable_block_replay_exact": true,
+    "actual_host_events_and_final_state_exact": true,
+    "no_autoplay": true,
+    "automatic_afterfire_starts": 4,
+    "final_state": {
+      "frame": 384000,
+      "rpm": 4326.111946716615,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": -0.09533822874532971,
+      "root_hz": 36.3307635755583,
+      "gain": 0.25,
+      "idle_weight": 0.0,
+      "gear": 0,
+      "lifecycle": 4,
+      "operating": 4,
+      "coverage": -1,
+      "shifts": 1,
+      "overruns": 2,
+      "legacy_hits": 7,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 0,
+      "event_active": 0,
+      "event_started": 6,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.3016000147908926,
+      "pc_max_block_load": 0.6339099956676364,
+      "replay": true,
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 1,
+        "start_id": 1,
+        "gear": 0,
+        "automatic": 0,
+        "backfire": 1,
+        "rpm": 5625.0,
+        "load": 0.8,
+        "throttle": 0.0,
+        "brake": 0.7,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 0.0,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 0.0,
+        "catch_gain": 0.0,
+        "idle_mix": 0.0,
+        "idle_motion": 0.0,
+        "idle_detail": 0.0,
+        "input": {
+          "source": 0,
+          "valid": 0,
+          "sequence": 0,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 1,
+          "manual_type": 1,
+          "manual_sequence": 0,
+          "gain": 0.5,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "snapshots": [
+      {
+        "active": false,
+        "starting": true,
+        "error": null
+      },
+      {
+        "frame": 96000,
+        "rpm": 3661.0362308375475,
+        "speed_mps": 0.0,
+        "acceleration_mps2": 0.0,
+        "load": 0.6171781467178264,
+        "root_hz": 28.88189996464505,
+        "gain": 0.25,
+        "idle_weight": 0.0,
+        "gear": 0,
+        "lifecycle": 4,
+        "operating": 1,
+        "coverage": -1,
+        "shifts": 1,
+        "overruns": 0,
+        "legacy_hits": 0,
+        "input_source": 0,
+        "input_stale": 0,
+        "tire_slip": 0.0,
+        "signal_sequence": 0,
+        "event_active": 0,
+        "event_started": 2,
+        "event_rejected": 0,
+        "event_replaced": 0,
+        "event_queue": 0,
+        "event_overflow": 0,
+        "event_log_lost": 0,
+        "event_peak": 2,
+        "active": true,
+        "starting": false,
+        "error": null,
+        "underflows": 0,
+        "pc_block_load": 0.3384399926289916,
+        "pc_max_block_load": 0.4961900180205703,
+        "replay": true,
+        "adopted_control": {
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 0,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5625.0,
+          "load": 0.8,
+          "throttle": 0.65,
+          "brake": 0.7,
+          "gain": 0.25,
+          "detail": 1.0,
+          "legacy_event_gain": 0.0,
+          "low_mix": 0.0,
+          "coherent_low_gain": 1.0,
+          "resonant_gain": 1.0,
+          "residual_gain": 0.0,
+          "intake_gain": 0.0,
+          "mechanical_gain": 0.0,
+          "air_gain": 0.0,
+          "road_gain": 0.0,
+          "wind_gain": 0.0,
+          "startup_gain": 0.0,
+          "catch_gain": 0.0,
+          "idle_mix": 0.0,
+          "idle_motion": 0.0,
+          "idle_detail": 0.0,
+          "input": {
+            "source": 0,
+            "valid": 0,
+            "sequence": 0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "tire_slip": 0.0
+          },
+          "events": {
+            "enabled": 1,
+            "manual_type": 1,
+            "manual_sequence": 0,
+            "gain": 0.5,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "levels": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      {
+        "frame": 192960,
+        "rpm": 7496.123387405242,
+        "speed_mps": 0.0,
+        "acceleration_mps2": 0.0,
+        "load": -0.13164692099441724,
+        "root_hz": 62.91106929210594,
+        "gain": 0.25,
+        "idle_weight": 0.0,
+        "gear": 0,
+        "lifecycle": 4,
+        "operating": 4,
+        "coverage": 1,
+        "shifts": 1,
+        "overruns": 1,
+        "legacy_hits": 2,
+        "input_source": 0,
+        "input_stale": 0,
+        "tire_slip": 0.0,
+        "signal_sequence": 0,
+        "event_active": 0,
+        "event_started": 3,
+        "event_rejected": 0,
+        "event_replaced": 0,
+        "event_queue": 0,
+        "event_overflow": 0,
+        "event_log_lost": 0,
+        "event_peak": 2,
+        "active": true,
+        "starting": false,
+        "error": null,
+        "underflows": 0,
+        "pc_block_load": 0.2738999901339412,
+        "pc_max_block_load": 0.6339099956676364,
+        "replay": true,
+        "adopted_control": {
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 0,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5625.0,
+          "load": 0.8,
+          "throttle": 0.0,
+          "brake": 0.7,
+          "gain": 0.25,
+          "detail": 1.0,
+          "legacy_event_gain": 0.0,
+          "low_mix": 0.0,
+          "coherent_low_gain": 1.0,
+          "resonant_gain": 1.0,
+          "residual_gain": 0.0,
+          "intake_gain": 0.0,
+          "mechanical_gain": 0.0,
+          "air_gain": 0.0,
+          "road_gain": 0.0,
+          "wind_gain": 0.0,
+          "startup_gain": 0.0,
+          "catch_gain": 0.0,
+          "idle_mix": 0.0,
+          "idle_motion": 0.0,
+          "idle_detail": 0.0,
+          "input": {
+            "source": 0,
+            "valid": 0,
+            "sequence": 0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "tire_slip": 0.0
+          },
+          "events": {
+            "enabled": 1,
+            "manual_type": 1,
+            "manual_sequence": 0,
+            "gain": 0.5,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "levels": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      {
+        "frame": 289440,
+        "rpm": 8404.315065310946,
+        "speed_mps": 0.0,
+        "acceleration_mps2": 0.0,
+        "load": -3.459366990336912e-16,
+        "root_hz": 70.03595887758507,
+        "gain": 0.25,
+        "idle_weight": 0.0,
+        "gear": 0,
+        "lifecycle": 4,
+        "operating": 1,
+        "coverage": 1,
+        "shifts": 1,
+        "overruns": 1,
+        "legacy_hits": 3,
+        "input_source": 0,
+        "input_stale": 0,
+        "tire_slip": 0.0,
+        "signal_sequence": 0,
+        "event_active": 0,
+        "event_started": 3,
+        "event_rejected": 0,
+        "event_replaced": 0,
+        "event_queue": 0,
+        "event_overflow": 0,
+        "event_log_lost": 0,
+        "event_peak": 2,
+        "active": true,
+        "starting": false,
+        "error": null,
+        "underflows": 0,
+        "pc_block_load": 0.2800900023430586,
+        "pc_max_block_load": 0.6339099956676364,
+        "replay": true,
+        "adopted_control": {
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 0,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5625.0,
+          "load": 0.8,
+          "throttle": 0.45,
+          "brake": 0.7,
+          "gain": 0.25,
+          "detail": 1.0,
+          "legacy_event_gain": 0.0,
+          "low_mix": 0.0,
+          "coherent_low_gain": 1.0,
+          "resonant_gain": 1.0,
+          "residual_gain": 0.0,
+          "intake_gain": 0.0,
+          "mechanical_gain": 0.0,
+          "air_gain": 0.0,
+          "road_gain": 0.0,
+          "wind_gain": 0.0,
+          "startup_gain": 0.0,
+          "catch_gain": 0.0,
+          "idle_mix": 0.0,
+          "idle_motion": 0.0,
+          "idle_detail": 0.0,
+          "input": {
+            "source": 0,
+            "valid": 0,
+            "sequence": 0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "tire_slip": 0.0
+          },
+          "events": {
+            "enabled": 1,
+            "manual_type": 1,
+            "manual_sequence": 0,
+            "gain": 0.5,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "levels": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      {
+        "frame": 384000,
+        "rpm": 4326.111946716615,
+        "speed_mps": 0.0,
+        "acceleration_mps2": 0.0,
+        "load": -0.09533822874532971,
+        "root_hz": 36.3307635755583,
+        "gain": 0.25,
+        "idle_weight": 0.0,
+        "gear": 0,
+        "lifecycle": 4,
+        "operating": 4,
+        "coverage": -1,
+        "shifts": 1,
+        "overruns": 2,
+        "legacy_hits": 7,
+        "input_source": 0,
+        "input_stale": 0,
+        "tire_slip": 0.0,
+        "signal_sequence": 0,
+        "event_active": 0,
+        "event_started": 6,
+        "event_rejected": 0,
+        "event_replaced": 0,
+        "event_queue": 0,
+        "event_overflow": 0,
+        "event_log_lost": 0,
+        "event_peak": 2,
+        "active": true,
+        "starting": false,
+        "error": null,
+        "underflows": 0,
+        "pc_block_load": 0.3016000147908926,
+        "pc_max_block_load": 0.6339099956676364,
+        "replay": true,
+        "adopted_control": {
+          "mode": 1,
+          "ignition": 1,
+          "start_id": 1,
+          "gear": 0,
+          "automatic": 0,
+          "backfire": 1,
+          "rpm": 5625.0,
+          "load": 0.8,
+          "throttle": 0.0,
+          "brake": 0.7,
+          "gain": 0.25,
+          "detail": 1.0,
+          "legacy_event_gain": 0.0,
+          "low_mix": 0.0,
+          "coherent_low_gain": 1.0,
+          "resonant_gain": 1.0,
+          "residual_gain": 0.0,
+          "intake_gain": 0.0,
+          "mechanical_gain": 0.0,
+          "air_gain": 0.0,
+          "road_gain": 0.0,
+          "wind_gain": 0.0,
+          "startup_gain": 0.0,
+          "catch_gain": 0.0,
+          "idle_mix": 0.0,
+          "idle_motion": 0.0,
+          "idle_detail": 0.0,
+          "input": {
+            "source": 0,
+            "valid": 0,
+            "sequence": 0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "tire_slip": 0.0
+          },
+          "events": {
+            "enabled": 1,
+            "manual_type": 1,
+            "manual_sequence": 0,
+            "gain": 0.5,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "levels": [
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    ],
+    "source_binding_sha256": "2578f20d4d5ab3185088bc9ba99d9e18db9088f2cdbcf71e9513baba278391d0"
+  },
+  "cycle": {
+    "pcm_sha256": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+    "frames": 1536000,
+    "native_channels": 23,
+    "native_stems": [
+      {
+        "id": 0,
+        "name": "dna",
+        "channels": 2
+      },
+      {
+        "id": 1,
+        "name": "low",
+        "channels": 2
+      },
+      {
+        "id": 2,
+        "name": "detail",
+        "channels": 2
+      },
+      {
+        "id": 3,
+        "name": "intake",
+        "channels": 1
+      },
+      {
+        "id": 4,
+        "name": "mechanical",
+        "channels": 1
+      },
+      {
+        "id": 5,
+        "name": "exhaust_air",
+        "channels": 2
+      },
+      {
+        "id": 6,
+        "name": "road",
+        "channels": 1
+      },
+      {
+        "id": 7,
+        "name": "wind",
+        "channels": 1
+      },
+      {
+        "id": 8,
+        "name": "startup",
+        "channels": 2
+      },
+      {
+        "id": 9,
+        "name": "catch",
+        "channels": 2
+      },
+      {
+        "id": 10,
+        "name": "added",
+        "channels": 2
+      },
+      {
+        "id": 11,
+        "name": "legacy_event",
+        "channels": 1
+      },
+      {
+        "id": 12,
+        "name": "event_0",
+        "channels": 1
+      },
+      {
+        "id": 13,
+        "name": "event_1",
+        "channels": 1
+      },
+      {
+        "id": 14,
+        "name": "event_2",
+        "channels": 1
+      },
+      {
+        "id": 15,
+        "name": "event_3",
+        "channels": 1
+      }
+    ],
+    "native_rms_channels": [
+      0.042939795803356315,
+      0.04293979600016507,
+      0.0014895819008307375,
+      0.0014895818695524138,
+      0.0008489831915335783,
+      0.0008489831926716781,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.010234979541409487,
+      0.010234979522763029,
+      0.0,
+      0.0019072921992089231,
+      0.006857143893965117,
+      0.0,
+      0.0
+    ],
+    "native_peak_channels": [
+      0.24833686649799347,
+      0.24833901226520538,
+      0.02398146316409111,
+      0.02398146316409111,
+      0.031667426228523254,
+      0.031667426228523254,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.08668504655361176,
+      0.08668504655361176,
+      0.0,
+      0.0696214959025383,
+      0.19343602657318115,
+      0.0,
+      0.0
+    ],
+    "monitor_peak": 0.24833901226520538,
+    "native_reconstruction_error": 1.4784745872020721e-08,
+    "final_state": {
+      "frame": 1536000,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 7.465737903641796e-49,
+      "gain": 0.25,
+      "idle_weight": 0.0,
+      "gear": 0,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 9,
+      "overruns": 1,
+      "legacy_hits": 5,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 0,
+      "event_active": 0,
+      "event_started": 3,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2
+    },
+    "wall_seconds": 16.92052219994366,
+    "pc_timing_is_not_ADI_MCPS": true,
+    "schema": "vsl.exhaust-return-cycle/1",
+    "bridge_sha256": "d0f864e824df83e136613fd8b50a64c3234dbda23a84647afe511f760243bcb3",
+    "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "checks": [
+      {
+        "name": "full_lifecycle_states",
+        "passed": true,
+        "evidence": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "name": "driving_operating_states",
+        "passed": true,
+        "evidence": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "name": "native_reconstruction",
+        "passed": true,
+        "evidence": 1.4784745872020721e-08
+      },
+      {
+        "name": "finite_and_bounded_rpm",
+        "passed": true,
+        "evidence": [
+          0.0,
+          8260.476068989268
+        ]
+      },
+      {
+        "name": "monitor_headroom",
+        "passed": true,
+        "evidence": 0.24833901226520538
+      },
+      {
+        "name": "stopped_idle",
+        "passed": true,
+        "evidence": {
+          "max_speed_mps": 0.0,
+          "min_idle_weight": 1.0
+        }
+      },
+      {
+        "name": "sport_lift_holds_gear",
+        "passed": true,
+        "evidence": {
+          "gears": [
+            5
+          ],
+          "shifts": [
+            4
+          ]
+        }
+      },
+      {
+        "name": "off_tail_is_silent",
+        "passed": true,
+        "evidence": 4.389253817990789e-14
+      },
+      {
+        "name": "automatic_shifts_and_overrun",
+        "passed": true,
+        "evidence": {
+          "shifts": 9,
+          "overruns": 1
+        }
+      },
+      {
+        "name": "bounded_event_pool_and_log",
+        "passed": true,
+        "evidence": {
+          "event_peak": 2,
+          "event_overflow": 0,
+          "event_log_lost": 0,
+          "event_rejected": 0
+        }
+      },
+      {
+        "name": "one_crank_and_one_catch",
+        "passed": true,
+        "evidence": [
+          {
+            "id": 1,
+            "frame": 17184,
+            "requested_frame": 17184,
+            "type": 1,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          },
+          {
+            "id": 2,
+            "frame": 30240,
+            "requested_frame": 30240,
+            "type": 2,
+            "slot": 1,
+            "action": 1,
+            "reason": 0
+          },
+          {
+            "id": 3,
+            "frame": 747504,
+            "requested_frame": 747504,
+            "type": 3,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          }
+        ]
+      },
+      {
+        "name": "event_lifetimes_and_slot_identity",
+        "passed": true,
+        "evidence": [
+          {
+            "id": 1,
+            "frame": 17184,
+            "requested_frame": 17184,
+            "type": 1,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          },
+          {
+            "id": 2,
+            "frame": 30240,
+            "requested_frame": 30240,
+            "type": 2,
+            "slot": 1,
+            "action": 1,
+            "reason": 0
+          },
+          {
+            "id": 1,
+            "frame": 31104,
+            "requested_frame": 17184,
+            "type": 1,
+            "slot": 0,
+            "action": 2,
+            "reason": 1
+          },
+          {
+            "id": 2,
+            "frame": 68640,
+            "requested_frame": 30240,
+            "type": 2,
+            "slot": 1,
+            "action": 2,
+            "reason": 0
+          },
+          {
+            "id": 3,
+            "frame": 747504,
+            "requested_frame": 747504,
+            "type": 3,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          },
+          {
+            "id": 3,
+            "frame": 752304,
+            "requested_frame": 747504,
+            "type": 3,
+            "slot": 0,
+            "action": 2,
+            "reason": 0
+          }
+        ]
+      },
+      {
+        "name": "variable_block_replay_pcm_exact",
+        "passed": true,
+        "evidence": {
+          "direct": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+          "replay": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+          "pattern": [
+            137,
+            511,
+            240,
+            1024,
+            17,
+            480
+          ]
+        }
+      },
+      {
+        "name": "variable_block_replay_notices_exact",
+        "passed": true,
+        "evidence": {
+          "direct": [
+            {
+              "id": 1,
+              "frame": 17184,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 2,
+              "frame": 30240,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 1,
+              "frame": 31104,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 2,
+              "reason": 1
+            },
+            {
+              "id": 2,
+              "frame": 68640,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 2,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 747504,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 752304,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 2,
+              "reason": 0
+            }
+          ],
+          "replay": [
+            {
+              "id": 1,
+              "frame": 17184,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 2,
+              "frame": 30240,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 1,
+              "frame": 31104,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 2,
+              "reason": 1
+            },
+            {
+              "id": 2,
+              "frame": 68640,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 2,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 747504,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 752304,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 2,
+              "reason": 0
+            }
+          ]
+        }
+      },
+      {
+        "name": "variable_block_replay_state_exact",
+        "passed": true,
+        "evidence": {
+          "direct": {
+            "frame": 1536000,
+            "rpm": 0.0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "load": 0.0,
+            "root_hz": 7.465737903641796e-49,
+            "gain": 0.25,
+            "idle_weight": 0.0,
+            "gear": 0,
+            "lifecycle": 0,
+            "operating": 0,
+            "coverage": -1,
+            "shifts": 9,
+            "overruns": 1,
+            "legacy_hits": 5,
+            "input_source": 0,
+            "input_stale": 0,
+            "tire_slip": 0.0,
+            "signal_sequence": 0,
+            "event_active": 0,
+            "event_started": 3,
+            "event_rejected": 0,
+            "event_replaced": 0,
+            "event_queue": 0,
+            "event_overflow": 0,
+            "event_log_lost": 0,
+            "event_peak": 2
+          },
+          "replay": {
+            "frame": 1536000,
+            "rpm": 0.0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "load": 0.0,
+            "root_hz": 7.465737903641796e-49,
+            "gain": 0.25,
+            "idle_weight": 0.0,
+            "gear": 0,
+            "lifecycle": 0,
+            "operating": 0,
+            "coverage": -1,
+            "shifts": 9,
+            "overruns": 1,
+            "legacy_hits": 5,
+            "input_source": 0,
+            "input_stale": 0,
+            "tire_slip": 0.0,
+            "signal_sequence": 0,
+            "event_active": 0,
+            "event_started": 3,
+            "event_rejected": 0,
+            "event_replaced": 0,
+            "event_queue": 0,
+            "event_overflow": 0,
+            "event_log_lost": 0,
+            "event_peak": 2
+          }
+        }
+      },
+      {
+        "name": "local_afterfire_triggered",
+        "passed": true,
+        "evidence": [
+          {
+            "id": 3,
+            "frame": 747504,
+            "requested_frame": 747504,
+            "type": 3,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          }
+        ]
+      },
+      {
+        "name": "requested_frames_exact",
+        "passed": true,
+        "evidence": [
+          {
+            "id": 3,
+            "frame": 747504,
+            "requested_frame": 747504,
+            "type": 3,
+            "slot": 0,
+            "action": 1,
+            "reason": 0
+          }
+        ]
+      }
+    ],
+    "passed": true,
+    "goal_complete": false,
+    "timbre_accepted": false,
+    "physical_identity_confirmed": false,
+    "afterfire_starts": [
+      {
+        "id": 3,
+        "frame": 747504,
+        "requested_frame": 747504,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "transitions": [
+      {
+        "frame": 0,
+        "seconds": 0.0,
+        "lifecycle": "OFF",
+        "operating": "IDLE",
+        "gear": 1,
+        "rpm": 0.0,
+        "speed_kph": 0.0,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 16800,
+        "seconds": 0.35,
+        "lifecycle": "CRANK",
+        "operating": "IDLE",
+        "gear": 1,
+        "rpm": 0.0,
+        "speed_kph": 0.0,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 30240,
+        "seconds": 0.63,
+        "lifecycle": "CATCH",
+        "operating": "IDLE",
+        "gear": 1,
+        "rpm": 215.67221390076142,
+        "speed_kph": 0.0,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 61440,
+        "seconds": 1.28,
+        "lifecycle": "RUNNING",
+        "operating": "IDLE",
+        "gear": 1,
+        "rpm": 850.0992592592592,
+        "speed_kph": 0.0,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 120240,
+        "seconds": 2.505,
+        "lifecycle": "RUNNING",
+        "operating": "CRUISE",
+        "gear": 1,
+        "rpm": 849.4914251610633,
+        "speed_kph": 0.0,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 153840,
+        "seconds": 3.205,
+        "lifecycle": "RUNNING",
+        "operating": "PULL",
+        "gear": 1,
+        "rpm": 1222.5697100811115,
+        "speed_kph": 1.0336171224108806,
+        "shifts": 0,
+        "overruns": 0
+      },
+      {
+        "frame": 264960,
+        "seconds": 5.52,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 2,
+        "rpm": 8180.78803320486,
+        "speed_kph": 71.63562200704783,
+        "shifts": 1,
+        "overruns": 0
+      },
+      {
+        "frame": 278880,
+        "seconds": 5.81,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 2,
+        "rpm": 5745.8510241764,
+        "speed_kph": 74.23487969675509,
+        "shifts": 1,
+        "overruns": 0
+      },
+      {
+        "frame": 283440,
+        "seconds": 5.905,
+        "lifecycle": "RUNNING",
+        "operating": "PULL",
+        "gear": 2,
+        "rpm": 5826.229520802358,
+        "speed_kph": 75.96127145765784,
+        "shifts": 1,
+        "overruns": 0
+      },
+      {
+        "frame": 339120,
+        "seconds": 7.065,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 3,
+        "rpm": 8169.722771656324,
+        "speed_kph": 106.51529037361567,
+        "shifts": 2,
+        "overruns": 0
+      },
+      {
+        "frame": 351600,
+        "seconds": 7.325,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 3,
+        "rpm": 6027.503989499539,
+        "speed_kph": 108.02478302541793,
+        "shifts": 2,
+        "overruns": 0
+      },
+      {
+        "frame": 356160,
+        "seconds": 7.42,
+        "lifecycle": "RUNNING",
+        "operating": "PULL",
+        "gear": 3,
+        "rpm": 6064.092939408151,
+        "speed_kph": 109.26293584519196,
+        "shifts": 2,
+        "overruns": 0
+      },
+      {
+        "frame": 451440,
+        "seconds": 9.405,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 4,
+        "rpm": 8164.691542945691,
+        "speed_kph": 147.11155933235486,
+        "shifts": 3,
+        "overruns": 0
+      },
+      {
+        "frame": 461760,
+        "seconds": 9.62,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 4,
+        "rpm": 6490.72294620436,
+        "speed_kph": 147.85521963285154,
+        "shifts": 3,
+        "overruns": 0
+      },
+      {
+        "frame": 466320,
+        "seconds": 9.715,
+        "lifecycle": "RUNNING",
+        "operating": "PULL",
+        "gear": 4,
+        "rpm": 6515.759249639669,
+        "speed_kph": 148.76162670410199,
+        "shifts": 3,
+        "overruns": 0
+      },
+      {
+        "frame": 594240,
+        "seconds": 12.38,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 5,
+        "rpm": 8161.680278712457,
+        "speed_kph": 186.33973239069525,
+        "shifts": 4,
+        "overruns": 0
+      },
+      {
+        "frame": 604800,
+        "seconds": 12.6,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 5,
+        "rpm": 6429.242613458004,
+        "speed_kph": 186.63551483820447,
+        "shifts": 4,
+        "overruns": 0
+      },
+      {
+        "frame": 609360,
+        "seconds": 12.695,
+        "lifecycle": "RUNNING",
+        "operating": "PULL",
+        "gear": 5,
+        "rpm": 6421.8609228113755,
+        "speed_kph": 187.226265971177,
+        "shifts": 4,
+        "overruns": 0
+      },
+      {
+        "frame": 745200,
+        "seconds": 15.525,
+        "lifecycle": "RUNNING",
+        "operating": "CRUISE",
+        "gear": 5,
+        "rpm": 7388.553932809834,
+        "speed_kph": 215.4097356504326,
+        "shifts": 4,
+        "overruns": 0
+      },
+      {
+        "frame": 747840,
+        "seconds": 15.58,
+        "lifecycle": "RUNNING",
+        "operating": "OVERRUN",
+        "gear": 5,
+        "rpm": 7383.568067194158,
+        "speed_kph": 215.26437513685605,
+        "shifts": 4,
+        "overruns": 1
+      },
+      {
+        "frame": 916320,
+        "seconds": 19.09,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 4,
+        "rpm": 5723.021225432827,
+        "speed_kph": 166.8519307706364,
+        "shifts": 5,
+        "overruns": 1
+      },
+      {
+        "frame": 918000,
+        "seconds": 19.125,
+        "lifecycle": "RUNNING",
+        "operating": "REV_MATCH",
+        "gear": 4,
+        "rpm": 5760.389098529807,
+        "speed_kph": 165.7352814440225,
+        "shifts": 5,
+        "overruns": 1
+      },
+      {
+        "frame": 924960,
+        "seconds": 19.27,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 4,
+        "rpm": 6974.343812834919,
+        "speed_kph": 161.25170433951297,
+        "shifts": 5,
+        "overruns": 1
+      },
+      {
+        "frame": 925200,
+        "seconds": 19.275,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 4,
+        "rpm": 6958.928990358317,
+        "speed_kph": 161.0971768845214,
+        "shifts": 5,
+        "overruns": 1
+      },
+      {
+        "frame": 929760,
+        "seconds": 19.37,
+        "lifecycle": "RUNNING",
+        "operating": "OVERRUN",
+        "gear": 4,
+        "rpm": 6917.631810094808,
+        "speed_kph": 157.9367993172331,
+        "shifts": 5,
+        "overruns": 1
+      },
+      {
+        "frame": 971040,
+        "seconds": 20.23,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 3,
+        "rpm": 5719.402686890577,
+        "speed_kph": 130.57997002033278,
+        "shifts": 6,
+        "overruns": 1
+      },
+      {
+        "frame": 972720,
+        "seconds": 20.265,
+        "lifecycle": "RUNNING",
+        "operating": "REV_MATCH",
+        "gear": 3,
+        "rpm": 5748.581887835896,
+        "speed_kph": 129.48955542006323,
+        "shifts": 6,
+        "overruns": 1
+      },
+      {
+        "frame": 979440,
+        "seconds": 20.405,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 3,
+        "rpm": 6865.6787802198805,
+        "speed_kph": 125.26852444076988,
+        "shifts": 6,
+        "overruns": 1
+      },
+      {
+        "frame": 979680,
+        "seconds": 20.41,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 3,
+        "rpm": 6850.512425567726,
+        "speed_kph": 125.11772540059269,
+        "shifts": 6,
+        "overruns": 1
+      },
+      {
+        "frame": 984240,
+        "seconds": 20.505,
+        "lifecycle": "RUNNING",
+        "operating": "OVERRUN",
+        "gear": 3,
+        "rpm": 6771.867149456949,
+        "speed_kph": 122.01562431453961,
+        "shifts": 6,
+        "overruns": 1
+      },
+      {
+        "frame": 1019040,
+        "seconds": 21.23,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 2,
+        "rpm": 5521.61785639899,
+        "speed_kph": 99.48861002520701,
+        "shifts": 7,
+        "overruns": 1
+      },
+      {
+        "frame": 1020720,
+        "seconds": 21.265,
+        "lifecycle": "RUNNING",
+        "operating": "REV_MATCH",
+        "gear": 2,
+        "rpm": 5540.266847245736,
+        "speed_kph": 98.42150874836015,
+        "shifts": 7,
+        "overruns": 1
+      },
+      {
+        "frame": 1029120,
+        "seconds": 21.44,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 2,
+        "rpm": 7070.263048365883,
+        "speed_kph": 93.23567495240906,
+        "shifts": 7,
+        "overruns": 1
+      },
+      {
+        "frame": 1029360,
+        "seconds": 21.445,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 2,
+        "rpm": 7054.625659879728,
+        "speed_kph": 93.0873471467427,
+        "shifts": 7,
+        "overruns": 1
+      },
+      {
+        "frame": 1033920,
+        "seconds": 21.54,
+        "lifecycle": "RUNNING",
+        "operating": "OVERRUN",
+        "gear": 2,
+        "rpm": 6906.022256080182,
+        "speed_kph": 90.03940359948086,
+        "shifts": 7,
+        "overruns": 1
+      },
+      {
+        "frame": 1071120,
+        "seconds": 22.315,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 1,
+        "rpm": 5118.269997196674,
+        "speed_kph": 66.73102995041296,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1072800,
+        "seconds": 22.35,
+        "lifecycle": "RUNNING",
+        "operating": "REV_MATCH",
+        "gear": 1,
+        "rpm": 5117.697863184471,
+        "speed_kph": 65.70068102350102,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1081920,
+        "seconds": 22.54,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 1,
+        "rpm": 6790.440985735506,
+        "speed_kph": 60.143217582674794,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1082160,
+        "seconds": 22.545,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 1,
+        "rpm": 6775.4443799630535,
+        "speed_kph": 59.99658177151367,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1086720,
+        "seconds": 22.64,
+        "lifecycle": "RUNNING",
+        "operating": "OVERRUN",
+        "gear": 1,
+        "rpm": 6524.718621174418,
+        "speed_kph": 57.134138539180555,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1170240,
+        "seconds": 24.38,
+        "lifecycle": "RUNNING",
+        "operating": "CRUISE",
+        "gear": 1,
+        "rpm": 1140.7947557354962,
+        "speed_kph": 9.989446197333564,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1172160,
+        "seconds": 24.42,
+        "lifecycle": "RUNNING",
+        "operating": "IDLE",
+        "gear": 1,
+        "rpm": 1021.0891844752213,
+        "speed_kph": 8.941236291376695,
+        "shifts": 8,
+        "overruns": 1
+      },
+      {
+        "frame": 1296000,
+        "seconds": 27.0,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_CUT",
+        "gear": 0,
+        "rpm": 850.0000000000005,
+        "speed_kph": 0.0,
+        "shifts": 9,
+        "overruns": 1
+      },
+      {
+        "frame": 1302240,
+        "seconds": 27.13,
+        "lifecycle": "RUNNING",
+        "operating": "SHIFT_RECOVER",
+        "gear": 0,
+        "rpm": 850.0000000000005,
+        "speed_kph": 0.0,
+        "shifts": 9,
+        "overruns": 1
+      },
+      {
+        "frame": 1306800,
+        "seconds": 27.225,
+        "lifecycle": "RUNNING",
+        "operating": "IDLE",
+        "gear": 0,
+        "rpm": 850.0000000000005,
+        "speed_kph": 0.0,
+        "shifts": 9,
+        "overruns": 1
+      },
+      {
+        "frame": 1416000,
+        "seconds": 29.5,
+        "lifecycle": "STOPPING",
+        "operating": "IDLE",
+        "gear": 0,
+        "rpm": 815.3110385427678,
+        "speed_kph": 0.0,
+        "shifts": 9,
+        "overruns": 1
+      },
+      {
+        "frame": 1442400,
+        "seconds": 30.05,
+        "lifecycle": "OFF",
+        "operating": "IDLE",
+        "gear": 0,
+        "rpm": 0.0,
+        "speed_kph": 0.0,
+        "shifts": 9,
+        "overruns": 1
+      }
+    ],
+    "source_binding_sha256": "2578f20d4d5ab3185088bc9ba99d9e18db9088f2cdbcf71e9513baba278391d0",
+    "event_profile_description": "A crank/catch mixed-cabin candidates plus local E1.2..14kHz exhaust transient; physical afterfire identity/listening unconfirmed. No formal shift/engage/disengage/stop profiles.",
+    "review_introduction": "同一C驾驶器完成启动、怠速、加速、收油、制动回到怠速和熄火。收油接入E尾排1.2–14 kHz短声候选；启动与短声均待听评，换挡等其他独立短声仍缺。转速来自演示控制，并非素材实车轨迹。",
+    "review_listening_hint": "先听完整干声，再切换独立事件：启动段为A候选，收油后为E尾排短声。可用“收油15.5s”按钮定位。各层保持相同增益，无房间处理。"
+  },
+  "web": {
+    "result": "passed",
+    "HTTP200": true,
+    "one_player": true,
+    "no_autoplay": true,
+    "six_tracks_and_downloads_available": true,
+    "same_group_preserves_time_and_play_state": true,
+    "new_group_resets_time": true,
+    "rapid_switch_last_wins": true,
+    "unconfirmed_scoped_status_visible": true,
+    "desktop_mobile_no_overflow": true,
+    "automated_audio_muted": true,
+    "errors": []
+  },
+  "cycle_web": {
+    "result": "passed",
+    "HTTP200": true,
+    "one_player": true,
+    "no_autoplay": true,
+    "tracks": 6,
+    "HTTP_seek_works": true,
+    "same_time_event_switch": true,
+    "playing_switch_and_volume": true,
+    "rapid_switch_last_wins": true,
+    "native_idle_and_off_telemetry": true,
+    "local_candidate_status_visible": true,
+    "desktop_mobile_no_overflow": true,
+    "automated_audio_muted": true,
+    "errors": [],
+    "verifier_sha256": "ed2506fed232e2fd6c1bfa395a745c8be471eb9737a7c171a0ee959eaecfbfa8"
+  },
+  "file_web": {
+    "result": "passed",
+    "one_player": true,
+    "no_autoplay": true,
+    "tracks": 6,
+    "seek_and_switch_preserve_time": true,
+    "playing_switch_continues": true,
+    "volume_preserved": true,
+    "rapid_switch_stable": true,
+    "actual_telemetry": true,
+    "desktop_mobile_no_overflow": true,
+    "errors": [],
+    "extra_monitor_gain": 1,
+    "spatial_processing": false
+  },
+  "context_check": {
+    "result": "passed",
+    "known_levels": {
+      "schema": "vsl.event-context-probe/1",
+      "source": {
+        "path": "E:\\VehicleSoundLab\\renders\\exhaust_return_v1\\context-check2\\known-antiphase.wav",
+        "sha256": "2f7e90849f7d30a030f3b3c9bae5a9108d8ca277683db501cecdf47b61102113",
+        "first_frame": 52800,
+        "last_frame": 57600,
+        "source_seconds": [
+          1.1,
+          1.2
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "analysis_scope": {
+        "mode": "band",
+        "low_hz": 1200.0,
+        "high_hz": 14000.0
+      },
+      "sample_peak_seconds": 1.1924166666666667,
+      "backgrounds": [
+        {
+          "name": "before",
+          "source": {
+            "path": "E:\\VehicleSoundLab\\renders\\exhaust_return_v1\\context-check2\\known-antiphase.wav",
+            "sha256": "2f7e90849f7d30a030f3b3c9bae5a9108d8ca277683db501cecdf47b61102113",
+            "first_frame": 38400,
+            "last_frame": 48000,
+            "source_seconds": [
+              0.8,
+              1.0
+            ],
+            "channels": 2,
+            "sample_rate": 48000,
+            "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+          },
+          "full_contrast_db": 3.9794000867203696,
+          "scoped_contrast_db": 6.0205999131605985,
+          "observation": {
+            "rms_channels": [
+              0.1581138830084192,
+              0.1581138830084192
+            ],
+            "background_rms_channels": [
+              0.10000000000000021,
+              0.10000000000000021
+            ],
+            "excess_mean_square": 0.015000000000000027,
+            "event_to_background_db": 3.9794000867203696,
+            "modal_peaks_hz": [
+              3000.0
+            ],
+            "modal_observations": [
+              {
+                "hz": 2999.999999987062,
+                "phase": 4.063413161503604e-09,
+                "phase_channel": 0,
+                "frequency_bin_hz": 23.4375
+              }
+            ],
+            "bands": [
+              {
+                "hz": [
+                  1200.0,
+                  4500
+                ],
+                "background_power": 0.005000000000203056,
+                "excess_power": 0.015000000000120162,
+                "peak_time": 0.055,
+                "attack_seconds": 0.0005,
+                "decay_seconds": 2.0,
+                "log_amplitude_tail_slope": -9.907565720572375e-13,
+                "decay_fitted": true
+              },
+              {
+                "hz": [
+                  4500,
+                  14000.0
+                ],
+                "background_power": 2.959024463867916e-16,
+                "excess_power": 0.0,
+                "peak_time": 0.01,
+                "attack_seconds": 0.0005,
+                "decay_seconds": 0.08,
+                "log_amplitude_tail_slope": null,
+                "decay_fitted": false
+              }
+            ],
+            "limits": [
+              "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+              "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+              "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position.",
+              "Frequency scope measures an acoustic increment only; SOS output is not a brickwall-isolated physical source."
+            ],
+            "analysis_scope": {
+              "mode": "band",
+              "low_hz": 1200.0,
+              "high_hz": 14000.0
+            },
+            "scoped_event_power": 0.020000000000265274,
+            "scoped_background_power": 0.005000000000203352,
+            "scoped_excess_mean_square": 0.015000000000061922,
+            "scoped_positive_psd_excess_power": 0.015000000000120162,
+            "scoped_event_to_background_db": 6.0205999131605985
+          }
+        },
+        {
+          "name": "after",
+          "source": {
+            "path": "E:\\VehicleSoundLab\\renders\\exhaust_return_v1\\context-check2\\known-antiphase.wav",
+            "sha256": "2f7e90849f7d30a030f3b3c9bae5a9108d8ca277683db501cecdf47b61102113",
+            "first_frame": 72000,
+            "last_frame": 81600,
+            "source_seconds": [
+              1.5,
+              1.7
+            ],
+            "channels": 2,
+            "sample_rate": 48000,
+            "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+          },
+          "full_contrast_db": 16.020599913279604,
+          "scoped_contrast_db": 18.06179973971985,
+          "observation": {
+            "rms_channels": [
+              0.1581138830084192,
+              0.1581138830084192
+            ],
+            "background_rms_channels": [
+              0.025000000000000095,
+              0.025000000000000095
+            ],
+            "excess_mean_square": 0.024375000000000067,
+            "event_to_background_db": 16.020599913279604,
+            "modal_peaks_hz": [
+              3000.0
+            ],
+            "modal_observations": [
+              {
+                "hz": 2999.999999992368,
+                "phase": 2.396491893819075e-09,
+                "phase_channel": 0,
+                "frequency_bin_hz": 23.4375
+              }
+            ],
+            "bands": [
+              {
+                "hz": [
+                  1200.0,
+                  4500
+                ],
+                "background_power": 0.00031250000001269086,
+                "excess_power": 0.019687500000252357,
+                "peak_time": 0.055,
+                "attack_seconds": 0.0005,
+                "decay_seconds": 2.0,
+                "log_amplitude_tail_slope": -7.678962313341205e-13,
+                "decay_fitted": true
+              },
+              {
+                "hz": [
+                  4500,
+                  14000.0
+                ],
+                "background_power": 1.8493902988188296e-17,
+                "excess_power": 1.9705977412221172e-16,
+                "peak_time": 0.01,
+                "attack_seconds": 0.0005,
+                "decay_seconds": 0.08,
+                "log_amplitude_tail_slope": null,
+                "decay_fitted": false
+              }
+            ],
+            "limits": [
+              "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+              "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+              "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position.",
+              "Frequency scope measures an acoustic increment only; SOS output is not a brickwall-isolated physical source."
+            ],
+            "analysis_scope": {
+              "mode": "band",
+              "low_hz": 1200.0,
+              "high_hz": 14000.0
+            },
+            "scoped_event_power": 0.020000000000265274,
+            "scoped_background_power": 0.0003125000000127094,
+            "scoped_excess_mean_square": 0.019687500000252565,
+            "scoped_positive_psd_excess_power": 0.019687500000252555,
+            "scoped_event_to_background_db": 18.06179973971985
+          }
+        }
+      ],
+      "fit_performed": false,
+      "physical_identity_confirmed": false,
+      "limits": [
+        "Contrasts depend on the explicitly selected backgrounds; none is selected automatically.",
+        "A contrast above 3 dB alone does not identify an afterfire or isolate a physical source.",
+        "Positive PSD excess is a statistical estimate, not a cleaned event waveform."
+      ]
+    },
+    "original_E_values_exact": true,
+    "antiphase_stereo_power_preserved": true,
+    "overlap_refused": true,
+    "no_fit_or_identity_inference": true,
+    "sources": {
+      "verify_event_context_v1.py": "481fe4ead6a688c594a8624671f270789a5fd036eece586d547af17ef917c93c",
+      "probe_event_context.py": "6b62f1ebbaac94b574f503183d710d78e9bc37ef2a4639d635014dcaa1dafdad",
+      "context.py": "9b875dc75ea6ab2ad0e51f5908e30a603ec0b672367cbf690931461e97097029"
+    }
+  },
+  "review_url": "http://127.0.0.1:8789/references/analysis/exhaust_return_v1/review1/index.html",
+  "cycle_url": "http://127.0.0.1:8789/references/analysis/exhaust_return_v1/cycle-review2/index.html",
+  "global_bank_changed": false,
+  "new_downloads": false,
+  "spatial_processing": false,
+  "compute_optimization": false,
+  "limitations": [
+    "E candidate only1.2..14kHz acoustic increment, no LF/full-band reconstruction or confirmed afterfire identity/listening.",
+    "Single-event C inserted at crop start; original transient peak is about24ms later, not onset/waveform alignment.",
+    "A crank/catch are still unaccepted mixed-cabin acoustic candidates; formal bank remains mask6.",
+    "32s C pedal trajectory is engineering demonstration, not video RPM/fuel telemetry reproduction.",
+    "Formal engage/disengage/shift/stop and full-band afterfire profiles remain unavailable.",
+    "Four-seed fit/bounded muted device checks do not prove all-seed quality, long-run realtime or ADI MCPS.",
+    "Original E_screen1/E_detail1 adhoc implementation was not saved; context1 newly reproduces13.31 only with retained source.",
+    "cycle-web1 real HTTP seek failure retained; web2 verifier failed to await adopted track; web3 corrected test passes.",
+    "Early failed browser verifier scripts were not snapshotted; their reports/screenshots survive. Final web4 stores exact executed verifier.",
+    "context-check1 Windows GBK decode failure retained as text; context-check2 explicitly UTF8 passes.",
+    "Persistent updated launch/restart remains unexecuted after earlier automatic rejection blocked by policy; no bypass.",
+    "G1/G2/G3 download approvals and other listening requests pending; no repeated request or inferred approval.",
+    "No commit or push; worktree includes earlier uncommitted work and is preserved."
+  ]
+}

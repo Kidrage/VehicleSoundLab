@@ -19,6 +19,28 @@ static void rotations(MsVoice *v) {
     }
     v->rotation_ratio=v->ratio.value;
 }
+static void track_rotations(MsVoice *v) {
+    unsigned k;double step=v->ratio.step;
+    if(v->rotation_ratio==v->ratio.value)return;
+    if(!v->ratio.left||v->rotation_step!=step||!(v->frame&63)) {
+        rotations(v);
+        if(v->ratio.left&&v->rotation_step!=step) {
+            for(k=0;k<v->profile->count;++k){
+                double a=2*MS_PI*v->profile->mode[k].hz/MS_RATE*step;
+                v->step_dc[k]=cos(a);v->step_ds[k]=sin(a);
+            }
+            v->rotation_step=step;
+        }
+    }else {
+        for(k=0;k<v->profile->count;++k) {
+            double dc=v->dc[k],ds=v->ds[k];
+            v->dc[k]=dc*v->step_dc[k]-ds*v->step_ds[k];
+            v->ds[k]=ds*v->step_dc[k]+dc*v->step_ds[k];
+            v->weight[k]=taper(v->profile->mode[k].hz*v->ratio.value);
+        }
+        v->rotation_ratio=v->ratio.value;
+    }
+}
 static void adopt(MsRamp *r,double target) {
     if(target==r->target)return;
     r->target=target;r->left=MS_RAMP_FRAMES;r->step=(target-r->value)/MS_RAMP_FRAMES;
@@ -51,7 +73,7 @@ int ms_voice_tick_gains(MsVoice *v,const double *gains,double out[2]) {
     if(gains)for(k=0;k<v->profile->count;++k)
         if(!isfinite(gains[k])||gains[k]<0||gains[k]>DBL_MAX/64)return 0;
     advance(&v->ratio);advance(&v->gain);
-    if(v->rotation_ratio!=v->ratio.value)rotations(v);
+    track_rotations(v);
     for(k=0;k<v->profile->count;++k) {
         double re=v->cosine[k],im=v->sine[k],next_re,next_im;
         for(c=0;c<2;++c) {

@@ -1,0 +1,1128 @@
+{
+  "schema": "vsl.startup-handoff-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no synthesis progress: source/render scope only",
+  "current_goal_turn": "actual controller and source handoff progress",
+  "runtime_C_H_changed": [
+    "src/drive/drive.c"
+  ],
+  "runtime_C_H_total": 378,
+  "voices_unchanged": [
+    "voices/cabin_anchors_v1/E Cabin Lower.model",
+    "voices/cabin_anchors_v1/E Cabin Upper.model",
+    "voices/cabin_anchors_v1/index.json",
+    "voices/catch_bloom_v1/A cabin catch.cb",
+    "voices/catch_bloom_v1/README.md",
+    "voices/coherent_low_v1/index.json",
+    "voices/coherent_low_v1/measured_phase.model",
+    "voices/coherent_low_v1/scrambled_phase.model",
+    "voices/dna_bank_v1/Hollow Spectrum.model",
+    "voices/dna_bank_v1/index.json",
+    "voices/dna_bank_v1/V10 Exterior.model",
+    "voices/dna_bank_v1/Warm Additive.model",
+    "voices/E_decel_source_v1/E slowing cabin.model",
+    "voices/E_decel_source_v1/E slowing cabin.sres",
+    "voices/E_decel_source_v1/index.json",
+    "voices/events_v1/profiles.h",
+    "voices/events_v1/profiles.json",
+    "voices/exterior_anchors_v1/A Stationary High.model",
+    "voices/exterior_anchors_v1/A Stationary Low.model",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+    "voices/exterior_anchors_v1/index.json",
+    "voices/F3_before_upshift_v1/F3 before upshift.model",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres",
+    "voices/F3_before_upshift_v1/index.json",
+    "voices/F3_fifth_local_v1/first_early.model",
+    "voices/F3_fifth_local_v1/first_late.model",
+    "voices/F3_fifth_local_v1/first_mid.model",
+    "voices/F3_fifth_local_v1/index.json",
+    "voices/F3_fifth_local_v1/second_early.model",
+    "voices/F3_fifth_local_v1/second_late.model",
+    "voices/F3_fifth_local_v1/second_mid.model",
+    "voices/idle_resonant_v1/detail.json",
+    "voices/idle_resonant_v1/README.md",
+    "voices/line_density_v1/index.json",
+    "voices/line_density_v1/README.md",
+    "voices/line_density_v1/V10 A Density 0.residual",
+    "voices/line_density_v1/V10 A Density 25.model",
+    "voices/line_density_v1/V10 A Density 25.residual",
+    "voices/line_density_v1/V10 A Density 50.model",
+    "voices/line_density_v1/V10 A Density 50.residual",
+    "voices/low_rumble_v2/A Exterior.model",
+    "voices/low_rumble_v2/B Cabin.model",
+    "voices/low_rumble_v2/D Dyno.model",
+    "voices/low_rumble_v2/E Cabin.model",
+    "voices/low_rumble_v2/index.json",
+    "voices/residual_atlas_v1/A Stationary High.residual",
+    "voices/residual_atlas_v1/A Stationary Low.residual",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+    "voices/residual_atlas_v1/E Cabin Lower.residual",
+    "voices/residual_atlas_v1/E Cabin Upper.residual",
+    "voices/residual_atlas_v1/index.json",
+    "voices/residual_atlas_v1/README.md",
+    "voices/residual_motion_v1/A_moving.motion",
+    "voices/residual_motion_v1/A_moving.residual",
+    "voices/residual_osc_v1/A_exterior.residual",
+    "voices/residual_osc_v1/E_cabin.residual",
+    "voices/residual_osc_v1/README.md",
+    "voices/resonant_detail_c_v1/idle_35.rdetail",
+    "voices/resonant_detail_c_v1/idle_add.rdetail",
+    "voices/resonant_detail_c_v1/index.json",
+    "voices/resonant_detail_c_v1/moving_35.rdetail",
+    "voices/resonant_detail_c_v1/README.md",
+    "voices/resonant_detail_v1/detail.json",
+    "voices/resonant_detail_v1/README.md",
+    "voices/resonant_detail_v1/SELECTION.json",
+    "voices/resonant_detail_v2/detail.json",
+    "voices/resonant_detail_v2/README.md",
+    "voices/start_texture_v1/A cabin early.start",
+    "voices/start_texture_v1/README.md",
+    "voices/startup_detail_v1/A startup settling detail.residual",
+    "voices/startup_detail_v1/index.json",
+    "voices/startup_detail_v1/README.md",
+    "voices/startup_drive_v1/A cabin motion.start",
+    "voices/startup_settle_v1/A start cabin settle.model",
+    "voices/startup_settle_v1/README.md",
+    "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+    "voices/state_colour_v2/fit.json",
+    "voices/state_colour_v2/README.md",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+    "voices/stationary_bridge_v1/index.json",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+    "voices/stationary_recipe_v1/index.json",
+    "voices/stereo_resonance_v1/A cabin settle.sres",
+    "voices/stereo_resonance_v1/README.md"
+  ],
+  "old_bridge_sha256": "ccd3cef7340662a1f2986afa02b2e6af23bbac6dc333823a1a16c144323974e4",
+  "bridge_sha256": "6a5a6a7323b95e09c1f8e01b7df4aff975d57b16e827a3cb7934c3cfb22d29c8",
+  "abi": 9,
+  "verification": {
+    "schema": "vsl.startup-handoff-verification/1",
+    "result": "passed",
+    "old_bridge_sha256": "ccd3cef7340662a1f2986afa02b2e6af23bbac6dc333823a1a16c144323974e4",
+    "new_bridge_sha256": "6a5a6a7323b95e09c1f8e01b7df4aff975d57b16e827a3cb7934c3cfb22d29c8",
+    "abi": 9,
+    "exact_cases": [
+      {
+        "catalog": "v10-moving-fine-idle",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "7261396bfbe11786c75c9e245c786f03c1a2ae47fb2182f910136ba6337ba3f5",
+        "exact": true
+      },
+      {
+        "catalog": "v10-moving-fine-idle",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "7261396bfbe11786c75c9e245c786f03c1a2ae47fb2182f910136ba6337ba3f5",
+        "exact": true
+      },
+      {
+        "catalog": "v10-moving35",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "f6049f6fc6819c1079d940437281202ef750449d3deac432778b5a3da61f53cf",
+        "exact": true
+      },
+      {
+        "catalog": "v10-moving35",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "f6049f6fc6819c1079d940437281202ef750449d3deac432778b5a3da61f53cf",
+        "exact": true
+      },
+      {
+        "catalog": "v10-exterior4",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "c6ed7568d57a3714fc377d1f05557ef2613ebfa1f6f79ac0533e42378a5a9c48",
+        "exact": true
+      },
+      {
+        "catalog": "v10-exterior4",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "c6ed7568d57a3714fc377d1f05557ef2613ebfa1f6f79ac0533e42378a5a9c48",
+        "exact": true
+      },
+      {
+        "catalog": "v10-cabin2",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "2d5b5c49c68d8858632cbe63a86a6fd2043f49fad09679832098fd229fc1a369",
+        "exact": true
+      },
+      {
+        "catalog": "v10-cabin2",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "2d5b5c49c68d8858632cbe63a86a6fd2043f49fad09679832098fd229fc1a369",
+        "exact": true
+      },
+      {
+        "catalog": "v10-start-settle",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "9bc88947b88d55ff3611e158bc1d71366a753545070b65999ab552f5031827fc",
+        "exact": true
+      },
+      {
+        "catalog": "v10-start-settle",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "9bc88947b88d55ff3611e158bc1d71366a753545070b65999ab552f5031827fc",
+        "exact": true
+      },
+      {
+        "catalog": "synthetic-warm",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "b5f0b93a678ee9f39cc05398c5f82c863371a9873717459e2512ba9acb5074d2",
+        "exact": true
+      },
+      {
+        "catalog": "synthetic-warm",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "b5f0b93a678ee9f39cc05398c5f82c863371a9873717459e2512ba9acb5074d2",
+        "exact": true
+      },
+      {
+        "catalog": "synthetic-hollow",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "46fffd57b1d41d060f6fe88c1b24142509894ee355b4ff5ca208b29700af0b09",
+        "exact": true
+      },
+      {
+        "catalog": "synthetic-hollow",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "46fffd57b1d41d060f6fe88c1b24142509894ee355b4ff5ca208b29700af0b09",
+        "exact": true
+      },
+      {
+        "catalog": "v10-stationary-bridge5",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "c6ed7568d57a3714fc377d1f05557ef2613ebfa1f6f79ac0533e42378a5a9c48",
+        "exact": true
+      },
+      {
+        "catalog": "v10-stationary-bridge5",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "c6ed7568d57a3714fc377d1f05557ef2613ebfa1f6f79ac0533e42378a5a9c48",
+        "exact": true
+      },
+      {
+        "catalog": "v10-cabin-slowing",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "6c736f462f887b91d2cdf30a902d504ec950adef77decf90d2e068b78fb2a54b",
+        "exact": true
+      },
+      {
+        "catalog": "v10-cabin-slowing",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "6c736f462f887b91d2cdf30a902d504ec950adef77decf90d2e068b78fb2a54b",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-before-upshift",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "fab9ff0390d9977b0b0a9142c8e86acdd50d198c16e1dc3341d7691c53e6ceda",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-before-upshift",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "fab9ff0390d9977b0b0a9142c8e86acdd50d198c16e1dc3341d7691c53e6ceda",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-fifth-first-local",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "2b4a7d6144fa28ed70b02cbef053a8e5445368131eb5b2669b8bc72c6813ffc4",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-fifth-first-local",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "2b4a7d6144fa28ed70b02cbef053a8e5445368131eb5b2669b8bc72c6813ffc4",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-fifth-second-local",
+        "mode": "automatic",
+        "frames": 153600,
+        "pcm_sha256": "66b65dbec967012c44b1b707c2b7c26f0e7a878eca0dcfdc024684647b12bf49",
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-fifth-second-local",
+        "mode": "manual-selected-1",
+        "frames": 153600,
+        "pcm_sha256": "66b65dbec967012c44b1b707c2b7c26f0e7a878eca0dcfdc024684647b12bf49",
+        "exact": true
+      },
+      {
+        "catalog": "v10-moving-fine-idle",
+        "mode": "RPM-bench",
+        "frames": 153600,
+        "exact": true
+      },
+      {
+        "catalog": "v10-F3-fifth-second-local",
+        "mode": "RPM-bench",
+        "frames": 153600,
+        "exact": true
+      }
+    ],
+    "neutral_cases": [
+      {
+        "catalog": "v10-moving-fine-idle",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-moving35",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-exterior4",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-cabin2",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-start-settle",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "synthetic-warm",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 650.0000000003237
+      },
+      {
+        "catalog": "synthetic-hollow",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 650.0000000003237
+      },
+      {
+        "catalog": "v10-stationary-bridge5",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-cabin-slowing",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-F3-before-upshift",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-F3-fifth-first-local",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      },
+      {
+        "catalog": "v10-F3-fifth-second-local",
+        "stationary": true,
+        "shift_count": 0,
+        "no_shift_cut_or_recover": true,
+        "final_rpm": 850.0000000001944
+      }
+    ],
+    "old_documents_refused": [
+      {
+        "case": "old-preset",
+        "reason": "配方引擎、参数库或自定义事件身份不匹配；请使用对应冻结版本"
+      },
+      {
+        "case": "old-take",
+        "reason": "行程使用另一版 C 引擎；请使用原版本回放"
+      }
+    ],
+    "event_pcm_exact": true,
+    "all_pcm_before_running_exact": true,
+    "event_does_not_change_continuous_pcm": true,
+    "voice_bank_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "source_binding_verified": true,
+    "sound_accepted": false,
+    "goal_complete": false
+  },
+  "UI": {
+    "result": "passed",
+    "bridge_sha256": "6a5a6a7323b95e09c1f8e01b7df4aff975d57b16e827a3cb7934c3cfb22d29c8",
+    "no_autoplay": true,
+    "preset_sound_parameters_restore_and_save_exact": true,
+    "saved_input_refresh": {
+      "source": 0,
+      "valid": 4,
+      "sequence": 1,
+      "speed_mps": 0,
+      "acceleration_mps2": 0,
+      "tire_slip": 0.0
+    },
+    "old_binary_preset_refused_without_mutation": true,
+    "cases": [
+      {
+        "variant": "fixed1",
+        "frames": 384000,
+        "underflows": 0,
+        "notices_exact": true,
+        "final_state_exact": true,
+        "no_shift_states": true
+      },
+      {
+        "variant": "timing1",
+        "frames": 384000,
+        "underflows": 0,
+        "notices_exact": true,
+        "final_state_exact": true,
+        "no_shift_states": true
+      }
+    ],
+    "audio_muted": true,
+    "own_window_closed": true,
+    "persistent_service_restarted": false,
+    "timbre_accepted": false
+  },
+  "web": {
+    "result": "passed",
+    "browser": {
+      "result": "passed",
+      "decoded": [
+        {
+          "file": "reference.wav",
+          "duration": 5.5,
+          "frames": 264000,
+          "channels": 2
+        },
+        {
+          "file": "original.wav",
+          "duration": 8,
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "file": "fixed.wav",
+          "duration": 8,
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "file": "timing.wav",
+          "duration": 8,
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "file": "continuous.wav",
+          "duration": 8,
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "file": "events.wav",
+          "duration": 8,
+          "frames": 384000,
+          "channels": 2
+        }
+      ],
+      "one_player_no_autoplay": true,
+      "six_tracks_decode_exact": true,
+      "relative_marker_seek_preserved": true,
+      "volume_and_play_state_preserved": true,
+      "cue_button_verified": true,
+      "HTTP_sha_exact": true,
+      "downloads_HTTP200": true,
+      "desktop_mobile_no_overflow": true,
+      "audio_muted": true,
+      "errors": []
+    },
+    "own_service_closed": true,
+    "persistent_service_restarted": false,
+    "audio_muted": true,
+    "timbre_accepted": false
+  },
+  "observation": {
+    "schema": "vsl.startup-handoff-observation/1",
+    "original_reference": {
+      "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+      "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "first_frame": 1680000,
+      "last_frame": 1944000,
+      "source_seconds": [
+        35.0,
+        40.5
+      ],
+      "channels": 2,
+      "sample_rate": 48000,
+      "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+    },
+    "original_reference_marker_bands": {
+      "early": {
+        "first_frame": 79200,
+        "last_frame": 101760,
+        "time_mean_power_LR": [
+          0.001085929517574069,
+          0.0024095924295479275
+        ],
+        "welch_band_power_LR": [
+          [
+            7.087451306617845e-07,
+            8.333510312910293e-07
+          ],
+          [
+            6.162136545296655e-05,
+            9.320012611169138e-05
+          ],
+          [
+            0.00031870222354840497,
+            0.0011307674503905519
+          ],
+          [
+            0.0005799524461106365,
+            0.0010828439299374027
+          ],
+          [
+            9.363279925240059e-05,
+            8.215302196209852e-05
+          ],
+          [
+            4.511127581382957e-08,
+            4.5674977103265095e-08
+          ]
+        ]
+      },
+      "build": {
+        "first_frame": 106560,
+        "last_frame": 144960,
+        "time_mean_power_LR": [
+          0.004365642358644676,
+          0.011147980787470825
+        ],
+        "welch_band_power_LR": [
+          [
+            1.1527657986631728e-05,
+            2.4092731457804857e-05
+          ],
+          [
+            0.0023795299078939514,
+            0.006985899543779503
+          ],
+          [
+            0.0018311660314254791,
+            0.004054750761364171
+          ],
+          [
+            0.00014366835855972763,
+            0.00023773606999203612
+          ],
+          [
+            3.299944223071634e-05,
+            2.81923646625639e-05
+          ],
+          [
+            5.410507575249065e-08,
+            5.292067535482472e-08
+          ]
+        ]
+      },
+      "settling": {
+        "first_frame": 156000,
+        "last_frame": 192000,
+        "time_mean_power_LR": [
+          0.0003362147825032382,
+          0.0009691694995850513
+        ],
+        "welch_band_power_LR": [
+          [
+            4.51159307378099e-06,
+            9.246109346862186e-06
+          ],
+          [
+            0.0001499606262193919,
+            0.0005832522987311537
+          ],
+          [
+            0.00011880725994583966,
+            0.0002272387581817653
+          ],
+          [
+            4.730185488115084e-05,
+            7.697302868246989e-05
+          ],
+          [
+            7.741099413507179e-06,
+            6.975610203637913e-06
+          ],
+          [
+            3.9498820642020075e-08,
+            4.0551952998913514e-08
+          ]
+        ]
+      }
+    },
+    "captures": [
+      {
+        "variant": "original1",
+        "verification_result": "passed",
+        "start_frames": {
+          "1": 17184,
+          "2": 30240
+        },
+        "early_to_catch_seconds": 0.272,
+        "running_seconds": 1.28,
+        "idle_operating_seconds": 1.505,
+        "startup_shift_block_seconds": 0.225,
+        "idle_weight_first_positive_seconds": 1.505,
+        "final_shift_count": 1,
+        "reconstruction_max_error": 7.44260539309316e-09,
+        "regions": {
+          "catch_event_active": {
+            "first_frame": 30240,
+            "last_frame": 68640,
+            "seconds": [
+              0.63,
+              1.43
+            ],
+            "continuous_power": 0.00039623194951583264,
+            "event_power": 0.0009846964742549992,
+            "twice_cross_power": 2.8248515024131067e-05,
+            "total_power": 0.0014091769379356055,
+            "power_identity_abs_error": 8.593572901893776e-13,
+            "event_to_continuous_db": 3.95352891673165
+          }
+        },
+        "final_rpm": 850.0000000000014,
+        "rms": 0.024405227187543628,
+        "acoustic_marker_band_edges_hz": [
+          0.0,
+          60.0,
+          300.0,
+          1200.0,
+          4500.0,
+          14000.0,
+          24000.0
+        ],
+        "acoustic_marker_bands": {
+          "early": {
+            "first_frame": 17184,
+            "last_frame": 39744,
+            "time_mean_power_LR": [
+              0.0008036667292653425,
+              0.0008036666534910567
+            ],
+            "welch_band_power_LR": [
+              [
+                5.618699698186067e-05,
+                5.618699271249509e-05
+              ],
+              [
+                0.0003788926466545724,
+                0.0003788926514645993
+              ],
+              [
+                0.0002737711648850573,
+                0.00027377117335501363
+              ],
+              [
+                7.100371691210459e-05,
+                7.10036242658925e-05
+              ],
+              [
+                8.235514623558033e-06,
+                8.23551463687146e-06
+              ],
+              [
+                4.636437363425528e-09,
+                4.636436325299458e-09
+              ]
+            ]
+          },
+          "build": {
+            "first_frame": 44544,
+            "last_frame": 82944,
+            "time_mean_power_LR": [
+              0.0008993975942630616,
+              0.000899397612144602
+            ],
+            "welch_band_power_LR": [
+              [
+                0.00010345119014316362,
+                0.0001034511858946815
+              ],
+              [
+                0.0006034565852108018,
+                0.0006034565822838075
+              ],
+              [
+                0.0001867072348366648,
+                0.00018670723563700067
+              ],
+              [
+                1.4061967739922383e-05,
+                1.4061977864396873e-05
+              ],
+              [
+                2.2949771902546474e-06,
+                2.2949769412167042e-06
+              ],
+              [
+                2.8831920387442214e-09,
+                2.8831824375044847e-09
+              ]
+            ]
+          },
+          "settling": {
+            "first_frame": 93984,
+            "last_frame": 129984,
+            "time_mean_power_LR": [
+              0.0005117950897000355,
+              0.0005117950875514176
+            ],
+            "welch_band_power_LR": [
+              [
+                2.2348804628797344e-05,
+                2.2348804592851044e-05
+              ],
+              [
+                0.0004486762111272187,
+                0.0004486762109138794
+              ],
+              [
+                3.214278043382594e-05,
+                3.214278050140141e-05
+              ],
+              [
+                7.059793059597153e-06,
+                7.0597930270560515e-06
+              ],
+              [
+                4.682715805617277e-07,
+                4.6826969909580537e-07
+              ],
+              [
+                2.889774647945159e-09,
+                2.8897284933615923e-09
+              ]
+            ]
+          }
+        },
+        "physical_rpm_measured": false,
+        "listening_acceptance": false
+      },
+      {
+        "variant": "fixed1",
+        "verification_result": "passed",
+        "start_frames": {
+          "1": 17184,
+          "2": 30240
+        },
+        "early_to_catch_seconds": 0.272,
+        "running_seconds": 1.28,
+        "idle_operating_seconds": 1.28,
+        "startup_shift_block_seconds": 0.0,
+        "idle_weight_first_positive_seconds": 1.28,
+        "final_shift_count": 0,
+        "reconstruction_max_error": 7.44260539309316e-09,
+        "regions": {
+          "catch_event_active": {
+            "first_frame": 30240,
+            "last_frame": 68640,
+            "seconds": [
+              0.63,
+              1.43
+            ],
+            "continuous_power": 0.0004204918217793262,
+            "event_power": 0.0009846964742549992,
+            "twice_cross_power": 2.6003088206634337e-05,
+            "total_power": 0.0014311913834411086,
+            "power_identity_abs_error": 7.998512876333796e-13,
+            "event_to_continuous_db": 3.6954482936855375
+          }
+        },
+        "final_rpm": 850.0000000000014,
+        "rms": 0.024684239330156645,
+        "acoustic_marker_band_edges_hz": [
+          0.0,
+          60.0,
+          300.0,
+          1200.0,
+          4500.0,
+          14000.0,
+          24000.0
+        ],
+        "acoustic_marker_bands": {
+          "early": {
+            "first_frame": 17184,
+            "last_frame": 39744,
+            "time_mean_power_LR": [
+              0.0008036667292653425,
+              0.0008036666534910567
+            ],
+            "welch_band_power_LR": [
+              [
+                5.618699698186067e-05,
+                5.618699271249509e-05
+              ],
+              [
+                0.0003788926466545724,
+                0.0003788926514645993
+              ],
+              [
+                0.0002737711648850573,
+                0.00027377117335501363
+              ],
+              [
+                7.100371691210459e-05,
+                7.10036242658925e-05
+              ],
+              [
+                8.235514623558033e-06,
+                8.23551463687146e-06
+              ],
+              [
+                4.636437363425528e-09,
+                4.636436325299458e-09
+              ]
+            ]
+          },
+          "build": {
+            "first_frame": 44544,
+            "last_frame": 82944,
+            "time_mean_power_LR": [
+              0.0010348505358391187,
+              0.001034850535487309
+            ],
+            "welch_band_power_LR": [
+              [
+                8.97994733313105e-05,
+                8.979947058751203e-05
+              ],
+              [
+                0.0007419505873136349,
+                0.0007419505834809769
+              ],
+              [
+                0.00019708512467138766,
+                0.0001970851255849301
+              ],
+              [
+                1.6221647423725416e-05,
+                1.6221643345107164e-05
+              ],
+              [
+                2.4649701217791467e-06,
+                2.4649692258454958e-06
+              ],
+              [
+                3.97754166272781e-09,
+                3.977516340750096e-09
+              ]
+            ]
+          },
+          "settling": {
+            "first_frame": 93984,
+            "last_frame": 129984,
+            "time_mean_power_LR": [
+              0.000511841603182296,
+              0.0005118416014441873
+            ],
+            "welch_band_power_LR": [
+              [
+                2.235086541742959e-05,
+                2.2350865360710787e-05
+              ],
+              [
+                0.0004487107245241792,
+                0.0004487107247674156
+              ],
+              [
+                3.214506916410796e-05,
+                3.214506927286221e-05
+              ],
+              [
+                7.060333824765688e-06,
+                7.060333792131348e-06
+              ],
+              [
+                4.6830780907249404e-07,
+                4.6830592068797584e-07
+              ],
+              [
+                2.8899972684867407e-09,
+                2.8899513574591826e-09
+              ]
+            ]
+          }
+        },
+        "physical_rpm_measured": false,
+        "listening_acceptance": false
+      },
+      {
+        "variant": "timing1",
+        "verification_result": "passed",
+        "start_frames": {
+          "1": 17184,
+          "2": 44640
+        },
+        "early_to_catch_seconds": 0.572,
+        "running_seconds": 1.58,
+        "idle_operating_seconds": 1.58,
+        "startup_shift_block_seconds": 0.0,
+        "idle_weight_first_positive_seconds": 1.58,
+        "final_shift_count": 0,
+        "reconstruction_max_error": 8.22764054109193e-09,
+        "regions": {
+          "catch_event_active": {
+            "first_frame": 44640,
+            "last_frame": 83040,
+            "seconds": [
+              0.93,
+              1.73
+            ],
+            "continuous_power": 0.0004202621540627255,
+            "event_power": 0.0009847697369172485,
+            "twice_cross_power": 7.855623404563802e-06,
+            "total_power": 0.0014128875141004,
+            "power_identity_abs_error": 2.8413773070501414e-13,
+            "event_to_continuous_db": 3.698144115964481
+          }
+        },
+        "final_rpm": 850.0000000000014,
+        "rms": 0.02435936020594825,
+        "acoustic_marker_band_edges_hz": [
+          0.0,
+          60.0,
+          300.0,
+          1200.0,
+          4500.0,
+          14000.0,
+          24000.0
+        ],
+        "acoustic_marker_bands": {
+          "early": {
+            "first_frame": 17184,
+            "last_frame": 39744,
+            "time_mean_power_LR": [
+              0.0002077808004161525,
+              0.0002077808004161525
+            ],
+            "welch_band_power_LR": [
+              [
+                5.014048060527855e-08,
+                5.014048060527855e-08
+              ],
+              [
+                8.157211141128215e-06,
+                8.157211141128215e-06
+              ],
+              [
+                9.192284396254424e-05,
+                9.192284396254424e-05
+              ],
+              [
+                0.00010257938351518717,
+                0.00010257938351518717
+              ],
+              [
+                1.055003670911246e-05,
+                1.055003670911246e-05
+              ],
+              [
+                4.677459243744757e-09,
+                4.677459243744757e-09
+              ]
+            ]
+          },
+          "build": {
+            "first_frame": 44544,
+            "last_frame": 82944,
+            "time_mean_power_LR": [
+              0.001412503828819082,
+              0.001412503782269158
+            ],
+            "welch_band_power_LR": [
+              [
+                0.00014124118559980968,
+                0.00014124117767681495
+              ],
+              [
+                0.0008972486886013255,
+                0.0008972486855652291
+              ],
+              [
+                0.00038686316686196564,
+                0.00038686321150495974
+              ],
+              [
+                2.4617830522001393e-05,
+                2.4617758734649956e-05
+              ],
+              [
+                4.3396127311961614e-06,
+                4.339612597071077e-06
+              ],
+              [
+                4.769774154085727e-09,
+                4.769765121216877e-09
+              ]
+            ]
+          },
+          "settling": {
+            "first_frame": 93984,
+            "last_frame": 129984,
+            "time_mean_power_LR": [
+              0.0005118416031814571,
+              0.0005118416014349215
+            ],
+            "welch_band_power_LR": [
+              [
+                2.2350865417453643e-05,
+                2.235086536059327e-05
+              ],
+              [
+                0.0004487107245232911,
+                0.00044871072476592366
+              ],
+              [
+                3.21450691638302e-05,
+                3.2145069272932596e-05
+              ],
+              [
+                7.060333824790822e-06,
+                7.06033379212805e-06
+              ],
+              [
+                4.683078090314671e-07,
+                4.68305920718283e-07
+              ],
+              [
+                2.8899972708700863e-09,
+                2.8899513595598102e-09
+              ]
+            ]
+          }
+        },
+        "physical_rpm_measured": false,
+        "listening_acceptance": false
+      }
+    ],
+    "marker_gap_reference_seconds": 0.57,
+    "reference_marker_is_not_physical_timing": true,
+    "gain": 0.25,
+    "normalization": false,
+    "room_processing": false,
+    "listening_acceptance": false,
+    "inputs": [
+      {
+        "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_handoff_v1\\original1\\native.wav",
+        "sha256": "be988890d5d0789a485ed1d63c38cc23d57eb0ede518e834d1f227b6f40e8803"
+      },
+      {
+        "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_handoff_v1\\fixed1\\native.wav",
+        "sha256": "096c43cc6f4a125267e314968b940ea871ac5f0145f91d189b7ffb1d58ded16a"
+      },
+      {
+        "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_handoff_v1\\timing1\\native.wav",
+        "sha256": "27521af1105e8480db759ba73c4546a6ba92d16b7ecc36f231c0d98c89c67da7"
+      }
+    ]
+  },
+  "core_checks": {
+    "original": 5,
+    "new_selector": 1,
+    "independent_source": 6
+  },
+  "source_files": {
+    "AGENTS.md": "c94c89579464ed6de38e54de58284aabf6a05cc14d3f8285b9ca24417e56d505",
+    "Build-Vehicle-Source.ps1": "4782d42c9597ab8c7c41554b9e6969ec7c9edcb171b56b590d6c9e6abe412638",
+    "CMakeLists.txt": "f6035787a888b7542d363d73559415437eefaa1ede18342504c417f22b19feba",
+    "handoff/启动到怠速衔接与控制台V10.md": "67f42dfb1c125ab0818335bbb210e1db9d385483400b7518cc3df033e9f0694c",
+    "handoff/当前代码阅读入口.md": "c0cf9a7de48cc4def635680e590c66e67424531313f70ce2290aa3b05186f82d",
+    "research/startup_handoff_v1_plan.json": "35d07052441ed88a13326fbb35443902c83c7d0a73c8921401a8d91425fb883b",
+    "src/drive/drive.c": "c5259155cf5f1a2d146a657c69af0dfe66673dcafaa8d66a913c78f500835807",
+    "tests/test_startup_gear.c": "75a631274e37c376dab4e2ab58ebc14cee78d5f23f4855f47a4b45d02712c72b",
+    "tools/audit_startup_handoff_v1.py": "2fb569a44d1e2a685e3b8d4da76ebd3fc87dd47dbf1c3f5a6f07a9ade205b641",
+    "tools/build_startup_handoff_review_v1.py": "8107ab604e8e2bffda0964bb9ae3251a7bfb3dda0f496cb9533ac54b5606af78",
+    "tools/capture_startup_handoff_v1.py": "cc0e803d1ec7897c92b59305e308bdc32d7b5721809f9d79ccc20a5697b376a6",
+    "tools/finalize_startup_handoff_v1.py": "d56cc74e555745fd60cb7dfee862a86fcfaadb15035e5deb22797d6a4a7606f7",
+    "tools/measure_startup_handoff_v1.py": "cb2cac44c9603ce2007720cadc64c58a68aa58caa207b86dd526edb119563697",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/sound_designer/controller.py": "488d7369a26c46e1724fa7d67a5e43ab6b5b46ff91970aebaadaead53e93776e",
+    "tools/startup_handoff_v1/__init__.py": "b014807dd72f2d78732894a6613ce3c9d748987bcfe5146c418cb46b44150ef8",
+    "tools/startup_handoff_v1/measure.py": "69280c2faccc57df311099831be42972bde5e43dd8022850491ec54f1e1287f9",
+    "tools/startup_handoff_v1/review.py": "f8f59ce1a42aaf7fec479e095c034225ae584d5f581f92b46418e1b6f136ed82",
+    "tools/startup_handoff_v1/session.py": "30b4c54b245bbce8b37ae996a3db1e4a04815003fbcc13caa4203f16bced42db",
+    "tools/startup_response_evidence_v1.py": "861eb976794171e44b5aee66534c53ddda737e2c14e764e50d5b4a1bf9d1fc6c",
+    "tools/vehicle_controller/native.py": "ef50d1d116a8e2189f184b2aa518a7615a99af71e52fd6f2de684922bfdc4d9d",
+    "tools/vehicle_controller/ui.py": "dba6677759bc0d03653e60ed4146209561e23a5d123bdc754f7d79750722274d",
+    "tools/verify_startup_handoff_review_v1.cjs": "5ea4847078b7fe99ae501ed7cd1d6d4f4d3527063b453cb886de431f80c15da2",
+    "tools/verify_startup_handoff_review_v1.py": "223888e01104203beb9fff1bb601dd8c2df3aeef79f48cfdef9a084626d8edcd",
+    "tools/verify_startup_handoff_ui_v1.py": "6b98027870b4037be75f4d460e323b9d76de648131c760727bc26088aa3173b2",
+    "tools/verify_startup_handoff_v1.py": "05f1f09e34970561d738aa6162376b54f5a89c6bae47d7736350be403cc71802"
+  },
+  "freeze": "E:\\VehicleSoundLab\\baselines\\startup_handoff_v1\\delivery1",
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\startup_material_context_v1\\delivery1",
+  "base_manifest_sha256": "ad87e04f0e435e024af135ff741950bd15c6deafc1dff44884c80e00cc4710bf",
+  "new_timbre_accepted": false,
+  "goal_complete": false,
+  "physical_rpm_measured": false,
+  "persistent_service_restarted": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "unresolved": [
+    "startup mechanical sound quality",
+    "idle variation quality",
+    "confirmed full-band afterfire",
+    "other event timbres",
+    "full RPM/load/state coverage"
+  ]
+}

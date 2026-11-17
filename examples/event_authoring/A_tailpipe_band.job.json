@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/2",
+  "kind": "afterfire",
+  "name": "A 尾排局部短声：中高频补充候选",
+  "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "seconds": [335.265, 335.46],
+  "background_seconds": [334.75, 335.05],
+  "analysis_scope": {"mode": "band", "low_hz": 1200, "high_hz": 14000},
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved A tailpipe recording. A frequency-scoped acoustic increment, not a full event reconstruction or confirmed afterfire. Assigned to afterfire only as a manual audition slot; do not promote into automatic vehicle events without review. Fixed background and scope declared before fitting."
+}

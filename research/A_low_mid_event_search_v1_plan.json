@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.approved-event-search-plan/1",
+  "reason": "Complement the existing approved A high-frequency scan with the new low/mid detector, looking for complete short sounds and preserving original context.",
+  "source": "A",
+  "seconds": [[0.0, 300.0]],
+  "detector": "low_mid",
+  "selection": "Independently verify all powers; inspect up to eight both-background-qualified candidates at or after45s, ranked by unchanged minimum fullband contrast. Earlier candidates remain in the report but do not replace the already investigated startup.",
+  "context_seconds_relative": [-1.0, 1.5],
+  "video_frames_relative": [-0.6, -0.3, 0.0, 0.3, 0.6],
+  "limits": "No threshold/background search, automatic physical label or fit, new download, clearing old evidence or implicit exterior viewpoint. A includes mixed cabin/exterior shots; inspect actual frames first."
+}

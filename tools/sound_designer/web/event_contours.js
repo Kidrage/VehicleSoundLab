@@ -1,0 +1,21 @@
+'use strict';
+class VslEventContours {
+ constructor(root,change){this.root=root;this.change=change;}
+ enable(on){for(const card of this.root.querySelectorAll('fieldset')){for(const el of card.querySelectorAll('input,button'))el.disabled=!on;card.querySelector('[data-time]').readOnly=true;const rows=card.querySelectorAll('tbody tr');rows.forEach((tr,i)=>tr.querySelector('button').disabled=!on||i===0||rows.length<=2);card.querySelector('[data-add-point]').disabled=!on||rows.length>=8;}}
+ value(){return Array.from(this.root.querySelectorAll('fieldset'),card=>({low_hz:Number(card.querySelector('[data-low]').value),high_hz:Number(card.querySelector('[data-high]').value),seconds:Array.from(card.querySelectorAll('[data-time]'),x=>Number(x.value)),gain:Array.from(card.querySelectorAll('[data-gain]'),x=>Number(x.value))}));}
+ number(td,input){const readout=document.createElement('small');readout.className='contour-number';readout.dataset.readout='';const update=()=>{const n=Number(input.value);input.title=input.value;readout.textContent=input.value!==''&&Number.isFinite(n)?Number(n.toPrecision(6)).toString():'—';};input.addEventListener('input',update);update();td.append(input,readout);}
+ show(values){
+  this.root.replaceChildren();
+  values.forEach((c,index)=>{
+   const card=document.createElement('fieldset'),legend=document.createElement('legend');legend.textContent='频段 '+(index+1);card.append(legend);
+   const limits=document.createElement('div');limits.className='two';
+   for(const [field,text] of [['low','下限 Hz'],['high','上限 Hz']]){const label=document.createElement('label');label.textContent=text;const input=document.createElement('input');input.type='number';input.step='any';input.value=c[field+'_hz'];input.dataset[field]='';label.append(input);limits.append(label);}card.append(limits);
+   const table=document.createElement('table');table.innerHTML='<thead><tr><th>时间 秒</th><th>增益</th><th></th></tr></thead>';const body=document.createElement('tbody');table.append(body);
+   c.seconds.forEach((time,j)=>{const tr=document.createElement('tr');for(const [key,value] of [['time',time],['gain',c.gain[j]]]){const td=document.createElement('td'),input=document.createElement('input');input.type='number';input.step='any';input.value=value;input.dataset[key]='';if(key==='time'&&j===0)input.readOnly=true;input.setAttribute('aria-label','包络'+(index+1)+' 点'+(j+1)+' '+key);this.number(td,input);tr.append(td);}const td=document.createElement('td'),remove=document.createElement('button');remove.textContent='×';remove.disabled=j===0||c.seconds.length<=2;remove.setAttribute('aria-label','删除包络'+(index+1)+' 点'+(j+1));remove.onclick=()=>{const all=this.value();if(j===0||all[index].seconds.length<=2)return;all[index].seconds.splice(j,1);all[index].gain.splice(j,1);this.show(all);this.change();};td.append(remove);tr.append(td);body.append(tr);});
+   const wrap=document.createElement('div');wrap.className='table-scroll';wrap.append(table);card.append(wrap);
+   const point=document.createElement('button');point.textContent='＋ 控制点';point.dataset.addPoint='';point.disabled=c.seconds.length>=8;point.onclick=()=>{const all=this.value(),row=all[index];if(row.seconds.length>=8)return;let i=1;for(let j=2;j<row.seconds.length;j++)if(row.seconds[j]-row.seconds[j-1]>row.seconds[i]-row.seconds[i-1])i=j;row.seconds.splice(i,0,(row.seconds[i-1]+row.seconds[i])/2);row.gain.splice(i,0,(row.gain[i-1]+row.gain[i])/2);this.show(all);this.change();};
+   const remove=document.createElement('button');remove.textContent='删除频段';remove.onclick=()=>{const all=this.value();all.splice(index,1);this.show(all);this.change();};card.append(point,remove);this.root.append(card);
+  });
+ }
+ add(){const all=this.value();if(all.length>=4)throw Error('最多4个包络频段');let low=1200,high=4500;const intervals=all.map(c=>[c.low_hz,c.high_hz]).sort((a,b)=>a[0]-b[0]);if(intervals.some(c=>low<c[1]&&c[0]<high)){let start=0;for(const [a,b] of [...intervals,[24000,24000]]){if(a>start){low=start;high=a;break;}start=Math.max(start,b);}if(high<=low||intervals.some(c=>low<c[1]&&c[0]<high))throw Error('没有可添加的独立频段，请先调整范围');}all.push({low_hz:low,high_hz:high,seconds:[0,1],gain:[1,1]});this.show(all);this.change();}
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.fixed-visual-context-probe-plan/1",
+  "source_id": "D",
+  "source_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+  "context_seconds": [36, 46],
+  "visible_flame_frame_seconds": [37.8, 39.6, 40.0, 40.2, 41.0, 41.6, 42.0, 43.8, 45.6],
+  "comparison_frame_seconds": [36.2, 38.4, 44.4],
+  "event_offset_seconds": [-0.025, 0.075],
+  "before_offset_seconds": [-0.35, -0.15],
+  "after_offset_seconds": [0.16, 0.36],
+  "bands_hz": [[0, 60], [60, 300], [300, 1200], [1200, 4500], [4500, 14000], [14000, 24000]],
+  "full_band_contrast_reference_db": 3.0,
+  "selection": "All listed frame times, fixed in advance from the previously inspected image sheets; never move the crop or backgrounds to obtain a passing contrast.",
+  "limits": [
+    "A visible flame at a requested video seek does not establish an isolated acoustic afterfire or precise AV/combustion timing.",
+    "Comparison frames have no visible flame in that frame, not proof that the entire audio neighborhood contains no flame or combustion event.",
+    "Reuse existing context.probe and measure.observe. The original full-source detector and its thresholds stay unchanged.",
+    "No fitting, new sound profile, cleaning, physical label, global bank promotion, new download or runtime C change."
+  ]
+}

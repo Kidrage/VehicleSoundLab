@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.exterior-startup-selection/1",
+  "source": "A",
+  "source_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+  "selected_case": "A_rear_47",
+  "selection_reason": "Earliest of the three exterior whole-action contexts selected before source fitting. Original47.0s and later frames show rear exhaust, without the visible transition blends of the later examples.",
+  "reviewed_contexts": ["A_rear_47", "A_rear_77", "A_rear_106", "A_cabin_94"],
+  "reviewed_frames": 74,
+  "background_seconds": [47.0,47.25],
+  "early_seconds": [47.60,48.18],
+  "later_seconds": [48.18,49.38],
+  "full_reference_seconds": [47.0,51.0],
+  "landmarks": "47.60 begins the broad early acoustic action; around48.18 markedly stronger100..300Hz energy and harmonic content establish. These are coarse manually observed acoustic boundaries from the full timeline, not independently calibrated switch/crank/combustion timestamps.",
+  "other_contexts": "77s and106s have early edited blends then rear view and a similar longer onset;94s is a separate Corsa-captioned cabin view with hand at red-covered start control. Do not combine its timing or timbre with the exterior reference.",
+  "fitting_policy": "Keep these windows and background fixed before fitting. Use existing fullband source-response and all-band contour strategy; refuse failed gates, retain evidence, do not trim or move backgrounds to make a fit pass.",
+  "physical_source_separated": false,
+  "physical_RPM_identified": false,
+  "listening_accepted": false,
+  "mixing_caveat": "The later interval includes the ongoing engine source. A standalone catch-slot fit is not an isolated additive transient and may double-count continuous DNA in a full mix; inspect or keep its level disabled."
+}

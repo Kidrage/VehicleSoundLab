@@ -1,0 +1,13 @@
+{
+  "schema": "vsl.event-local-structure-followup/1",
+  "status": "planned_not_executed",
+  "evidence": "Known80observations and unchanged A24observations independently pass finite DFT/Parseval/phase/width/all adjacent graphs. Context shows moving low acoustic ridges.75percent overlap creates selected-link phase resultant~.8 even in white noise. Nonoverlap source mid resultants low, but long-window ambiguity leaves zero/one/two links, so neither stable-OSC nor all-noise physical allocation is justified.",
+  "next": [
+    "Known-first support for a local anchored acoustic ridge and neighbouring-line ambiguity, including rapid nonmonotonic chirp, masked/missing intervals, two-line crossings, stochastic narrow resonances and varying amplitude. Preserve gaps/ambiguity; do not force global common RPM, extrapolate a short uncertain peak or use overlap correlation as independent phase evidence.",
+    "Apply once to declared regions of the unchanged A exterior source, compare independent native window lengths and source-channel phase observations. Source-derived motion is an acoustic pitch trajectory only. Use evidence to decide continuous-phase moving OSC versus stochastic resonance/time-colour capacity; no automatic deterministic/noise classifier or fixed arbitrary split.",
+    "Declare a controllable source-free generation recipe separating acoustic pitch/partial relations, onset/strength/duration controls and resonant texture/phase-memory controls. Preserve0..24k spectral budget and full finite cross terms. A source-conditioned trajectory reconstruction alone is insufficient; generate fresh controlled variations without PCM timeline replay.",
+    "Reconcile later-source semantics before startup integration: current catch crop includes ongoing engine and is not an isolated additive catch. Candidate tests must compare a source transition/replacement or account explicitly for existing continuous DNA; do not blindly layer the whole recorded-spectrum model over it.",
+    "Before real generator fitting, declare fresh training/qualification random realizations and keep original spectral/temporal gates. All previous observed seeds are development evidence. Known checks precede fitting; only qualified procedural output advances to isolated C and paired listening. Keep current runtime/defaults and human-accepted sounds."
+  ],
+  "scope": "No new download/push/subagent/spatial/ADI optimization/persistent restart or repeated pending question. Rejected E overlap remains excluded. Full goal active: convincing startup/idle, credible complete afterfire/other events and state coverage, integrated workbench plus independent control window."
+}

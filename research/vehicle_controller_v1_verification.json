@@ -1,0 +1,254 @@
+{
+  "schema": "vsl.vehicle-controller-delivery-verification/1",
+  "date": "2026-11-16",
+  "status": "controller_milestone_verified_full_goal_incomplete",
+  "previous_goal_turn_classification": "progress",
+  "base_commit": "df2f97ae135cfe8a62b2686d24526319aa769e39",
+  "bridge_sha256": "2c11dfa0337d327d5f059737f8dce91780a3dff12c18a6e719f7e78b6a89283b",
+  "voices_sha256": "415b71dd0ff04d486a18a3243eea898d51a7b79fcfa051ae83c4ac12bf533d74",
+  "evidence": {
+    "ctest": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\source-check-final.log",
+    "ui": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\verification6\\verification.json",
+    "replay_and_parameter_identity": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\verification7\\verification.json",
+    "launch": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\launch1\\verification.json",
+    "legacy_wav_sha256": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\legacy-regression.json",
+    "export_audit": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\export-audit.json"
+  },
+  "checked": {
+    "legacy_12_wavs_byte_exact": true,
+    "source_driver_and_spatial_boundary": true,
+    "external_kinematics_no_double_integration": true,
+    "packet_sequence_validity_timeout_and_recovery": true,
+    "native_19_channels_exported": true,
+    "pcm_replay_exact": true,
+    "parameter_identity_mismatch_rejected": true,
+    "changed_live_parameter_identity_rejected": true,
+    "own_window_ui_actions": true,
+    "own_hwnd_screenshots_viewed": true,
+    "focus_and_minimize_release": true,
+    "restart_during_stopping": true,
+    "independent_window_launch": true,
+    "no_audio_autoplay": true,
+    "duplicate_launch_reused": true
+  },
+  "export": {
+    "native_channels": {
+      "added": 2,
+      "catch": 2,
+      "detail": 2,
+      "dna": 2,
+      "exhaust_air": 2,
+      "intake": 1,
+      "legacy_event": 1,
+      "low": 2,
+      "mechanical": 1,
+      "road": 1,
+      "startup": 2,
+      "wind": 1
+    },
+    "reconstructed_monitor_max_error": 6.51925802230835e-09,
+    "frames": 144000,
+    "sample_rate": 48000,
+    "peak": 0.1952701210975647,
+    "float_wav_decode": true
+  },
+  "short_ui_test_underflows": 0,
+  "preserved_failures": [
+    {
+      "path": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\verification1\\failure.txt",
+      "reason": "Held keyboard control remained after hiding window; fixed top-level focus/unmap release"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\renders\\vehicle_controller_v1\\verification2\\screenshot_audit.json",
+      "reason": "Desktop crop captured another occluding application; not accepted as visual evidence; unrelated images excluded"
+    }
+  ],
+  "limits": [
+    "No new sound-quality acceptance; accepted voices unchanged",
+    "Legacy starter/pops remain placeholders, not the planned material-driven event voices",
+    "New four-voice event pool, per-event instance IDs and event authoring are incomplete",
+    "Separate tire squeal synthesis is not implemented",
+    "Historical unused spatial storage/link dependencies still exist",
+    "PC short tests do not prove ADSP-21569 MCPS or long-duration device behavior",
+    "Native observed stereo is not separated physical exhaust banks",
+    "Computer-use node_repl unavailable; UI proof is application-owned actions and own-window capture"
+  ],
+  "source_sha256": [
+    {
+      "path": "Build-Vehicle-Source.ps1",
+      "sha256": "15438c3750e8c32b809880a44f90956f8554ec9bdef1e069590102b5e09eb6aa"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "fddf6493fc8896262e2499a26d4a6392797fe258264c8baf3c73bdf90f4e7703"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/bridge.c",
+      "sha256": "1272464cea96b228612b133089edfc7743a122381384f427cd43984ca948e461"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/bridge.h",
+      "sha256": "bf16e426e053d81d353d9f0fcd4b36ec1cf0da20fe131f57ba4367748a2cde8d"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/checks.c",
+      "sha256": "d08a1fa91f02960057eadc8a28e63169a97aeb856c67cd96be6436262320d1c9"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/CMakeLists.txt",
+      "sha256": "8380c5fdc9fef0479eb6175b323de1c791ea34c6da06eb065f86a970080eaed3"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/input_checks.c",
+      "sha256": "e016cae20cd84c133dd06909742dde716c3e83f8cb91563c2050dda2b7789921"
+    },
+    {
+      "path": "experiments/vehicle_source_v1/probe.c",
+      "sha256": "75d9f7b3672271dc4c7679c4838d5b828dd2a41d87299703a3342e95851c029f"
+    },
+    {
+      "path": "Launch-Vehicle-Controller.cmd",
+      "sha256": "017b05e2b5f255081b005c916352acfc53bcaf4d575d125a0e808bcdb64899bc"
+    },
+    {
+      "path": "modules/atlas_drive/render.c",
+      "sha256": "6a0026c0fdeec6d98c57c148226bb99b949ae1035a1b606fa1dbc415f3440df4"
+    },
+    {
+      "path": "modules/atlas_drive/source_process.h",
+      "sha256": "ee43a44ea80a6f0ca142e0adbfafd21d0023278a1e85675bed8a086d32027197"
+    },
+    {
+      "path": "modules/vehicle_input/adopt.c",
+      "sha256": "6e7e6c37ba2037a933c68bea411d716b4d61107f2950d159a78c67271bc70273"
+    },
+    {
+      "path": "modules/vehicle_input/CMakeLists.txt",
+      "sha256": "8dca6cc2d9905d7e54021bae0d27040605dbb32e7e040600e8a41ab8b5e424e1"
+    },
+    {
+      "path": "modules/vehicle_input/types.h",
+      "sha256": "dafe9a65d72c9f813f1a7c42c5ce128ceeb713766a48831445d86f526e06729b"
+    },
+    {
+      "path": "modules/vehicle_input/validate.c",
+      "sha256": "dec13d142ee89927a34f1db2c5fa3638388732c93188ce0f55f9788836bcc64b"
+    },
+    {
+      "path": "modules/vehicle_source/api.h",
+      "sha256": "5341d919eb9e8f22334a4b4acab9610766c38ec808f6eda87fbe88bc54cae50e"
+    },
+    {
+      "path": "modules/vehicle_source/assets.c",
+      "sha256": "e014ff99d173328df00c9202696feb2f3c366c9e88e41970d50e074a89daa696"
+    },
+    {
+      "path": "modules/vehicle_source/atlas_adapter.h",
+      "sha256": "1bea9f9ee9c03b445ebbfb380cf71a795c08281ecb6141a5a264c0290d7e2f21"
+    },
+    {
+      "path": "modules/vehicle_source/CMakeLists.txt",
+      "sha256": "c0e7848cd1097df3abc77a951a7d05c76981987a35669087ece6dae571b7d611"
+    },
+    {
+      "path": "modules/vehicle_source/control.c",
+      "sha256": "211c0c7c69ce95aa25a1511a07f84550a6bb54c1296d40d85264c56518d86e62"
+    },
+    {
+      "path": "modules/vehicle_source/driver.c",
+      "sha256": "e769694bd1fb6c54be0fa5e176ac771317a9b54dbbcde8388ca1e0b47506097c"
+    },
+    {
+      "path": "modules/vehicle_source/internal.h",
+      "sha256": "fba65b569df0c05ae0fa484009f7ce011374358f4f2b124028163b70b1edd51c"
+    },
+    {
+      "path": "modules/vehicle_source/source.c",
+      "sha256": "7cb8138638232706a6034b595017becb574382f92859f0e23c7bd8182fa099cc"
+    },
+    {
+      "path": "modules/vehicle_source/stems.c",
+      "sha256": "6ebd61203055471abc61d9a74a7e8494c9932712073fe1b861b59a81eb9fd125"
+    },
+    {
+      "path": "src/drive/drive.c",
+      "sha256": "991a97d847b641d18f4d5aa5dc2a636d4ea5cb1428c99aac1e5ffa046cacf7c3"
+    },
+    {
+      "path": "src/drive/drive.h",
+      "sha256": "16c9af143354fbc3ca61273644f80f0490bc28306f66f3e7fc9a13a81edfb345"
+    },
+    {
+      "path": "src/drive/kinematic.c",
+      "sha256": "62ee2a03a690e67dda20453aab628387481f964d770c1408667a164b50d19fd6"
+    },
+    {
+      "path": "src/drive/kinematic.h",
+      "sha256": "650105008f2162763221208344f09dc8c7c4dcaf2f131b17b1af39e3902a325b"
+    },
+    {
+      "path": "tools/freeze_vehicle_controller_v1.py",
+      "sha256": "4706f993e87f790c286d03581c4da70498fd266ede11c1bc3fb7b813c2984810"
+    },
+    {
+      "path": "tools/render_vehicle_take.py",
+      "sha256": "dc1532d89954c789f4b72a3633f89fbf4f3be0f1099c97489fc9d8f79f5371da"
+    },
+    {
+      "path": "tools/run_vehicle_controller.py",
+      "sha256": "4ca7fb542c5a2bf9ceea7854db133318924d4ad3fb95b745015bb2dff2526274"
+    },
+    {
+      "path": "tools/sound_designer/controller.py",
+      "sha256": "3b9b3d7e1e076d4a7e8264e51aeb35baeb3af5cd7822adbd0b034b92aac5e25f"
+    },
+    {
+      "path": "tools/sound_designer/server.py",
+      "sha256": "a90783ade8f8361c814a7b42cb19c40c97ebcfe4713d6d4280575bbb0c9d552f"
+    },
+    {
+      "path": "tools/sound_designer/web/app.js",
+      "sha256": "eae2fd7d4c29499b1bec255e3298b1e47b4b123473c8e793e6d4263de62a0ec3"
+    },
+    {
+      "path": "tools/vehicle_controller/__init__.py",
+      "sha256": "10224feb7d366f090047f4d3701c5f371b58ed28dd1a44a4f294070fcb147f13"
+    },
+    {
+      "path": "tools/vehicle_controller/device.py",
+      "sha256": "f2895398b8e250bb49c4202a059e806f04441576580ba438a03043493a61fe52"
+    },
+    {
+      "path": "tools/vehicle_controller/host.py",
+      "sha256": "29a1a20df5ca348705675d96a8bc40e034d3a88027fb97223d576958d162f50f"
+    },
+    {
+      "path": "tools/vehicle_controller/identity.py",
+      "sha256": "380a5c40f752398c407c06c095dfa40bb67d9c937bd3d493efd75d3967ab6568"
+    },
+    {
+      "path": "tools/vehicle_controller/native.py",
+      "sha256": "7d3d8b411f2e44e6fb3cc7c6023318b2913251de7c58a1ca02557c7be836680d"
+    },
+    {
+      "path": "tools/vehicle_controller/render.py",
+      "sha256": "7a5012c127ae45d4733b322887f12edbd4d5217446738be08feed019e553919e"
+    },
+    {
+      "path": "tools/vehicle_controller/take.py",
+      "sha256": "0858144d5eeb59d7ec663ac034ce8fef3003402fd4ca5f44114cc2354efeafd9"
+    },
+    {
+      "path": "tools/vehicle_controller/ui.py",
+      "sha256": "53932d1020e4eb2728f6903d7ca9ecb0b6c81994da61efaf41a20148eedc66e4"
+    },
+    {
+      "path": "tools/verify_vehicle_controller_launch_v1.py",
+      "sha256": "ee0960190de74fee4c32cee8fa8132f509f678891eef7b87aba29706661c2fd7"
+    },
+    {
+      "path": "tools/verify_vehicle_controller_v1.py",
+      "sha256": "65c3585fc77a0e941e72578b50782dd0b3789483e72a2dc5850b081ae0595f3f"
+    }
+  ]
+}

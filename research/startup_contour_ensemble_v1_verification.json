@@ -1,0 +1,78 @@
+{
+  "schema": "vsl.startup-contour-ensemble-verification/1",
+  "result": "passed",
+  "candidate_result": "both_refused",
+  "qualified_cases": [],
+  "reports": {
+    "baseline1": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_contour_ensemble_v1\\baseline1\\report.json",
+      "sha256": "20fcfcf4f02421b6baf27fa051bd6ba8e244b93983365abb193a2ac94bdb666d",
+      "result": "passed"
+    },
+    "known1": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_contour_ensemble_v1\\known1\\report.json",
+      "sha256": "6fe29ce8162785e30637bcbadec5092dd612c165e432f27e179694e49140690b",
+      "result": "passed"
+    },
+    "fit1": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_contour_ensemble_v1\\fit1\\report.json",
+      "sha256": "4df8e9dc346d63e2677b77198b87f351e5afc219502723a5d4d14f7db4d480d4",
+      "result": "passed"
+    },
+    "audit1": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_contour_ensemble_v1\\audit1\\report.json",
+      "sha256": "231ed4ff8ccfea62a71e3eee9cb1189f4137f7976d8381fb0c7c033c78be0b9b",
+      "result": "passed"
+    }
+  },
+  "sources": {
+    "tools\\event_authoring\\contour_ensemble.py": "865dd054fc7c00d6d5c97d1d0ba33f39fb371eb8bd361a93b53f85a4645bb49e",
+    "tools\\verify_contour_ensemble_v1.py": "abb4de31875ae44bfe13bab81f8109e7b3469b49e8600888179bdf19fea1db93",
+    "tools\\refine_exterior_contours_v1.py": "35d26bc2204679256f66792c5915e6662b5fa843b628953c4e2feba6efd27200",
+    "tools\\audit_startup_contour_ensemble_v1.py": "a7f22f104236eeee5b149a58243866466b1c32cd336d7cd128e8b656e00eae2f",
+    "tools\\inspect_startup_contour_ensemble_v1.py": "8016538a5ce393396094d7fabceb2bd997597d504af314e632db94d71d6c2b7e",
+    "research\\startup_contour_ensemble_v1_plan.json": "82f29ebb58d78f1cc910221cb972fd29203a99545e6886062afafda6cf675744",
+    "handoff\\启动现有轮廓多次触发校准V1.md": "7996619d03cd4e372cab02c627b2f07e973b9c1a756e7da09f506e92aace8253"
+  },
+  "saved_C_waveforms": {
+    "fit1\\catch\\candidate-1049.wav": "cc283bce836994b03d2fd2283e3a4168cb5a4d405b6987afaf4f065de2937e3a",
+    "fit1\\catch\\candidate-17467.wav": "08f4645e0ee3fcad7ffe2d845d5712ed86af145ab272cdf785ceb59fb5731e10",
+    "fit1\\catch\\candidate-27183.wav": "c738531f42e6e5676567d938778af89a457c7c3719d7a4252ce5c920ba5a89ac",
+    "fit1\\catch\\candidate-27431.wav": "9102ae4fc1688e8017f20a6d392bb17787c4a67abce7e2416695bb5172dbd557",
+    "fit1\\catch\\candidate-28123.wav": "c221d0ca627d55598b5eac140600a52c2c9dd5f7a7dc3ed0ed14114b33778976",
+    "fit1\\catch\\candidate-48193.wav": "9f183c2cb058630574a2795123350377d716fd697ee43bed2d73b8ee97bd546b",
+    "fit1\\catch\\candidate-54123.wav": "fa89d8f3ae0b23b603971241094324e9f4f90260bde009625dd11d56970ab6eb",
+    "fit1\\catch\\candidate-5823.wav": "ac71ba2fb42cac799232cf3a311bb9c4ba0a518bcbb5ca6884e68870eb04548c",
+    "fit1\\catch\\old-1049.wav": "638b727f283d2f0ee406e37d72bf8ae0aab984b381c60c70aeef285a8caa0e28",
+    "fit1\\catch\\old-17467.wav": "e1354d80b85334741b4f936d37e94d5421fdbd5417eb22b3972111bdd60d5106",
+    "fit1\\catch\\old-27183.wav": "5672188e9518a307f1fb2058aaf19a07fdeb776fc0b93a8eb3252dc079670e7f",
+    "fit1\\catch\\old-27431.wav": "9a8a4dcffbbb1b00acd3ec9bed32cf040b838c616b4a23daa4bc5066db965a26",
+    "fit1\\catch\\old-28123.wav": "64f54838e92787dfb9b30ae09db9b164ad7c2b0b2c6c53fb30d32b6be9d9bef3",
+    "fit1\\catch\\old-48193.wav": "8955705894a49022571e01f7e36a0afe199ba5d4d6121ebc3b91c4a14aee9024",
+    "fit1\\catch\\old-54123.wav": "0dabd7362d14b7d893e6a1778c30be0b747938f9e190ff793eff68d9bde649e1",
+    "fit1\\catch\\old-5823.wav": "cfef77f1c56e4408036b20fe49dc06c87084d6585ad23af0e2c6ab7c147d2c09",
+    "fit1\\crank\\candidate-1049.wav": "371a59b654b517144a2c69544c57d7f9573fd65c8206dd04b92dfe640d8a0dbc",
+    "fit1\\crank\\candidate-17467.wav": "4e230367cd150a363ae2610a5096c95aec9b118794b1acda2fe0757ae8a6370c",
+    "fit1\\crank\\candidate-27183.wav": "a058ee4afd7c3ee67f30bf10aedce2cfde55be116f46e59733392462bb5475a9",
+    "fit1\\crank\\candidate-27431.wav": "e93d823a6dd860fb01c153fbadc3a85be2d1e7dcdad2d84aecdd5bda754a5ec2",
+    "fit1\\crank\\candidate-28123.wav": "71fde53fb6751a764ba1b0ed959122d9838f71633965b1f6c2ac6f1a3edb1056",
+    "fit1\\crank\\candidate-48193.wav": "c96bf3a5c73c705bfcaad34a383449bef48891c85452402b17813924be0abf24",
+    "fit1\\crank\\candidate-54123.wav": "ea626a2b18cfef16858dbf981aa78c78b48233d2100cbcbdd10e95c3072c15d2",
+    "fit1\\crank\\candidate-5823.wav": "6dab8bba0c9655edbc416169a910114600ba85a3aced082a70da687bd861e295",
+    "fit1\\crank\\old-1049.wav": "f1c46dcbb30864a981520416b45d15b546c81d87a5d844931a56965181f69ec5",
+    "fit1\\crank\\old-17467.wav": "c02eef32b0818e237916d249fd870d422545fc67a6cc1dea3e6a5697472f5e5a",
+    "fit1\\crank\\old-27183.wav": "f30bf18417a15d1de3b37c10e17908d4ae8d238f70444083d4b0fd405968f566",
+    "fit1\\crank\\old-27431.wav": "da35a4df5e67e74e2d40e41a0baf77555e532944afc492567781db6462465a12",
+    "fit1\\crank\\old-28123.wav": "daf8ccdeaf759cf458e1ed89a1740355c2dcb55814559e015e9e4249fd3cdcf9",
+    "fit1\\crank\\old-48193.wav": "96b826271d234c9c9ec337c7d15221b2c9574147d8271d44526ee655d0876fba",
+    "fit1\\crank\\old-54123.wav": "8d69e37d62c626ebfc93430f8f8851aebce3795987bb5bc2584f0d92c4c39a33",
+    "fit1\\crank\\old-5823.wav": "7507c67deb849f4ea670874ebbfedaf798327b38f5bdd1ea52ca9015de5ba80a"
+  },
+  "source_rate": 48000,
+  "spatial_rendering_in_scope": false,
+  "MCPS_measured": false,
+  "runtime_voice_files_unchanged": 459,
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "candidates_promoted": false
+}

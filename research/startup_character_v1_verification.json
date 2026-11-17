@@ -1,0 +1,439 @@
+{
+  "schema": "vsl.startup-character-delivery/1",
+  "status": "candidate_pending_listening",
+  "sources": [
+    {
+      "relative": "AGENTS.md",
+      "sha256": "1762baee562af3e743c68f72db3144a7ef269e81a4d04568c6e09dd9bd2752cc"
+    },
+    {
+      "relative": "experiments/startup_character_v1/bridge.c",
+      "sha256": "ba22c0d62578c01449dfa4044b77afdf2ed77783081bbf94e013965be949974e"
+    },
+    {
+      "relative": "experiments/startup_character_v1/CMakeLists.txt",
+      "sha256": "088293ef74b2a406016a6af820432d3ef8bec9bfb3d2a709616ce88a573f0648"
+    },
+    {
+      "relative": "handoff/启动声重建候选V1.md",
+      "sha256": "9fea1f4fef40935ad594035de0db2c63e2f11ffaa44bc44877cce14535e8696c"
+    },
+    {
+      "relative": "modules/partitioned_fir/CMakeLists.txt",
+      "sha256": "370a71b42df51fea289cbbfc608d91c48922a807b4aee6eba1d3008469e3f5e9"
+    },
+    {
+      "relative": "modules/partitioned_fir/fft.c",
+      "sha256": "0ecea2e1f408f397eda2584e42f64f20c4a184492d325e9adb9f9c2918ca0003"
+    },
+    {
+      "relative": "modules/partitioned_fir/fft.h",
+      "sha256": "c0f970e696b6e189f0709ba02a1bd0c58ea9c309cf412ffafb8b1de23c3638fb"
+    },
+    {
+      "relative": "modules/partitioned_fir/filter.c",
+      "sha256": "d2cf4b8490778b063a9d1414c87ecfcc22770b7065c0342b6057ad6494eacc7d"
+    },
+    {
+      "relative": "modules/partitioned_fir/filter.h",
+      "sha256": "defa1962670d411d0db3218d2aa6ee8928f8e8a4fdfbf49f95d2b8ae85bf0f77"
+    },
+    {
+      "relative": "modules/partitioned_fir/README.md",
+      "sha256": "8400179d8aaf2bd2a3e4124aee2dc75d86646e788d3bccbbad1da37e29eefc80"
+    },
+    {
+      "relative": "modules/resonant_detail/excitation.c",
+      "sha256": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991"
+    },
+    {
+      "relative": "modules/resonant_detail/excitation.h",
+      "sha256": "c2fa8f91a5aee1898ef37400df436f77ffe7188bb26796bd0e9b55bd2a29c4e2"
+    },
+    {
+      "relative": "modules/spectral_texture/CMakeLists.txt",
+      "sha256": "fcc4d6766af7f3853bfc842cafc759db969dae773fae24e2c54c061a1afe64df"
+    },
+    {
+      "relative": "modules/spectral_texture/io.c",
+      "sha256": "8c006aeb039789b8fef5c478a9a19ff6f43037b00e7c5db79e3b1654a271ebc7"
+    },
+    {
+      "relative": "modules/spectral_texture/io.h",
+      "sha256": "2a8d7e52d75e1ed82174a8478b6b407d5ac5bb423e6d55d15385f189aa817def"
+    },
+    {
+      "relative": "modules/spectral_texture/profile.c",
+      "sha256": "be314335cadf75d4b4f0b6195e18c673d52775d6374c79380486d3028e17c6a2"
+    },
+    {
+      "relative": "modules/spectral_texture/profile.h",
+      "sha256": "070b9502767db95da7befda6ba4ea3830d60e1a33d2b46ba5e52d3be7b935c4d"
+    },
+    {
+      "relative": "modules/spectral_texture/README.md",
+      "sha256": "f380a3f7ebd051454a9c5e0788e2314d2839e886b91d736ae2b330b2f234d45c"
+    },
+    {
+      "relative": "modules/spectral_texture/voice.c",
+      "sha256": "45fcc47a9ab4d21028bac30d550148e4f2ed9f095183fb07a93045c8fa179646"
+    },
+    {
+      "relative": "modules/spectral_texture/voice.h",
+      "sha256": "3d37d2bdb5b5630d228b7c610bc4a10fc8318d1340f4444cf5bcf95b6af3655b"
+    },
+    {
+      "relative": "modules/startup_character/README.md",
+      "sha256": "d3c66f9ae9a9cb068dba80f01b6d8586a9db831d485204b7aa72674f7f9e6105"
+    },
+    {
+      "relative": "modules/startup_character/voice.c",
+      "sha256": "f81251856a18c9dc0608fb509dc1dcef621a9ba34e2818ae35bb12905a9c061b"
+    },
+    {
+      "relative": "modules/startup_character/voice.h",
+      "sha256": "230aff524be4132bd21aedbc6eff5e8277a7ab1b9f251d8f1cf5da4db2935348"
+    },
+    {
+      "relative": "src/io/file.c",
+      "sha256": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8"
+    },
+    {
+      "relative": "src/io/file.h",
+      "sha256": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477"
+    },
+    {
+      "relative": "tools/render_startup_character_v1.py",
+      "sha256": "b616b6dc01b62266388af0e2a9284fcb29bdfd5edd2ff7da3df21a72e716310d"
+    },
+    {
+      "relative": "tools/startup_character_v1/__init__.py",
+      "sha256": "a0543fc43a93cbfcb41ef285517ddb82dcb4ab2ed54168ec9030a4bc430220da"
+    },
+    {
+      "relative": "tools/startup_character_v1/author.py",
+      "sha256": "91cb10cb868703f8ad52e1f20037d2cdd2f9beebe0744e3b7502f3d94987d2a2"
+    },
+    {
+      "relative": "tools/startup_character_v1/native.py",
+      "sha256": "ab4509aa6b975dc252027eaf944eb9ee6fe7f4879be54660445c30e6b9e727c3"
+    }
+  ],
+  "files": [
+    {
+      "path": "audio-audit.json",
+      "sha256": "1a72f9da06d936b4c94cdf7f5fd75da7b82a0641c4d591cb066da6cde686361a"
+    },
+    {
+      "path": "Candidate-77317.wav",
+      "sha256": "cb767ebb9c3d31ee830f81cb71665f8649acf504c50e38fe3b81f312b09ae27c"
+    },
+    {
+      "path": "Candidate-88643.wav",
+      "sha256": "6469402520158f7c44dbd45ecd7a7029176674a93c41171a97bc1863a874002f"
+    },
+    {
+      "path": "DNA-only.wav",
+      "sha256": "9fedb32215328a88e6351903a487f630fab1b4bf5d42fb9feb6468187106dd76"
+    },
+    {
+      "path": "exact_sources\\AGENTS.md",
+      "sha256": "1762baee562af3e743c68f72db3144a7ef269e81a4d04568c6e09dd9bd2752cc"
+    },
+    {
+      "path": "exact_sources\\experiments\\startup_character_v1\\bridge.c",
+      "sha256": "ba22c0d62578c01449dfa4044b77afdf2ed77783081bbf94e013965be949974e"
+    },
+    {
+      "path": "exact_sources\\experiments\\startup_character_v1\\CMakeLists.txt",
+      "sha256": "088293ef74b2a406016a6af820432d3ef8bec9bfb3d2a709616ce88a573f0648"
+    },
+    {
+      "path": "exact_sources\\handoff\\启动声重建候选V1.md",
+      "sha256": "9fea1f4fef40935ad594035de0db2c63e2f11ffaa44bc44877cce14535e8696c"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\CMakeLists.txt",
+      "sha256": "370a71b42df51fea289cbbfc608d91c48922a807b4aee6eba1d3008469e3f5e9"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\fft.c",
+      "sha256": "0ecea2e1f408f397eda2584e42f64f20c4a184492d325e9adb9f9c2918ca0003"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\fft.h",
+      "sha256": "c0f970e696b6e189f0709ba02a1bd0c58ea9c309cf412ffafb8b1de23c3638fb"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\filter.c",
+      "sha256": "d2cf4b8490778b063a9d1414c87ecfcc22770b7065c0342b6057ad6494eacc7d"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\filter.h",
+      "sha256": "defa1962670d411d0db3218d2aa6ee8928f8e8a4fdfbf49f95d2b8ae85bf0f77"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\README.md",
+      "sha256": "8400179d8aaf2bd2a3e4124aee2dc75d86646e788d3bccbbad1da37e29eefc80"
+    },
+    {
+      "path": "exact_sources\\modules\\resonant_detail\\excitation.c",
+      "sha256": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991"
+    },
+    {
+      "path": "exact_sources\\modules\\resonant_detail\\excitation.h",
+      "sha256": "c2fa8f91a5aee1898ef37400df436f77ffe7188bb26796bd0e9b55bd2a29c4e2"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\CMakeLists.txt",
+      "sha256": "fcc4d6766af7f3853bfc842cafc759db969dae773fae24e2c54c061a1afe64df"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\io.c",
+      "sha256": "8c006aeb039789b8fef5c478a9a19ff6f43037b00e7c5db79e3b1654a271ebc7"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\io.h",
+      "sha256": "2a8d7e52d75e1ed82174a8478b6b407d5ac5bb423e6d55d15385f189aa817def"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\profile.c",
+      "sha256": "be314335cadf75d4b4f0b6195e18c673d52775d6374c79380486d3028e17c6a2"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\profile.h",
+      "sha256": "070b9502767db95da7befda6ba4ea3830d60e1a33d2b46ba5e52d3be7b935c4d"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\README.md",
+      "sha256": "f380a3f7ebd051454a9c5e0788e2314d2839e886b91d736ae2b330b2f234d45c"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\voice.c",
+      "sha256": "45fcc47a9ab4d21028bac30d550148e4f2ed9f095183fb07a93045c8fa179646"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\voice.h",
+      "sha256": "3d37d2bdb5b5630d228b7c610bc4a10fc8318d1340f4444cf5bcf95b6af3655b"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\README.md",
+      "sha256": "d3c66f9ae9a9cb068dba80f01b6d8586a9db831d485204b7aa72674f7f9e6105"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\voice.c",
+      "sha256": "f81251856a18c9dc0608fb509dc1dcef621a9ba34e2818ae35bb12905a9c061b"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\voice.h",
+      "sha256": "230aff524be4132bd21aedbc6eff5e8277a7ab1b9f251d8f1cf5da4db2935348"
+    },
+    {
+      "path": "exact_sources\\src\\io\\file.c",
+      "sha256": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8"
+    },
+    {
+      "path": "exact_sources\\src\\io\\file.h",
+      "sha256": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477"
+    },
+    {
+      "path": "exact_sources\\tools\\render_startup_character_v1.py",
+      "sha256": "b616b6dc01b62266388af0e2a9284fcb29bdfd5edd2ff7da3df21a72e716310d"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\__init__.py",
+      "sha256": "a0543fc43a93cbfcb41ef285517ddb82dcb4ab2ed54168ec9030a4bc430220da"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\author.py",
+      "sha256": "91cb10cb868703f8ad52e1f20037d2cdd2f9beebe0744e3b7502f3d94987d2a2"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\native.py",
+      "sha256": "ab4509aa6b975dc252027eaf944eb9ee6fe7f4879be54660445c30e6b9e727c3"
+    },
+    {
+      "path": "known\\0.sfir",
+      "sha256": "97efa58b891400c5d6aac4a0d7d5cbf27a84c5d247216cbe3f7f9ea272fef326"
+    },
+    {
+      "path": "known\\1.sfir",
+      "sha256": "97efa58b891400c5d6aac4a0d7d5cbf27a84c5d247216cbe3f7f9ea272fef326"
+    },
+    {
+      "path": "known\\2.sfir",
+      "sha256": "97efa58b891400c5d6aac4a0d7d5cbf27a84c5d247216cbe3f7f9ea272fef326"
+    },
+    {
+      "path": "known\\verification.json",
+      "sha256": "19ea537ca6db49d3dbe524fbbf721cfe0e11cf7520c2cb80b162c59e8ece5457"
+    },
+    {
+      "path": "model\\crank-0.sfir",
+      "sha256": "776cfd8366213072202b6dad804f20fd688e20193ead79869b37fd5d9b8eb759"
+    },
+    {
+      "path": "model\\crank-1.sfir",
+      "sha256": "0b3c255495c14e58f5c4cf112fb3db3817d978157552d5516cee6fd8717a5ea6"
+    },
+    {
+      "path": "model\\crank-2.sfir",
+      "sha256": "3e51007edef943df38e4dae46bf87fd12cae33fb95bce37680a13b0ef5352db1"
+    },
+    {
+      "path": "model\\profile.json",
+      "sha256": "f4609b63756b6fe66ed335890cb272b2fcb006ba69492870058d2e4e4cf21b79"
+    },
+    {
+      "path": "Previous-startup.wav",
+      "sha256": "cb3a35c14cc71efc95fdff68f1c357a5acd4453e7ae163aca65107c09430aa20"
+    },
+    {
+      "path": "recipe.json",
+      "sha256": "a5ff504f5e350f5dc964c564ed274d46206382c6f741483426cfd941cb4a14b2"
+    },
+    {
+      "path": "Reference-exterior.wav",
+      "sha256": "084ff9bccd8e3e72aa76184d7c2a41d5f0c6ad8e3605678b2f68c1d5c7c1c3f5"
+    },
+    {
+      "path": "Starter-only.wav",
+      "sha256": "41eb1e76eec63fb78cfebd730d1b4429e868fd44b3c2b7f400c1ba61cf59e929"
+    },
+    {
+      "path": "startup_character_bridge.dll",
+      "sha256": "a54bd916303f819b19c701a14331232b0eac24e9b06b24c6a098a78657e12007"
+    },
+    {
+      "path": "telemetry.json",
+      "sha256": "1968024ff0438203479ab39efaf1d9b0bdd99dbc35c7b34a1b9b3b38ea23815a"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "2aa8235ade8eb775d0dcb7444248101b2b0ebd92b6815038592d220351b6ee7d"
+    }
+  ],
+  "report": {
+    "schema": "vsl.startup-character-review/1",
+    "status": "candidate_pending_listening",
+    "main_native_sha256": "1865e6963c7667a5f163eea5a0ece18ac8e471f33ae6ebb313e9a23e83598418",
+    "starter_native_sha256": "a54bd916303f819b19c701a14331232b0eac24e9b06b24c6a098a78657e12007",
+    "outputs": {
+      "Candidate-77317.wav": {
+        "sha256": "cb767ebb9c3d31ee830f81cb71665f8649acf504c50e38fe3b81f312b09ae27c",
+        "peak": 0.1581488698720932
+      },
+      "Candidate-88643.wav": {
+        "sha256": "6469402520158f7c44dbd45ecd7a7029176674a93c41171a97bc1863a874002f",
+        "peak": 0.1581488698720932
+      },
+      "Reference-exterior.wav": {
+        "sha256": "084ff9bccd8e3e72aa76184d7c2a41d5f0c6ad8e3605678b2f68c1d5c7c1c3f5",
+        "peak": 0.0598142957384413
+      },
+      "Previous-startup.wav": {
+        "sha256": "cb3a35c14cc71efc95fdff68f1c357a5acd4453e7ae163aca65107c09430aa20",
+        "peak": 0.2086404412984848
+      },
+      "DNA-only.wav": {
+        "sha256": "9fedb32215328a88e6351903a487f630fab1b4bf5d42fb9feb6468187106dd76",
+        "peak": 0.1581488698720932
+      },
+      "Starter-only.wav": {
+        "sha256": "41eb1e76eec63fb78cfebd730d1b4429e868fd44b3c2b7f400c1ba61cf59e929",
+        "peak": 0.11936897039413452
+      }
+    },
+    "model": {
+      "schema": "vsl.startup-character/1",
+      "profiles": [
+        {
+          "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_character_v1\\attempt2\\model\\crank-0.sfir",
+          "sha256": "776cfd8366213072202b6dad804f20fd688e20193ead79869b37fd5d9b8eb759"
+        },
+        {
+          "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_character_v1\\attempt2\\model\\crank-1.sfir",
+          "sha256": "0b3c255495c14e58f5c4cf112fb3db3817d978157552d5516cee6fd8717a5ea6"
+        },
+        {
+          "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_character_v1\\attempt2\\model\\crank-2.sfir",
+          "sha256": "3e51007edef943df38e4dae46bf87fd12cae33fb95bce37680a13b0ef5352db1"
+        }
+      ],
+      "envelope": [
+        1.1614565928249556,
+        1.009503501456511,
+        0.8966831181271838,
+        0.6812486442321061,
+        0.7851477606079529,
+        0.6367420044369873,
+        0.7953369738068906,
+        1.077982353068337,
+        1.9558990514390742
+      ],
+      "variation": 0.3,
+      "source": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+      "source_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "seconds": [
+        47.6,
+        48.18
+      ],
+      "source_kind": "Approved A exterior early acoustic action; not isolated starter motor or measured RPM",
+      "stages": 3,
+      "phase": "Source phase discarded; new random excitation; mid/side cross covariance omitted",
+      "role": "Crank only. Catch uses same continuous engine DNA, no additive whole-engine catch template",
+      "room": false,
+      "pcm_playback": false,
+      "human_accepted": false
+    },
+    "known_checks_passed": true,
+    "real_profile_partition_exact": true,
+    "source_waveform_used_at_runtime": false,
+    "room": false,
+    "controls": {
+      "crank_seconds": 0.58,
+      "flare_rpm": 1350.0,
+      "idle_rpm": 850.0,
+      "rpm_evidence": "Engineering contour, not ECU measured",
+      "catch_overlap": "Old catch event disabled; only same DNA combustion establishes"
+    },
+    "crank_band_error_db": [
+      -1.7732212283580207,
+      -1.6230636797489808,
+      0.5740752198887693,
+      1.2024724622706382,
+      1.837577634568657,
+      2.971060186800324
+    ],
+    "bands_hz": [
+      0,
+      60,
+      300,
+      1200,
+      4500,
+      14000,
+      24000
+    ],
+    "comparison_limits": "Previous has old cabin-source events and different timing; new starter uses approved exterior spectral states. Combined candidate timing/voice/energy changed together; not a single-variable fidelity proof.",
+    "reference_gain": 0.05565339165321761,
+    "reference_level_policy": "One constant gain from stable idle only, no segment normalization, dynamics or room",
+    "catch_over_idle_db": 5.814188935035829,
+    "human_accepted": false,
+    "app_integrated": false,
+    "accepted_idle_algorithm_changed": false
+  },
+  "audio_audit": {
+    "schema": "vsl.startup-character-independent-audio-audit/1",
+    "mix_equals_saved_C_stems": true,
+    "late_output_equals_same_DNA": true,
+    "seed_variation_only_startup": true,
+    "no_legacy_catch_trigger": true,
+    "source_and_outputs_hash_verified": true,
+    "all_playback_files_below_full_scale": true,
+    "catch_over_idle_db": 5.814188935035829,
+    "candidate_peak_dbfs": -16.018678143895603,
+    "limits": "Listening pending; source spectral resemblance is not physical-source or naturalness qualification"
+  },
+  "main_app_changed": false,
+  "hearing_request_sent": true
+}

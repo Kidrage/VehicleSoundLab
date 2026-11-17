@@ -1,0 +1,92 @@
+{
+  "schema": "vsl.dna-transition-listening-review/1",
+  "date": "2026-11-17",
+  "human_feedback": {
+    "idle": "Pleasant mechanical weight",
+    "acceleration": "Mechanical/noisy texture smoothly disappears around 20 km/h; sound becomes thin",
+    "startup": "Current V15 startup rejected as unpleasant; concern about modeling principle"
+  },
+  "analysis": {
+    "driver": "RPM relative to idle, not a 20 km/h speed threshold",
+    "default_idle_rpm": 850,
+    "control": {
+      "line": 1.0,
+      "air": 1.0,
+      "motion": 0.5,
+      "idle_blend": 1.0,
+      "air_continuity": 0.35,
+      "pitch_follow": 0.25,
+      "line_state": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "air_state": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "mechanical_aux_gain": 0.0,
+    "steady_target_weights": [
+      {
+        "rpm": 850,
+        "fingerprint_line_weight": 1.0,
+        "fingerprint_air_weight": 1.0
+      },
+      {
+        "rpm": 1500,
+        "fingerprint_line_weight": 0.8381994858689343,
+        "fingerprint_air_weight": 0.8948296658148073
+      },
+      {
+        "rpm": 2000,
+        "fingerprint_line_weight": 0.5732938311810691,
+        "fingerprint_air_weight": 0.7226409902676949
+      },
+      {
+        "rpm": 2500,
+        "fingerprint_line_weight": 0.2857724404640749,
+        "fingerprint_air_weight": 0.5357520863016487
+      },
+      {
+        "rpm": 3000,
+        "fingerprint_line_weight": 0.06609825783446799,
+        "fingerprint_air_weight": 0.39296386759240415
+      },
+      {
+        "rpm": 3400,
+        "fingerprint_line_weight": 0.0,
+        "fingerprint_air_weight": 0.35
+      }
+    ],
+    "implementation_error": "RPM-only crossfade drops fingerprint line to zero and texture to 35% without a timbrally sufficient acceleration counterpart",
+    "limits": [
+      "Weights are mixing coefficients, not perceived texture percentages or acoustic power",
+      "User exact speed/RPM/preset session was not captured; 20 km/h observation is not a calibrated breakpoint",
+      "Low-RPM line/texture roles are auditory design labels, not physical source separation"
+    ]
+  },
+  "source_hashes": [
+    {
+      "path": "E:\\VehicleSoundLab-Git\\modules\\dna_character\\voice.c",
+      "sha256": "fd5f5839f17eec6f45bddfda92b38d9c06d493630ecbbf885a53cacc4d7584d9"
+    },
+    {
+      "path": "E:\\VehicleSoundLab-Git\\modules\\dna_character\\control.c",
+      "sha256": "2f1a564beb1bef4791dc08230441628a36545d794110716d5f990974fd9b525d"
+    },
+    {
+      "path": "E:\\VehicleSoundLab-Git\\modules\\vehicle_source\\character.c",
+      "sha256": "4d818f420ca10c9de3b8b66d6ff0733bd7e76c0a57a1cc9d53f0b5eef96203ef"
+    }
+  ],
+  "startup_diagnostic": "E:/VehicleSoundLab/references/analysis/startup_rejection_v1/diagnostic1/diagnostic.json",
+  "changes": "Diagnosis and listening decision only; no DSP, defaults, live windows, audio generation assets, downloads or push changed"
+}

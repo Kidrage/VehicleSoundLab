@@ -1,0 +1,155 @@
+{
+  "result": "passed",
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "runtime_integrated": false,
+  "qualified_cases": [],
+  "known_observations": 80,
+  "independently_audited_source_observations": 24,
+  "maximum_independent_complex_coefficient_error_FS": 2.2887833992611187e-16,
+  "source_cases": [
+    {
+      "id": "crank",
+      "source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 2284800,
+        "last_frame": 2312640,
+        "source_seconds": [
+          47.6,
+          48.18
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      }
+    },
+    {
+      "id": "catch",
+      "source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 2312640,
+        "last_frame": 2370240,
+        "source_seconds": [
+          48.18,
+          49.38
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      }
+    },
+    {
+      "id": "background",
+      "source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 2256000,
+        "last_frame": 2268000,
+        "source_seconds": [
+          47.0,
+          47.25
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      }
+    }
+  ],
+  "native_fullband_preserved": true,
+  "no_stereo_fold": true,
+  "no_source_fit_or_generator_promotion": true,
+  "phase_counts_and_sparse_long_windows_preserved": true,
+  "all_peak_widths_and_adjacent_graphs_independently_checked": true,
+  "final_sources": {
+    "AGENTS.md": "e312d195ada5edc0cb129222aa98db47120d8a4f26dfb1c329efae502810daac",
+    "handoff/启动局部频率与相位记忆V1.md": "2d9b0805d3b231a2b072eb6f36e1e2f61102c8c456b14775e44b06edac4b76b2",
+    "research/A_exterior_startup_v1_selection.json": "ecbb9d063701e49a5a10bdeb3cf1c19737f04806ca64645eab089a33d5d328cf",
+    "research/event_local_structure_followup_v1_plan.json": "5a67ee20d1cda2fb0c734b3f724f8f8f1b4d158f0a293e593a2471c0e798de93",
+    "research/event_local_structure_v1_plan.json": "ba90f555aba191e6de1c47d3271e166ca7be15e93e3dae44ec32e7f3a7257396",
+    "tools/audit_event_local_structure_v1.py": "16e826c69447b62ae955b2dd127bb379144382c85a674c5bf5b001f415a86041",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_local_structure/README.md": "d9f2fb1d8cc26bc070451f0c9b75120bc52bc686a4b2714d6b1848bffe28e399",
+    "tools/event_local_structure/__init__.py": "fc2bd5cd004d41a9cb760ce8f0c4c1408fcedfd16c8a2691753a4d54a479b39e",
+    "tools/event_local_structure/inspect.py": "916e663c8357329711781d8293db49669f156d1c24dc2147cbf3ec4a9149b4f6",
+    "tools/event_local_structure/links.py": "e407ba2adf13789dd3cdf528ad8b6708d6e433a67ef5b96fd820907242f2122c",
+    "tools/event_local_structure/spectrum.py": "97e6bb5d3cbb0d4c2644ecacd5d20b505b52ca754048470af98eea371ddb3a52",
+    "tools/finalize_event_local_structure_v1.py": "b6be3d189d11565819f42ad8f5ca61e4cbc19f48b0aa05d4269c82a5d4b090ba",
+    "tools/inspect_event_local_structure_v1.py": "1daf68038884036c744acf5cf032d617400fffcd2061502470e1dcabd806ec34",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/summarize_event_local_structure_v1.py": "632eaf2ad7ddcb8dcfd76a3d35b8957c9e7358f4f2d75716b99b668ba9a90b93",
+    "tools/verify_event_local_structure_v1.py": "fc907142a2a3dc47698cae25310248bdac1521dbd4af3ef06efe5d132cac0fda"
+  },
+  "source_artifacts": {
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\source.wav": "9702bfc62584fc016886446e9ff7bd2ea86b43e40ae0091da29708c647f0f8b3",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\768-nonoverlap.json": "0a7c94aa45d160d56b523d7745046e34ee4b9fe6867b089269e6b2eb59179930",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\768-nonoverlap.npz": "e14ac7e1ef9073536d5f0e5c99733266a15a162dcadfce1216682b03e684b576",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\768-overlap.json": "9bbba34af8d40288c39a4614cc232b27332d87b2b1154952b2a133c46d06a21e",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\768-overlap.npz": "89d0d767998d2887ccaad4270d906e9a8bda3bb096ae3941ca10127bcbeaa661",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\1536-nonoverlap.json": "1f49190b8debc2641b57a7d59f7ecd73bd52ae669208c75e02863c7fdb8ee9d9",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\1536-nonoverlap.npz": "9a6ad83d7e73a33e6080ace368945cb5c7196c12d031190ce83e21d3fec1e6fc",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\1536-overlap.json": "7b4dd36c8d133d9f651daa08c0203157a480102d5d811575a4c9095a1f7cdbcf",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\1536-overlap.npz": "64cf8a12b0a51932f304140484acb5e14b239ea60c4cfd966e2314e2bc5745be",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\3072-nonoverlap.json": "db62237f102c89de0dd15285977fb98ce862eab6de695327918e19883f03ebf1",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\3072-nonoverlap.npz": "5d16080055735c807e3458c117ee9580ec9debe88f723b12ebec86f28844299e",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\3072-overlap.json": "6a92ff6bc7f641bca2b56f3615f128d54fef4a9e7ee6f4aafb8d5822f71aac7f",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\3072-overlap.npz": "a431a939c7e2dfc529f1b4e0ef8ffcd8be1b9829917c2340ad72b1a359fd6b26",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\6144-nonoverlap.json": "4aac05aa51b55e8a237a12aaeb66298110cc80424be4b81071ffdff3caa4ca4e",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\6144-nonoverlap.npz": "d23dc753e3e34c0f876cdd197bc509b3a181ff2148b9137fbf6b982ea2cd58e4",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\6144-overlap.json": "2188f4fdd38f74c96b8f7d4d67599a9b40c2b1f265a3e7fb8274ab7d302dce35",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\crank\\6144-overlap.npz": "86c506bfcaa9aa041eff5517b45e717aaea4f739135d490fdbbef3c14fd3a36a",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\source.wav": "e2c2aa462465d4b2428339bcc52738a2ac66a7f9b3c794fc8858c29e617401a5",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\768-nonoverlap.json": "ebab24ae942323de0efe7bd427dfd1175a064ca4117bd95c58b254ca487822b2",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\768-nonoverlap.npz": "08092fac7874ed0c46395895e682ded18913387d0b371fa094c6e1b2522d197e",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\768-overlap.json": "1af7a59881b03d51847c66fb31a5c646292abea300799a855d80c59943cc15f8",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\768-overlap.npz": "a714216b7ceb286fec4fd179a7dc0213cabed56f93f7af2cd2c3141c54001171",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\1536-nonoverlap.json": "5700efaba9c6cdab4740192ab8a9550c3def269320a5c26455368cdd4f98098e",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\1536-nonoverlap.npz": "07b4c42075e5f9e24610287cb887ef21135833f90c80849d46e2f0055c4a1920",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\1536-overlap.json": "bf4c20a3ecf1b4d4f24bff90b78dd8d6db3060fb9664ce8a7b5aa08e8283615b",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\1536-overlap.npz": "9d9983c54a386e8ce7819395d1867657f411f52815fe34a2172039ff7cc7236d",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\3072-nonoverlap.json": "b0d6b909fecfa5f116cc39332554dddeab09e7cf833dc66ccd615b87ad7bec2f",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\3072-nonoverlap.npz": "703942a8151af0eb728120fbd84ed45661d6f58dc947b80c15d9030878df2c7d",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\3072-overlap.json": "20783e6c22b47b2e843c51c2067a1f7dd532c1a8580dd7aef42af67cf0728812",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\3072-overlap.npz": "ff72807e918aa753214e0fda03462248e8fb3cf1c5993c45f7c19cca0fd21f81",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\6144-nonoverlap.json": "d324f634047495296d5d9dae985ee121858e4e7ddc199f34c265cf0d8a8b2a81",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\6144-nonoverlap.npz": "35b09016339047be31574beddf0dd02a72005c7d540b7cadf004fd5e2f3c9f4c",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\6144-overlap.json": "4a19620ddfe7a319edb9bb8dca874d8bc4baaa1987ff4a55f6031fbc86132c3d",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\catch\\6144-overlap.npz": "22b4fa5dbdce60708a202fd5709564104b90fdcc5088325fc6ea6655f834a59d",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\source.wav": "ff6a53d6f5da9cddde33799c3aba8d9eefbe6096023ac7b6a7cb919c72d44d8c",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\768-nonoverlap.json": "dd381b009297a0d341bf8620d519c2a8359f82c9c25484cc843223f188dc1d58",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\768-nonoverlap.npz": "fc739b087eeb526fe5f864ef0815fe70f6b9475e97547a3159b4d462bad0cd55",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\768-overlap.json": "9f61193be27993697fb0eaf24573bafbab50260a37ae5570aaed43924a453e32",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\768-overlap.npz": "8790bdc28726f9dd4b4de8a520d30868229795c71cb46d0761ad2eb9284f06fb",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\1536-nonoverlap.json": "248fe8746fbcf41c24251b1ce8911b09a1764d46605a9d642ca31328a2d43564",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\1536-nonoverlap.npz": "ea925ba3f854f75c0e24dd63c5e7b6fb43d9545a7e3a7642084274984f724912",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\1536-overlap.json": "6b649af68a369809dfb1e7de9034b48328085057ca5d1d51cadc61354d30e362",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\1536-overlap.npz": "5554cc903f50bef66802529a14bdf75064e2b7aafaf1f3f7799c979a14c663dd",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\3072-nonoverlap.json": "b1910586848e823a47a05066b4a813c238ed4d2813b353b5180002b27d2dcc73",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\3072-nonoverlap.npz": "3926f0e0cdf4707b6273526be5826aa5e1ea365f77208f1c582d582468cedbe7",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\3072-overlap.json": "0b14509cf82a149e09fb282dfc78efa2a62a89911dc01b14020877593eab233d",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\3072-overlap.npz": "8e190e7a013db270de41391a04180291cd14b55b54a3107ae19d7c5448410019",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\6144-nonoverlap.json": "6a7377a2316a89150240ab7f4dd18acdb23e218b32b46e36463589e3a9b2d86f",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\6144-nonoverlap.npz": "8afe855debcae25e5e4eb196e10269c31537ab1eddc5d127730e144fed93d604",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\6144-overlap.json": "5217e168a148ee8e5df949e68f6f1527501be23f6ea211f166b6fd37c2b324f0",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\background\\6144-overlap.npz": "ca626e914eed5f914818bb4a85f2ff53e32ac56e7ebfb23361d75fc3d99283a8"
+  },
+  "terminal_reports": {
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\known1\\report.json": "bfee438acfb6fc50de6187047a758e1f9b9f53a216563212b9222936a8716a13",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\report.json": "12c7bf253d36440f7be5cd1cdd74b570690d8a3ebd16c7ff9c77de4b0f4fd8cc",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\audit1\\report.json": "a93d90d58b0844d478469da4b899925e09cdbcf9b26db91a063bf8ea14639dd2",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\summary1\\report.json": "521d01598593b1d75cc6a051c01b96f2a60a2beb3960d94ee17c255a3b2bc820",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\summary2\\report.json": "521d01598593b1d75cc6a051c01b96f2a60a2beb3960d94ee17c255a3b2bc820"
+  },
+  "figures_viewed": {
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\source-spectra.png": "3015c9593997db31e3f69dcdfbe5e0695a9b1b19160c95e306985fb572af824b",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\phase-memory.png": "ba14c5d37bffdc00a7737c53f31aef4983cc4313b06bf9b475774766813b9c47",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\source1\\context.png": "a371dca3605cfa5e91e6a4594e38086337b855537f83ebaa7904e4795a5fd380",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\summary2\\phase-memory-counted.png": "edbc45ca9b91124bedbf1d2ba1de3a33fa381f4986ecf803faecd226ba84c13c"
+  },
+  "final_csv_sha256": "9dbc978ef99f8e64e25f2290c471178b6bb6e11c35ebcaf29d309109cf9f8dfb",
+  "summary1_retained_numeric_identity": true,
+  "runtime_voice_files_unchanged": 459,
+  "delivery_root": "E:\\VehicleSoundLab\\references\\analysis\\event_local_structure_v1\\delivery1",
+  "limitation": "Selected-peak finite observations do not identify physical oscillator/noise fractions or RPM. Overlap causes apparent memory; long-window ambiguity yields very small samples. New controllable source generation and human listening remain outstanding."
+}

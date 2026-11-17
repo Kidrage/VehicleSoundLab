@@ -1,8 +1,10 @@
 #include "render.h"
+#include "source_process.h"
 #include "layer_monitor/split.h"
 #include "core/engine.h"
 #include "core/modules.h"
 #include "drive/drive.h"
+#include "drive/lifecycle.h"
 #include "spatial/scene.h"
 #include "rt_numeric/scope.h"
 #include "profiles/lifecycle.h"
@@ -74,11 +76,14 @@ int ad_render_set(AdRender *s,const AdControl *p) {
     amounts(p,aux);da_voice_set(&s->auxiliary,aux);
     s->target=*p;hb_mix_set(&s->body,p->mix.body_mix);ad_control_apply(s->owner,p);return 1;
 }
-static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
+static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,int source_only,const AdSourceDriver *driver) {
     unsigned n;
     AdCapture none={0};
     VslEngine *e;
     if (!s||!s->owner||(frames&&!out)) return 0;
+    /* Dry production entry has no speaker layout or object projection. Reject
+       spatial captures rather than silently returning misleading empty data. */
+    if(source_only&&(s->config.channels!=2||(cap&&(cap->objects||cap->residual_objects||cap->body_objects||cap->bed))))return 0;
     if (!cap) cap=&none;
     e=s->owner;
     for (n=0;n<frames;++n) {
@@ -94,26 +99,30 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
         VslObjectFrame objects,residual_objects,body_objects={0},aux_raw,aux_objects;
         int c;
         if (s->frame%240==0) {
-            vsl_drive_step(&e->drive,&e->target,.005);
+            if(driver)driver->step(driver->state,&e->drive,&e->target,s->frame);
+            else vsl_drive_step(&e->drive,&e->target,.005);
             vsl_orchestrate(e,.005);vsl_events_update(e);
             /* No controller edits or derived-RPM latch in the host. */
             sa_voice_set(&s->dna,e->drive.rpm*s->config.root_per_rpm,s->target.mix.detail,1);
             if(s->config.residual_bank)ra_voice_set(&s->residual,e->drive.rpm*s->config.root_per_rpm,s->target.mix.residual_gain);
-            vsl_scene_update(e,s->config.channels);
+            if(!source_only)vsl_scene_update(e,s->config.channels);
             if(s->config.startup_profile) {
                 int gate=e->drive.lifecycle==VSL_CRANK;
                 st_voice_set(&s->startup,gate,s->target.mix.startup_gain);
-                if(gate)st_voice_position(&s->startup,fmin(1,e->drive.life_seconds/vsl_lifecycle_profile(s->config.profile)->crank_seconds));
+                if(gate)st_voice_position(&s->startup,fmin(1,e->drive.life_seconds/vsl_drive_lifecycle_profile(&e->drive,s->config.profile)->crank_seconds));
             }
             if(s->config.catch_profile) {
-                const VslLifecycleProfile *lp=vsl_lifecycle_profile(s->config.profile);
+                const VslLifecycleProfile *lp=vsl_drive_lifecycle_profile(&e->drive,s->config.profile);
                 int gate=e->drive.lifecycle==VSL_CATCH;
                 double u=gate?fmin(1,e->drive.life_seconds/(lp->catch_rise_seconds+lp->catch_settle_seconds)):0;
                 cb_voice_set(&s->catch_bloom,gate,u,s->target.mix.catch_gain);
             }
         }
         sampled_phase=s->dna.phase;
-        if(s->config.recipe_bank) {
+        if(source_only&&driver&&driver->dna) {
+            if(s->config.recipe_bank||s->config.resonant_bank||s->config.residual_bank||s->config.idle_profile||s->config.fine_idle_profile)return 0;
+            if(!driver->dna(driver->state,&s->dna,&s->body_band,raw,body_raw))return 0;
+        } else if(s->config.recipe_bank) {
             double shape[SD_MAX_HARMONICS];
             if(!drc_shape(s->config.recipe_bank,&s->dna,s->config.resonant_bank?&s->resonant:NULL,shape)||
                !sa_voice_tick_shaped_body(&s->dna,&s->body_band,shape,1,raw,body_raw))return 0;
@@ -159,7 +168,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 resonant[c]*=idle.keep;coherent[c]*=idle.keep;added[c]=idle.output[c];
             }
         }
-        if(s->config.source_processor) {
+        if(s->config.source_processor||(source_only&&driver&&driver->character)) {
             AdSourceContext context={&e->drive,s->envelope,s->low_envelope,s->frame};
             AdSourceFrame f={0};
             for(c=0;c<2;++c) {
@@ -167,7 +176,8 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 f.stereo[AD_SOURCE_RESIDUAL][c]=residual[c];f.stereo[AD_SOURCE_RESONANT][c]=resonant[c];
                 f.stereo[AD_SOURCE_COHERENT_LOW][c]=coherent[c];
             }
-            if(!ad_source_apply(s->config.source_processor,&context,&f))return 0;
+            if(s->config.source_processor&&!ad_source_apply(s->config.source_processor,&context,&f))return 0;
+            if(source_only&&driver&&driver->character&&!driver->character(driver->state,&context,&f))return 0;
             for(c=0;c<2;++c) {
                 source.dna[c]=f.stereo[AD_SOURCE_DNA][c];source.low[c]=f.stereo[AD_SOURCE_BODY][c];
                 residual[c]=f.stereo[AD_SOURCE_RESIDUAL][c];resonant[c]=f.stereo[AD_SOURCE_RESONANT][c];
@@ -203,7 +213,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             lm_split(&taps,cap->layers+n*LM_SAMPLES);
         }
         memset(&objects,0,sizeof objects);memset(&residual_objects,0,sizeof residual_objects);
-        if(s->config.scene_mode==AD_SCENE_OBJECTS) {
+        if(!source_only&&s->config.scene_mode==AD_SCENE_OBJECTS) {
             DsSourceFrame upper=source;upper.low[0]=upper.low[1]=0;
             ds_route_frame(&upper,s->config.projection,s->config.route,&objects);
             body_objects.sample[VSL_BODY]=s->config.projection==DS_OBSERVE_LEFT?source.low[0]:
@@ -215,7 +225,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
                 if(v!=0)objects.sample[VSL_BODY]+=v;
             }
         }
-        if(s->config.scene_mode==AD_SCENE_OBJECTS) {
+        if(!source_only&&s->config.scene_mode==AD_SCENE_OBJECTS) {
             DsSourceFrame separate={0};separate.dna[0]=residual[0];separate.dna[1]=residual[1];
             ds_route_frame(&separate,s->config.projection,s->config.route,&residual_objects);
             for(c=0;c<VSL_OBJECTS;++c)if(residual_objects.sample[c]!=0)objects.sample[c]+=residual_objects.sample[c];
@@ -234,13 +244,15 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
         for(c=0;c<VSL_OBJECTS;++c)if(aux_objects.sample[c]!=0)objects.sample[c]+=aux_objects.sample[c];
         /* Render spatial once from the same ongoing voice, also in dry mode,
            so switches cannot restart source, delay lines or reflection tails. */
-        vsl_scene_tick(e,&objects,spatial,s->config.channels);
-        if(s->config.scene_mode==AD_SCENE_STEREO_BED)
+        if(!source_only)vsl_scene_tick(e,&objects,spatial,s->config.channels);
+        if(!source_only&&s->config.scene_mode==AD_SCENE_STEREO_BED)
             sb_route(&s->bed_layout,observation,e->smooth.width,bed);
-        if(s->config.startup_profile)sb_route(&s->bed_layout,starter,e->smooth.width,starter_bed);
-        if(s->config.catch_profile)sb_route(&s->bed_layout,catch_delta,e->smooth.width,catch_bed);
+        if(!source_only&&s->config.startup_profile)sb_route(&s->bed_layout,starter,e->smooth.width,starter_bed);
+        if(!source_only&&s->config.catch_profile)sb_route(&s->bed_layout,catch_delta,e->smooth.width,catch_bed);
         for (c=0;c<s->config.channels;++c) {
-            double x=spatial[c]*s->gain;
+            double x;
+            if(source_only){out[2*n+c]=(float)dry[c];continue;}
+            x=spatial[c]*s->gain;
             if(s->config.scene_mode==AD_SCENE_STEREO_BED)x=(spatial[c]+bed[c])*s->gain;
             if(starter_bed[c]!=0)x+=starter_bed[c]*s->gain;
             if(catch_bed[c]!=0)x+=catch_bed[c]*s->gain;
@@ -292,12 +304,23 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) 
             t->coherent_low_envelope=s->low_envelope;
             t->idle_weight=idle.weight;
         }
+        if(driver&&driver->sample&&!driver->sample(driver->state,s->frame))return 0;
         ++s->frame;++e->frame;
     }
     return 1;
 }
 int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
     RnScope scope=rn_scope_enter();
-    int result=process(s,out,frames,cap);
+    int result=process(s,out,frames,cap,0,NULL);
     rn_scope_leave(scope);return result;
+}
+int ad_source_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
+    RnScope scope=rn_scope_enter();
+    int result=process(s,out,frames,cap,1,NULL);
+    rn_scope_leave(scope);return result;
+}
+int ad_source_process_controlled(AdRender *s,float *out,unsigned frames,const AdCapture *cap,const AdSourceDriver *driver) {
+    int result;RnScope scope;
+    if(driver&&!driver->step)return 0;
+    scope=rn_scope_enter();result=process(s,out,frames,cap,1,driver);rn_scope_leave(scope);return result;
 }

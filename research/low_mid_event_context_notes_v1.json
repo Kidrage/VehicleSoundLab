@@ -1,0 +1,38 @@
+{
+  "schema": "vsl.manual-acoustic-context-review/1",
+  "date": "2026-11-17",
+  "evidence_root": "E:/VehicleSoundLab/references/analysis/low_mid_event_scan_v1/contexts1",
+  "method": "Inspect original sampled video contact sheets and original-context spectrograms; no claim of listening, source separation, exact AV sync or physical RPM.",
+  "cases": {
+    "A_309885": {
+      "viewpoint": "cabin driving",
+      "observation": "Driver and steering wheel are visible while road scenery advances. This is not an exterior tailpipe recording. Continuous engine/road texture surrounds the low-frequency change.",
+      "decision": "Retain as unclassified driving acoustic change; do not fit or promote as isolated afterfire.",
+      "physical_identity_confirmed": false
+    },
+    "A_326490": {
+      "viewpoint": "cabin driving",
+      "observation": "The same cabin driving view continues through all sampled frames. A short low-frequency power rise is not enough to distinguish engine, road, handling or microphone contributions.",
+      "decision": "Retain as unclassified driving acoustic change; no event profile.",
+      "physical_identity_confirmed": false
+    },
+    "E_12390": {
+      "viewpoint": "stationary exterior rear quarter",
+      "observation": "The parked car remains in the same view. The spectral context shows the candidate within a rising harmonic rev burst; a separate independent exhaust event is not established.",
+      "decision": "Keep as rev-context evidence; no independent afterfire fit.",
+      "physical_identity_confirmed": false
+    },
+    "E_14340": {
+      "viewpoint": "stationary exterior rear quarter",
+      "observation": "The parked car remains in the same sampled shot13.74..14.94s. A bounded low/mid rise near14.34s follows earlier rev decline and precedes a stronger rising harmonic family near14.85s. Pedals, fueling and exact source mechanism are not visible.",
+      "decision": "Fit only the unchanged100ms acoustic candidate, retaining fullband scope and unconfirmed identity. afterfire is a local audition slot, not a physical label or formal-bank promotion.",
+      "physical_identity_confirmed": false
+    }
+  },
+  "limits": [
+    "The fixed event/before/after windows and original3dB double-background gate are unchanged.",
+    "The selected100ms crop does not capture the entire onset/tail and is not isolated from the continuous engine.",
+    "Do not concatenate this candidate with the earlier E13.309s high-frequency event to invent a complete afterfire."
+  ],
+  "timbre_accepted": false
+}

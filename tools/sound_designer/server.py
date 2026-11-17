@@ -10,10 +10,16 @@ import uuid
 from urllib.parse import urlparse,unquote
 
 from .workspace import Workspace
+from .controller import Controller
+from .state_recipes import StateRecipes
+from event_designer.workspace import EventWorkspace
 
 
-def serve(repo,root,port):
+def create_server(repo,root,port):
     workspace=Workspace(repo,root);assets=repo/'tools/sound_designer/web'
+    events=EventWorkspace(repo,workspace.root/'events')
+    state_recipes=StateRecipes(workspace)
+    controller=Controller(repo,workspace.root.parent/'controller_takes')
     worker=ThreadPoolExecutor(max_workers=1);jobs={};lock=threading.Lock()
 
     def submit(action,data):
@@ -43,6 +49,17 @@ def serve(repo,root,port):
                     return self.json(dict(schema='vsl.sound-designer-server/1',root=str(workspace.root),renderer='现有C Sound DNA',version=1))
                 if path=='/api/projects':
                     return self.json(workspace.projects())
+                if path=='/api/state-recipes':return self.json(state_recipes.listing())
+                if path=='/api/state-recipes/system':return self.json(state_recipes.system.metadata())
+                if path=='/api/state-recipes/projects':return self.json(state_recipes.choices())
+                if path.startswith('/api/state-recipes/view/'):
+                    parts=path.split('/')[4:]
+                    if len(parts) not in (1,2):raise ValueError('无效车辆DNA版本路径')
+                    return self.json(state_recipes.view(*parts))
+                if path=='/api/events/projects':return self.json(events.projects())
+                if path=='/api/events/presets':return self.json(events.presets())
+                if path.startswith('/api/events/project/'):
+                    return self.json(events.view(path.rsplit('/',1)[-1]))
                 if path.startswith('/api/parameters/'):
                     return self.json(workspace.parameters(path.rsplit('/',1)[-1]))
                 if path.startswith('/api/history/'):
@@ -53,7 +70,9 @@ def serve(repo,root,port):
                     target=(workspace.root/path[len('/files/'):]).resolve()
                     if not target.is_relative_to(workspace.root.resolve()): raise ValueError('无效文件路径')
                 else:
-                    target=(assets/('index.html' if path=='/' else path.lstrip('/'))).resolve()
+                    # Historical /?project= links continue to open their editor.
+                    entry='index.html' if urlparse(self.path).query else 'home.html'
+                    target=(assets/(entry if path=='/' else path.lstrip('/'))).resolve()
                     if not target.is_relative_to(assets.resolve()): raise ValueError('无效页面路径')
                 if not target.is_file(): return self.json(dict(error='文件不存在'),404)
                 size=target.stat().st_size;self.send_response(200)
@@ -72,8 +91,15 @@ def serve(repo,root,port):
                 data=json.loads(self.rfile.read(length))
                 actions={'/api/new':workspace.create,'/api/analyze':workspace.analyze,
                          '/api/compile':workspace.compile,'/api/render':workspace.render,'/api/save':workspace.save_design,
-                         '/api/restore':workspace.restore}
+                         '/api/restore':workspace.restore,'/api/dna-export':workspace.driver_dna}
+                actions['/api/state-recipes/save']=state_recipes.save
+                actions.update({'/api/events/new':events.create,'/api/events/analyze':events.analyze,
+                    '/api/events/context':events.probe_context,
+                    '/api/events/scan':events.scan_candidates,'/api/events/candidate':events.use_candidate,
+                    '/api/events/save':events.save,'/api/events/render':events.render,'/api/events/restore':events.restore})
                 if self.path=='/api/driver':
+                    return self.json(controller.open())
+                if self.path=='/api/legacy-driver':
                     exe=repo/'build-catalog-local-v1/bin/Release/VslAtlasMonitor.exe'
                     if not exe.exists(): raise ValueError('请先构建原生音色目录')
                     subprocess.Popen([str(exe),'--catalog'],cwd=repo,creationflags=0x08000000)
@@ -83,6 +109,14 @@ def serve(repo,root,port):
             except ConnectionError: pass
             except Exception as error: self.json(dict(error=str(error)),400)
 
-    server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
+    class LocalServer(ThreadingHTTPServer):
+        def server_close(self):
+            super().server_close();worker.shutdown(wait=True)
+    return LocalServer(('127.0.0.1',port),Handler)
+
+
+def serve(repo,root,port):
+    server=create_server(repo,root,port)
     print(f'SOUND_DESIGNER_READY http://127.0.0.1:{port}',flush=True)
-    server.serve_forever()
+    try:server.serve_forever()
+    finally:server.server_close()

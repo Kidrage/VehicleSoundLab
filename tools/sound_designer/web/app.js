@@ -23,13 +23,14 @@ function markDirty(){if(project?.model){$('renderInfo').textContent='参数已�
 function readouts(){for(const [id,,,,step,unit] of definitions)$(id+'Value').textContent=Number($(id).value).toFixed(step>=.5?1:id==='pitch'?3:2)+unit;}
 function params(){const p={};for(const [id] of definitions)p[id]=Number($(id).value);p.seconds=Number($('seconds').value);p.seed=Number($('seed').value);return p;}
 function setParams(p){for(const [id] of definitions)$(id).value=p[id];$('seconds').value=p.seconds;$('seed').value=p.seed;readouts();chart();}
-function lock(value){busy=value;document.querySelectorAll('button').forEach(b=>b.disabled=value);if(!value){$('compile').disabled=!project?.has_audio;$('analyze').disabled=!project?.has_audio;$('render').disabled=!project?.model;$('save').disabled=!project?.model;$('analysisDownload').disabled=!project?.analysis;}window.DesignAudition.updateButtons(value);}
+function lock(value){busy=value;document.querySelectorAll('button').forEach(b=>b.disabled=value);if(!value){$('compile').disabled=!project?.has_audio;$('analyze').disabled=!project?.has_audio;$('render').disabled=!project?.model;$('save').disabled=!project?.model;$('exportDriver').disabled=!project?.model;$('analysisDownload').disabled=!project?.analysis;}window.DesignAudition.updateButtons(value);}
 async function request(url,data){const response=await fetch(url,data===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const value=await response.json();if(!response.ok)throw Error(value.error||'请求失败');return value;}
 async function task(url,data,message){lock(true);notice(message,false,true);try{const {job}=await request(url,data);for(;;){await new Promise(r=>setTimeout(r,350));const value=await request('/api/job/'+job);if(value.status==='error')throw Error(value.error);if(value.status==='done')return value.result;}}finally{lock(false);}}
 async function guarded(action){try{await action();}catch(error){notice(error.message,true);}}
 function load(p){
  document.querySelectorAll('audio').forEach(audio=>audio.pause());
  project=p;editedRows=p.rows?structuredClone(p.rows):null;editedRho=p.rho?structuredClone(p.rho):null;
+ $('driverDownloads').replaceChildren();if(p.driver_export){$('driverRpm').value=p.driver_export.reference_rpm;driverLinks(p);}
  $('name').value=p.name;$('projectLabel').textContent=p.name;$('state').value=p.state;$('viewpoint').value=p.viewpoint;
  if(p.reference_url){$('reference').src=p.reference_url+'?v='+Date.now();}else{$('reference').removeAttribute('src');$('reference').load();}
  if(p.selection){$('start').value=p.selection[0];$('end').value=p.selection[1];}
@@ -85,7 +86,9 @@ $('presetFile').onchange=()=>guarded(async()=>{const file=$('presetFile').files[
 $('loadJson').onclick=()=>guarded(async()=>{if(!project?.model)throw Error('请先载入模型');const p=await request('/api/parameters/'+project.id);p.name=$('name').value;p.state=$('state').value;p.viewpoint=$('viewpoint').value;p.params=params();p.rows=editedRows;p.rho=editedRho;$('jsonEditor').value=JSON.stringify(p,null,2);notice('可直接编辑完整参数，验证后作为新音色载入。');});
 $('applyJson').onclick=()=>guarded(async()=>{load(await task('/api/new',{package:JSON.parse($('jsonEditor').value)},'校验完整参数…'));notice('完整参数验证通过。已创建独立音色。');});
 $('analysisDownload').onclick=()=>{if(!project?.analysis)return;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({name:project.name,state:$('state').value,viewpoint:$('viewpoint').value,source:project.source,selection:project.selection,...project.analysis},null,2)],{type:'application/json'}));a.download='voice-analysis.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
-$('driver').onclick=()=>guarded(async()=>{await request('/api/driver',{});notice('已打开现有原生驾驶窗口；该窗口独立控制驾驶与声层。');});
+$('driver').onclick=()=>guarded(async()=>{const result=await request('/api/driver',{});notice(result.already_open?'独立声源控制窗口已在运行。':'已打开独立声源控制窗口，可驾驶、调参、独奏和录放；输出为纯合成干声。');});
+function driverLinks(p){for(const [label,file]of [['驾驶DNA包','driver.dnabank.json'],['导出来源与映射','driver-provenance.json']]){const a=document.createElement('a');a.textContent=label;a.href=`/files/${p.id}/${p.driver_export.version}/${file}`;a.download='';$('driverDownloads').append(a);}}
+$('exportDriver').onclick=()=>guarded(async()=>{const result=await task('/api/dna-export',{...designDraft(),id:project.id,reference_rpm:Number($('driverRpm').value)},'正在编译当前声纹的驾驶DNA参数…');load(result.project);notice('驾驶DNA包已导出。在独立驾驶窗口“DNA 配方”页导入；参考RPM是工程映射。');});
 window.DesignAudition.setup(notice);
 window.DesignHistory.setup({getProject:()=>project,request,task,load,notice,guarded,savePending});
 window.addEventListener('resize',()=>{drawWave();chart();});

@@ -232,3 +232,24 @@ class Workspace:
                     bundle=f'/files/{data["id"]}/{version}/sound-design.zip',
                     parameters=f'/files/{data["id"]}/{version}/parameters.json',
                     csv=f'/files/{data["id"]}/{version}/harmonics.csv')
+
+    def driver_dna(self,data):
+        from . import driver_export
+        folder,p=self.load(data['id']);original,base=models.read(folder/'base.model')
+        labels=fields(data,p);ctl=models.controls(data.get('params',{}))
+        edited=models.edit(original,base,ctl,data.get('rows'),data.get('rho'))
+        rpm=data.get('reference_rpm')
+        if isinstance(rpm,bool) or not isinstance(rpm,(int,float)) or not np.isfinite(rpm) or not 50<=rpm<=10000:
+            raise ValueError('参考RPM需在50–10000之间')
+        if base/rpm>.1:raise ValueError('声学基频/RPM比值超过当前控制器范围，请提高参考RPM')
+        version='driver_'+uuid.uuid4().hex;output=folder/version;output.mkdir()
+        model=output/'voice.model';models.write(model,edited,base)
+        report=driver_export.write(output,model,labels['name'],rpm,ctl,
+            dict(project=data['id'],source=p['source'],state=labels['state'],viewpoint=labels['viewpoint'],
+                selection=p.get('selection'),model_reference=p.get('model_reference')))
+        history.checkpoint(folder,p,'驾驶DNA导出前')
+        p.update(**labels,params=ctl,rows=data.get('rows'),rho=data.get('rho'),preview_stale=True,
+            driver_export=dict(version=version,reference_rpm=rpm,dna_bank_sha256=report['dna_bank_sha256']))
+        self.save(folder,p);history.checkpoint(folder,p,'导出驾驶DNA')
+        return dict(project=self.view(data['id']),bank=f'/files/{data["id"]}/{version}/driver.dnabank.json',
+            provenance=f'/files/{data["id"]}/{version}/driver-provenance.json',report=report)

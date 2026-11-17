@@ -1,0 +1,63 @@
+{
+  "result": "passed",
+  "candidate_result": "both_refused",
+  "qualified_cases": [],
+  "independent_saved_C_waveforms": 32,
+  "independent_max_spectral_db_disagreement": 1.2434497875801753e-13,
+  "cases": [
+    {
+      "kind": "crank",
+      "optimizer_terminated": false,
+      "relative_legacy_shape_improvement": -0.5399756858165257,
+      "adopted": false
+    },
+    {
+      "kind": "catch",
+      "optimizer_terminated": false,
+      "relative_legacy_shape_improvement": -1.8966756253878208,
+      "adopted": false
+    }
+  ],
+  "final_sources": {
+    "AGENTS.md": "a5e34211c95e8dad8b6ab274b87718396f7fbb062eb03d59d10c19403f7bc2f1",
+    "research/material_review_decisions.json": "0981f978d4a6b821e0327565d9df8f7bfe29f879e3043f72dfa6b0a6d731e5be",
+    "research/startup_source_support_v1_plan.json": "c337ea4980444d858bb6491576355527faeb733c50b63731407b5f7ee5d9388e",
+    "handoff/回火参考排除与演示修正V1.md": "b81c0fe669eca177e41235721641b04f8063348f60fbbe6609bbe4ffc4f7daef",
+    "handoff/启动声源频带控制核查V1.md": "8936c63983b48dca35c437d77d17ff3cbf0727075c349abd5d80156fd2608a2a",
+    "tools/event_authoring/material_reviews.py": "05f0e6ad2c211f7b2a53d69324a418617700cd624362a1dab0187e64f4f1d0c8",
+    "tools/event_authoring/source_support.py": "143e129338a83719799155c59d82a549ee1004165016b6f4676e0daa94b56e5c",
+    "tools/vehicle_controller/recipe.py": "3add04bbd17031659d0c2f02aea10f7a0685354640e3c775f33cc1df645dddce",
+    "tools/vehicle_controller/take.py": "4cf59595b403d04398ad35fe0fcf1a91617c768328bdc7e08040036ba107600a",
+    "tools/vehicle_controller/events.py": "b54809fa86267b6cd83c976a6f9b579ae15f6141f10c5d27cc9e1d19414b3cac",
+    "tools/vehicle_controller/ui.py": "ab47610b35ee4630ccae3b4b4a72b854f9ed56fa83e6fb8eeb588a27159baa76",
+    "tools/event_designer/workspace.py": "c85992e5936633f725938bc3b4b5de5b85fb6578623de4e933ad74fd70eef527",
+    "tools/event_designer/package.py": "0c1399e923db5a02523d3e34d56aa78038feba4007bf359369f3f9eec1e040d7",
+    "tools/sound_designer/web/events.js": "ed2771bc0fd774521de8465d120bfbac09f86a36d158b151956279b08241c592",
+    "tools/vehicle_scenarios/start_idle.py": "4f47902bfcf51de329bf976e267ee0b5e45ecc549808ed4c9d544284c9464708",
+    "tools/vehicle_scenarios/web/app.js": "3359f02f3d36dfa3aa8ac1a105318c526d8924feb2cf9f0d776ff4d3647b60e9",
+    "tools/inspect_startup_source_support_v1.py": "df6624eaebc383d201a4fb19c889695f7e427dd29a8a60c46ade46e94dc7088d",
+    "tools/verify_startup_source_support_v1.py": "61cd5cdda8ced63ffa4b4d8e6aa0cbafe82dc71951268c8559722f2bbd45bd0e",
+    "tools/refine_startup_source_support_v1.py": "c5633ff38a338a68728d04ca68fbfb1bbd8419ead1b6166ad51aa3f27206ebc0",
+    "tools/audit_startup_source_support_v1.py": "2fb3b39cbfd392fab22c3ed693b8a50818852e20618a061c6a22e738b208cfa7",
+    "tools/audit_startup_contour_ensemble_v1.py": "a7f22f104236eeee5b149a58243866466b1c32cd336d7cd128e8b656e00eae2f",
+    "tools/verify_material_review_v1.py": "8d892b7bc5c456c9f0edf85dda39d72482f0842087e66ac6881d7612ed736690",
+    "tools/verify_material_review_web_v1.py": "e77fe35480a76ea32b865246fdcd6633a4b15dca41a4b58a0f3591f1fb15bc1e",
+    "tools/verify_material_review_web_v1.cjs": "b7fcdf25dc3ecbe2078e8b2ad3e45ee335ebf69eb5bfe131cdcf2eb60f81b35c",
+    "tools/finalize_material_review_v1.py": "814b01a35f92dd6bd9a8a4ae39967d7d8b26e894c59af22d5c0fea3b01da4859"
+  },
+  "terminal_reports": {
+    "E:\\VehicleSoundLab\\references\\analysis\\material_review_v1\\verification1\\report.json": "a90ce6a7139fc7846920ed6bbc34e7e5c91c14d735049320a94cf610d9ed44fa",
+    "E:\\VehicleSoundLab\\references\\analysis\\material_review_v1\\ui2\\report.json": "d4b36efb51a9ad403d5d50089631261bc104553605072db96bee284965404636",
+    "E:\\VehicleSoundLab\\references\\analysis\\material_review_v1\\web2\\report.json": "f1cf4f662a14dfbf490bee3ff79ff5928832357df93d0f42423e74408ab89dbb",
+    "E:\\VehicleSoundLab\\references\\analysis\\material_review_v1\\web2\\verification.json": "dd439930cfc2bde6fc93a075e8fd2bfaceab11a4beeb42f5d8beef449aa55006",
+    "E:\\VehicleSoundLab\\references\\analysis\\startup_source_support_v1\\diagnostic1\\report.json": "4b1f3ed8a86818ee83b20a3ce6c7abafb14c8f0eec45bcba22b05fec2f4720d1",
+    "E:\\VehicleSoundLab\\references\\analysis\\startup_source_support_v1\\known1\\report.json": "97ef38a9901e8d38d8fcfc239ae1d4ef298ee1db76cbcddc7e6533276e70f4b4",
+    "E:\\VehicleSoundLab\\references\\analysis\\startup_source_support_v1\\fit1\\report.json": "16d02043cf0f2d366f75a084e84f28910dd4ac80758d2111512ddcb7b7180ffd",
+    "E:\\VehicleSoundLab\\references\\analysis\\startup_source_support_v1\\audit1\\report.json": "a08ae0924cce5e534a5a63e15c5a584620098dd039aeb59496683b5ce4ea596e"
+  },
+  "delivery_root": "E:\\VehicleSoundLab\\references\\analysis\\material_review_v1\\delivery1",
+  "runtime_files_unchanged": 459,
+  "no_candidate_promoted": true,
+  "goal_complete": false,
+  "timbre_accepted": false
+}

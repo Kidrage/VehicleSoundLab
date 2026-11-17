@@ -23,10 +23,12 @@ int drc_voice_tick(DrcVoice *v,const SaVoice *dna,double phase,DrcFrame *f) {
        !isfinite(dna->root_hz)||dna->root_hz<0||dna->root_hz>1000||!unit(dna->detail))return 0;
     b=v->bank;memset(f,0,sizeof *f);drc_weights(b,dna->root_hz,w);
     for(a=0;a<b->count;++a)if(b->has_low[a]) {
-        double x[2],p=fmod(phase+dna->bank->offset[a],2*DRC_PI),weight=w[a]*drc_support(b,a,dna->root_hz);
+        double x[2]={0},p=fmod(phase+dna->bank->offset[a],2*DRC_PI),weight=w[a]*drc_support(b,a,dna->root_hz);
         if(p<0)p+=2*DRC_PI;if(p>=2*DRC_PI)p=0;
         v->oscillator[a].phase=p;sd_texture_prepare(v->texture+a,b->low+a);
-        sd_oscillator_sample(v->oscillator+a,v->texture+a,b->low+a,dna->detail,x);
+        /* sample() only reads oscillator/texture state. Inactive anchors still
+           adopt phase and draw/advance their full texture stream. */
+        if(weight!=0)sd_oscillator_sample(v->oscillator+a,v->texture+a,b->low+a,dna->detail,x);
         v->texture[a].fraction+=dna->root_hz/12000;
         f->support+=weight*weight;
         for(c=0;c<2;++c)f->raw[c]+=x[c]*b->scale[a]*weight;

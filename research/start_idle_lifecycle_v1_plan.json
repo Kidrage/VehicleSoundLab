@@ -1,0 +1,22 @@
+{
+  "schema": "vsl.start-idle-lifecycle-study/1",
+  "previous_goal_turn": "No synthesis progress: source/render and MCPS confirmation only; exterior startup delivery now frozen and independently audited.",
+  "problem": "A_exterior_startup_v1/C1 selected catalog v10-moving35 (id1), whose configuration has no F2 fine-idle profile. Its prose incorrectly described an A/F2 composite; telemetry idle_weight=0 confirms that idle was not active. Keep that comparison immutable and issue an explicit correction.",
+  "change": "Use the existing v10-moving-fine-idle catalog configuration (id0) in the same source-only C engine. Compare identical36s control sequences with idle_mix0 versus1; do not replace or refit existing source parameters.",
+  "timeline_seconds": {"start": 0.35, "launch": 6, "accelerate": 7, "lift": 19, "brake": 21, "parked_brake_hold": 30, "ignition_off": 34, "end": 36},
+  "scenario_revision": "C2 visual/telemetry review found the unnecessary30s neutral selection triggered SHIFT_CUT/RECOVER and briefly removed idle. The final scenario holds the stopped drive gear. C1/C2, their plans and exact scenario source are retained; no runtime shift semantics changed.",
+  "sources": {
+    "continuous": "existing accepted fixed moving35 A recipe; wide-RPM mapping remains engineering",
+    "idle": "existing F2 modal, amplitude-motion and fine-spectrum procedural synthesis, no recorded waveform playback",
+    "startup": "A_exterior_startup_v1/verification5 crank and catch parameter profiles",
+    "lift_event": "event_full_envelope_v1/C4 acoustic E candidate, not confirmed physical afterfire"
+  },
+  "checks": [
+    "C telemetry proves F2 idle weight rises after RUNNING/IDLE, falls during acceleration, returns after parking and releases at stop",
+    "actual added-source bus carries idle audio; other19ch components follow the documented replacement envelope",
+    "identical adopted drive trajectory and event notifications; all four event-slot PCM outputs exact between idle0 and1",
+    "variable host blocks reproduce every actual native process piece,23channels,monitor,notices and final state",
+    "controller parameter import/save and owned muted replay; downloadable native take/preset and single-player review"
+  ],
+  "limits": ["No new downloads, runtime C changes, spatial processing, ADI optimization or formal-bank/default promotion.", "A exterior/F2/E is a mixed-reference engineering recipe, not one-car calibrated all-state capture.", "Mechanical naturalness and transition listening remain unaccepted until user feedback."]
+}

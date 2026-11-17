@@ -1,0 +1,5310 @@
+{
+  "schema": "vsl.startup-timbre-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no_progress",
+  "current_goal_turn": "progress",
+  "kernel": {
+    "result": "passed",
+    "known": [
+      {
+        "cutoff_hz": 0.0,
+        "gated": 0,
+        "max_error_FS": 9.313225746154785e-10
+      },
+      {
+        "cutoff_hz": 0.0,
+        "gated": 1,
+        "max_error_FS": 1.862645149230957e-09
+      },
+      {
+        "cutoff_hz": 300.0,
+        "gated": 0,
+        "max_error_FS": 9.313225746154785e-10
+      },
+      {
+        "cutoff_hz": 300.0,
+        "gated": 1,
+        "max_error_FS": 1.862645149230957e-09
+      },
+      {
+        "cutoff_hz": 4000.0,
+        "gated": 0,
+        "max_error_FS": 3.725290298461914e-09
+      },
+      {
+        "cutoff_hz": 4000.0,
+        "gated": 1,
+        "max_error_FS": 3.725290298461914e-09
+      },
+      {
+        "cutoff_hz": 18000.0,
+        "gated": 0,
+        "max_error_FS": 1.862645149230957e-09
+      },
+      {
+        "cutoff_hz": 18000.0,
+        "gated": 1,
+        "max_error_FS": 7.450580596923828e-09
+      }
+    ],
+    "rejected_cutoffs": [
+      "-1.0",
+      "100.0",
+      "18001.0",
+      "nan",
+      "inf",
+      "True"
+    ],
+    "legacy_author_exact": [
+      {
+        "kind": "crank",
+        "seed": 27431,
+        "old_author_exact": true
+      },
+      {
+        "kind": "crank",
+        "seed": 1,
+        "old_author_exact": true
+      },
+      {
+        "kind": "crank",
+        "seed": 20261116,
+        "old_author_exact": true
+      },
+      {
+        "kind": "crank",
+        "seed": 19088743,
+        "old_author_exact": true
+      },
+      {
+        "kind": "catch",
+        "seed": 27431,
+        "old_author_exact": true
+      },
+      {
+        "kind": "catch",
+        "seed": 1,
+        "old_author_exact": true
+      },
+      {
+        "kind": "catch",
+        "seed": 20261116,
+        "old_author_exact": true
+      },
+      {
+        "kind": "catch",
+        "seed": 19088743,
+        "old_author_exact": true
+      }
+    ],
+    "material": [
+      {
+        "kind": "crank",
+        "seed": 27431,
+        "max_error_FS": 2.9802322387695312e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": 1.5281905291900988e-07,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": -1.3025245732140534e-07,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": -1.910016319600388e-08,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": 1.5261261645252158e-07,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": 1.2753479547259923e-07,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": 2.070553616434261e-07,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "crank",
+        "seed": 1,
+        "max_error_FS": 2.9802322387695312e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -0.9135309496372539,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 0.04020359721221374,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": -0.2579156021049142,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": 0.047804962539015075,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": -0.234317667702375,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -0.14558712270583304,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "crank",
+        "seed": 20261116,
+        "max_error_FS": 2.9802322387695312e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -1.9321096352888496,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 0.41333292907902164,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": 0.2947235113536375,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": -0.07719129418839393,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": -0.1703563041732859,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -0.3856757891073491,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "crank",
+        "seed": 19088743,
+        "max_error_FS": 2.9802322387695312e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -1.5203252179673594,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": -0.3396271895619065,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": 0.4217375624235302,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": -0.0702509843030619,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": -0.1910305315629404,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -0.17299007577614434,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "catch",
+        "seed": 27431,
+        "max_error_FS": 2.9802322387695312e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": 0.0204747383386168,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 8.67765268759174e-06,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": -1.648679438870401e-06,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": 3.68566629642835e-07,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": 0.6916657937424795,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -1.0227039971849892,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "catch",
+        "seed": 1,
+        "max_error_FS": 5.960464477539063e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -1.4202542342882225,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 0.38244511488797905,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": 0.17552306303467619,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": -0.09982242924679223,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": 0.5518552228550887,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -1.224573263597315,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "catch",
+        "seed": 20261116,
+        "max_error_FS": 5.960464477539063e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -2.1070088289731275,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 0.25662924681086025,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": 0.07588825936247662,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": -0.030471180975373043,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": 0.6618001833573912,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -1.4474411431119405,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      },
+      {
+        "kind": "catch",
+        "seed": 19088743,
+        "max_error_FS": 5.960464477539063e-08,
+        "bands": [
+          {
+            "hz": [
+              0,
+              60
+            ],
+            "error_db": -1.2295203578298335,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "error_db": 0.16157703763101655,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "error_db": 0.07979195806520019,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "error_db": -0.11935445097454087,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "error_db": 0.7179246001467575,
+            "passed": true,
+            "significant": true
+          },
+          {
+            "hz": [
+              14000,
+              24001
+            ],
+            "error_db": -1.1884339196819127,
+            "passed": true,
+            "significant": false
+          }
+        ],
+        "all_band_gates_pass": true
+      }
+    ],
+    "all_material_band_gates_pass": true,
+    "renderer_sha256": "2043597cb96ab7902431bebb84ed2552ccf30277ace8d9160663ca357819fed1",
+    "old_renderer_sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d",
+    "source_bridge_sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+    "old_source_bridge_sha256": "39496f215967a1b6449fab7d9841961d12a74d368d2e5afc8dade701e5ed0d43",
+    "profile_sizes": [
+      696,
+      704
+    ],
+    "abi": [
+      6,
+      5
+    ],
+    "old_ABI_refuses_color": true,
+    "goal_complete": false,
+    "timbre_accepted": false
+  },
+  "regression": {
+    "schema": "vsl.event-color-regression/1",
+    "result": "passed",
+    "cases": [
+      {
+        "catalog": 0,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 0,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 1,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 1,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 2,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 2,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 3,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 3,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 4,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 4,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 5,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 5,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 6,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 6,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 7,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 7,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 8,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 8,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 9,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 9,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 10,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 10,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 11,
+        "label": "normal/events=0",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 11,
+        "label": "normal/events=1",
+        "frames": 153600,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 1,
+        "label": "abort/7200",
+        "frames": 192000,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 1,
+        "label": "abort/21600",
+        "frames": 192000,
+        "mix_native_state_notices_exact": true
+      },
+      {
+        "catalog": 1,
+        "label": "abort/21733",
+        "frames": 192000,
+        "mix_native_state_notices_exact": true
+      }
+    ],
+    "bridge_sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+    "reference_bridge_sha256": "39496f215967a1b6449fab7d9841961d12a74d368d2e5afc8dade701e5ed0d43",
+    "abi": [
+      6,
+      5
+    ],
+    "source_binding_sha256": "95b1ac9aa0d77081c11a47cb42666142c1cdb66863c9cb88c3b490e95a76c4fc",
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "delivery": {
+    "schema": "vsl.startup-timbre-delivery/1",
+    "result": "passed",
+    "bridge_sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+    "voice_bank_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "event_bank_mask": 6,
+    "projects": {
+      "schema": "vsl.startup-timbre-projects/1",
+      "projects": [
+        {
+          "kind": "crank",
+          "id": "773ad53ffd964fa18a7abfaf4aa2821b",
+          "name": "A 启动早期纹理 · 频谱校准候选",
+          "project_folder": "E:\\VehicleSoundLab\\designs\\events\\773ad53ffd964fa18a7abfaf4aa2821b",
+          "version": "d5ab8d6a3b1447788f2f53c813fd8751",
+          "parameters": "E:\\VehicleSoundLab\\designs\\events\\773ad53ffd964fa18a7abfaf4aa2821b\\d5ab8d6a3b1447788f2f53c813fd8751\\parameters.json",
+          "profile_sha256": "991391f97c38286d378745839f173d6cec9d39b60e3684c437513d43e55a2156",
+          "direct_job_parameters_exact": true,
+          "source_free_import_pcm_exact": true,
+          "source_fit": {
+            "method": "source-response-v1",
+            "qualified": true,
+            "bands": [
+              {
+                "hz": [
+                  0,
+                  60
+                ],
+                "target_power": 1.000078717953238e-05,
+                "generated_power": 1.0000787179518091e-05,
+                "error_db": -6.205447247274836e-12,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  60,
+                  300
+                ],
+                "target_power": 0.0010113568313052097,
+                "generated_power": 0.001011356831304185,
+                "error_db": -4.400708393618155e-12,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  300,
+                  1200
+                ],
+                "target_power": 0.011468195275898223,
+                "generated_power": 0.011468195275878338,
+                "error_db": -7.530433186321147e-12,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "target_power": 0.013253705208547734,
+                "generated_power": 0.013253705208672624,
+                "error_db": 4.092316469792904e-11,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "target_power": 0.001391284017770799,
+                "generated_power": 0.0013912840177731877,
+                "error_db": 7.456179971383615e-12,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  14000,
+                  24001
+                ],
+                "target_power": 6.257798147748118e-07,
+                "generated_power": 6.257798147746424e-07,
+                "error_db": -1.1755151817286161e-12,
+                "significant_target": false,
+                "passed": true
+              }
+            ],
+            "groups": 16,
+            "evaluations": 49,
+            "optimizer_terminated": true,
+            "amplitude_contract_fits": true,
+            "seed": 27431,
+            "target_positive_psd_excess_power": 0.02713516790051627,
+            "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+            "limitations": "Only procedural noise receives the optional fourth-order lowpass; modal phases/frequencies and envelopes stay unchanged. Six fixed cutoff choices and <=240 evaluations each. Positive PSD excess is an acoustic target, not source separation, RPM or timbre acceptance.",
+            "noise_lowpass_hz": 10000.0,
+            "attempts": [
+              {
+                "noise_lowpass_hz": 0.0,
+                "score": 11.557122815489716,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 9.988656314041745e-06,
+                    "error_db": -0.005271150836928513,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.0010113569593104992,
+                    "error_db": 5.496772817897732e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.011468195400647963,
+                    "error_db": 4.724206577921277e-08,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253981600422505,
+                    "error_db": 9.056653409636798e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.0001263145658964607,
+                    "error_db": -10.41962362367843,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 7.2329935633738165e-06,
+                    "error_db": 10.628965282358322,
+                    "significant_target": false,
+                    "passed": false
+                  }
+                ],
+                "evaluations": 14
+              },
+              {
+                "noise_lowpass_hz": 4000.0,
+                "score": 6.9942630025189505,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 1.1103723682248118e-05,
+                    "error_db": 0.4543446033772331,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.0010113580084778263,
+                    "error_db": 5.054984139102721e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.011468224262259274,
+                    "error_db": 1.0976967555321307e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.014761482074005244,
+                    "error_db": 0.46792656764589247,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.004115335323907342,
+                    "error_db": 4.709894317319855,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 3.165810973681694e-08,
+                    "error_db": -12.959365702230325,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 204
+              },
+              {
+                "noise_lowpass_hz": 6000.0,
+                "score": 3.268014215084735,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 1.163970077075719e-05,
+                    "error_db": 0.6590763034373686,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.0010106429750004575,
+                    "error_db": -0.0030665073848119835,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.011657564192507328,
+                    "error_db": 0.07112736248264594,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253724425240141,
+                    "error_db": 6.29687871509281e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.003930749050443705,
+                    "error_db": 4.510595219349183,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 1.227184102779639e-07,
+                    "error_db": -7.075118296912612,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 95
+              },
+              {
+                "noise_lowpass_hz": 8000.0,
+                "score": 0.4114933047268309,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 1.0017007392161055e-05,
+                    "error_db": 0.007038088393208264,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.0010113568843638022,
+                    "error_db": 2.2784295892424444e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.01146820733568056,
+                    "error_db": 4.566973305174122e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253708023182032,
+                    "error_db": 9.222930460281323e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.002153538927878435,
+                    "error_db": 1.897369303329398,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 3.810563776489836e-07,
+                    "error_db": -2.1543231567784344,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 37
+              },
+              {
+                "noise_lowpass_hz": 10000.0,
+                "score": 9.786726877079837e-23,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 1.0000787179518091e-05,
+                    "error_db": -6.205447247274836e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.001011356831304185,
+                    "error_db": -4.400708393618155e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.011468195275878338,
+                    "error_db": -7.530433186321147e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253705208672624,
+                    "error_db": 4.092316469792904e-11,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.0013912840177731877,
+                    "error_db": 7.456179971383615e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 6.257798147746424e-07,
+                    "error_db": -1.1755151817286161e-12,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 49
+              },
+              {
+                "noise_lowpass_hz": 14000.0,
+                "score": 4.623888520561671,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 9.994520129974308e-06,
+                    "error_db": -0.0027223838952610173,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.0010113568900779653,
+                    "error_db": 2.523805833604887e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.01146824580113462,
+                    "error_db": 1.9133597309736114e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253717907907987,
+                    "error_db": 4.161296296271908e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.0003062975035991151,
+                    "error_db": -6.572723390334067,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 2.980991226391059e-06,
+                    "error_db": 6.779391474417823,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 16
+              }
+            ]
+          },
+          "document": {
+            "schema": "vsl.event-profile/2",
+            "kind": "crank",
+            "name": "A 启动早期纹理 · 频谱校准候选",
+            "parameters": {
+              "gated": 1,
+              "duration_seconds": 10.0,
+              "attack_seconds": 0.012,
+              "release_seconds": 0.025,
+              "sweep_seconds": 0.0,
+              "level": 1.0,
+              "modes": [
+                {
+                  "hz": 936.2566869476262,
+                  "end_hz": 936.2566869476262,
+                  "amplitude": 0.12519766427132667,
+                  "phase": 1.173103673155737,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 1092.8763507785636,
+                  "end_hz": 1092.8763507785636,
+                  "amplitude": 0.02374734587406276,
+                  "phase": 3.919882775746192,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 1642.006423408332,
+                  "end_hz": 1642.006423408332,
+                  "amplitude": 0.12747331830166445,
+                  "phase": 2.8929974606101903,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 289.7646723199394,
+                  "end_hz": 289.7646723199394,
+                  "amplitude": 0.046954632939496144,
+                  "phase": 4.535348361984862,
+                  "decay_seconds": 0.2925338517977728
+                },
+                {
+                  "hz": 754.0737625585386,
+                  "end_hz": 754.0737625585386,
+                  "amplitude": 0.00031818704206281476,
+                  "phase": 0.5389341850587108,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 1960.829280122846,
+                  "end_hz": 1960.829280122846,
+                  "amplitude": 0.0005925781987881063,
+                  "phase": -1.348026707411449,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 1309.9599257352845,
+                  "end_hz": 1309.9599257352845,
+                  "amplitude": 0.04450023632893825,
+                  "phase": -1.0476045053129974,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 1544.6917867438517,
+                  "end_hz": 1544.6917867438517,
+                  "amplitude": 0.03637336218396933,
+                  "phase": 2.8411791797873014,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 431.3140285766551,
+                  "end_hz": 431.3140285766551,
+                  "amplitude": 0.0066135322631133584,
+                  "phase": 0.6283102296294447,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 2168.4349289757315,
+                  "end_hz": 2168.4349289757315,
+                  "amplitude": 5.056745318877858e-06,
+                  "phase": 2.311058573801211,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 2490.7360419681363,
+                  "end_hz": 2490.7360419681363,
+                  "amplitude": 0.0004999962689175534,
+                  "phase": 1.401653938914485,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 3015.57157561045,
+                  "end_hz": 3015.57157561045,
+                  "amplitude": 1.3227820722273836e-05,
+                  "phase": -0.2206086057291894,
+                  "decay_seconds": 0.04761411795919038
+                }
+              ],
+              "bands": [
+                {
+                  "hz": 134.16407864998737,
+                  "q": 0.5590169943749473,
+                  "amplitude": 0.10574759715913305,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.2925338517977728
+                },
+                {
+                  "hz": 600.0,
+                  "q": 0.6666666666666666,
+                  "amplitude": 0.5880924038682286,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 2323.7900077244503,
+                  "q": 0.7041787902195304,
+                  "amplitude": 0.13417429813560056,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.04761411795919038
+                },
+                {
+                  "hz": 7937.253933193771,
+                  "q": 0.835500414020397,
+                  "amplitude": 0.0349417030850495,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.08
+                }
+              ],
+              "noise_lowpass_hz": 10000.0
+            },
+            "provenance": {
+              "path": "E:\\VehicleSoundLab\\designs\\events\\773ad53ffd964fa18a7abfaf4aa2821b\\master.wav",
+              "sha256": "c72ed89087dcf71f48ef63b25408f0f775c4a167d846bacb9108345486b9bb16",
+              "first_frame": 79200,
+              "last_frame": 101760,
+              "source_seconds": [
+                1.65,
+                2.12
+              ],
+              "channels": 2,
+              "sample_rate": 48000,
+              "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+            },
+            "background": {
+              "path": "E:\\VehicleSoundLab\\designs\\events\\773ad53ffd964fa18a7abfaf4aa2821b\\master.wav",
+              "sha256": "c72ed89087dcf71f48ef63b25408f0f775c4a167d846bacb9108345486b9bb16",
+              "first_frame": 0,
+              "last_frame": 57600,
+              "source_seconds": [
+                0.0,
+                1.2
+              ],
+              "channels": 2,
+              "sample_rate": 48000,
+              "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+            },
+            "observation": {
+              "rms_channels": [
+                0.1318137787986715,
+                0.196350398198646
+              ],
+              "background_rms_channels": [
+                0.020947672203661817,
+                0.021321534459998535
+              ],
+              "excess_mean_square": 0.027517469175735488,
+              "event_to_background_db": 17.965798443481578,
+              "modal_peaks_hz": [
+                937.5,
+                1101.5625,
+                1640.625,
+                281.25,
+                750.0,
+                1968.75,
+                1312.5,
+                1546.875,
+                421.875,
+                2179.6875,
+                2484.375,
+                3023.4375
+              ],
+              "modal_observations": [
+                {
+                  "hz": 936.2566869476262,
+                  "phase": 1.173103673155737,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1092.8763507785636,
+                  "phase": 3.919882775746192,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1642.006423408332,
+                  "phase": 2.8929974606101903,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 289.7646723199394,
+                  "phase": 4.535348361984862,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 754.0737625585386,
+                  "phase": 0.5389341850587108,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1960.829280122846,
+                  "phase": -1.348026707411449,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1309.9599257352845,
+                  "phase": -1.0476045053129974,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1544.6917867438517,
+                  "phase": 2.8411791797873014,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 431.3140285766551,
+                  "phase": 0.6283102296294447,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 2168.4349289757315,
+                  "phase": 2.311058573801211,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 2490.7360419681363,
+                  "phase": 1.401653938914485,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 3015.57157561045,
+                  "phase": -0.2206086057291894,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                }
+              ],
+              "bands": [
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "background_power": 0.00024840183543465606,
+                  "excess_power": 0.0010113568313052097,
+                  "peak_time": 0.165,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.2925338517977728,
+                  "log_amplitude_tail_slope": -3.4184077974377303,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "background_power": 0.0001275621156134305,
+                  "excess_power": 0.011468195275898223,
+                  "peak_time": 0.17,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 2.0,
+                  "log_amplitude_tail_slope": -0.2961196531184794,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "background_power": 4.866579983657765e-05,
+                  "excess_power": 0.013253705208547734,
+                  "peak_time": 0.445,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.04761411795919038,
+                  "log_amplitude_tail_slope": -21.002174205076965,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "background_power": 1.5002551945192834e-05,
+                  "excess_power": 0.001391284017770799,
+                  "peak_time": 0.32,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 0.08,
+                  "log_amplitude_tail_slope": 0.47212852125882915,
+                  "decay_fitted": false
+                }
+              ],
+              "limits": [
+                "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+                "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+                "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position."
+              ]
+            },
+            "fit": {
+              "level_fit_target_excess_power": 0.027517469175735488,
+              "unscaled_generated_power": 0.034931895591602966,
+              "policy": "12 strongest excess PSD peaks; 35% of each 3-bin peak allocated to modes, remaining band power to four SOS noise bands; one global RMS fit.",
+              "limitations": "Modal phase is one selected-channel window projection, not physical dry-source phase or full time-varying reconstruction. Event-wide ±0.2% offset is engineering; no fitted room IR.",
+              "source_response_fit": {
+                "method": "source-response-v1",
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 1.000078717953238e-05,
+                    "generated_power": 1.0000787179518091e-05,
+                    "error_db": -6.205447247274836e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.0010113568313052097,
+                    "generated_power": 0.001011356831304185,
+                    "error_db": -4.400708393618155e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.011468195275898223,
+                    "generated_power": 0.011468195275878338,
+                    "error_db": -7.530433186321147e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.013253705208547734,
+                    "generated_power": 0.013253705208672624,
+                    "error_db": 4.092316469792904e-11,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.001391284017770799,
+                    "generated_power": 0.0013912840177731877,
+                    "error_db": 7.456179971383615e-12,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 6.257798147748118e-07,
+                    "generated_power": 6.257798147746424e-07,
+                    "error_db": -1.1755151817286161e-12,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "groups": 16,
+                "evaluations": 49,
+                "optimizer_terminated": true,
+                "amplitude_contract_fits": true,
+                "seed": 27431,
+                "target_positive_psd_excess_power": 0.02713516790051627,
+                "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                "limitations": "Only procedural noise receives the optional fourth-order lowpass; modal phases/frequencies and envelopes stay unchanged. Six fixed cutoff choices and <=240 evaluations each. Positive PSD excess is an acoustic target, not source separation, RPM or timbre acceptance.",
+                "noise_lowpass_hz": 10000.0,
+                "attempts": [
+                  {
+                    "noise_lowpass_hz": 0.0,
+                    "score": 11.557122815489716,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 9.988656314041745e-06,
+                        "error_db": -0.005271150836928513,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.0010113569593104992,
+                        "error_db": 5.496772817897732e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.011468195400647963,
+                        "error_db": 4.724206577921277e-08,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.013253981600422505,
+                        "error_db": 9.056653409636798e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.0001263145658964607,
+                        "error_db": -10.41962362367843,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 7.2329935633738165e-06,
+                        "error_db": 10.628965282358322,
+                        "significant_target": false,
+                        "passed": false
+                      }
+                    ],
+                    "evaluations": 14
+                  },
+                  {
+                    "noise_lowpass_hz": 4000.0,
+                    "score": 6.9942630025189505,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 1.1103723682248118e-05,
+                        "error_db": 0.4543446033772331,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.0010113580084778263,
+                        "error_db": 5.054984139102721e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.011468224262259274,
+                        "error_db": 1.0976967555321307e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.014761482074005244,
+                        "error_db": 0.46792656764589247,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.004115335323907342,
+                        "error_db": 4.709894317319855,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 3.165810973681694e-08,
+                        "error_db": -12.959365702230325,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 204
+                  },
+                  {
+                    "noise_lowpass_hz": 6000.0,
+                    "score": 3.268014215084735,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 1.163970077075719e-05,
+                        "error_db": 0.6590763034373686,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.0010106429750004575,
+                        "error_db": -0.0030665073848119835,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.011657564192507328,
+                        "error_db": 0.07112736248264594,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.013253724425240141,
+                        "error_db": 6.29687871509281e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.003930749050443705,
+                        "error_db": 4.510595219349183,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 1.227184102779639e-07,
+                        "error_db": -7.075118296912612,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 95
+                  },
+                  {
+                    "noise_lowpass_hz": 8000.0,
+                    "score": 0.4114933047268309,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 1.0017007392161055e-05,
+                        "error_db": 0.007038088393208264,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.0010113568843638022,
+                        "error_db": 2.2784295892424444e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.01146820733568056,
+                        "error_db": 4.566973305174122e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.013253708023182032,
+                        "error_db": 9.222930460281323e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.002153538927878435,
+                        "error_db": 1.897369303329398,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 3.810563776489836e-07,
+                        "error_db": -2.1543231567784344,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 37
+                  },
+                  {
+                    "noise_lowpass_hz": 10000.0,
+                    "score": 9.786726877079837e-23,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 1.0000787179518091e-05,
+                        "error_db": -6.205447247274836e-12,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.001011356831304185,
+                        "error_db": -4.400708393618155e-12,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.011468195275878338,
+                        "error_db": -7.530433186321147e-12,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.013253705208672624,
+                        "error_db": 4.092316469792904e-11,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.0013912840177731877,
+                        "error_db": 7.456179971383615e-12,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 6.257798147746424e-07,
+                        "error_db": -1.1755151817286161e-12,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 49
+                  },
+                  {
+                    "noise_lowpass_hz": 14000.0,
+                    "score": 4.623888520561671,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 1.000078717953238e-05,
+                        "generated_power": 9.994520129974308e-06,
+                        "error_db": -0.0027223838952610173,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.0010113568313052097,
+                        "generated_power": 0.0010113568900779653,
+                        "error_db": 2.523805833604887e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.011468195275898223,
+                        "generated_power": 0.01146824580113462,
+                        "error_db": 1.9133597309736114e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.013253705208547734,
+                        "generated_power": 0.013253717907907987,
+                        "error_db": 4.161296296271908e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.001391284017770799,
+                        "generated_power": 0.0003062975035991151,
+                        "error_db": -6.572723390334067,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 6.257798147748118e-07,
+                        "generated_power": 2.980991226391059e-06,
+                        "error_db": 6.779391474417823,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 16
+                  }
+                ]
+              }
+            },
+            "physical_identity_confirmed": false,
+            "status": "material-informed candidate; listening not yet accepted",
+            "context": "Approved A original 35.0–40.5 s, unnormalized. Mixed cabin observation; starter/combustion/handling not physically separated. Engineering event slot; not measured RPM or accepted timbre.",
+            "source_job": {
+              "schema": "vsl.event-authoring-job/3",
+              "kind": "crank",
+              "name": "A 启动早期纹理 · 频谱校准候选",
+              "source": "E:\\VehicleSoundLab\\designs\\events\\773ad53ffd964fa18a7abfaf4aa2821b\\master.wav",
+              "seconds": [
+                1.65,
+                2.12
+              ],
+              "background_seconds": [
+                0,
+                1.2
+              ],
+              "gated": true,
+              "physical_identity_confirmed": false,
+              "context": "Approved A original 35.0–40.5 s, unnormalized. Mixed cabin observation; starter/combustion/handling not physically separated. Engineering event slot; not measured RPM or accepted timbre.",
+              "response_fit": "source-response-v1"
+            },
+            "generated_peak": 0.5376446198341195,
+            "generated_rms": 0.1633675168003681,
+            "runtime": "damped sine modes and procedural-noise SOS bands; optional noise-only fourth-order lowpass; no recording playback or room effect",
+            "viewpoint": "cabin"
+          },
+          "controls": {
+            "seconds": 1.2,
+            "seed": 27431,
+            "strength": 1.0,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "hold_seconds": 0.4700000000000002
+          }
+        },
+        {
+          "kind": "catch",
+          "id": "462af3cefda441aba34886ecfc96dbae",
+          "name": "A 接火补充 · 频谱校准候选",
+          "project_folder": "E:\\VehicleSoundLab\\designs\\events\\462af3cefda441aba34886ecfc96dbae",
+          "version": "0f7b7a22478d48e0b7ce410bc5a0e40b",
+          "parameters": "E:\\VehicleSoundLab\\designs\\events\\462af3cefda441aba34886ecfc96dbae\\0f7b7a22478d48e0b7ce410bc5a0e40b\\parameters.json",
+          "profile_sha256": "a0e6d101ff8b0c1f36d3f5ae6b76d999a3e77271d13efcda1b7868d67d225a87",
+          "direct_job_parameters_exact": true,
+          "source_free_import_pcm_exact": true,
+          "source_fit": {
+            "method": "source-response-v1",
+            "qualified": true,
+            "bands": [
+              {
+                "hz": [
+                  0,
+                  60
+                ],
+                "target_power": 0.00028262713343940246,
+                "generated_power": 0.0002839627155004809,
+                "error_db": 0.020474669451737017,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  60,
+                  300
+                ],
+                "target_power": 0.07467503377795298,
+                "generated_power": 0.07467517985089127,
+                "error_db": 8.49529029985228e-06,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  300,
+                  1200
+                ],
+                "target_power": 0.04695977222670378,
+                "generated_power": 0.04695974252177348,
+                "error_db": -2.747179294572894e-06,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "target_power": 0.003002569628577533,
+                "generated_power": 0.003002570169822472,
+                "error_db": 7.828616757207554e-07,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "target_power": 0.00047453190320104915,
+                "generated_power": 0.0005564575239530433,
+                "error_db": 0.6916660320655474,
+                "significant_target": true,
+                "passed": true
+              },
+              {
+                "hz": [
+                  14000,
+                  24001
+                ],
+                "target_power": 7.548044979324935e-07,
+                "generated_power": 5.964362293186208e-07,
+                "error_db": -1.022704635649938,
+                "significant_target": false,
+                "passed": true
+              }
+            ],
+            "groups": 16,
+            "evaluations": 50,
+            "optimizer_terminated": true,
+            "amplitude_contract_fits": true,
+            "seed": 27431,
+            "target_positive_psd_excess_power": 0.12539528947437267,
+            "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+            "limitations": "Only procedural noise receives the optional fourth-order lowpass; modal phases/frequencies and envelopes stay unchanged. Six fixed cutoff choices and <=240 evaluations each. Positive PSD excess is an acoustic target, not source separation, RPM or timbre acceptance.",
+            "noise_lowpass_hz": 10000.0,
+            "attempts": [
+              {
+                "noise_lowpass_hz": 0.0,
+                "score": 6.203844657846542,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.00021097095575646458,
+                    "error_db": -1.2699118332652688,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07466572354175748,
+                    "error_db": -0.0005414977508796397,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.046963314423706076,
+                    "error_db": 0.00032757795074784987,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.0029999424550418425,
+                    "error_db": -0.003801631805196916,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 9.804382587198106e-05,
+                    "error_db": -6.848451657726566,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 5.7982542963195765e-06,
+                    "error_db": 8.85462778968978,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 77
+              },
+              {
+                "noise_lowpass_hz": 4000.0,
+                "score": 3.653333631991087,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.0002830418003720513,
+                    "error_db": 0.0063672435295913975,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467507807467143,
+                    "error_db": 2.5762043492393855e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.04695976251762812,
+                    "error_db": -8.979171358412241e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.003037067240669238,
+                    "error_db": 0.04961319970257858,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.0005032873188005665,
+                    "error_db": 0.2555057198173976,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 4.889044194420867e-09,
+                    "error_db": -21.88610516413437,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 46
+              },
+              {
+                "noise_lowpass_hz": 6000.0,
+                "score": 3.2478259601777304,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.00028482858843382374,
+                    "error_db": 0.03369723895523639,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467526344773616,
+                    "error_db": 1.3357096885081632e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.04696002790150665,
+                    "error_db": 2.364531353283214e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.003002503233052474,
+                    "error_db": -9.603617082339621e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.0006186922724012359,
+                    "error_db": 1.1520927587458214,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 2.2664397355638606e-08,
+                    "error_db": -15.22490303796026,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 29
+              },
+              {
+                "noise_lowpass_hz": 8000.0,
+                "score": 1.609346184511459,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.0002871889547498456,
+                    "error_db": 0.06953879300238937,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467552457430528,
+                    "error_db": 2.854360236674906e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.046959669921353205,
+                    "error_db": -9.461438059589057e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.0030025711666406686,
+                    "error_db": 2.224668347550654e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.000877161840579806,
+                    "error_db": 2.668143144321198,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 1.647219642072212e-07,
+                    "error_db": -6.610829671585343,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 44
+              },
+              {
+                "noise_lowpass_hz": 10000.0,
+                "score": 0.06471976105983789,
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.0002839627155004809,
+                    "error_db": 0.020474669451737017,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467517985089127,
+                    "error_db": 8.49529029985228e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.04695974252177348,
+                    "error_db": -2.747179294572894e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.003002570169822472,
+                    "error_db": 7.828616757207554e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.0005564575239530433,
+                    "error_db": 0.6916660320655474,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 5.964362293186208e-07,
+                    "error_db": -1.022704635649938,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 50
+              },
+              {
+                "noise_lowpass_hz": 14000.0,
+                "score": 1.5404939037021073,
+                "qualified": false,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.00028310206107039595,
+                    "error_db": 0.007291774930457306,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467508672712914,
+                    "error_db": 3.079412985803778e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.04696020330807339,
+                    "error_db": 3.9867186721570114e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.0030025848773672778,
+                    "error_db": 2.2055936230208703e-05,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.00020228144047319845,
+                    "error_db": -3.7030937810773636,
+                    "significant_target": true,
+                    "passed": false
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 2.044421005489608e-06,
+                    "error_db": 4.327358549914194,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "evaluations": 70
+              }
+            ]
+          },
+          "document": {
+            "schema": "vsl.event-profile/2",
+            "kind": "catch",
+            "name": "A 接火补充 · 频谱校准候选",
+            "parameters": {
+              "gated": 0,
+              "duration_seconds": 0.8,
+              "attack_seconds": 0.01,
+              "release_seconds": 0.025,
+              "sweep_seconds": 0.0,
+              "level": 1.0,
+              "modes": [
+                {
+                  "hz": 204.1580607300333,
+                  "end_hz": 204.1580607300333,
+                  "amplitude": 0.46628965063724337,
+                  "phase": -0.33588347558048737,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 321.15911719356745,
+                  "end_hz": 321.15911719356745,
+                  "amplitude": 0.3889465949685971,
+                  "phase": 3.2484812033419104,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 413.9345533620335,
+                  "end_hz": 413.9345533620335,
+                  "amplitude": 1.1048509387576189e-07,
+                  "phase": -0.27230231208905353,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 754.2997157883186,
+                  "end_hz": 754.2997157883186,
+                  "amplitude": 5.139230851652063e-05,
+                  "phase": -0.727294374614504,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 595.0307945993655,
+                  "end_hz": 595.0307945993655,
+                  "amplitude": 0.035573901106257945,
+                  "phase": 2.0481393080656423,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 1077.0163767145598,
+                  "end_hz": 1077.0163767145598,
+                  "amplitude": 6.104734569192987e-08,
+                  "phase": -0.9844719841583136,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 1329.554289367668,
+                  "end_hz": 1329.554289367668,
+                  "amplitude": 0.07694692039422525,
+                  "phase": 0.6656353136154572,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 1727.8774785559804,
+                  "end_hz": 1727.8774785559804,
+                  "amplitude": 0.02400385831771894,
+                  "phase": 2.6406162145412964,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 1425.0764832105936,
+                  "end_hz": 1425.0764832105936,
+                  "amplitude": 4.786255536743824e-09,
+                  "phase": 2.6447428182791413,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 2504.6404497549393,
+                  "end_hz": 2504.6404497549393,
+                  "amplitude": 3.88956545971052e-09,
+                  "phase": -0.11292123150040512,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 2092.6261786689115,
+                  "end_hz": 2092.6261786689115,
+                  "amplitude": 0.008706517554487085,
+                  "phase": 2.574519209609162,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 3603.5292498043555,
+                  "end_hz": 3603.5292498043555,
+                  "amplitude": 0.0032688637596982196,
+                  "phase": 1.141151805072512,
+                  "decay_seconds": 2.0
+                }
+              ],
+              "bands": [
+                {
+                  "hz": 134.16407864998737,
+                  "q": 0.5590169943749473,
+                  "amplitude": 1.406755555399872,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 600.0,
+                  "q": 0.6666666666666666,
+                  "amplitude": 0.12017219320637722,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 1.3265710058644986
+                },
+                {
+                  "hz": 2323.7900077244503,
+                  "q": 0.7041787902195304,
+                  "amplitude": 1.0473100544971183e-14,
+                  "attack_seconds": 0.01,
+                  "decay_seconds": 2.0
+                },
+                {
+                  "hz": 7937.253933193771,
+                  "q": 0.835500414020397,
+                  "amplitude": 0.10477407449080668,
+                  "attack_seconds": 0.01,
+                  "decay_seconds": 2.0
+                }
+              ],
+              "noise_lowpass_hz": 10000.0
+            },
+            "provenance": {
+              "path": "E:\\VehicleSoundLab\\designs\\events\\462af3cefda441aba34886ecfc96dbae\\master.wav",
+              "sha256": "40536c9e8644243d3fe0ee151729133a3623778e1ba16d111adf6d92e0e70145",
+              "first_frame": 106560,
+              "last_frame": 144960,
+              "source_seconds": [
+                2.22,
+                3.02
+              ],
+              "channels": 2,
+              "sample_rate": 48000,
+              "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+            },
+            "background": {
+              "path": "E:\\VehicleSoundLab\\designs\\events\\462af3cefda441aba34886ecfc96dbae\\master.wav",
+              "sha256": "40536c9e8644243d3fe0ee151729133a3623778e1ba16d111adf6d92e0e70145",
+              "first_frame": 0,
+              "last_frame": 57600,
+              "source_seconds": [
+                0.0,
+                1.2
+              ],
+              "channels": 2,
+              "sample_rate": 48000,
+              "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+            },
+            "observation": {
+              "rms_channels": [
+                0.2642920311668795,
+                0.4223359949134494
+              ],
+              "background_rms_channels": [
+                0.020947672203661817,
+                0.021321534459998535
+              ],
+              "excess_mean_square": 0.1236622787676835,
+              "event_to_background_db": 24.437810485362043,
+              "modal_peaks_hz": [
+                210.9375,
+                328.125,
+                421.875,
+                750.0,
+                585.9375,
+                1078.125,
+                1335.9375,
+                1734.375,
+                1429.6875,
+                2507.8125,
+                2085.9375,
+                3609.375
+              ],
+              "modal_observations": [
+                {
+                  "hz": 204.1580607300333,
+                  "phase": -0.33588347558048737,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 321.15911719356745,
+                  "phase": 3.2484812033419104,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 413.9345533620335,
+                  "phase": -0.27230231208905353,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 754.2997157883186,
+                  "phase": -0.727294374614504,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 595.0307945993655,
+                  "phase": 2.0481393080656423,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1077.0163767145598,
+                  "phase": -0.9844719841583136,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1329.554289367668,
+                  "phase": 0.6656353136154572,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1727.8774785559804,
+                  "phase": 2.6406162145412964,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 1425.0764832105936,
+                  "phase": 2.6447428182791413,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 2504.6404497549393,
+                  "phase": -0.11292123150040512,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 2092.6261786689115,
+                  "phase": 2.574519209609162,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                },
+                {
+                  "hz": 3603.5292498043555,
+                  "phase": 1.141151805072512,
+                  "phase_channel": 1,
+                  "frequency_bin_hz": 23.4375
+                }
+              ],
+              "bands": [
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "background_power": 0.00024840183543465606,
+                  "excess_power": 0.07467503377795298,
+                  "peak_time": 0.615,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 2.0,
+                  "log_amplitude_tail_slope": -0.181095365173358,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "background_power": 0.0001275621156134305,
+                  "excess_power": 0.04695977222670378,
+                  "peak_time": 0.35,
+                  "attack_seconds": 0.08,
+                  "decay_seconds": 1.3265710058644986,
+                  "log_amplitude_tail_slope": -0.7538231994964498,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "background_power": 4.866579983657765e-05,
+                  "excess_power": 0.003002569628577533,
+                  "peak_time": 0.02,
+                  "attack_seconds": 0.01,
+                  "decay_seconds": 2.0,
+                  "log_amplitude_tail_slope": -0.2565132194794788,
+                  "decay_fitted": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "background_power": 1.5002551945192834e-05,
+                  "excess_power": 0.00047453190320104915,
+                  "peak_time": 0.02,
+                  "attack_seconds": 0.01,
+                  "decay_seconds": 2.0,
+                  "log_amplitude_tail_slope": -0.4887580801063023,
+                  "decay_fitted": true
+                }
+              ],
+              "limits": [
+                "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+                "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+                "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position."
+              ]
+            },
+            "fit": {
+              "level_fit_target_excess_power": 0.1236622787676835,
+              "unscaled_generated_power": 0.10021893257277767,
+              "policy": "12 strongest excess PSD peaks; 35% of each 3-bin peak allocated to modes, remaining band power to four SOS noise bands; one global RMS fit.",
+              "limitations": "Modal phase is one selected-channel window projection, not physical dry-source phase or full time-varying reconstruction. Event-wide ±0.2% offset is engineering; no fitted room IR.",
+              "source_response_fit": {
+                "method": "source-response-v1",
+                "qualified": true,
+                "bands": [
+                  {
+                    "hz": [
+                      0,
+                      60
+                    ],
+                    "target_power": 0.00028262713343940246,
+                    "generated_power": 0.0002839627155004809,
+                    "error_db": 0.020474669451737017,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      60,
+                      300
+                    ],
+                    "target_power": 0.07467503377795298,
+                    "generated_power": 0.07467517985089127,
+                    "error_db": 8.49529029985228e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      300,
+                      1200
+                    ],
+                    "target_power": 0.04695977222670378,
+                    "generated_power": 0.04695974252177348,
+                    "error_db": -2.747179294572894e-06,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      1200,
+                      4500
+                    ],
+                    "target_power": 0.003002569628577533,
+                    "generated_power": 0.003002570169822472,
+                    "error_db": 7.828616757207554e-07,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      4500,
+                      14000
+                    ],
+                    "target_power": 0.00047453190320104915,
+                    "generated_power": 0.0005564575239530433,
+                    "error_db": 0.6916660320655474,
+                    "significant_target": true,
+                    "passed": true
+                  },
+                  {
+                    "hz": [
+                      14000,
+                      24001
+                    ],
+                    "target_power": 7.548044979324935e-07,
+                    "generated_power": 5.964362293186208e-07,
+                    "error_db": -1.022704635649938,
+                    "significant_target": false,
+                    "passed": true
+                  }
+                ],
+                "groups": 16,
+                "evaluations": 50,
+                "optimizer_terminated": true,
+                "amplitude_contract_fits": true,
+                "seed": 27431,
+                "target_positive_psd_excess_power": 0.12539528947437267,
+                "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                "limitations": "Only procedural noise receives the optional fourth-order lowpass; modal phases/frequencies and envelopes stay unchanged. Six fixed cutoff choices and <=240 evaluations each. Positive PSD excess is an acoustic target, not source separation, RPM or timbre acceptance.",
+                "noise_lowpass_hz": 10000.0,
+                "attempts": [
+                  {
+                    "noise_lowpass_hz": 0.0,
+                    "score": 6.203844657846542,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.00021097095575646458,
+                        "error_db": -1.2699118332652688,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07466572354175748,
+                        "error_db": -0.0005414977508796397,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.046963314423706076,
+                        "error_db": 0.00032757795074784987,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.0029999424550418425,
+                        "error_db": -0.003801631805196916,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 9.804382587198106e-05,
+                        "error_db": -6.848451657726566,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 5.7982542963195765e-06,
+                        "error_db": 8.85462778968978,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 77
+                  },
+                  {
+                    "noise_lowpass_hz": 4000.0,
+                    "score": 3.653333631991087,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.0002830418003720513,
+                        "error_db": 0.0063672435295913975,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467507807467143,
+                        "error_db": 2.5762043492393855e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.04695976251762812,
+                        "error_db": -8.979171358412241e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.003037067240669238,
+                        "error_db": 0.04961319970257858,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.0005032873188005665,
+                        "error_db": 0.2555057198173976,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 4.889044194420867e-09,
+                        "error_db": -21.88610516413437,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 46
+                  },
+                  {
+                    "noise_lowpass_hz": 6000.0,
+                    "score": 3.2478259601777304,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.00028482858843382374,
+                        "error_db": 0.03369723895523639,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467526344773616,
+                        "error_db": 1.3357096885081632e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.04696002790150665,
+                        "error_db": 2.364531353283214e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.003002503233052474,
+                        "error_db": -9.603617082339621e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.0006186922724012359,
+                        "error_db": 1.1520927587458214,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 2.2664397355638606e-08,
+                        "error_db": -15.22490303796026,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 29
+                  },
+                  {
+                    "noise_lowpass_hz": 8000.0,
+                    "score": 1.609346184511459,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.0002871889547498456,
+                        "error_db": 0.06953879300238937,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467552457430528,
+                        "error_db": 2.854360236674906e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.046959669921353205,
+                        "error_db": -9.461438059589057e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.0030025711666406686,
+                        "error_db": 2.224668347550654e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.000877161840579806,
+                        "error_db": 2.668143144321198,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 1.647219642072212e-07,
+                        "error_db": -6.610829671585343,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 44
+                  },
+                  {
+                    "noise_lowpass_hz": 10000.0,
+                    "score": 0.06471976105983789,
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.0002839627155004809,
+                        "error_db": 0.020474669451737017,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467517985089127,
+                        "error_db": 8.49529029985228e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.04695974252177348,
+                        "error_db": -2.747179294572894e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.003002570169822472,
+                        "error_db": 7.828616757207554e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.0005564575239530433,
+                        "error_db": 0.6916660320655474,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 5.964362293186208e-07,
+                        "error_db": -1.022704635649938,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 50
+                  },
+                  {
+                    "noise_lowpass_hz": 14000.0,
+                    "score": 1.5404939037021073,
+                    "qualified": false,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.00028310206107039595,
+                        "error_db": 0.007291774930457306,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467508672712914,
+                        "error_db": 3.079412985803778e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.04696020330807339,
+                        "error_db": 3.9867186721570114e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.0030025848773672778,
+                        "error_db": 2.2055936230208703e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.00020228144047319845,
+                        "error_db": -3.7030937810773636,
+                        "significant_target": true,
+                        "passed": false
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 2.044421005489608e-06,
+                        "error_db": 4.327358549914194,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "evaluations": 70
+                  }
+                ]
+              }
+            },
+            "physical_identity_confirmed": false,
+            "status": "material-informed candidate; listening not yet accepted",
+            "context": "Approved A original 35.0–40.5 s, unnormalized. Mixed cabin observation; starter/combustion/handling not physically separated. Engineering event slot; not measured RPM or accepted timbre.",
+            "source_job": {
+              "schema": "vsl.event-authoring-job/3",
+              "kind": "catch",
+              "name": "A 接火补充 · 频谱校准候选",
+              "source": "E:\\VehicleSoundLab\\designs\\events\\462af3cefda441aba34886ecfc96dbae\\master.wav",
+              "seconds": [
+                2.22,
+                3.02
+              ],
+              "background_seconds": [
+                0,
+                1.2
+              ],
+              "gated": false,
+              "physical_identity_confirmed": false,
+              "context": "Approved A original 35.0–40.5 s, unnormalized. Mixed cabin observation; starter/combustion/handling not physically separated. Engineering event slot; not measured RPM or accepted timbre.",
+              "response_fit": "source-response-v1"
+            },
+            "generated_peak": 0.9633420437512537,
+            "generated_rms": 0.35042011033455495,
+            "runtime": "damped sine modes and procedural-noise SOS bands; optional noise-only fourth-order lowpass; no recording playback or room effect",
+            "viewpoint": "cabin"
+          },
+          "controls": {
+            "seconds": 1.2,
+            "seed": 27431,
+            "strength": 1.0,
+            "pitch": 1.0,
+            "decay": 1.0,
+            "texture": 1.0,
+            "hold_seconds": 0.7999999999999998
+          }
+        }
+      ],
+      "source": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+      "source_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+      "context": "E:\\VehicleSoundLab\\renders\\startup_timbre_v1\\delivery1\\projects\\A_35_to_40_5_original.wav",
+      "context_sha256": "c72ed89087dcf71f48ef63b25408f0f775c4a167d846bacb9108345486b9bb16",
+      "context_original_seconds": [
+        35,
+        40.5
+      ],
+      "monitor_gain": 0.25,
+      "independent_normalization": false,
+      "timbre_accepted": false,
+      "goal_complete": false
+    },
+    "full_cycle_reports": {
+      "original": {
+        "pcm_sha256": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+        "frames": 1536000,
+        "native_channels": 23,
+        "native_stems": [
+          {
+            "id": 0,
+            "name": "dna",
+            "channels": 2
+          },
+          {
+            "id": 1,
+            "name": "low",
+            "channels": 2
+          },
+          {
+            "id": 2,
+            "name": "detail",
+            "channels": 2
+          },
+          {
+            "id": 3,
+            "name": "intake",
+            "channels": 1
+          },
+          {
+            "id": 4,
+            "name": "mechanical",
+            "channels": 1
+          },
+          {
+            "id": 5,
+            "name": "exhaust_air",
+            "channels": 2
+          },
+          {
+            "id": 6,
+            "name": "road",
+            "channels": 1
+          },
+          {
+            "id": 7,
+            "name": "wind",
+            "channels": 1
+          },
+          {
+            "id": 8,
+            "name": "startup",
+            "channels": 2
+          },
+          {
+            "id": 9,
+            "name": "catch",
+            "channels": 2
+          },
+          {
+            "id": 10,
+            "name": "added",
+            "channels": 2
+          },
+          {
+            "id": 11,
+            "name": "legacy_event",
+            "channels": 1
+          },
+          {
+            "id": 12,
+            "name": "event_0",
+            "channels": 1
+          },
+          {
+            "id": 13,
+            "name": "event_1",
+            "channels": 1
+          },
+          {
+            "id": 14,
+            "name": "event_2",
+            "channels": 1
+          },
+          {
+            "id": 15,
+            "name": "event_3",
+            "channels": 1
+          }
+        ],
+        "native_rms_channels": [
+          0.042939795803356315,
+          0.04293979600016507,
+          0.0014895819008307375,
+          0.0014895818695524138,
+          0.0008489831915335783,
+          0.0008489831926716781,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.010234979541409487,
+          0.010234979522763029,
+          0.0,
+          0.0019072921992089231,
+          0.006857143893965117,
+          0.0,
+          0.0
+        ],
+        "native_peak_channels": [
+          0.24833686649799347,
+          0.24833901226520538,
+          0.02398146316409111,
+          0.02398146316409111,
+          0.031667426228523254,
+          0.031667426228523254,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08668504655361176,
+          0.08668504655361176,
+          0.0,
+          0.0696214959025383,
+          0.19343602657318115,
+          0.0,
+          0.0
+        ],
+        "monitor_peak": 0.24833901226520538,
+        "native_reconstruction_error": 1.4784745872020721e-08,
+        "final_state": {
+          "frame": 1536000,
+          "rpm": 0.0,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "load": 0.0,
+          "root_hz": 7.465737903641796e-49,
+          "gain": 0.25,
+          "idle_weight": 0.0,
+          "gear": 0,
+          "lifecycle": 0,
+          "operating": 0,
+          "coverage": -1,
+          "shifts": 9,
+          "overruns": 1,
+          "legacy_hits": 5,
+          "input_source": 0,
+          "input_stale": 0,
+          "tire_slip": 0.0,
+          "signal_sequence": 0,
+          "event_active": 0,
+          "event_started": 3,
+          "event_rejected": 0,
+          "event_replaced": 0,
+          "event_queue": 0,
+          "event_overflow": 0,
+          "event_log_lost": 0,
+          "event_peak": 2
+        },
+        "wall_seconds": 20.20020809979178,
+        "pc_timing_is_not_ADI_MCPS": true,
+        "checks": [
+          {
+            "name": "full_lifecycle_states",
+            "passed": true,
+            "evidence": [
+              0,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "name": "driving_operating_states",
+            "passed": true,
+            "evidence": [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "name": "native_reconstruction",
+            "passed": true,
+            "evidence": 1.4784745872020721e-08
+          },
+          {
+            "name": "finite_and_bounded_rpm",
+            "passed": true,
+            "evidence": [
+              0.0,
+              8260.476068989268
+            ]
+          },
+          {
+            "name": "monitor_headroom",
+            "passed": true,
+            "evidence": 0.24833901226520538
+          },
+          {
+            "name": "stopped_idle",
+            "passed": true,
+            "evidence": {
+              "max_speed_mps": 0.0,
+              "min_idle_weight": 1.0
+            }
+          },
+          {
+            "name": "sport_lift_holds_gear",
+            "passed": true,
+            "evidence": {
+              "gears": [
+                5
+              ],
+              "shifts": [
+                4
+              ]
+            }
+          },
+          {
+            "name": "off_tail_is_silent",
+            "passed": true,
+            "evidence": 4.389253817990789e-14
+          },
+          {
+            "name": "automatic_shifts_and_overrun",
+            "passed": true,
+            "evidence": {
+              "shifts": 9,
+              "overruns": 1
+            }
+          },
+          {
+            "name": "bounded_event_pool_and_log",
+            "passed": true,
+            "evidence": {
+              "event_peak": 2,
+              "event_overflow": 0,
+              "event_log_lost": 0,
+              "event_rejected": 0
+            }
+          },
+          {
+            "name": "one_crank_and_one_catch",
+            "passed": true,
+            "evidence": [
+              {
+                "id": 1,
+                "frame": 17184,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 2,
+                "frame": 30240,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 747504,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              }
+            ]
+          },
+          {
+            "name": "event_lifetimes_and_slot_identity",
+            "passed": true,
+            "evidence": [
+              {
+                "id": 1,
+                "frame": 17184,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 2,
+                "frame": 30240,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 1,
+                "frame": 31104,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 2,
+                "reason": 1
+              },
+              {
+                "id": 2,
+                "frame": 68640,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 2,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 747504,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 752304,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 2,
+                "reason": 0
+              }
+            ]
+          },
+          {
+            "name": "variable_block_replay_pcm_exact",
+            "passed": true,
+            "evidence": {
+              "direct": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+              "replay": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+              "pattern": [
+                137,
+                511,
+                240,
+                1024,
+                17,
+                480
+              ]
+            }
+          },
+          {
+            "name": "variable_block_replay_notices_exact",
+            "passed": true,
+            "evidence": {
+              "direct": [
+                {
+                  "id": 1,
+                  "frame": 17184,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 2,
+                  "frame": 30240,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 1,
+                  "frame": 31104,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 1
+                },
+                {
+                  "id": 2,
+                  "frame": 68640,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 2,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 747504,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 752304,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 0
+                }
+              ],
+              "replay": [
+                {
+                  "id": 1,
+                  "frame": 17184,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 2,
+                  "frame": 30240,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 1,
+                  "frame": 31104,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 1
+                },
+                {
+                  "id": 2,
+                  "frame": 68640,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 2,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 747504,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 752304,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 0
+                }
+              ]
+            }
+          },
+          {
+            "name": "variable_block_replay_state_exact",
+            "passed": true,
+            "evidence": {
+              "direct": {
+                "frame": 1536000,
+                "rpm": 0.0,
+                "speed_mps": 0.0,
+                "acceleration_mps2": 0.0,
+                "load": 0.0,
+                "root_hz": 7.465737903641796e-49,
+                "gain": 0.25,
+                "idle_weight": 0.0,
+                "gear": 0,
+                "lifecycle": 0,
+                "operating": 0,
+                "coverage": -1,
+                "shifts": 9,
+                "overruns": 1,
+                "legacy_hits": 5,
+                "input_source": 0,
+                "input_stale": 0,
+                "tire_slip": 0.0,
+                "signal_sequence": 0,
+                "event_active": 0,
+                "event_started": 3,
+                "event_rejected": 0,
+                "event_replaced": 0,
+                "event_queue": 0,
+                "event_overflow": 0,
+                "event_log_lost": 0,
+                "event_peak": 2
+              },
+              "replay": {
+                "frame": 1536000,
+                "rpm": 0.0,
+                "speed_mps": 0.0,
+                "acceleration_mps2": 0.0,
+                "load": 0.0,
+                "root_hz": 7.465737903641796e-49,
+                "gain": 0.25,
+                "idle_weight": 0.0,
+                "gear": 0,
+                "lifecycle": 0,
+                "operating": 0,
+                "coverage": -1,
+                "shifts": 9,
+                "overruns": 1,
+                "legacy_hits": 5,
+                "input_source": 0,
+                "input_stale": 0,
+                "tire_slip": 0.0,
+                "signal_sequence": 0,
+                "event_active": 0,
+                "event_started": 3,
+                "event_rejected": 0,
+                "event_replaced": 0,
+                "event_queue": 0,
+                "event_overflow": 0,
+                "event_log_lost": 0,
+                "event_peak": 2
+              }
+            }
+          }
+        ],
+        "replay": {
+          "pcm_sha256": "390a8e3fb7aa015ca9d60751e4549d6098d86bd396160056f9427fb5e50c99d4",
+          "source_events": [
+            {
+              "id": 1,
+              "frame": 17184,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 2,
+              "frame": 30240,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 1,
+              "frame": 31104,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 2,
+              "reason": 1
+            },
+            {
+              "id": 2,
+              "frame": 68640,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 2,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 747504,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 752304,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 2,
+              "reason": 0
+            }
+          ],
+          "final_state": {
+            "frame": 1536000,
+            "rpm": 0.0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "load": 0.0,
+            "root_hz": 7.465737903641796e-49,
+            "gain": 0.25,
+            "idle_weight": 0.0,
+            "gear": 0,
+            "lifecycle": 0,
+            "operating": 0,
+            "coverage": -1,
+            "shifts": 9,
+            "overruns": 1,
+            "legacy_hits": 5,
+            "input_source": 0,
+            "input_stale": 0,
+            "tire_slip": 0.0,
+            "signal_sequence": 0,
+            "event_active": 0,
+            "event_started": 3,
+            "event_rejected": 0,
+            "event_replaced": 0,
+            "event_queue": 0,
+            "event_overflow": 0,
+            "event_log_lost": 0,
+            "event_peak": 2
+          },
+          "block_pattern": [
+            137,
+            511,
+            240,
+            1024,
+            17,
+            480
+          ],
+          "blocks": 3826
+        },
+        "bridge_sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+        "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+        "timbre_accepted": false,
+        "goal_complete": false,
+        "event_profile_description": "A crank/catch mixed-cabin candidates; E 1.2–14 kHz acoustic transient retained, not confirmed full-band afterfire."
+      },
+      "candidate": {
+        "pcm_sha256": "8a20147e98ff00a7b6cdf6731e59a0af6a07f4380bd96ade2eb975b720f5d03d",
+        "frames": 1536000,
+        "native_channels": 23,
+        "native_stems": [
+          {
+            "id": 0,
+            "name": "dna",
+            "channels": 2
+          },
+          {
+            "id": 1,
+            "name": "low",
+            "channels": 2
+          },
+          {
+            "id": 2,
+            "name": "detail",
+            "channels": 2
+          },
+          {
+            "id": 3,
+            "name": "intake",
+            "channels": 1
+          },
+          {
+            "id": 4,
+            "name": "mechanical",
+            "channels": 1
+          },
+          {
+            "id": 5,
+            "name": "exhaust_air",
+            "channels": 2
+          },
+          {
+            "id": 6,
+            "name": "road",
+            "channels": 1
+          },
+          {
+            "id": 7,
+            "name": "wind",
+            "channels": 1
+          },
+          {
+            "id": 8,
+            "name": "startup",
+            "channels": 2
+          },
+          {
+            "id": 9,
+            "name": "catch",
+            "channels": 2
+          },
+          {
+            "id": 10,
+            "name": "added",
+            "channels": 2
+          },
+          {
+            "id": 11,
+            "name": "legacy_event",
+            "channels": 1
+          },
+          {
+            "id": 12,
+            "name": "event_0",
+            "channels": 1
+          },
+          {
+            "id": 13,
+            "name": "event_1",
+            "channels": 1
+          },
+          {
+            "id": 14,
+            "name": "event_2",
+            "channels": 1
+          },
+          {
+            "id": 15,
+            "name": "event_3",
+            "channels": 1
+          }
+        ],
+        "native_rms_channels": [
+          0.042939795803356315,
+          0.04293979600016507,
+          0.0014895819008307375,
+          0.0014895818695524138,
+          0.0008489831915335783,
+          0.0008489831926716781,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.010234979541409487,
+          0.010234979522763029,
+          0.0,
+          0.0019294424644554367,
+          0.007008865531242969,
+          0.0,
+          0.0
+        ],
+        "native_peak_channels": [
+          0.24833686649799347,
+          0.24833901226520538,
+          0.02398146316409111,
+          0.02398146316409111,
+          0.031667426228523254,
+          0.031667426228523254,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.08668504655361176,
+          0.08668504655361176,
+          0.0,
+          0.06727618724107742,
+          0.13772445917129517,
+          0.0,
+          0.0
+        ],
+        "monitor_peak": 0.24833901226520538,
+        "native_reconstruction_error": 1.4784745872020721e-08,
+        "final_state": {
+          "frame": 1536000,
+          "rpm": 0.0,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "load": 0.0,
+          "root_hz": 7.465737903641796e-49,
+          "gain": 0.25,
+          "idle_weight": 0.0,
+          "gear": 0,
+          "lifecycle": 0,
+          "operating": 0,
+          "coverage": -1,
+          "shifts": 9,
+          "overruns": 1,
+          "legacy_hits": 5,
+          "input_source": 0,
+          "input_stale": 0,
+          "tire_slip": 0.0,
+          "signal_sequence": 0,
+          "event_active": 0,
+          "event_started": 3,
+          "event_rejected": 0,
+          "event_replaced": 0,
+          "event_queue": 0,
+          "event_overflow": 0,
+          "event_log_lost": 0,
+          "event_peak": 2
+        },
+        "wall_seconds": 20.849126999964938,
+        "pc_timing_is_not_ADI_MCPS": true,
+        "checks": [
+          {
+            "name": "full_lifecycle_states",
+            "passed": true,
+            "evidence": [
+              0,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "name": "driving_operating_states",
+            "passed": true,
+            "evidence": [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "name": "native_reconstruction",
+            "passed": true,
+            "evidence": 1.4784745872020721e-08
+          },
+          {
+            "name": "finite_and_bounded_rpm",
+            "passed": true,
+            "evidence": [
+              0.0,
+              8260.476068989268
+            ]
+          },
+          {
+            "name": "monitor_headroom",
+            "passed": true,
+            "evidence": 0.24833901226520538
+          },
+          {
+            "name": "stopped_idle",
+            "passed": true,
+            "evidence": {
+              "max_speed_mps": 0.0,
+              "min_idle_weight": 1.0
+            }
+          },
+          {
+            "name": "sport_lift_holds_gear",
+            "passed": true,
+            "evidence": {
+              "gears": [
+                5
+              ],
+              "shifts": [
+                4
+              ]
+            }
+          },
+          {
+            "name": "off_tail_is_silent",
+            "passed": true,
+            "evidence": 4.389253817990789e-14
+          },
+          {
+            "name": "automatic_shifts_and_overrun",
+            "passed": true,
+            "evidence": {
+              "shifts": 9,
+              "overruns": 1
+            }
+          },
+          {
+            "name": "bounded_event_pool_and_log",
+            "passed": true,
+            "evidence": {
+              "event_peak": 2,
+              "event_overflow": 0,
+              "event_log_lost": 0,
+              "event_rejected": 0
+            }
+          },
+          {
+            "name": "one_crank_and_one_catch",
+            "passed": true,
+            "evidence": [
+              {
+                "id": 1,
+                "frame": 17184,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 2,
+                "frame": 30240,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 747504,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              }
+            ]
+          },
+          {
+            "name": "event_lifetimes_and_slot_identity",
+            "passed": true,
+            "evidence": [
+              {
+                "id": 1,
+                "frame": 17184,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 2,
+                "frame": 30240,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 1,
+                "frame": 31104,
+                "requested_frame": 17184,
+                "type": 1,
+                "slot": 0,
+                "action": 2,
+                "reason": 1
+              },
+              {
+                "id": 2,
+                "frame": 68640,
+                "requested_frame": 30240,
+                "type": 2,
+                "slot": 1,
+                "action": 2,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 747504,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 1,
+                "reason": 0
+              },
+              {
+                "id": 3,
+                "frame": 752304,
+                "requested_frame": 747504,
+                "type": 3,
+                "slot": 0,
+                "action": 2,
+                "reason": 0
+              }
+            ]
+          },
+          {
+            "name": "variable_block_replay_pcm_exact",
+            "passed": true,
+            "evidence": {
+              "direct": "8a20147e98ff00a7b6cdf6731e59a0af6a07f4380bd96ade2eb975b720f5d03d",
+              "replay": "8a20147e98ff00a7b6cdf6731e59a0af6a07f4380bd96ade2eb975b720f5d03d",
+              "pattern": [
+                137,
+                511,
+                240,
+                1024,
+                17,
+                480
+              ]
+            }
+          },
+          {
+            "name": "variable_block_replay_notices_exact",
+            "passed": true,
+            "evidence": {
+              "direct": [
+                {
+                  "id": 1,
+                  "frame": 17184,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 2,
+                  "frame": 30240,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 1,
+                  "frame": 31104,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 1
+                },
+                {
+                  "id": 2,
+                  "frame": 68640,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 2,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 747504,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 752304,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 0
+                }
+              ],
+              "replay": [
+                {
+                  "id": 1,
+                  "frame": 17184,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 2,
+                  "frame": 30240,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 1,
+                  "frame": 31104,
+                  "requested_frame": 17184,
+                  "type": 1,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 1
+                },
+                {
+                  "id": 2,
+                  "frame": 68640,
+                  "requested_frame": 30240,
+                  "type": 2,
+                  "slot": 1,
+                  "action": 2,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 747504,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 1,
+                  "reason": 0
+                },
+                {
+                  "id": 3,
+                  "frame": 752304,
+                  "requested_frame": 747504,
+                  "type": 3,
+                  "slot": 0,
+                  "action": 2,
+                  "reason": 0
+                }
+              ]
+            }
+          },
+          {
+            "name": "variable_block_replay_state_exact",
+            "passed": true,
+            "evidence": {
+              "direct": {
+                "frame": 1536000,
+                "rpm": 0.0,
+                "speed_mps": 0.0,
+                "acceleration_mps2": 0.0,
+                "load": 0.0,
+                "root_hz": 7.465737903641796e-49,
+                "gain": 0.25,
+                "idle_weight": 0.0,
+                "gear": 0,
+                "lifecycle": 0,
+                "operating": 0,
+                "coverage": -1,
+                "shifts": 9,
+                "overruns": 1,
+                "legacy_hits": 5,
+                "input_source": 0,
+                "input_stale": 0,
+                "tire_slip": 0.0,
+                "signal_sequence": 0,
+                "event_active": 0,
+                "event_started": 3,
+                "event_rejected": 0,
+                "event_replaced": 0,
+                "event_queue": 0,
+                "event_overflow": 0,
+                "event_log_lost": 0,
+                "event_peak": 2
+              },
+              "replay": {
+                "frame": 1536000,
+                "rpm": 0.0,
+                "speed_mps": 0.0,
+                "acceleration_mps2": 0.0,
+                "load": 0.0,
+                "root_hz": 7.465737903641796e-49,
+                "gain": 0.25,
+                "idle_weight": 0.0,
+                "gear": 0,
+                "lifecycle": 0,
+                "operating": 0,
+                "coverage": -1,
+                "shifts": 9,
+                "overruns": 1,
+                "legacy_hits": 5,
+                "input_source": 0,
+                "input_stale": 0,
+                "tire_slip": 0.0,
+                "signal_sequence": 0,
+                "event_active": 0,
+                "event_started": 3,
+                "event_rejected": 0,
+                "event_replaced": 0,
+                "event_queue": 0,
+                "event_overflow": 0,
+                "event_log_lost": 0,
+                "event_peak": 2
+              }
+            }
+          }
+        ],
+        "replay": {
+          "pcm_sha256": "8a20147e98ff00a7b6cdf6731e59a0af6a07f4380bd96ade2eb975b720f5d03d",
+          "source_events": [
+            {
+              "id": 1,
+              "frame": 17184,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 2,
+              "frame": 30240,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 1,
+              "frame": 31104,
+              "requested_frame": 17184,
+              "type": 1,
+              "slot": 0,
+              "action": 2,
+              "reason": 1
+            },
+            {
+              "id": 2,
+              "frame": 68640,
+              "requested_frame": 30240,
+              "type": 2,
+              "slot": 1,
+              "action": 2,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 747504,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 1,
+              "reason": 0
+            },
+            {
+              "id": 3,
+              "frame": 752304,
+              "requested_frame": 747504,
+              "type": 3,
+              "slot": 0,
+              "action": 2,
+              "reason": 0
+            }
+          ],
+          "final_state": {
+            "frame": 1536000,
+            "rpm": 0.0,
+            "speed_mps": 0.0,
+            "acceleration_mps2": 0.0,
+            "load": 0.0,
+            "root_hz": 7.465737903641796e-49,
+            "gain": 0.25,
+            "idle_weight": 0.0,
+            "gear": 0,
+            "lifecycle": 0,
+            "operating": 0,
+            "coverage": -1,
+            "shifts": 9,
+            "overruns": 1,
+            "legacy_hits": 5,
+            "input_source": 0,
+            "input_stale": 0,
+            "tire_slip": 0.0,
+            "signal_sequence": 0,
+            "event_active": 0,
+            "event_started": 3,
+            "event_rejected": 0,
+            "event_replaced": 0,
+            "event_queue": 0,
+            "event_overflow": 0,
+            "event_log_lost": 0,
+            "event_peak": 2
+          },
+          "block_pattern": [
+            137,
+            511,
+            240,
+            1024,
+            17,
+            480
+          ],
+          "blocks": 3826
+        },
+        "bridge_sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4",
+        "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+        "timbre_accepted": false,
+        "goal_complete": false,
+        "event_profile_description": "A crank/catch mixed-cabin candidates; E 1.2–14 kHz acoustic transient retained, not confirmed full-band afterfire."
+      }
+    },
+    "continuous_19_channels_exact": true,
+    "event_schedule_and_final_state_exact": true,
+    "after_3_seconds_all_23_channels_exact": true,
+    "startup_candidate_changes_audio": true,
+    "recipe": "E:\\VehicleSoundLab\\renders\\startup_timbre_v1\\delivery1\\startup-candidate.recipe.json",
+    "review": "E:\\VehicleSoundLab\\references\\analysis\\startup_timbre_v1\\review1",
+    "source_binding_sha256": "95b1ac9aa0d77081c11a47cb42666142c1cdb66863c9cb88c3b490e95a76c4fc",
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "workbench": {
+    "schema": "vsl.event-response-workbench/1",
+    "result": "passed",
+    "ui": {
+      "result": "passed",
+      "project_id": "27f89247e01e48728909fc82734dc218",
+      "material_response_fit_parameters_exact": true,
+      "cutoff_edits_change_actual_C_PCM": true,
+      "history_restores_PCM_exact": true,
+      "checkbox_and_cutoff_persist": true,
+      "band_scope_disables_response_fit": true,
+      "legacy_missing_cutoff_preserved": true,
+      "exports_HTTP200": true,
+      "one_player_no_autoplay": true,
+      "desktop_mobile_checked": true,
+      "live_driver_not_launched": true,
+      "errors": []
+    },
+    "owned_server_closed": true,
+    "compiled_C_header_all_fields_exact": true,
+    "CSV_ZIP_manifest_verified": true,
+    "infeasible_response_preserves_model_and_refused_fit": true,
+    "invalid_protocols_refused": [
+      "vsl.event-authoring-job/1 / full",
+      "vsl.event-authoring-job/3 / band"
+    ],
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "ui": {
+    "schema": "vsl.startup-timbre-ui/1",
+    "result": "passed",
+    "no_autoplay": true,
+    "two_colored_profiles_imported": true,
+    "recipe_exact": true,
+    "live_import_refused": true,
+    "full_32s_cycle": true,
+    "recorded_overrides_notices_and_state_replay_exact": true,
+    "final_state": {
+      "frame": 1536000,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 7.465737903641796e-49,
+      "gain": 0.25,
+      "idle_weight": 0.0,
+      "gear": 0,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 9,
+      "overruns": 1,
+      "legacy_hits": 5,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 0,
+      "event_active": 0,
+      "event_started": 2,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.3355200169607997,
+      "pc_max_block_load": 0.7069499930366874,
+      "replay": true,
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 0,
+        "start_id": 1,
+        "gear": 0,
+        "automatic": 0,
+        "backfire": 1,
+        "rpm": 850.0,
+        "load": 0.0,
+        "throttle": 0.0,
+        "brake": 0.65,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 0.0,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 0.0,
+        "catch_gain": 0.0,
+        "idle_mix": 1.0,
+        "idle_motion": 0.5,
+        "idle_detail": 1.0,
+        "input": {
+          "source": 0,
+          "valid": 0,
+          "sequence": 0,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 1,
+          "manual_type": 1,
+          "manual_sequence": 0,
+          "gain": 0.5,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "colored_catch_cancel_restart": true,
+    "catch_ends": [
+      {
+        "id": 2,
+        "frame": 17280,
+        "requested_frame": 13440,
+        "type": 2,
+        "slot": 1,
+        "action": 2,
+        "reason": 1
+      },
+      {
+        "id": 4,
+        "frame": 63840,
+        "requested_frame": 60480,
+        "type": 2,
+        "slot": 1,
+        "action": 2,
+        "reason": 1
+      }
+    ],
+    "restart_final_state": {
+      "frame": 89760,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.019049811697569023,
+      "gain": 0.25,
+      "idle_weight": 0.0,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 45,
+      "event_active": 0,
+      "event_started": 4,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.2571400022134185,
+      "pc_max_block_load": 0.51231998950243,
+      "replay": false
+    },
+    "own_window_closed": true,
+    "source_binding_sha256": "95b1ac9aa0d77081c11a47cb42666142c1cdb66863c9cb88c3b490e95a76c4fc",
+    "goal_complete": false,
+    "timbre_accepted": false
+  },
+  "web": {
+    "result": "passed",
+    "HTTP200": true,
+    "eleven_tracks": true,
+    "one_player_no_autoplay": true,
+    "same_group_seek_and_play_state_preserved": true,
+    "group_change_resets_time": true,
+    "volume_preserved": true,
+    "all_audio_and_downloads_available": true,
+    "desktop_mobile_no_overflow": true,
+    "automated_audio_muted": true,
+    "errors": []
+  },
+  "required_CTests": {
+    "event-build1.log": {
+      "sha256": "ee5aba3ddcd302ad2f12b2621b653fc1b0c055c330800c4389a6d4495896e724",
+      "tests": 2
+    },
+    "source-build1.log": {
+      "sha256": "e52689bf1845399143150eff5ee75ea2bcf22533f30fa5c6b5d4746a4e7ee11a",
+      "tests": 3
+    }
+  },
+  "voices_unchanged": [
+    "voices/cabin_anchors_v1/E Cabin Lower.model",
+    "voices/cabin_anchors_v1/E Cabin Upper.model",
+    "voices/cabin_anchors_v1/index.json",
+    "voices/catch_bloom_v1/A cabin catch.cb",
+    "voices/catch_bloom_v1/README.md",
+    "voices/coherent_low_v1/index.json",
+    "voices/coherent_low_v1/measured_phase.model",
+    "voices/coherent_low_v1/scrambled_phase.model",
+    "voices/dna_bank_v1/Hollow Spectrum.model",
+    "voices/dna_bank_v1/index.json",
+    "voices/dna_bank_v1/V10 Exterior.model",
+    "voices/dna_bank_v1/Warm Additive.model",
+    "voices/E_decel_source_v1/E slowing cabin.model",
+    "voices/E_decel_source_v1/E slowing cabin.sres",
+    "voices/E_decel_source_v1/index.json",
+    "voices/events_v1/profiles.h",
+    "voices/events_v1/profiles.json",
+    "voices/exterior_anchors_v1/A Stationary High.model",
+    "voices/exterior_anchors_v1/A Stationary Low.model",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+    "voices/exterior_anchors_v1/index.json",
+    "voices/F3_before_upshift_v1/F3 before upshift.model",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres",
+    "voices/F3_before_upshift_v1/index.json",
+    "voices/F3_fifth_local_v1/first_early.model",
+    "voices/F3_fifth_local_v1/first_late.model",
+    "voices/F3_fifth_local_v1/first_mid.model",
+    "voices/F3_fifth_local_v1/index.json",
+    "voices/F3_fifth_local_v1/second_early.model",
+    "voices/F3_fifth_local_v1/second_late.model",
+    "voices/F3_fifth_local_v1/second_mid.model",
+    "voices/idle_resonant_v1/detail.json",
+    "voices/idle_resonant_v1/README.md",
+    "voices/line_density_v1/index.json",
+    "voices/line_density_v1/README.md",
+    "voices/line_density_v1/V10 A Density 0.residual",
+    "voices/line_density_v1/V10 A Density 25.model",
+    "voices/line_density_v1/V10 A Density 25.residual",
+    "voices/line_density_v1/V10 A Density 50.model",
+    "voices/line_density_v1/V10 A Density 50.residual",
+    "voices/low_rumble_v2/A Exterior.model",
+    "voices/low_rumble_v2/B Cabin.model",
+    "voices/low_rumble_v2/D Dyno.model",
+    "voices/low_rumble_v2/E Cabin.model",
+    "voices/low_rumble_v2/index.json",
+    "voices/residual_atlas_v1/A Stationary High.residual",
+    "voices/residual_atlas_v1/A Stationary Low.residual",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+    "voices/residual_atlas_v1/E Cabin Lower.residual",
+    "voices/residual_atlas_v1/E Cabin Upper.residual",
+    "voices/residual_atlas_v1/index.json",
+    "voices/residual_atlas_v1/README.md",
+    "voices/residual_motion_v1/A_moving.motion",
+    "voices/residual_motion_v1/A_moving.residual",
+    "voices/residual_osc_v1/A_exterior.residual",
+    "voices/residual_osc_v1/E_cabin.residual",
+    "voices/residual_osc_v1/README.md",
+    "voices/resonant_detail_c_v1/idle_35.rdetail",
+    "voices/resonant_detail_c_v1/idle_add.rdetail",
+    "voices/resonant_detail_c_v1/index.json",
+    "voices/resonant_detail_c_v1/moving_35.rdetail",
+    "voices/resonant_detail_c_v1/README.md",
+    "voices/resonant_detail_v1/detail.json",
+    "voices/resonant_detail_v1/README.md",
+    "voices/resonant_detail_v1/SELECTION.json",
+    "voices/resonant_detail_v2/detail.json",
+    "voices/resonant_detail_v2/README.md",
+    "voices/start_texture_v1/A cabin early.start",
+    "voices/start_texture_v1/README.md",
+    "voices/startup_detail_v1/A startup settling detail.residual",
+    "voices/startup_detail_v1/index.json",
+    "voices/startup_detail_v1/README.md",
+    "voices/startup_drive_v1/A cabin motion.start",
+    "voices/startup_settle_v1/A start cabin settle.model",
+    "voices/startup_settle_v1/README.md",
+    "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+    "voices/state_colour_v2/fit.json",
+    "voices/state_colour_v2/README.md",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+    "voices/stationary_bridge_v1/index.json",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+    "voices/stationary_recipe_v1/index.json",
+    "voices/stereo_resonance_v1/A cabin settle.sres",
+    "voices/stereo_resonance_v1/README.md"
+  ],
+  "binaries": {
+    "source-v6": {
+      "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v6\\bin\\Release\\vsl_source_bridge.dll",
+      "sha256": "d6e383857365705bc60f6f4a4271c1c5a1793c0e3b485b4fb5a342dd990ebeb4"
+    },
+    "source-v5": {
+      "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v5\\bin\\Release\\vsl_source_bridge.dll",
+      "sha256": "39496f215967a1b6449fab7d9841961d12a74d368d2e5afc8dade701e5ed0d43"
+    },
+    "author-v2": {
+      "path": "E:\\VehicleSoundLab-Git\\build-event-synth-v2\\bin\\Release\\vsl_event_author_bridge.dll",
+      "sha256": "2043597cb96ab7902431bebb84ed2552ccf30277ace8d9160663ca357819fed1"
+    },
+    "author-v1": {
+      "path": "E:\\VehicleSoundLab-Git\\build-event-synth-v1\\bin\\Release\\vsl_event_author_bridge.dll",
+      "sha256": "f2ae83a75f5927911c5380c9299782e5cd9a3ee523f8ba8139a0c6421be50a1d"
+    }
+  },
+  "review_url": "http://127.0.0.1:8789/references/analysis/startup_timbre_v1/review1/index.html",
+  "finalizer_sha256": "63a16760eb9b9ce72bba736ae7df865d87a735b8814f0e2e766855047d10ea41",
+  "documentation_sha256": "2d8818443b64df3b211a6417e75c73575bdb6d347cd365c98c6e5cf30e0c5396",
+  "archive": "E:\\VehicleSoundLab\\baselines\\startup_timbre_v1\\delivery1",
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "unresolved": [
+    "Startup hearing",
+    "Real full-band afterfire and other event timbres",
+    "Remaining state/source coverage"
+  ],
+  "persistent_updated_launch": false,
+  "reason": "Prior automatic approval rejected persistent launch/restart: blocked by policy",
+  "prior_failures": [
+    "gain-only response1",
+    "workbench1 reload race",
+    "workbench2 WAV timestamp comparison",
+    "ctest-unbuilt-targets.log"
+  ],
+  "note": "Audit is a separate file; do not rewrite frozen files after creating the manifest."
+}

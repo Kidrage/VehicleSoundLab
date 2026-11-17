@@ -1,0 +1,92 @@
+{
+  "result": "passed",
+  "goal_complete": false,
+  "timbre_accepted": false,
+  "runtime_integrated": false,
+  "qualified_cases": [],
+  "representation_capacity_only": true,
+  "cases": [
+    {
+      "kind": "crank",
+      "full_explained_waveform_SSE_fraction": 0.189753495922103,
+      "withheld10ms_explained_waveform_SSE_fraction": -0.03321829440042978,
+      "middle_signed_budget": {
+        "source": 0.009877827151887645,
+        "projection": 0.002735281254951649,
+        "remainder": 0.006875464648448082,
+        "cross": 0.00026708124848791407,
+        "band_hz": [
+          300,
+          1200
+        ],
+        "projection_to_raw": 0.27691122884539837,
+        "remainder_to_raw": 0.696050309721626,
+        "signed_cross_to_raw": 0.027038461432975676,
+        "maximum_balance_error_FS2": 1.3877787807814457e-17
+      },
+      "maximum_columns_per_channel": 216
+    },
+    {
+      "kind": "catch",
+      "full_explained_waveform_SSE_fraction": 0.11556716193010186,
+      "withheld10ms_explained_waveform_SSE_fraction": -0.037363342810774025,
+      "middle_signed_budget": {
+        "source": 0.057299645162420566,
+        "projection": 0.009577519498014662,
+        "remainder": 0.04734867847437858,
+        "cross": 0.00037344719002731556,
+        "band_hz": [
+          300,
+          1200
+        ],
+        "projection_to_raw": 0.1671479722233252,
+        "remainder_to_raw": 0.8263345844492553,
+        "signed_cross_to_raw": 0.006517443327419371,
+        "maximum_balance_error_FS2": 6.071532165918825e-17
+      },
+      "maximum_columns_per_channel": 216
+    }
+  ],
+  "terminal_reports": {
+    "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\known1\\report.json": "ca5e1018b656ae0a2ccf73802f23af0b470ca74d7bdaa52bab3cb9c8ffc6ef00",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\source1\\report.json": "453fc1b68ed6760178912900128d7bc71cd79272aeee21cf49f32b8cd2d1f25c",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\audit1\\report.json": "502e7b81f4f0c7ff77236e3a27ccb4b99f1b053440392df0db7449b7e4ef3966",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\known2\\report.json": "0bf6eebd8a699a1fcb04d92d39ab2178e9d9685f8b95f1bf343c80f93ca39405",
+    "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\audit2\\report.json": "b03f1056b8ef9021b3ac0e74b8217ee51ca15e32f8188cf86a4543140b90ae53"
+  },
+  "corrected_audit_implementation_only": [
+    "tools/audit_event_modal_projection_v1.py"
+  ],
+  "failed_audit_retained": true,
+  "original_direct_gate_FS": 2e-10,
+  "source_fit_and_gates_unchanged": true,
+  "independently_audited_projections": 20,
+  "independently_audited_remainders": 20,
+  "maximum_coefficient_realization_error_FS": 7.771561172376096e-16,
+  "maximum_spectral_balance_error_FS2": 1.4224732503009818e-16,
+  "runtime_voice_files_unchanged": 459,
+  "old_random_heldouts_not_used": true,
+  "final_sources": {
+    "AGENTS.md": "0f681c1066dff4c4b165cdcc8248031c5352a13273cd17904d6e1679965b935d",
+    "handoff/启动振子表达能力核查V1.md": "d89b812bdbccf0cd8395fb78bf4aba23105e22cd00f6a0defc332004b28734ee",
+    "research/event_modal_projection_followup_v1_plan.json": "9d943e80362f8ed809ceb125a36e76f53d319b594d4c61a74d91ead187dd4cd8",
+    "research/event_modal_projection_v1_plan.json": "c77414b56fd58fdedf79d09631dad1b1d0601992197ab761aab3c629ef16ffec",
+    "tools/audit_event_modal_projection_v1.py": "af6c62069bd44374b245ff7393a7f877d81122d1d241f5896d0ede12cd951321",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_authoring/contract.py": "ee6f77e1c6115e5e93d9c871a9e98f00feef37f88d3d20df04087c686711f3e3",
+    "tools/event_authoring/model.py": "883cfa1f93eceba49c69b37590ffd22938f7fc01135d4ca718d5b79b9da5feb2",
+    "tools/event_modal_projection/README.md": "7e326bcf3b8011b846108f7cf7ae2b5bfc129dfa3d7b4cfefaf7534ea57b759f",
+    "tools/event_modal_projection/__init__.py": "39e019aed7b7071c435ea7242bdf64f7fdd80d4007d3e807504746690bf4042b",
+    "tools/event_modal_projection/basis.py": "121c2b093ae9ce591403aa1cef2f6eef95961151caef92f58313d36bf23f6dfd",
+    "tools/event_modal_projection/measure.py": "f466b57bab363ea9fbcf2a46ed6033ddb6696231c3a249da07cb42361d412ed1",
+    "tools/event_modal_projection/project.py": "8d1686ea3c57a12026f46f5a9bf9b7e3a96d181292258853886697b66ee9d8eb",
+    "tools/finalize_event_modal_projection_v1.py": "e2c40338505c7b53dec6451f4bcee519102bf9907c87bc2cdda70562004fb065",
+    "tools/inspect_event_modal_projection_v1.py": "c935a43b8d6f9d31a2f188ef45b2e5ca5360322c7ff5d865a369ac45aba5d970",
+    "tools/native_projection_v1/budget.py": "f75388efc933e21a88c22302b8390d56e81bdbb538afeb7f820eb0d67eb24602",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/verify_event_modal_projection_v1.py": "926a4c86f3c165f49e37bb62c351a23d38a7bbd369dbb63b63f12747c73ddd18"
+  },
+  "figure_viewed": "source1/capacity.png",
+  "delivery_root": "E:\\VehicleSoundLab\\references\\analysis\\event_modal_projection_v1\\delivery1",
+  "limitation": "Conditional fixed-frequency sparse-envelope acoustic capacity and same-event interpolation. Not physical source fractions, a stochastic timbre gate or a bound on general OSC synthesis. No new reusable voice."
+}

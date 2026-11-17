@@ -10,12 +10,20 @@ int rdt_voice_init(RdtVoice *v,const RdtProfile *p,uint64_t seed) {
     return 1;
 }
 int rdt_voice_tick(RdtVoice *v,double phase,double out[2],double bands[RDT_MAX_BANDS]) {
-    unsigned b;double left=0,right=0;
+    unsigned b,k,order=0;double left=0,right=0;
+    double cosine[RDT_MAX_ENVELOPE],sine[RDT_MAX_ENVELOPE];
     if(!v||!v->profile||!out||!isfinite(phase)||phase<0||phase>=1)return 0;
+    /* Every band sees the same phase. Evaluate each exact libm argument once,
+       retaining the original cosine-then-sine accumulation order per band. */
+    for(b=0;b<v->profile->count;++b)if(v->profile->band[b].envelope_order>order)order=v->profile->band[b].envelope_order;
+    for(k=0;k<order;++k){cosine[k]=cos(2*3.14159265358979323846*(k+1)*phase);sine[k]=sin(2*3.14159265358979323846*(k+1)*phase);}
     for(b=0;b<v->profile->count;++b) {
         const RdtBand *m=v->profile->band+b;
+        double power=1;
         double x=rdt_filter_source(v->filter+b,m,rdt_excitation_next(v->excitation+b));
-        x*=rdt_envelope_amplitude(m,phase);
+        for(k=0;k<m->envelope_order;++k)power+=cosine[k]*m->beta[k];
+        for(k=0;k<m->envelope_order;++k)power+=sine[k]*m->beta[m->envelope_order+k];
+        x*=sqrt(power);
         x=rdt_filter_post(v->filter+b,m,x);
         if(bands)bands[b]=x;
         left+=x*m->gain;right+=x*(m->gain*m->right_over_left);

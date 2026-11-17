@@ -1,0 +1,42 @@
+{
+  "schema": "vsl.short-event-scan-plan/1",
+  "previous_goal_turn": "Progress: V13 complete asset identity and actual36s UI/save/replay/launch delivery frozen; independent audit223files/77444592bytes passed. No new timbre acceptance.",
+  "scope": "Find short acoustic events masked by the original100ms power window, using approved local D first. Add an explicit optional authoring detector, never change historical results or label flames as acoustic afterfire.",
+  "detector": {
+    "name": "short_high",
+    "sample_rate": 48000,
+    "stft_window_frames": 384,
+    "hop_frames": 48,
+    "local_median_frames": 201,
+    "frequency_bands_hz": [[1500,3000],[3000,6000],[6000,10000]],
+    "two_bands_above_db": 6.0,
+    "minimum_spacing_seconds": 0.02,
+    "event_offsets_seconds": [-0.004,0.012],
+    "before_offsets_seconds": [-0.15,-0.05],
+    "after_offsets_seconds": [0.05,0.15],
+    "both_full_power_contrast_db": 3.0
+  },
+  "follow_up": {
+    "D_probe2": "Known controls pass; original D/A/F3 high scans exact. D short mode has5candidates, none pass both3dB contrasts. Do not fit or label any D event.",
+    "B_secondary_range_seconds": [140, 790],
+    "B_selection": "Run the same fixed short_high method on the approved B driving range. Save all results. Review at most the six qualified candidates with highest minimum before/after contrast, ordered deterministically by descending contrast then ascending source time; inspect their original stereo context and five video seeks at offsets-0.8,-0.4,0,+0.4,+0.8. No selection of quieter backgrounds or claim of physical afterfire from contrast alone.",
+    "short_authoring": "Workbench event crop8..60ms uses explicit job10 and4ms observation window/1ms hop; background remains>=60ms. Old>=60ms measurement/authoring stays exact. Short jobs disallow gated/long-window contour fits, expose measurement resolution and fallback decays, use unchanged C event profile/kernel. No implicit global bank promotion.",
+    "prior_failure": "probe1 demanded bitwise equality of mono vs duplicated stereo power sums; summation order differs in final floating bits. probe2 keeps identical candidate times/decisions and<=1e-12dB contrasts, full polarity equality and independently recomputed powers. No detector threshold changed."
+  },
+  "known_before_real": [
+    "4ms broadband burst above a continuous160Hz carrier: primary short candidate must qualify while100ms original qualification misses; test four fixed seeds",
+    "Steady carrier, silence, gradual gain changes have no qualified short events; mono/stereo and polarity preserve channel-power results",
+    "Every reported power contrast independently recomputed from exact original float32 samples and declared windows",
+    "Existing high and low_mid full-source results remain exact against frozen records; invalid mode preserves project",
+    "Workbench explicit mode selection, selected source context, history/export and previously generated C event remain valid"
+  ],
+  "real": {
+    "source": "D",
+    "master_sha256": "543e6b4766d8c3ad1e1f4765273095e7c4240aad005db201c836a45ecca6ade3",
+    "ranges": [[0.0,59.535979166666664]],
+    "qualification": "No crop or background search. Keep every candidate. Inspect full video/audio context of every qualified candidate in36..46s flame context, then up to four highest minimum-contrast remaining candidates after2s by declared rank. Exclude obvious edits/viewpoint changes. If no candidate qualifies, do not fit a rejected event.",
+    "fit": "Only after inspected context, use the same frozen event interval and backgrounds in existing parameter authoring. Preserve original fullband3dB gate and six-band C validation. No profile promotion or physical label without evidence; any candidate remains opt-in."
+  },
+  "preserve": "Current V13 UI/C/runtime459files/92cataloginputs/accepted sound/takes frozen. No downloads, repeated hearing/material questions, target optimization, spatial processing, push, subagents or persistent restart.",
+  "goal_complete": false
+}

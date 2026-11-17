@@ -1,0 +1,228 @@
+{
+  "schema": "vsl.event-candidate-workbench-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no_progress",
+  "current_goal_turn": "progress",
+  "verification": {
+    "schema": "vsl.event-candidates-verification/1",
+    "result": "passed",
+    "material_scan_exact_to_frozen_pre_refactor": true,
+    "material_candidates": 92,
+    "both_background_candidates": 1,
+    "all_material_independent_contrast_error_db": 0.0,
+    "known_antiphase_exact": true,
+    "silence_no_candidates": true,
+    "invalid_selection_errors": [
+      "无效候选编号",
+      "无效候选编号",
+      "无效候选编号",
+      "无效候选编号",
+      "无效候选编号",
+      "候选列表已变化，请重新选择",
+      "候选记录身份已变化，请重新扫描",
+      "候选列表已变化，请重新选择"
+    ],
+    "source_context_PCM_exact": true,
+    "existing_C_PCM_bit_exact": true,
+    "candidate_evidence_in_JSON_ZIP": true,
+    "export_manifest_valid": true,
+    "browser": {
+      "result": "passed",
+      "project_id": "ccf03aadb84a48818274f71c16090465",
+      "scan_counts": [
+        2,
+        1
+      ],
+      "source_context_HTTP_hash_exact": true,
+      "fixed_windows_populated": true,
+      "no_automatic_fit": true,
+      "no_automatic_physical_label": true,
+      "history_reload_and_restore": true,
+      "stale_selection_rejected": true,
+      "one_player_muted_audition": true,
+      "desktop_mobile_checked": true,
+      "driver_not_launched": true,
+      "errors": []
+    },
+    "owned_server_closed": true,
+    "no_formal_profile_promotion": true,
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "context_regression": {
+    "schema": "vsl.event-context-workbench-verification/1",
+    "result": "passed",
+    "known": [
+      {
+        "antiphase": false,
+        "contrast_db": 12.041199826559248,
+        "detected": [
+          {
+            "source_seconds": 0.86,
+            "two_band_prominence_db": 12.04119982655925
+          },
+          {
+            "source_seconds": 0.97,
+            "two_band_prominence_db": 12.041199826559257
+          }
+        ],
+        "screen": {
+          "windows": {
+            "event": {
+              "offset_seconds": [
+                -0.025,
+                0.075
+              ],
+              "mean_channel_power": 0.021799999877007068,
+              "channel_peak": 0.2570633888244629
+            },
+            "before": {
+              "offset_seconds": [
+                -0.35,
+                -0.15
+              ],
+              "mean_channel_power": 0.0013624999923129418,
+              "channel_peak": 0.06426584720611572
+            },
+            "after": {
+              "offset_seconds": [
+                0.16,
+                0.36
+              ],
+              "mean_channel_power": 0.0020437499884694127,
+              "channel_peak": 0.2570633888244629
+            }
+          },
+          "contrast_db": {
+            "before": 12.041199826559248,
+            "after": 10.280287236002435
+          },
+          "minimum_contrast_db": 10.280287236002435,
+          "both_full_band_above_3db": true,
+          "physical_identity_confirmed": false
+        }
+      },
+      {
+        "antiphase": true,
+        "contrast_db": 12.041199826559248,
+        "detected": [
+          {
+            "source_seconds": 0.86,
+            "two_band_prominence_db": 12.04119982655925
+          },
+          {
+            "source_seconds": 0.97,
+            "two_band_prominence_db": 12.041199826559257
+          }
+        ],
+        "screen": {
+          "windows": {
+            "event": {
+              "offset_seconds": [
+                -0.025,
+                0.075
+              ],
+              "mean_channel_power": 0.021799999877007068,
+              "channel_peak": 0.2570633888244629
+            },
+            "before": {
+              "offset_seconds": [
+                -0.35,
+                -0.15
+              ],
+              "mean_channel_power": 0.0013624999923129418,
+              "channel_peak": 0.06426584720611572
+            },
+            "after": {
+              "offset_seconds": [
+                0.16,
+                0.36
+              ],
+              "mean_channel_power": 0.0020437499884694127,
+              "channel_peak": 0.2570633888244629
+            }
+          },
+          "contrast_db": {
+            "before": 12.041199826559248,
+            "after": 10.280287236002435
+          },
+          "minimum_contrast_db": 10.280287236002435,
+          "both_full_band_above_3db": true,
+          "physical_identity_confirmed": false
+        }
+      }
+    ],
+    "browser": {
+      "result": "passed",
+      "project_id": "100fb804f5584823a2f8a2213064ab08",
+      "context_revision": "9fd5fea6cd5f459b88427f8084998ce0",
+      "real_material_C_PCM_preserved": true,
+      "source_and_model_binding_checked": true,
+      "full_and_scoped_probes": true,
+      "rapid_switch_adopts_latest_audio_hash": true,
+      "context_evidence_in_parameter_exports": true,
+      "source_context_HTTP_seek_and_muted_play": true,
+      "history_restores_context_and_C_PCM": true,
+      "invalid_following_background_preserves_project": true,
+      "selection_save_reload": true,
+      "one_player_no_autoplay": true,
+      "desktop_mobile_checked": true,
+      "driver_not_launched": true,
+      "errors": []
+    },
+    "independent_material_contrast_error_db": 5.595524044110789e-14,
+    "invalid_inputs_preserve_project": true,
+    "source_context_PCM_exact": true,
+    "owned_server_closed": true,
+    "source_C_changed": false,
+    "no_new_download": true,
+    "no_formal_profile_promotion": true,
+    "timbre_accepted": false,
+    "goal_complete": false
+  },
+  "static_review": {
+    "result": "passed",
+    "original_and_context_audio_HTTP_ok": true,
+    "images_loaded": true,
+    "one_player_no_autoplay": true,
+    "desktop_mobile_checked": true,
+    "errors": []
+  },
+  "original_C_H_unchanged": 371,
+  "voices_unchanged": 89,
+  "binaries": {
+    "source-v8": {
+      "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v8\\bin\\Release\\vsl_source_bridge.dll",
+      "sha256": "57f71d7df08d0aca4fe00d0115a358e396459f9f0501f744067ee715498a31b9"
+    },
+    "source-v7": {
+      "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v7\\bin\\Release\\vsl_source_bridge.dll",
+      "sha256": "636dbea0addf5a8ee30ef49d174e522f4075c585c7dd8eedcff56f16e3c71fc2"
+    },
+    "author-v2": {
+      "path": "E:\\VehicleSoundLab-Git\\build-event-synth-v2\\bin\\Release\\vsl_event_author_bridge.dll",
+      "sha256": "2043597cb96ab7902431bebb84ed2552ccf30277ace8d9160663ca357819fed1"
+    }
+  },
+  "formal_event_mask": 6,
+  "CLI_original92_exact": true,
+  "controller_parameter_import_compatible": true,
+  "diagnostic_project_id": "07612df94a0048b7afed22381a5df692",
+  "no_new_timbre_accepted": true,
+  "no_formal_profile_promotion": true,
+  "runtime_C_changed": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "persistent_app_restarted": false,
+  "owned_test_services_closed": true,
+  "goal_complete": false,
+  "unresolved": [
+    "startup listening",
+    "confirmed full-band afterfire",
+    "other independent event timbres",
+    "full RPM/load/state quality"
+  ],
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\dna_controller_v1\\delivery1",
+  "base_manifest_sha256": "dee544547e1c1dd401603f815f5fe0ea8d6863c1b4d261201917d88f569536e9",
+  "freeze": "E:\\VehicleSoundLab\\baselines\\event_candidates_v1\\delivery1"
+}

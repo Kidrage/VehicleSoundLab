@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.event-authoring-job/1",
+  "kind": "afterfire",
+  "name": "A 尾排短促声候选（未确认回火）",
+  "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "seconds": [318.455, 318.61],
+  "background_seconds": [318.1, 318.38],
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved A moving-tailpipe interval. Fixed detector found a short acoustic peak at about318.48s; exact cause/ECU/pedal not identified. Candidate in afterfire slot, requires context listening before promotion."
+}

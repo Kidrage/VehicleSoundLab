@@ -1,0 +1,24 @@
+{
+  "schema": "vsl.manual-acoustic-context-review/1",
+  "date": "2026-11-17",
+  "evidence_root": "E:/VehicleSoundLab/references/analysis/F3_event_context_v1",
+  "method": "Original sampled video contact sheets and context spectra; no listening claim, exact RPM inference or physical-event classifier.",
+  "reviewed_batches": {
+    "contexts1": "Nine prepared contexts: the first eight qualified candidates at or after80s, plus the known103.465s candidate. Original sampled sheets inspected in the preceding preparation work; original PCM/spectra retained.",
+    "contexts2": "All eight remaining qualified candidates at or after80s. Final four contact sheets inspected in this continuation:239.860,255.995,83.000,89.390s."
+  },
+  "last_four_observations": {
+    "F3_rank5_239860": "Cabin driving with moving scenery. The driver moves the left gloved hand from a gesture toward the door/armrest; no exhaust mechanism is visible.",
+    "F3_rank6_255995": "Cabin driving continues; an oncoming car passes and the view shifts in the final sampled frame. No isolated exhaust origin is established.",
+    "F3_rank7_83000": "Cabin view near an industrial roadside. The steering wheel is initially unattended in the samples; the camera framing shifts at the end. Do not equate the acoustic transient with afterfire.",
+    "F3_rank8_89390": "Cabin view with the driver's right hand moving around the lower steering wheel and left hand resting on the thigh. An acoustic short event cannot be assigned to exhaust from these images."
+  },
+  "known_103465": {
+    "contrast_db": {"before": 3.5467388571149403, "after": -3.007690642849659},
+    "both_background_qualified": false,
+    "context": "Cabin/first-gear near-stop context and framing change. Do not definitively call the framing change an edit; not a confirmed isolated afterfire."
+  },
+  "decision": "All shortlisted contexts remain unclassified cabin acoustic events. No F3 event parameters or formal-bank promotion. Passing both acoustic backgrounds is necessary here but does not establish physical source identity.",
+  "physical_identity_confirmed": false,
+  "timbre_accepted": false
+}

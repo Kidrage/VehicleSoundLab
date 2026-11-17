@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/11",
+  "kind": "catch",
+  "name": "A旧座舱接火候选 · 多次触发校准对照",
+  "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "seconds": [37.22, 38.02],
+  "background_seconds": [35.0, 36.2],
+  "gated": false,
+  "response_fit": "source-response-ensemble-v1",
+  "physical_identity_confirmed": false,
+  "context": "Approved A mixed cabin startup; method comparison only. Continuous engine is present. Not an isolated ignition source, measured RPM trajectory, or replacement for the exterior startup candidate."
+}

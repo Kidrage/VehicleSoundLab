@@ -1,0 +1,14 @@
+{
+  "schema": "vsl.event-authoring-job/8",
+  "kind": "afterfire",
+  "name": "E 低中频短声 · 完整背景间隔包络候选",
+  "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+  "seconds": [14.19, 14.50],
+  "background_seconds": [13.99, 14.19],
+  "analysis_scope": {"mode": "full"},
+  "response_fit": "source-response-v1",
+  "envelope_fit": "band-contour-v4",
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Same approved stationary exterior E14.34s acoustic candidate as the immutable100ms V1. Select exactly the ENTIRE interval between the unchanged before-background end14.19s and after-background start14.50s, not a crop optimized for contrast. Both unchanged fullband backgrounds remain13.99..14.19 and14.50..14.70s; full310ms interval contrasts+3.70159/+6.87794dB in the independent initial read. This includes observed buildup and decay missed by100ms detection. It does not prove complete physical source isolation, exact event boundaries, RPM/pedal/fueling, afterfire identity or listening acceptance. afterfire remains a local audition slot. No association with earlier E13.309s high-frequency event."
+}

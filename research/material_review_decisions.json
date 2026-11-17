@@ -1,0 +1,30 @@
+{
+  "schema": "vsl.material-review-decisions/1",
+  "revision": 1,
+  "decisions": [
+    {
+      "id": "E-low-mid-short-not-afterfire-20261117",
+      "authority": "user",
+      "date": "2026-11-17",
+      "decision": "reject_reference",
+      "kind": "afterfire",
+      "reason": "这个原声片段不适合作回火参考",
+      "source": {
+        "sha256": "3db9ceac1fc00d27a8ceb7abda88c3efa78efad2b11d4b9d2664ae287cb0f9bf",
+        "first_frame": 687120,
+        "last_frame": 691920,
+        "source_seconds": [
+          14.315,
+          14.415
+        ],
+        "sample_rate": 48000
+      },
+      "parameter_sha256": [
+        "d0de93e4c1fda3635c4cd522da3bf12021e5e5c86857b4b32def2a9cf05dee16",
+        "a978433052eb5c8fef140abb250480f0863fc44de2fedc6e0a9ad40946125177"
+      ],
+      "review_url": "http://127.0.0.1:8789/references/analysis/low_mid_event_scan_v1/C1/review/index.html",
+      "scope": "Reject this interval and overlapping derived profiles as afterfire references. Other E intervals and physical kinds are not adjudicated. Preserve original reports, parameters, WAVs and historical take replay."
+    }
+  ]
+}

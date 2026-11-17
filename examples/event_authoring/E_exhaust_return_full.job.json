@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/3",
+  "kind": "afterfire",
+  "name": "E 尾排短声 · 全频校准候选",
+  "source": "E:/VehicleSoundLab/references/clean/E_decoded_float.wav",
+  "seconds": [18.565, 18.665],
+  "background_seconds": [18.24, 18.44],
+  "gated": false,
+  "response_fit": "source-response-v1",
+  "physical_identity_confirmed": false,
+  "context": "Approved E stationary exterior rev context. Retains the earlier fixed-detector 100ms crop and preceding 200ms background. Following background18.75..18.95 is also checked. Full-band acoustic increment, not an isolated or physically confirmed afterfire; no measured RPM/fueling/AV delay."
+}

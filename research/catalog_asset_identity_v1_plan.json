@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.catalog-asset-identity-study/1",
+  "previous_goal_turn": "Progress: exterior startup frozen, real F2 idle connected and36s C/controller/replay verified; legacy asset identity and default UI scenario remained incomplete.",
+  "scope": "Close the F2 runtime-file identity gap and connect the existing36s startup/idle scenario to the actual independent-window Complete Flow action. No DSP/model/space/ADI change.",
+  "identity": "Keep historical voices-only digest. Add explicit canonical catalog-assets manifest covering every file under voices plus the three F2 runtime files from fine_idle_drive_v1/models.c. Verify before and after non-RT C model construction, preset/take creation and loading; never hash in audio processing. Compiled constants remain bound by the DLL hash.",
+  "format": "UI revision13, unchanged source V12 DLL/ABI11 and author4. New preset8/take9 require the complete manifest; older preset7/take8 remain with their frozen V12 Python player and are not silently upgraded.",
+  "demo": "Use start_idle_lifecycle for the real UI button, forwarding authored event policy and state DNA as well as event overrides/startup response. Preserve frozen sport_lifecycle and all recorded old actions.",
+  "validation": [
+    "Independent frozen V12 Python subprocess:12catalog probe PCM hashes match current interface; old take8 loads with frozen player and is refused by new reader",
+    "Only mutate isolated copied catalog inputs:each F2 content change/missing file/tampered manifest/stale bridge/around-load change is refused, failed handle closes; already-owned voices continue exact without file hashing in audio",
+    "Recreate the specifically frozen36s example only after all source/binary/F2 bindings pass; new-format takes reproduce every actual native piece,23channels,monitor,notices and final state",
+    "Owned muted actual UI Complete Flow36s and saved take replay36s; input controls/asset identity roundtrip and invalid load protection",
+    "Workbench independent-window launch adapter exercised in an owned bounded context, then closed; persistent services untouched",
+    "Updated downloadable example and browser checks, source/binary/asset bindings and preserved failures"
+  ],
+  "remaining": ["Mechanical startup/idle listening quality", "Confirmed physical fullband afterfire and other event timbres", "Full RPM/load/state atlas"],
+  "limits": "No new downloads, promotion of unaccepted sounds, rewrite of old files, persistent restart or target-DSP optimization. Goal remains active."
+}

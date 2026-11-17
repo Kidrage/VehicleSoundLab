@@ -9,17 +9,18 @@ int rvs_voice_tick(RvsVoice *v,double out[2],double raw[2]) {
         const RvsBand *m=v->profile->band+b;double z[2],y[2];
         for(i=0;i<2;++i)z[i]=rdt_excitation_next(&v->excitation[b][i]);
         for(i=0;i<2;++i) {
+            unsigned at=v->at[b]?v->at[b]-1:m->order-1;
             y[i]=m->noise[i][0]*z[0]+m->noise[i][1]*z[1];
             for(j=0;j<m->order;++j) {
-                unsigned at=(v->at[b]+m->order-1-j)%m->order;
                 for(k=0;k<2;++k)y[i]+=m->a[j][i][k]*v->history[b][at][k];
+                at=at?at-1:m->order-1;
             }
         }
         for(i=0;i<2;++i) {
             v->history[b][v->at[b]][i]=y[i];
             sum[i]+=m->gain*rdt_filter_post(&v->post[b][i],&m->post,y[i]);
         }
-        v->at[b]=(v->at[b]+1)%m->order;
+        if(++v->at[b]==m->order)v->at[b]=0;
     }
     v->amount+=v->follow*(v->target-v->amount);
     for(i=0;i<2;++i){if(!isfinite(sum[i]))return 0;if(raw)raw[i]=sum[i];out[i]=sum[i]*v->amount;}

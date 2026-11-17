@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.event-authoring-job/1",
+  "kind": "crank",
+  "name": "A 启动早期混合纹理候选",
+  "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+  "seconds": [36.65, 37.12],
+  "background_seconds": [35.0, 36.2],
+  "gated": true,
+  "physical_identity_confirmed": false,
+  "context": "Approved A cabin start context. Early broadband was previously observed. Starter/handling/combustion/cabin are not physically separated; engineering assignment to gated crank slot."
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "vsl.start-idle-lifecycle-milestone/1",
+  "result": "passed",
+  "goal_complete": false,
+  "previous_goal_turn": "No synthesis progress: source/render and MCPS response only",
+  "current_goal_turn": "Frozen exterior startup and corrected real F2 idle/lifecycle composition with independent C/UI/browser evidence",
+  "checks": {
+    "driver": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\start_idle_lifecycle_v1\\C3\\report.json",
+      "sha256": "63132a6bb519db89a82f8ad7ba78e09cef5a3665f14e7bd2c1d4584b62d3b450",
+      "result": "passed"
+    },
+    "native": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\start_idle_lifecycle_v1\\C-audit2\\report.json",
+      "sha256": "43ededb1b5aa4f8edfa5fc15ef07e2f6a2d92db0cb4dfea6e60eb77f68c5d501",
+      "result": "passed"
+    },
+    "browser": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\start_idle_lifecycle_v1\\review-web2\\verification.json",
+      "sha256": "6f400a5a49100f581885d6260907ae35b2403e660ac2ae54c0a7fb8b8f862658",
+      "result": "passed"
+    },
+    "ui": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\start_idle_lifecycle_v1\\ui1\\report.json",
+      "sha256": "e1d13ea8c714242eaffb66430dddd42d7a1fdb5094b5dacafc9d28443d0e321f",
+      "result": "passed"
+    }
+  },
+  "runtime_voice_files_unchanged": 459,
+  "formal_voices_unchanged": 89,
+  "additional_legacy_idle_inputs": {
+    "experiments/modal_idle_v1/F2_fixed_idle.msource": "6b0a0cf10b808eb7904dd4158fd82e128f272075de3f07a5e1b1e35f24bd13c1",
+    "experiments/modal_texture_v1/F2_amplitude.mtexture": "19a430c638bd578148e39acdd4fd7726a311b9f7bc2a4660cd5a70b7b7934147",
+    "experiments/spectral_texture_v1/F2_fine_static.sfir": "82617de84eed708396503262e1432c4a19c8afc5369d68fe3fa796a664ef4419",
+    "experiments/idle_state_v1/study.h": "94bb546a41d4edfffa0f5af8f305d666efb198f0818f22d55cefcfcdd9de4f4b"
+  },
+  "legacy_idle_base_manifest_sha256": "04d67788436006614cefe18f365bcfb70a417d84540fe866c9ded07e8c90e0db",
+  "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+  "source_ABI": 11,
+  "author_ABI": 4,
+  "preset_schema": 7,
+  "take_schema": 8,
+  "source_files": {
+    "AGENTS.md": "2549583d827a4ebf990a9fd6b2625337de6877d790446bc05154eb685965f46d",
+    "experiments/catalog_drive_v1/models.c": "e2ff561d99e986cf593c6cb539226e9d811c8748df69f836ad21dc95e329d362",
+    "experiments/fine_idle_drive_v1/models.c": "8a15aebc721b6a4037402862770466455ded28dca8229b1b165a24075bf2510a",
+    "experiments/idle_state_v1/study.h": "94bb546a41d4edfffa0f5af8f305d666efb198f0818f22d55cefcfcdd9de4f4b",
+    "experiments/modal_idle_v1/F2_fixed_idle.msource": "6b0a0cf10b808eb7904dd4158fd82e128f272075de3f07a5e1b1e35f24bd13c1",
+    "experiments/modal_texture_v1/F2_amplitude.mtexture": "19a430c638bd578148e39acdd4fd7726a311b9f7bc2a4660cd5a70b7b7934147",
+    "experiments/spectral_texture_v1/F2_fine_static.sfir": "82617de84eed708396503262e1432c4a19c8afc5369d68fe3fa796a664ef4419",
+    "handoff/启动怠速全流程接线V1.md": "5b2c743e6a1febc45fce2a8db19ba117317cf19f6b82e020785764111037ee8d",
+    "handoff/当前代码阅读入口.md": "fd10d0d93abe28894106272c1a5c5ae3e9a1979710a696622b12772b25a25cc0",
+    "research/start_idle_lifecycle_v1_plan.json": "bf4dd035b3606139767ac5a54d0af81105a18841e7eb7b950999423df0047a36",
+    "tools/audit_start_idle_lifecycle_v1.py": "73fc31891bb942e42003f499e68be2c9b13c3a6cd47cb0ab5658c1338a2da6c9",
+    "tools/build_start_idle_lifecycle_v1.py": "402ac7867ff897af9fa4822458764613a1f4fe645efb7c1b11b1f53374073d28",
+    "tools/event_review.py": "231cdb653e3d192f051fb10d7527c00442edfc489ee1db10b7b8ed62121344d2",
+    "tools/finalize_start_idle_lifecycle_v1.py": "e898397c1fa5617ea93b86aa247f3aed299c5b0c94fd61a1d7a41ed379a57a76",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/vehicle_scenarios/start_idle.py": "c96277b3b8ee40daf98e25d39af5f1d8cacd8d170fd23385e5c5fa402a12cebd",
+    "tools/verify_low_mid_event_review_v1.cjs": "40556a285db4326c7a93ef86a18d2bbf18bad9bc0161c3efa4058306408ef9f9",
+    "tools/verify_start_idle_controller_v1.py": "2769fc6a54b0343a64363f319c54d62301335d3a17fcc66bfab9427a0fc67c6b",
+    "tools/verify_start_idle_review_v1.py": "99d07d4c60d12d64f677cb785e85e0d52c816a67ccb1fb7e434438da92dc231b",
+    "tools/verify_startup_handoff_review_v1.py": "223888e01104203beb9fff1bb601dd8c2df3aeef79f48cfdef9a084626d8edcd"
+  },
+  "previous_startup_demo_F2_claim_corrected": true,
+  "unnecessary_parked_shift_removed_from_scenario": true,
+  "source_only": true,
+  "new_timbre_accepted": false,
+  "physical_afterfire_confirmed": false,
+  "runtime_identity_scope_gap": "Legacy F2 experiment assets are separately bound here, but are not covered by the general voices-only take identity.",
+  "published_review": {
+    "url": "http://127.0.0.1:8789/references/analysis/start_idle_lifecycle_v1/C3/review/index.html",
+    "HTTP_status": 200,
+    "sha256": "77739f062ffcdc7743978362ec903b799283ee178e67dab61bf3d1e2adf67ff2",
+    "persistent_service_restarted": false
+  },
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\A_exterior_startup_v1\\delivery1",
+  "base_manifest_sha256": "e9dc35e7c8b1baaf9b460519131911c77346a8bea19698ce4531e5ddf9d92eba",
+  "freeze": "E:\\VehicleSoundLab\\baselines\\start_idle_lifecycle_v1\\delivery1",
+  "unresolved": [
+    "startup/idle mechanical listening quality",
+    "general asset-identity scope including legacy F2",
+    "confirmed complete physical afterfire and other event timbres",
+    "full RPM/load/state coverage"
+  ],
+  "new_download": false,
+  "commit_or_push": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "persistent_service_restarted": false
+}

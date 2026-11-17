@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/3",
+  "kind": "crank",
+  "name": "B Tecnica 片头启动早期纹理候选",
+  "source": "E:/VehicleSoundLab/references/clean/B_decoded_float.wav",
+  "seconds": [15.2, 15.95],
+  "background_seconds": [12.2, 13.2],
+  "gated": false,
+  "response_fit": "source-response-v1",
+  "physical_identity_confirmed": false,
+  "context": "Approved B cabin binaural observation, kept separate from A exterior/Performante. Nearby video shows the red-covered centre-console control operated14..15s and a subsequent sound build near16s. This crop is early acoustic texture, not an isolated or mechanically identified starter. Background12.2..13.2s precedes the handling transient near13.6s. Post18..19s is running-engine context, not a silent background. Crop boundaries are declared once before fitting; no ECU/RPM/combustion timing claim."
+}

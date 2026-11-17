@@ -1,0 +1,2550 @@
+{
+  "schema": "vsl.adaptive-event-knots-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "Progress: optional reliable-band joint authoring and full startup verified/frozen",
+  "current_goal_turn": "Adaptive coarse knot authoring, per-band layout selection, exact-value UI readouts and actual C/workbench/full-startup verification",
+  "checks": {
+    "author": {
+      "result": "passed",
+      "cases": [
+        {
+          "key": "A",
+          "seeds": [
+            {
+              "seed": 27431,
+              "independent_model_error": 3.041349028176654e-08
+            },
+            {
+              "seed": 48271,
+              "independent_model_error": 3.0236324333188236e-08
+            },
+            {
+              "seed": 93931,
+              "independent_model_error": 4.617263771322655e-08
+            },
+            {
+              "seed": 17389,
+              "independent_model_error": 3.065644549327118e-08
+            }
+          ],
+          "contour_fit": {
+            "method": "band-contour-v3",
+            "seed": 27431,
+            "bands": [
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "contrast_db": 17.69006725308664,
+                "selected": true,
+                "reason": "At least3dB band event/background contrast"
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "contrast_db": 14.722835464307861,
+                "selected": true,
+                "reason": "At least3dB band event/background contrast"
+              }
+            ],
+            "baseline_shape_rmse": [
+              0.9595893505158598,
+              1.0351233587419177
+            ],
+            "selected_attempt": 4,
+            "qualified": true,
+            "attempts": [
+              {
+                "name": "fixed-reference",
+                "adaptive_indices": [],
+                "shape_rmse": [
+                  0.15394307765438994,
+                  0.3511149565086163
+                ],
+                "qualified": true,
+                "temporal_nonregression": true,
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.00028597908376433673,
+                      "error_db": 0.05120416727609017,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.07467552526405946,
+                      "error_db": 2.8583716772571893e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.046959684676549214,
+                      "error_db": -8.096841755548312e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.003002578014761216,
+                      "error_db": 1.2129837645952806e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005874378778990306,
+                      "error_db": 0.9269653057899345,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.416812100832861e-07,
+                      "error_db": -1.440907085133865,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 32,
+                  "optimizer_terminated": true,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "score": 1.0
+              },
+              {
+                "name": "adaptive-2-0",
+                "adaptive_indices": [
+                  2
+                ],
+                "shape": {
+                  "evaluations": 10,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.06133333333333334,
+                      0.17633333333333334,
+                      0.3913333333333333,
+                      0.5213333333333333,
+                      0.6663333333333333,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.025,
+                      0.06,
+                      0.12,
+                      0.25,
+                      0.45,
+                      0.65,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.1881390840979728,
+                  0.353017600215123
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.0002860055543314332,
+                      "error_db": 0.05160613685587915,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.07467552558752395,
+                      "error_db": 2.8602528671788847e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.04695975339349392,
+                      "error_db": -1.7417377406205985e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.0030025808485033933,
+                      "error_db": 1.622857547694728e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005874500767948178,
+                      "error_db": 0.9270554916345453,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.415808938461384e-07,
+                      "error_db": -1.4417114479599071,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 1.2522394193635749
+              },
+              {
+                "name": "adaptive-2-1",
+                "adaptive_indices": [
+                  2
+                ],
+                "shape": {
+                  "evaluations": 8,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.06133333333333334,
+                      0.17633333333333334,
+                      0.3913333333333333,
+                      0.5213333333333333,
+                      0.6663333333333333,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.025,
+                      0.06,
+                      0.12,
+                      0.25,
+                      0.45,
+                      0.65,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.17546587731292285,
+                  0.35962699282158245
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.00028602709586726124,
+                      "error_db": 0.05193322902948112,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.0746755289847797,
+                      "error_db": 2.8800104702234786e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.04695972561925015,
+                      "error_db": -4.3103637453329826e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.003002568571015551,
+                      "error_db": -1.529667820272277e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005863862660839813,
+                      "error_db": 0.9191837427183642,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.431060511897474e-07,
+                      "error_db": -1.429498378411878,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 1.174120285517465
+              },
+              {
+                "name": "adaptive-3-0",
+                "adaptive_indices": [
+                  3
+                ],
+                "shape": {
+                  "evaluations": 10,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.025,
+                      0.06,
+                      0.12,
+                      0.25,
+                      0.45,
+                      0.65,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.04133333333333333,
+                      0.06633333333333333,
+                      0.08133333333333333,
+                      0.13133333333333333,
+                      0.4013333333333333,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.1608005468223644,
+                  0.25488914340439534
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.0002864684114190277,
+                      "error_db": 0.058628860503772064,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.07467559261606181,
+                      "error_db": 3.25007417511648e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.046959683293472686,
+                      "error_db": -8.224752008244128e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.003002573139759056,
+                      "error_db": 5.0786028547699135e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005852556142459902,
+                      "error_db": 0.9108017274479406,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.43447340282197e-07,
+                      "error_db": -1.4267701190254103,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 82,
+                  "optimizer_terminated": true,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.8090336322013401
+              },
+              {
+                "name": "adaptive-3-1",
+                "adaptive_indices": [
+                  3
+                ],
+                "shape": {
+                  "evaluations": 7,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.025,
+                      0.06,
+                      0.12,
+                      0.25,
+                      0.45,
+                      0.65,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.04133333333333333,
+                      0.06633333333333333,
+                      0.08133333333333333,
+                      0.13133333333333333,
+                      0.4013333333333333,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.1557411868495459,
+                  0.2236234101193264
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.0002861740997722518,
+                      "error_db": 0.05416471636808751,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.07467555010538657,
+                      "error_db": 3.0028426997922952e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.046959717357221833,
+                      "error_db": -5.074455438113243e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.003002570575739926,
+                      "error_db": 1.369984336114926e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005902510883851372,
+                      "error_db": 0.9477138081430408,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.368968201716896e-07,
+                      "error_db": -1.4794364767585892,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.7145662774085156
+              },
+              {
+                "name": "adaptive-2,3-0",
+                "adaptive_indices": [
+                  2,
+                  3
+                ],
+                "shape": {
+                  "evaluations": 10,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.06133333333333334,
+                      0.17633333333333334,
+                      0.3913333333333333,
+                      0.5213333333333333,
+                      0.6663333333333333,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.04133333333333333,
+                      0.06633333333333333,
+                      0.08133333333333333,
+                      0.13133333333333333,
+                      0.4013333333333333,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.18322277570892784,
+                  0.2525283768564395
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.0002864927847174016,
+                      "error_db": 0.05899835111037287,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.07467559609680903,
+                      "error_db": 3.2703173258334425e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.04695978843154505,
+                      "error_db": 1.49865972449176e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.0030025715825721575,
+                      "error_db": 2.8262751969669133e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005855185945502703,
+                      "error_db": 0.9127527594413134,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.429784527578432e-07,
+                      "error_db": -1.4305188385128929,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.9669235260274243
+              },
+              {
+                "name": "adaptive-2,3-1",
+                "adaptive_indices": [
+                  2,
+                  3
+                ],
+                "shape": {
+                  "evaluations": 9,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.06133333333333334,
+                      0.17633333333333334,
+                      0.3913333333333333,
+                      0.5213333333333333,
+                      0.6663333333333333,
+                      0.8
+                    ],
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.04133333333333333,
+                      0.06633333333333333,
+                      0.08133333333333333,
+                      0.13133333333333333,
+                      0.4013333333333333,
+                      0.8
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.18115003331261537,
+                  0.2236195864767092
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00028262713343940246,
+                      "generated_power": 0.0002862273195515595,
+                      "error_db": 0.05497229845184015,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.07467503377795298,
+                      "generated_power": 0.0746755577737539,
+                      "error_db": 3.0474400203720437e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 0.04695977222670378,
+                      "generated_power": 0.046959681294352594,
+                      "error_db": -8.409635461924428e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 0.003002569628577533,
+                      "generated_power": 0.0030025748697352942,
+                      "error_db": 7.580853034248229e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 0.00047453190320104915,
+                      "generated_power": 0.0005901266218784642,
+                      "error_db": 0.9467979128874762,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.548044979324935e-07,
+                      "generated_power": 5.369193898898632e-07,
+                      "error_db": -1.4792539147154662,
+                      "significant_target": false,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 32,
+                  "optimizer_terminated": true,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.12539528947437267,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.8951620740422515
+              }
+            ],
+            "policy": "Retain qualified v2 fixed reference; for each nonempty subset of reliable upper groups, greedily place<=8 linear amplitude knots>=10ms apart, two amplitude-shape/spectral alternations. Fit/score normalized curves weighted by inverse max(v2 band RMSE,.05). Select lowest qualified score; original six spectral gates and per-band nonregression vs original band-attack entry unchanged. No extra runtime component or parameter capacity.",
+            "limitations": "Time-shape tradeoffs against v2 remain possible and are reported per band. Only two upper groups, one fit seed and one crop; no mechanical timbre or source-separation claim. Coarse energy controls do not contain PCM, audio-rate envelopes or full fine structure.",
+            "reference_fit": {
+              "method": "band-contour-v2",
+              "seed": 27431,
+              "bands": [
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "contrast_db": 17.69006725308664,
+                  "selected": true,
+                  "reason": "At least3dB band event/background contrast"
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "contrast_db": 14.722835464307861,
+                  "selected": true,
+                  "reason": "At least3dB band event/background contrast"
+                }
+              ],
+              "baseline_shape_rmse": [
+                0.9595893505158598,
+                1.0351233587419177
+              ],
+              "selected_attempt": 1,
+              "qualified": true,
+              "attempts": [
+                {
+                  "step": 0,
+                  "shape": {
+                    "evaluations": 12,
+                    "optimizer_terminated": true
+                  },
+                  "response": {
+                    "method": "finite-response-gains-v1",
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.0002865994658267624,
+                        "error_db": 0.06061522928696139,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467561144397351,
+                        "error_db": 3.359572564654748e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.046959751391216796,
+                        "error_db": -1.9269128878693565e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.0030025718013121164,
+                        "error_db": 3.1426625039974216e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.000584794199984671,
+                        "error_db": 0.907376408704874,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 5.437383045188708e-07,
+                        "error_db": -1.424445508393548,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "groups": 16,
+                    "evaluations": 190,
+                    "optimizer_terminated": true,
+                    "amplitude_contract_fits": true,
+                    "seed": 27431,
+                    "target_positive_psd_excess_power": 0.12539528947437267,
+                    "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                    "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                    "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                  },
+                  "shape_rmse": [
+                    0.23368674374188084,
+                    0.36852837272705413
+                  ],
+                  "temporal_nonregression": true,
+                  "qualified": true
+                },
+                {
+                  "step": 1,
+                  "shape": {
+                    "evaluations": 10,
+                    "optimizer_terminated": true
+                  },
+                  "response": {
+                    "method": "finite-response-gains-v1",
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00028262713343940246,
+                        "generated_power": 0.00028597908376433673,
+                        "error_db": 0.05120416727609017,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.07467503377795298,
+                        "generated_power": 0.07467552526405946,
+                        "error_db": 2.8583716772571893e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 0.04695977222670378,
+                        "generated_power": 0.046959684676549214,
+                        "error_db": -8.096841755548312e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 0.003002569628577533,
+                        "generated_power": 0.003002578014761216,
+                        "error_db": 1.2129837645952806e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 0.00047453190320104915,
+                        "generated_power": 0.0005874378778990306,
+                        "error_db": 0.9269653057899345,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.548044979324935e-07,
+                        "generated_power": 5.416812100832861e-07,
+                        "error_db": -1.440907085133865,
+                        "significant_target": false,
+                        "passed": true
+                      }
+                    ],
+                    "groups": 16,
+                    "evaluations": 32,
+                    "optimizer_terminated": true,
+                    "amplitude_contract_fits": true,
+                    "seed": 27431,
+                    "target_positive_psd_excess_power": 0.12539528947437267,
+                    "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                    "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                    "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                  },
+                  "shape_rmse": [
+                    0.15394307765438994,
+                    0.3511149565086163
+                  ],
+                  "temporal_nonregression": true,
+                  "qualified": true
+                }
+              ],
+              "policy": "Only upper bands with >=3dB mean band event/background contrast receive8 coarse knots. Fit mean-normalized power-curve shape, then unit-amplitude existing-component finite-response gains; two bounded alternations, choose qualified lowest shape error. Original six spectral gates and per-selected-band temporal nonregression both required.",
+              "limitations": "A low-contrast band keeps its original local envelopes, not an inferred silent or isolated source. Spectral positive-bin excess and band-total temporal excess differ; shape fitting does not treat them as identical energy targets. One fit seed/crop does not establish naturalness, physical RPM or source identity. Runtime components/counts remain unchanged."
+            },
+            "fixed_reference_shape_rmse": [
+              0.15394307765438994,
+              0.3511149565086163
+            ],
+            "adaptive_selected": true
+          },
+          "old_v2_parameters_exact": true
+        },
+        {
+          "key": "B",
+          "seeds": [
+            {
+              "seed": 27431,
+              "independent_model_error": 1.8700269457938568e-09
+            },
+            {
+              "seed": 48271,
+              "independent_model_error": 1.8636221107981576e-09
+            },
+            {
+              "seed": 93931,
+              "independent_model_error": 1.862673085217814e-09
+            },
+            {
+              "seed": 17389,
+              "independent_model_error": 1.887095729680155e-09
+            }
+          ],
+          "contour_fit": {
+            "method": "band-contour-v3",
+            "seed": 27431,
+            "bands": [
+              {
+                "hz": [
+                  1200,
+                  4500
+                ],
+                "contrast_db": -2.1539049116087052,
+                "selected": false,
+                "reason": "Band contrast below3dB; retain original local envelopes"
+              },
+              {
+                "hz": [
+                  4500,
+                  14000
+                ],
+                "contrast_db": 8.83121494605861,
+                "selected": true,
+                "reason": "At least3dB band event/background contrast"
+              }
+            ],
+            "baseline_shape_rmse": [
+              4.7257575239574585
+            ],
+            "selected_attempt": 2,
+            "qualified": true,
+            "attempts": [
+              {
+                "name": "fixed-reference",
+                "adaptive_indices": [],
+                "shape_rmse": [
+                  2.830971332309393
+                ],
+                "qualified": true,
+                "temporal_nonregression": true,
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00016981245854587071,
+                      "generated_power": 0.00016981201547377244,
+                      "error_db": -1.1331560713716421e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.00015784873727834302,
+                      "generated_power": 0.00015785107667687346,
+                      "error_db": 6.436417304326775e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 1.663938888338711e-05,
+                      "generated_power": 1.6639503759138934e-05,
+                      "error_db": 2.9982911785965982e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 2.417159905101054e-06,
+                      "generated_power": 2.417162991710618e-06,
+                      "error_db": 5.545750790925072e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 3.640472791192514e-07,
+                      "generated_power": 4.42693755132564e-07,
+                      "error_db": 0.8494560614605562,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.263885273485536e-08,
+                      "generated_power": 5.963020131169372e-08,
+                      "error_db": -0.8570270075031059,
+                      "significant_target": true,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.00034715443074455603,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "score": 1.0
+              },
+              {
+                "name": "adaptive-3-0",
+                "adaptive_indices": [
+                  3
+                ],
+                "shape": {
+                  "evaluations": 47,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.03633333333333333,
+                      0.05133333333333333,
+                      0.06133333333333334,
+                      0.09633333333333333,
+                      0.13633333333333333,
+                      0.75
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.47550859143221214
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00016981245854587071,
+                      "generated_power": 0.00016981245575770947,
+                      "error_db": -7.130707986254823e-08,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.00015784873727834302,
+                      "generated_power": 0.00015784876309176614,
+                      "error_db": 7.102132395510882e-07,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 1.663938888338711e-05,
+                      "generated_power": 1.6639389106344124e-05,
+                      "error_db": 5.819264241378332e-08,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 2.417159905101054e-06,
+                      "generated_power": 2.4171960251319243e-06,
+                      "error_db": 6.489687693617841e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 3.640472791192514e-07,
+                      "generated_power": 4.5218320046472635e-07,
+                      "error_db": 0.9415663388337808,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.263885273485536e-08,
+                      "generated_power": 5.835959910274894e-08,
+                      "error_db": -0.9505667640207658,
+                      "significant_target": true,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.00034715443074455603,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.02821277421188959
+              },
+              {
+                "name": "adaptive-3-1",
+                "adaptive_indices": [
+                  3
+                ],
+                "shape": {
+                  "evaluations": 24,
+                  "optimizer_terminated": true,
+                  "seconds": [
+                    [
+                      0.0,
+                      0.021333333333333333,
+                      0.03633333333333333,
+                      0.05133333333333333,
+                      0.06133333333333334,
+                      0.09633333333333333,
+                      0.13633333333333333,
+                      0.75
+                    ]
+                  ],
+                  "method": "greedy-eight-knots-v1"
+                },
+                "shape_rmse": [
+                  0.47446115301885794
+                ],
+                "response": {
+                  "method": "finite-response-gains-v1",
+                  "qualified": true,
+                  "bands": [
+                    {
+                      "hz": [
+                        0,
+                        60
+                      ],
+                      "target_power": 0.00016981245854587071,
+                      "generated_power": 0.00016981235607247498,
+                      "error_db": -2.6207525711818067e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        60,
+                        300
+                      ],
+                      "target_power": 0.00015784873727834302,
+                      "generated_power": 0.00015784924634785328,
+                      "error_db": 1.4006176198939319e-05,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        300,
+                        1200
+                      ],
+                      "target_power": 1.663938888338711e-05,
+                      "generated_power": 1.6639400232252987e-05,
+                      "error_db": 2.9620968538115138e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        1200,
+                        4500
+                      ],
+                      "target_power": 2.417159905101054e-06,
+                      "generated_power": 2.4171577202997585e-06,
+                      "error_db": -3.925464647897435e-06,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        4500,
+                        14000
+                      ],
+                      "target_power": 3.640472791192514e-07,
+                      "generated_power": 4.5218443554488715e-07,
+                      "error_db": 0.9415782010118862,
+                      "significant_target": true,
+                      "passed": true
+                    },
+                    {
+                      "hz": [
+                        14000,
+                        24001
+                      ],
+                      "target_power": 7.263885273485536e-08,
+                      "generated_power": 5.836145754492079e-08,
+                      "error_db": -0.9504284665783981,
+                      "significant_target": true,
+                      "passed": true
+                    }
+                  ],
+                  "groups": 16,
+                  "evaluations": 240,
+                  "optimizer_terminated": false,
+                  "amplitude_contract_fits": true,
+                  "seed": 27431,
+                  "target_positive_psd_excess_power": 0.00034715443074455603,
+                  "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                  "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                  "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                },
+                "temporal_nonregression": true,
+                "qualified": true,
+                "score": 0.028088618321840786
+              }
+            ],
+            "policy": "Retain qualified v2 fixed reference; for each nonempty subset of reliable upper groups, greedily place<=8 linear amplitude knots>=10ms apart, two amplitude-shape/spectral alternations. Fit/score normalized curves weighted by inverse max(v2 band RMSE,.05). Select lowest qualified score; original six spectral gates and per-band nonregression vs original band-attack entry unchanged. No extra runtime component or parameter capacity.",
+            "limitations": "Time-shape tradeoffs against v2 remain possible and are reported per band. Only two upper groups, one fit seed and one crop; no mechanical timbre or source-separation claim. Coarse energy controls do not contain PCM, audio-rate envelopes or full fine structure.",
+            "reference_fit": {
+              "method": "band-contour-v2",
+              "seed": 27431,
+              "bands": [
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "contrast_db": -2.1539049116087052,
+                  "selected": false,
+                  "reason": "Band contrast below3dB; retain original local envelopes"
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "contrast_db": 8.83121494605861,
+                  "selected": true,
+                  "reason": "At least3dB band event/background contrast"
+                }
+              ],
+              "baseline_shape_rmse": [
+                4.7257575239574585
+              ],
+              "selected_attempt": 1,
+              "qualified": true,
+              "attempts": [
+                {
+                  "step": 0,
+                  "shape": {
+                    "evaluations": 28,
+                    "optimizer_terminated": true
+                  },
+                  "response": {
+                    "method": "finite-response-gains-v1",
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00016981245854587071,
+                        "generated_power": 0.00016981249489352577,
+                        "error_db": 9.295892936265742e-07,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.00015784873727834302,
+                        "generated_power": 0.00015784873708838857,
+                        "error_db": -5.226279748478968e-09,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 1.663938888338711e-05,
+                        "generated_power": 1.663938886431177e-05,
+                        "error_db": -4.978736887523901e-09,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 2.417159905101054e-06,
+                        "generated_power": 2.4171606182681007e-06,
+                        "error_db": 1.2813569621019714e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 3.640472791192514e-07,
+                        "generated_power": 4.425508488684069e-07,
+                        "error_db": 0.848053886237765,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.263885273485536e-08,
+                        "generated_power": 5.96642552497116e-08,
+                        "error_db": -0.8545475230079745,
+                        "significant_target": true,
+                        "passed": true
+                      }
+                    ],
+                    "groups": 16,
+                    "evaluations": 240,
+                    "optimizer_terminated": false,
+                    "amplitude_contract_fits": true,
+                    "seed": 27431,
+                    "target_positive_psd_excess_power": 0.00034715443074455603,
+                    "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                    "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                    "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                  },
+                  "shape_rmse": [
+                    2.835957078897344
+                  ],
+                  "temporal_nonregression": true,
+                  "qualified": true
+                },
+                {
+                  "step": 1,
+                  "shape": {
+                    "evaluations": 19,
+                    "optimizer_terminated": true
+                  },
+                  "response": {
+                    "method": "finite-response-gains-v1",
+                    "qualified": true,
+                    "bands": [
+                      {
+                        "hz": [
+                          0,
+                          60
+                        ],
+                        "target_power": 0.00016981245854587071,
+                        "generated_power": 0.00016981201547377244,
+                        "error_db": -1.1331560713716421e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          60,
+                          300
+                        ],
+                        "target_power": 0.00015784873727834302,
+                        "generated_power": 0.00015785107667687346,
+                        "error_db": 6.436417304326775e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          300,
+                          1200
+                        ],
+                        "target_power": 1.663938888338711e-05,
+                        "generated_power": 1.6639503759138934e-05,
+                        "error_db": 2.9982911785965982e-05,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          1200,
+                          4500
+                        ],
+                        "target_power": 2.417159905101054e-06,
+                        "generated_power": 2.417162991710618e-06,
+                        "error_db": 5.545750790925072e-06,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          4500,
+                          14000
+                        ],
+                        "target_power": 3.640472791192514e-07,
+                        "generated_power": 4.42693755132564e-07,
+                        "error_db": 0.8494560614605562,
+                        "significant_target": true,
+                        "passed": true
+                      },
+                      {
+                        "hz": [
+                          14000,
+                          24001
+                        ],
+                        "target_power": 7.263885273485536e-08,
+                        "generated_power": 5.963020131169372e-08,
+                        "error_db": -0.8570270075031059,
+                        "significant_target": true,
+                        "passed": true
+                      }
+                    ],
+                    "groups": 16,
+                    "evaluations": 240,
+                    "optimizer_terminated": false,
+                    "amplitude_contract_fits": true,
+                    "seed": 27431,
+                    "target_positive_psd_excess_power": 0.00034715443074455603,
+                    "policy": "Six bands including below60Hz and above14kHz; nonnegative gains for each existing mode/SOS; exact finite-waveform cross-power, <=16 gains, max240 evaluations.",
+                    "limitations": "No frequency/envelope/phase/room change or recorded waveform playback. Statistical excess, one fit seed and band agreement do not establish source isolation, mechanical identity, transients or timbre acceptance.",
+                    "basis_policy": "Unit amplitudes for each existing listed mode/SOS, then original finite-response objective, cross-power, gain bounds, contract scaling and six spectral gates. No added frequencies or runtime components."
+                  },
+                  "shape_rmse": [
+                    2.830971332309393
+                  ],
+                  "temporal_nonregression": true,
+                  "qualified": true
+                }
+              ],
+              "policy": "Only upper bands with >=3dB mean band event/background contrast receive8 coarse knots. Fit mean-normalized power-curve shape, then unit-amplitude existing-component finite-response gains; two bounded alternations, choose qualified lowest shape error. Original six spectral gates and per-selected-band temporal nonregression both required.",
+              "limitations": "A low-contrast band keeps its original local envelopes, not an inferred silent or isolated source. Spectral positive-bin excess and band-total temporal excess differ; shape fitting does not treat them as identical energy targets. One fit seed/crop does not establish naturalness, physical RPM or source identity. Runtime components/counts remain unchanged."
+            },
+            "fixed_reference_shape_rmse": [
+              2.830971332309393
+            ],
+            "adaptive_selected": true
+          },
+          "old_v2_parameters_exact": true
+        }
+      ],
+      "known_delayed_burst_knots": true,
+      "absolute_power_scale_does_not_change_knot_times": true,
+      "source_components_and_capacity_unchanged": true,
+      "runtime_and_voices_unchanged": 459,
+      "author_bridge_sha256": "0f28d161c7689d75a5494de31b0d5547044c410756a69e741331d6d31e36aae0",
+      "timbre_accepted": false
+    },
+    "audit": {
+      "result": "passed",
+      "cases": [
+        {
+          "key": "A",
+          "master_event_frames": [
+            1786560,
+            1824960
+          ],
+          "master_background_frames": [
+            1680000,
+            1737600
+          ],
+          "contrast_db": [
+            20.790851631902918,
+            24.74171535677251,
+            25.73299099293386,
+            17.69006725308664,
+            14.722835464307858,
+            9.107826489801283
+          ],
+          "selected_band_indices": [
+            3,
+            4
+          ],
+          "seeds": [
+            {
+              "seed": 27431,
+              "shape_before": [
+                1.5320999247162372,
+                0.4219928391945369,
+                0.3901337407307064,
+                0.1539430778687715,
+                0.35111495438478046,
+                0.6669330719417055
+              ],
+              "shape_after": [
+                1.5321229635543396,
+                0.42200024233419886,
+                0.39087815215048477,
+                0.1557411854306345,
+                0.22362341168262406,
+                0.7278702333007446
+              ],
+              "relative_band_score_before": 0.9999999953437694,
+              "relative_band_score_after": 0.7145662709194393,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": 0.05416472888832388,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": 3.003072543918881e-05,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -5.073350513786319e-06,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": 1.3683525740150183e-06,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.9477138200561376,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -1.4794363764350398,
+                  "passed": true
+                }
+              ],
+              "peak": 0.9954189658164978
+            },
+            {
+              "seed": 48271,
+              "shape_before": [
+                1.5650726845737242,
+                0.4353697354729522,
+                0.39570432375578574,
+                0.14399316873789128,
+                0.4246130632371485,
+                0.6746056599838387
+              ],
+              "shape_after": [
+                1.5650829986115204,
+                0.43538434498614587,
+                0.39574208345328477,
+                0.14757896046754745,
+                0.2746042130827691,
+                0.74149309054573
+              ],
+              "relative_band_score_before": 1.1686918818316694,
+              "relative_band_score_after": 0.7653477911371809,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": -2.3463163122189905,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": 0.26382854415146095,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.07336905452995732,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.09210989270813161,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.8274427708154313,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -2.147016688535759,
+                  "passed": true
+                }
+              ],
+              "peak": 0.9814549088478088
+            },
+            {
+              "seed": 93931,
+              "shape_before": [
+                1.3471076450057822,
+                0.41517169425670253,
+                0.3583611624326612,
+                0.14846009767995152,
+                0.4045524418092564,
+                0.6839407965138659
+              ],
+              "shape_after": [
+                1.3471527891515316,
+                0.41517456339820447,
+                0.3589722185637431,
+                0.1521563626438129,
+                0.26423138788398404,
+                0.6997391440598885
+              ],
+              "relative_band_score_before": 1.1287925161472878,
+              "relative_band_score_after": 0.7716263992254628,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": -1.2496728778408142,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": 0.27430744965164683,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.1112877855575703,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.023506270870037926,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.9503251629523729,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -1.7658844092069568,
+                  "passed": true
+                }
+              ],
+              "peak": 1.0794646739959717
+            },
+            {
+              "seed": 17389,
+              "shape_before": [
+                1.3948103329431611,
+                0.4385118800731021,
+                0.3837229232709937,
+                0.17017482931485828,
+                0.4582073393802264,
+                0.8232597854710798
+              ],
+              "shape_after": [
+                1.3948217180859823,
+                0.43852517920988815,
+                0.3836568775471822,
+                0.17184318928578873,
+                0.28847780714494803,
+                0.8953176397241303
+              ],
+              "relative_band_score_before": 1.4625198775650072,
+              "relative_band_score_after": 0.9605550910291581,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": -2.5761810760355304,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": 0.19914577261043737,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.027809009217041644,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.014879042047838555,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.8279464248443752,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -1.336753406489723,
+                  "passed": true
+                }
+              ],
+              "peak": 0.9452375769615173
+            }
+          ],
+          "master_frames_exact": true
+        },
+        {
+          "key": "B",
+          "master_event_frames": [
+            729600,
+            765600
+          ],
+          "master_background_frames": [
+            585600,
+            633600
+          ],
+          "contrast_db": [
+            12.888953494669305,
+            21.236377454174974,
+            7.376625644881791,
+            -2.1539049116087035,
+            8.83121494605861,
+            17.52982242750456
+          ],
+          "selected_band_indices": [
+            4
+          ],
+          "seeds": [
+            {
+              "seed": 27431,
+              "shape_before": [
+                0.8487147518729921,
+                0.9801669546169218,
+                1.5100534860848822,
+                3.466812655186282,
+                2.830971341984232,
+                3.377369158129694
+              ],
+              "shape_after": [
+                0.8507777913157307,
+                0.9764696545610885,
+                1.5092241570175111,
+                3.4223970185842685,
+                0.47446114726270994,
+                0.7518934201056199
+              ],
+              "relative_band_score_before": 1.0000000068349961,
+              "relative_band_score_after": 0.0280886176403003,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": -2.624059335957835e-06,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": 1.4002355031852058e-05,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": 2.9597333881280754e-06,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -3.929493280449444e-06,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.9415781871842677,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -0.9504285626201746,
+                  "passed": true
+                }
+              ],
+              "peak": 0.0458327978849411
+            },
+            {
+              "seed": 48271,
+              "shape_before": [
+                0.8577865304333481,
+                0.9730881553148121,
+                1.5107841492190208,
+                3.4657237499535682,
+                2.8060693241938117,
+                3.1640761069028533
+              ],
+              "shape_after": [
+                0.8560028878993435,
+                0.9727674497163983,
+                1.5101026054767244,
+                3.429394364046997,
+                0.49332308035777084,
+                0.6703848889627172
+              ],
+              "relative_band_score_before": 0.9824848204207656,
+              "relative_band_score_after": 0.030366303349580164,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": 5.430370753827844e-05,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": -0.0022907425646985302,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.05528712941184507,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.049686846973802976,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 1.12102621231724,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -0.5758655928238834,
+                  "passed": true
+                }
+              ],
+              "peak": 0.04587256535887718
+            },
+            {
+              "seed": 93931,
+              "shape_before": [
+                0.8577505298387234,
+                0.974410182860739,
+                1.5093631498157436,
+                3.4626835087567924,
+                2.828493211952846,
+                3.273494352722074
+              ],
+              "shape_after": [
+                0.8559822731755267,
+                0.9735929025551098,
+                1.508412591145512,
+                3.4320017902540236,
+                0.5656047882345194,
+                0.9244178803835514
+              ],
+              "relative_band_score_before": 0.9982500453438055,
+              "relative_band_score_after": 0.03991675346750701,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": 0.0012965957276729002,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": -0.05847538276233631,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.056589063235075204,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.10669351745965136,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 0.9584702962632661,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -1.2308374951444714,
+                  "passed": true
+                }
+              ],
+              "peak": 0.04639308154582977
+            },
+            {
+              "seed": 17389,
+              "shape_before": [
+                0.8522032643764915,
+                0.9946101708928106,
+                1.518329441863758,
+                3.4605631536677697,
+                2.639960265187251,
+                3.236414227260686
+              ],
+              "shape_after": [
+                0.8528356434586588,
+                0.984775014970573,
+                1.5146497094991485,
+                3.4216169266330416,
+                0.45284514877831783,
+                0.8266550854249848
+              ],
+              "relative_band_score_before": 0.8696086227118063,
+              "relative_band_score_after": 0.02558753773658738,
+              "original_six_spectral_gates": [
+                {
+                  "hz": [
+                    0,
+                    60
+                  ],
+                  "error_db": -0.013864681406918336,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    60,
+                    300
+                  ],
+                  "error_db": -0.005903004882572416,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    300,
+                    1200
+                  ],
+                  "error_db": -0.024605681574002725,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    1200,
+                    4500
+                  ],
+                  "error_db": -0.041583211319519975,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    4500,
+                    14000
+                  ],
+                  "error_db": 1.4564403293439045,
+                  "passed": true
+                },
+                {
+                  "hz": [
+                    14000,
+                    24001
+                  ],
+                  "error_db": -0.27573335190186155,
+                  "passed": true
+                }
+              ],
+              "peak": 0.046522483229637146
+            }
+          ],
+          "master_frames_exact": true
+        }
+      ],
+      "method": "Independent periodic2048 Hann/channel-mean rFFT power; temporal hop240 positive band-total subtraction, spectral hop1024 positive per-bin subtraction. Eight actual C outputs.",
+      "limitations": "Aggregate relative-band score permits individual-band tradeoffs; not timbre acceptance, physical source/RPM identity or held-out engine generality.",
+      "timbre_accepted": false
+    },
+    "workbench": {
+      "result": "passed",
+      "browser": {
+        "result": "passed",
+        "project_id": "b0c65835a46c4db5b83f0d6342e54823",
+        "legacy_missing_attack_preserved": true,
+        "material_parameters_exact": true,
+        "weak_band_explicitly_retained": true,
+        "new_strategy_saved_and_restored": true,
+        "contour_edit_changes_C_PCM": true,
+        "invalid_time_preserves_saved_parameters": true,
+        "point_limit_and_first_point_checked": true,
+        "history_restores_PCM_exact": true,
+        "reload_preserves_controls": true,
+        "exports_HTTP200": true,
+        "scope_and_fit_dependencies": true,
+        "one_player_no_autoplay": true,
+        "desktop_mobile_checked": true,
+        "persistent_service_restarted": false,
+        "live_driver_not_launched": true,
+        "errors": []
+      },
+      "header_knots_exact": true,
+      "csv_knots_present": true,
+      "original_source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\B_decoded_float.wav",
+        "sha256": "2752235d33ec17776a3bb0a54c49545503318ab004f6f44095610e236547d51f",
+        "first_frame": 576000,
+        "last_frame": 960000,
+        "source_seconds": [
+          12.0,
+          20.0
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "own_server_closed": true,
+      "source_free_import_C_PCM_exact": true,
+      "actual_editable_project": "f30702c988ca4bc1a8b35c6f0c72bc62",
+      "actual_parameters": "E:\\VehicleSoundLab\\designs\\events\\f30702c988ca4bc1a8b35c6f0c72bc62\\789f4e2e84cb4073a02018f9c89d19ac\\parameters.json",
+      "timbre_accepted": false
+    },
+    "startup": {
+      "result": "passed",
+      "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+      "source_preset": "E:\\VehicleSoundLab\\references\\analysis\\event_joint_v1\\startup1\\candidate\\startup.recipe.json",
+      "source_preset_sha256": "f0d8098ae7ebc73c7e6686db8ea1c85b8a54d51925a6f089aae709baf5f6ffb8",
+      "candidate_profile": "E:\\VehicleSoundLab\\references\\analysis\\event_knots_v1\\verification1\\A\\analysis\\profile.json",
+      "candidate_profile_sha256": "0b8c2886f9f8139d33c545ae87ee98c2ab797ddfa4a943c9de8788e9d859c7e3",
+      "source_ABI": 11,
+      "author_ABI": 4,
+      "preset_schema": 7,
+      "take_schema": 8,
+      "continuous_19channels_exact": true,
+      "only_event_audio_changes": true,
+      "event_notices_exact": true,
+      "final_state_exact": true,
+      "variable_block_replay_exact": true,
+      "source_binding_verified": true,
+      "formal_voices_unchanged": 89,
+      "own_native_window_launched": false,
+      "persistent_service_restarted": false,
+      "timbre_accepted": false,
+      "description": "Same V12 runtime and composite A-exterior/F2-idle/A-cabin demonstration; only A catch parameters replaced. B cabin event remains a separate study."
+    },
+    "review": {
+      "result": "passed",
+      "browser": {
+        "result": "passed",
+        "decoded": [
+          {
+            "frames": 264000,
+            "channels": 2
+          },
+          {
+            "frames": 38400,
+            "channels": 2
+          },
+          {
+            "frames": 57600,
+            "channels": 1
+          },
+          {
+            "frames": 57600,
+            "channels": 1
+          },
+          {
+            "frames": 384000,
+            "channels": 2
+          },
+          {
+            "frames": 36000,
+            "channels": 2
+          },
+          {
+            "frames": 57600,
+            "channels": 1
+          },
+          {
+            "frames": 57600,
+            "channels": 1
+          },
+          {
+            "frames": 384000,
+            "channels": 2
+          },
+          {
+            "frames": 384000,
+            "channels": 2
+          }
+        ],
+        "ten_hashes_and_decodes": true,
+        "blob_switch_and_seek": true,
+        "playing_switch_position_and_volume_preserved": true,
+        "downloads_HTTP200": true,
+        "desktop_mobile": true,
+        "timbre_accepted": false,
+        "errors": []
+      },
+      "own_service_closed": true,
+      "persistent_service_restarted": false,
+      "audio_muted": true,
+      "timbre_accepted": false
+    }
+  },
+  "source_ABI": 11,
+  "author_ABI": 4,
+  "profile_bytes": 1408,
+  "preset_schema": 7,
+  "take_schema": 8,
+  "runtime_and_voices_unchanged": 459,
+  "formal_voices_unchanged": 89,
+  "source_files": {
+    "AGENTS.md": "9a857fcf1579dcdd78cc9c48a94c801f322586094e0b09ec8002ae3405974075",
+    "handoff/启动自适应控制点提参V1.md": "f0aeb2d4c35481755d94755dc69a68000736c045928b4586ded1e08de2f200ff",
+    "handoff/当前代码阅读入口.md": "736a259d1eed621354762887b3037d367dbfa5b0bf56c49f3a9862496735772c",
+    "tools/audit_event_joint_delivery_v1.py": "b9ddc947d469f79bdb166f9a7e045ba02f79664ee071bb9501a887349d78c193",
+    "tools/audit_event_knots_v1.py": "0fca31b543dc1f7675a294aa2c983329a17774a4b4a51032a4bdddc7562391ff",
+    "tools/audit_startup_contour_v1.py": "d653067943513d48b8e2bcf9db7a18d99102ef279b80e373d85091ea236683ac",
+    "tools/audit_startup_shape_v1.py": "124b74844dcc4d76ddd2c2e1b3b9261b5c8f32c759d8254465648706f970c80b",
+    "tools/author_event.py": "21dd3118405321df96d0482f9d502abb33fa137768df5b312eec425e66c29b33",
+    "tools/build_event_knots_review_v1.py": "496cf17b370dad1ac3e23ab509700329b907739dc32f486711d5619218b26918",
+    "tools/event_authoring/__init__.py": "307af1efd4fa8e12b4fb5b761585c905706eeaca7ac5780f8b882b10745fcfbd",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_authoring/band_scope.py": "4a4d77a3dfed79cf1e3430d81f9997b2f54b9dca82b74e6f98aae9f01767fac1",
+    "tools/event_authoring/context.py": "9b875dc75ea6ab2ad0e51f5908e30a603ec0b672367cbf690931461e97097029",
+    "tools/event_authoring/contour_adaptive.py": "bafffc2e11d526d8465f3adb876e394070997d404dd39fae08789a0c63421308",
+    "tools/event_authoring/contour_fit.py": "eee5cc3857ccd861882d8c1b9d687b4d48eb3705b8655e4fe2a70866d3c38db2",
+    "tools/event_authoring/contour_joint.py": "a92e3e632d133913dc56ec476a013d51c73f682043db35a790ff11305f6b24dd",
+    "tools/event_authoring/contour_knots.py": "f717f40622e7c09571a2fea2344869bc1ac67978c182ed23b64963e8a52c893b",
+    "tools/event_authoring/contract.py": "ee6f77e1c6115e5e93d9c871a9e98f00feef37f88d3d20df04087c686711f3e3",
+    "tools/event_authoring/export.py": "38c16be952b31a0606e5948b099338339277a710428cccbdf352bd987c90bc76",
+    "tools/event_authoring/fit.py": "073b31847a3f7e0e724ebcd25e5c66aa634e23793713ac3c1f0afb57ab5f21cc",
+    "tools/event_authoring/measure.py": "1b6f3e1902dcf142c65971e8b383e13f08d587b2e5dab6f5a0fa3804407cad4d",
+    "tools/event_authoring/model.py": "883cfa1f93eceba49c69b37590ffd22938f7fc01135d4ca718d5b79b9da5feb2",
+    "tools/event_authoring/native.py": "e7b08e385ba6a42578deadd40f11db44861fc6dcf095a2b320c248e29da75112",
+    "tools/event_authoring/response_basis.py": "09ec1063ba4bf9d1b1a59193e1f0cdae1c99de617fcc0757d3fe9deb9fb412fc",
+    "tools/event_authoring/response_fit.py": "79ee1cce874ac0c8251bc46af3e06bedaee870d31e43f5cc7930cdfc0d6c604b",
+    "tools/event_authoring/scan.py": "88aed60a2ca054521102f5e4782fb5c396f54427f7a44e1bfed6b02d295a0c85",
+    "tools/event_authoring/scoped_fit.py": "ffc2a5a92b9a7fb25958c44c6de3828d270c9300f0c6b9e8bea0a599a6555aab",
+    "tools/event_authoring/temporal_fit.py": "6796a0c643040643aa2f2316bc13e2725c3bbd5a76868b2ce4211c6c35c5372d",
+    "tools/event_designer/workspace.py": "8bf9d66f5343a313f8731d174f29c501df4b62c7a9301e93273cde17765a6419",
+    "tools/event_review.py": "231cdb653e3d192f051fb10d7527c00442edfc489ee1db10b7b8ed62121344d2",
+    "tools/finalize_event_knots_v1.py": "ba2785cbfa4f74b09d146c17fe26e8b49bc20fcbe4f3045366d2de7a03002535",
+    "tools/probe_event_knot_choices_v1.py": "111a7303e46438c5449886bb9d761f4d46362665cb366a0e3b01cc16d29bfb6c",
+    "tools/probe_event_knots_v1.py": "6a2dabad90d57179b087eabdf2593466a77df4acdd2211588d7c54dc1e10c36e",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/sound_designer/web/event_contours.js": "8425d9ad4b2a80f92f3e936efccb362121d6c99027a969dbb66faa4f9af91831",
+    "tools/sound_designer/web/events.css": "fd5893c12ca274b495d79b966416dfd1f72612bbde4ec0a508bd4da9a3f5bd44",
+    "tools/sound_designer/web/events.html": "84abef6ad8d033d3f289aaebf31040fa91e1124106dab23b430657d3a8fdfbb3",
+    "tools/sound_designer/web/events.js": "e5b21cfbc27a7c43c5a201ebfd85bc9985523aadf6315f7d606738720187bc3e",
+    "tools/startup_response_evidence_v1.py": "861eb976794171e44b5aee66534c53ddda737e2c14e764e50d5b4a1bf9d1fc6c",
+    "tools/verify_event_joint_review_v1.py": "e5cabeb2127fde3a5fcba78f9a303eb21c46e3fc49059eb8b9b5494d1a2c676d",
+    "tools/verify_event_joint_startup_v1.py": "69c6b41c680f292492f3ec04afabc1ca8eda376dca8bdcba73ef733cf4a6298e",
+    "tools/verify_event_joint_web_v1.cjs": "ab8d58beb1cc6c567ad0a933d7195a388c49708acb2cb3c591f890aedadd8531",
+    "tools/verify_event_knots_v1.py": "bf8a42cfe3ff2794a6dc6acd1f6d1b86628af530fbae301c1a7ed62648590498",
+    "tools/verify_event_knots_workbench_v1.py": "fe73e5494a23263f5a0e17472f4d8d14b1f1638a9465e5453fbba140c8f0f994",
+    "tools/verify_startup_contour_review_v1.cjs": "ed3034e0cb2c3186fef07db7b56a3ea16d899df04c636e575d8c949ea8c5fecb",
+    "tools/verify_startup_handoff_review_v1.py": "223888e01104203beb9fff1bb601dd8c2df3aeef79f48cfdef9a084626d8edcd"
+  },
+  "freeze": "E:\\VehicleSoundLab\\baselines\\event_knots_v1\\delivery1",
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\event_joint_v1\\delivery1",
+  "base_manifest_sha256": "a3c018734fa20df98442e65215d7b8bbc5e2a07a997cf1bf9213faf1a018b627",
+  "editable_parameters": "E:\\VehicleSoundLab\\designs\\events\\f30702c988ca4bc1a8b35c6f0c72bc62\\789f4e2e84cb4073a02018f9c89d19ac\\parameters.json",
+  "retained_limitations": [
+    "A mid-band normalized shape slightly worse than V2; high band and aggregate score improve",
+    "one unscaled A float seed peak about1.079FS retained; all audition uses fixed.25 gain/no limiter",
+    "choices2 probe missing numpy import retained; no signal gate relaxation",
+    "single fixed crop/fit seed per material, not mechanical identity/RPM or held-out engine qualification"
+  ],
+  "new_timbre_accepted": false,
+  "goal_complete": false,
+  "ADI_optimization": false,
+  "spatial_added": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "persistent_service_restarted": false,
+  "unresolved": [
+    "startup mechanical fine texture",
+    "idle naturalness",
+    "confirmed full-band afterfire",
+    "other event timbres",
+    "full RPM/load/state coverage"
+  ]
+}

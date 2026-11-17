@@ -1,0 +1,45 @@
+{
+  "schema": "vsl.unified-dna-handoff/1",
+  "date": "2026-11-17",
+  "scope": "Current local integration; complete vehicle timbre calibration is not claimed.",
+  "ui_revision": 14,
+  "abi": 12,
+  "bridge_sha256": "1865e6963c7667a5f163eea5a0ece18ac8e471f33ae6ebb313e9a23e83598418",
+  "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+  "catalog_assets_sha256": "f3b0fbf93e070153add2011ddc0e2e11519bccbef5a9787349f0871c1e242281",
+  "exact_source_files": 873,
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\dna_unified_v1",
+  "artifacts": {
+    "build-final.log": "da4082033a26c95a73224dfcce59b3befa9f0f1b002e26aee49a4621c6addd2a",
+    "verification2/verification.json": "93d245838a473cd7fb026fac9941b8a00f9e0d0752fe2dd8dd9ea921e65568f7",
+    "verification2/Full-flow.wav": "9a99ae50bce9941de82b8a25e933114e13756b74b15d88351c9f8e79a3d265c4",
+    "verification2/Full-flow.vsltake.json": "8d5c3bc959e7c7ca510b30c7339f22c799a08075081cbb336e0708dc0fbdc577",
+    "verification2/Unified-DNA.vslpreset.json": "da881bc97c1b48cd67ee0c7e6529b88254a00912ec49fa0002f34ea1d2c9fb0f",
+    "ui1/verification.json": "17fecd7fb1aa3a07f38794db0580383abe183fea3bab096a3d553f1d35fff378",
+    "ui1/dna.png": "cbb0cb36b7aa7728243a1b4a56fe0fb03ae74aaa1ec1df31183bfd2730ac9a93",
+    "ui1/layers.png": "7603a29bc5a01036b98e934684f88a153ab8aa03f9e6afd82fe8a8f4c847ac07",
+    "web2/verification.json": "9aa01955ca696d071074681df25c670ef776b3dc3043ae6ee8bf140b935a9d81",
+    "web2/browser-verification.json": "529d06fb061728062154c80c8b2178b96e7e080840e00e5621c4c448928f3752",
+    "app-v14.ready.json": "407b1d0c8e717ded78db400dd4a5d9e0a6ecbee1623ae5d1fdc7b0fb83dfb10a",
+    "source_binding.json": "abaa99b6bb97727afac0e45981f8bfb9d7cf2a7ce172b97e212bbd7ca4767a98"
+  },
+  "checks": {
+    "c_tests": 7,
+    "role_isolation": true,
+    "complete_flow_exact_replay": true,
+    "app_controls_save_restore": true,
+    "web_recipe_roundtrip": true,
+    "diagram_viewed": true
+  },
+  "not_established": [
+    "new human timbre approval",
+    "physical intake/exhaust separation",
+    "full RPM/load calibration",
+    "manual mouse verification",
+    "ADI MCPS"
+  ],
+  "first_attempts_preserved": [
+    "build1.log",
+    "verification1.log"
+  ]
+}

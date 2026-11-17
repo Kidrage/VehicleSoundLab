@@ -11,6 +11,9 @@ typedef struct {
     double re[MS_MAX_MODES][2],im[MS_MAX_MODES][2];
     double cosine[MS_MAX_MODES],sine[MS_MAX_MODES];
     double dc[MS_MAX_MODES],ds[MS_MAX_MODES],weight[MS_MAX_MODES];
+    /* Rotation step is constant within each linear ratio ramp. Re-anchor to
+       the exact ratio at least every64 samples and at every slope boundary. */
+    double rotation_step,step_dc[MS_MAX_MODES],step_ds[MS_MAX_MODES];
     uint64_t frame;
 } MsVoice;
 /* Non-RT validation before mutation. Ratio controls independent modal

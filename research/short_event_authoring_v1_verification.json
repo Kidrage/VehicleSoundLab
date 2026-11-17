@@ -1,0 +1,128 @@
+{
+  "schema": "vsl.short-event-authoring-milestone/1",
+  "result": "passed",
+  "goal_complete": false,
+  "previous_goal_turn": "No synthesis progress: source/render/MCPS boundary confirmation only",
+  "current_goal_turn": "Usable short transient authoring through actual C; approved-source fixed selection and diagnostic failures retained",
+  "checks": {
+    "detector": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\probe2\\report.json",
+      "sha256": "670eeb1ac83a8243944445a2959a0e70332685b554f080d22e49ed450cb7ae61",
+      "result": "passed"
+    },
+    "author": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\author2\\report.json",
+      "sha256": "a0bc7429682fce28860b63fec12318613e173a0c5369e9b32b24dc00e0907e38",
+      "result": "passed"
+    },
+    "workbench": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\web6\\report.json",
+      "sha256": "94fccd0f6f3ad47de429fc1b5b06257677289c6b024d70b53527b8573ffacada",
+      "result": "passed"
+    },
+    "legacy": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\legacy-regression1\\report.json",
+      "sha256": "68cd6753454640e30787c6daa2bbdf2b803547722ae60dbada165cc785967854",
+      "result": "passed"
+    },
+    "material": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\B-fits2\\report.json",
+      "sha256": "de56363f4435683d57fe953bda6bef9957b821585892b9cb5d7b2bdd93c34fb0",
+      "result": "passed"
+    },
+    "review": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\review-web1\\report.json",
+      "sha256": "0dc2de95fbf6fc62a27d2bba37763e51de4f0fe5024d8fdcb81d1360118dd9ff",
+      "result": "passed"
+    },
+    "header": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\header1\\report.json",
+      "sha256": "ead5ddd390434d9d9206447ca8c64eadfa0cb5ba351c2a1005d3e678e31083f0",
+      "result": "passed"
+    },
+    "published": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\short_event_scan_v1\\published-review.json",
+      "sha256": "c5fc90f1864a9c19e2f4bc8875923a894e9ba1a8289725d12dbc5ab39787b2a1",
+      "result": "passed"
+    }
+  },
+  "source_files": {
+    "AGENTS.md": "27655fb0763e85f90091152db055951f8d8bbc700281494e12668e60ebc7cd05",
+    "handoff/当前代码阅读入口.md": "2a155ffefc8d9401ceca3cde77487ab2e1db8a57d6149cdf3988c5655f99ab0a",
+    "handoff/毫秒级事件提参与素材核查V1.md": "a495ee5a25875f59150ce5aa9e6422ed48b17972d8333d6eb2f1659ff318070c",
+    "research/short_event_scan_v1_plan.json": "3113b5c0c479656dcf5688873b66989a6143a2dae4380ffce2f5a85308147600",
+    "tools/audit_short_event_delivery_v1.py": "95c1d412c83caaa9cafc8ccfb79ce599605b9a1d8cf662ac328989a48ecf9ca6",
+    "tools/author_event.py": "2ffd1173a10ea5b4f5c584133c93c7c36288f0af2732df37537064ac47aa7165",
+    "tools/build_B_short_event_candidates_v1.py": "8019a8529ad351a8e8b7cdc95bfee3fd26c870defe00af0de00a1adcca76f6df",
+    "tools/event_authoring/__init__.py": "307af1efd4fa8e12b4fb5b761585c905706eeaca7ac5780f8b882b10745fcfbd",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_authoring/band_scope.py": "4a4d77a3dfed79cf1e3430d81f9997b2f54b9dca82b74e6f98aae9f01767fac1",
+    "tools/event_authoring/context.py": "ed231e89dd7b42a8f4cb8db733bb21b3d2013bb6bce776c0db4fba2fe33be1bf",
+    "tools/event_authoring/contour_adaptive.py": "bafffc2e11d526d8465f3adb876e394070997d404dd39fae08789a0c63421308",
+    "tools/event_authoring/contour_all_bands.py": "6ea36b98e00601ad8f823bb11e77339fe5692000f0f9404bc45eae86e27fa2ac",
+    "tools/event_authoring/contour_fit.py": "eee5cc3857ccd861882d8c1b9d687b4d48eb3705b8655e4fe2a70866d3c38db2",
+    "tools/event_authoring/contour_joint.py": "8aaa74beec1850820b42b22d55c319f09914fc0d4d2a5bf00a3cd68372e76a80",
+    "tools/event_authoring/contour_joint_response.py": "2a879d4256075b107dd5e1728f476838f61859d5a6aee867ac735e98e75cecf8",
+    "tools/event_authoring/contour_knots.py": "e896c9329159af8a2f69e97b69e3d9c8f99f7782a318a5194c0ba4ee64ad94a4",
+    "tools/event_authoring/contour_response.py": "3e0da2fbef3dc0d2ba9f875ca211b93ffe73aea45e93d4ffdb512f7b70c1f94d",
+    "tools/event_authoring/contract.py": "ee6f77e1c6115e5e93d9c871a9e98f00feef37f88d3d20df04087c686711f3e3",
+    "tools/event_authoring/export.py": "38c16be952b31a0606e5948b099338339277a710428cccbdf352bd987c90bc76",
+    "tools/event_authoring/fit.py": "073b31847a3f7e0e724ebcd25e5c66aa634e23793713ac3c1f0afb57ab5f21cc",
+    "tools/event_authoring/measure.py": "71662ba64c5401da472c1e3bfc5c04c4e36827666739c54499b0db997b653835",
+    "tools/event_authoring/model.py": "883cfa1f93eceba49c69b37590ffd22938f7fc01135d4ca718d5b79b9da5feb2",
+    "tools/event_authoring/native.py": "e7b08e385ba6a42578deadd40f11db44861fc6dcf095a2b320c248e29da75112",
+    "tools/event_authoring/response_basis.py": "ef7ffdaa187498748a6fca1c0c00fd9d22a65ad2b1b0ae47cb3fc55ecd8338b4",
+    "tools/event_authoring/response_fit.py": "79ee1cce874ac0c8251bc46af3e06bedaee870d31e43f5cc7930cdfc0d6c604b",
+    "tools/event_authoring/scan.py": "9e8d7fb3a8c898fb582a07b40b04a1cb2de7314541bb37d20640d599e81d5c8e",
+    "tools/event_authoring/scoped_fit.py": "ffc2a5a92b9a7fb25958c44c6de3828d270c9300f0c6b9e8bea0a599a6555aab",
+    "tools/event_authoring/short_time.py": "4264ea2dd73669a8ad01a19be4d25bdb5aca4dee4b2032dae1172590577895b6",
+    "tools/event_authoring/temporal_fit.py": "6796a0c643040643aa2f2316bc13e2725c3bbd5a76868b2ce4211c6c35c5372d",
+    "tools/event_designer/__init__.py": "8ffa7bdde29c803a039b202c65796a2534c586d35b7d6e3e1b8105b612f21f30",
+    "tools/event_designer/candidates.py": "004bbfe703bdd7a2fb21cb010931797f2f1317124f17c6abe8577e4c50aea555",
+    "tools/event_designer/context.py": "7348baba20060883deaa7215668675065f453f615b8ea3c3e9a2937ce11626af",
+    "tools/event_designer/media.py": "da0a53b35e8bce09719f04ab5f60c22e421ce6050eea323f33951f0d12166e8d",
+    "tools/event_designer/package.py": "0ba2b7c04dc872ff68f94f329e5f6c7acdfd208265e1b09e393bf655f7418f4f",
+    "tools/event_designer/workspace.py": "1cd9b9c8696ebd609a60ae49530f9c9f36309999c8c3e3e2f56cdd972200cc46",
+    "tools/event_review.py": "231cdb653e3d192f051fb10d7527c00442edfc489ee1db10b7b8ed62121344d2",
+    "tools/finalize_short_event_authoring_v1.py": "84ad7a5551737cf26f98f914cfd1719aac96766e4d4b0d0bf1d203b357d29194",
+    "tools/inspect_event_timeline_v1.py": "e909ddb27680c1633d03d5034cac87350877de4a4f0703ee0e54c371a4288829",
+    "tools/probe_short_event_scan_v1.py": "516417447feabc6e3fc1cbf653fde0a6c73e361b867a29166225a0ef3de1c8e5",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/scan_approved_event_region.py": "88b722ea7afbeac1d601940fe274385d428805ec96da6fd4d4e26eb3024db28c",
+    "tools/sound_designer/web/event_candidates.js": "098ec2bdcdcb1f342a5e3717a00e4b3f01ab8536d6246cf10c5b553a12392051",
+    "tools/sound_designer/web/events.css": "fd5893c12ca274b495d79b966416dfd1f72612bbde4ec0a508bd4da9a3f5bd44",
+    "tools/sound_designer/web/events.html": "1007f8f996e62596e83a43b45a8d2451f9ccc73019997e18cebf1c11f4495ed6",
+    "tools/sound_designer/web/events.js": "b6faee22317f5520a5265335b5ef00808ab8a557c5e8ad6a9a496984317754f8",
+    "tools/verify_event_response_workbench_v1.py": "39e85c4b55278ef24c282fc599d9b329ffd1f29b6a33d684f2a95cf001cb85e0",
+    "tools/verify_low_mid_event_scan_v1.py": "97137fbb00f4fb173acc57b302b6e6d9f47739724f30f8ecdda57b6e135eb80a",
+    "tools/verify_low_mid_event_scan_web_v1.cjs": "1c5c1d9acee443d69efa07600616c003aba81e0ab0d476f938a1c0d030a22283",
+    "tools/verify_short_event_authoring_v1.py": "5b2ef8748ae647164e7d37be606d2cc0a9ea3f96fc971e314029b6d6fc0b24d7",
+    "tools/verify_short_event_review_v1.cjs": "c0e6eb4d7d54a0d8454d64744785516896057f4d1d02c2cd66bec86ae6efda60",
+    "tools/verify_short_event_review_v1.py": "c6466668ee4b23b4de814838d0f822d3667a9ad8f217d285b1c9ac369aaa714d",
+    "tools/verify_short_event_workbench_v1.py": "f798bd20ad2e2529a5f20f37b0f2272695eb966ea04f35620b342eb2e0fa34b2",
+    "tools/verify_short_event_workbench_web_v1.cjs": "072cc2a71f84da878d9645ef45f19f4b8e276c39f394660cb89ddcd17a076f24"
+  },
+  "runtime_voice_files_unchanged": 459,
+  "formal_voices_unchanged": 89,
+  "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+  "source_ABI": 11,
+  "author_ABI": 4,
+  "preset_schema": 8,
+  "take_schema": 9,
+  "ui_revision": 13,
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\catalog_asset_identity_v1\\delivery1",
+  "base_manifest_sha256": "c0bbb4dc82dad2508208655492a7a15bf4eb78f374e3d06fb7daea4e6b9273e8",
+  "freeze": "E:\\VehicleSoundLab\\baselines\\short_event_authoring_v1\\delivery1",
+  "physical_afterfire_confirmed": false,
+  "new_timbre_accepted": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "persistent_service_restarted": false,
+  "unresolved": [
+    "complete confirmed physical afterfire and other events",
+    "startup/idle mechanical naturalness",
+    "full RPM/load/state coverage"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "vsl.event-authoring-job/3",
+  "kind": "catch",
+  "name": "B Tecnica 片头启动建立补充候选",
+  "source": "E:/VehicleSoundLab/references/clean/B_decoded_float.wav",
+  "seconds": [16.0, 16.8],
+  "background_seconds": [18.0, 19.0],
+  "gated": false,
+  "response_fit": "source-response-v1",
+  "physical_identity_confirmed": false,
+  "context": "Approved B cabin startup-build observation after visible centre-console start-control action. Fit uses later running-engine18..19s as an explicit statistical reference to avoid attributing all continuous engine power to the added catch layer; it is not physical source separation. Early12.2..13.2s remains separate context. Fixed16..16.8s crop includes a changing mixed engine sound; no measured RPM trajectory, dry source or ignition instant. B cabin and A exterior recipes remain separate."
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.event-authoring-job/1",
+  "kind": "shift",
+  "name": "F3 换挡语境混合候选",
+  "source": "E:/VehicleSoundLab/references/analysis/state_media_v1/F3_inspect1/native_reference.wav",
+  "seconds": [200.48, 200.75],
+  "background_seconds": [200.15, 200.4],
+  "gated": false,
+  "physical_identity_confirmed": false,
+  "context": "Approved F3 video has a visible shift transition around200.5s. Mixed acoustic context; not isolated gearbox, fuel/injector or combustion timing."
+}

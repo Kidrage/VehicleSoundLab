@@ -1,0 +1,9 @@
+{
+  "result": "failed_before_fix",
+  "case": "V7 default vs preserved V6 with local E afterfire-slot candidate; neutral throttle .85 lifted at4s",
+  "old_requested_frame": 195264,
+  "new_requested_frame": 195263,
+  "cause": "0.018 * 48000 in double equals863.9999999999999; integer cast floors to863 instead of original864",
+  "correction": "nearest-frame fixed delays; historical random-gap floor unchanged",
+  "physical_afterfire_confirmed": false
+}

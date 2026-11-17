@@ -1,0 +1,23 @@
+{
+  "A_346_context": {
+    "source": "A",
+    "seconds": [342, 351],
+    "frames": [342, 343, 344, 345, 346, 346.4, 346.6, 346.72, 346.9, 347.1, 347.5, 348, 349, 350, 351],
+    "crop": [0, 0, 1, 1],
+    "caption": "Only both-background full-band candidate in the fixed exterior scan; context and physical identity unconfirmed"
+  },
+  "A_stationary_rev_context": {
+    "source": "A",
+    "seconds": [237, 249],
+    "frames": [237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249],
+    "crop": [0, 0, 1, 1],
+    "caption": "Stationary exterior rev sequence; no both-background full-band candidate passed here"
+  },
+  "A_road_context": {
+    "source": "A",
+    "seconds": [300, 355],
+    "frames": [300, 305, 310, 315, 320, 325, 330, 335, 340, 345, 350, 355],
+    "crop": [0, 0, 1, 1],
+    "caption": "Road sequence camera and edit context; not an ECU or event timing calibration"
+  }
+}

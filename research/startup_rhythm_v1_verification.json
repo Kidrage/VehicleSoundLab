@@ -1,0 +1,430 @@
+{
+  "schema": "vsl.startup-moving-osc-delivery/1",
+  "status": "candidate_pending_listening",
+  "sources": [
+    {
+      "relative": "AGENTS.md",
+      "sha256": "ba50559bbcab5dfbda638305ba4383cbad5dc232380ad5949f3cc188f28abff3"
+    },
+    {
+      "relative": "experiments\\startup_character_v1\\bridge.c",
+      "sha256": "cde9410835a04afb7785207ab2757339f4475696bbb224ee1209a0ae1a3486fb"
+    },
+    {
+      "relative": "experiments\\startup_character_v1\\CMakeLists.txt",
+      "sha256": "02fa1f2097ab0cc2c2287f90f6addea5982856ecb7adceed332216444d791e20"
+    },
+    {
+      "relative": "handoff\\启动拖转移动声线V2.md",
+      "sha256": "e46066bde3d27c7aa7e17c526a4edf8efca315ecf795c99784cdcf501284d294"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\CMakeLists.txt",
+      "sha256": "370a71b42df51fea289cbbfc608d91c48922a807b4aee6eba1d3008469e3f5e9"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\fft.c",
+      "sha256": "0ecea2e1f408f397eda2584e42f64f20c4a184492d325e9adb9f9c2918ca0003"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\fft.h",
+      "sha256": "c0f970e696b6e189f0709ba02a1bd0c58ea9c309cf412ffafb8b1de23c3638fb"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\filter.c",
+      "sha256": "d2cf4b8490778b063a9d1414c87ecfcc22770b7065c0342b6057ad6494eacc7d"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\filter.h",
+      "sha256": "defa1962670d411d0db3218d2aa6ee8928f8e8a4fdfbf49f95d2b8ae85bf0f77"
+    },
+    {
+      "relative": "modules\\partitioned_fir\\README.md",
+      "sha256": "8400179d8aaf2bd2a3e4124aee2dc75d86646e788d3bccbbad1da37e29eefc80"
+    },
+    {
+      "relative": "modules\\resonant_detail\\excitation.c",
+      "sha256": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991"
+    },
+    {
+      "relative": "modules\\resonant_detail\\excitation.h",
+      "sha256": "c2fa8f91a5aee1898ef37400df436f77ffe7188bb26796bd0e9b55bd2a29c4e2"
+    },
+    {
+      "relative": "modules\\spectral_texture\\CMakeLists.txt",
+      "sha256": "fcc4d6766af7f3853bfc842cafc759db969dae773fae24e2c54c061a1afe64df"
+    },
+    {
+      "relative": "modules\\spectral_texture\\io.c",
+      "sha256": "8c006aeb039789b8fef5c478a9a19ff6f43037b00e7c5db79e3b1654a271ebc7"
+    },
+    {
+      "relative": "modules\\spectral_texture\\io.h",
+      "sha256": "2a8d7e52d75e1ed82174a8478b6b407d5ac5bb423e6d55d15385f189aa817def"
+    },
+    {
+      "relative": "modules\\spectral_texture\\profile.c",
+      "sha256": "be314335cadf75d4b4f0b6195e18c673d52775d6374c79380486d3028e17c6a2"
+    },
+    {
+      "relative": "modules\\spectral_texture\\profile.h",
+      "sha256": "070b9502767db95da7befda6ba4ea3830d60e1a33d2b46ba5e52d3be7b935c4d"
+    },
+    {
+      "relative": "modules\\spectral_texture\\README.md",
+      "sha256": "f380a3f7ebd051454a9c5e0788e2314d2839e886b91d736ae2b330b2f234d45c"
+    },
+    {
+      "relative": "modules\\spectral_texture\\voice.c",
+      "sha256": "45fcc47a9ab4d21028bac30d550148e4f2ed9f095183fb07a93045c8fa179646"
+    },
+    {
+      "relative": "modules\\spectral_texture\\voice.h",
+      "sha256": "3d37d2bdb5b5630d228b7c610bc4a10fc8318d1340f4444cf5bcf95b6af3655b"
+    },
+    {
+      "relative": "modules\\startup_character\\README.md",
+      "sha256": "31817f66d32f3082b5b8afae68781dde3241506e4ab6ff4e4d1977d5f48dc44c"
+    },
+    {
+      "relative": "modules\\startup_character\\ridge.c",
+      "sha256": "7826e4444d44df4e2b444216a05da1cb2b31a9f340b4bc3d52ce4cb0cc3986c4"
+    },
+    {
+      "relative": "modules\\startup_character\\ridge.h",
+      "sha256": "ec22e459e93d626e3f07f7de8cd68d65a3860af453b9476e6a49d9c2fabf7531"
+    },
+    {
+      "relative": "modules\\startup_character\\voice.c",
+      "sha256": "7a4379b51c1189cd31b2e076b4098798e491932b760ee89f20b8fab2dbaa1568"
+    },
+    {
+      "relative": "modules\\startup_character\\voice.h",
+      "sha256": "46a86e13b56bbead92747ba33fef54f4c5ffe1345ceb5b081c144907f835d260"
+    },
+    {
+      "relative": "src\\io\\file.c",
+      "sha256": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8"
+    },
+    {
+      "relative": "src\\io\\file.h",
+      "sha256": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477"
+    },
+    {
+      "relative": "tools\\author_startup_ridges_v1.py",
+      "sha256": "1de5b16d7074499012e94c9d13b5236001898ae5c9996df68be6da56732a3bd0"
+    },
+    {
+      "relative": "tools\\render_startup_character_v1.py",
+      "sha256": "b616b6dc01b62266388af0e2a9284fcb29bdfd5edd2ff7da3df21a72e716310d"
+    },
+    {
+      "relative": "tools\\render_startup_ridges_v1.py",
+      "sha256": "1a9bc8a3f5d3f1b1caa8e3f74eebcb7d2304dea357926fdd7f45792db2e72ce8"
+    },
+    {
+      "relative": "tools\\startup_character_v1\\__init__.py",
+      "sha256": "a0543fc43a93cbfcb41ef285517ddb82dcb4ab2ed54168ec9030a4bc430220da"
+    },
+    {
+      "relative": "tools\\startup_character_v1\\author.py",
+      "sha256": "91cb10cb868703f8ad52e1f20037d2cdd2f9beebe0744e3b7502f3d94987d2a2"
+    },
+    {
+      "relative": "tools\\startup_character_v1\\native.py",
+      "sha256": "ab4509aa6b975dc252027eaf944eb9ee6fe7f4879be54660445c30e6b9e727c3"
+    },
+    {
+      "relative": "tools\\startup_character_v1\\ridge_native.py",
+      "sha256": "afeea04060fbca68f83eaedfe70eb7c6c2866bbbe4330e66c8f21ed214118360"
+    },
+    {
+      "relative": "tools\\startup_character_v1\\ridges.py",
+      "sha256": "b4e6b11e105ac32f4e78e22bf184fb3e79d4eb3ebd039d4a5b8cd84c7206ed81"
+    }
+  ],
+  "files": [
+    {
+      "path": "audio-audit.json",
+      "sha256": "5dc9c6b4a7c4da05e98e835773e886b3c62110e1fedef84169fb6d914a8f40bc"
+    },
+    {
+      "path": "Candidate-45943.wav",
+      "sha256": "9c312ed1111922cbac6656cdd3e7d1dbb0d69f90e3d3dc5da6464144fe6014fd"
+    },
+    {
+      "path": "Candidate-57269.wav",
+      "sha256": "93be18773afb993e12762202c43b78a5ea90acca5544a014bf43c3a63ce34a2c"
+    },
+    {
+      "path": "Crank-45943.wav",
+      "sha256": "20c33b6d63ec9620b06a3676b5afadcc0b806055f92b413347460c724c997d6a"
+    },
+    {
+      "path": "Crank-57269.wav",
+      "sha256": "ce6947da33c33be6e7b7b2fadb2ab0fe705f43cc1ba53ec87aa62db51d3d9624"
+    },
+    {
+      "path": "DNA-only.wav",
+      "sha256": "9fedb32215328a88e6351903a487f630fab1b4bf5d42fb9feb6468187106dd76"
+    },
+    {
+      "path": "exact_sources\\AGENTS.md",
+      "sha256": "ba50559bbcab5dfbda638305ba4383cbad5dc232380ad5949f3cc188f28abff3"
+    },
+    {
+      "path": "exact_sources\\experiments\\startup_character_v1\\bridge.c",
+      "sha256": "cde9410835a04afb7785207ab2757339f4475696bbb224ee1209a0ae1a3486fb"
+    },
+    {
+      "path": "exact_sources\\experiments\\startup_character_v1\\CMakeLists.txt",
+      "sha256": "02fa1f2097ab0cc2c2287f90f6addea5982856ecb7adceed332216444d791e20"
+    },
+    {
+      "path": "exact_sources\\handoff\\启动拖转移动声线V2.md",
+      "sha256": "e46066bde3d27c7aa7e17c526a4edf8efca315ecf795c99784cdcf501284d294"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\CMakeLists.txt",
+      "sha256": "370a71b42df51fea289cbbfc608d91c48922a807b4aee6eba1d3008469e3f5e9"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\fft.c",
+      "sha256": "0ecea2e1f408f397eda2584e42f64f20c4a184492d325e9adb9f9c2918ca0003"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\fft.h",
+      "sha256": "c0f970e696b6e189f0709ba02a1bd0c58ea9c309cf412ffafb8b1de23c3638fb"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\filter.c",
+      "sha256": "d2cf4b8490778b063a9d1414c87ecfcc22770b7065c0342b6057ad6494eacc7d"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\filter.h",
+      "sha256": "defa1962670d411d0db3218d2aa6ee8928f8e8a4fdfbf49f95d2b8ae85bf0f77"
+    },
+    {
+      "path": "exact_sources\\modules\\partitioned_fir\\README.md",
+      "sha256": "8400179d8aaf2bd2a3e4124aee2dc75d86646e788d3bccbbad1da37e29eefc80"
+    },
+    {
+      "path": "exact_sources\\modules\\resonant_detail\\excitation.c",
+      "sha256": "cd46c96ea14546386a945fe2db290d00c497f14a0b089e80c800f7c2c357f991"
+    },
+    {
+      "path": "exact_sources\\modules\\resonant_detail\\excitation.h",
+      "sha256": "c2fa8f91a5aee1898ef37400df436f77ffe7188bb26796bd0e9b55bd2a29c4e2"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\CMakeLists.txt",
+      "sha256": "fcc4d6766af7f3853bfc842cafc759db969dae773fae24e2c54c061a1afe64df"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\io.c",
+      "sha256": "8c006aeb039789b8fef5c478a9a19ff6f43037b00e7c5db79e3b1654a271ebc7"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\io.h",
+      "sha256": "2a8d7e52d75e1ed82174a8478b6b407d5ac5bb423e6d55d15385f189aa817def"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\profile.c",
+      "sha256": "be314335cadf75d4b4f0b6195e18c673d52775d6374c79380486d3028e17c6a2"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\profile.h",
+      "sha256": "070b9502767db95da7befda6ba4ea3830d60e1a33d2b46ba5e52d3be7b935c4d"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\README.md",
+      "sha256": "f380a3f7ebd051454a9c5e0788e2314d2839e886b91d736ae2b330b2f234d45c"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\voice.c",
+      "sha256": "45fcc47a9ab4d21028bac30d550148e4f2ed9f095183fb07a93045c8fa179646"
+    },
+    {
+      "path": "exact_sources\\modules\\spectral_texture\\voice.h",
+      "sha256": "3d37d2bdb5b5630d228b7c610bc4a10fc8318d1340f4444cf5bcf95b6af3655b"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\README.md",
+      "sha256": "31817f66d32f3082b5b8afae68781dde3241506e4ab6ff4e4d1977d5f48dc44c"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\ridge.c",
+      "sha256": "7826e4444d44df4e2b444216a05da1cb2b31a9f340b4bc3d52ce4cb0cc3986c4"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\ridge.h",
+      "sha256": "ec22e459e93d626e3f07f7de8cd68d65a3860af453b9476e6a49d9c2fabf7531"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\voice.c",
+      "sha256": "7a4379b51c1189cd31b2e076b4098798e491932b760ee89f20b8fab2dbaa1568"
+    },
+    {
+      "path": "exact_sources\\modules\\startup_character\\voice.h",
+      "sha256": "46a86e13b56bbead92747ba33fef54f4c5ffe1345ceb5b081c144907f835d260"
+    },
+    {
+      "path": "exact_sources\\src\\io\\file.c",
+      "sha256": "84eb572e01cb29eb92cee364e519f58d7824fc9667da3bbd3d8267b419d471c8"
+    },
+    {
+      "path": "exact_sources\\src\\io\\file.h",
+      "sha256": "502881a5657ab7774daf83df8c1e09ae5275403b2be848dd63573dd62a032477"
+    },
+    {
+      "path": "exact_sources\\tools\\author_startup_ridges_v1.py",
+      "sha256": "1de5b16d7074499012e94c9d13b5236001898ae5c9996df68be6da56732a3bd0"
+    },
+    {
+      "path": "exact_sources\\tools\\render_startup_character_v1.py",
+      "sha256": "b616b6dc01b62266388af0e2a9284fcb29bdfd5edd2ff7da3df21a72e716310d"
+    },
+    {
+      "path": "exact_sources\\tools\\render_startup_ridges_v1.py",
+      "sha256": "1a9bc8a3f5d3f1b1caa8e3f74eebcb7d2304dea357926fdd7f45792db2e72ce8"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\__init__.py",
+      "sha256": "a0543fc43a93cbfcb41ef285517ddb82dcb4ab2ed54168ec9030a4bc430220da"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\author.py",
+      "sha256": "91cb10cb868703f8ad52e1f20037d2cdd2f9beebe0744e3b7502f3d94987d2a2"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\native.py",
+      "sha256": "ab4509aa6b975dc252027eaf944eb9ee6fe7f4879be54660445c30e6b9e727c3"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\ridge_native.py",
+      "sha256": "afeea04060fbca68f83eaedfe70eb7c6c2866bbbe4330e66c8f21ed214118360"
+    },
+    {
+      "path": "exact_sources\\tools\\startup_character_v1\\ridges.py",
+      "sha256": "b4e6b11e105ac32f4e78e22bf184fb3e79d4eb3ebd039d4a5b8cd84c7206ed81"
+    },
+    {
+      "path": "known\\verification.json",
+      "sha256": "0ed882716e17ad5c050e39e76d990c883bd5525a6da9def1732148a89b206162"
+    },
+    {
+      "path": "known\\zero-0.sfir",
+      "sha256": "dacb8168f83f4eaa254e4a9566988ee131e8326a36af5d802c8e7226de509472"
+    },
+    {
+      "path": "known\\zero-1.sfir",
+      "sha256": "dacb8168f83f4eaa254e4a9566988ee131e8326a36af5d802c8e7226de509472"
+    },
+    {
+      "path": "known\\zero-2.sfir",
+      "sha256": "dacb8168f83f4eaa254e4a9566988ee131e8326a36af5d802c8e7226de509472"
+    },
+    {
+      "path": "model\\profile.json",
+      "sha256": "93c68ce1c50b8306298778a0d2470e4698c0aca5706482d9c0ce2b9244941e01"
+    },
+    {
+      "path": "model\\residual-0.sfir",
+      "sha256": "02bd1cbc8b1efe736db8264e8e3191a83407ba9de953b81519199ea44a26f9ee"
+    },
+    {
+      "path": "model\\residual-1.sfir",
+      "sha256": "57f25ce8dc04479fb0394f1c630b323f12defe938f0b459344e69133fbf21b71"
+    },
+    {
+      "path": "model\\residual-2.sfir",
+      "sha256": "5f84f3a25ff715e6a2acfa2a659e7262aad19e1035d8420d7bd827577f8aafd6"
+    },
+    {
+      "path": "Previous-noise-only.wav",
+      "sha256": "cb767ebb9c3d31ee830f81cb71665f8649acf504c50e38fe3b81f312b09ae27c"
+    },
+    {
+      "path": "recipe.json",
+      "sha256": "bb544be824bbb04215e728ba3f50ea42e7f32ae5697aa9a3f628f53b34ef7f2e"
+    },
+    {
+      "path": "Reference-exterior.wav",
+      "sha256": "084ff9bccd8e3e72aa76184d7c2a41d5f0c6ad8e3605678b2f68c1d5c7c1c3f5"
+    },
+    {
+      "path": "startup_character_bridge.dll",
+      "sha256": "a49f4331bdda08d382073f502f5ee2a00fea35a94e9c45fd667dd2b19280a8e5"
+    },
+    {
+      "path": "verification.json",
+      "sha256": "2ccbf633d324fe4dfce514d7ca724975cfdda315d02cc6b7d502be97a4f5c39a"
+    }
+  ],
+  "verification": {
+    "schema": "vsl.startup-moving-osc-review/1",
+    "status": "pending_listening",
+    "previous_user_feedback": "Crank resembles wind; lacks mechanical rhythm",
+    "starter_native_sha256": "a49f4331bdda08d382073f502f5ee2a00fea35a94e9c45fd667dd2b19280a8e5",
+    "source_hash": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+    "author_report": {
+      "status": "authored_pending_C_and_listening",
+      "known": {
+        "synthetic_reconstruction_error": 5.551115123125783e-17,
+        "synthetic_remaining_energy_ratio": 3.086239265308136e-31,
+        "physical_source_classifier": false
+      },
+      "atoms": 40,
+      "core_explained_waveform_energy": 0.30815694100856283,
+      "source_frames": 27840
+    },
+    "model": "40 sparse short-time moving OSC atoms with L/R phase parameters; new residual excitation only for remaining spectrum",
+    "limits": [
+      "Acoustic projection, not a physical mechanical source classifier or measured RPM",
+      "Finite source-conditioned gesture score with fresh variations and independent pitch/duration controls; not a full statistical family of multiple real starts",
+      "No subjective improvement or main App integration claimed"
+    ],
+    "partition_exact": true,
+    "fresh_variations": true,
+    "unchanged_catch_and_idle_from_1_8s": true,
+    "outputs": {
+      "Candidate-45943.wav": {
+        "sha256": "9c312ed1111922cbac6656cdd3e7d1dbb0d69f90e3d3dc5da6464144fe6014fd",
+        "peak": 0.158148854970932,
+        "drag_rms_vs_previous_db": -0.14072872703504793
+      },
+      "Candidate-57269.wav": {
+        "sha256": "93be18773afb993e12762202c43b78a5ea90acca5544a014bf43c3a63ce34a2c",
+        "peak": 0.1581488698720932,
+        "drag_rms_vs_previous_db": -0.14458281597243122
+      },
+      "Previous-noise-only.wav": {
+        "sha256": "cb767ebb9c3d31ee830f81cb71665f8649acf504c50e38fe3b81f312b09ae27c"
+      },
+      "Reference-exterior.wav": {
+        "sha256": "084ff9bccd8e3e72aa76184d7c2a41d5f0c6ad8e3605678b2f68c1d5c7c1c3f5"
+      },
+      "DNA-only.wav": {
+        "sha256": "9fedb32215328a88e6351903a487f630fab1b4bf5d42fb9feb6468187106dd76"
+      }
+    },
+    "human_accepted": false,
+    "app_changed": false
+  },
+  "audio_audit": {
+    "schema": "vsl.startup-ridges-independent-audit/1",
+    "real_profile_C_vs_analytic_OSC_max_error": 1.4900295053354995e-08,
+    "mix_equals_saved_stems": true,
+    "catch_idle_DNA_file_exact": true,
+    "full_mix_after_1_8_seconds_exact": true,
+    "all_hashes_finite_peak_verified": true,
+    "main_app_native_unchanged": true,
+    "listening_accepted": false
+  },
+  "user_review": {
+    "previous_candidate": "startup_character_v1/attempt2",
+    "decision": "Crank still wind-like/lacks mechanical rhythm",
+    "new_candidate_accepted": false
+  },
+  "main_app_changed": false
+}

@@ -1,0 +1,1400 @@
+{
+  "schema": "vsl.startup-contour-milestone/1",
+  "result": "passed",
+  "previous_goal_turn": "no synthesis progress: generator/render boundary clarification",
+  "current_goal_turn": "actual coarse source envelopes, optional authoring and C/UI/controller integration",
+  "abi": 11,
+  "author_abi": 4,
+  "profile_bytes": 1408,
+  "preset_schema": 7,
+  "take_schema": 8,
+  "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+  "old_bridge_sha256": "3e7b7e9d837bdf14a6cc28678e5358e00a3438556e917877d187f4b854982460",
+  "author_bridge_sha256": "0f28d161c7689d75a5494de31b0d5547044c410756a69e741331d6d31e36aae0",
+  "runtime_C_H_changed": [
+    "modules/event_synth/api.h",
+    "modules/event_synth/contour.c",
+    "modules/event_synth/internal.h",
+    "modules/event_synth/profile.c",
+    "modules/event_synth/voice.c"
+  ],
+  "voices_unchanged": [
+    "voices/E_decel_source_v1/E slowing cabin.model",
+    "voices/E_decel_source_v1/E slowing cabin.sres",
+    "voices/E_decel_source_v1/index.json",
+    "voices/F3_before_upshift_v1/F3 before upshift.model",
+    "voices/F3_before_upshift_v1/F3 before upshift.sres",
+    "voices/F3_before_upshift_v1/index.json",
+    "voices/F3_fifth_local_v1/first_early.model",
+    "voices/F3_fifth_local_v1/first_late.model",
+    "voices/F3_fifth_local_v1/first_mid.model",
+    "voices/F3_fifth_local_v1/index.json",
+    "voices/F3_fifth_local_v1/second_early.model",
+    "voices/F3_fifth_local_v1/second_late.model",
+    "voices/F3_fifth_local_v1/second_mid.model",
+    "voices/cabin_anchors_v1/E Cabin Lower.model",
+    "voices/cabin_anchors_v1/E Cabin Upper.model",
+    "voices/cabin_anchors_v1/index.json",
+    "voices/catch_bloom_v1/A cabin catch.cb",
+    "voices/catch_bloom_v1/README.md",
+    "voices/coherent_low_v1/index.json",
+    "voices/coherent_low_v1/measured_phase.model",
+    "voices/coherent_low_v1/scrambled_phase.model",
+    "voices/dna_bank_v1/Hollow Spectrum.model",
+    "voices/dna_bank_v1/V10 Exterior.model",
+    "voices/dna_bank_v1/Warm Additive.model",
+    "voices/dna_bank_v1/index.json",
+    "voices/events_v1/profiles.h",
+    "voices/events_v1/profiles.json",
+    "voices/exterior_anchors_v1/A Stationary High.model",
+    "voices/exterior_anchors_v1/A Stationary Low.model",
+    "voices/exterior_anchors_v1/A Stationary Lower Mid.model",
+    "voices/exterior_anchors_v1/A Stationary Upper Mid.model",
+    "voices/exterior_anchors_v1/index.json",
+    "voices/idle_resonant_v1/README.md",
+    "voices/idle_resonant_v1/detail.json",
+    "voices/line_density_v1/README.md",
+    "voices/line_density_v1/V10 A Density 0.residual",
+    "voices/line_density_v1/V10 A Density 25.model",
+    "voices/line_density_v1/V10 A Density 25.residual",
+    "voices/line_density_v1/V10 A Density 50.model",
+    "voices/line_density_v1/V10 A Density 50.residual",
+    "voices/line_density_v1/index.json",
+    "voices/low_rumble_v2/A Exterior.model",
+    "voices/low_rumble_v2/B Cabin.model",
+    "voices/low_rumble_v2/D Dyno.model",
+    "voices/low_rumble_v2/E Cabin.model",
+    "voices/low_rumble_v2/index.json",
+    "voices/residual_atlas_v1/A Stationary High.residual",
+    "voices/residual_atlas_v1/A Stationary Low.residual",
+    "voices/residual_atlas_v1/A Stationary Lower Mid.residual",
+    "voices/residual_atlas_v1/A Stationary Upper Mid.residual",
+    "voices/residual_atlas_v1/E Cabin Lower.residual",
+    "voices/residual_atlas_v1/E Cabin Upper.residual",
+    "voices/residual_atlas_v1/README.md",
+    "voices/residual_atlas_v1/index.json",
+    "voices/residual_motion_v1/A_moving.motion",
+    "voices/residual_motion_v1/A_moving.residual",
+    "voices/residual_osc_v1/A_exterior.residual",
+    "voices/residual_osc_v1/E_cabin.residual",
+    "voices/residual_osc_v1/README.md",
+    "voices/resonant_detail_c_v1/README.md",
+    "voices/resonant_detail_c_v1/idle_35.rdetail",
+    "voices/resonant_detail_c_v1/idle_add.rdetail",
+    "voices/resonant_detail_c_v1/index.json",
+    "voices/resonant_detail_c_v1/moving_35.rdetail",
+    "voices/resonant_detail_v1/README.md",
+    "voices/resonant_detail_v1/SELECTION.json",
+    "voices/resonant_detail_v1/detail.json",
+    "voices/resonant_detail_v2/README.md",
+    "voices/resonant_detail_v2/detail.json",
+    "voices/start_texture_v1/A cabin early.start",
+    "voices/start_texture_v1/README.md",
+    "voices/startup_detail_v1/A startup settling detail.residual",
+    "voices/startup_detail_v1/README.md",
+    "voices/startup_detail_v1/index.json",
+    "voices/startup_drive_v1/A cabin motion.start",
+    "voices/startup_settle_v1/A start cabin settle.model",
+    "voices/startup_settle_v1/README.md",
+    "voices/state_colour_v2/A Rear Rise Diagnostic.colour",
+    "voices/state_colour_v2/README.md",
+    "voices/state_colour_v2/fit.json",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.model",
+    "voices/stationary_bridge_v1/A Bridge Mid Two.rdetail",
+    "voices/stationary_bridge_v1/index.json",
+    "voices/stationary_recipe_v1/A Stationary High.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Lower Mid.rdetail",
+    "voices/stationary_recipe_v1/A Stationary Upper Mid.rdetail",
+    "voices/stationary_recipe_v1/index.json",
+    "voices/stereo_resonance_v1/A cabin settle.sres",
+    "voices/stereo_resonance_v1/README.md"
+  ],
+  "checks": {
+    "native": {
+      "result": "passed",
+      "author_legacy_exact": [
+        {
+          "kind": "afterfire",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "engage",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "crank",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "afterfire",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "shift",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "disengage",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "stop",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 48271,
+          "pitch": 0.7,
+          "decay": 0.6,
+          "exact": true
+        },
+        {
+          "kind": "catch",
+          "seed": 93931,
+          "pitch": 1.3,
+          "decay": 1.4,
+          "exact": true
+        }
+      ],
+      "independent_model": [
+        {
+          "gated": 0,
+          "cutoff": 0,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 2.844316934758062e-10
+        },
+        {
+          "gated": 0,
+          "cutoff": 0,
+          "seed": 48271,
+          "pitch": 0.5,
+          "decay": 0.6,
+          "max_error": 2.3229739746361e-10
+        },
+        {
+          "gated": 0,
+          "cutoff": 0,
+          "seed": 93931,
+          "pitch": 2.0,
+          "decay": 1.4,
+          "max_error": 4.6195532989179444e-10
+        },
+        {
+          "gated": 0,
+          "cutoff": 6000,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 4.631598802401493e-10
+        },
+        {
+          "gated": 0,
+          "cutoff": 6000,
+          "seed": 48271,
+          "pitch": 0.5,
+          "decay": 0.6,
+          "max_error": 2.325703483962993e-10
+        },
+        {
+          "gated": 0,
+          "cutoff": 6000,
+          "seed": 93931,
+          "pitch": 2.0,
+          "decay": 1.4,
+          "max_error": 4.6159504864251577e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 0,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 9.299158526543394e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 0,
+          "seed": 48271,
+          "pitch": 0.5,
+          "decay": 0.6,
+          "max_error": 9.188263518089546e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 0,
+          "seed": 93931,
+          "pitch": 2.0,
+          "decay": 1.4,
+          "max_error": 9.32261420838465e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 6000,
+          "seed": 27431,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "max_error": 9.301439583830895e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 6000,
+          "seed": 48271,
+          "pitch": 0.5,
+          "decay": 0.6,
+          "max_error": 9.271421130829793e-10
+        },
+        {
+          "gated": 1,
+          "cutoff": 6000,
+          "seed": 93931,
+          "pitch": 2.0,
+          "decay": 1.4,
+          "max_error": 9.322935999589443e-10
+        }
+      ],
+      "invalid_contours_refused": [
+        "gain:[-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]",
+        "gain:[9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0]",
+        "gain:[nan, nan, nan, nan, nan, nan, nan, nan]",
+        "seconds:[0, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.8]",
+        "seconds:[0.01, 0.1]",
+        "gain:[1.0]",
+        "low_hz:4500",
+        "overlap"
+      ],
+      "old_layout_nonzero_refused": true,
+      "original_startup_23channels_exact": true,
+      "candidate_continuous_19channels_exact": true,
+      "only_candidate_event_audio_changes": true,
+      "event_notices_and_driver_final_state_exact": true,
+      "variable_block_replays_exact": true,
+      "old_recipe_refused": true,
+      "current_bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+      "old_bridge_sha256": "3e7b7e9d837bdf14a6cc28678e5358e00a3438556e917877d187f4b854982460",
+      "author_bridge_sha256": "0f28d161c7689d75a5494de31b0d5547044c410756a69e741331d6d31e36aae0",
+      "old_author_sha256": "62d797a7e9c4e3e1c461036afeca1515601a96002ce0e70088774d90d5e00246",
+      "runtime_changes": [
+        "modules/event_synth/api.h",
+        "modules/event_synth/contour.c",
+        "modules/event_synth/internal.h",
+        "modules/event_synth/profile.c",
+        "modules/event_synth/voice.c"
+      ],
+      "formal_voices_unchanged": 89,
+      "source_binding_verified": true,
+      "timbre_accepted": false,
+      "goal_complete": false
+    },
+    "independent_fft": {
+      "result": "passed",
+      "raw_reference_exact": true,
+      "method": "Explicit2048 periodic Hann/per-channel rFFT squared/mean channel power/240-frame hop, six bands, positive background power subtraction. Independent of contour optimizer and scipy spectrogram.",
+      "edges": [
+        [
+          0,
+          60
+        ],
+        [
+          60,
+          300
+        ],
+        [
+          300,
+          1200
+        ],
+        [
+          1200,
+          4500
+        ],
+        [
+          4500,
+          14000
+        ],
+        [
+          14000,
+          24001
+        ]
+      ],
+      "source_bands": [
+        {
+          "peak_seconds": 0.11133333333333334,
+          "energy_t10_t50_t90": [
+            0.04633333333333333,
+            0.14633333333333334,
+            0.6263333333333333
+          ],
+          "early_quarter_fraction": 0.7137761853857346,
+          "mean_power": 0.000282075067671783
+        },
+        {
+          "peak_seconds": 0.29133333333333333,
+          "energy_t10_t50_t90": [
+            0.11133333333333334,
+            0.3363333333333333,
+            0.6963333333333334
+          ],
+          "early_quarter_fraction": 0.2666261140792505,
+          "mean_power": 0.07426908838876671
+        },
+        {
+          "peak_seconds": 0.35133333333333333,
+          "energy_t10_t50_t90": [
+            0.23633333333333334,
+            0.42633333333333334,
+            0.6963333333333334
+          ],
+          "early_quarter_fraction": 0.08127226281830588,
+          "mean_power": 0.04751730235261293
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.036333333333333336,
+            0.21133333333333335,
+            0.7413333333333333
+          ],
+          "early_quarter_fraction": 0.48678406800466845,
+          "mean_power": 0.002794099678794681
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.026333333333333334,
+            0.13133333333333333,
+            0.7263333333333334
+          ],
+          "early_quarter_fraction": 0.6126725515712058,
+          "mean_power": 0.000424967090400059
+        },
+        {
+          "peak_seconds": 0.021333333333333333,
+          "energy_t10_t50_t90": [
+            0.04633333333333333,
+            0.19133333333333333,
+            0.7413333333333333
+          ],
+          "early_quarter_fraction": 0.5149936112942081,
+          "mean_power": 7.219629048421141e-07
+        }
+      ],
+      "results": [
+        {
+          "seed": 27431,
+          "normalized_power_curve_rmse_before": [
+            1.5483104509868377,
+            0.42413721369700697,
+            0.38872982497188713,
+            0.961572723179705,
+            1.049491866182965,
+            0.8474323349609801
+          ],
+          "normalized_power_curve_rmse_after": [
+            1.5445974781561427,
+            0.42364290268251525,
+            0.3897627637140044,
+            0.17244058663302234,
+            0.5358655283736531,
+            0.6886799993350099
+          ],
+          "bands": [
+            {
+              "peak_seconds": 0.2813333333333333,
+              "energy_t10_t50_t90": [
+                0.08633333333333333,
+                0.3363333333333333,
+                0.6413333333333333
+              ],
+              "early_quarter_fraction": 0.23215186877742738,
+              "mean_power": 0.00029168637063176815
+            },
+            {
+              "peak_seconds": 0.13633333333333333,
+              "energy_t10_t50_t90": [
+                0.10633333333333334,
+                0.38133333333333336,
+                0.6963333333333334
+              ],
+              "early_quarter_fraction": 0.2509451439764276,
+              "mean_power": 0.07647555860379547
+            },
+            {
+              "peak_seconds": 0.3413333333333333,
+              "energy_t10_t50_t90": [
+                0.22133333333333333,
+                0.42633333333333334,
+                0.6863333333333334
+              ],
+              "early_quarter_fraction": 0.07117912753297032,
+              "mean_power": 0.047046252229163574
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.20133333333333334,
+                0.7413333333333333
+              ],
+              "early_quarter_fraction": 0.49778122818273496,
+              "mean_power": 0.0028153413498282335
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.026333333333333334,
+                0.12633333333333333,
+                0.7263333333333334
+              ],
+              "early_quarter_fraction": 0.6180658095194844,
+              "mean_power": 0.0005325850164865538
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.036333333333333336,
+                0.13633333333333333,
+                0.7263333333333334
+              ],
+              "early_quarter_fraction": 0.6290210198545088,
+              "mean_power": 5.035543009226345e-07
+            }
+          ],
+          "original_six_spectral_gates": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "error_db": 0.05894136849267169,
+              "passed": true
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "error_db": 3.267473439946472e-05,
+              "passed": true
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "error_db": -9.539780107080779e-06,
+              "passed": true
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "error_db": 2.7728511397073907e-06,
+              "passed": true
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "error_db": 0.9574288544721697,
+              "passed": true
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "error_db": -1.5030876662991917,
+              "passed": true
+            }
+          ],
+          "mean_power_error_db": [
+            0.14551435701488447,
+            0.12714564676507373,
+            -0.043267443214902085,
+            0.03289163595674243,
+            0.9803364458808793,
+            -1.5646857398395237
+          ],
+          "peak": 0.9711722135543823,
+          "tail_zero": true
+        },
+        {
+          "seed": 48271,
+          "normalized_power_curve_rmse_before": [
+            1.4593171885387168,
+            0.44541339967295035,
+            0.39499424267041583,
+            1.0003436607259286,
+            1.0683420155171932,
+            0.93745093228516
+          ],
+          "normalized_power_curve_rmse_after": [
+            1.456698471527663,
+            0.44547802328160985,
+            0.39528676765715265,
+            0.18757364625562187,
+            0.5147242187998298,
+            0.7644807003909033
+          ],
+          "bands": [
+            {
+              "peak_seconds": 0.6763333333333333,
+              "energy_t10_t50_t90": [
+                0.08633333333333333,
+                0.3863333333333333,
+                0.6763333333333333
+              ],
+              "early_quarter_fraction": 0.3084465717706923,
+              "mean_power": 0.00016958820825625692
+            },
+            {
+              "peak_seconds": 0.09633333333333334,
+              "energy_t10_t50_t90": [
+                0.09133333333333334,
+                0.35633333333333334,
+                0.6813333333333333
+              ],
+              "early_quarter_fraction": 0.2685678967251939,
+              "mean_power": 0.08014617413638096
+            },
+            {
+              "peak_seconds": 0.36133333333333334,
+              "energy_t10_t50_t90": [
+                0.21633333333333332,
+                0.42133333333333334,
+                0.6813333333333333
+              ],
+              "early_quarter_fraction": 0.06958928273596081,
+              "mean_power": 0.046234265053459046
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.22633333333333333,
+                0.7363333333333333
+              ],
+              "early_quarter_fraction": 0.4779142331567959,
+              "mean_power": 0.002853021739478206
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.13133333333333333,
+                0.7163333333333334
+              ],
+              "early_quarter_fraction": 0.612953263691881,
+              "mean_power": 0.0005286518576690857
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.036333333333333336,
+                0.15133333333333332,
+                0.7263333333333334
+              ],
+              "early_quarter_fraction": 0.5781595207614838,
+              "mean_power": 4.257214129367109e-07
+            }
+          ],
+          "original_six_spectral_gates": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "error_db": -2.3413461614044104,
+              "passed": true
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "error_db": 0.26399140227191026,
+              "passed": true
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "error_db": -0.07278987594783923,
+              "passed": true
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "error_db": 0.03741048208466331,
+              "passed": true
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "error_db": 0.8198587064225159,
+              "passed": true
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "error_db": -2.229665836968973,
+              "passed": true
+            }
+          ],
+          "mean_power_error_db": [
+            -2.2096904923508447,
+            0.33074702443745607,
+            -0.1188781853946948,
+            0.09063185510699079,
+            0.9481446320917225,
+            -2.293893887975503
+          ],
+          "peak": 0.9692991375923157,
+          "tail_zero": true
+        },
+        {
+          "seed": 93931,
+          "normalized_power_curve_rmse_before": [
+            1.3070318875388163,
+            0.4261837890631047,
+            0.35586677985816606,
+            1.0076686504597083,
+            1.0495702102953108,
+            0.903010200070666
+          ],
+          "normalized_power_curve_rmse_after": [
+            1.3018980478025226,
+            0.4258813916642805,
+            0.3581025207768671,
+            0.21040176503763133,
+            0.5702419707774323,
+            0.7189001304411692
+          ],
+          "bands": [
+            {
+              "peak_seconds": 0.31633333333333336,
+              "energy_t10_t50_t90": [
+                0.07633333333333334,
+                0.30633333333333335,
+                0.7313333333333333
+              ],
+              "early_quarter_fraction": 0.3649779257087975,
+              "mean_power": 0.00021648350497977878
+            },
+            {
+              "peak_seconds": 0.2613333333333333,
+              "energy_t10_t50_t90": [
+                0.09133333333333334,
+                0.35633333333333334,
+                0.6813333333333333
+              ],
+              "early_quarter_fraction": 0.26455653707431387,
+              "mean_power": 0.08066021855450436
+            },
+            {
+              "peak_seconds": 0.3313333333333333,
+              "energy_t10_t50_t90": [
+                0.23133333333333334,
+                0.43133333333333335,
+                0.6963333333333334
+              ],
+              "early_quarter_fraction": 0.06340431296777396,
+              "mean_power": 0.04683414167125879
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.22133333333333333,
+                0.7413333333333333
+              ],
+              "early_quarter_fraction": 0.48696344659390484,
+              "mean_power": 0.002763397111842727
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.13133333333333333,
+                0.7213333333333334
+              ],
+              "early_quarter_fraction": 0.6174239416342974,
+              "mean_power": 0.0005415222454287282
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.036333333333333336,
+                0.14133333333333334,
+                0.7363333333333333
+              ],
+              "early_quarter_fraction": 0.5936047741171078,
+              "mean_power": 4.7677244461929313e-07
+            }
+          ],
+          "original_six_spectral_gates": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "error_db": -1.2452752191918497,
+              "passed": true
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "error_db": 0.2744794786052258,
+              "passed": true
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "error_db": -0.10755163580482302,
+              "passed": true
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "error_db": -0.07168667025345418,
+              "passed": true
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "error_db": 1.009023089057808,
+              "passed": true
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "error_db": -1.772754872363188,
+              "passed": true
+            }
+          ],
+          "mean_power_error_db": [
+            -1.149398902419136,
+            0.35851301196339364,
+            -0.06289211622106634,
+            -0.04798596046054071,
+            1.0526100246432772,
+            -1.8020373655010644
+          ],
+          "peak": 1.0321763753890991,
+          "tail_zero": true
+        },
+        {
+          "seed": 17389,
+          "normalized_power_curve_rmse_before": [
+            1.3952345205379513,
+            0.4449691219269377,
+            0.38141820278783534,
+            1.005684259848006,
+            1.0492455769903581,
+            0.8704566606527312
+          ],
+          "normalized_power_curve_rmse_after": [
+            1.3916103969710836,
+            0.44455420150994757,
+            0.3835035261210151,
+            0.19626360985149283,
+            0.6149413542032944,
+            0.7679008802559453
+          ],
+          "bands": [
+            {
+              "peak_seconds": 0.20133333333333334,
+              "energy_t10_t50_t90": [
+                0.08633333333333333,
+                0.3963333333333333,
+                0.6963333333333334
+              ],
+              "early_quarter_fraction": 0.2528448398689608,
+              "mean_power": 0.00016271167907542727
+            },
+            {
+              "peak_seconds": 0.28633333333333333,
+              "energy_t10_t50_t90": [
+                0.10133333333333333,
+                0.38133333333333336,
+                0.6963333333333334
+              ],
+              "early_quarter_fraction": 0.2410679942145093,
+              "mean_power": 0.0789272914520387
+            },
+            {
+              "peak_seconds": 0.31633333333333336,
+              "energy_t10_t50_t90": [
+                0.22633333333333333,
+                0.43133333333333335,
+                0.6863333333333334
+              ],
+              "early_quarter_fraction": 0.06834708044162248,
+              "mean_power": 0.0472114776574624
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.21633333333333332,
+                0.7413333333333333
+              ],
+              "early_quarter_fraction": 0.48802070805624037,
+              "mean_power": 0.002706937793143028
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.12633333333333333,
+                0.7263333333333334
+              ],
+              "early_quarter_fraction": 0.6175147466546742,
+              "mean_power": 0.0005309388565537791
+            },
+            {
+              "peak_seconds": 0.021333333333333333,
+              "energy_t10_t50_t90": [
+                0.03133333333333333,
+                0.12133333333333333,
+                0.7213333333333334
+              ],
+              "early_quarter_fraction": 0.6380762703209443,
+              "mean_power": 4.867940107721271e-07
+            }
+          ],
+          "original_six_spectral_gates": [
+            {
+              "hz": [
+                0,
+                60
+              ],
+              "error_db": -2.571441428253134,
+              "passed": true
+            },
+            {
+              "hz": [
+                60,
+                300
+              ],
+              "error_db": 0.19929540533284124,
+              "passed": true
+            },
+            {
+              "hz": [
+                300,
+                1200
+              ],
+              "error_db": -0.027853700523260274,
+              "passed": true
+            },
+            {
+              "hz": [
+                1200,
+                4500
+              ],
+              "error_db": -0.21260337797020631,
+              "passed": true
+            },
+            {
+              "hz": [
+                4500,
+                14000
+              ],
+              "error_db": 0.8711804873997032,
+              "passed": true
+            },
+            {
+              "hz": [
+                14000,
+                24001
+              ],
+              "error_db": -1.321732608624949,
+              "passed": true
+            }
+          ],
+          "mean_power_error_db": [
+            -2.3894597427544677,
+            0.2641910614866314,
+            -0.028041834585870964,
+            -0.13763619830478027,
+            0.9668921074096838,
+            -1.7116965738259624
+          ],
+          "peak": 0.9470373392105103,
+          "tail_zero": true
+        }
+      ],
+      "observation_crosscheck_passed": true,
+      "all_four_C_seeds_improve_both_upper_band_curve_errors": true,
+      "all_four_C_seeds_pass_original_six_band_spectral_gates": true,
+      "limitations": "Same fixed crop and coarse power curves; no mechanical timbre acceptance or physical RPM/source separation. Lower bands can change because all component amplitudes are recalibrated. No claim of reconstructing all high-frequency fine structure."
+    },
+    "workbench": {
+      "result": "passed",
+      "browser": {
+        "result": "passed",
+        "project_id": "bb06a39fd9414e8c9b65cf128aadc380",
+        "legacy_missing_attack_preserved": true,
+        "material_parameters_exact": true,
+        "contour_edit_changes_C_PCM": true,
+        "invalid_time_preserves_saved_parameters": true,
+        "point_limit_and_first_point_checked": true,
+        "history_restores_PCM_exact": true,
+        "reload_preserves_controls": true,
+        "exports_HTTP200": true,
+        "scope_and_fit_dependencies": true,
+        "one_player_no_autoplay": true,
+        "desktop_mobile_checked": true,
+        "persistent_service_restarted": false,
+        "live_driver_not_launched": true,
+        "errors": []
+      },
+      "header_contours_exact": true,
+      "csv_contours_present": true,
+      "original_source": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1680000,
+        "last_frame": 1944000,
+        "source_seconds": [
+          35.0,
+          40.5
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "own_server_closed": true,
+      "actual_editable_project": "6d0734dbd4494ef5b9df82faab86e7be",
+      "actual_parameters": "E:\\VehicleSoundLab\\designs\\events\\6d0734dbd4494ef5b9df82faab86e7be\\5f09b405fe4f43d68e16ab0da0b93ae9\\parameters.json",
+      "source_free_import_C_PCM_exact": true,
+      "timbre_accepted": false
+    },
+    "editor": {
+      "result": "passed",
+      "four_group_limit_and_reenable": true,
+      "eight_point_limit_and_reenable": true,
+      "first_point_protected_after_save": true,
+      "history_restores_parameters_exact": true,
+      "desktop_mobile_checked": true,
+      "errors": []
+    },
+    "controller": {
+      "result": "passed",
+      "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+      "no_autoplay": true,
+      "preset_sound_parameters_restore_and_save_exact": true,
+      "saved_input_refresh": {
+        "source": 0,
+        "valid": 4,
+        "sequence": 1,
+        "speed_mps": 0,
+        "acceleration_mps2": 0,
+        "tire_slip": 0.0
+      },
+      "old_binary_preset_refused_without_mutation": true,
+      "cases": [
+        {
+          "variant": "V12-original",
+          "frames": 384000,
+          "underflows": 0,
+          "notices_exact": true,
+          "final_state_exact": true,
+          "no_shift_states": true
+        },
+        {
+          "variant": "V12-candidate",
+          "frames": 384000,
+          "underflows": 0,
+          "notices_exact": true,
+          "final_state_exact": true,
+          "no_shift_states": true
+        }
+      ],
+      "audio_muted": true,
+      "own_window_closed": true,
+      "persistent_service_restarted": false,
+      "timbre_accepted": false
+    },
+    "review": {
+      "result": "passed",
+      "decoded": [
+        {
+          "frames": 264000,
+          "channels": 2
+        },
+        {
+          "frames": 38400,
+          "channels": 2
+        },
+        {
+          "frames": 57600,
+          "channels": 1
+        },
+        {
+          "frames": 57600,
+          "channels": 1
+        },
+        {
+          "frames": 384000,
+          "channels": 2
+        },
+        {
+          "frames": 384000,
+          "channels": 2
+        }
+      ],
+      "six_hashes_and_decodes": true,
+      "blob_switch_and_seek": true,
+      "playing_switch_position_and_volume_preserved": true,
+      "downloads_HTTP200": true,
+      "desktop_mobile": true,
+      "timbre_accepted": false,
+      "errors": []
+    },
+    "regression": {
+      "result": "passed",
+      "old_band_attack_parameters_exact": true,
+      "B_gated_material_trial": {
+        "extraction": {
+          "output": "E:\\VehicleSoundLab\\references\\analysis\\startup_contour_v1\\regression1\\B",
+          "kind": "crank",
+          "status": "analysis_only",
+          "refusal_kind": "response_fit",
+          "event_to_background_db": 13.023903289078733,
+          "analysis_scope": {
+            "mode": "full"
+          },
+          "admission_contrast_db": 13.023903289078733
+        }
+      },
+      "invalid_profile_preserves_saved_document": true,
+      "short_contour_input_explicitly_refused": true,
+      "timbre_accepted": false
+    }
+  },
+  "core_checks": {
+    "event": 3,
+    "source": 6
+  },
+  "editable_parameters": "E:\\VehicleSoundLab\\designs\\events\\6d0734dbd4494ef5b9df82faab86e7be\\5f09b405fe4f43d68e16ab0da0b93ae9\\parameters.json",
+  "editable_parameters_sha256": "03386074001b3b9a54a5fff94182d9195e5c788b16f25c32f6fdd65def1879f8",
+  "source_files": {
+    "AGENTS.md": "7ce02876d5efa65599c522481a4dfc14c135e483152f9207e7d35e14425366db",
+    "Build-Event-Designer.ps1": "a61eec3a7c70e9ffc9d91b823d028bbc8b3cf06d3f51bbce46a5c95ffac6eac5",
+    "Build-Vehicle-Source.ps1": "c031bc8e92e16318eee42f104dbd102179c5987ba0119d3dcab5601c740079e3",
+    "experiments/event_synth_v1/CMakeLists.txt": "d93c037c89286fd609a1402ba390a6074fa027c7cfc55e50e4c3a381c835e90a",
+    "experiments/event_synth_v1/author_bridge.c": "4ce17a9469416172b75a17ff50b3c071490efb0ce7e8e50fad65daba68860d75",
+    "experiments/event_synth_v1/contour_checks.c": "ea622ecd98d957919ab11bf19fa10c04fb73a071c411e6fe3c98e0381e236c28",
+    "experiments/vehicle_source_v1/bridge.c": "6e3e472af2bdf99ec9db99a1afaefa8b5be93752a69e6d3bc1870ba056f3ee52",
+    "handoff/启动多段包络与控制台V12.md": "202a45eb9f5e14f440bedda00488e091bda4055392874d24982975c439e3d3ce",
+    "handoff/声源生成边界与算力V2.md": "e26d0c904150ab61f8667ddd3f0317ea0a6e6509874b01cbf494eea4bd3a3ea6",
+    "handoff/当前代码阅读入口.md": "f2582a9aba6629de00065ef325e016d04964389f834c511f05e5af06a80d707f",
+    "modules/event_synth/CMakeLists.txt": "ac67402d97a197a1e84568a95bad663b0778305e0b3e0cd45c3b9dafa91898d6",
+    "modules/event_synth/README.md": "fec9055356e6a981bc64a78ede64ef6f0392ab06c5cfe752007d1ba35fe769a3",
+    "modules/event_synth/api.h": "f468dae612ce90f8661430ae7d1231b074eb34a3094394d9d1cb6920f6be9027",
+    "modules/event_synth/coloration.c": "c4211c10c0d2b5acc1e338fe1c4fbfd4c29cef1495e0d200cf8678a5ed35aa7a",
+    "modules/event_synth/contour.c": "2eb13778ed0299ea670c26f56512d761c57b988ebd55770e1e17f798afc96676",
+    "modules/event_synth/envelope.c": "b8b74323a895aaae99c23688e98435ee0b74ee81826cb57bb734287e25cf56a2",
+    "modules/event_synth/excitation.c": "dcc5ab755480490219dc5ec7a2a6ec71c17e0206621f65bee83f16c76f02c166",
+    "modules/event_synth/internal.h": "6d5d53c095a21ea51c97bfd3ce947fab6b4bb639678769f3d70b6946d41bcecf",
+    "modules/event_synth/oscillator.c": "f9826999358550e5d02e67fa6e153363d0787e369c3dbcb19bc39ba53cc4cc07",
+    "modules/event_synth/pool.c": "ff3201415d162b28f896bec9f06e7493433a4dade83cdf94d02e12df9dce5b71",
+    "modules/event_synth/profile.c": "0efa608eaaee71960d7072298757557acb6cfb42fa62e9361b0535f9fe4cc1d2",
+    "modules/event_synth/voice.c": "08b537841593b9352c84cacf0fc4223286d5bd3dfc63e063a62f93cc0f17a793",
+    "tools/audit_startup_contour_v1.py": "d653067943513d48b8e2bcf9db7a18d99102ef279b80e373d85091ea236683ac",
+    "tools/audit_startup_shape_v1.py": "124b74844dcc4d76ddd2c2e1b3b9261b5c8f32c759d8254465648706f970c80b",
+    "tools/author_event.py": "00e250df8a98fbcb50570669e79d586303e8272d3239b5e1f48ff075207a3eff",
+    "tools/build_startup_contour_review_v1.py": "1fc3bd262f000686296a1a3f5f66857ecc4c5f47430371bc474b3f81ad7b118b",
+    "tools/event_authoring/__init__.py": "307af1efd4fa8e12b4fb5b761585c905706eeaca7ac5780f8b882b10745fcfbd",
+    "tools/event_authoring/audio.py": "51d05cf58bf46e67c1617b1147333330f37e6e077ce3384eea5696fd7fee9f3f",
+    "tools/event_authoring/band_scope.py": "4a4d77a3dfed79cf1e3430d81f9997b2f54b9dca82b74e6f98aae9f01767fac1",
+    "tools/event_authoring/context.py": "9b875dc75ea6ab2ad0e51f5908e30a603ec0b672367cbf690931461e97097029",
+    "tools/event_authoring/contour_fit.py": "eee5cc3857ccd861882d8c1b9d687b4d48eb3705b8655e4fe2a70866d3c38db2",
+    "tools/event_authoring/contract.py": "ee6f77e1c6115e5e93d9c871a9e98f00feef37f88d3d20df04087c686711f3e3",
+    "tools/event_authoring/export.py": "38c16be952b31a0606e5948b099338339277a710428cccbdf352bd987c90bc76",
+    "tools/event_authoring/fit.py": "073b31847a3f7e0e724ebcd25e5c66aa634e23793713ac3c1f0afb57ab5f21cc",
+    "tools/event_authoring/measure.py": "1b6f3e1902dcf142c65971e8b383e13f08d587b2e5dab6f5a0fa3804407cad4d",
+    "tools/event_authoring/model.py": "883cfa1f93eceba49c69b37590ffd22938f7fc01135d4ca718d5b79b9da5feb2",
+    "tools/event_authoring/native.py": "e7b08e385ba6a42578deadd40f11db44861fc6dcf095a2b320c248e29da75112",
+    "tools/event_authoring/response_fit.py": "79ee1cce874ac0c8251bc46af3e06bedaee870d31e43f5cc7930cdfc0d6c604b",
+    "tools/event_authoring/scan.py": "88aed60a2ca054521102f5e4782fb5c396f54427f7a44e1bfed6b02d295a0c85",
+    "tools/event_authoring/scoped_fit.py": "ffc2a5a92b9a7fb25958c44c6de3828d270c9300f0c6b9e8bea0a599a6555aab",
+    "tools/event_authoring/temporal_fit.py": "6796a0c643040643aa2f2316bc13e2725c3bbd5a76868b2ce4211c6c35c5372d",
+    "tools/event_designer/__init__.py": "8ffa7bdde29c803a039b202c65796a2534c586d35b7d6e3e1b8105b612f21f30",
+    "tools/event_designer/candidates.py": "9de801324efc48b360e0f329040949fab63410e017f4e43214892800f64995fd",
+    "tools/event_designer/context.py": "7348baba20060883deaa7215668675065f453f615b8ea3c3e9a2937ce11626af",
+    "tools/event_designer/media.py": "0ce0cbb1121c58b1ba46122d73800000e284ae93565ca68436ab8061ccca9505",
+    "tools/event_designer/package.py": "0ba2b7c04dc872ff68f94f329e5f6c7acdfd208265e1b09e393bf655f7418f4f",
+    "tools/event_designer/workspace.py": "14b62b23e18a7e24bf5b2c36e48e4ae028df83daa7e287ef108b7182ec0c1f7b",
+    "tools/finalize_startup_contour_v1.py": "c572d7fffb9428a72c11d20973de61e7781da132f665e209b7313c95be0273a7",
+    "tools/probe_startup_contour_v1.py": "977f1c4c3fea908e43713283d9558a6ed5730dc65c10d9b162bf7bdd8b8f9e10",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/sound_designer/controller.py": "e068a0839252d68f228fb54c432aac3f6aed6a34c4f8c5fcf79a5472ce18b195",
+    "tools/sound_designer/web/event_contours.js": "e79dc80275d27a9fb1c5e4d2c6908e292d0dab29b64c1308a6d457bb8922e003",
+    "tools/sound_designer/web/events.css": "0cbcda07fc012058a01abdf5e3fed1ce0377d678aaad825f5bbd2b65eafaf0df",
+    "tools/sound_designer/web/events.html": "0dcac2305e27471d08ccd44f28e3c6691baa549cc46838356ae9c4556835c7e0",
+    "tools/sound_designer/web/events.js": "1bff709f057f7dbe13779523c4b55c5307576152335bd1d4cdfcb9d62a23ffd2",
+    "tools/startup_response_evidence_v1.py": "861eb976794171e44b5aee66534c53ddda737e2c14e764e50d5b4a1bf9d1fc6c",
+    "tools/vehicle_controller/__init__.py": "10224feb7d366f090047f4d3701c5f371b58ed28dd1a44a4f294070fcb147f13",
+    "tools/vehicle_controller/device.py": "f2895398b8e250bb49c4202a059e806f04441576580ba438a03043493a61fe52",
+    "tools/vehicle_controller/dna_bank.py": "469db6cb4612e3ce53192cd9fe66dd555d684ffb7b83cc83d230dcdd55fe0b79",
+    "tools/vehicle_controller/dna_panel.py": "592c709a07e8aa6c2bcb90dcc1edc84b7819a3c7d57618bb224bb8afde4b66b4",
+    "tools/vehicle_controller/dna_states.py": "099beab804b0455b55f8063a85be1ccff72a23d90cbad934fa1e5937f36d0f93",
+    "tools/vehicle_controller/event_policy.py": "362d85b528e2169ac0dadc7fc9891e1dfdd6194d861c3d7a43ddcfd567219e2c",
+    "tools/vehicle_controller/event_policy_panel.py": "1dc5f47b4a12018a71628a0357d603b807397d9901ab006081280f6db12d8ee6",
+    "tools/vehicle_controller/event_profiles.py": "e4133ac9ab0f23fe183d52ac3b63c1647c08b4d7847d8fa87473f027ffc870c6",
+    "tools/vehicle_controller/events.py": "325dcef2e36931e45f145e98a665b1669721360d3315deb64d714980be6fbcc1",
+    "tools/vehicle_controller/host.py": "3372227b21baff148e1d0fe718c4fdf72e8148196741c309831cc1839cbe0883",
+    "tools/vehicle_controller/identity.py": "380a5c40f752398c407c06c095dfa40bb67d9c937bd3d493efd75d3967ab6568",
+    "tools/vehicle_controller/native.py": "13dcb2290f502ea41d7600abb0805d7f90eee37bbeffb0990e02721523ba9d64",
+    "tools/vehicle_controller/recipe.py": "b776e4b4a5879515a4c9e0eaaf6fec82bb3a630fcab1de2573fd3b7dc177d31f",
+    "tools/vehicle_controller/render.py": "7fb6617b849f941a73705c3ca67755cb11e7f1bdee59cc41669c66cc78765213",
+    "tools/vehicle_controller/startup.py": "f7517683c727fd3a103a3f70c538823515e6ce167e031569d29408ce12bd2056",
+    "tools/vehicle_controller/startup_panel.py": "099a67c05d6805ebddd5c545f9862d11849fdf27399148c55cb3263b218de092",
+    "tools/vehicle_controller/take.py": "f21858c07e7c58bda31a77a68091a866e7d35a2a6ea0764c3267d06aa2a393b6",
+    "tools/vehicle_controller/ui.py": "d563ca2350c015ae3ae63b118804b69721bb888d73de667425a3378086de07ce",
+    "tools/verify_startup_contour_editor_v1.cjs": "c3d6d6529f3eb3959bf38ebf49b48fd30f06c7149cca3e0b2824fa3bd1a355da",
+    "tools/verify_startup_contour_regression_v1.py": "01365048e7c2312d663e5e28f4f962e233a207e2e0957a063b1804b28ed3adf4",
+    "tools/verify_startup_contour_review_v1.cjs": "ed3034e0cb2c3186fef07db7b56a3ea16d899df04c636e575d8c949ea8c5fecb",
+    "tools/verify_startup_contour_ui_v1.py": "12518be7e019048437d90f21413df657ce3ac13312848aec8236eeb39f2fd36c",
+    "tools/verify_startup_contour_v1.py": "ce97dbc0284ddc2b267c055f31ed64fa68c5647277089b79e54e2d7afc7dea87",
+    "tools/verify_startup_contour_web_v1.cjs": "557598241708685f3727af05d57120e8dbee4d3cd1f65847f11517177b028e96",
+    "tools/verify_startup_contour_workbench_v1.py": "80ef6e910ec4f83c2cbe038d07920efd08df6c6a2a56ec8dc8b43e478907d97e"
+  },
+  "freeze": "E:\\VehicleSoundLab\\baselines\\startup_contour_v1\\delivery1",
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\startup_shape_v1\\delivery1",
+  "base_manifest_sha256": "01d394af0f3f70f8f2dc8d2e899c4c664a29f56dd1119385158a389ef89423a3",
+  "retained_limitations": [
+    "B gated contour final spectral failure -6.368dB; no profile compiled",
+    "one unscaled float seed peak about1.032FS; fixed .25 audition gain and no limiter",
+    "review1 retained before presentation title correction; review2 current",
+    "finalize1 historical presentation restoration used Windows newlines; exact LF hash restoration fixed"
+  ],
+  "new_timbre_accepted": false,
+  "goal_complete": false,
+  "physical_rpm_measured": false,
+  "persistent_service_restarted": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "new_download": false,
+  "commit_or_push": false,
+  "unresolved": [
+    "startup mechanical/high-band fine texture",
+    "B contour/spectral joint fit",
+    "idle variation",
+    "confirmed full-band afterfire",
+    "other event timbres",
+    "full RPM/load/state coverage"
+  ]
+}

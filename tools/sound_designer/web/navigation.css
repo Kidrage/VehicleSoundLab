@@ -1,0 +1,2 @@
+.header-actions a{color:var(--teal);text-decoration:none;font-size:12px}
+@media(max-width:760px){header{height:auto;min-height:70px;flex-wrap:wrap;gap:8px;padding-top:12px;padding-bottom:12px}.header-actions{width:100%;max-width:none!important;gap:12px!important;justify-content:space-between!important;flex-wrap:wrap}.header-actions a{font-size:11px}.badge{display:none}}

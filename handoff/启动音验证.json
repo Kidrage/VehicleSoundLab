@@ -1,0 +1,288 @@
+{
+  "schema": "vsl.startup-default-delivery/1",
+  "app_revision": 15,
+  "abi": 12,
+  "preset_schema": 9,
+  "take_schema": 10,
+  "scope": "App startup defaults and controls; unchanged native DSP and assets",
+  "native": {
+    "path": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v13\\bin\\Release\\vsl_source_bridge.dll",
+    "bytes": 218624,
+    "sha256": "1865e6963c7667a5f163eea5a0ece18ac8e471f33ae6ebb313e9a23e83598418"
+  },
+  "sources": [
+    {
+      "relative": "tools/vehicle_controller/startup_sound.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\vehicle_controller\\startup_sound.py",
+      "bytes": 559,
+      "sha256": "77cca888790de6c163b8cef4e7708e5f373da60fa2ecc2bdf1154b7fc4d48822",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\vehicle_controller\\startup_sound.py"
+    },
+    {
+      "relative": "tools/vehicle_controller/startup_sound_panel.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\vehicle_controller\\startup_sound_panel.py",
+      "bytes": 1896,
+      "sha256": "a2d9da1e6133b41870f9bca58a036c647b80881152d9913c52adfebb0aeda953",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\vehicle_controller\\startup_sound_panel.py"
+    },
+    {
+      "relative": "tools/vehicle_controller/ui.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\vehicle_controller\\ui.py",
+      "bytes": 28600,
+      "sha256": "96cad5e10a3051db1b164033568c94c3c9c2e63647092b093213f729d166c21e",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\vehicle_controller\\ui.py"
+    },
+    {
+      "relative": "tools/vehicle_controller/events.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\vehicle_controller\\events.py",
+      "bytes": 10294,
+      "sha256": "851824b861720b07f39de24684510852f5dfe1ecdfaf3b41b126ff0fbe71db20",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\vehicle_controller\\events.py"
+    },
+    {
+      "relative": "tools/sound_designer/controller.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\sound_designer\\controller.py",
+      "bytes": 1553,
+      "sha256": "6c3bef0c97ce2ad61e95ae48b7302bd7e60eac848a70dc02a8145ac7da94dac8",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\sound_designer\\controller.py"
+    },
+    {
+      "relative": "tools/verify_startup_enabled_v1.py",
+      "path": "E:\\VehicleSoundLab-Git\\tools\\verify_startup_enabled_v1.py",
+      "bytes": 6823,
+      "sha256": "63d0fc6f876e0a81a0cebd452168a9054d47e1009a1194a8c9a1c3ddae78ea12",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\tools\\verify_startup_enabled_v1.py"
+    },
+    {
+      "relative": "README.md",
+      "path": "E:\\VehicleSoundLab-Git\\README.md",
+      "bytes": 1951,
+      "sha256": "1b48ca96d1f36c795a107bd24fd399051ee1de572c8ce6ccd966500ec91ff6ec",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\README.md"
+    },
+    {
+      "relative": "AGENTS.md",
+      "path": "E:\\VehicleSoundLab-Git\\AGENTS.md",
+      "bytes": 499504,
+      "sha256": "06ed2512789112f2d736cf4aa51f58a57a968ce5b9fa1847c6d68c39023b8759",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\AGENTS.md"
+    },
+    {
+      "relative": "handoff/统一系统报告.md",
+      "path": "E:\\VehicleSoundLab-Git\\handoff\\统一系统报告.md",
+      "bytes": 13696,
+      "sha256": "a714bc218a241f3f1d088df0907dbe531a911e93a5fa91712223a68615816dcd",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\handoff\\统一系统报告.md"
+    },
+    {
+      "relative": "handoff/启动音默认配方修复.md",
+      "path": "E:\\VehicleSoundLab-Git\\handoff\\启动音默认配方修复.md",
+      "bytes": 2565,
+      "sha256": "8568f91d272c2f4028ea03cc90b3846ad9963e6a290cc9719c0bf1e9d9fd56be",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\handoff\\启动音默认配方修复.md"
+    },
+    {
+      "relative": "handoff/统一系统主线.svg",
+      "path": "E:\\VehicleSoundLab-Git\\handoff\\统一系统主线.svg",
+      "bytes": 5307,
+      "sha256": "12853300a7292552e967684d7dac5fc62590380cd245f1054714d3b18b84749c",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\handoff\\统一系统主线.svg"
+    },
+    {
+      "relative": "handoff/统一系统主线.png",
+      "path": "E:\\VehicleSoundLab-Git\\handoff\\统一系统主线.png",
+      "bytes": 141309,
+      "sha256": "67b67253333ecb860ea3c166c23fea97e4e46e0a21b444b7ef64b5c865a1d38d",
+      "snapshot": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\exact_sources\\handoff\\统一系统主线.png"
+    }
+  ],
+  "proofs": [
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\app.png",
+      "bytes": 45650,
+      "sha256": "0f3873f488bf95c8018654749c01f343dd00aeba51466ea5c9083bbac4ef8d8f"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\explicit-off.json",
+      "bytes": 14104,
+      "sha256": "3b433fdc28a0845cb88890dc8915a985688beab7ecd05c24ff6e08d9990e3df7"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\Previous-no-start.wav",
+      "bytes": 1536058,
+      "sha256": "0b1e15c40dcc81ee6910cfc2e0b75d5bf438925096129b4d9d2f19c3356dbc59"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\Startup-to-idle.wav",
+      "bytes": 1536058,
+      "sha256": "ac5e253ca21528bb4d6192b244b5e9c180695a18cc50a6d80bad511dd68c4aed"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\Startup.vsltake.json",
+      "bytes": 16281,
+      "sha256": "07f9779059f2ad22e9cf900bd95632ed62d87eb93f50c43632444edc3b47baa2"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\V10-startup-enabled.vslpreset.json",
+      "bytes": 14104,
+      "sha256": "732031a8eb3960f3e49bae7d2990ff75a4f328a37de5711b1ee13582f797800b"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1\\verification.json",
+      "bytes": 2739,
+      "sha256": "f15b9cbfc01305c4353b3bf0f77a15e2a1c4876befe26499755610581424bdc7"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\verification1.log",
+      "bytes": 1097,
+      "sha256": "144b92917226ebad45a3b93a945e006fcd19385eb39e16e0cc1b431f5143ecc4"
+    },
+    {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\startup_enable_v1\\app-v15.ready.json",
+      "bytes": 641,
+      "sha256": "ac20992f2a7133290a49020c7b0e01a14eb8c610510dd5e1f10fe2f460b290a1"
+    }
+  ],
+  "measurements": {
+    "schema": "vsl.startup-enabled-check/1",
+    "bridge_sha256": "1865e6963c7667a5f163eea5a0ece18ac8e471f33ae6ebb313e9a23e83598418",
+    "defaults": {
+      "enabled": 1,
+      "manual_type": 1,
+      "manual_sequence": 0,
+      "gain": 0.7,
+      "pitch": 1.0,
+      "decay": 1.0,
+      "texture": 1.0,
+      "levels": [
+        0.0,
+        1.25,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "quick_controls": true,
+    "preset_roundtrip": true,
+    "explicit_off_preserved": true,
+    "event_starts": [
+      {
+        "id": 1,
+        "frame": 17184,
+        "requested_frame": 17184,
+        "type": 1,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 2,
+        "frame": 30240,
+        "requested_frame": 30240,
+        "type": 2,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "crank_rms_dbfs": -31.906952381984077,
+    "catch_rms_dbfs": -26.036041216427712,
+    "idle_rms_dbfs": -32.392641077143,
+    "startup_over_idle_db": 5.2251258334478115,
+    "catch_over_idle_db": 6.356599860715287,
+    "startup_gain_over_weak_db": 2.4553499347161454,
+    "peak": 0.20879632234573364,
+    "continuous_stems_exact": true,
+    "idle_pcm_exact": true,
+    "replay_exact": true,
+    "device": {
+      "frame": 102240,
+      "rpm": 850.0000000000011,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.04,
+      "root_hz": 7.0833333333337265,
+      "gain": 0.25,
+      "idle_weight": 0.9999999993910184,
+      "gear": 1,
+      "lifecycle": 4,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 58,
+      "event_active": 0,
+      "event_started": 2,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.3535300027579069,
+      "pc_max_block_load": 0.5713499849662185,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "pcm_sha256": "54671623fc0f7b290f4e295f16083a3f77465f1d6cdcbdea883fe38f50daffca",
+    "timbre_accepted": false,
+    "manual_mouse_verified": false
+  },
+  "ready": {
+    "schema": "vsl.source-controller-ready/1",
+    "pid": 160140,
+    "title": "VEHICLE SOUND · 统一 DNA V15",
+    "bridge_sha256": "1865e6963c7667a5f163eea5a0ece18ac8e471f33ae6ebb313e9a23e83598418",
+    "voices_sha256": "71ebb2dd4e6b8ea51cc09ebfb474222b748f4e9c3c9c993bd44a39969ad1569a",
+    "catalog_assets_sha256": "f3b0fbf93e070153add2011ddc0e2e11519bccbef5a9787349f0871c1e242281",
+    "ui_revision": 15,
+    "preset_schema": 9,
+    "take_schema": 10,
+    "event_bank_sha256": "d63aeaf2f9be31a9ded6f39b28e0fb7a4c34cc3d10cbf58fd05180f9ea8be354",
+    "abi": 12,
+    "geometry": "1100x860+130+130",
+    "source_only": true,
+    "listening": false
+  },
+  "peak_dbfs": -13.60554310180741,
+  "timbre_accepted": false,
+  "previous_unified_evidence": "E:/VehicleSoundLab/references/analysis/dna_unified_v1",
+  "existing_user_windows_restarted": false
+}

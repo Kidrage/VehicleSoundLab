@@ -15,7 +15,7 @@ add_library(vsl_core STATIC
   src/core/event_split.c src/core/event_color.c src/profiles/event_color.c
   src/profiles/transmission.c src/drive/shift.c src/drive/lifecycle.c src/profiles/lifecycle.c
   src/drive/drive.c src/drive/powertrain.c src/drive/longitudinal.c src/profiles/vehicle.c src/drive/scenarios.c src/spatial/scene.c
-  src/drive/coupling.c src/drive/clutch.c src/profiles/clutch.c
+  src/drive/coupling.c src/drive/clutch.c src/profiles/clutch.c src/drive/kinematic.c
   src/spatial/propagation.c src/profiles/propagation.c
   src/session/take.c src/session/parameters.c src/io/take_file.c src/io/take_render.c
   src/io/wav.c src/io/file.c src/io/render_session.c src/io/drive_trace.c src/io/scene_metadata.c)
@@ -59,6 +59,9 @@ add_test(NAME dsp_invariants COMMAND vsl_tests)
 add_executable(vsl_drive_tests tests/test_drive.c)
 target_link_libraries(vsl_drive_tests PRIVATE vsl_core)
 add_test(NAME driving_states COMMAND vsl_drive_tests)
+add_executable(vsl_startup_gear_tests tests/test_startup_gear.c)
+target_link_libraries(vsl_startup_gear_tests PRIVATE vsl_core)
+add_test(NAME stopped_selector_and_neutral_startup COMMAND vsl_startup_gear_tests)
 add_executable(vsl_lifecycle_tests tests/test_lifecycle.c)
 target_link_libraries(vsl_lifecycle_tests PRIVATE vsl_core)
 add_test(NAME continuous_lifecycle COMMAND vsl_lifecycle_tests)

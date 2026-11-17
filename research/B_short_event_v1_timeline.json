@@ -1,0 +1,128 @@
+{
+  "B_short_1": {
+    "source": "B",
+    "seconds": [
+      520.863,
+      522.863
+    ],
+    "frames": [
+      521.0630000000001,
+      521.4630000000001,
+      521.863,
+      522.263,
+      522.663
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  },
+  "B_short_2": {
+    "source": "B",
+    "seconds": [
+      521.097,
+      523.097
+    ],
+    "frames": [
+      521.297,
+      521.697,
+      522.097,
+      522.497,
+      522.8969999999999
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  },
+  "B_short_3": {
+    "source": "B",
+    "seconds": [
+      520.891,
+      522.891
+    ],
+    "frames": [
+      521.091,
+      521.491,
+      521.891,
+      522.2909999999999,
+      522.6909999999999
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  },
+  "B_short_4": {
+    "source": "B",
+    "seconds": [
+      141.437,
+      143.437
+    ],
+    "frames": [
+      141.637,
+      142.037,
+      142.437,
+      142.83700000000002,
+      143.23700000000002
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  },
+  "B_short_5": {
+    "source": "B",
+    "seconds": [
+      784.754,
+      786.754
+    ],
+    "frames": [
+      784.9540000000001,
+      785.354,
+      785.754,
+      786.154,
+      786.554
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  },
+  "B_short_6": {
+    "source": "B",
+    "seconds": [
+      521.31,
+      523.31
+    ],
+    "frames": [
+      521.51,
+      521.91,
+      522.31,
+      522.7099999999999,
+      523.1099999999999
+    ],
+    "crop": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "caption": "Unclassified short acoustic event; physical identity not established"
+  }
+}

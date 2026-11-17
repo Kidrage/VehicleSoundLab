@@ -1,0 +1,11 @@
+{
+  "schema": "vsl.startup-expression-listening/1",
+  "date": "2026-11-17",
+  "feedback": "有优化，但是开头拖转还是不够像真车，分析下原因",
+  "interpretation": "Expression improvement acknowledged; crank fidelity still insufficient. No full startup acceptance, main-App promotion, or idle rejection.",
+  "candidate": "E:/VehicleSoundLab/references/analysis/startup_expression_v1/listen2/Candidate-96337.wav",
+  "diagnosis": "handoff/拖转不像真车原因分析V1.md",
+  "new_candidate_generated": false,
+  "DSP_changed": false,
+  "app_changed": false
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "vsl.catalog-assets-milestone/1",
+  "result": "passed",
+  "goal_complete": false,
+  "previous_goal_turn": "No synthesis progress: only source/render/MCPS scope clarification",
+  "current_goal_turn": "Complete runtime asset identity; actual36s UI lifecycle and saved device replay; bounded workbench launch",
+  "checks": {
+    "identity": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\catalog_asset_identity_v1\\verification1\\report.json",
+      "sha256": "4ad124165362fba3143d8ab213e285bd4795893de6419257f034994fa332da41",
+      "result": "passed"
+    },
+    "lifecycle": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\catalog_asset_identity_v1\\lifecycle1\\report.json",
+      "sha256": "db5468705213175e4c922622892cd1435f1e12fb5e0b017ff246c754a6c4f945",
+      "result": "passed"
+    },
+    "controller": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\catalog_asset_identity_v1\\ui2\\report.json",
+      "sha256": "32dcc50627af2e71f7455fbb4c93ed1ef856e8bd3613398f1fa8b0f51a02763c",
+      "result": "passed"
+    },
+    "launch": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\catalog_asset_identity_v1\\launch2\\report.json",
+      "sha256": "1d24e13c1a719d879b1575b4757ef6e9bea06b719e13f0e9eac079e3f706326e",
+      "result": "passed"
+    },
+    "browser": {
+      "path": "E:\\VehicleSoundLab\\references\\analysis\\catalog_asset_identity_v1\\review-web1\\verification.json",
+      "sha256": "7929ad71bda7a630230dc1a5abd3d108aa1fb5c0431b9c482f69f27dc7ff4c08",
+      "result": "passed"
+    }
+  },
+  "catalog_assets_sha256": "f3b0fbf93e070153add2011ddc0e2e11519bccbef5a9787349f0871c1e242281",
+  "catalog_asset_files": 92,
+  "runtime_voice_files_unchanged": 459,
+  "formal_voices_unchanged": 89,
+  "bridge_sha256": "97cff42c3244d15f4a48e11026737e92a6427bcdb8201a944ed9e6f33f577b9f",
+  "source_ABI": 11,
+  "author_ABI": 4,
+  "ui_revision": 13,
+  "preset_schema": 8,
+  "take_schema": 9,
+  "source_files": {
+    "AGENTS.md": "16dae6c4e688545f2cb7aaf75ed791a57044e3c63f79ff3889611d031584848f",
+    "Launch-Vehicle-Controller.cmd": "017b05e2b5f255081b005c916352acfc53bcaf4d575d125a0e808bcdb64899bc",
+    "handoff/完整资产身份与控制台V13.md": "e6e01055c9f79bbbd7118912f008e5550cd0b6118f738ffe2859a403396cf1b2",
+    "handoff/当前代码阅读入口.md": "29180aacce32238e030bd9f70aa2aa7476ac1faa3df687c0e3e4f1cd30202d22",
+    "research/catalog_asset_identity_v1_plan.json": "c0b36e094062d8df151073ab2e41f1839a7f1c05f7797203b96c1630da543032",
+    "tools/audit_catalog_assets_delivery_v1.py": "927d5f2d521c3b780b1a31e41ce6ef6d2805340082e19fbe756e623eeb9213a5",
+    "tools/event_review.py": "231cdb653e3d192f051fb10d7527c00442edfc489ee1db10b7b8ed62121344d2",
+    "tools/finalize_catalog_assets_v1.py": "4135954aeba3b2d1bb7c2a4f6c8614955a8f4e097fb7abd0317796ad73958d11",
+    "tools/rebind_start_idle_catalog_v1.py": "a0cf7d1375c4c783070d1185d32e2456f392dbce95e3780c0025add9a986f609",
+    "tools/research_archive_v1.py": "9e4314e79838af5d5c582b41b0023a8d9af8d9cb9ec1e2517f9760372f5e3039",
+    "tools/run_vehicle_controller.py": "4ca7fb542c5a2bf9ceea7854db133318924d4ad3fb95b745015bb2dff2526274",
+    "tools/sound_designer/controller.py": "630369388173647ebdf956c1deb2975178dfb5af547545d3e34ed7ca859e9af2",
+    "tools/vehicle_controller/__init__.py": "10224feb7d366f090047f4d3701c5f371b58ed28dd1a44a4f294070fcb147f13",
+    "tools/vehicle_controller/catalog_assets.py": "7974ac7632705f335966fa9dc54cc89824d32ed91bd7ea3516dffb7d324c1a0c",
+    "tools/vehicle_controller/device.py": "f2895398b8e250bb49c4202a059e806f04441576580ba438a03043493a61fe52",
+    "tools/vehicle_controller/dna_bank.py": "469db6cb4612e3ce53192cd9fe66dd555d684ffb7b83cc83d230dcdd55fe0b79",
+    "tools/vehicle_controller/dna_panel.py": "592c709a07e8aa6c2bcb90dcc1edc84b7819a3c7d57618bb224bb8afde4b66b4",
+    "tools/vehicle_controller/dna_states.py": "099beab804b0455b55f8063a85be1ccff72a23d90cbad934fa1e5937f36d0f93",
+    "tools/vehicle_controller/event_policy.py": "362d85b528e2169ac0dadc7fc9891e1dfdd6194d861c3d7a43ddcfd567219e2c",
+    "tools/vehicle_controller/event_policy_panel.py": "1dc5f47b4a12018a71628a0357d603b807397d9901ab006081280f6db12d8ee6",
+    "tools/vehicle_controller/event_profiles.py": "e4133ac9ab0f23fe183d52ac3b63c1647c08b4d7847d8fa87473f027ffc870c6",
+    "tools/vehicle_controller/events.py": "325dcef2e36931e45f145e98a665b1669721360d3315deb64d714980be6fbcc1",
+    "tools/vehicle_controller/host.py": "3372227b21baff148e1d0fe718c4fdf72e8148196741c309831cc1839cbe0883",
+    "tools/vehicle_controller/identity.py": "d7728c44a7a519e4f7ccc90d17ef7ed3f7a3e9226b27a703cd07fafffb53f0aa",
+    "tools/vehicle_controller/native.py": "37b86de36c6fcbe8b7691507f2fe8aeea7bb3fe692d3bd00efa71bf7a08749a6",
+    "tools/vehicle_controller/recipe.py": "ee5379f35c5f1f22bbcf887307c00562686745292ed5dd0a423f2b7e36ced321",
+    "tools/vehicle_controller/render.py": "ebd2af2285b297575d620397f284927c0a0eff65636d0c560a544406f5b97799",
+    "tools/vehicle_controller/startup.py": "187e34a48c343b88727eb4aaa750186f2d8d566ea54a7bd115910cadeed6a64b",
+    "tools/vehicle_controller/startup_panel.py": "099a67c05d6805ebddd5c545f9862d11849fdf27399148c55cb3263b218de092",
+    "tools/vehicle_controller/take.py": "00968bbbb39b7f93ef849f57a58b0d3ad49b2d6bc2475fdbee901c7166d6e158",
+    "tools/vehicle_controller/ui.py": "89a7893d5037cedacc0d324d3914e40a6e395e72e17f6537c9e884ab81a46229",
+    "tools/vehicle_scenarios/__init__.py": "6fdaab71a99bd7974aab69e254d32463a228943411d4c35c0ef2c1b167773104",
+    "tools/vehicle_scenarios/capture.py": "8b165b28cc5d7accbadfde50048934ebf6f82e6faa62a142244815d94fa4825d",
+    "tools/vehicle_scenarios/checks.py": "57eedb6d3305622baf4d9528cb2f4f3266c9de5a3707221d071b16e007bdd09e",
+    "tools/vehicle_scenarios/review.py": "b6282354df7014da48b3009348b017e54923a8a71aa95c3eef8b281878d109b9",
+    "tools/vehicle_scenarios/scenario.py": "f5a4b1a9a07c5f943c81089f865ea609bd0ace9a4b9934649703d918f080bef9",
+    "tools/vehicle_scenarios/start_idle.py": "9bb1bd4e5d214434ab7f37d043f408c8cc158e02a1b23fd5a8c2806efe2c8f54",
+    "tools/verify_catalog_assets_v1.py": "2df38e093c7d218fa2962bdeaac97c0928eab5e872346b45e47ebc8aa48bde33",
+    "tools/verify_catalog_controller_v13.py": "6d9866cfe6b980dee660a2112d28215b5756bbd56f12b95bfdbcf4324bae5327",
+    "tools/verify_catalog_launch_v13.cjs": "b3b409e389526c3ed65fcd5712bdcf22645c1072415dcf27951a261896dc26d8",
+    "tools/verify_catalog_launch_v13.py": "b2a0dc3a12753d183141e7863215632bf5caa9210080b4b81467cf225448d62a",
+    "tools/verify_low_mid_event_review_v1.cjs": "40556a285db4326c7a93ef86a18d2bbf18bad9bc0161c3efa4058306408ef9f9",
+    "tools/verify_start_idle_review_v1.py": "99d07d4c60d12d64f677cb785e85e0d52c816a67ccb1fb7e434438da92dc231b",
+    "tools/verify_startup_handoff_review_v1.py": "223888e01104203beb9fff1bb601dd8c2df3aeef79f48cfdef9a084626d8edcd"
+  },
+  "base_freeze": "E:\\VehicleSoundLab\\baselines\\start_idle_lifecycle_v1\\delivery1",
+  "base_manifest_sha256": "677f361054150d15a6a6972410a23ceefd34379994f3305242a5ba703694ed9b",
+  "freeze": "E:\\VehicleSoundLab\\baselines\\catalog_asset_identity_v1\\delivery1",
+  "published_review": {
+    "url": "http://127.0.0.1:8789/references/analysis/catalog_asset_identity_v1/lifecycle1/review/index.html",
+    "HTTP_status": 200,
+    "sha256": "00ac5911580928a3ded900cc58a54cf1adbd7948a9a5085aed15f02d3cf36abf",
+    "persistent_service_restarted": false
+  },
+  "source_only": true,
+  "compatibility": "Old preset7/take8 remain with frozen V12 Python and original inputs; no implicit migration.",
+  "new_timbre_accepted": false,
+  "physical_afterfire_confirmed": false,
+  "unresolved": [
+    "startup/idle mechanical listening quality",
+    "confirmed complete physical afterfire and other event timbres",
+    "full RPM/load/state coverage"
+  ],
+  "new_download": false,
+  "commit_or_push": false,
+  "spatial_added": false,
+  "ADI_optimization": false,
+  "persistent_service_restarted": false
+}

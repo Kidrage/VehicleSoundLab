@@ -1,0 +1,6 @@
+add_library(vehicle_input STATIC validate.c adopt.c)
+target_include_directories(vehicle_input PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_compile_features(vehicle_input PRIVATE c_std_11)
+if(MSVC)
+  target_compile_options(vehicle_input PRIVATE /W4 /we4013 /utf-8)
+endif()
