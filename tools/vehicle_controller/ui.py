@@ -35,7 +35,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V19');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V20' if self.bridge.split_dynamics else 'VEHICLE SOUND · 统一 DNA V19');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)
@@ -154,7 +154,7 @@ class Window:
         self.event_policy=deepcopy(self.bridge.event_policy_defaults)
         if with_event_defaults:
             self.event_overrides={}
-            if self.bridge.path.resolve()==(self.repo/'build-vehicle-source-v16/bin/Release/vsl_source_bridge.dll').resolve():
+            if self.bridge.path.resolve() in {(self.repo/f'build-vehicle-source-v{v}/bin/Release/vsl_source_bridge.dll').resolve() for v in (16,17)}:
                 from .afterfire import defaults as afterfire_defaults
                 control,self.event_overrides,self.event_policy=afterfire_defaults(self.bridge,selection,control,features,bank)
         self.control,self.features=control,features;self.loaded=selection;self.preset_box.current(selection)
@@ -400,7 +400,7 @@ def run(repo,workspace,ready_file=None,library=None):
         import os
         take.save(ready_file,dict(schema='vsl.source-controller-ready/1',pid=os.getpid(),title=root.title(),
             bridge_sha256=window.bridge.sha256,voices_sha256=window.bridge.voices_sha256,
-            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=19,preset_schema=9,take_schema=10,
+            catalog_assets_sha256=window.bridge.catalog_assets_sha256,ui_revision=20 if window.bridge.split_dynamics else 19,preset_schema=9,take_schema=10,
             event_bank_sha256=window.bridge.event_bank_sha256,abi=window.bridge.abi(),
             geometry=root.geometry(),source_only=True,listening=window.running(),visible=bool(root.winfo_viewable()),
             startup_flare_available=bool(window.features&128),afterfire_available=bool(window.event_panel.available_mask()&8)))

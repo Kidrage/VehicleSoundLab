@@ -3,8 +3,8 @@ import ctypes as C
 import math
 
 FIELDS=(
- ('afterfire_min_count','回火最少次数',1,4,1,1),
- ('afterfire_max_count','回火最多次数',1,4,1,3),
+ ('afterfire_min_count','回火最少次数',1,12,1,1),
+ ('afterfire_max_count','回火最多次数',1,12,1,3),
  ('afterfire_delay_seconds','收油后延迟 · s',0,.65,.001,.018),
  ('afterfire_interval_min_seconds','连发最短间隔 · s',.02,.65,.005,.095),
  ('afterfire_interval_max_seconds','连发最长间隔 · s',.02,.65,.005,.16),
@@ -37,5 +37,8 @@ def validate(value):
 
 def configuration(bridge,value=None):
     result=validate(bridge.event_policy_defaults if value is None else value)
+    if result['afterfire_max_count']>4:
+        with_max=getattr(bridge,'split_dynamics',False)
+        if not with_max:raise ValueError('此冻结引擎每组最多支持4次；长连发请使用V20')
     if bridge.abi()<7 and result!=validate(defaults()):raise ValueError('旧引擎不支持自定义触发配方；请使用V7')
     return result

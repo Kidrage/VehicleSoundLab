@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6" fill="none" stroke="#526e82" stroke-width="1.5"/></marker></defs><rect width="1440" height="900" fill="#f4f6f8"/><style>text{font-family:'Microsoft YaHei',sans-serif;fill:#172d42}.title{font-size:30px;font-weight:700}.sub{font-size:17px;fill:#567084}.head{font-size:20px;font-weight:600}.body{font-size:17px}.arrow{fill:none;stroke:#526e82;stroke-width:2;marker-end:url(#arrow)}</style>
 <text x="44" y="57" class="title">Vehicle Sound Lab · 统一声源主线</text>
-<text x="44" y="90" class="sub">App V19 / C11 · 48 kHz / ABI 12 · 本仓库生成干声，空间渲染在外部</text>
+<text x="44" y="90" class="sub">App V20 / C11 · 48 kHz / ABI 12 · 本仓库生成干声，空间渲染在外部</text>
 <rect x="44" y="132" width="315" height="146" rx="14" fill="#fff" stroke="#cbd5df"/>
 <text x="66" y="166" class="head">素材 → 参数配方</text>
 <text x="66" y="198" class="body">单状态选区、录音视角与标签</text>
@@ -30,7 +30,7 @@
 <text x="446" y="566" class="body">电平0–2.6，0.5为原默认；前置拖转暂移除</text>
 <rect x="424" y="626" width="550" height="120" rx="14" fill="#fff" stroke="#cbd5df"/>
 <text x="446" y="660" class="head">独立事件</text>
-<text x="446" y="692" class="body">程序回火：4OSC + 2频带；其他事件按配方</text>
+<text x="446" y="692" class="body">连续回火：3OSC + 2频带；四槽依次复用</text>
 <text x="446" y="718" class="body">程序激励 / OSC / 共振；4声部，附实例身份</text>
 <rect x="1032" y="238" width="364" height="171" rx="14" fill="#fff" stroke="#cbd5df"/>
 <text x="1054" y="272" class="head">隔离的干声输出</text>

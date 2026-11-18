@@ -17,7 +17,7 @@ def main():
     args.output.mkdir(parents=True,exist_ok=False)
     import numpy as np
     import soundfile as sf
-    repo=Path(__file__).resolve().parents[1];b=Bridge(repo)
+    repo=Path(__file__).resolve().parents[1];b=Bridge(repo,repo/'build-vehicle-source-v16/bin/Release/vsl_source_bridge.dll')
     c,features=b.initial(0);c=startup_defaults(c,b.event_available_mask,features)
     c,overrides,policy=afterfire_defaults(b,0,c,features)
     assert b.sha256=='7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea'
@@ -122,7 +122,7 @@ def main():
         import tkinter as tk
         from vehicle_controller.ui import Window
         from PIL import ImageGrab
-        root=tk.Tk();w=Window(root,repo,args.output/'takes');w.muted.set(1)
+        root=tk.Tk();w=Window(root,repo,args.output/'takes',b.path);w.muted.set(1)
         def advance(seconds):
             deadline=time.monotonic()+seconds
             while time.monotonic()<deadline:root.update();time.sleep(.005)

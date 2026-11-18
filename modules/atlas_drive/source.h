@@ -11,6 +11,7 @@ typedef struct {
     const VslDrive *drive; /* Read-only existing controller; never step it here. */
     double envelope,body_envelope;
     uint64_t frame;
+    double air_envelope; /* Independent source-only texture dynamics. */
 } AdSourceContext;
 typedef struct {
     void *state; /* Exclusive caller-owned state, initialized outside render. */

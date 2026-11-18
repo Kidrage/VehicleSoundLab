@@ -95,6 +95,7 @@ typedef struct {
     AdControl target;
     double gain, event_gain, spatial_mix, envelope, follow;
     double low_envelope;
+    double envelope_target,air_target,air_envelope;
     uint64_t frame;
 } AdRender;
 

@@ -21,6 +21,8 @@ typedef struct {
     int (*character)(void *state,const AdSourceContext *context,AdSourceFrame *frame);
     /* Optional production mechanical feature in place of historical templates. */
     void (*auxiliary)(void *state,VslEngine *owner,DaVoice *voice,VslObjectFrame *raw,VslObjectFrame *mixed);
+    /* Optional 200 Hz source-envelope map after orchestration. No synthesis. */
+    void (*envelopes)(void *state,const VslEngine *owner,double *line,double *air);
 } AdSourceDriver;
 /* Optional replacement of the single 200Hz driver step, not a second driver. */
 int ad_source_process_controlled(AdRender *source,float *monitor,unsigned frames,

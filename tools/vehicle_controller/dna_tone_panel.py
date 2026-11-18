@@ -32,7 +32,7 @@ class DnaTonePanel:
         restore=ttk.Button(right,text='恢复 DNA 配方',command=restore_recipe)
         restore.grid(row=8,column=0,columnspan=3,sticky='w',pady=12);self.inputs.append(restore)
         ttk.Label(right,textvariable=self.status,style='Hint.TLabel',wraplength=380).grid(row=9,column=0,columnspan=3,sticky='w',pady=8)
-        ttk.Label(right,text='先以 100% / 100% 为基准，单独关闭一层听它的作用。\n再调自然起伏，最后微调各工况倍率。',style='Hint.TLabel',wraplength=380).grid(row=10,column=0,columnspan=3,sticky='w',pady=8)
+        ttk.Label(right,text='先以 100% / 100% 为基准，单独关闭一层听它的作用。\n收油行的声线／纹理倍率分别调整滑行时的保留量。\n再调自然起伏，最后微调其他工况倍率。',style='Hint.TLabel',wraplength=380).grid(row=10,column=0,columnspan=3,sticky='w',pady=8)
 
     def load(self,value):
         value=dna.validate(value)

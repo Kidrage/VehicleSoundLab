@@ -1,0 +1,224 @@
+{
+  "provenance": {
+    "source_id": "G",
+    "video_id": "7BMsB7jUxqc",
+    "url": "https://www.youtube.com/watch?v=7BMsB7jUxqc",
+    "title": "2 Lamborghini Aventador SVJs with Gintani F1 exhaust massive flames! HEADPHONE USERS BEWARE!!!",
+    "channel": "Socal Exotics",
+    "duration_seconds": 621,
+    "raw_file": "E:\\VehicleSoundLab\\references\\raw\\G_7BMsB7jUxqc.mkv",
+    "sha256": "c0a37c3b1cdd2271c67f2b8ee4b4df8b396c8ad74ed433336f9082fbabfccd22",
+    "downloaded_utc": "2026-11-18T02:26:42.228141+00:00",
+    "approval_evidence": "2026-11-18 user directly supplied this URL and asked to use audio and video to identify afterfire segments.",
+    "declared_vehicle": "Aventador SVJ V12 with Gintani F1 exhaust, according to title/description; separate from V10 DNA.",
+    "processing": "Encoded streams copied into MKV, no audio filtering or normalisation.",
+    "requested_formats": [
+      {
+        "format_id": "697",
+        "acodec": "none",
+        "vcodec": "av01.0.04M.10.0.110.09.18.09.0",
+        "asr": null,
+        "audio_channels": null,
+        "width": 854,
+        "height": 480,
+        "fps": 30
+      },
+      {
+        "format_id": "251",
+        "acodec": "opus",
+        "vcodec": "none",
+        "asr": 48000,
+        "audio_channels": 2,
+        "width": null,
+        "height": null,
+        "fps": null
+      }
+    ]
+  },
+  "analysis": {
+    "schema": "vsl.afterfire-reference-G/1",
+    "source_id": "G",
+    "url": "https://www.youtube.com/watch?v=7BMsB7jUxqc",
+    "audio_sha256": "dc30e38d11e171276528038bb379ca1e285728155a610b68dd7aa492c37237a3",
+    "decoded_frames": 29786558,
+    "sample_rate": 48000,
+    "decoded_seconds": 620.5532916666667,
+    "contexts": [
+      {
+        "name": "User-link-context",
+        "first_frame": 1536000,
+        "last_frame": 2064000,
+        "rms": 0.3053020709411745,
+        "peak": 0.882748007774353,
+        "band_power": {
+          "60-500": 0.06289945542812347,
+          "500-2500": 0.0026651767548173666,
+          "2500-6000": 0.0012800617842003703,
+          "6000-12000": 0.00021022075088694692
+        },
+        "acoustic_onset_candidates_seconds": [
+          32.017833333333336,
+          40.28033333333333,
+          40.66283333333333,
+          42.27283333333333
+        ],
+        "candidate_interval_percentiles_ms": [],
+        "physically_isolated": false
+      },
+      {
+        "name": "Intro-crackle-context",
+        "first_frame": 158400,
+        "last_frame": 302400,
+        "rms": 0.260879847180912,
+        "peak": 0.9233796000480652,
+        "band_power": {
+          "60-500": 0.007188697345554829,
+          "500-2500": 0.03647330030798912,
+          "2500-6000": 0.006616752594709396,
+          "6000-12000": 0.0004289223870728165
+        },
+        "acoustic_onset_candidates_seconds": [
+          3.405333333333333,
+          3.5003333333333333,
+          3.7928333333333333,
+          3.8728333333333333,
+          3.9603333333333333,
+          3.990333333333333,
+          4.182833333333333,
+          4.425333333333333,
+          4.467833333333333,
+          4.722833333333333,
+          4.790333333333333,
+          4.855333333333333,
+          4.912833333333333,
+          4.960333333333333,
+          5.052833333333333,
+          5.115333333333333,
+          5.227833333333333,
+          5.487833333333333,
+          5.565333333333333,
+          5.812833333333334,
+          5.915333333333333,
+          6.025333333333333,
+          6.095333333333333,
+          6.167833333333333
+        ],
+        "candidate_interval_percentiles_ms": [
+          58.00000000000009,
+          90.00000000000009,
+          254.24999999999997
+        ],
+        "physically_isolated": false
+      },
+      {
+        "name": "Flame-pass-1",
+        "first_frame": 7334400,
+        "last_frame": 7377600,
+        "rms": 0.2546910055061838,
+        "peak": 0.8627114295959473,
+        "band_power": {
+          "60-500": 0.015666550025343895,
+          "500-2500": 0.025410493835806847,
+          "2500-6000": 0.0011048479937016964,
+          "6000-12000": 7.40538744139485e-05
+        },
+        "acoustic_onset_candidates_seconds": [
+          153.33283333333335,
+          153.62033333333335
+        ],
+        "candidate_interval_percentiles_ms": [
+          287.4999999999943,
+          287.4999999999943,
+          287.4999999999943
+        ],
+        "physically_isolated": false
+      },
+      {
+        "name": "Flame-pass-2",
+        "first_frame": 7454400,
+        "last_frame": 7507200,
+        "rms": 0.14072761448757792,
+        "peak": 0.8619052767753601,
+        "band_power": {
+          "60-500": 0.006337400525808334,
+          "500-2500": 0.007234578486531973,
+          "2500-6000": 0.0001884330267785117,
+          "6000-12000": 1.300847543461714e-05
+        },
+        "acoustic_onset_candidates_seconds": [],
+        "candidate_interval_percentiles_ms": [],
+        "physically_isolated": false
+      },
+      {
+        "name": "Flame-pass-3",
+        "first_frame": 7526400,
+        "last_frame": 7579200,
+        "rms": 0.24283351731148156,
+        "peak": 0.8762522339820862,
+        "band_power": {
+          "60-500": 0.017817562445998192,
+          "500-2500": 0.01421573106199503,
+          "2500-6000": 0.0010699258418753743,
+          "6000-12000": 3.007046143466141e-05
+        },
+        "acoustic_onset_candidates_seconds": [],
+        "candidate_interval_percentiles_ms": [],
+        "physically_isolated": false
+      },
+      {
+        "name": "Night-flame-1",
+        "first_frame": 21312000,
+        "last_frame": 21432000,
+        "rms": 0.26484961749988223,
+        "peak": 0.8798882365226746,
+        "band_power": {
+          "60-500": 0.014417185448110104,
+          "500-2500": 0.035836879163980484,
+          "2500-6000": 0.0006043792818672955,
+          "6000-12000": 2.701474841160234e-05
+        },
+        "acoustic_onset_candidates_seconds": [
+          444.7703333333333,
+          445.18783333333334
+        ],
+        "candidate_interval_percentiles_ms": [],
+        "physically_isolated": false
+      },
+      {
+        "name": "Night-flame-2",
+        "first_frame": 21436800,
+        "last_frame": 21590400,
+        "rms": 0.2648742140790016,
+        "peak": 0.8989351987838745,
+        "band_power": {
+          "60-500": 0.004441982600837946,
+          "500-2500": 0.04026351124048233,
+          "2500-6000": 0.007305720821022987,
+          "6000-12000": 0.0004575520579237491
+        },
+        "acoustic_onset_candidates_seconds": [
+          446.92783333333335,
+          447.75533333333334
+        ],
+        "candidate_interval_percentiles_ms": [],
+        "physically_isolated": false
+      }
+    ],
+    "normalisation": false,
+    "visual_review": "Exact-frame full-video 5 s screening; 151-159 s and 444-452 s inspected every 0.2 s. Visible flames approx 153.2,155.6-156.0,157.0-157.6,444.0,444.4,446.8-449.6 s. Flame visibility does not timestamp every audible crack. Earlier fps-nearest thumbnails had a 2.5 s label offset; use frames_exact and storyboard-exact files.",
+    "interpretation": "Intro acoustical intervals guide a bounded irregular burst; mid/high broad transient energy guides short noise-band excitation. Three chosen damped modal frequencies and decay constants remain engineering parameters, not identified pipe/body modes.",
+    "cautions": [
+      "Modified V12 reference, separate from the V10 DNA",
+      "Mixed sources and propagation remain; flame does not prove a pedal release",
+      "No ECU/RPM/pedal measurements, A/V offset calibration or isolated pop ground truth",
+      "The full-file decoder reported an Opus packet-header warning; 620.553 s decoded. Crops avoid the file end; compressed-audio overshoots are not evidence of microphone clipping."
+    ]
+  },
+  "exact_storyboards": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_reference_G_v1\\storyboard-exact-1.jpg",
+  "dense_visual_contexts": [
+    "E:\\VehicleSoundLab\\references\\analysis\\afterfire_reference_G_v1\\flame-context.jpg",
+    "E:\\VehicleSoundLab\\references\\analysis\\afterfire_reference_G_v1\\night-context.jpg"
+  ],
+  "source_separated": false,
+  "parameters_identified_from_audio": false
+}

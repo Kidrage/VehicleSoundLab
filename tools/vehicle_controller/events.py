@@ -25,7 +25,7 @@ class EventPanel:
         self.remove_rejected=ttk.Button(left,text='移除已排除的参考',command=self.clear_rejected)
         self.remove_rejected.pack(anchor='w',pady=(0,10))
         ttk.Button(left,text='触发配方…',command=window.edit_event_policy).pack(anchor='w',pady=(0,10))
-        ttk.Label(left,text='启动变调在驾驶页调整。\n回火：可点右侧单次试听，或加速后快速收油。\n转速与油门条件合格后触发，怠速松油不会回火。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
+        ttk.Label(left,text='启动变调在驾驶页调整。\n回火：右侧试听，或加速后快速收油自动触发。\nV20默认为一组连发；怠速松油不会自动回火。',style='Hint.TLabel',wraplength=390).pack(anchor='w',pady=(0,14))
         window.slider(left,'event_gain','事件总电平',0,2)
         window.slider(left,'event_pitch','事件音高',.5,2)
         window.slider(left,'event_decay','事件时长／衰减',.25,4)
@@ -36,7 +36,8 @@ class EventPanel:
         for kind,name in enumerate(NAMES):
             row=ttk.Frame(right);row.pack(fill='x',pady=3)
             available=bool(self.available_mask()&(1<<kind))
-            button=ttk.Button(row,text=name if available else name+' · 待素材',command=lambda k=kind:self.audition(k),width=22)
+            title='回火连发试听' if kind==3 and window.bridge.split_dynamics else name
+            button=ttk.Button(row,text=title if available else title+' · 待素材',command=lambda k=kind:self.audition(k),width=22)
             button.pack(side='left');self.buttons.append(button)
             if not available:button.state(['disabled'])
             key='event_level_'+str(kind);variable=window.vars.setdefault(key,tk.DoubleVar())
@@ -68,7 +69,8 @@ class EventPanel:
         for kind,button in enumerate(self.buttons):
             available=bool(self.available_mask()&(1<<kind));custom=KINDS[kind] in w.event_overrides
             excluded=custom and rejection(w.event_overrides[KINDS[kind]]) is not None
-            button.configure(text=NAMES[kind]+(' · 已排除' if excluded else ' · 自定义' if custom else '' if available else ' · 待素材'))
+            title=('回火连发试听' if w.event_policy['afterfire_max_count']>4 else '回火单声试听') if kind==3 and w.bridge.split_dynamics else NAMES[kind]
+            button.configure(text=title+(' · 已排除' if excluded else ' · 自定义' if custom else '' if available else ' · 待素材'))
             button.state(['!disabled'] if available else ['disabled'])
             w.widgets['event_level_'+str(kind)][0].state(['!disabled'] if available else ['disabled'])
         self.describe(self.info_kind)
@@ -86,7 +88,8 @@ class EventPanel:
             self.model_info.set(str(doc.get('name',NAMES[kind]))[:90]+'\n已排除该参考：'+review['reason'])
             return
         if doc.get('design_method')=='procedural':
-            self.model_info.set(doc['name']+'\n纯合成设计候选，尚未经实车回火录音标定或听评验收。\n连发次数、间隔与冷却在“触发配方”中调整。')
+            reference='参考 G 视频设计，尚待听评；没有播放录音。' if doc.get('reference_evidence') else '纯合成设计候选，尚未经实车回火录音标定或听评验收。'
+            self.model_info.set(doc['name']+'\n'+reference+'\n连发次数、间隔与冷却在“触发配方”中调整。')
             return
         try:
             job=doc.get('source_job',{});scope=normalize(job.get('analysis_scope'))

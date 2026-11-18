@@ -47,7 +47,7 @@ int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames) {
     if(!s||!vs_output_valid(out,frames))return 0;
     if(!frames)return 1;
     if(s->assets->states)driver.dna=vs_state_sample;
-    if(s->character)driver.character=vs_character_sample;
+    if(s->character){driver.character=vs_character_sample;driver.envelopes=vs_character_envelopes;}
     if(s->dna_unified)driver.auxiliary=vs_mechanical_sample;
     c.dna=s->dna;c.body=s->body;c.coherent_low=s->low;
     c.residual=s->residual;c.resonant=s->resonant;c.aux_objects=s->aux;

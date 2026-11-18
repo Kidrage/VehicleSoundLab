@@ -1,0 +1,947 @@
+{
+  "schema": "vsl.coast-afterfire-v20-delivery/1",
+  "date": "2026-11-18",
+  "base_commit": "1cc64b92bbc46716e13a785c5d15a0135d513d2b",
+  "app_revision": 20,
+  "abi": 12,
+  "preset_schema": 9,
+  "take_schema": 10,
+  "library": "E:\\VehicleSoundLab-Git\\build-vehicle-source-v17\\bin\\Release\\vsl_source_bridge.dll",
+  "library_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20",
+  "local_delivery": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20\\delivery1",
+  "verification": {
+    "schema": "vsl.coast-afterfire-v20/1",
+    "new_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+    "old_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "startup_idle_acceleration_first_19s_exact": true,
+    "driver_and_master_gain_exact": true,
+    "windows": {
+      "acceleration": {
+        "old_dbfs": -23.06145812060382,
+        "new_dbfs": -23.06145812060382,
+        "delta_db": 0.0,
+        "old_air_dbfs": -38.78264236450536,
+        "new_air_dbfs": -38.78264236450536
+      },
+      "coast": {
+        "old_dbfs": -36.5244002057798,
+        "new_dbfs": -28.7529648141403,
+        "delta_db": 7.7714353916395,
+        "old_air_dbfs": -51.596352956553126,
+        "new_air_dbfs": -41.77263176558844
+      },
+      "braking": {
+        "old_dbfs": -35.88249627826447,
+        "new_dbfs": -29.49897112120446,
+        "delta_db": 6.38352515706001,
+        "old_air_dbfs": -50.47875373358237,
+        "new_air_dbfs": -41.88733547083026
+      }
+    },
+    "fixed_rpm": {
+      "old": {
+        "dbfs": -36.796207577634156,
+        "rpm": 3999.9999999999955
+      },
+      "new": {
+        "dbfs": -28.741903282750513,
+        "rpm": 3999.9999999999955
+      }
+    },
+    "partition_217_480_exact": true,
+    "replay_313_exact": true,
+    "continuous_19_channels_event_isolation_exact": true,
+    "manual_starts": [
+      {
+        "id": 1,
+        "frame": 0,
+        "requested_frame": 0,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 2,
+        "frame": 3171,
+        "requested_frame": 3171,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 3,
+        "frame": 8162,
+        "requested_frame": 8162,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 4,
+        "frame": 11579,
+        "requested_frame": 11579,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 5,
+        "frame": 14979,
+        "requested_frame": 14979,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 6,
+        "frame": 19955,
+        "requested_frame": 19955,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 7,
+        "frame": 24061,
+        "requested_frame": 24061,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "automatic_starts": [
+      {
+        "id": 1,
+        "frame": 915792,
+        "requested_frame": 915792,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 2,
+        "frame": 918963,
+        "requested_frame": 918963,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 3,
+        "frame": 923954,
+        "requested_frame": 923954,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 4,
+        "frame": 927371,
+        "requested_frame": 927371,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 5,
+        "frame": 930771,
+        "requested_frame": 930771,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 6,
+        "frame": 935747,
+        "requested_frame": 935747,
+        "type": 3,
+        "slot": 0,
+        "action": 1,
+        "reason": 0
+      },
+      {
+        "id": 7,
+        "frame": 939853,
+        "requested_frame": 939853,
+        "type": 3,
+        "slot": 1,
+        "action": 1,
+        "reason": 0
+      }
+    ],
+    "automatic_stats": {
+      "opportunities": 1,
+      "bursts_attempted": 1,
+      "unavailable": 0,
+      "probability_skips": 0,
+      "cooldown_skips": 0
+    },
+    "burst_peak_voices": 2,
+    "saturated_peak_voices": 4,
+    "saturated_queue_overflows": 0,
+    "peak": 0.3408823311328888,
+    "other_catalogue_event_isolation": true,
+    "timbre_acceptance_pending": true,
+    "reference_is_modified_v12_not_v10": true,
+    "geometry_cache_exact_vs_candidate": true
+  },
+  "actual_muted_ui": {
+    "schema": "vsl.coast-afterfire-ui/1",
+    "muted": true,
+    "manual": {
+      "frame": 50400,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.9999980052662972,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 31,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.4453900000953581,
+      "pc_max_block_load": 0.4912100004730746,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "replay": {
+      "frame": 52800,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.9999989322959894,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 31,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.28136999972048216,
+      "pc_max_block_load": 0.5084399999759626,
+      "replay": true,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 0,
+        "start_id": 0,
+        "gear": 1,
+        "automatic": 1,
+        "backfire": 1,
+        "rpm": 850.0,
+        "load": 0.0,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 0.0,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 0.5,
+        "catch_gain": 0.0,
+        "idle_mix": 1.0,
+        "idle_motion": 0.5,
+        "idle_detail": 1.0,
+        "input": {
+          "source": 0,
+          "valid": 4,
+          "sequence": 31,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 1,
+          "manual_type": 3,
+          "manual_sequence": 1,
+          "gain": 0.7,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            0.0,
+            0.0,
+            0.0,
+            0.8,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "dna_unified": 1,
+        "dna": {
+          "line": 1.0,
+          "air": 1.0,
+          "motion": 0.5,
+          "idle_blend": 1.0,
+          "air_continuity": 0.35,
+          "pitch_follow": 0.25,
+          "line_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "air_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "automatic": {
+      "frame": 243840,
+      "rpm": 4850.1777516972725,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": -0.09755226150714606,
+      "root_hz": 40.718997405599914,
+      "gain": 0.25,
+      "idle_weight": 7.129801191710276e-16,
+      "gear": 0,
+      "lifecycle": 4,
+      "operating": 4,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 1,
+      "legacy_hits": 2,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 107,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.2541699999710545,
+      "pc_max_block_load": 0.6026900002325419,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 1,
+        "bursts_attempted": 1,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "queue_limit": 12,
+    "unchanged_voice_limit": 4,
+    "frozen_v19_defaults_preserved": true,
+    "title": "VEHICLE SOUND · 统一 DNA V20",
+    "library_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6"
+  },
+  "final_ui": {
+    "schema": "vsl.coast-afterfire-ui-final/1",
+    "title": "VEHICLE SOUND · 统一 DNA V20",
+    "caption": "回火连发试听 · 自定义",
+    "max_count": 10,
+    "queue_count_limit": 12,
+    "voice_capacity": 4,
+    "label_tracks_policy": true,
+    "listening": false,
+    "bridge_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6"
+  },
+  "cache_invalidation": {
+    "dynamic_control_edits_exact": true,
+    "edits": [
+      [
+        "motion",
+        0.1
+      ],
+      [
+        "motion",
+        1.2
+      ],
+      [
+        "idle_blend",
+        0.6
+      ],
+      [
+        "idle_blend",
+        1.2
+      ],
+      [
+        "air_continuity",
+        0.9
+      ],
+      [
+        "pitch_follow",
+        0.9
+      ],
+      [
+        "rpm",
+        1800
+      ],
+      [
+        "rpm",
+        950
+      ]
+    ],
+    "seconds": 5.4,
+    "new_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+    "baseline_sha256": "f2f5145c34e6085dc953fd80c4615b6760cba3a27bc72b2d885d43b8a98fd301",
+    "c_header_matches_json": true,
+    "final_visual_metadata_only_change": true
+  },
+  "cycle_measurement": {
+    "schema": "vsl.coast-afterfire-cost/1",
+    "old_sha256": "7d22c302389c34168dfa19a78f810f597178c1891286d3e2b09111c1a9e3efea",
+    "new_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+    "repeats": 5,
+    "seconds_per_run": 3,
+    "scenes": {
+      "power": {
+        "pairs": [
+          {
+            "old": {
+              "thread_cycles": 2024330449,
+              "max_block_cycles": 12566463,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2058641814,
+              "max_block_cycles": 12132252,
+              "peak_voices": 0
+            },
+            "change_percent": 1.694948817123687
+          },
+          {
+            "new": {
+              "thread_cycles": 2054952841,
+              "max_block_cycles": 13180407,
+              "peak_voices": 0
+            },
+            "old": {
+              "thread_cycles": 2073005094,
+              "max_block_cycles": 12116045,
+              "peak_voices": 0
+            },
+            "change_percent": -0.8708253082565731
+          },
+          {
+            "old": {
+              "thread_cycles": 2029219248,
+              "max_block_cycles": 12434627,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2069069156,
+              "max_block_cycles": 12344157,
+              "peak_voices": 0
+            },
+            "change_percent": 1.963804948098935
+          },
+          {
+            "new": {
+              "thread_cycles": 2060896567,
+              "max_block_cycles": 12374395,
+              "peak_voices": 0
+            },
+            "old": {
+              "thread_cycles": 2043276346,
+              "max_block_cycles": 12456399,
+              "peak_voices": 0
+            },
+            "change_percent": 0.8623513424649509
+          },
+          {
+            "old": {
+              "thread_cycles": 2036716237,
+              "max_block_cycles": 12056779,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2087363095,
+              "max_block_cycles": 13508905,
+              "peak_voices": 0
+            },
+            "change_percent": 2.4866919151486977
+          }
+        ],
+        "median_change_percent": 1.694948817123687,
+        "min_change_percent": -0.8708253082565731,
+        "max_change_percent": 2.4866919151486977
+      },
+      "coast": {
+        "pairs": [
+          {
+            "old": {
+              "thread_cycles": 2022691592,
+              "max_block_cycles": 12459544,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2039078399,
+              "max_block_cycles": 12194664,
+              "peak_voices": 0
+            },
+            "change_percent": 0.8101485695996224
+          },
+          {
+            "new": {
+              "thread_cycles": 2030577037,
+              "max_block_cycles": 12724423,
+              "peak_voices": 0
+            },
+            "old": {
+              "thread_cycles": 2020744512,
+              "max_block_cycles": 12668786,
+              "peak_voices": 0
+            },
+            "change_percent": 0.4865793246801031
+          },
+          {
+            "old": {
+              "thread_cycles": 2051680447,
+              "max_block_cycles": 11993887,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2077084987,
+              "max_block_cycles": 11995337,
+              "peak_voices": 0
+            },
+            "change_percent": 1.2382308383913854
+          },
+          {
+            "new": {
+              "thread_cycles": 2049699531,
+              "max_block_cycles": 12378747,
+              "peak_voices": 0
+            },
+            "old": {
+              "thread_cycles": 2055163996,
+              "max_block_cycles": 12237721,
+              "peak_voices": 0
+            },
+            "change_percent": -0.26588948670935864
+          },
+          {
+            "old": {
+              "thread_cycles": 2030007620,
+              "max_block_cycles": 12355285,
+              "peak_voices": 0
+            },
+            "new": {
+              "thread_cycles": 2026782606,
+              "max_block_cycles": 11940426,
+              "peak_voices": 0
+            },
+            "change_percent": -0.1588670883905352
+          }
+        ],
+        "median_change_percent": 0.4865793246801031,
+        "min_change_percent": -0.26588948670935864,
+        "max_change_percent": 1.2382308383913854
+      },
+      "four_voices": {
+        "pairs": [
+          {
+            "old": {
+              "thread_cycles": 2123235863,
+              "max_block_cycles": 12789739,
+              "peak_voices": 4
+            },
+            "new": {
+              "thread_cycles": 2107061723,
+              "max_block_cycles": 11927121,
+              "peak_voices": 4
+            },
+            "change_percent": -0.761768406508867
+          },
+          {
+            "new": {
+              "thread_cycles": 2077467686,
+              "max_block_cycles": 11682318,
+              "peak_voices": 4
+            },
+            "old": {
+              "thread_cycles": 2106884432,
+              "max_block_cycles": 12396648,
+              "peak_voices": 4
+            },
+            "change_percent": -1.396220198564735
+          },
+          {
+            "old": {
+              "thread_cycles": 2051489827,
+              "max_block_cycles": 10759470,
+              "peak_voices": 4
+            },
+            "new": {
+              "thread_cycles": 2098241303,
+              "max_block_cycles": 12468010,
+              "peak_voices": 4
+            },
+            "change_percent": 2.278903623342221
+          },
+          {
+            "new": {
+              "thread_cycles": 2080022619,
+              "max_block_cycles": 12447207,
+              "peak_voices": 4
+            },
+            "old": {
+              "thread_cycles": 2164397102,
+              "max_block_cycles": 15170033,
+              "peak_voices": 4
+            },
+            "change_percent": -3.8982903332310914
+          },
+          {
+            "old": {
+              "thread_cycles": 2091012160,
+              "max_block_cycles": 12759257,
+              "peak_voices": 4
+            },
+            "new": {
+              "thread_cycles": 2070077392,
+              "max_block_cycles": 12075649,
+              "peak_voices": 4
+            },
+            "change_percent": -1.0011786827676783
+          }
+        ],
+        "median_change_percent": -1.0011786827676783,
+        "min_change_percent": -3.8982903332310914,
+        "max_change_percent": 2.278903623342221
+      }
+    },
+    "note": "Windows thread cycles around C processing and scheduled four-onset batches including control calls. Not ADI MCPS, a hard real-time peak bound or zero-cycle proof. Burst count raises duty cycle; simultaneous capacity remains four. Full-burst queue preparation is not equivalent to this sustained-voice probe."
+  },
+  "reference_report": "research/afterfire_reference_G_v1.json",
+  "listening_files": {
+    "coast": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20\\verification2\\Fixed-coast.wav",
+    "coast_with_afterfire": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20\\verification2\\Fixed-coast-and-afterfire.wav",
+    "isolated_burst": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20\\verification2\\Afterfire-burst.wav",
+    "previous_coast": "E:\\VehicleSoundLab\\references\\analysis\\coast_afterfire_v20\\verification2\\Previous-coast.wav"
+  },
+  "frozen_previous_launch": "Launch-Vehicle-Sound-v19.cmd",
+  "timbre_acceptance": "pending user listening",
+  "limits": [
+    "Modified V12 reference is a separate event style, not a calibrated V10 model",
+    "No source-separated pop ground truth or exact audio/video alignment",
+    "No additional voice slots or spatial renderer",
+    "Near old PC cycle budget, not zero-cost, ADI MCPS or hard-real-time peak proof",
+    "Denser bursts increase duty cycle; full 12-command enqueue peak not audited"
+  ],
+  "source_delta": {
+    "AGENTS.md": {
+      "sha256": "46c2f49d83dd036efa5236233cc9229f5efe1505ae97fdcd2bb601ac0f8b4de8",
+      "bytes": 520192
+    },
+    "Build-Vehicle-Source.ps1": {
+      "sha256": "84dedbfca9a89c4d850acffe6781b229e5f50341f25ad6411d94621293f22257",
+      "bytes": 991
+    },
+    "Launch-Vehicle-Sound-v19.cmd": {
+      "sha256": "7fba53e38f7180b40d7cd14378d9cac360b086596c88a48b454738b5736164de",
+      "bytes": 126
+    },
+    "README.md": {
+      "sha256": "4468f9057a7f3775ddf24cbcaf944e74a518a5be1bec0e3ea53f7f49617d8c67",
+      "bytes": 3399
+    },
+    "experiments/vehicle_source_v1/CMakeLists.txt": {
+      "sha256": "762a9f28c7e09845046b582d9add95ad85cbbcc3a9fb86aeb110cdb40d60233b",
+      "bytes": 4049
+    },
+    "experiments/vehicle_source_v1/bridge.c": {
+      "sha256": "d4b26f5f780b91580d20e69b011ed8a3bdd5f4cc3de32e052b965430de84aa77",
+      "bytes": 9380
+    },
+    "experiments/vehicle_source_v1/bridge.h": {
+      "sha256": "b41b220e479e195e76e12c13a4d04c9b43539792a20c653e6ceb60e7e8e6fde2",
+      "bytes": 3426
+    },
+    "experiments/vehicle_source_v1/dynamics_checks.c": {
+      "sha256": "2f270b6b07cae66bdbf78c714d26e278a504c88e91a4a59ba7aee96abc6e7736",
+      "bytes": 1689
+    },
+    "experiments/vehicle_source_v1/policy_checks.c": {
+      "sha256": "f35ee0bbb7ee2921e8e214ed1949a459436003da99c03d53cd2d1daaab4b1a32",
+      "bytes": 4000
+    },
+    "handoff/AppV20收油保留与连续回火.md": {
+      "sha256": "846e6ae12cc51e3302b0c51d1396e35a57c9a1555a14421a0d821259197b1564",
+      "bytes": 7301
+    },
+    "handoff/统一系统主线.svg": {
+      "sha256": "9bed10c3d710a14d2b984669f2e36de9693adbba4ead3128e17b5fd9e2d38860",
+      "bytes": 5333
+    },
+    "handoff/统一系统报告.md": {
+      "sha256": "c5c48d6c5b59cbebe27f6724fc473b85acc3a131e0eafa3482f14c2eb9f7fc72",
+      "bytes": 18822
+    },
+    "modules/atlas_drive/render.c": {
+      "sha256": "5d9a98692a74c5299480e7e711baec09e0b591a3d15c4f719314ccf5fcf58051",
+      "bytes": 21834
+    },
+    "modules/atlas_drive/render.h": {
+      "sha256": "3624dbc6f848efb8832093817d625f4882e1d42ad37e90d79032f4483d6d8440",
+      "bytes": 6118
+    },
+    "modules/atlas_drive/source.h": {
+      "sha256": "8e42244dd96f9e674fd1c44f1d7089d894582b34750b8d285ada861affe9f147",
+      "bytes": 1193
+    },
+    "modules/atlas_drive/source_process.h": {
+      "sha256": "8732bec68776a014cba9a6cc29623e322bb3cb609d8a69fdd8407af1f2c9a4a8",
+      "bytes": 1988
+    },
+    "modules/dna_character/CMakeLists.txt": {
+      "sha256": "1da870281d3125b462ea1a1b418c34bca8608721e430ae00fe184e629068fb32",
+      "bytes": 458
+    },
+    "modules/dna_character/dynamics.c": {
+      "sha256": "d2240085f0bf18b6d96ec9c17374184fbc98f13541a1283c1f7a386ffe82ab6c",
+      "bytes": 1217
+    },
+    "modules/dna_character/dynamics.h": {
+      "sha256": "43a5de59ec67de1260d44317f190dea9d7e4f853167d3dcee809adb603a24674",
+      "bytes": 342
+    },
+    "modules/dna_character/voice.c": {
+      "sha256": "c334cc904c8c5ff3f6a31630355ca2fb955d8858a55a0644b3cf19c8fb995079",
+      "bytes": 4365
+    },
+    "modules/dna_character/voice.h": {
+      "sha256": "2802deee097a9e78de4ae88cb3df157e0b8f7c2c54e6f09136139249d917e503",
+      "bytes": 1025
+    },
+    "modules/event_control/configuration.c": {
+      "sha256": "71dd3fcd65803cfa5a3063934392f1d9a3fe80dee9e8e947fc0e70ff36add2b7",
+      "bytes": 779
+    },
+    "modules/event_control/internal.h": {
+      "sha256": "2b55d44adccb12184949ea184d57f15c8cef690fda8156f37c9e2063c915bdf2",
+      "bytes": 602
+    },
+    "modules/event_control/policy.c": {
+      "sha256": "5750eeb075d1f17be95e04181f8dde2dfb569c081a22f01e07e625c3bb633314",
+      "bytes": 4716
+    },
+    "modules/event_control/scheduler.c": {
+      "sha256": "44e5b200b61b13ba6fb9b320ecb0994a64e2af32bb560e8d12f01bd58c42932f",
+      "bytes": 3396
+    },
+    "modules/vehicle_source/character.c": {
+      "sha256": "0d2067b258c83da9570acfa1f2eb1b03b4815ee6e62e4e547d72e723962afcc4",
+      "bytes": 1439
+    },
+    "modules/vehicle_source/internal.h": {
+      "sha256": "c392f96bc8675d4c4ad6d088b4275a90ff2b27039780e18755b9a67d5460793d",
+      "bytes": 2379
+    },
+    "modules/vehicle_source/source.c": {
+      "sha256": "ea26b474edd23d8f0c2dd0564a295ff44a65f66c2ab07fba9b09fd2cc1feae12",
+      "bytes": 4897
+    },
+    "presets/events/reference_afterfire_G_v2.h": {
+      "sha256": "70873f6e5e9dceea2992a6fcf3ed2ca827a966f89b3a2ffc83497fdc2bc03059",
+      "bytes": 796
+    },
+    "presets/events/reference_afterfire_G_v2.json": {
+      "sha256": "61f5173943e5f761caace20c5b5df8a08c3a86c77c5cb585c9b9768d48b3d2d7",
+      "bytes": 1880
+    },
+    "tools/analyze_afterfire_reference_G_v1.py": {
+      "sha256": "f5c32578bdaca134040c98b611dc7b517bbfb116bac7a8d87ed1c14322eb1537",
+      "bytes": 3659
+    },
+    "tools/measure_coast_afterfire_v20.py": {
+      "sha256": "707635b8d6ec40c1b513f5d05e127d27da3c6ee00fb73ffc8fd36d96c4228974",
+      "bytes": 3406
+    },
+    "tools/vehicle_controller/afterfire.py": {
+      "sha256": "caf295580115820525b5e8bf5e93cd880df086bc353f6b0470f8424827e8b981",
+      "bytes": 1502
+    },
+    "tools/vehicle_controller/dna_tone_panel.py": {
+      "sha256": "523088c4eafe94f150af04d2da651f9ff8b74c13cc2738f70701777f994a9d7d",
+      "bytes": 4186
+    },
+    "tools/vehicle_controller/event_policy.py": {
+      "sha256": "12cd9293bb6a72b13cc4c127fce5951a2fdc863216eb2c1ee27953e370860e74",
+      "bytes": 2492
+    },
+    "tools/vehicle_controller/event_policy_panel.py": {
+      "sha256": "704d48735d7ec9bd566eaf9c5fd898e66018e0ec860646cc1846543dcf1712b2",
+      "bytes": 3583
+    },
+    "tools/vehicle_controller/events.py": {
+      "sha256": "184504555a5002dec547372c644b4687d447e88f574d98f71185b819319ab043",
+      "bytes": 11346
+    },
+    "tools/vehicle_controller/native.py": {
+      "sha256": "2a352848ebfdb2d253614fc04c9588ea30a20f7b0b1ca70b260bf429ea116cd8",
+      "bytes": 15617
+    },
+    "tools/vehicle_controller/ui.py": {
+      "sha256": "42b9e6cbee0e62d16f3ae7faf0973f742291fc3dbd40a4950ba7e5bd5ac5de3c",
+      "bytes": 29608
+    },
+    "tools/verify_coast_afterfire_ui_v20.py": {
+      "sha256": "6766c5e8cb05464ea6fc0905e026b1df6900c7fcc56a2958fa0cb71a51373724",
+      "bytes": 3567
+    },
+    "tools/verify_coast_afterfire_v20.py": {
+      "sha256": "503357fc6816a33806840d7d6f6cd44d8d1c058c875857f282d18b669c81f0c1",
+      "bytes": 9683
+    },
+    "tools/verify_procedural_afterfire_v1.py": {
+      "sha256": "b4b71696e34599fc9c32720030a532bc80cbbab08a8759de392e99ce8d0cd3d4",
+      "bytes": 11151
+    }
+  }
+}

@@ -15,7 +15,7 @@ int main(void) {
     assert(ec_policy_valid(&p));bad=p;bad.afterfire_min_count=0;assert(!ec_policy_valid(&bad));
     init(&s,p,1u<<ES_AFTERFIRE);lift(&s,1,48000);
     assert(ec_poll(&s,48864,&c)&&c.frame==48864); /* historical 18 ms = 864 frames */
-    bad=p;bad.afterfire_max_count=5;assert(!ec_policy_valid(&bad));bad=p;bad.afterfire_interval_max_seconds=.02;assert(!ec_policy_valid(&bad));
+    bad=p;bad.afterfire_max_count=13;assert(!ec_policy_valid(&bad));bad=p;bad.afterfire_interval_max_seconds=.02;assert(!ec_policy_valid(&bad));
     bad=p;bad.afterfire_probability=NAN;assert(!ec_policy_valid(&bad));bad=p;bad.shift_delay_seconds=INFINITY;assert(!ec_policy_valid(&bad));
     p.afterfire_min_count=p.afterfire_max_count=3;p.afterfire_delay_seconds=.04;
     p.afterfire_interval_min_seconds=p.afterfire_interval_max_seconds=.12;p.afterfire_repeat_gain=.5;
@@ -42,5 +42,13 @@ int main(void) {
     assert(s.count==4);
     {EcObservation o=s.last;o.lifecycle=EC_STOPPING;ec_observe(&s,&o,48001);
      while(ec_poll(&s,200000,&c))assert(c.operation!=EC_START||c.type==ES_STOP);}
-    puts("event policy recipe: bounded counts, exact frames, probability, cooldown, manual and stop isolation passed");return 0;
+    p=ec_policy_default();p.afterfire_min_count=p.afterfire_max_count=12;
+    p.afterfire_interval_min_seconds=p.afterfire_interval_max_seconds=.04;
+    init(&s,p,1u<<ES_AFTERFIRE);lift(&s,1,48000);assert(s.count==12&&!s.overflow);
+    for(i=0;i<12;++i){assert(ec_poll(&s,100000,&c));assert(c.frame==48864+i*1920);
+        assert(c.request.pitch>=.92&&c.request.pitch<=1.08&&c.request.decay>=.78&&c.request.decay<=1.08);}
+    {EcControl manual=s.control;manual.manual_type=ES_AFTERFIRE;manual.manual_sequence=1;
+     assert(ec_set(&s,&manual,100000));assert(s.count==12);
+     for(i=0;i<12;++i){assert(ec_poll(&s,200000,&c)&&c.manual);assert(c.frame==100000+i*1920);}}
+    puts("event policy recipe: bounded 12-onset bursts, unchanged four-voice capacity, exact frames, probability, cooldown, manual and stop isolation passed");return 0;
 }

@@ -14,4 +14,6 @@ int dch_set(DchVoice *voice,const DchControl *control);
 /* RT: no allocation/IO/room. Advances innovations even at zero gain. */
 int dch_tick(DchVoice *voice,const DchContext *context,const double line[2],
              const double air[2],DchFrame *output);
+int dch_tick_split(DchVoice *voice,const DchContext *context,const double line[2],
+             const double air[2],double air_envelope,DchFrame *output);
 #endif

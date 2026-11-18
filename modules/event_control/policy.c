@@ -39,7 +39,9 @@ int ec_set(EcState *s,const EcControl *c,uint64_t frame) {
     int was_enabled=s->control.enabled;s->control=*c;
     if(was_enabled&&!c->enabled){ec_cancel(s,-1);ec_release(s,-1,frame,.02);s->enabled_seen=0;}
     if(c->manual_sequence!=s->manual_sequence&&c->enabled) {
-        ec_manual_start(s,(unsigned)c->manual_type,frame);
+        if(c->manual_type==ES_AFTERFIRE&&s->policy.afterfire_max_count>4)
+            ec_afterfire_burst(s,frame,1,1);
+        else ec_manual_start(s,(unsigned)c->manual_type,frame);
         if(c->manual_type==ES_CRANK)ec_release(s,ES_CRANK,frame+(uint64_t)(.8*c->decay*ES_RATE),.025);
     }
     s->manual_sequence=c->manual_sequence;
@@ -72,15 +74,11 @@ void ec_observe(EcState *s,const EcObservation *o,uint64_t frame) {
             ++s->policy_stats.probability_skips;permit=0;
         }
         if(permit) {
-            unsigned k,count=p->afterfire_min_count+(unsigned)((p->afterfire_max_count-p->afterfire_min_count+1)*ec_random(s));
-            uint64_t at=frame+delay_frames(p->afterfire_delay_seconds);
             double strength=fmin(1,fmax(.1,o->overrun_strength));
             if(s->available_mask&(1u<<ES_AFTERFIRE)) {
                 ++s->policy_stats.bursts_attempted;s->last_burst_frame=frame;s->has_burst=1;
             } else ++s->policy_stats.unavailable;
-            for(k=0;k<count;++k){ec_start(s,ES_AFTERFIRE,at,100,strength);
-                at+=(uint64_t)((p->afterfire_interval_min_seconds+(p->afterfire_interval_max_seconds-p->afterfire_interval_min_seconds)*ec_random(s))*ES_RATE);
-                strength*=p->afterfire_repeat_gain;}
+            ec_afterfire_burst(s,frame,strength,0);
         }
     }
     if(!entering&&o->shifts!=s->last.shifts&&o->previous_gear>0&&o->rpm>1500)

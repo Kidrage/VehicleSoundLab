@@ -102,6 +102,9 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
             if(driver)driver->step(driver->state,&e->drive,&e->target,s->frame);
             else vsl_drive_step(&e->drive,&e->target,.005);
             vsl_orchestrate(e,.005);vsl_events_update(e);
+            s->envelope_target=s->air_target=e->voice.dna_gain;
+            if(source_only&&driver&&driver->envelopes)
+                driver->envelopes(driver->state,e,&s->envelope_target,&s->air_target);
             /* No controller edits or derived-RPM latch in the host. */
             sa_voice_set(&s->dna,e->drive.rpm*s->config.root_per_rpm,s->target.mix.detail,1);
             if(s->config.residual_bank)ra_voice_set(&s->residual,e->drive.rpm*s->config.root_per_rpm,s->target.mix.residual_gain);
@@ -130,7 +133,8 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
         } else if(!sa_voice_tick_body(&s->dna,&s->body_band,raw,body_raw))return 0;
         if(s->config.resonant_bank&&!drs_voice_tick(&s->resonant,&s->dna,sampled_phase,&resonance))return 0;
         if(s->config.residual_bank)ra_voice_tick(&s->residual,residual,residual_raw);
-        s->envelope+=s->follow*(e->voice.dna_gain-s->envelope);
+        s->envelope+=s->follow*(s->envelope_target-s->envelope);
+        s->air_envelope+=s->follow*(s->air_target-s->air_envelope);
         s->low_envelope+=s->follow*(e->voice.body_gain-s->low_envelope);
         s->gain+=s->follow*(s->target.mix.gain-s->gain);
         s->event_gain+=s->follow*(s->target.mix.event_gain-s->event_gain);
@@ -153,8 +157,8 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
             cb_voice_process(&s->catch_bloom,input,catch_delta,1);
         }
         for (c=0;c<2;++c) {
-            residual[c]*=s->envelope;
-            resonant[c]=resonance.output[c]*s->envelope;
+            residual[c]*=s->air_envelope;
+            resonant[c]=resonance.output[c]*s->air_envelope;
             coherent[c]=low.output[c]*s->low_envelope;
         }
         if(s->config.idle_profile||s->config.fine_idle_profile) {
@@ -171,7 +175,7 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
             }
         }
         if(s->config.source_processor||(source_only&&driver&&driver->character)) {
-            AdSourceContext context={&e->drive,s->envelope,s->low_envelope,s->frame};
+            AdSourceContext context={&e->drive,s->envelope,s->low_envelope,s->frame,s->air_envelope};
             AdSourceFrame f={0};
             for(c=0;c<2;++c) {
                 f.stereo[AD_SOURCE_DNA][c]=source.dna[c];f.stereo[AD_SOURCE_BODY][c]=source.low[c];
