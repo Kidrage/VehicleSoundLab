@@ -1,5 +1,7 @@
 # Vehicle Sound Lab
 
+当前 `main` 交付基线：**App V20＋回火压力 V3（2026-11-18）**，算法基点 `3a028f3`。包含完整 C11 声源工程、参数资产、构建入口及交接文档。[版本更新说明](CHANGELOG.md)列出功能、兼容性、验证与已知边界。
+
 当前主线：**DNA（进气感声线＋排气空气感纹理＋机械特征）＋低频轰鸣＋独立启停／事件**。
 
 - 日常调音：运行 `Launch-Vehicle-Sound.cmd`，进入同一个 Vehicle Sound App V20。

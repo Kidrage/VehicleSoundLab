@@ -1,0 +1,20 @@
+{
+  "schema": "vsl.main-release-verification/1",
+  "date": "2026-11-18",
+  "release": "App V20 + afterfire pressure V3",
+  "algorithm_commit": "3a028f35153a235a080ac6031b7295c18034ee36",
+  "target_branch": "main",
+  "previous_main": "7a1e52546377db6bd40a905da5f567afed83eca4",
+  "clean_checkout_build": true,
+  "cmake_generator": "Visual Studio 17 2022 / x64 / Release",
+  "source_or_preset_changes_for_release": false,
+  "tests_passed": 8,
+  "tests_failed": 0,
+  "test_log": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\main-release-tests.log",
+  "test_log_sha256": "9e94f604f42cf2923a86d5ad5564541c7ec8b2f35dee1182ed85d20c79bd46cd",
+  "build_log": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\main-release-build.log",
+  "build_log_sha256": "091d55b0cac8cbb04737a18deb223c3b04a9accc8d70bd5fb535c00ce60d9f7d",
+  "rebuilt_bridge_sha256": "3a6a6984bfd22ce3858f3fca740f35baed228fe2575ec4c914e9bdc3a979aa3a",
+  "note": "The separately rebuilt DLL has its own binary identity; historical takes continue to require their recorded binary. Not ADI target qualification.",
+  "source_description": "README.md and CHANGELOG.md describe this fixed code baseline; in-progress files in the original research checkout are excluded."
+}
