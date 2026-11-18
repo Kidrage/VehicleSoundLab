@@ -97,6 +97,8 @@ def main():
         sf.write(a.output/(name+'.wav'),audio[17*48000:25*48000],48000,subtype='FLOAT')
     ctrl,f=new.initial(0);ctrl=startup_defaults(ctrl,new.event_available_mask,f)
     ctrl,overrides,policy=afterfire_defaults(new,0,ctrl,f)
+    # This historical V20 verifier remains bound to the delivered V2 timbre.
+    overrides['afterfire']=json.loads((repo/'presets/events/reference_afterfire_G_v2.json').read_text(encoding='utf-8'))
     assert len(overrides['afterfire']['parameters']['modes'])==3
     from event_authoring.export import c_profile
     assert c_profile(overrides['afterfire']['parameters']) in (repo/'presets/events/reference_afterfire_G_v2.h').read_text(encoding='utf-8')

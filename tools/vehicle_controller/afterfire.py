@@ -6,7 +6,7 @@ from event_authoring.material_reviews import ensure_live_reference
 
 
 def profile(repo,extended=False):
-    name='reference_afterfire_G_v2.json' if extended else 'procedural_afterfire_v1.json'
+    name='reference_afterfire_G_v3.json' if extended else 'procedural_afterfire_v1.json'
     value=document(json.loads((repo/'presets/events'/name).read_text(encoding='utf-8')))
     ensure_live_reference({'afterfire':value})
     return value

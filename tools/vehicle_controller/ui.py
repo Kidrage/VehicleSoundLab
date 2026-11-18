@@ -35,7 +35,7 @@ class Window:
         self.startup_response=deepcopy(self.bridge.startup_defaults);self.startup_panel=None
         self.event_policy=deepcopy(self.bridge.event_policy_defaults);self.policy_panel=None
         self.dna_bank=None;self.dna_panel=None;self.dna_status=tk.StringVar(value='目录声纹')
-        self.root.title('VEHICLE SOUND · 统一 DNA V20' if self.bridge.split_dynamics else 'VEHICLE SOUND · 统一 DNA V19');self.root.geometry('1100x860');self.root.minsize(1020,800)
+        self.root.title('VEHICLE SOUND · 统一 DNA V20 · 回火压力 V3' if self.bridge.split_dynamics else 'VEHICLE SOUND · 统一 DNA V19');self.root.geometry('1100x860');self.root.minsize(1020,800)
         self.root.configure(bg='#f2f4f7');style=ttk.Style(root);style.theme_use('clam')
         style.configure('.',font=('Microsoft YaHei UI',10),background='#f2f4f7',foreground='#172338')
         style.configure('TFrame',background='#f2f4f7');style.configure('TLabelframe',padding=14)

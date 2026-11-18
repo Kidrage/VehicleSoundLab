@@ -1,6 +1,7 @@
 #include "dna_character/dynamics.h"
 #include "core/modules.h"
 #include "../../presets/events/reference_afterfire_G_v2.h"
+#include "../../presets/events/reference_afterfire_G_v3.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,6 +10,8 @@ int main(void) {
     VslEngine *e=calloc(1,sizeof *e);double line,air;CHECK(e);
     CHECK(es_profile_valid(&vsl_reference_afterfire_G_v2)&&ec_policy_valid(&vsl_reference_afterfire_G_policy));
     CHECK(vsl_reference_afterfire_G_v2.mode_count==3&&vsl_reference_afterfire_G_v2.band_count==2);
+    CHECK(es_profile_valid(&vsl_reference_afterfire_G_v3));
+    CHECK(vsl_reference_afterfire_G_v3.mode_count==3&&vsl_reference_afterfire_G_v3.band_count==2);
     e->drive.rpm=4000;e->drive.lifecycle=VSL_RUNNING;e->drive.combustion=1;e->drive.shift_gain=1;
     e->voice.dna_gain=.19;e->voice.state_mix[VSL_OVERRUN]=1;
     dch_dynamics_targets(e,&line,&air);CHECK(fabs(line-.50)<1e-14&&fabs(air-.64)<1e-14);

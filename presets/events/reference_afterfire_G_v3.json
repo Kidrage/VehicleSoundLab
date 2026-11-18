@@ -1,0 +1,90 @@
+{
+  "schema": "vsl.event-profile/4",
+  "kind": "afterfire",
+  "name": "G 风格回火 V3 · 压力爆破",
+  "design_method": "procedural",
+  "physical_identity_confirmed": false,
+  "design_note": "Reference-guided pressure-pulse candidate; three phase-aligned, strongly damped OSC plus two broad noise bands. Reduced high-band excitation; no new voice, DSP kernel, filter, room or PCM. Frequencies/decays remain sound-design parameters, not identified physical modes. Listening pending.",
+  "reference_evidence": {
+    "source_id": "G",
+    "url": "https://www.youtube.com/watch?v=7BMsB7jUxqc",
+    "raw_sha256": "c0a37c3b1cdd2271c67f2b8ee4b4df8b396c8ad74ed433336f9082fbabfccd22",
+    "vehicle_declared_by_uploader": "Aventador SVJ V12, Gintani F1 exhaust",
+    "visual_candidates_seconds": [
+      [
+        153.0,
+        153.5
+      ],
+      [
+        155.4,
+        156.2
+      ],
+      [
+        156.9,
+        157.8
+      ],
+      [
+        444.0,
+        444.6
+      ],
+      [
+        446.8,
+        449.6
+      ]
+    ],
+    "limits": "Visible flames support exhaust-event selection. Mixed vehicle audio, microphone/codec and propagation remain; pedal, RPM and exact A/V offset are not measured. Parameters are sound-design choices, not source-separated estimates."
+  },
+  "parameters": {
+    "gated": 0,
+    "duration_seconds": 0.1,
+    "attack_seconds": 0.00022,
+    "release_seconds": 0.01,
+    "sweep_seconds": 0.0,
+    "level": 2.42264137,
+    "modes": [
+      {
+        "hz": 175,
+        "end_hz": 175,
+        "amplitude": 0.55,
+        "phase": 1.5707963267948966,
+        "decay_seconds": 0.0075
+      },
+      {
+        "hz": 410,
+        "end_hz": 410,
+        "amplitude": 0.85,
+        "phase": 1.5707963267948966,
+        "decay_seconds": 0.0032
+      },
+      {
+        "hz": 975,
+        "end_hz": 975,
+        "amplitude": 0.34,
+        "phase": 1.5707963267948966,
+        "decay_seconds": 0.002
+      }
+    ],
+    "bands": [
+      {
+        "hz": 650,
+        "q": 0.35,
+        "amplitude": 2.4,
+        "attack_seconds": 0.00025,
+        "decay_seconds": 0.006
+      },
+      {
+        "hz": 2200,
+        "q": 0.45,
+        "amplitude": 0.7,
+        "attack_seconds": 0.0001,
+        "decay_seconds": 0.0028
+      }
+    ]
+  },
+  "supersedes_feedback": "V2 sounds too crisp, insufficient impulsive pressure/explosive body; user 2026-11-18.",
+  "level_calibration": {
+    "method": "Eight native-C separated events, same controls and request seeds, RMS matched to V2; no reference loudness matching",
+    "parameter_gain": 1.8635702874332554,
+    "source_attempt": "afterfire_impulse_v3/attempt3"
+  }
+}

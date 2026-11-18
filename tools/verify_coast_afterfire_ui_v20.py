@@ -32,7 +32,9 @@ def main():
         ImageGrab.grab(window=root.winfo_id()).save(a.output/'App-V20-events.png')
         w.stop();advance(.2);w.save_take();assert not w.last_error,w.last_error
         path=next((a.output/'takes').glob('*.vsltake.json'));record=take.read(path,w.bridge)
-        w.start(record);wait_for(lambda:not w.running(),record['frames']/48000+6)
+        # Host completion can precede Tk's next 40ms refresh. Wait for the UI
+        # to leave replay and re-enable Start before invoking the next action.
+        w.start(record);wait_for(lambda:not w.running() and not w.replaying and not w.start_button.instate(['disabled']),record['frames']/48000+6)
         replay=w.host.snapshot();assert replay['event_started']==manual['event_started'] and replay['underflows']==0,replay
         w.load(0);w.automatic.set(0);w.gear.set(0);w.tabs.select(w.drive);w.start_button.invoke()
         wait_for(lambda:w.host.snapshot().get('lifecycle')==4)

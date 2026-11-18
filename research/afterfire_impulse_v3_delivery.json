@@ -1,0 +1,424 @@
+{
+  "schema": "vsl.afterfire-impulse-v3-delivery/1",
+  "date": "2026-11-18",
+  "base_commit": "ea9d328be520af236b5ae40f8ba155b7f360a6a8",
+  "feedback": "V2 too crisp, insufficient impulse/explosive pressure; rejected for timbre, not rejection of coast fix",
+  "current_preset": "presets/events/reference_afterfire_G_v3.json",
+  "production_kernel_unchanged": true,
+  "library_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+  "reference": "research/afterfire_reference_G_v1.json",
+  "local_delivery": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\delivery1",
+  "evidence_root": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3",
+  "verification": {
+    "schema": "vsl.afterfire-impulse-v3-verification/1",
+    "bridge_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6",
+    "profile_sha256": "59df89774e405e59892b96cb779e7236cfc6318aacaf86ed6ed98d923350a78a",
+    "unchanged_kernel": true,
+    "modes": 3,
+    "bands": 2,
+    "voices": 4,
+    "extra_filters": 0,
+    "matched_single_event_group_rms_delta_db": 2.8339300830846066e-07,
+    "previous_metrics": {
+      "peak": 0.31970250606536865,
+      "rms": 0.026840485632419586,
+      "crest_db": 21.51911163330078,
+      "energy_time_ms": {
+        "0.1": 0.5208333333333334,
+        "0.5": 3.2083333333333335,
+        "0.9": 13.5625
+      },
+      "first_5ms_energy_fraction": 0.6618872880935669,
+      "band_energy_fraction": {
+        "40-250": 0.19879049460956308,
+        "250-1200": 0.17955664786889197,
+        "1200-3000": 0.21507358598597565,
+        "3000-10000": 0.4065792715355693
+      }
+    },
+    "pressure_metrics": {
+      "peak": 0.31968528032302856,
+      "rms": 0.02723510004580021,
+      "crest_db": 21.39187240600586,
+      "energy_time_ms": {
+        "0.1": 0.20833333333333334,
+        "0.5": 2.416666666666667,
+        "0.9": 8.125
+      },
+      "first_5ms_energy_fraction": 0.7807689905166626,
+      "band_energy_fraction": {
+        "40-250": 0.23882424714435138,
+        "250-1200": 0.3145339382639956,
+        "1200-3000": 0.25714647986181716,
+        "3000-10000": 0.18949533472983585
+      }
+    },
+    "first_19_seconds_exact": true,
+    "continuous_19_channels_exact": true,
+    "driver_and_master_gain_exact": true,
+    "trigger_times_and_slots_exact": true,
+    "manual_count": 7,
+    "partition_217_480_exact": true,
+    "replay_313_exact": true,
+    "normal_peak_voices": 2,
+    "dense_peak_voices": 4,
+    "queue_overflow": 0,
+    "single_events_peak": 0.34721940755844116,
+    "burst_peak": 0.34495308995246887,
+    "full_flow_peak": 0.34961017966270447,
+    "timbre_acceptance_pending": true
+  },
+  "actual_muted_app": {
+    "schema": "vsl.coast-afterfire-ui/1",
+    "muted": true,
+    "manual": {
+      "frame": 50880,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.999998239653686,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 31,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.28300000049057417,
+      "pc_max_block_load": 0.5002499994589016,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "replay": {
+      "frame": 52800,
+      "rpm": 0.0,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": 0.0,
+      "root_hz": 0.0,
+      "gain": 0.25,
+      "idle_weight": 0.9999989322959894,
+      "gear": 1,
+      "lifecycle": 0,
+      "operating": 0,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 0,
+      "legacy_hits": 0,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 31,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": false,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.2634099997521844,
+      "pc_max_block_load": 0.4958700003044214,
+      "replay": true,
+      "event_policy_stats": {
+        "opportunities": 0,
+        "bursts_attempted": 0,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      },
+      "adopted_control": {
+        "mode": 1,
+        "ignition": 0,
+        "start_id": 0,
+        "gear": 1,
+        "automatic": 1,
+        "backfire": 1,
+        "rpm": 850.0,
+        "load": 0.0,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "gain": 0.25,
+        "detail": 1.0,
+        "legacy_event_gain": 0.0,
+        "low_mix": 0.0,
+        "coherent_low_gain": 1.0,
+        "resonant_gain": 1.0,
+        "residual_gain": 0.0,
+        "intake_gain": 0.0,
+        "mechanical_gain": 0.0,
+        "air_gain": 0.0,
+        "road_gain": 0.0,
+        "wind_gain": 0.0,
+        "startup_gain": 0.5,
+        "catch_gain": 0.0,
+        "idle_mix": 1.0,
+        "idle_motion": 0.5,
+        "idle_detail": 1.0,
+        "input": {
+          "source": 0,
+          "valid": 4,
+          "sequence": 31,
+          "speed_mps": 0.0,
+          "acceleration_mps2": 0.0,
+          "tire_slip": 0.0
+        },
+        "events": {
+          "enabled": 1,
+          "manual_type": 3,
+          "manual_sequence": 1,
+          "gain": 0.7,
+          "pitch": 1.0,
+          "decay": 1.0,
+          "texture": 1.0,
+          "levels": [
+            0.0,
+            0.0,
+            0.0,
+            0.8,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "dna_unified": 1,
+        "dna": {
+          "line": 1.0,
+          "air": 1.0,
+          "motion": 0.5,
+          "idle_blend": 1.0,
+          "air_continuity": 0.35,
+          "pitch_follow": 0.25,
+          "line_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "air_state": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "automatic": {
+      "frame": 243360,
+      "rpm": 4873.198252014218,
+      "speed_mps": 0.0,
+      "acceleration_mps2": 0.0,
+      "load": -0.09766235539320321,
+      "root_hz": 40.911813412929725,
+      "gain": 0.25,
+      "idle_weight": 1.037423003308352e-15,
+      "gear": 0,
+      "lifecycle": 4,
+      "operating": 4,
+      "coverage": -1,
+      "shifts": 0,
+      "overruns": 1,
+      "legacy_hits": 2,
+      "input_source": 0,
+      "input_stale": 0,
+      "tire_slip": 0.0,
+      "signal_sequence": 106,
+      "event_active": 0,
+      "event_started": 7,
+      "event_rejected": 0,
+      "event_replaced": 0,
+      "event_queue": 0,
+      "event_overflow": 0,
+      "event_log_lost": 0,
+      "event_peak": 2,
+      "active": true,
+      "starting": false,
+      "error": null,
+      "underflows": 0,
+      "pc_block_load": 0.30336999989231117,
+      "pc_max_block_load": 0.5543500003113877,
+      "replay": false,
+      "event_policy_stats": {
+        "opportunities": 1,
+        "bursts_attempted": 1,
+        "unavailable": 0,
+        "probability_skips": 0,
+        "cooldown_skips": 0
+      },
+      "dna_state": {
+        "available_mask": 1,
+        "weight": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          -1,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "queue_limit": 12,
+    "unchanged_voice_limit": 4,
+    "frozen_v19_defaults_preserved": true,
+    "title": "VEHICLE SOUND · 统一 DNA V20 · 回火压力 V3",
+    "library_sha256": "7fdda41236a97e6ec6c0833b8d0d7e608e095786ef6e525a4110d9782d5535f6"
+  },
+  "c_header_compiled_and_dynamic_check_passed": true,
+  "unchanged_c_test_baseline_count": 8,
+  "attempts": {
+    "attempt1": "Initial first-event metrics confounded by unsettled bus gain; preserved, not used as final evidence",
+    "attempt2": "Warm-up corrected; pressure too LF-dominant for selected design",
+    "attempt3": "Selected low-mid pressure balance; engineered parameters, no physical modal identification",
+    "ui1": "Harness invoked still-disabled Start during replay/Tk refresh race; no engine error",
+    "ui2": "Waits for UI replay completion; passed"
+  },
+  "cost_boundary": "Same 3 OSC/2 bands/4 voices, no extra kernel path/filter/contour, shorter 100ms event vs115ms. No fresh PC cycle benchmark or literal-zero/ADI/hard-RT guarantee.",
+  "listening": {
+    "Pressure-burst.wav": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\verification1\\Pressure-burst.wav",
+    "Previous-burst.wav": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\verification1\\Previous-burst.wav",
+    "Pressure-coast.wav": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\verification1\\Pressure-coast.wav",
+    "Previous-coast.wav": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\verification1\\Previous-coast.wav",
+    "Pressure-single-events.wav": "E:\\VehicleSoundLab\\references\\analysis\\afterfire_impulse_v3\\verification1\\Pressure-single-events.wav"
+  },
+  "timbre_acceptance": "pending human review",
+  "source_delta": {
+    "AGENTS.md": {
+      "sha256": "d38241e89095e58c1de16e5a3fef3050d562721028ae2171368e25b022a655a7",
+      "bytes": 521964
+    },
+    "README.md": {
+      "sha256": "09c797bfe2497ea3b6f95100bfea629bd79dc62bfb98ea31f686a33aa52b3bbc",
+      "bytes": 3683
+    },
+    "experiments/vehicle_source_v1/dynamics_checks.c": {
+      "sha256": "89bc5d32dd7750cca2d4106c763d0b36d8d96e387e3adb2df88a0cf8fd571f59",
+      "bytes": 1907
+    },
+    "handoff/回火压力脉冲V3.md": {
+      "sha256": "68e7b2148ea78ce16e233ba6dcb1d17ef207f8ef24b4185eb79e352ea599ac20",
+      "bytes": 4646
+    },
+    "handoff/统一系统报告.md": {
+      "sha256": "7e21fa541689b8057188cff9112cf9c6b93fe334978af4bb852143c0459bb15e",
+      "bytes": 19186
+    },
+    "presets/events/reference_afterfire_G_v3.h": {
+      "sha256": "90e41fd2b6c8fae6c84500baf0025cdb3eb72e18a484fa847b52761a0f649633",
+      "bytes": 669
+    },
+    "presets/events/reference_afterfire_G_v3.json": {
+      "sha256": "59df89774e405e59892b96cb779e7236cfc6318aacaf86ed6ed98d923350a78a",
+      "bytes": 2723
+    },
+    "tools/tune_afterfire_impulse_v3.py": {
+      "sha256": "66aefb3d15b4038b0959ce84b256885b71380f632e100b309535710198cb3097",
+      "bytes": 7545
+    },
+    "tools/vehicle_controller/afterfire.py": {
+      "sha256": "1edf11b47ce0a1886756ca4f584b626bb1b87e0ebad10e253447fbed270d160f",
+      "bytes": 1502
+    },
+    "tools/vehicle_controller/ui.py": {
+      "sha256": "2ccd82b23ca1b526390b9c1532948d19f16deca138e6a4c38d004da38fec7210",
+      "bytes": 29627
+    },
+    "tools/verify_afterfire_impulse_v3.py": {
+      "sha256": "f453f8f923edeafb02a242dc45cd3700a7daa801f1da83862547d3b64345abd6",
+      "bytes": 5677
+    },
+    "tools/verify_coast_afterfire_ui_v20.py": {
+      "sha256": "46ee4688a32f1e744a187c5afe1cd2bcc2783f3c1cca2181b03b3c6c36163388",
+      "bytes": 3789
+    },
+    "tools/verify_coast_afterfire_v20.py": {
+      "sha256": "77888c5b8a569317db696162b3050ff9d8d27805788ecd84b421842f60108b0b",
+      "bytes": 9881
+    }
+  }
+}
