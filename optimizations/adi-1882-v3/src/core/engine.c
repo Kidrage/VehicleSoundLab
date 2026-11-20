@@ -10,8 +10,10 @@
 #include <string.h>
 float vsl_clamp(float v,float lo,float hi) { return !isfinite(v)?lo:(v<lo?lo:(v>hi?hi:v)); }
 void vsl_init(VslEngine *e,float sr,uint32_t seed) {
+#ifndef VSL_FIXED_V10
     static const unsigned taps[]={0,313,709,1153,1877,2683};
     static const float gain[]={.65f,.12f,-.08f,.06f,.04f,-.025f};unsigned i;
+#endif
     memset(e,0,sizeof *e);e->sample_rate=vsl_clamp(sr,16000,192000);
     e->target=e->smooth=vsl_default_params(0);e->control_period=(unsigned)(e->sample_rate/200+.5f);
     e->nvh.seed=seed?seed:48271;e->events.seed=e->nvh.seed^0x9e3779b9u;
@@ -24,13 +26,17 @@ void vsl_init(VslEngine *e,float sr,uint32_t seed) {
     vsl_firing_source_init(&e->firing_source,e->sample_rate);
     vsl_drive_reset(&e->drive,0);
     vsl_excitation_init(e);
+#ifndef VSL_FIXED_V10
     vsl_propagation_init(&e->spatial.propagation);
+#endif
+#ifndef VSL_FIXED_V10
     e->acoustics.tap_count=6;
     for(i=0;i<6;++i) {
         unsigned t=(unsigned)(taps[i]*e->sample_rate/48000);
         if(t>=VSL_MAX_IR)t=VSL_MAX_IR-1;
         e->acoustics.taps[i]=t;e->acoustics.ir[t]=gain[i];e->acoustics.ir_length=t+1;
     }
+#endif
 }
 void vsl_set_params(VslEngine *e,const VslParams *p) {
     e->target=*p;
@@ -55,6 +61,9 @@ void vsl_set_params(VslEngine *e,const VslParams *p) {
     e->target.firing_source=(int)vsl_clamp((float)p->firing_source,VSL_SOURCE_OSC,VSL_SOURCE_VARIABLE);
 }
 int vsl_process_layout(VslEngine *e,float *out,unsigned frames,int channels,float *stems) {
+#ifdef VSL_FIXED_V10
+    (void)e;(void)out;(void)frames;(void)channels;(void)stems;return 0;
+#else
     unsigned i;int c;float fast=1-expf(-1/(.018f*e->sample_rate));
     if(channels!=2&&channels!=12)return 0;
     for(i=0;i<frames;++i) {
@@ -103,6 +112,7 @@ int vsl_process_layout(VslEngine *e,float *out,unsigned frames,int channels,floa
         }
     }
     return 1;
+#endif
 }
 void vsl_process(VslEngine *e,float *out,unsigned frames) { (void)vsl_process_layout(e,out,frames,2,NULL); }
 void vsl_drive(float t,VslParams *p) {

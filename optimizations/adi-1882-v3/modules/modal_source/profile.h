@@ -1,6 +1,9 @@
 #ifndef VSL_MODAL_SOURCE_PROFILE_H
 #define VSL_MODAL_SOURCE_PROFILE_H
+#include "dsp_support/config.h"
+#ifndef MS_MAX_MODES
 #define MS_MAX_MODES 64
+#endif
 #define MS_RATE 48000
 typedef struct {
     float hz,amplitude[2],phase[2];

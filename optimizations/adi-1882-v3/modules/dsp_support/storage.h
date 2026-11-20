@@ -1,5 +1,6 @@
 #ifndef VSL_DSP_STORAGE_H
 #define VSL_DSP_STORAGE_H
+#include "config.h"
 #include <stdlib.h>
 #include <string.h>
 

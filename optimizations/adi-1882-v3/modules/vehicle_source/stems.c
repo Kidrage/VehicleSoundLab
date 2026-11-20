@@ -45,7 +45,7 @@ static inline void write_stem(VsOutput *out,unsigned k,unsigned n,unsigned chann
 }
 #ifdef VSL_DSP_STATIC
 VSL_SECTION(VSL_L1_STATE)
-static float stem_gains[VS_BLOCK_MAX];
+static float stem_gains[VS_WORK_FRAMES];
 /* Write one contiguous stem at a time. The gain recurrence, FP32 expression
    order and event summation are identical to the sample-major implementation.
    This avoids revisiting 23 distant DDR streams for every audio sample. */

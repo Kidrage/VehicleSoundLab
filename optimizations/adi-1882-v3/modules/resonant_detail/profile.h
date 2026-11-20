@@ -1,6 +1,9 @@
 #ifndef VSL_RESONANT_DETAIL_PROFILE_H
 #define VSL_RESONANT_DETAIL_PROFILE_H
+#include "dsp_support/config.h"
+#ifndef RDT_MAX_BANDS
 #define RDT_MAX_BANDS 12
+#endif
 #define RDT_MAX_AR 24
 #define RDT_MAX_SOS 4
 #define RDT_MAX_ENVELOPE 12

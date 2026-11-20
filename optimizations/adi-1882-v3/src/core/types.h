@@ -1,5 +1,6 @@
 #ifndef VSL_TYPES_H
 #define VSL_TYPES_H
+#include "dsp_support/config.h"
 #include <stdint.h>
 #include "drive/types.h"
 #include "voice_types.h"
@@ -18,7 +19,9 @@
 #define VSL_WIDEN(x) VSL_WIDEN_INNER(x)
 #define VSL_VERSION_W VSL_WIDEN(VSL_VERSION)
 #define VSL_PARTIALS 128
+#ifndef VSL_MAX_IR
 #define VSL_MAX_IR 8192
+#endif
 #define VSL_PI 3.14159265358979323846f
 typedef enum { VSL_V10, VSL_V8, VSL_FLAT6, VSL_SCIFI, VSL_V12, VSL_PROFILE_COUNT } VslProfileId;
 typedef struct {

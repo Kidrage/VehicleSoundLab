@@ -4,6 +4,7 @@
 #include "dsp_support/storage.h"
 #define PI 3.14159265358979323846f
 
+#ifndef VSL_FIXED_V10
 static float wrap(float x) { return remainderf(x, 2*PI); }
 static int valid(const SdProfile *m,int bandlimited) {
     unsigned h,c,k,j;
@@ -37,6 +38,8 @@ static float score(const SaBank *b, unsigned next, unsigned orders, float offset
     return sum;
 }
 
+#endif
+#ifndef VSL_FIXED_V10
 static int init(SaBank *bank, const SdProfile *const *models, unsigned count, unsigned orders,int bandlimited) {
     VSL_SECTION(VSL_DDR)
     VSL_INIT_WORK SaBank result;
@@ -86,6 +89,12 @@ static int init(SaBank *bank, const SdProfile *const *models, unsigned count, un
     *bank=result;
     return 1;
 }
+#else
+static int init(SaBank *bank,const SdProfile *const *models,unsigned count,unsigned orders,int bandlimited){
+    (void)bank;(void)models;(void)count;(void)orders;(void)bandlimited;return 0;
+}
+#endif
+
 int sa_bank_init(SaBank *bank,const SdProfile *const *models,unsigned count,unsigned orders) {
     return init(bank,models,count,orders,0);
 }
@@ -94,6 +103,10 @@ int sa_bank_init_bandlimited(SaBank *bank,const SdProfile *const *models,unsigne
 }
 
 float sa_bank_sine(const SaBank *b, float radians) {
+#ifdef VSL_FIXED_V10
+    /* Single anchor: no interpolation calls this helper in the source path. */
+    (void)b;return sinf(radians);
+#else
     float x=radians*(SA_TABLE_SIZE/(2*PI)), fraction;
     unsigned i;
     x-=floorf(x/SA_TABLE_SIZE)*SA_TABLE_SIZE;
@@ -101,4 +114,5 @@ float sa_bank_sine(const SaBank *b, float radians) {
     if (x>=SA_TABLE_SIZE) x=0;
     i=(unsigned)x;fraction=x-i;
     return b->sine[i]+fraction*(b->sine[i+1]-b->sine[i]);
+#endif
 }

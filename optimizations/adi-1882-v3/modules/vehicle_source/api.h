@@ -1,5 +1,6 @@
 #ifndef VSL_VEHICLE_SOURCE_API_H
 #define VSL_VEHICLE_SOURCE_API_H
+#include "dsp_support/config.h"
 #include <stdint.h>
 #include "vehicle_input/types.h"
 #include "event_control/api.h"
@@ -7,6 +8,9 @@
 #include "dna_character/control.h"
 #define VS_RATE 48000
 #define VS_BLOCK_MAX 1024
+#ifndef VS_WORK_FRAMES
+#define VS_WORK_FRAMES VS_BLOCK_MAX
+#endif
 typedef struct VsAssets VsAssets;
 typedef struct VsEngine VsEngine;
 typedef VslLifecycleProfile VsStartupResponse;

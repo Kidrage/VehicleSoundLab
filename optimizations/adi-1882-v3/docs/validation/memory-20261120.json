@@ -1,0 +1,24 @@
+{
+  "evidence": "MSVC x64 FP32 linked sections, not CCES or stack high-water",
+  "sha256": "78e3f84004a30be857de8107b5745e5972a5eaf97200ee72900783dfb5f258fc",
+  "sections_bytes": {
+    ".text": 165816,
+    ".rdata": 186874,
+    ".data": 335376,
+    ".pdata": 6780,
+    ".rsrc": 480,
+    ".reloc": 220
+  },
+  "writable_static_bytes": 335376,
+  "reserved_stack_bytes": 65536,
+  "algorithm_ram_plus_reserved_stack_bytes": 402960,
+  "caller_stereo_output_bytes": 2048,
+  "conservative_ram_plus_reserved_stack_bytes": 597314,
+  "readonly_sections_bytes": 194354,
+  "code_bytes": 165816,
+  "all_sections_plus_reserved_stack_bytes": 763130,
+  "budget_bytes": 600000,
+  "margin_bytes": 2686,
+  "pass_ram_budget": true,
+  "scope": "Budget gate includes every writable and read-only non-code DLL section, retained startup pools, a 64KiB stack reservation and a 2KiB caller stereo output buffer. It conservatively counts constants and PE metadata as RAM. Excludes test executable, OS process, firmware DMA/I/O buffers, cache and code; target map and target stack high-water remain required."
+}

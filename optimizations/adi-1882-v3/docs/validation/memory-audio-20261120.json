@@ -1,0 +1,694 @@
+{
+  "scope": "Saved PC FP32 output equivalence and host timing; not board MCPS or target linker-map certification",
+  "passed": true,
+  "before_sha256": "85ab303db327ecd42704bb606e18f5cb2aa215965b0b8e12dfa82b0b2cd55bb9",
+  "after_sha256": "78e3f84004a30be857de8107b5745e5972a5eaf97200ee72900783dfb5f258fc",
+  "comparisons": [
+    {
+      "name": "startup",
+      "scene": "startup",
+      "seconds": 6,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 288000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "70b1b67a2aadeba72987dae72c2046dcc46503c2612cf06a1654f58a827174c3",
+        "payload_sha256_after": "70b1b67a2aadeba72987dae72c2046dcc46503c2612cf06a1654f58a827174c3",
+        "file_sha256_before": "bb952835987422a1dfaade7349a1296b7677f5fa6e1c6ca6c39a3df55754b6bc",
+        "file_sha256_after": "bb952835987422a1dfaade7349a1296b7677f5fa6e1c6ca6c39a3df55754b6bc",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "1ddec2462b3aa9e880c0ec93371818f61fb6910084937120544108b3e0fd3f72",
+            "sha256_after": "1ddec2462b3aa9e880c0ec93371818f61fb6910084937120544108b3e0fd3f72",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.20298761129379272,
+            "peak_after_FS": 0.20298761129379272,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "ab858cad026a4a8ba87141864e295e20fcac5d01fe6ff7997bbf7ec3ee51afb5",
+            "sha256_after": "ab858cad026a4a8ba87141864e295e20fcac5d01fe6ff7997bbf7ec3ee51afb5",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.202149897813797,
+            "peak_after_FS": 0.202149897813797,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "idle",
+      "scene": "idle",
+      "seconds": 3,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 144000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "00f6ee777c876ffbf7c3cc3d85c14e8c30657228a148d121199958e1a1d017fd",
+        "payload_sha256_after": "00f6ee777c876ffbf7c3cc3d85c14e8c30657228a148d121199958e1a1d017fd",
+        "file_sha256_before": "8bb310488d0209285798d4da1fa9366e7704eeb096a50aacdf52f8d56660cf7a",
+        "file_sha256_after": "8bb310488d0209285798d4da1fa9366e7704eeb096a50aacdf52f8d56660cf7a",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "21fc01e1475f9c2ed75a8c19227a6fddc301fe34a16771b835cfd5a72845b7a9",
+            "sha256_after": "21fc01e1475f9c2ed75a8c19227a6fddc301fe34a16771b835cfd5a72845b7a9",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.06793741881847382,
+            "peak_after_FS": 0.06793741881847382,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "715f5fbc682e23629b9cce42e24d2554660faa119843338b10757f77f2df9b57",
+            "sha256_after": "715f5fbc682e23629b9cce42e24d2554660faa119843338b10757f77f2df9b57",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.06793741881847382,
+            "peak_after_FS": 0.06793741881847382,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "acceleration",
+      "scene": "acceleration",
+      "seconds": 10,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 480000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "5d9b12c1f058295ec18b4c768e76a3dc62e2416490f1be5f597d9a54db9eccaf",
+        "payload_sha256_after": "5d9b12c1f058295ec18b4c768e76a3dc62e2416490f1be5f597d9a54db9eccaf",
+        "file_sha256_before": "95fd9152b9e68b61f865ad58b5e6f9f52775319798810099a2fdd2d68faf5727",
+        "file_sha256_after": "95fd9152b9e68b61f865ad58b5e6f9f52775319798810099a2fdd2d68faf5727",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "595175959ecd377727bed29f4f81bdbdabf90de4b8c5f8f96b2d0d35279cd1b2",
+            "sha256_after": "595175959ecd377727bed29f4f81bdbdabf90de4b8c5f8f96b2d0d35279cd1b2",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.2272067666053772,
+            "peak_after_FS": 0.2272067666053772,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "b77f52d519e25133f731eae5a40f74e414d67d73e13165e0df918c01336cb0f1",
+            "sha256_after": "b77f52d519e25133f731eae5a40f74e414d67d73e13165e0df918c01336cb0f1",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.2272084802389145,
+            "peak_after_FS": 0.2272084802389145,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "cruise",
+      "scene": "cruise",
+      "seconds": 3,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 144000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "e108909aa79cd597305b5a69b9cf646cad8041cb6632f5c4bb74d90cf3336ada",
+        "payload_sha256_after": "e108909aa79cd597305b5a69b9cf646cad8041cb6632f5c4bb74d90cf3336ada",
+        "file_sha256_before": "68b3bc6553b50014a04aa9bb68388065dfb4a9e9a3e80601f5111048674e228f",
+        "file_sha256_after": "68b3bc6553b50014a04aa9bb68388065dfb4a9e9a3e80601f5111048674e228f",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "cfccbd8b5aac5b6cd2993365a8de5d3a256296235edc6387c4262738f2579e79",
+            "sha256_after": "cfccbd8b5aac5b6cd2993365a8de5d3a256296235edc6387c4262738f2579e79",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.11167745292186737,
+            "peak_after_FS": 0.11167745292186737,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "f5d526cb2f5e878747b2820a1a2ee5784728101bec73e25fda06e42cf55e9a83",
+            "sha256_after": "f5d526cb2f5e878747b2820a1a2ee5784728101bec73e25fda06e42cf55e9a83",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.11167583614587784,
+            "peak_after_FS": 0.11167583614587784,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "high",
+      "scene": "high",
+      "seconds": 3,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 144000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "4ee65b22d1f3c3627449a45ac413a30e1f96244d5431a046996fbe07137f3ebc",
+        "payload_sha256_after": "4ee65b22d1f3c3627449a45ac413a30e1f96244d5431a046996fbe07137f3ebc",
+        "file_sha256_before": "9d3a678466e5ca1d002da664c15eba5d0008e44b42809422ed024df176a27520",
+        "file_sha256_after": "9d3a678466e5ca1d002da664c15eba5d0008e44b42809422ed024df176a27520",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "498d7b9553f95c56e435eb6d25ac7dfe3158a1309ab93bbd1f1d80279950079b",
+            "sha256_after": "498d7b9553f95c56e435eb6d25ac7dfe3158a1309ab93bbd1f1d80279950079b",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.26332980394363403,
+            "peak_after_FS": 0.26332980394363403,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "9f7a2a0798531dd9079ccb95a3ceb8f554b07485e4cc8ba67b8977a12e6dc5b9",
+            "sha256_after": "9f7a2a0798531dd9079ccb95a3ceb8f554b07485e4cc8ba67b8977a12e6dc5b9",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.2633313238620758,
+            "peak_after_FS": 0.2633313238620758,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "lift",
+      "scene": "lift",
+      "seconds": 8,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 384000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "99e900876fa3df4abb9a05bf276c01aff914dd4893451b276b4cd16733cec526",
+        "payload_sha256_after": "99e900876fa3df4abb9a05bf276c01aff914dd4893451b276b4cd16733cec526",
+        "file_sha256_before": "5515e1fa0549dc5eb2d303c5580085e64823ecd5093f6e6dceb6c50bcf54929b",
+        "file_sha256_after": "5515e1fa0549dc5eb2d303c5580085e64823ecd5093f6e6dceb6c50bcf54929b",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "de1a9813e58cd58192a6243e59cfcf2dcdc4eaaa0de994ed7e772b3d426d5d20",
+            "sha256_after": "de1a9813e58cd58192a6243e59cfcf2dcdc4eaaa0de994ed7e772b3d426d5d20",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.3797077536582947,
+            "peak_after_FS": 0.3797077536582947,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "1a66d87af199cd9590212dbbc6294dbc1c2d4bde2ba759bd87f59e48bcb73d77",
+            "sha256_after": "1a66d87af199cd9590212dbbc6294dbc1c2d4bde2ba759bd87f59e48bcb73d77",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.37970873713493347,
+            "peak_after_FS": 0.37970873713493347,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "brake",
+      "scene": "brake",
+      "seconds": 6,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 288000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "499198b933cc71b7af84f0952dfb62ea9d709a1a38cf80c841f8aa1b09419df6",
+        "payload_sha256_after": "499198b933cc71b7af84f0952dfb62ea9d709a1a38cf80c841f8aa1b09419df6",
+        "file_sha256_before": "c53baa75ec306e7053c493af3903ebe48130df607b4388553e2668fbb6edc606",
+        "file_sha256_after": "c53baa75ec306e7053c493af3903ebe48130df607b4388553e2668fbb6edc606",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "ceb6b165fe2dd0de220384c65d04848fd7b3479469b4f1db50c5de6864725a77",
+            "sha256_after": "ceb6b165fe2dd0de220384c65d04848fd7b3479469b4f1db50c5de6864725a77",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.43151384592056274,
+            "peak_after_FS": 0.43151384592056274,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "93acdd22e8f89423ca50b00d94d3b7c7ac9ee2e5d6a55ece9b7e79f6cfe60e65",
+            "sha256_after": "93acdd22e8f89423ca50b00d94d3b7c7ac9ee2e5d6a55ece9b7e79f6cfe60e65",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.43151408433914185,
+            "peak_after_FS": 0.43151408433914185,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "shift",
+      "scene": "shift",
+      "seconds": 10,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 480000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "ea2136d5e5e66fffc4f29b101dbc22e86621be5038c8baf6b415c1f6a129f350",
+        "payload_sha256_after": "ea2136d5e5e66fffc4f29b101dbc22e86621be5038c8baf6b415c1f6a129f350",
+        "file_sha256_before": "c964a3bbb73b327efdfe1f3cd3da38fa741c2dba37881232250dd8fdeab61b25",
+        "file_sha256_after": "c964a3bbb73b327efdfe1f3cd3da38fa741c2dba37881232250dd8fdeab61b25",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "dc9ad6913bea0df0242fa52e53658194650200e29cb0348742f31aeadaf5702b",
+            "sha256_after": "dc9ad6913bea0df0242fa52e53658194650200e29cb0348742f31aeadaf5702b",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.23229552805423737,
+            "peak_after_FS": 0.23229552805423737,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "10a88de370adcb2b2e4348af962f612c6a1279473a02a74ed7d0426738483703",
+            "sha256_after": "10a88de370adcb2b2e4348af962f612c6a1279473a02a74ed7d0426738483703",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.23229074478149414,
+            "peak_after_FS": 0.23229074478149414,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "stop",
+      "scene": "stop",
+      "seconds": 6,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 288000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "fe3e5bebd616381296d691c7561a004f4683fa2eaf200486da428df9f737bae0",
+        "payload_sha256_after": "fe3e5bebd616381296d691c7561a004f4683fa2eaf200486da428df9f737bae0",
+        "file_sha256_before": "cb649ca572d97407f36e1e92513c0ca271302a0fe7202737cd133511d584fd5a",
+        "file_sha256_after": "cb649ca572d97407f36e1e92513c0ca271302a0fe7202737cd133511d584fd5a",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "8820288ab2aa0335c60c7fd20d7a6279b33a40d7dcfdcb2318c1c7f4d6f9d566",
+            "sha256_after": "8820288ab2aa0335c60c7fd20d7a6279b33a40d7dcfdcb2318c1c7f4d6f9d566",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.3611931800842285,
+            "peak_after_FS": 0.3611931800842285,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "1ebcb09e71d635348c4b56969cec46b2c7c6e4b43a2d6c49f604f2a86aa3ec3d",
+            "sha256_after": "1ebcb09e71d635348c4b56969cec46b2c7c6e4b43a2d6c49f604f2a86aa3ec3d",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.36119335889816284,
+            "peak_after_FS": 0.36119335889816284,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "full",
+      "scene": "full",
+      "seconds": 36,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 1728000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "7193ede211106fd25b3b52db87f878259a867eecb5c3d058c79dabb87b48ee6d",
+        "payload_sha256_after": "7193ede211106fd25b3b52db87f878259a867eecb5c3d058c79dabb87b48ee6d",
+        "file_sha256_before": "3cdf13fa87c4e03e29f98c4f5437914ff42fe62f245098e63a73c700ea58cc4e",
+        "file_sha256_after": "3cdf13fa87c4e03e29f98c4f5437914ff42fe62f245098e63a73c700ea58cc4e",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "df61cd2054005d76ee66e11fdba19fbc51450f4947799fa28d56591acbf8a4ae",
+            "sha256_after": "df61cd2054005d76ee66e11fdba19fbc51450f4947799fa28d56591acbf8a4ae",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.4269983768463135,
+            "peak_after_FS": 0.4269983768463135,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "eb1e540a8a6a97c2ff57ab2be5bdd4cabce48fc25b0348c75c94868294f29fbd",
+            "sha256_after": "eb1e540a8a6a97c2ff57ab2be5bdd4cabce48fc25b0348c75c94868294f29fbd",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.42699843645095825,
+            "peak_after_FS": 0.42699843645095825,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "restart",
+      "scene": "restart",
+      "seconds": 14,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 672000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "45a1bc8708f5846c1db432be656a45958a62b12c4a52b7e861a95a5c5485f969",
+        "payload_sha256_after": "45a1bc8708f5846c1db432be656a45958a62b12c4a52b7e861a95a5c5485f969",
+        "file_sha256_before": "06a00f081402570d0030af0c5eae673e86151fd9ea5092c74e311d0fd4093974",
+        "file_sha256_after": "06a00f081402570d0030af0c5eae673e86151fd9ea5092c74e311d0fd4093974",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "88ec8e37740a574100105a1fb2fe5c182761a353752c8447349476ef585e11c1",
+            "sha256_after": "88ec8e37740a574100105a1fb2fe5c182761a353752c8447349476ef585e11c1",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.1790836751461029,
+            "peak_after_FS": 0.1790836751461029,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "16e54c9376d28f2349293e299eabf2f7d09235cd538c1ba0381f4a107d670e2e",
+            "sha256_after": "16e54c9376d28f2349293e299eabf2f7d09235cd538c1ba0381f4a107d670e2e",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.17917148768901825,
+            "peak_after_FS": 0.17917148768901825,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "events",
+      "scene": "events",
+      "seconds": 3,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 144000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "c9cea86e60f8e6bf7863382dfcd6ae4a42f2fca40330a7fe03d9385464951da1",
+        "payload_sha256_after": "c9cea86e60f8e6bf7863382dfcd6ae4a42f2fca40330a7fe03d9385464951da1",
+        "file_sha256_before": "cacd0728a2d0d22e11bfc83942ffcc16f019c920e4459b334c5053394efdba0e",
+        "file_sha256_after": "cacd0728a2d0d22e11bfc83942ffcc16f019c920e4459b334c5053394efdba0e",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "ae7e16e25939b29d419ab53d39c13eaeb16e1221504e6bf6be4ea24fe9533a01",
+            "sha256_after": "ae7e16e25939b29d419ab53d39c13eaeb16e1221504e6bf6be4ea24fe9533a01",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 1.0824120044708252,
+            "peak_after_FS": 1.0824120044708252,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "29566641fe80257bc83933cf85a3a818c8188986355e8b5b71f2605f78f9d22a",
+            "sha256_after": "29566641fe80257bc83933cf85a3a818c8188986355e8b5b71f2605f78f9d22a",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 1.0824122428894043,
+            "peak_after_FS": 1.0824122428894043,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "air_sweep",
+      "scene": "full",
+      "seconds": 20,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 960000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "5fc3802fd8fdfb405fa9b900b5cbdc900b74aa42d783bea905930295bac4fca9",
+        "payload_sha256_after": "5fc3802fd8fdfb405fa9b900b5cbdc900b74aa42d783bea905930295bac4fca9",
+        "file_sha256_before": "5f510ea471e62189f0d709f0b9e1a49f482c896c0b29630d4183cc0ff984de62",
+        "file_sha256_after": "5f510ea471e62189f0d709f0b9e1a49f482c896c0b29630d4183cc0ff984de62",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "47de32417c09d9ac99bb4eae8d341cd69daaa7ef5ef4568e011414a2b9ca0de4",
+            "sha256_after": "47de32417c09d9ac99bb4eae8d341cd69daaa7ef5ef4568e011414a2b9ca0de4",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.4186232388019562,
+            "peak_after_FS": 0.4186232388019562,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "9b6a637001067207ef929d31f28f03bfe122db409e5ba7cc8858d930da0d75cc",
+            "sha256_after": "9b6a637001067207ef929d31f28f03bfe122db409e5ba7cc8858d930da0d75cc",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.41862329840660095,
+            "peak_after_FS": 0.41862329840660095,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "air_zero",
+      "scene": "full",
+      "seconds": 20,
+      "block": 256,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 960000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "0f3edaaafca0a0caeb3524dfac66483f915aaa4e9549bc36426a8a477bf482bf",
+        "payload_sha256_after": "0f3edaaafca0a0caeb3524dfac66483f915aaa4e9549bc36426a8a477bf482bf",
+        "file_sha256_before": "f2c03642ec5be4c72e87e7924dcfb260eb15e8fe044566401a429dd35a89285b",
+        "file_sha256_after": "f2c03642ec5be4c72e87e7924dcfb260eb15e8fe044566401a429dd35a89285b",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "9c0317102ef66e91ff74a971175da634a9d28e72f9e901644bdb88d3b6afe299",
+            "sha256_after": "9c0317102ef66e91ff74a971175da634a9d28e72f9e901644bdb88d3b6afe299",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.41369888186454773,
+            "peak_after_FS": 0.41369888186454773,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "f1dc35cb0e6ee9130e88672ebee0ad75593dc27170d2034c28fb699263fde44b",
+            "sha256_after": "f1dc35cb0e6ee9130e88672ebee0ad75593dc27170d2034c28fb699263fde44b",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.4136989116668701,
+            "peak_after_FS": 0.4136989116668701,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "full_partition_73",
+      "scene": "full",
+      "seconds": 36,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 1728000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "7193ede211106fd25b3b52db87f878259a867eecb5c3d058c79dabb87b48ee6d",
+        "payload_sha256_after": "7193ede211106fd25b3b52db87f878259a867eecb5c3d058c79dabb87b48ee6d",
+        "file_sha256_before": "3cdf13fa87c4e03e29f98c4f5437914ff42fe62f245098e63a73c700ea58cc4e",
+        "file_sha256_after": "3cdf13fa87c4e03e29f98c4f5437914ff42fe62f245098e63a73c700ea58cc4e",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "df61cd2054005d76ee66e11fdba19fbc51450f4947799fa28d56591acbf8a4ae",
+            "sha256_after": "df61cd2054005d76ee66e11fdba19fbc51450f4947799fa28d56591acbf8a4ae",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.4269983768463135,
+            "peak_after_FS": 0.4269983768463135,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "eb1e540a8a6a97c2ff57ab2be5bdd4cabce48fc25b0348c75c94868294f29fbd",
+            "sha256_after": "eb1e540a8a6a97c2ff57ab2be5bdd4cabce48fc25b0348c75c94868294f29fbd",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.42699843645095825,
+            "peak_after_FS": 0.42699843645095825,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "restart_partition_73",
+      "scene": "restart",
+      "seconds": 14,
+      "passed": true,
+      "audio": {
+        "exact": true,
+        "finite": true,
+        "frames": 672000,
+        "maximum_error_FS": 0.0,
+        "payload_sha256_before": "45a1bc8708f5846c1db432be656a45958a62b12c4a52b7e861a95a5c5485f969",
+        "payload_sha256_after": "45a1bc8708f5846c1db432be656a45958a62b12c4a52b7e861a95a5c5485f969",
+        "file_sha256_before": "06a00f081402570d0030af0c5eae673e86151fd9ea5092c74e311d0fd4093974",
+        "file_sha256_after": "06a00f081402570d0030af0c5eae673e86151fd9ea5092c74e311d0fd4093974",
+        "channels": [
+          {
+            "channel": "monitor.L",
+            "exact": true,
+            "sha256_before": "88ec8e37740a574100105a1fb2fe5c182761a353752c8447349476ef585e11c1",
+            "sha256_after": "88ec8e37740a574100105a1fb2fe5c182761a353752c8447349476ef585e11c1",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.1790836751461029,
+            "peak_after_FS": 0.1790836751461029,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          },
+          {
+            "channel": "monitor.R",
+            "exact": true,
+            "sha256_before": "16e54c9376d28f2349293e299eabf2f7d09235cd538c1ba0381f4a107d670e2e",
+            "sha256_after": "16e54c9376d28f2349293e299eabf2f7d09235cd538c1ba0381f4a107d670e2e",
+            "bit_differences": 0,
+            "maximum_error_FS": 0.0,
+            "peak_before_FS": 0.17917148768901825,
+            "peak_after_FS": 0.17917148768901825,
+            "nonfinite_before": 0,
+            "nonfinite_after": 0
+          }
+        ]
+      }
+    }
+  ]
+}

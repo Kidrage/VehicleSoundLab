@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "dsp_support/storage.h"
+#ifdef VSL_FIXED_V10
+#include "fixed_profiles.inc"
+#else
 typedef struct {SfProfile profile[3];} SflProfiles;
 VSL_STORAGE(sfl_profiles,SflProfiles,1,VSL_DDR)
 static const float taps_0_0[512]={
@@ -533,6 +536,7 @@ static const float taps_2_1[512]={
     2.159867904e-04f,1.904900477e-04f,1.607418268e-04f,1.516973621e-04f,1.510295726e-04f,1.800084177e-04f,
     1.839845584e-04f,8.183093766e-05f
 };
+#endif
 static const ScRidge ridges[]={
     {6144,8192,99.609375f,800,{0.5236921480118093f,0.52357215712218808f},{-0.85607218212550518f,-0.85621410859633929f}},
     {10752,16384,243.1640625f,0,{0.35189927202036803f,0.3440452587384889f},{-2.1208365878142899f,-2.1203624886766725f}},
@@ -584,8 +588,14 @@ static const ScRidge ridges[]={
     {15360,8192,486.328125f,0,{0.19523314681939422f,0.19245645583310914f},{-1.0446686382416146f,-1.0441624428514364f}},
 };
 ScVoice *sfl_model_create(void){
-    SflProfiles *workspace=sfl_profiles_acquire();SfProfile *storage=workspace?workspace->profile:NULL;const SfProfile *profiles[3];ScVoice *v;unsigned k;
+    const SfProfile *profiles[3];ScVoice *v;unsigned k;
+#ifndef VSL_FIXED_V10
+    SflProfiles *workspace=sfl_profiles_acquire();SfProfile *storage=workspace?workspace->profile:NULL;
+#endif
     static const float envelope[9]={1.1366068518880879f,1.0603043829303149f,1.0782509183656017f,1.0750008353915428f,1.0442350066758954f,0.97404922879487565f,0.92300957759501878f,0.94667985646569675f,0.76186334189296634f};
+#ifdef VSL_FIXED_V10
+    for(k=0;k<3;++k)profiles[k]=sfl_fixed_profiles+k;
+#else
     if(!storage)return NULL;
     storage[0].rate=48000;storage[0].count=2;storage[0].warmup_frames=48000;
     storage[0].band[0].count=512;storage[0].band[0].gain=0.70710678118654746f;storage[0].band[0].right_over_left=1;
@@ -603,7 +613,11 @@ ScVoice *sfl_model_create(void){
     storage[2].band[1].count=512;storage[2].band[1].gain=0.70710678118654746f;storage[2].band[1].right_over_left=-1;
     memcpy(storage[2].band[1].taps,taps_2_1,sizeof taps_2_1);
     for(k=0;k<3;++k)profiles[k]=storage+k;
-    v=sc_create(profiles,envelope,0.080000000000000002f,UINT64_C(98355));sfl_profiles_release(workspace);
+#endif
+    v=sc_create(profiles,envelope,0.080000000000000002f,UINT64_C(98355));
+#ifndef VSL_FIXED_V10
+    sfl_profiles_release(workspace);
+#endif
     if(!v)return NULL;
     if(!sc_set_ridges(v,ridges,48,70560,0.059999999999999998f,1,UINT64_C(98355))){sc_destroy(v);return NULL;}
     /* Match the selected first catch's silent procedural history, non-RT. */

@@ -10,31 +10,35 @@ struct VsAssets {AtAssets owned;struct VsStateAssets *states;};
 struct VsEngine {
     const VsAssets *assets;
     AdRender generator;
+#ifndef VSL_FIXED_V10
     VslEngine owner;
+#endif
     AdControl adopted;
     float idle_weight;
     int dna_unified;
     DchVoice *character;
     SflVoice *flare;
     float flare_gain;
-    float flare_audio[VS_BLOCK_MAX*2];
-    float flare_background[VS_BLOCK_MAX];
+    float flare_audio[VS_WORK_FRAMES*2];
+    float flare_background[VS_WORK_FRAMES];
     ViState input;
     ViAdopted input_adopted;
-    float monitor[VS_BLOCK_MAX*2];
-    float dna[VS_BLOCK_MAX*2],body[VS_BLOCK_MAX*2],low[VS_BLOCK_MAX*2];
-    float residual[VS_BLOCK_MAX*2],resonant[VS_BLOCK_MAX*2];
-    float aux[VS_BLOCK_MAX*VSL_OBJECTS];
-    float startup[VS_BLOCK_MAX*2],catching[VS_BLOCK_MAX*2],added[VS_BLOCK_MAX*2];
-    float events[VS_BLOCK_MAX];
-    AdTelemetry telemetry[VS_BLOCK_MAX];
+    float monitor[VS_WORK_FRAMES*2];
+    float dna[VS_WORK_FRAMES*2],body[VS_WORK_FRAMES*2],low[VS_WORK_FRAMES*2];
+    float residual[VS_WORK_FRAMES*2],resonant[VS_WORK_FRAMES*2];
+    float aux[VS_WORK_FRAMES*VSL_OBJECTS];
+    float startup[VS_WORK_FRAMES*2],catching[VS_WORK_FRAMES*2],added[VS_WORK_FRAMES*2];
+    float events[VS_WORK_FRAMES];
+    AdTelemetry telemetry[VS_WORK_FRAMES];
     EcState event_control;
+#ifndef VSL_FIXED_V10
     SxVoice state_dna;
     EsPool event_pool;
+#endif
     EsPool *event_runtime;
     uint64_t event_block_frame;
     float event_levels[ES_TYPES];
-    float event_voices[ES_VOICES][VS_BLOCK_MAX];
+    float event_voices[ES_VOICES][VS_WORK_FRAMES];
 };
 VsAssets *vs_assets_acquire(void);
 void vs_assets_release(VsAssets *assets);

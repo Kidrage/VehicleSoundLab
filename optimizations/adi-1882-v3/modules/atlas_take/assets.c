@@ -36,7 +36,9 @@ int at_assets_valid(const AtAssets *a) {
     for(i=0;i<a->bank.count;++i){if(a->bank.profile[i]!=&a->profile[i])return 0;models[i]=&a->profile[i];}
     check=at_check_acquire();if(!check)return 0;
     if(!sa_bank_init(check,models,a->bank.count,0)||a->bank.harmonics!=check->harmonics)goto done;
+#ifndef VSL_FIXED_V10
     for(i=0;i<=SA_TABLE_SIZE;++i)if(a->bank.sine[i]!=check->sine[i])goto done;
+#endif
     for(i=0;i<a->bank.count;++i) {
         if(!isfinite(a->bank.offset[i])||fabsf(a->bank.offset[i])>PI)goto done;
         for(h=0;h<a->bank.harmonics;++h)for(c=0;c<2;++c) {

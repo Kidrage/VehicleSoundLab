@@ -23,6 +23,11 @@ static void amounts(const AdControl *p,float a[DA_LAYERS]) {
     a[DA_AIR]=p->mix.air_gain;a[DA_ROAD]=p->mix.road_gain;a[DA_WIND]=p->mix.wind_gain;
 }
 int ad_control_supported(const AdConfig *c,const AdControl *p) {
+#ifdef VSL_FIXED_V10
+    if(!c||!p||c->channels!=2||c->scene_mode!=AD_SCENE_STEREO_BED||
+       c->residual_bank||c->startup_profile||c->catch_profile||c->idle_profile||
+       p->mix.spatial||p->mix.propagation||p->mix.room!=0)return 0;
+#endif
     return c&&ad_control_valid(p,c->channels)&&
         (c->residual_bank||p->mix.residual_gain==0)&&(c->startup_profile||p->mix.startup_gain==0)&&
         (c->catch_profile||p->mix.catch_gain==0)&&(c->resonant_bank||p->mix.resonant_gain==0)&&
@@ -342,9 +347,13 @@ static int process(AdRender *s,float *out,unsigned frames,const AdCapture *cap,i
     return 1;
 }
 int ad_render_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
+#ifdef VSL_FIXED_V10
+    (void)s;(void)out;(void)frames;(void)cap;return 0;
+#else
     RnScope scope=rn_scope_enter();
     int result=process(s,out,frames,cap,0,NULL);
     rn_scope_leave(scope);return result;
+#endif
 }
 int ad_source_process(AdRender *s,float *out,unsigned frames,const AdCapture *cap) {
     RnScope scope=rn_scope_enter();

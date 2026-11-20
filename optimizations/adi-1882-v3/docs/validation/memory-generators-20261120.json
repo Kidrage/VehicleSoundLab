@@ -1,0 +1,7 @@
+{
+  "fixed_assets_exact_normalized_eol": true,
+  "fixed_assets_sha256_lf": "4a3ebfd5b1b5d01f4c75c9b68b649e966ca8d88b5ed43a6a63c4607da2971647",
+  "startup_exact_normalized_eol": true,
+  "startup_sha256_lf": "a11b8bc7e29095369ee3584d96ad7f88ea6a838564d43c6fee1e8dd52953ed2a",
+  "startup_FIR_tokens_preserved": 3072
+}

@@ -1,9 +1,14 @@
 #ifndef VSL_PROPAGATION_TYPES_H
 #define VSL_PROPAGATION_TYPES_H
+#include "dsp_support/config.h"
 #include "objects.h"
+#ifndef VSL_PATH_BUFFER
 #define VSL_PATH_BUFFER 4096
+#endif
 #define VSL_PATH_TAPS 25
+#ifndef VSL_PATH_PHASES
 #define VSL_PATH_PHASES 256
+#endif
 #define VSL_PATH_LATENCY (VSL_PATH_TAPS/2+1)
 enum { VSL_PATH_LEFT,VSL_PATH_RIGHT,VSL_PATH_CENTRE,VSL_PATH_COUNT };
 typedef struct {

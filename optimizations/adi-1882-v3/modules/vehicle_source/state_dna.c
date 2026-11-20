@@ -3,6 +3,26 @@
 #include <math.h>
 #include <stdlib.h>
 #include "dsp_support/storage.h"
+#ifdef VSL_FIXED_V10
+/* The fixed production bank has one DNA source and no authored state donors.
+   Keep the API explicit: an unsupported import fails before allocating or
+   mutating the current assets. Generic builds retain the full state morph. */
+void vs_state_assets_release(VsAssets *a){(void)a;}
+VsAssets *vs_assets_from_state_dna(const VsStateDnaConfig *c){(void)c;return NULL;}
+int vs_state_init(VsEngine *s){return s&&s->assets&&!s->assets->states;}
+int vs_state_sample(void *state,SaVoice *main,const HbBand *band,float stereo[2],float body[2]){
+    (void)state;(void)main;(void)band;(void)stereo;(void)body;return 0;
+}
+void vs_state_observe(VsEngine *s,const VslDrive *d){(void)s;(void)d;}
+int vs_engine_state_dna(const VsEngine *s,SxTelemetry *out){
+    unsigned k;if(!s||!out)return 0;out->available_mask=1;
+    for(k=0;k<SX_STATES;++k){
+        out->weight[k]=out->target[k]=k==0?1.f:0.f;
+        out->coverage[k]=k==0?s->generator.dna.coverage:0;
+    }
+    return 1;
+}
+#else
 struct VsStateAssets {
     SdProfile profile[SX_STATES-1][SA_MAX_ANCHORS];
     SaBank bank[SX_STATES-1];
@@ -61,3 +81,4 @@ int vs_engine_state_dna(const VsEngine *s,SxTelemetry *out) {
     }
     return sx_voice_telemetry(&s->state_dna,out);
 }
+#endif

@@ -3,7 +3,9 @@
 #include <stdlib.h>
 #include "dsp_support/storage.h"
 #include <string.h>
+#ifndef VSL_FIXED_V10
 VSL_STORAGE(drc_scratch,DrcBank,1,VSL_DDR)
+#endif
 static float reduction(const RssColour *p,float hz) {
     float u=(hz-p->low_hz)/(p->high_hz-p->low_hz);
     if(u<=0)return 0;if(u>1)u=1;u=u*u*(3-2*u);return p->power_reduction*u;
@@ -13,6 +15,31 @@ static int colour_valid(const RssColour *p) {
         isfinite(p->low_hz)&&isfinite(p->high_hz)&&p->low_hz>=20&&
         p->high_hz>p->low_hz&&p->high_hz<=21600;
 }
+#ifdef VSL_FIXED_V10
+static int low_bounded(float x,float limit){return isfinite(x)&&fabsf(x)<=limit;}
+/* Same coefficient/rate/alias bounds as rss_profile_valid, checked against the
+   compact LF capacity before indexing. No incompatible structure cast. */
+static int low_valid(const DrcLowProfile *m){
+    unsigned h,k,c,j;
+    if(!m||m->rate!=48000||m->window!=1024||m->hop!=256||!m->harmonics||
+       m->harmonics>DRC_LOW_HARMONICS||m->components>SD_MAX_COMPONENTS||
+       !isfinite(m->base_hz)||m->base_hz<5||m->base_hz>2000||
+       m->harmonics*m->base_hz*1.1f>.45f*m->rate)return 0;
+    for(k=0;k<m->components;++k)if(!low_bounded(m->rho[k],.95f))return 0;
+    for(h=0;h<m->harmonics;++h){
+        const SdHarmonic *a=m->harmonic+h;
+        if(!low_bounded(a->rho,.95f))return 0;
+        for(c=0;c<4;++c){
+            if(!low_bounded(a->mean[c],4))return 0;
+            for(k=0;k<m->components;++k)if(!low_bounded(a->basis[k][c],4))return 0;
+            for(j=0;j<4;++j)if(!low_bounded(a->root[c][j],4))return 0;
+        }
+    }
+    return 1;
+}
+#else
+#define low_valid rss_profile_valid
+#endif
 int drc_bank_valid(const DrcBank *b,const SaBank *dna,const DrsBank *detail) {
     unsigned a,h,active=0;
     if(!b||!dna||!dna->count||dna->count>SA_MAX_ANCHORS||!dna->harmonics||
@@ -34,7 +61,7 @@ int drc_bank_valid(const DrcBank *b,const SaBank *dna,const DrsBank *detail) {
            no independent LF are required. drs_bank_valid checked its kernel. */
         if(detail&&detail->enabled[a])++active;
         if(b->has_low[a]) {
-            if(!rss_profile_valid(b->low+a)||b->low[a].base_hz!=b->root[a])return 0;
+            if(!low_valid(b->low+a)||b->low[a].base_hz!=b->root[a])return 0;
             ++active;
         }
         for(h=0;h<dna->harmonics;++h)if(!isfinite(b->reduction[a][h])||
@@ -44,6 +71,12 @@ int drc_bank_valid(const DrcBank *b,const SaBank *dna,const DrsBank *detail) {
 }
 int drc_bank_init(DrcBank *out,const SaBank *dna,const DrsBank *detail,
     const RssColour *colour,const SdProfile *const *low,const float *scale) {
+#ifdef VSL_FIXED_V10
+    /* Production uses the audited immutable compiled bank. Runtime import
+       would need a separate bounded initialization workspace. */
+    (void)out;(void)dna;(void)detail;(void)colour;(void)low;(void)scale;
+    return 0;
+#else
     DrcBank *b;unsigned a,h;int ok=0;
     if(!out||!dna||!dna->count||dna->count>SA_MAX_ANCHORS||!dna->harmonics||
        dna->harmonics>SD_MAX_HARMONICS||!colour)return 0;
@@ -59,4 +92,5 @@ int drc_bank_init(DrcBank *out,const SaBank *dna,const DrsBank *detail,
     }
     if(!drc_bank_valid(b,dna,detail))goto done;*out=*b;ok=1;
 done:drc_scratch_release(b);return ok;
+#endif
 }

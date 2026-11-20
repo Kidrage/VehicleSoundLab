@@ -1,4 +1,4 @@
-param([ValidateSet('production','profile','diagnostic','generic')][string]$Mode='production',[switch]$Test)
+param([ValidateSet('production','compact','profile','diagnostic','generic')][string]$Mode='production',[switch]$Test)
 $ErrorActionPreference='Stop'
 $vslRoot=$PSScriptRoot
 $vslBuild=Join-Path $vslRoot ('build/'+$Mode)
@@ -6,6 +6,7 @@ $vslOptions=@()
 if($Mode -eq 'profile'){$vslOptions+='-DVSL_PROFILE=ON'}
 if($Mode -eq 'diagnostic'){$vslOptions+='-DVSL_CAPTURE_MODULES=ON'}
 if($Mode -eq 'generic'){$vslOptions+='-DVSL_STATIC_RUNTIME=OFF'}
+if($Mode -eq 'compact'){$vslOptions+='-DVSL_FIXED_V10=ON'}
 cmake -S $vslRoot -B $vslBuild -G 'Visual Studio 17 2022' -A x64 @vslOptions
 if($LASTEXITCODE -ne 0){throw 'CMake configure failed'}
 cmake --build $vslBuild --config Release -j 8

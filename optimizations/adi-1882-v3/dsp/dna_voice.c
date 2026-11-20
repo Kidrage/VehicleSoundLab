@@ -23,7 +23,9 @@ void sa_voice_sample_cache(SaVoice *v,SaSampleCache *cache){
     for(a=0;a<cache->count;++a){
       for(h=0;h<v->bank->harmonics;++h){
         memcpy(cache->mean[a][h],v->bank->profile[a]->harmonic[h].mean,sizeof cache->mean[a][h]);
+#ifndef VSL_FIXED_V10
         memcpy(cache->unit[a][h],v->bank->unit[a][h],sizeof cache->unit[a][h]);
+#endif
       }
       memcpy(cache->left[a],v->texture[a].left,sizeof cache->left[a]);
       memcpy(cache->right[a],v->texture[a].right,sizeof cache->right[a]);
@@ -88,7 +90,11 @@ static void sample_impl(SaVoice *v,float out[2],float body[2],const HbBand *band
     const float root_hz=v->root_hz,detail=v->detail;
     const float fraction_lo=v->texture[lo].fraction,fraction_hi=v->texture[hi].fraction;
     const SaSampleCache *cache=v->sample_cache;
+#ifdef VSL_FIXED_V10
+    const float (*unit_lo)[4]=b->unit[lo];
+#else
     const float (*unit_lo)[4]=cache&&lo<cache->count?cache->unit[lo]:b->unit[lo];
+#endif
     HbBand mask;if(body)mask=*band;
     for (h=0;h<harmonics;++h) {
         float hz=(h+1)*root_hz, aa=1,next,weight=body?hb_band_weight_inline(&mask,hz):0;

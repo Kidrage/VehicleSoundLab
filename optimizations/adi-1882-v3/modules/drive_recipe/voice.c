@@ -7,12 +7,18 @@
 static int unit(float x){return isfinite(x)&&x>=0&&x<=1.3f;}
 int drc_voice_init(DrcVoice *out,const DrcBank *b,const SaBank *dna,const DrsBank *detail,uint64_t seed,float amount){
     unsigned a,n,h,c,k;
-    float coefficients[SD_MAX_HARMONICS][4];VSL_SECTION(VSL_DDR) VSL_INIT_WORK DrcVoice v;
+    float coefficients[SD_MAX_HARMONICS][4];
+#ifdef VSL_FIXED_V10
+    DrcVoice *v=out;
+#else
+    VSL_SECTION(VSL_DDR) VSL_INIT_WORK DrcVoice storage;
+    DrcVoice *v=&storage;
+#endif
     (void)seed;
     if(!out||!unit(amount)||!drc_bank_valid(b,dna,detail))return 0;
-    memset(&v,0,sizeof v);v.bank=b;v.dna_bank=dna;v.amount=v.target=amount;v.follow=1-expf(-1/(.018f*48000));
+    memset(v,0,sizeof *v);v->bank=b;v->dna_bank=dna;v->amount=v->target=amount;v->follow=1-expf(-1/(.018f*48000));
     for(a=0;a<b->count;++a)if(b->has_low[a]){
-        const SdProfile *low=b->low+a;
+        const DrcLowProfile *low=b->low+a;
         for(h=0;h<low->harmonics;++h)for(c=0;c<2;++c){
             const SdHarmonic *m=low->harmonic+h;
             float re=m->mean[2*c],im=m->mean[2*c+1],variance=0,norm=sqrtf(re*re+im*im),mag;
@@ -27,12 +33,12 @@ int drc_voice_init(DrcVoice *out,const DrcBank *b,const SaBank *dna,const DrsBan
         for(n=0;n<1024;++n){float phase=2*PI*n/1024+dna->offset[a];
             for(h=0;h<low->harmonics;++h)for(c=0;c<2;++c){
                 const float *z=coefficients[h];
-                v.wave[a][n][c]+=z[2*c]*cosf((h+1)*phase)-z[2*c+1]*sinf((h+1)*phase);
+                v->wave[a][n][c]+=z[2*c]*cosf((h+1)*phase)-z[2*c+1]*sinf((h+1)*phase);
             }
         }
     }
-    for(a=0;a<b->count;++a)memcpy(v.wave[a][1024],v.wave[a][0],sizeof v.wave[a][0]);
-    *out=v;return 1;
+    for(a=0;a<b->count;++a)memcpy(v->wave[a][1024],v->wave[a][0],sizeof v->wave[a][0]);
+    if(out!=v)*out=*v;return 1;
 }
 int drc_voice_set(DrcVoice *v,float amount){if(!v||!v->bank||!unit(amount))return 0;v->target=amount;return 1;}
 int drc_voice_tick(DrcVoice *v,const SaVoice *dna,float phase,DrcFrame *f);

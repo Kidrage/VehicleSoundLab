@@ -1,3 +1,4 @@
+#ifndef VSL_FIXED_V10
 #include "internal.h"
 #include <stdlib.h>
 #include "dsp_support/storage.h"
@@ -13,3 +14,11 @@ VsAssets *vs_assets_from_atlas(const AdConfig *config) {
     return a;
 }
 void vs_assets_destroy(VsAssets *assets){if(assets){vs_state_assets_release(assets);vs_assets_release(assets);}}
+#else
+#include "internal.h"
+#include "embedded/fixed_assets.h"
+VsAssets *vs_assets_acquire(void){return NULL;} /* No mutable import workspace. */
+void vs_assets_release(VsAssets *a){vsl_fixed_assets_release(a);}
+VsAssets *vs_assets_from_atlas(const AdConfig *config){(void)config;return NULL;}
+void vs_assets_destroy(VsAssets *a){vsl_fixed_assets_release(a);}
+#endif

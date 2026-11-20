@@ -1,7 +1,10 @@
 #ifndef VSL_SOUND_DNA_PROFILE_H
 #define VSL_SOUND_DNA_PROFILE_H
+#include "dsp_support/config.h"
 #define SD_MAX_HARMONICS 320
+#ifndef SD_MAX_COMPONENTS
 #define SD_MAX_COMPONENTS 16
+#endif
 typedef struct {float mean[4],basis[SD_MAX_COMPONENTS][4],rho,root[4][4];} SdHarmonic;
 typedef struct {
     unsigned rate,window,hop,harmonics,components;

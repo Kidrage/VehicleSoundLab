@@ -1,8 +1,11 @@
 #ifndef VSL_DNA_ATLAS_BANK_H
 #define VSL_DNA_ATLAS_BANK_H
+#include "dsp_support/config.h"
 #include "profile.h"
 
+#ifndef SA_MAX_ANCHORS
 #define SA_MAX_ANCHORS 8
+#endif
 #define SA_TABLE_SIZE 4096
 
 typedef struct {
@@ -11,8 +14,10 @@ typedef struct {
     float offset[SA_MAX_ANCHORS]; /* Common L/R cycle origin, radians. */
     float phase[SA_MAX_ANCHORS][SD_MAX_HARMONICS][2];
     float unit[SA_MAX_ANCHORS][SD_MAX_HARMONICS][4];
-    float delta[SA_MAX_ANCHORS-1][SD_MAX_HARMONICS][2];
+    float delta[(SA_MAX_ANCHORS>1)?SA_MAX_ANCHORS-1:1][SD_MAX_HARMONICS][2];
+#ifndef VSL_FIXED_V10
     float sine[SA_TABLE_SIZE+1];
+#endif
 } SaBank;
 
 /* Non-realtime, transactional; sorted base_hz, same harmonic count and codec.

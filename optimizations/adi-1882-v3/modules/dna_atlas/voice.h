@@ -17,7 +17,9 @@ typedef struct {
     unsigned count;
     uint64_t updates[SA_CACHE_ANCHORS];
     float mean[SA_CACHE_ANCHORS][SD_MAX_HARMONICS][4];
+#ifndef VSL_FIXED_V10
     float unit[SA_CACHE_ANCHORS][SD_MAX_HARMONICS][4];
+#endif
     float left[SA_CACHE_ANCHORS][SD_MAX_HARMONICS][4];
     float right[SA_CACHE_ANCHORS][SD_MAX_HARMONICS][4];
 } SaSampleCache;

@@ -1,0 +1,50 @@
+{
+  "scope": "PC 3 paired 3-second runs per scene; positive means slower; not ADI MCPS or worst-case guarantee",
+  "scenes": {
+    "idle": {
+      "pairs": 3,
+      "before_median_seconds": 0.0611703,
+      "after_median_seconds": 0.0619262,
+      "paired_time_change_percent_median": 0.9727766037932684,
+      "paired_time_change_percent_range": [
+        -3.268273042719938,
+        1.9718719705478005
+      ],
+      "paired_cycles_change_percent_median": 1.6778819177970306,
+      "paired_cycles_change_percent_range": [
+        -3.0667389331817674,
+        1.8971829994901768
+      ]
+    },
+    "startup": {
+      "pairs": 3,
+      "before_median_seconds": 0.098476,
+      "after_median_seconds": 0.097841,
+      "paired_time_change_percent_median": -0.8731789027779824,
+      "paired_time_change_percent_range": [
+        -6.57209088106212,
+        -0.6448271660099869
+      ],
+      "paired_cycles_change_percent_median": -0.5599133883420593,
+      "paired_cycles_change_percent_range": [
+        -5.59902590486554,
+        -0.4234843067744687
+      ]
+    },
+    "events": {
+      "pairs": 3,
+      "before_median_seconds": 0.1101337,
+      "after_median_seconds": 0.1122987,
+      "paired_time_change_percent_median": 1.9657924867683585,
+      "paired_time_change_percent_range": [
+        -4.17336910306263,
+        4.975375910065516
+      ],
+      "paired_cycles_change_percent_median": 2.2154183192267807,
+      "paired_cycles_change_percent_range": [
+        -3.330650786589817,
+        4.95829355147781
+      ]
+    }
+  }
+}

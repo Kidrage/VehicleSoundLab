@@ -5,7 +5,14 @@
 #include "dsp_support/storage.h"
 #include <string.h>
 #include <math.h>
+#if defined(VSL_FIXED_V10) && (!defined(VSL_DSP_STATIC) || !defined(VSL_DSP_FIR_TAPS) || VSL_DSP_FIR_TAPS > 512)
+#error VSL_FIXED_V10 requires the single static FIR512 runtime
+#endif
+#ifdef VSL_FIXED_V10
+VSL_STORAGE(vs_engines,VsEngine,1,VSL_L2_HISTORY)
+#else
 VSL_STORAGE(vs_engines,VsEngine,1,VSL_DDR)
+#endif
 #ifdef VSL_DSP_STATIC
 /* Lifetime follows the single DSP engine slot; no extra runtime allocation. */
 VSL_SECTION(VSL_L1_STATE)
@@ -32,8 +39,13 @@ VsEngine *vs_engine_create(const VsAssets *assets,const VsControl *control) {
        (control->dna_unified&&(control->intake_gain!=0||control->air_gain!=0||control->road_gain!=0||control->wind_gain!=0)))return NULL;
     vs_control_to_atlas(control,&adopted);
     if(!ad_control_supported(&assets->owned.config,&adopted))return NULL;
+#ifdef VSL_FIXED_V10
+    if(!control->dna_unified)return NULL;
+#endif
     s=vs_engines_acquire();if(!s)return NULL;
+#ifndef VSL_FIXED_V10
     s->event_runtime=&s->event_pool;
+#endif
 #if defined(VSL_DSP_STATIC) && defined(VSL_DSP_FIR_TAPS) && VSL_DSP_FIR_TAPS <= 512
     s->event_runtime=&vs_runtime_events;
 #endif
@@ -48,7 +60,9 @@ VsEngine *vs_engine_create(const VsAssets *assets,const VsControl *control) {
 #endif
     }
     if(!vi_accept(&s->input,&control->input,0)){vs_engine_destroy(s);return NULL;}
+#ifndef VSL_FIXED_V10
     owner=&s->owner;
+#endif
 #if defined(VSL_DSP_STATIC) && defined(VSL_DSP_FIR_TAPS) && VSL_DSP_FIR_TAPS <= 512
     owner=&vs_runtime_owner;
 #endif
@@ -86,7 +100,7 @@ int vs_engine_set_impl(VsEngine *s,const VsControl *control){
 int vs_engine_set(VsEngine *s,const VsControl *control){vsl_perf_enter(12);int result=vs_engine_set_impl(s,control);vsl_perf_leave();return result;}
 
 int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames);
-int vs_engine_process_impl(VsEngine *s,VsOutput *out,unsigned frames){
+static int vs_engine_process_block(VsEngine *s,VsOutput *out,unsigned frames){
     AdCapture c={0};float gain;AdSourceDriver driver={s,vs_drive_step,vs_events_sample,NULL};
     if(!s||!vs_output_valid(out,frames))return 0;
     if(!frames)return 1;
@@ -106,6 +120,20 @@ int vs_engine_process_impl(VsEngine *s,VsOutput *out,unsigned frames){
     vs_flare_apply(s,frames,gain);
     if(!s->character)s->idle_weight=s->telemetry[frames-1].idle_weight;
     vs_stems_write(s,out,frames,gain);return 1;
+}
+int vs_engine_process_impl(VsEngine *s,VsOutput *out,unsigned frames){
+    unsigned offset=0,k;
+    if(!s||!vs_output_valid(out,frames))return 0;
+    while(offset<frames){
+        VsOutput part={0};unsigned n=frames-offset;
+        if(n>VS_WORK_FRAMES)n=VS_WORK_FRAMES;
+        part.monitor=out->monitor?out->monitor+2*offset:NULL;
+        for(k=0;k<VS_STEMS;++k)part.stem[k]=out->stem[k]?
+            out->stem[k]+vs_stem_info(k)->channels*offset:NULL;
+        if(!vs_engine_process_block(s,&part,n))return 0;
+        offset+=n;
+    }
+    return 1;
 }
 int vs_engine_process(VsEngine *s,VsOutput *out,unsigned frames){vsl_perf_enter(0);int result=vs_engine_process_impl(s,out,frames);vsl_perf_leave();return result;}
 

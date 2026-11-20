@@ -1,6 +1,9 @@
 #ifndef VSL_MODAL_TEXTURE_PROFILE_H
 #define VSL_MODAL_TEXTURE_PROFILE_H
+#include "dsp_support/config.h"
+#ifndef MT_MAX_MODES
 #define MT_MAX_MODES 64
+#endif
 #define MT_RATE 48000
 /* Factor, not a recorded envelope: covariance = factor * transpose(factor).
    Square factors may be singular or zero. Rows follow the OSC profile order. */

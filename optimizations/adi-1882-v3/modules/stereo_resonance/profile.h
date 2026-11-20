@@ -1,9 +1,14 @@
 #ifndef VSL_STEREO_RESONANCE_PROFILE_H
 #define VSL_STEREO_RESONANCE_PROFILE_H
+#include "dsp_support/config.h"
 #include "resonant_detail/profile.h"
+#ifndef RVS_MAX_ORDER
 #define RVS_MAX_ORDER 24
+#endif
 #define RVS_MAX_DIM (2*RVS_MAX_ORDER)
+#ifndef RVS_MAX_BANDS
 #define RVS_MAX_BANDS 12
+#endif
 typedef struct {
     unsigned order;
     float low_hz,high_hz,gain;

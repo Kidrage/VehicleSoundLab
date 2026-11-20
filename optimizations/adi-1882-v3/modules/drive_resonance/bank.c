@@ -3,7 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "dsp_support/storage.h"
+#ifndef VSL_FIXED_V10
 VSL_STORAGE(drs_scratch,DrsBank,1,VSL_DDR)
+#endif
 int drs_bank_valid(const DrsBank *b,const SaBank *dna) {
     unsigned i,active=0;
     if(!b||!dna||!b->count||b->count>SA_MAX_ANCHORS||b->count!=dna->count||
@@ -16,11 +18,16 @@ int drs_bank_valid(const DrsBank *b,const SaBank *dna) {
         if(b->kind[i]==DRS_RDT) {
             if(!rdt_profile_valid(b->profile+i)||fabsf(b->profile[i].base_hz-b->root[i])>1e-8f)return 0;
         } else if(b->kind[i]==DRS_STEREO) {
+#ifdef VSL_FIXED_V10
+            return 0;
+#else
             if(!rvs_profile_valid(b->stereo+i)||fabsf(b->stereo[i].base_hz-b->root[i])>1e-8f)return 0;
+#endif
         } else return 0;
         ++active;
     }return active>0;
 }
+#ifndef VSL_FIXED_V10
 int drs_bank_init_mixed(DrsBank *out,const SaBank *dna,const RdtProfile *const *p,const RvsProfile *const *s) {
     DrsBank *b;unsigned i;int ok=0;
     if(!out||!dna||(!p&&!s)||!dna->count||dna->count>SA_MAX_ANCHORS)return 0;
@@ -32,5 +39,11 @@ int drs_bank_init_mixed(DrsBank *out,const SaBank *dna,const RdtProfile *const *
     if(!drs_bank_valid(b,dna))goto done;*out=*b;ok=1;
 done:drs_scratch_release(b);return ok;
 }
+#else
+int drs_bank_init_mixed(DrsBank *out,const SaBank *dna,const RdtProfile *const *p,const RvsProfile *const *s){
+    (void)out;(void)dna;(void)p;(void)s;return 0;
+}
+#endif
+
 int drs_bank_init(DrsBank *out,const SaBank *dna,const RdtProfile *const *p) {return drs_bank_init_mixed(out,dna,p,NULL);}
 int drs_bank_init_stereo(DrsBank *out,const SaBank *dna,const RvsProfile *const *p) {return drs_bank_init_mixed(out,dna,NULL,p);}

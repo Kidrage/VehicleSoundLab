@@ -12,13 +12,22 @@ struct ScVoice {
     CkVoice *rotation;
 };
 VSL_STORAGE(sc_storage,ScVoice,1,VSL_L1_VOICE)
+#ifndef VSL_FIXED_V10
 VSL_STORAGE(sc_rotation,CkVoice,1,VSL_DDR)
+#else
+static void sc_rotation_release(CkVoice *v){(void)v;}
+#endif
 void sc_destroy(ScVoice *v){unsigned k;if(!v)return;for(k=0;k<SC_STAGES;++k){sf_voice_destroy(v->voice[k]);sf_bank_destroy(v->bank[k]);}sc_rotation_release(v->rotation);sc_storage_release(v);}
 void sc_rearm(ScVoice *v){if(v){v->gate=0;v->ridges.previous_gate=0;memset(v->ridges.active,0,sizeof v->ridges.active);}}
+#ifndef VSL_FIXED_V10
 int sc_set_rotation(ScVoice *v,const CkProfile *p,uint64_t seed){
     CkVoice *r;if(!v||v->frame||v->ridges.count||v->rotation)return 0;
     r=sc_rotation_acquire();if(!r)return 0;if(!ck_init(r,p,seed)){sc_rotation_release(r);return 0;}v->rotation=r;return 1;
 }
+#else
+int sc_set_rotation(ScVoice *v,const CkProfile *p,uint64_t seed){(void)v;(void)p;(void)seed;return 0;}
+#endif
+
 ScVoice *sc_create(const SfProfile *p[SC_STAGES],const float env[SC_POINTS],float variation,uint64_t seed){
     unsigned k;ScVoice *v;
     if(!p||!env||!seed||!isfinite(variation)||variation<0||variation>1)return NULL;
