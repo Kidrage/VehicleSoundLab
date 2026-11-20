@@ -1,0 +1,12 @@
+build/
+build-*/
+bin/
+CMakeFiles/
+CMakeCache.txt
+Testing/
+__pycache__/
+*.pyc
+*.wav
+*.stems.f32
+*.modules.f32
+*.blocks.csv

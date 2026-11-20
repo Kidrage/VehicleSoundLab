@@ -1,0 +1,104 @@
+{
+  "schema": "vsl.resonant-detail-c-export/1",
+  "profiles": [
+    {
+      "name": "moving_35",
+      "file": "voices/resonant_detail_c_v1/moving_35.rdetail",
+      "sha256": "0f9c140dab555dea45650941061fd9f8a9d1b976ac9e050aced6bc98bd919b19",
+      "original": "voices/resonant_detail_v1/detail.json",
+      "original_sha256": "2f2f9fc52c369c24ebd7a494c7e88ba0cb719a47c58cf0eabd463b019ddf8589",
+      "preset": "replace_35",
+      "recipe": {
+        "name": "replace_35",
+        "harmonic_power_reduction": 0.35,
+        "harmonic_transition_hz": [
+          1200,
+          1900
+        ],
+        "detail_amplitude_gain": [
+          0.019920704935849267,
+          0.018188327725992777,
+          0.01582104409046923,
+          0.014032659169975316,
+          0.008178815286771914,
+          0.0035882008772689677,
+          0.002101411207056743,
+          0.0015337076027323424
+        ]
+      },
+      "bands": 8,
+      "root_hz": 46.875,
+      "source_human_scope": "held offline moving35",
+      "native_listening_accepted": false,
+      "driver_integrated": false
+    },
+    {
+      "name": "idle_add",
+      "file": "voices/resonant_detail_c_v1/idle_add.rdetail",
+      "sha256": "11285e4a7ff0b11c28ec4760509b10a168c4ea3dff80117123a3001534963ad2",
+      "original": "voices/idle_resonant_v1/detail.json",
+      "original_sha256": "3e662df22b15b40faec3379477c9d9fea1136ad006418b2bda7d5bd7d8cfbf8e",
+      "preset": "add_only",
+      "recipe": {
+        "name": "add_only",
+        "harmonic_power_reduction": 0,
+        "harmonic_transition_hz": [
+          1200,
+          1900
+        ],
+        "detail_gain": [
+          0.020777931910190485,
+          0.020363782891454255,
+          0.01696568948785419,
+          0.010124124416970035,
+          0.011223274890553622,
+          0.009063051702594358,
+          0.0077528826595495625,
+          0.006132278565597341,
+          0.002736248199983845
+        ]
+      },
+      "bands": 9,
+      "root_hz": 10.005673871228469,
+      "source_human_scope": "idle candidate pending listening",
+      "native_listening_accepted": false,
+      "driver_integrated": false
+    },
+    {
+      "name": "idle_35",
+      "file": "voices/resonant_detail_c_v1/idle_35.rdetail",
+      "sha256": "9cf69a08e47ec83b93ff5cab507ac4e214213b8366a6513f4154594cbb0291c9",
+      "original": "voices/idle_resonant_v1/detail.json",
+      "original_sha256": "3e662df22b15b40faec3379477c9d9fea1136ad006418b2bda7d5bd7d8cfbf8e",
+      "preset": "replace35",
+      "recipe": {
+        "name": "replace35",
+        "harmonic_power_reduction": 0.35,
+        "harmonic_transition_hz": [
+          1200,
+          1900
+        ],
+        "detail_gain": [
+          0.02077793095206796,
+          0.020363801359136357,
+          0.016964297912008222,
+          0.010353596370692691,
+          0.012090157763483395,
+          0.009699082964059275,
+          0.007743200831322872,
+          0.006132329528450037,
+          0.0027362478744516663
+        ]
+      },
+      "bands": 9,
+      "root_hz": 10.005673871228469,
+      "source_human_scope": "idle candidate pending listening",
+      "native_listening_accepted": false,
+      "driver_integrated": false
+    }
+  ],
+  "source_sha256": "7ec66c1cf29a07e1db4aa6b64f257bc500e1bde42f6e8b2adcc500752958b6e4",
+  "result": "encoded_existing_parameters",
+  "kernel_only": true,
+  "new_fitting": false
+}

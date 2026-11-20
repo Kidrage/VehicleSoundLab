@@ -1,0 +1,18 @@
+{
+  "schema": "vsl.voice-provenance/1",
+  "status": "experimental; separate F3 detail hearing pending",
+  "source": "Approved F3 Tecnica observation, 199.6..200.5 seconds before displayed upshift; single qualified local acoustic anchor",
+  "files": {
+    "F3 before upshift.model": "Exact baselines/F3_lift_voice_v1/evidence/fit2/F3 Sixth Before Upshift/voice.model",
+    "F3 before upshift.sres": "Exact baselines/F3_detail_v1/evidence/fit1/F3_before_upshift.sres"
+  },
+  "recipe": {"power_reduction": 0, "detail_amount": 1, "separate_low": false, "root_support": [0.9,0.96,1.04,1.1]},
+  "catalog_seed": 48271,
+  "main_DNA_seed": 48271,
+  "detail_seed": 8121907,
+  "offline_audition_main_DNA_seed": 1,
+  "scope": "Acoustic root66.78588355389799Hz; engineering root_per_rpm1/120, not measured RPM/load, complete acceleration/shift timbre, physical source separation or automatic state selection. Detail fades outside local root support; main DNA continues with antialiasing. Recording context transfer may remain embedded.",
+  "room_added": false,
+  "PCM_timeline": false,
+  "new_timbre_acceptance": false
+}

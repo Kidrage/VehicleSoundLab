@@ -1,0 +1,92 @@
+{
+  "idle": {
+    "old_bands": 6,
+    "new_bands": 2,
+    "taps_each": 512,
+    "low_rate": 6000,
+    "weighted_rms_db": 0.11165282582430833,
+    "stereo_side_energy_ratio": 6.582657952546561e-14
+  },
+  "experiments/startup_character_v1/runtime_bank/catch/residual-0.sfir": {
+    "weighted_rms_db": [
+      2.692567788852172e-07,
+      5.634040518002122e-12
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/catch/residual-1.sfir": {
+    "weighted_rms_db": [
+      4.648830154673985e-09,
+      3.973217894514732e-09
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/catch/residual-2.sfir": {
+    "weighted_rms_db": [
+      2.2302116055915618e-15,
+      3.962023580813045e-07
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/crank/rotation-residual-0.sfir": {
+    "weighted_rms_db": [
+      4.792122708703349e-07,
+      1.2980125007219774e-06
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/crank/rotation-residual-1.sfir": {
+    "weighted_rms_db": [
+      1.51009882259331e-10,
+      3.374998906620268e-05
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/crank/rotation-residual-2.sfir": {
+    "weighted_rms_db": [
+      4.916729380499044e-09,
+      4.356187588599124e-07
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/prelude/residual-0.sfir": {
+    "weighted_rms_db": [
+      2.132182420514244e-06,
+      3.5440520756138545e-06
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/prelude/residual-1.sfir": {
+    "weighted_rms_db": [
+      1.4314066793113531e-05,
+      3.270953229054727e-07
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/prelude/residual-2.sfir": {
+    "weighted_rms_db": [
+      9.095739093285655e-08,
+      1.5589037525308727e-06
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/previous/residual-0.sfir": {
+    "weighted_rms_db": [
+      2.431116941252368e-12,
+      8.140393944963075e-08
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/previous/residual-1.sfir": {
+    "weighted_rms_db": [
+      2.9238590218418376e-07,
+      6.686293298907084e-07
+    ]
+  },
+  "experiments/startup_character_v1/runtime_bank/previous/residual-2.sfir": {
+    "weighted_rms_db": [
+      2.938148527970388e-15,
+      3.6682186408360637e-07
+    ]
+  },
+  "embedded_flare": {
+    "weighted_rms_db": [
+      2.6925677888135306e-07,
+      5.6340304287556724e-12,
+      4.648830162286168e-09,
+      3.973217898084797e-09,
+      2.2302116055915618e-15,
+      3.962023580813045e-07
+    ]
+  }
+}

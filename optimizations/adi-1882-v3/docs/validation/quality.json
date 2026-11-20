@@ -1,0 +1,56 @@
+{
+  "startup_air_off": {
+    "HF_power_change_db": -19.640380595760185,
+    "rms_change_db": -1.5407363615307297
+  },
+  "idle_air_off": {
+    "HF_power_change_db": -35.91759939963148,
+    "rms_change_db": -0.4819965020516648
+  },
+  "acceleration_air_off": {
+    "HF_power_change_db": -1.4152446790570536,
+    "rms_change_db": -0.18764150446816075
+  },
+  "events_air_off": {
+    "HF_power_change_db": -0.03522525019744904,
+    "rms_change_db": -0.09497485839017372
+  },
+  "full_stem_sum_error": 2.9802322387695312e-08,
+  "events_stem_sum_error": 1.1920928955078125e-07,
+  "startup_stem_sum_error": 1.4901161193847656e-08,
+  "restart_stem_sum_error": 1.4901161193847656e-08,
+  "startup_partition_max": 0.0,
+  "events_partition_max": 0.0,
+  "acceleration_partition_max": 0.0,
+  "restart_partition_max": 0.0,
+  "checks": {
+    "startup_air_bus_zero": true,
+    "startup_air_changes_sound": true,
+    "idle_air_bus_zero": true,
+    "idle_air_changes_sound": true,
+    "acceleration_air_bus_zero": true,
+    "acceleration_air_changes_sound": true,
+    "events_air_bus_zero": true,
+    "events_air_changes_sound": true,
+    "full_stem_sum": true,
+    "events_stem_sum": true,
+    "startup_stem_sum": true,
+    "restart_stem_sum": true,
+    "startup_partition": true,
+    "events_partition": true,
+    "acceleration_partition": true,
+    "restart_partition": true,
+    "startup_same_driver": true,
+    "idle_same_driver": true,
+    "acceleration_same_driver": true,
+    "cruise_same_driver": true,
+    "high_same_driver": true,
+    "lift_same_driver": true,
+    "brake_same_driver": true,
+    "shift_same_driver": true,
+    "events_same_driver": true,
+    "stop_same_driver": true,
+    "full_same_driver": true,
+    "restart_same_driver": true
+  }
+}

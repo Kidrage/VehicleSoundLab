@@ -1,0 +1,9 @@
+{
+  "startup_profile_same_audio": true,
+  "idle_profile_same_audio": true,
+  "acceleration_profile_same_audio": true,
+  "high_profile_same_audio": true,
+  "events_profile_same_audio": true,
+  "full_profile_same_audio": true,
+  "restart_profile_same_audio": true
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "vsl.event-profile/4",
+  "kind": "afterfire",
+  "name": "G 风格回火 V2 · 短爆连发",
+  "design_method": "procedural",
+  "physical_identity_confirmed": false,
+  "design_note": "Reference-guided engineering candidate: short broadband cracks with damped body, not an identified physical exhaust model or PCM reconstruction. V12 modified-exhaust reference kept separate from the V10 DNA. Three OSC and two noise bands per existing voice; no new room, FIR, samples or voice slots. Needs listening review.",
+  "reference_evidence": {
+    "source_id": "G",
+    "url": "https://www.youtube.com/watch?v=7BMsB7jUxqc",
+    "raw_sha256": "c0a37c3b1cdd2271c67f2b8ee4b4df8b396c8ad74ed433336f9082fbabfccd22",
+    "vehicle_declared_by_uploader": "Aventador SVJ V12, Gintani F1 exhaust",
+    "visual_candidates_seconds": [[153.0, 153.5], [155.4, 156.2], [156.9, 157.8], [444.0, 444.6], [446.8, 449.6]],
+    "limits": "Visible flames support exhaust-event selection. Mixed vehicle audio, microphone/codec and propagation remain; pedal, RPM and exact A/V offset are not measured. Parameters are sound-design choices, not source-separated estimates."
+  },
+  "parameters": {
+    "gated": 0,
+    "duration_seconds": 0.115,
+    "attack_seconds": 0.00015,
+    "release_seconds": 0.012,
+    "sweep_seconds": 0.0,
+    "level": 2.4,
+    "modes": [
+      {"hz": 142.0, "end_hz": 142.0, "amplitude": 0.24, "phase": 1.5707963267948966, "decay_seconds": 0.020},
+      {"hz": 367.0, "end_hz": 367.0, "amplitude": 0.13, "phase": 1.18, "decay_seconds": 0.012},
+      {"hz": 827.0, "end_hz": 827.0, "amplitude": 0.06, "phase": 0.50, "decay_seconds": 0.007}
+    ],
+    "bands": [
+      {"hz": 780.0, "q": 0.65, "amplitude": 2.3, "attack_seconds": 0.00015, "decay_seconds": 0.009},
+      {"hz": 3900.0, "q": 0.75, "amplitude": 1.9, "attack_seconds": 0.0001, "decay_seconds": 0.0035}
+    ]
+  }
+}

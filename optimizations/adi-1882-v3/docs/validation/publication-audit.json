@@ -1,0 +1,11 @@
+{
+  "input_zip": "VehicleSoundLab-main(1).zip",
+  "input_zip_sha256": "8c244e839ece410ffd160e167c6800c5c444786d810a992f0c8443dcb2b8c2cd",
+  "exact_desktop_files_verified": 517,
+  "compiled_core_source_count": 186,
+  "source_and_profile_sha256": "aadb9315bbbedf90e1251ddede5290e3354d84594500d2e3988bb8bdb2cd87b0",
+  "audio_and_binaries_in_git": false,
+  "optimized_ADI_MCPS_obtained": false,
+  "note": "All copied algorithm/build/profile files match the tested Desktop delivery; README links and publication evidence are adapted for GitHub.",
+  "formatting_policy": "Preserve inherited blank lines at EOF to retain tested source bytes; check trailing whitespace and space-before-tab separately."
+}

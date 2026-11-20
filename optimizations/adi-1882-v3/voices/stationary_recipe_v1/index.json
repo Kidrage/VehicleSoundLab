@@ -1,0 +1,95 @@
+{
+  "schema": "vsl.stationary-recipe-profiles/1",
+  "status": "candidate; hearing pending",
+  "source": "A stationary exterior; not F2 idle",
+  "replacement_power": 0.35,
+  "transition_hz": [
+    1200,
+    1900
+  ],
+  "envelopes": "flat; no moving-context law",
+  "low_anchor": "no new profile: budget not supported",
+  "profiles": [
+    {
+      "file": "A Stationary Lower Mid.rdetail",
+      "sha256": "fa4f91903eb789cde2cc0f9e1cef8f7ef09e7dbe521af2335512fb4262aeae3b",
+      "root_hz": 31.52219356431996,
+      "source": {
+        "name": "A Stationary Lower Mid",
+        "file": "A Stationary Lower Mid.model",
+        "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+        "base_hz": 31.52219356431996,
+        "modeled_top_hz": 9078.391746524148,
+        "source": "A",
+        "segment_id": "A_exterior_blips",
+        "seconds": [
+          238.80333970548446,
+          239.21662919512096
+        ],
+        "perspective": "stationary rear exterior mixed recording",
+        "analysis_cycles": 4,
+        "harmonics": 288,
+        "components": 12,
+        "reference_order": 5,
+        "status": "experimental; human listening pending",
+        "lf_model": null
+      },
+      "maximum_LR_band_power_error_db": 0.32801922693767,
+      "human_accepted": false
+    },
+    {
+      "file": "A Stationary Upper Mid.rdetail",
+      "sha256": "570a845119ef5b1f80cdce6f046aa9adae014ebf6ae44942b2a6f3afe8579e89",
+      "root_hz": 47.39127187830898,
+      "source": {
+        "name": "A Stationary Upper Mid",
+        "file": "A Stationary Upper Mid.model",
+        "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+        "base_hz": 47.39127187830898,
+        "modeled_top_hz": 13648.686300952986,
+        "source": "A",
+        "segment_id": "A_exterior_blips",
+        "seconds": [
+          238.3667405984437,
+          238.6743710116805
+        ],
+        "perspective": "stationary rear exterior mixed recording",
+        "analysis_cycles": 4,
+        "harmonics": 288,
+        "components": 12,
+        "reference_order": 5,
+        "status": "experimental; human listening pending",
+        "lf_model": null
+      },
+      "maximum_LR_band_power_error_db": 0.27164676649888636,
+      "human_accepted": false
+    },
+    {
+      "file": "A Stationary High.rdetail",
+      "sha256": "fcf4dd40c133db70aaa8fe6964562fb72d6cbc408fe9acb6eaabfdb54131cc21",
+      "root_hz": 60.83004535315176,
+      "source": {
+        "name": "A Stationary High",
+        "file": "A Stationary High.model",
+        "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+        "base_hz": 60.83004535315176,
+        "modeled_top_hz": 17519.053061707706,
+        "source": "A",
+        "segment_id": "A_exterior_blips",
+        "seconds": [
+          238.13104290803287,
+          238.32934697875095
+        ],
+        "perspective": "stationary rear exterior mixed recording",
+        "analysis_cycles": 4,
+        "harmonics": 288,
+        "components": 12,
+        "reference_order": 5,
+        "status": "experimental; human listening pending",
+        "lf_model": null
+      },
+      "maximum_LR_band_power_error_db": 0.3257792242972532,
+      "human_accepted": false
+    }
+  ]
+}

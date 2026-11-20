@@ -1,0 +1,128 @@
+{
+  "schema": "vsl.residual-atlas-models/1",
+  "fit_report_sha256": "01af47cc91bbc1dc2a8365f97e235464a2c600a84df5b657ddb2f8489b5a8417",
+  "voices": [
+    {
+      "name": "A Stationary Low",
+      "context": "exterior_anchors_v1",
+      "base_hz": 10.005673871228469,
+      "model_sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+      "file": "A Stationary Low.residual",
+      "profile_sha256": "986589d8e7c5f76f44e4a3ed954e023c44ff8422c30dbd805196d8270f6769df",
+      "conservative_usable_top_hz": 3111.0499585148373,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "name": "A Stationary Lower Mid",
+      "context": "exterior_anchors_v1",
+      "base_hz": 31.52219356431996,
+      "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+      "file": "A Stationary Lower Mid.residual",
+      "profile_sha256": "bf835b14c8e9807b091df0cfa2db68c000e899536592f720c97678653d47e31e",
+      "conservative_usable_top_hz": 7270.434250196071,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "A Stationary Upper Mid",
+      "context": "exterior_anchors_v1",
+      "base_hz": 47.39127187830898,
+      "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+      "file": "A Stationary Upper Mid.residual",
+      "profile_sha256": "7fa388591486c32bcf1443e21496d91138fced6266e0427d5f90cf0a0cf13d6a",
+      "conservative_usable_top_hz": 11852.635851511694,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "A Stationary High",
+      "context": "exterior_anchors_v1",
+      "base_hz": 60.83004535315176,
+      "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+      "file": "A Stationary High.residual",
+      "profile_sha256": "0fc39668a9f95f58d4abd62f286a969e4812cd2d311e09f22c36057a25f4763c",
+      "conservative_usable_top_hz": 12475.091660859396,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "E Cabin Lower",
+      "context": "cabin_anchors_v1",
+      "base_hz": 60.634271286273396,
+      "model_sha256": "e74e98a6c82f6ce2359a2fded3a30d35f7265a9d7014b7bc356b1533cace4cf9",
+      "file": "E Cabin Lower.residual",
+      "profile_sha256": "3f11651c0616114b81c158d84d35589a2f29e2aaf7487e13e03f1fa81aa79c5f",
+      "conservative_usable_top_hz": 13005.74182195007,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "E Cabin Upper",
+      "context": "cabin_anchors_v1",
+      "base_hz": 64.84675603879224,
+      "model_sha256": "819a343cd1e232700e21ac4f1d57e7ce817293c66902d812015399325837d5a3",
+      "file": "E Cabin Upper.residual",
+      "profile_sha256": "90f3c5037bde0548f3c75c89f48f9a00f2b42c0e3a1a7dc1296c63e785164c8c",
+      "conservative_usable_top_hz": 13038.617759870966,
+      "active_bands": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "human_accepted": false,
+  "limits": [
+    "Two recording contexts of one V10 family; not six real engines",
+    "Only mean spectral matrices; no measured load/state or temporal envelopes",
+    "Fixed-Hz inharmonic cloud; root interpolates covariance, not carrier frequency",
+    "Whole bands above a conservative observation budget are zero, not extrapolated",
+    "A root/RPM remains engineering; E evidence does not transfer to A"
+  ]
+}

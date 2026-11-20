@@ -1,0 +1,4 @@
+Native ABI bytes: VsEngine=1419504 SaTable=112904 DrcVoice=65640 RdtVoice=1760 SaSampleCache=20496
+normal: mean 0.0006173991 variance 0.9988906 kurtosis 3.00039 lag1 0.0004720501
+64-frame overlap-add vs direct convolution: max 9.39726533e-07
+event sine lookup maximum error: 4.76837158e-07

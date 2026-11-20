@@ -1,0 +1,765 @@
+{
+  "schema": "vsl.event-bank/1",
+  "profiles": {
+    "crank": {
+      "schema": "vsl.event-profile/1",
+      "kind": "crank",
+      "name": "A 启动早期混合纹理候选",
+      "parameters": {
+        "gated": 1,
+        "duration_seconds": 10.0,
+        "attack_seconds": 0.012,
+        "release_seconds": 0.025,
+        "sweep_seconds": 0.0,
+        "level": 0.8875506933920394,
+        "modes": [
+          {
+            "hz": 936.2566869476262,
+            "end_hz": 936.2566869476262,
+            "amplitude": 0.04435270855223659,
+            "phase": 1.173103673155737,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 1092.8763507785636,
+            "end_hz": 1092.8763507785636,
+            "amplitude": 0.03922722999480003,
+            "phase": 3.919882775746192,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 1642.006423408332,
+            "end_hz": 1642.006423408332,
+            "amplitude": 0.02667482853041858,
+            "phase": 2.8929974606101903,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 289.7646723199394,
+            "end_hz": 289.7646723199394,
+            "amplitude": 0.03017290233496174,
+            "phase": 4.535348361984862,
+            "decay_seconds": 0.2925338517977728
+          },
+          {
+            "hz": 754.0737625585386,
+            "end_hz": 754.0737625585386,
+            "amplitude": 0.02406625897844506,
+            "phase": 0.5389341850587108,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 1960.829280122846,
+            "end_hz": 1960.829280122846,
+            "amplitude": 0.02485436958357853,
+            "phase": -1.348026707411449,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 1309.9599257352845,
+            "end_hz": 1309.9599257352845,
+            "amplitude": 0.022778878253371306,
+            "phase": -1.0476045053129974,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 1544.6917867438517,
+            "end_hz": 1544.6917867438517,
+            "amplitude": 0.020406846199844307,
+            "phase": 2.8411791797873014,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 431.3140285766551,
+            "end_hz": 431.3140285766551,
+            "amplitude": 0.01728935913497472,
+            "phase": 0.6283102296294447,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 2168.4349289757315,
+            "end_hz": 2168.4349289757315,
+            "amplitude": 0.016877628983756266,
+            "phase": 2.311058573801211,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 2490.7360419681363,
+            "end_hz": 2490.7360419681363,
+            "amplitude": 0.01593349969006454,
+            "phase": 1.401653938914485,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 3015.57157561045,
+            "end_hz": 3015.57157561045,
+            "amplitude": 0.014989735055022286,
+            "phase": -0.2206086057291894,
+            "decay_seconds": 0.04761411795919038
+          }
+        ],
+        "bands": [
+          {
+            "hz": 134.16407864998737,
+            "q": 0.5590169943749473,
+            "amplitude": 0.3284686742052928,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.2925338517977728
+          },
+          {
+            "hz": 600.0,
+            "q": 0.6666666666666666,
+            "amplitude": 0.7076342028412064,
+            "attack_seconds": 0.08,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 2323.7900077244503,
+            "q": 0.7041787902195304,
+            "amplitude": 0.44813403487091646,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.04761411795919038
+          },
+          {
+            "hz": 7937.253933193771,
+            "q": 0.835500414020397,
+            "amplitude": 0.11075183236852752,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.08
+          }
+        ]
+      },
+      "provenance": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1759200,
+        "last_frame": 1781760,
+        "source_seconds": [
+          36.65,
+          37.12
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "background": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1680000,
+        "last_frame": 1737600,
+        "source_seconds": [
+          35.0,
+          36.2
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "observation": {
+        "rms_channels": [
+          0.1318137787986715,
+          0.196350398198646
+        ],
+        "background_rms_channels": [
+          0.020947672203661817,
+          0.021321534459998535
+        ],
+        "excess_mean_square": 0.027517469175735488,
+        "event_to_background_db": 17.965798443481578,
+        "modal_peaks_hz": [
+          937.5,
+          1101.5625,
+          1640.625,
+          281.25,
+          750.0,
+          1968.75,
+          1312.5,
+          1546.875,
+          421.875,
+          2179.6875,
+          2484.375,
+          3023.4375
+        ],
+        "modal_observations": [
+          {
+            "hz": 936.2566869476262,
+            "phase": 1.173103673155737,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1092.8763507785636,
+            "phase": 3.919882775746192,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1642.006423408332,
+            "phase": 2.8929974606101903,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 289.7646723199394,
+            "phase": 4.535348361984862,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 754.0737625585386,
+            "phase": 0.5389341850587108,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1960.829280122846,
+            "phase": -1.348026707411449,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1309.9599257352845,
+            "phase": -1.0476045053129974,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1544.6917867438517,
+            "phase": 2.8411791797873014,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 431.3140285766551,
+            "phase": 0.6283102296294447,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 2168.4349289757315,
+            "phase": 2.311058573801211,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 2490.7360419681363,
+            "phase": 1.401653938914485,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 3015.57157561045,
+            "phase": -0.2206086057291894,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          }
+        ],
+        "bands": [
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "background_power": 0.00024840183543465606,
+            "excess_power": 0.0010113568313052097,
+            "peak_time": 0.165,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.2925338517977728,
+            "log_amplitude_tail_slope": -3.4184077974377303,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "background_power": 0.0001275621156134305,
+            "excess_power": 0.011468195275898223,
+            "peak_time": 0.17,
+            "attack_seconds": 0.08,
+            "decay_seconds": 2.0,
+            "log_amplitude_tail_slope": -0.2961196531184794,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "background_power": 4.866579983657765e-05,
+            "excess_power": 0.013253705208547734,
+            "peak_time": 0.445,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.04761411795919038,
+            "log_amplitude_tail_slope": -21.002174205076965,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "background_power": 1.5002551945192834e-05,
+            "excess_power": 0.001391284017770799,
+            "peak_time": 0.32,
+            "attack_seconds": 0.08,
+            "decay_seconds": 0.08,
+            "log_amplitude_tail_slope": 0.47212852125882915,
+            "decay_fitted": false
+          }
+        ],
+        "limits": [
+          "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+          "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+          "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position."
+        ]
+      },
+      "fit": {
+        "level_fit_target_excess_power": 0.027517469175735488,
+        "unscaled_generated_power": 0.034931895591602966,
+        "policy": "12 strongest excess PSD peaks; 35% of each 3-bin peak allocated to modes, remaining band power to four SOS noise bands; one global RMS fit.",
+        "limitations": "Modal phase is one selected-channel window projection, not physical dry-source phase or full time-varying reconstruction. Event-wide ±0.2% offset is engineering; no fitted room IR."
+      },
+      "physical_identity_confirmed": false,
+      "status": "material-informed candidate; listening not yet accepted",
+      "context": "Approved A cabin start context. Early broadband was previously observed. Starter/handling/combustion/cabin are not physically separated; engineering assignment to gated crank slot.",
+      "source_job": {
+        "schema": "vsl.event-authoring-job/1",
+        "kind": "crank",
+        "name": "A 启动早期混合纹理候选",
+        "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+        "seconds": [
+          36.65,
+          37.12
+        ],
+        "background_seconds": [
+          35.0,
+          36.2
+        ],
+        "gated": true,
+        "physical_identity_confirmed": false,
+        "context": "Approved A cabin start context. Early broadband was previously observed. Starter/handling/combustion/cabin are not physically separated; engineering assignment to gated crank slot."
+      },
+      "generated_peak": 0.5647318954890741,
+      "generated_rms": 0.1658839027022679,
+      "runtime": "damped sine modes and four procedural-noise SOS bands; no recording playback or room effect",
+      "profile_sha256": "914338750d90e5fc10a57d1f77db1ce95d12281daa54a8181ff98b6af98bd357"
+    },
+    "catch": {
+      "schema": "vsl.event-profile/1",
+      "kind": "catch",
+      "name": "A 接火低频建立混合候选",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.8,
+        "attack_seconds": 0.01,
+        "release_seconds": 0.025,
+        "sweep_seconds": 0.0,
+        "level": 1.1108201168320302,
+        "modes": [
+          {
+            "hz": 204.1580607300333,
+            "end_hz": 204.1580607300333,
+            "amplitude": 0.162927495957886,
+            "phase": -0.33588347558048737,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 321.15911719356745,
+            "end_hz": 321.15911719356745,
+            "amplitude": 0.1083709842061879,
+            "phase": 3.2484812033419104,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 413.9345533620335,
+            "end_hz": 413.9345533620335,
+            "amplitude": 0.11096898828270253,
+            "phase": -0.27230231208905353,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 754.2997157883186,
+            "end_hz": 754.2997157883186,
+            "amplitude": 0.03671103430131712,
+            "phase": -0.727294374614504,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 595.0307945993655,
+            "end_hz": 595.0307945993655,
+            "amplitude": 0.031103837681718583,
+            "phase": 2.0481393080656423,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 1077.0163767145598,
+            "end_hz": 1077.0163767145598,
+            "amplitude": 0.01544894192200088,
+            "phase": -0.9844719841583136,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 1329.554289367668,
+            "end_hz": 1329.554289367668,
+            "amplitude": 0.013209451718910562,
+            "phase": 0.6656353136154572,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 1727.8774785559804,
+            "end_hz": 1727.8774785559804,
+            "amplitude": 0.010255161752518194,
+            "phase": 2.6406162145412964,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 1425.0764832105936,
+            "end_hz": 1425.0764832105936,
+            "amplitude": 0.009558430354271638,
+            "phase": 2.6447428182791413,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 2504.6404497549393,
+            "end_hz": 2504.6404497549393,
+            "amplitude": 0.008221424881539478,
+            "phase": -0.11292123150040512,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 2092.6261786689115,
+            "end_hz": 2092.6261786689115,
+            "amplitude": 0.008062908179281323,
+            "phase": 2.574519209609162,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 3603.5292498043555,
+            "end_hz": 3603.5292498043555,
+            "amplitude": 0.006610375726424625,
+            "phase": 1.141151805072512,
+            "decay_seconds": 2.0
+          }
+        ],
+        "bands": [
+          {
+            "hz": 134.16407864998737,
+            "q": 0.5590169943749473,
+            "amplitude": 3.45134680634043,
+            "attack_seconds": 0.08,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 600.0,
+            "q": 0.6666666666666666,
+            "amplitude": 1.3478470614831637,
+            "attack_seconds": 0.08,
+            "decay_seconds": 1.3265710058644986
+          },
+          {
+            "hz": 2323.7900077244503,
+            "q": 0.7041787902195304,
+            "amplitude": 0.2160598703651532,
+            "attack_seconds": 0.01,
+            "decay_seconds": 2.0
+          },
+          {
+            "hz": 7937.253933193771,
+            "q": 0.835500414020397,
+            "amplitude": 0.06468085171231593,
+            "attack_seconds": 0.01,
+            "decay_seconds": 2.0
+          }
+        ]
+      },
+      "provenance": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1786560,
+        "last_frame": 1824960,
+        "source_seconds": [
+          37.22,
+          38.02
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "background": {
+        "path": "E:\\VehicleSoundLab\\references\\clean\\A_decoded_float.wav",
+        "sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+        "first_frame": 1680000,
+        "last_frame": 1737600,
+        "source_seconds": [
+          35.0,
+          36.2
+        ],
+        "channels": 2,
+        "sample_rate": 48000,
+        "channel_policy": "mean channel powers; no cancellation-prone stereo folding"
+      },
+      "observation": {
+        "rms_channels": [
+          0.2642920311668795,
+          0.4223359949134494
+        ],
+        "background_rms_channels": [
+          0.020947672203661817,
+          0.021321534459998535
+        ],
+        "excess_mean_square": 0.1236622787676835,
+        "event_to_background_db": 24.437810485362043,
+        "modal_peaks_hz": [
+          210.9375,
+          328.125,
+          421.875,
+          750.0,
+          585.9375,
+          1078.125,
+          1335.9375,
+          1734.375,
+          1429.6875,
+          2507.8125,
+          2085.9375,
+          3609.375
+        ],
+        "modal_observations": [
+          {
+            "hz": 204.1580607300333,
+            "phase": -0.33588347558048737,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 321.15911719356745,
+            "phase": 3.2484812033419104,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 413.9345533620335,
+            "phase": -0.27230231208905353,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 754.2997157883186,
+            "phase": -0.727294374614504,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 595.0307945993655,
+            "phase": 2.0481393080656423,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1077.0163767145598,
+            "phase": -0.9844719841583136,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1329.554289367668,
+            "phase": 0.6656353136154572,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1727.8774785559804,
+            "phase": 2.6406162145412964,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 1425.0764832105936,
+            "phase": 2.6447428182791413,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 2504.6404497549393,
+            "phase": -0.11292123150040512,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 2092.6261786689115,
+            "phase": 2.574519209609162,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          },
+          {
+            "hz": 3603.5292498043555,
+            "phase": 1.141151805072512,
+            "phase_channel": 1,
+            "frequency_bin_hz": 23.4375
+          }
+        ],
+        "bands": [
+          {
+            "hz": [
+              60,
+              300
+            ],
+            "background_power": 0.00024840183543465606,
+            "excess_power": 0.07467503377795298,
+            "peak_time": 0.615,
+            "attack_seconds": 0.08,
+            "decay_seconds": 2.0,
+            "log_amplitude_tail_slope": -0.181095365173358,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              300,
+              1200
+            ],
+            "background_power": 0.0001275621156134305,
+            "excess_power": 0.04695977222670378,
+            "peak_time": 0.35,
+            "attack_seconds": 0.08,
+            "decay_seconds": 1.3265710058644986,
+            "log_amplitude_tail_slope": -0.7538231994964498,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              1200,
+              4500
+            ],
+            "background_power": 4.866579983657765e-05,
+            "excess_power": 0.003002569628577533,
+            "peak_time": 0.02,
+            "attack_seconds": 0.01,
+            "decay_seconds": 2.0,
+            "log_amplitude_tail_slope": -0.2565132194794788,
+            "decay_fitted": true
+          },
+          {
+            "hz": [
+              4500,
+              14000
+            ],
+            "background_power": 1.5002551945192834e-05,
+            "excess_power": 0.00047453190320104915,
+            "peak_time": 0.02,
+            "attack_seconds": 0.01,
+            "decay_seconds": 2.0,
+            "log_amplitude_tail_slope": -0.4887580801063023,
+            "decay_fitted": true
+          }
+        ],
+        "limits": [
+          "PSD background subtraction is a statistical excess estimate, not waveform source separation.",
+          "Decay is a bounded acoustic fit; nondecreasing/too-short tails use explicitly marked engineering fallback.",
+          "One mixed recording does not establish mechanical identity, RPM, dry physical source or source position."
+        ]
+      },
+      "fit": {
+        "level_fit_target_excess_power": 0.1236622787676835,
+        "unscaled_generated_power": 0.10021893257277767,
+        "policy": "12 strongest excess PSD peaks; 35% of each 3-bin peak allocated to modes, remaining band power to four SOS noise bands; one global RMS fit.",
+        "limitations": "Modal phase is one selected-channel window projection, not physical dry-source phase or full time-varying reconstruction. Event-wide ±0.2% offset is engineering; no fitted room IR."
+      },
+      "physical_identity_confirmed": false,
+      "status": "material-informed candidate; listening not yet accepted",
+      "context": "Approved A cabin startup LF-build observation. This includes continuous engine energy, not an isolated ignition event. Use conservatively alongside continuous DNA; no measured physical RPM trajectory.",
+      "source_job": {
+        "schema": "vsl.event-authoring-job/1",
+        "kind": "catch",
+        "name": "A 接火低频建立混合候选",
+        "source": "E:/VehicleSoundLab/references/clean/A_decoded_float.wav",
+        "seconds": [
+          37.22,
+          38.02
+        ],
+        "background_seconds": [
+          35.0,
+          36.2
+        ],
+        "gated": false,
+        "physical_identity_confirmed": false,
+        "context": "Approved A cabin startup LF-build observation. This includes continuous engine energy, not an isolated ignition event. Use conservatively alongside continuous DNA; no measured physical RPM trajectory."
+      },
+      "generated_peak": 1.5082141698290132,
+      "generated_rms": 0.35165647835307046,
+      "runtime": "damped sine modes and four procedural-noise SOS bands; no recording playback or room effect",
+      "profile_sha256": "972261c8c464e3baf5096cc3cbd0b378e60dcd50bff9ec212a238bb24efaeab0"
+    },
+    "engage": {
+      "kind": "engage",
+      "status": "unavailable; no compiled material profile",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.1,
+        "attack_seconds": 0.001,
+        "release_seconds": 0.01,
+        "sweep_seconds": 0,
+        "level": 0,
+        "modes": [],
+        "bands": []
+      }
+    },
+    "afterfire": {
+      "kind": "afterfire",
+      "status": "unavailable; no compiled material profile",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.1,
+        "attack_seconds": 0.001,
+        "release_seconds": 0.01,
+        "sweep_seconds": 0,
+        "level": 0,
+        "modes": [],
+        "bands": []
+      }
+    },
+    "shift": {
+      "kind": "shift",
+      "status": "unavailable; no compiled material profile",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.1,
+        "attack_seconds": 0.001,
+        "release_seconds": 0.01,
+        "sweep_seconds": 0,
+        "level": 0,
+        "modes": [],
+        "bands": []
+      }
+    },
+    "disengage": {
+      "kind": "disengage",
+      "status": "unavailable; no compiled material profile",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.1,
+        "attack_seconds": 0.001,
+        "release_seconds": 0.01,
+        "sweep_seconds": 0,
+        "level": 0,
+        "modes": [],
+        "bands": []
+      }
+    },
+    "stop": {
+      "kind": "stop",
+      "status": "unavailable; no compiled material profile",
+      "parameters": {
+        "gated": 0,
+        "duration_seconds": 0.1,
+        "attack_seconds": 0.001,
+        "release_seconds": 0.01,
+        "sweep_seconds": 0,
+        "level": 0,
+        "modes": [],
+        "bands": []
+      }
+    }
+  },
+  "available_mask": 6,
+  "note": "Availability proves only a compiled candidate, never timbre acceptance or physical identity."
+}

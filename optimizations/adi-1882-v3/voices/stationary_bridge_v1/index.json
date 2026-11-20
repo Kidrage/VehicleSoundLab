@@ -1,0 +1,85 @@
+{
+  "schema": "vsl.stationary-bridge-profiles/1",
+  "status": "candidate; hearing pending",
+  "name": "A Bridge Mid Two",
+  "root_hz": 41.61199875130416,
+  "DNA_sha256": "d1929f7d48ef026c9f1ca721616376b12c5b09970765b4dfea896683558d910d",
+  "detail_sha256": "04e837953ac2c325062805042e9600904d861ddd32bda801cec26e4d3a4b754a",
+  "source": {
+    "segment_id": "A_exterior_blips",
+    "source": "A",
+    "catalog_sha256": "6d20cf0206be3e6714bb748807312dcc1610707e1d6b6b6a82becc0024c4a3e5",
+    "master": "references/clean/A_decoded_float.wav",
+    "master_sha256": "34885942c450127932a25c72a63fdeae59026f30cfe3678a7aba6b1f5f87b964",
+    "raw_sha256": "fe4a2eb5acaf4776015e1bf25e766bb978fb7e5feaa23faec9f65c91d3329c97",
+    "seconds": [
+      238,
+      248
+    ],
+    "perspective": "stationary rear exterior, open driver door",
+    "processing": "Unchanged decoded stereo float samples; no filtering or gain",
+    "not_established": [
+      "neutral gear",
+      "pedal trajectory",
+      "torque load",
+      "RPM"
+    ]
+  },
+  "source_seconds": [
+    238.50341745442827,
+    238.8354449443152
+  ],
+  "heldout_coherence": {
+    "3": [
+      0.9341188540562674,
+      0.9320259530885089
+    ],
+    "7": [
+      0.89623481681519,
+      0.9136278499982239
+    ]
+  },
+  "maximum_LR_band_error_db": 0.16806907069691934,
+  "rejected": [
+    {
+      "name": "A Bridge Mid One",
+      "root_hz": 36.078979480277866,
+      "heldout_coherence": {
+        "3": [
+          0.9657008222087319,
+          0.9629752753640397
+        ],
+        "7": [
+          0.6544758156422466,
+          0.6642428643825711
+        ]
+      }
+    },
+    {
+      "name": "A Bridge Mid Three",
+      "root_hz": 54.02870686536072,
+      "heldout_coherence": {
+        "3": [
+          0.8142992857120896,
+          0.8058633515247883
+        ],
+        "7": [
+          0.7554339028532238,
+          0.7673296733515803
+        ]
+      }
+    }
+  ],
+  "support_gaps_hz": [
+    [
+      34.674412920751955,
+      37.45079887617374
+    ],
+    [
+      52.13039906613988,
+      54.747040817836584
+    ]
+  ],
+  "human_accepted": false,
+  "limits": "One falling-rev observation, not measured RPM/load or a new real engine. Original common-clock qualification remains limited. No new room, recorded timeline or native default."
+}

@@ -1,0 +1,23 @@
+Test project E:/vsa1882/candidate-generic
+    Start 1: checks
+1/9 Test #1: checks ...........................   Passed   26.41 sec
+    Start 2: input_checks
+2/9 Test #2: input_checks .....................   Passed    0.55 sec
+    Start 3: event_checks
+3/9 Test #3: event_checks .....................   Passed    1.64 sec
+    Start 4: policy_checks
+4/9 Test #4: policy_checks ....................   Passed    0.19 sec
+    Start 5: dna_checks
+5/9 Test #5: dna_checks .......................   Passed    0.28 sec
+    Start 6: state_dna_checks
+6/9 Test #6: state_dna_checks .................   Passed    0.36 sec
+    Start 7: character_checks
+7/9 Test #7: character_checks .................   Passed    1.87 sec
+    Start 8: dynamics_checks
+8/9 Test #8: dynamics_checks ..................   Passed    0.19 sec
+    Start 9: compact_dsp_algorithms
+9/9 Test #9: compact_dsp_algorithms ...........   Passed    0.23 sec
+
+100% tests passed out of 9
+
+Total Test time (real) =  31.74 sec

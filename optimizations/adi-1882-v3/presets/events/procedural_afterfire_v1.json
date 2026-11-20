@@ -1,0 +1,26 @@
+{
+  "schema": "vsl.event-profile/4",
+  "kind": "afterfire",
+  "name": "程序回火 V1 · 短爆与低频尾声",
+  "design_method": "procedural",
+  "physical_identity_confirmed": false,
+  "design_note": "Engineering sound-design candidate; no recording, rejected reference, sample playback or measured afterfire fit. Reuses the existing event kernel and four-voice pool.",
+  "parameters": {
+    "gated": 0,
+    "duration_seconds": 0.22,
+    "attack_seconds": 0.0004,
+    "release_seconds": 0.025,
+    "sweep_seconds": 0.035,
+    "level": 1.6,
+    "modes": [
+      {"hz": 78.0, "end_hz": 69.0, "amplitude": 0.24, "phase": 1.5707963267948966, "decay_seconds": 0.054},
+      {"hz": 151.0, "end_hz": 132.0, "amplitude": 0.14, "phase": 1.18, "decay_seconds": 0.034},
+      {"hz": 289.0, "end_hz": 259.0, "amplitude": 0.10, "phase": 0.94, "decay_seconds": 0.021},
+      {"hz": 634.0, "end_hz": 581.0, "amplitude": 0.05, "phase": 0.50, "decay_seconds": 0.010}
+    ],
+    "bands": [
+      {"hz": 650.0, "q": 0.65, "amplitude": 1.8, "attack_seconds": 0.0004, "decay_seconds": 0.016},
+      {"hz": 3200.0, "q": 0.75, "amplitude": 1.25, "attack_seconds": 0.0002, "decay_seconds": 0.006}
+    ]
+  }
+}

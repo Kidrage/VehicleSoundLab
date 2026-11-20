@@ -1,0 +1,98 @@
+{
+  "schema": "vsl.exterior-anchor-bank/1",
+  "renderer": "modules/sound_dna and modules/dna_atlas",
+  "source_build_sha256": "193aec62baa5f7ca661c4d8cda51c2350aadcf9df3deba8c45e51731adfe52d8",
+  "catalog_sha256": "5f323572b55f747514b43f08dca8b5a0f9f58cdf543ef3bdbe09c898244e7895",
+  "voices": [
+    {
+      "name": "A Stationary Low",
+      "file": "A Stationary Low.model",
+      "model_sha256": "7da87f0f6218d1b2ef49af30c7b87e78a0101b0796432719f89ecb01bd00b301",
+      "base_hz": 10.005673871228469,
+      "modeled_top_hz": 2881.634074913799,
+      "source": "A",
+      "segment_id": "A_exterior_blips",
+      "seconds": [
+        243.80401840176046,
+        247.28209457393677
+      ],
+      "perspective": "stationary rear exterior mixed recording",
+      "analysis_cycles": 4,
+      "harmonics": 288,
+      "components": 12,
+      "reference_order": 10,
+      "status": "experimental; human listening pending",
+      "lf_model": null
+    },
+    {
+      "name": "A Stationary Lower Mid",
+      "file": "A Stationary Lower Mid.model",
+      "model_sha256": "4eab1fd1570ed12e2c62b9b4d67fe69c6a687fba021e56dedaa938c9824c5a7b",
+      "base_hz": 31.52219356431996,
+      "modeled_top_hz": 9078.391746524148,
+      "source": "A",
+      "segment_id": "A_exterior_blips",
+      "seconds": [
+        238.80333970548446,
+        239.21662919512096
+      ],
+      "perspective": "stationary rear exterior mixed recording",
+      "analysis_cycles": 4,
+      "harmonics": 288,
+      "components": 12,
+      "reference_order": 5,
+      "status": "experimental; human listening pending",
+      "lf_model": null
+    },
+    {
+      "name": "A Stationary Upper Mid",
+      "file": "A Stationary Upper Mid.model",
+      "model_sha256": "57f2fa291d6a9709cd21343a8073a308bb2080553e7ebb71c5149df14e991dfc",
+      "base_hz": 47.39127187830898,
+      "modeled_top_hz": 13648.686300952986,
+      "source": "A",
+      "segment_id": "A_exterior_blips",
+      "seconds": [
+        238.3667405984437,
+        238.6743710116805
+      ],
+      "perspective": "stationary rear exterior mixed recording",
+      "analysis_cycles": 4,
+      "harmonics": 288,
+      "components": 12,
+      "reference_order": 5,
+      "status": "experimental; human listening pending",
+      "lf_model": null
+    },
+    {
+      "name": "A Stationary High",
+      "file": "A Stationary High.model",
+      "model_sha256": "c1860050399122e88fb1d1c56a54b88d990544fc28efa4dc701281ccb1a37ea4",
+      "base_hz": 60.83004535315176,
+      "modeled_top_hz": 17519.053061707706,
+      "source": "A",
+      "segment_id": "A_exterior_blips",
+      "seconds": [
+        238.13104290803287,
+        238.32934697875095
+      ],
+      "perspective": "stationary rear exterior mixed recording",
+      "analysis_cycles": 4,
+      "harmonics": 288,
+      "components": 12,
+      "reference_order": 5,
+      "status": "experimental; human listening pending",
+      "lf_model": null
+    }
+  ],
+  "driving_root_per_rpm": 0.008333333333333333,
+  "driving_mapping_status": "Explicit engineering hypothesis only; no independent A RPM measurement",
+  "limits": [
+    "Only4stationary rear anchors; large10..31.5Hz gap, mixed falling-rev windows and sparse state evidence",
+    "Interval telemetry is a bracket test, not proof of measured timbre/load/state coverage",
+    "Independent LF/intake/noise layers and native4anchor driving UI are not connected",
+    "No human listening acceptance or actual device/speaker validation",
+    "Keep distinct from accepted A moving close-tailpipe DNA/LF and E cabin anchors",
+    "First anchor stops near2.9kHz; common harmonic count and missing inharmonic detail constrain bandwidth"
+  ]
+}
