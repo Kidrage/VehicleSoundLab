@@ -1,6 +1,8 @@
 # ADSP-21569板测入口与验收
 
-本包尚未进行CCES编译、链接或ADSP上板测量。PC耗时不能换算成ADI MCPS；1882.91 MCPS是用户提供的原版本峰值。500MCPS以内需要原峰值下降至少73.45%，当前不能据PC结果宣布达标。
+2026-11-20收到[用户补充的板测摘要](validation/adi-board-20261120.md)：完整流程已跑通，最高峰值1174.11 MCPS；10种工况nonfinite/errors均为0，但启动330块、完整驾驶332块超过按1 GHz统计的实时预算。摘要称Release使用本次新源码；本仓库未独立复现CCES编译、链接及上板测量，尚缺完整编译配置、map、原始周期与逐模块记录。DSP声音仍待导出试听。
+
+PC耗时不能换算成ADI MCPS。1882.91 MCPS是历史原版峰值；以新版最高峰1174.11为起点，降至摘要采用的700 MCPS门槛还需减少40.38%，降至原500 MCPS目标还需减少57.41%。下列为继续集成、核验与复测的入口。
 
 1. 沿用48kHz、256frame、float、CCES2.12.1/compiler8.16.1.0、-double-size-32及原Release参数。开启VSL_ADSP_21569、VSL_DSP_STATIC、VSL_DSP_APPROX、VSL_DSP_FIR_TAPS=512、VSL_DSP_FAST_TRIG；强制包含modules/dsp_support/fast_math.h。新表默认VSL_DNA_TABLE_HOP=128；旧VSL_DSP_WT_HOP=32不能覆盖这一默认，应删除旧宏或设置成相同128。
 2. 按根sources.cmake选取编译单元；dsp/文件替换对应旧模块C文件，勿同时编译两个同名实现。加入dsp/perf.c、dsp/diagnostics.c，生产版关闭VSL_PROFILE与VSL_CAPTURE_MODULES。PC桥接器和tools/render_cases.c不属于板上音频入口。所有内部结构必须重编译。include根为工程根、modules、src、generated、modules/sound_dna、voices/events_v1。

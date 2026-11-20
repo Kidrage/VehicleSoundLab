@@ -1,0 +1,43 @@
+{
+  "schema": "vsl.user-reported-board-summary/1",
+  "received_date": "2026-11-20",
+  "version": "1882 algorithm optimization V3",
+  "evidence": {
+    "kind": "user_supplied_screenshot",
+    "filename": "3b88b29886c0bc526222a11b2174a35dde51ad17af51a464b452568cc26326bd.png",
+    "sha256": "3b88b29886c0bc526222a11b2174a35dde51ad17af51a464b452568cc26326bd",
+    "release_uses_new_source_reported": true,
+    "reported_local_commit": "d3befbb",
+    "reported_local_commit_verified_in_this_checkout": false,
+    "raw_cycle_logs_received": false,
+    "exact_board_build_configuration_received": false,
+    "independently_rerun_by_this_agent": false
+  },
+  "unit": "MCPS",
+  "scenarios": [
+    {"scene": "startup", "label": "启动", "average_mcps": 672.77, "peak_mcps": 1173.67, "overrun_blocks_at_1ghz": 330},
+    {"scene": "idle", "label": "怠速", "average_mcps": 591.93, "peak_mcps": 672.25, "overrun_blocks_at_1ghz": null},
+    {"scene": "full_drive", "label": "完整驾驶", "average_mcps": 720.40, "peak_mcps": 1174.11, "overrun_blocks_at_1ghz": 332},
+    {"scene": "four_event_overlap", "label": "四路事件重叠", "average_mcps": 915.53, "peak_mcps": 950.50, "overrun_blocks_at_1ghz": null}
+  ],
+  "tested_scenario_count_reported": 10,
+  "detailed_scenario_count_received": 4,
+  "all_reported_scenarios_nonfinite_zero": true,
+  "all_reported_scenarios_errors_zero": true,
+  "realtime_budget_clock_hz_reported": 1000000000,
+  "maximum_peak_mcps": 1174.11,
+  "board_summary_threshold_mcps": 700,
+  "original_user_target_mcps": 500,
+  "threshold_700_passed": false,
+  "target_500_passed": false,
+  "realtime_budget_passed": false,
+  "dsp_audio_export_confirmed": false,
+  "per_module_board_mcps_received": false,
+  "algorithm_changed_for_this_update": false,
+  "notes": [
+    "Only the four rows shown in the screenshot are transcribed; missing overrun counts are unknown, not zero.",
+    "The screenshot reports a Release source check and local commit; the board build has not been bound to this Git commit by a supplied binary or map hash.",
+    "Existing PC measurements remain PC measurements and must not be converted to ADI module MCPS.",
+    "The initial publication audit predates receipt of this board summary."
+  ]
+}

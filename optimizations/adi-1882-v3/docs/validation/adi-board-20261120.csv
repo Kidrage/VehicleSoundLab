@@ -1,0 +1,5 @@
+scene,average_mcps,peak_mcps,overrun_blocks_at_1ghz
+startup,672.77,1173.67,330
+idle,591.93,672.25,
+full_drive,720.40,1174.11,332
+four_event_overlap,915.53,950.50,
